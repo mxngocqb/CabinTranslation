@@ -1,0 +1,136 @@
+--------- beginning of crash
+04-22 14:35:49.573  5026  5034 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 5034 (embmsslServer), pid 5026 (embmsslServer)
+04-22 14:35:49.699  5041  5041 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+04-22 14:35:49.700  5041  5041 F DEBUG   : Build fingerprint: 'HSPTEK/kalama/kalama:13/TKQ1.250411.001/13.0.0.1:userdebug/test-keys'
+04-22 14:35:49.700  5041  5041 F DEBUG   : Revision: '0'
+04-22 14:35:49.700  5041  5041 F DEBUG   : ABI: 'arm64'
+04-22 14:35:49.700  5041  5041 F DEBUG   : Timestamp: 2026-04-22 14:35:49.644610774+0700
+04-22 14:35:49.700  5041  5041 F DEBUG   : Process uptime: 1s
+04-22 14:35:49.700  5041  5041 F DEBUG   : Cmdline: /vendor/bin/embmsslServer
+04-22 14:35:49.700  5041  5041 F DEBUG   : pid: 5026, tid: 5034, name: embmsslServer  >>> /vendor/bin/embmsslServer <<<
+04-22 14:35:49.700  5041  5041 F DEBUG   : uid: 1001
+04-22 14:35:49.700  5041  5041 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+04-22 14:35:49.700  5041  5041 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+04-22 14:35:49.700  5041  5041 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+04-22 14:35:49.700  5041  5041 F DEBUG   :     x0  0000000000000000  x1  00000000000013aa  x2  0000000000000006  x3  00000078016ec930
+04-22 14:35:49.700  5041  5041 F DEBUG   :     x4  3073646d6c70ff72  x5  3073646d6c70ff72  x6  3073646d6c70ff72  x7  7f7f7f7f7f7f7f7f
+04-22 14:35:49.700  5041  5041 F DEBUG   :     x8  00000000000000f0  x9  0000007afb969b28  x10 0000000000000001  x11 0000007afb9a984c
+04-22 14:35:49.700  5041  5041 F DEBUG   :     x12 000000000000008e  x13 000000000000005f  x14 0000000000000000  x15 0000007afb96d7a2
+04-22 14:35:49.700  5041  5041 F DEBUG   :     x16 0000007afba11d68  x17 0000007afb9ed4e0  x18 0000007801076000  x19 00000000000013a2
+04-22 14:35:49.700  5041  5041 F DEBUG   :     x20 00000000000013aa  x21 00000000ffffffff  x22 0000007affc796a4  x23 0000007b00efff80
+04-22 14:35:49.700  5041  5041 F DEBUG   :     x24 00000078016eccb0  x25 00000078016eccb0  x26 00000078016ecff8  x27 00000000000fc000
+04-22 14:35:49.700  5041  5041 F DEBUG   :     x28 00000000000fe000  x29 00000078016ec9b0
+04-22 14:35:49.700  5041  5041 F DEBUG   :     lr  0000007afb99a788  sp  00000078016ec910  pc  0000007afb99a7b4  pst 0000000000001000
+04-22 14:35:49.700  5041  5041 F DEBUG   : backtrace:
+04-22 14:35:49.700  5041  5041 F DEBUG   :       #00 pc 00000000000527b4  /apex/com.android.runtime/lib64/bionic/libc.so (abort+168) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:49.700  5041  5041 F DEBUG   :       #01 pc 000000000003ee90  /vendor/lib64/libdsi_netctrl.so (__dsi_init_ex.cfi+5580) (BuildId: 3c0951c741061ab7a00960d19c021bf2)
+04-22 14:35:49.700  5041  5041 F DEBUG   :       #02 pc 00000000000ba650  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+208) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:49.700  5041  5041 F DEBUG   :       #03 pc 0000000000053ffc  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:50.798  5054  5065 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 5065 (embmsslServer), pid 5054 (embmsslServer)
+04-22 14:35:50.917  5071  5071 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+04-22 14:35:50.917  5071  5071 F DEBUG   : Build fingerprint: 'HSPTEK/kalama/kalama:13/TKQ1.250411.001/13.0.0.1:userdebug/test-keys'
+04-22 14:35:50.917  5071  5071 F DEBUG   : Revision: '0'
+04-22 14:35:50.917  5071  5071 F DEBUG   : ABI: 'arm64'
+04-22 14:35:50.917  5071  5071 F DEBUG   : Timestamp: 2026-04-22 14:35:50.862900357+0700
+04-22 14:35:50.917  5071  5071 F DEBUG   : Process uptime: 1s
+04-22 14:35:50.917  5071  5071 F DEBUG   : Cmdline: /vendor/bin/embmsslServer
+04-22 14:35:50.917  5071  5071 F DEBUG   : pid: 5054, tid: 5065, name: embmsslServer  >>> /vendor/bin/embmsslServer <<<
+04-22 14:35:50.917  5071  5071 F DEBUG   : uid: 1001
+04-22 14:35:50.917  5071  5071 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+04-22 14:35:50.917  5071  5071 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+04-22 14:35:50.917  5071  5071 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+04-22 14:35:50.917  5071  5071 F DEBUG   :     x0  0000000000000000  x1  00000000000013c9  x2  0000000000000006  x3  0000006d3266e930
+04-22 14:35:50.917  5071  5071 F DEBUG   :     x4  3073646d6c70ff72  x5  3073646d6c70ff72  x6  3073646d6c70ff72  x7  7f7f7f7f7f7f7f7f
+04-22 14:35:50.917  5071  5071 F DEBUG   :     x8  00000000000000f0  x9  000000702c84db28  x10 0000000000000001  x11 000000702c88d84c
+04-22 14:35:50.917  5071  5071 F DEBUG   :     x12 000000000000008e  x13 000000000000005f  x14 0000000000000000  x15 000000702c8517a2
+04-22 14:35:50.917  5071  5071 F DEBUG   :     x16 000000702c8f5d68  x17 000000702c8d14e0  x18 0000006d2f6f0000  x19 00000000000013be
+04-22 14:35:50.917  5071  5071 F DEBUG   :     x20 00000000000013c9  x21 00000000ffffffff  x22 000000702ceb36a4  x23 000000702cfb6f80
+04-22 14:35:50.917  5071  5071 F DEBUG   :     x24 0000006d3266ecb0  x25 0000006d3266ecb0  x26 0000006d3266eff8  x27 00000000000fc000
+04-22 14:35:50.917  5071  5071 F DEBUG   :     x28 00000000000fe000  x29 0000006d3266e9b0
+04-22 14:35:50.917  5071  5071 F DEBUG   :     lr  000000702c87e788  sp  0000006d3266e910  pc  000000702c87e7b4  pst 0000000000001000
+04-22 14:35:50.917  5071  5071 F DEBUG   : backtrace:
+04-22 14:35:50.917  5071  5071 F DEBUG   :       #00 pc 00000000000527b4  /apex/com.android.runtime/lib64/bionic/libc.so (abort+168) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:50.918  5071  5071 F DEBUG   :       #01 pc 000000000003ee90  /vendor/lib64/libdsi_netctrl.so (__dsi_init_ex.cfi+5580) (BuildId: 3c0951c741061ab7a00960d19c021bf2)
+04-22 14:35:50.918  5071  5071 F DEBUG   :       #02 pc 00000000000ba650  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+208) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:50.918  5071  5071 F DEBUG   :       #03 pc 0000000000053ffc  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:51.998  5082  5093 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 5093 (embmsslServer), pid 5082 (embmsslServer)
+04-22 14:35:52.113  5097  5097 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+04-22 14:35:52.113  5097  5097 F DEBUG   : Build fingerprint: 'HSPTEK/kalama/kalama:13/TKQ1.250411.001/13.0.0.1:userdebug/test-keys'
+04-22 14:35:52.113  5097  5097 F DEBUG   : Revision: '0'
+04-22 14:35:52.113  5097  5097 F DEBUG   : ABI: 'arm64'
+04-22 14:35:52.113  5097  5097 F DEBUG   : Timestamp: 2026-04-22 14:35:52.064168116+0700
+04-22 14:35:52.113  5097  5097 F DEBUG   : Process uptime: 1s
+04-22 14:35:52.113  5097  5097 F DEBUG   : Cmdline: /vendor/bin/embmsslServer
+04-22 14:35:52.114  5097  5097 F DEBUG   : pid: 5082, tid: 5093, name: embmsslServer  >>> /vendor/bin/embmsslServer <<<
+04-22 14:35:52.114  5097  5097 F DEBUG   : uid: 1001
+04-22 14:35:52.114  5097  5097 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+04-22 14:35:52.114  5097  5097 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+04-22 14:35:52.114  5097  5097 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+04-22 14:35:52.114  5097  5097 F DEBUG   :     x0  0000000000000000  x1  00000000000013e5  x2  0000000000000006  x3  0000007116656930
+04-22 14:35:52.114  5097  5097 F DEBUG   :     x4  3073646d6c70ff72  x5  3073646d6c70ff72  x6  3073646d6c70ff72  x7  7f7f7f7f7f7f7f7f
+04-22 14:35:52.114  5097  5097 F DEBUG   :     x8  00000000000000f0  x9  000000740fa4cb28  x10 0000000000000001  x11 000000740fa8c84c
+04-22 14:35:52.114  5097  5097 F DEBUG   :     x12 000000000000008e  x13 000000000000005f  x14 0000000000000000  x15 000000740fa507a2
+04-22 14:35:52.114  5097  5097 F DEBUG   :     x16 000000740faf4d68  x17 000000740fad04e0  x18 0000007113fac000  x19 00000000000013da
+04-22 14:35:52.114  5097  5097 F DEBUG   :     x20 00000000000013e5  x21 00000000ffffffff  x22 000000741416d6a4  x23 0000007411fd4f80
+04-22 14:35:52.114  5097  5097 F DEBUG   :     x24 0000007116656cb0  x25 0000007116656cb0  x26 0000007116656ff8  x27 00000000000fc000
+04-22 14:35:52.114  5097  5097 F DEBUG   :     x28 00000000000fe000  x29 00000071166569b0
+04-22 14:35:52.114  5097  5097 F DEBUG   :     lr  000000740fa7d788  sp  0000007116656910  pc  000000740fa7d7b4  pst 0000000000001000
+04-22 14:35:52.114  5097  5097 F DEBUG   : backtrace:
+04-22 14:35:52.114  5097  5097 F DEBUG   :       #00 pc 00000000000527b4  /apex/com.android.runtime/lib64/bionic/libc.so (abort+168) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:52.114  5097  5097 F DEBUG   :       #01 pc 000000000003ee90  /vendor/lib64/libdsi_netctrl.so (__dsi_init_ex.cfi+5580) (BuildId: 3c0951c741061ab7a00960d19c021bf2)
+04-22 14:35:52.114  5097  5097 F DEBUG   :       #02 pc 00000000000ba650  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+208) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:52.114  5097  5097 F DEBUG   :       #03 pc 0000000000053ffc  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:53.193  5108  5116 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 5116 (embmsslServer), pid 5108 (embmsslServer)
+04-22 14:35:53.287  5123  5123 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+04-22 14:35:53.287  5123  5123 F DEBUG   : Build fingerprint: 'HSPTEK/kalama/kalama:13/TKQ1.250411.001/13.0.0.1:userdebug/test-keys'
+04-22 14:35:53.287  5123  5123 F DEBUG   : Revision: '0'
+04-22 14:35:53.288  5123  5123 F DEBUG   : ABI: 'arm64'
+04-22 14:35:53.288  5123  5123 F DEBUG   : Timestamp: 2026-04-22 14:35:53.229849106+0700
+04-22 14:35:53.288  5123  5123 F DEBUG   : Process uptime: 1s
+04-22 14:35:53.288  5123  5123 F DEBUG   : Cmdline: /vendor/bin/embmsslServer
+04-22 14:35:53.288  5123  5123 F DEBUG   : pid: 5108, tid: 5116, name: embmsslServer  >>> /vendor/bin/embmsslServer <<<
+04-22 14:35:53.288  5123  5123 F DEBUG   : uid: 1001
+04-22 14:35:53.288  5123  5123 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+04-22 14:35:53.288  5123  5123 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+04-22 14:35:53.288  5123  5123 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+04-22 14:35:53.288  5123  5123 F DEBUG   :     x0  0000000000000000  x1  00000000000013fc  x2  0000000000000006  x3  00000071a8aa2930
+04-22 14:35:53.288  5123  5123 F DEBUG   :     x4  3073646d6c70ff72  x5  3073646d6c70ff72  x6  3073646d6c70ff72  x7  7f7f7f7f7f7f7f7f
+04-22 14:35:53.288  5123  5123 F DEBUG   :     x8  00000000000000f0  x9  00000074a1efab28  x10 0000000000000001  x11 00000074a1f3a84c
+04-22 14:35:53.288  5123  5123 F DEBUG   :     x12 000000000000008e  x13 000000000000005f  x14 0000000000000000  x15 00000074a1efe7a2
+04-22 14:35:53.288  5123  5123 F DEBUG   :     x16 00000074a1fa2d68  x17 00000074a1f7e4e0  x18 00000071a65e6000  x19 00000000000013f4
+04-22 14:35:53.288  5123  5123 F DEBUG   :     x20 00000000000013fc  x21 00000000ffffffff  x22 000000749e2b46a4  x23 000000749e579f80
+04-22 14:35:53.288  5123  5123 F DEBUG   :     x24 00000071a8aa2cb0  x25 00000071a8aa2cb0  x26 00000071a8aa2ff8  x27 00000000000fc000
+04-22 14:35:53.288  5123  5123 F DEBUG   :     x28 00000000000fe000  x29 00000071a8aa29b0
+04-22 14:35:53.288  5123  5123 F DEBUG   :     lr  00000074a1f2b788  sp  00000071a8aa2910  pc  00000074a1f2b7b4  pst 0000000000001000
+04-22 14:35:53.288  5123  5123 F DEBUG   : backtrace:
+04-22 14:35:53.288  5123  5123 F DEBUG   :       #00 pc 00000000000527b4  /apex/com.android.runtime/lib64/bionic/libc.so (abort+168) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:53.288  5123  5123 F DEBUG   :       #01 pc 000000000003ee90  /vendor/lib64/libdsi_netctrl.so (__dsi_init_ex.cfi+5580) (BuildId: 3c0951c741061ab7a00960d19c021bf2)
+04-22 14:35:53.288  5123  5123 F DEBUG   :       #02 pc 00000000000ba650  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+208) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:53.288  5123  5123 F DEBUG   :       #03 pc 0000000000053ffc  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:54.366  5136  5145 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 5145 (embmsslServer), pid 5136 (embmsslServer)
+04-22 14:35:54.480  5150  5150 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+04-22 14:35:54.480  5150  5150 F DEBUG   : Build fingerprint: 'HSPTEK/kalama/kalama:13/TKQ1.250411.001/13.0.0.1:userdebug/test-keys'
+04-22 14:35:54.480  5150  5150 F DEBUG   : Revision: '0'
+04-22 14:35:54.480  5150  5150 F DEBUG   : ABI: 'arm64'
+04-22 14:35:54.480  5150  5150 F DEBUG   : Timestamp: 2026-04-22 14:35:54.417830199+0700
+04-22 14:35:54.480  5150  5150 F DEBUG   : Process uptime: 1s
+04-22 14:35:54.480  5150  5150 F DEBUG   : Cmdline: /vendor/bin/embmsslServer
+04-22 14:35:54.480  5150  5150 F DEBUG   : pid: 5136, tid: 5145, name: embmsslServer  >>> /vendor/bin/embmsslServer <<<
+04-22 14:35:54.480  5150  5150 F DEBUG   : uid: 1001
+04-22 14:35:54.480  5150  5150 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+04-22 14:35:54.480  5150  5150 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+04-22 14:35:54.480  5150  5150 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+04-22 14:35:54.480  5150  5150 F DEBUG   :     x0  0000000000000000  x1  0000000000001419  x2  0000000000000006  x3  0000006fc0097930
+04-22 14:35:54.480  5150  5150 F DEBUG   :     x4  3073646d6c70ff72  x5  3073646d6c70ff72  x6  3073646d6c70ff72  x7  7f7f7f7f7f7f7f7f
+04-22 14:35:54.480  5150  5150 F DEBUG   :     x8  00000000000000f0  x9  00000072ba8c9b28  x10 0000000000000001  x11 00000072ba90984c
+04-22 14:35:54.480  5150  5150 F DEBUG   :     x12 000000000000008e  x13 000000000000005f  x14 0000000000000000  x15 00000072ba8cd7a2
+04-22 14:35:54.480  5150  5150 F DEBUG   :     x16 00000072ba971d68  x17 00000072ba94d4e0  x18 0000006fbfd34000  x19 0000000000001410
+04-22 14:35:54.480  5150  5150 F DEBUG   :     x20 0000000000001419  x21 00000000ffffffff  x22 00000072b6b6d6a4  x23 00000072b6ad1f80
+04-22 14:35:54.480  5150  5150 F DEBUG   :     x24 0000006fc0097cb0  x25 0000006fc0097cb0  x26 0000006fc0097ff8  x27 00000000000fc000
+04-22 14:35:54.480  5150  5150 F DEBUG   :     x28 00000000000fe000  x29 0000006fc00979b0
+04-22 14:35:54.480  5150  5150 F DEBUG   :     lr  00000072ba8fa788  sp  0000006fc0097910  pc  00000072ba8fa7b4  pst 0000000000001000
+04-22 14:35:54.480  5150  5150 F DEBUG   : backtrace:
+04-22 14:35:54.480  5150  5150 F DEBUG   :       #00 pc 00000000000527b4  /apex/com.android.runtime/lib64/bionic/libc.so (abort+168) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:54.480  5150  5150 F DEBUG   :       #01 pc 000000000003ee90  /vendor/lib64/libdsi_netctrl.so (__dsi_init_ex.cfi+5580) (BuildId: 3c0951c741061ab7a00960d19c021bf2)
+04-22 14:35:54.480  5150  5150 F DEBUG   :       #02 pc 00000000000ba650  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+208) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)
+04-22 14:35:54.480  5150  5150 F DEBUG   :       #03 pc 0000000000053ffc  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: bf5f1ce73f89cca7d6a062eb7877e86a)

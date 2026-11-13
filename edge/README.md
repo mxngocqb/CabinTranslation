@@ -20,6 +20,8 @@ edge/
     ├── bench_device_tts.py     on-device TTS candidate comparison (QCS8550)
     ├── power_bench_android.py  battery power/energy per utterance on an Android phone (dumpsys battery, no root)
     ├── net_socks.py            counts the engine's non-loopback sockets on Linux boards (evidence of no network use)
+    ├── offline_bench_android.sh  offline benchmark run entirely on an Android device (network.log, screenshots)
+    ├── collect_offline_run.py    pull + score that run, plus full logcat / bugreport / dumpsys as system evidence
     └── compile_npu_model.sh    AOT-compile the Gemma NPU_Uncompiled bundle for a Qualcomm SoC (x86 host)
 ```
 

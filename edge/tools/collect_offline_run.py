@@ -54,6 +54,15 @@ def pull(a):
     shutil.move(str(tmp / "offline"), str(out))
     tmp.rmdir()
     adb(a.serial, "pull", f"{DEV}/out/manifest.jsonl", str(out / "manifest.jsonl"))
+    # unfiltered Android system logs as independent evidence (logcat ring buffers keep the run window for a while)
+    lg = out / "logcat"
+    lg.mkdir(exist_ok=True)
+    for b in ("all", "main", "system", "events", "kernel", "radio", "crash"):
+        r = adb(a.serial, "logcat", "-d", "-v", "threadtime", "-b", b)
+        (lg / ("logcat_all_buffers.txt" if b == "all" else f"logcat_{b}.txt")).write_text(r.stdout)
+    for name, cmd in (("dumpsys_connectivity.txt", "date; dumpsys connectivity"), ("dumpsys_netstats.txt", "date; dumpsys netstats --full")):
+        (lg / name).write_text(adb(a.serial, "shell", cmd).stdout)
+    adb(a.serial, "bugreport", str(lg / "bugreport.zip"))
     return out
 
 

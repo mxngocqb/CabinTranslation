@@ -238,6 +238,11 @@ if (qcsOffline) {
     const smp = lines.filter((l) => l.includes(" wav="));
     [...new Set([ev.start_line, ...smp.slice(0, 2), smp[Math.floor(smp.length / 2)], ...smp.slice(-2), ev.end_line, ev.clock_note].filter(Boolean))]
       .forEach((l) => C.push(new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text: l.replace(/ mem=\[.*\]/, " mem=[…]"), font: "Consolas", size: 14, color: "1F3864" })] })));
+    const sl = ev.system_logs;
+    if (sl) {
+      C.push(P(`Android system log (logcat, unfiltered; full dump of every buffer and a full \`adb bugreport\` in \`${sl.folder}\`): during the run Wi-Fi kept sending DHCPDISCOVER with no answer and Android's own Wi-Fi traffic counters were zero:`, { size: 17, after: 40 }));
+      sl.key_lines.forEach((l) => C.push(new Paragraph({ spacing: { after: 0 }, children: [new TextRun({ text: l, font: "Consolas", size: 14, color: "1F3864" })] })));
+    }
     C.push(P("", { after: 80 }));
   }
 }

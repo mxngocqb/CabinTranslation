@@ -1,6 +1,6 @@
 # Results — CabinTranslation
 
-_Generated 2026-11-13 21:53 by `python dashboard/build_report.py`. Open the dashboard with `bash dashboard/serve.sh` (http://localhost:8000/dashboard/) for charts, per-utterance browsing and audio._
+_Generated 2026-11-13 22:09 by `python dashboard/build_report.py`. Open the dashboard with `bash dashboard/serve.sh` (http://localhost:8000/dashboard/) for charts, per-utterance browsing and audio._
 
 ## Layout
 

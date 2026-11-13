@@ -249,6 +249,17 @@
    "shots/start.png",
    "shots/middle.png",
    "shots/end.png"
-  ]
+  ],
+  "system_logs": {
+   "folder": "logcat/",
+   "full_logcat": "logcat/logcat_all_buffers.txt",
+   "bugreport": "logcat/bugreport_qcs8550_after_offline_run.zip",
+   "key_lines": [
+    "04-22 18:49:25.597  1944  4311 I ActivityManager: Force stopping vn.cabin.translate appid=10136 user=0: from pid 7035",
+    "04-22 18:48:44.924  2761  3341 D DhcpClient: Broadcasting DHCPDISCOVER",
+    "04-22 18:56:58.582  2761  3341 D DhcpClient: Broadcasting DHCPDISCOVER",
+    "04-22 18:58:05.065  1944  2596 I netstats_wifi_sample: [0,0,0,0,0,0,0,0,0,0,0,0,1776859085065]"
+   ]
+  }
  }
 }

@@ -1,0 +1,1379 @@
+04-22 18:45:00.165  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:45:00.205  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:45:00.205  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:45:00.206  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:45:05.950  6596  6596 I (virq   : irq_count)- GICv3:arch_timer(11):1190378 GICv3:IPI(1):774834 GICv3:IPI(2):665999 GICv3:IPI(6):546907 GICv3:apps_rsc-drv-2(20):159660 GICv3:240b6400.qcom,bwmon-llcc(40):39020 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34197 ipcc:glink-native-adsp(426):25085 GICv3:ipcc_0(37):25074
+04-22 18:45:05.951  6596  6596 I (cpu    : irq_count)- 0:1601062 1:732810 2:609431 3:229199 4:209724 5:183570
+04-22 18:45:05.951  6596  6596 I (ipi    : irq_count)- 0:774834 1:665999 2:0 3:0 4:0 5:546907 6:0
+04-22 18:45:15.422  6867  6867 I (cpu    : irq_count)- 0:1601239 1:732874 2:609466 3:229208 4:209750 5:183587
+04-22 18:45:15.422  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1190550 GICv3:IPI(1):774871 GICv3:IPI(2):666019 GICv3:IPI(6):546983 GICv3:apps_rsc-drv-2(20):159678 GICv3:240b6400.qcom,bwmon-llcc(40):39023 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34197 ipcc:glink-native-adsp(426):25085 GICv3:ipcc_0(37):25074
+04-22 18:45:15.423  6867  6867 I (ipi    : irq_count)- 0:774871 1:666019 2:0 3:0 4:0 5:546983 6:0
+04-22 18:45:23.194  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:45:24.892  6898  6898 I (cpu    : irq_count)- 0:1602393 1:733211 2:609536 3:229219 4:209835 5:183594
+04-22 18:45:24.892  6898  6898 I (ipi    : irq_count)- 0:775091 1:666171 2:0 3:0 4:0 5:547301 6:0
+04-22 18:45:24.892  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1191333 GICv3:IPI(1):775091 GICv3:IPI(2):666171 GICv3:IPI(6):547301 GICv3:apps_rsc-drv-2(20):159813 GICv3:240b6400.qcom,bwmon-llcc(40):39025 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25085 GICv3:ipcc_0(37):25074
+04-22 18:45:28.078  1163  1163 W healthd : battery l=100 v=4325 t=25.0 h=2 st=3 c=-65187 fc=3500000 cc=0 chg=
+04-22 18:45:28.233  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:45:28.271  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:45:28.271  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:45:28.272  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:45:34.367  6867  6867 I (cpu    : irq_count)- 0:1603855 1:733674 2:609839 3:229224 4:209858 5:183607
+04-22 18:45:34.367  6867  6867 I (ipi    : irq_count)- 0:775476 1:666342 2:0 3:0 4:0 5:547709 6:0
+04-22 18:45:34.367  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1192369 GICv3:IPI(1):775476 GICv3:IPI(2):666342 GICv3:IPI(6):547709 GICv3:apps_rsc-drv-2(20):159943 GICv3:240b6400.qcom,bwmon-llcc(40):39032 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25128 GICv3:ipcc_0(37):25111
+04-22 18:45:43.838  6596  6596 I (cpu    : irq_count)- 0:1605128 1:733959 2:609891 3:229233 4:209886 5:183615
+04-22 18:45:43.838  6596  6596 I (ipi    : irq_count)- 0:775613 1:666492 2:0 3:0 4:0 5:548129 6:0
+04-22 18:45:43.838  6596  6596 I (virq   : irq_count)- GICv3:arch_timer(11):1193208 GICv3:IPI(1):775613 GICv3:IPI(2):666492 GICv3:IPI(6):548129 GICv3:apps_rsc-drv-2(20):160049 GICv3:240b6400.qcom,bwmon-llcc(40):39036 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25128 GICv3:ipcc_0(37):25111
+04-22 18:45:53.195  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:45:53.310  6932  6932 I (cpu    : irq_count)- 0:1606491 1:734255 2:609919 3:229239 4:209909 5:183626
+04-22 18:45:53.310  6932  6932 I (ipi    : irq_count)- 0:775746 1:666642 2:0 3:0 4:0 5:548673 6:0
+04-22 18:45:53.310  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1193990 GICv3:IPI(1):775746 GICv3:IPI(2):666642 GICv3:IPI(6):548673 GICv3:apps_rsc-drv-2(20):160165 GICv3:240b6400.qcom,bwmon-llcc(40):39037 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25128 GICv3:ipcc_0(37):25111
+04-22 18:46:00.164  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:46:00.204  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:46:00.204  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:46:00.206  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:46:02.782  6729  6729 I (cpu    : irq_count)- 0:1608125 1:734689 2:610132 3:229248 4:209941 5:183634
+04-22 18:46:02.782  6729  6729 I (ipi    : irq_count)- 0:776090 1:666804 2:0 3:0 4:0 5:549280 6:0
+04-22 18:46:02.782  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1195012 GICv3:IPI(1):776090 GICv3:IPI(2):666804 GICv3:IPI(6):549280 GICv3:apps_rsc-drv-2(20):160302 GICv3:240b6400.qcom,bwmon-llcc(40):39046 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25128 GICv3:ipcc_0(37):25111
+04-22 18:46:12.254  6898  6898 I (cpu    : irq_count)- 0:1609565 1:734981 2:610148 3:229257 4:209967 5:183654
+04-22 18:46:12.254  6898  6898 I (ipi    : irq_count)- 0:776225 1:666952 2:0 3:0 4:0 5:549878 6:0
+04-22 18:46:12.254  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1195816 GICv3:IPI(1):776225 GICv3:IPI(2):666952 GICv3:IPI(6):549878 GICv3:apps_rsc-drv-2(20):160419 GICv3:240b6400.qcom,bwmon-llcc(40):39046 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25128 GICv3:ipcc_0(37):25111
+04-22 18:46:21.726  6898  6898 I (cpu    : irq_count)- 0:1610994 1:735259 2:610164 3:229263 4:209987 5:183663
+04-22 18:46:21.726  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1196604 GICv3:IPI(1):776341 GICv3:IPI(2):667101 GICv3:IPI(6):550478 GICv3:apps_rsc-drv-2(20):160520 GICv3:240b6400.qcom,bwmon-llcc(40):39047 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25128 GICv3:ipcc_0(37):25111
+04-22 18:46:21.727  6898  6898 I (ipi    : irq_count)- 0:776341 1:667101 2:0 3:0 4:0 5:550478 6:0
+04-22 18:46:23.198  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:46:31.198  6932  6932 I (cpu    : irq_count)- 0:1612428 1:735538 2:610173 3:229269 4:210013 5:183672
+04-22 18:46:31.198  6932  6932 I (ipi    : irq_count)- 0:776462 1:667249 2:0 3:0 4:0 5:551076 6:0
+04-22 18:46:31.198  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1197390 GICv3:IPI(1):776462 GICv3:IPI(2):667249 GICv3:IPI(6):551076 GICv3:apps_rsc-drv-2(20):160628 GICv3:240b6400.qcom,bwmon-llcc(40):39048 GICv3:dwc3(390):35295 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25128 GICv3:ipcc_0(37):25111
+04-22 18:46:39.652  6329  6329 I msm_eusb2_phy 88e3000.hsphy: Avail curr from USB = 100
+04-22 18:46:40.163  1134  1134 D Diag-Router: diag: ep0_recv: received usb enable event for mux id: 0
+04-22 18:46:40.163  1134  1134 D Diag-Router: diag: setting max_packetsize 512 for 13
+04-22 18:46:40.163  1134  1134 E Diag-Router: diag: diag_ffs_enable: Add USB fd: 12 with mux_id: 0 to readq
+04-22 18:46:40.163  1134  1134 I Diag-Router: diag:  use iovec for fd: 13
+04-22 18:46:40.163  2201  6922 I adbd    : USB event: FUNCTIONFS_ENABLE
+04-22 18:46:40.164  1195  2239 I libusbconfigfs: event=1 on fd=5
+04-22 18:46:40.165  2201  6950 I adbd    : UsbFfs-worker thread spawned
+04-22 18:46:40.166  6329  6329 I msm_eusb2_phy 88e3000.hsphy: Avail curr from USB = 500
+04-22 18:46:40.171  1944  2347 D CompatibilityInfo: applicationDensity - 340
+04-22 18:46:40.171  1944  2347 D CompatibilityInfo: applicationScale - 1.0
+04-22 18:46:40.171  1944  2347 D CompatibilityInfo: mCompatibilityFlags - 4
+04-22 18:46:40.173  2761  3011 I Tethering: USB bcast connected:true configured:true rndis:false ncm:false
+04-22 18:46:40.175  3498  3498 I android_os_HwBinder: HwBinder: Starting thread pool for getting: vendor.qti.hardware.power.powermodule@1.0::IPowerModule/default
+04-22 18:46:40.177  6949  6949 I android_work: sent uevent USB_STATE=CONFIGURED
+04-22 18:46:40.670  6932  6932 I (cpu    : irq_count)- 0:1613888 1:735850 2:610335 3:229283 4:210050 5:183685
+04-22 18:46:40.670  6932  6932 I (ipi    : irq_count)- 0:776651 1:667401 2:0 3:0 4:0 5:551678 6:0
+04-22 18:46:40.670  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1198228 GICv3:IPI(1):776651 GICv3:IPI(2):667401 GICv3:IPI(6):551678 GICv3:apps_rsc-drv-2(20):160744 GICv3:240b6400.qcom,bwmon-llcc(40):39052 GICv3:dwc3(390):35376 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:46:42.617  2201  2201 I adbd    : UsbFfs: already offline
+04-22 18:46:42.618  2201  2201 I adbd    : authentication not required
+04-22 18:46:50.142  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1199068 GICv3:IPI(1):776846 GICv3:IPI(2):667845 GICv3:IPI(6):552279 GICv3:apps_rsc-drv-2(20):160861 GICv3:240b6400.qcom,bwmon-llcc(40):39056 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:46:50.143  6729  6729 I (cpu    : irq_count)- 0:1615376 1:736239 2:610480 3:229366 4:210087 5:183759
+04-22 18:46:50.143  6729  6729 I (ipi    : irq_count)- 0:776846 1:667845 2:0 3:0 4:0 5:552279 6:0
+04-22 18:46:53.200  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:46:59.614  6898  6898 I (cpu    : irq_count)- 0:1616802 1:736522 2:610487 3:229375 4:210113 5:183765
+04-22 18:46:59.614  6898  6898 I (ipi    : irq_count)- 0:776960 1:667994 2:0 3:0 4:0 5:552878 6:0
+04-22 18:46:59.614  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1199860 GICv3:IPI(1):776960 GICv3:IPI(2):667994 GICv3:IPI(6):552878 GICv3:apps_rsc-drv-2(20):160963 GICv3:240b6400.qcom,bwmon-llcc(40):39057 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:47:00.149  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:47:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:47:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:47:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:47:09.084  6729  6729 I (cpu    : irq_count)- 0:1618363 1:736963 2:610711 3:229404 4:210176 5:183775
+04-22 18:47:09.084  6729  6729 I (ipi    : irq_count)- 0:777331 1:668151 2:0 3:0 4:0 5:553490 6:0
+04-22 18:47:09.084  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1200865 GICv3:IPI(1):777331 GICv3:IPI(2):668151 GICv3:IPI(6):553490 GICv3:apps_rsc-drv-2(20):161092 GICv3:240b6400.qcom,bwmon-llcc(40):39063 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:47:18.556  6898  6898 I (cpu    : irq_count)- 0:1619756 1:737256 2:610713 3:229410 4:210194 5:183780
+04-22 18:47:18.556  6898  6898 I (ipi    : irq_count)- 0:777444 1:668302 2:0 3:0 4:0 5:554087 6:0
+04-22 18:47:18.556  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1201612 GICv3:IPI(1):777444 GICv3:IPI(2):668302 GICv3:IPI(6):554087 GICv3:apps_rsc-drv-2(20):161201 GICv3:240b6400.qcom,bwmon-llcc(40):39063 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:47:23.201  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:47:28.028  6898  6898 I (cpu    : irq_count)- 0:1621139 1:737543 2:610716 3:229419 4:210210 5:183788
+04-22 18:47:28.028  6898  6898 I (ipi    : irq_count)- 0:777553 1:668450 2:0 3:0 4:0 5:554685 6:0
+04-22 18:47:28.028  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1202359 GICv3:IPI(1):777553 GICv3:IPI(2):668450 GICv3:IPI(6):554685 GICv3:apps_rsc-drv-2(20):161305 GICv3:240b6400.qcom,bwmon-llcc(40):39063 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:47:37.500  6955  6955 I (cpu    : irq_count)- 0:1622507 1:737842 2:610725 3:229425 4:210232 5:183796
+04-22 18:47:37.500  6955  6955 I (ipi    : irq_count)- 0:777686 1:668599 2:0 3:0 4:0 5:555231 6:0
+04-22 18:47:37.500  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1203124 GICv3:IPI(1):777686 GICv3:IPI(2):668599 GICv3:IPI(6):555231 GICv3:apps_rsc-drv-2(20):161423 GICv3:240b6400.qcom,bwmon-llcc(40):39064 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:47:46.972  6955  6955 I (cpu    : irq_count)- 0:1623664 1:738122 2:610764 3:229429 4:210250 5:183801
+04-22 18:47:46.972  6955  6955 I (ipi    : irq_count)- 0:777806 1:668751 2:0 3:0 4:0 5:555565 6:0
+04-22 18:47:46.972  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1203922 GICv3:IPI(1):777806 GICv3:IPI(2):668751 GICv3:IPI(6):555565 GICv3:apps_rsc-drv-2(20):161519 GICv3:240b6400.qcom,bwmon-llcc(40):39067 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34250 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:47:53.204  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:47:56.446  6932  6932 I (cpu    : irq_count)- 0:1624214 1:738304 2:610812 3:229440 4:210279 5:183814
+04-22 18:47:56.446  6932  6932 I (ipi    : irq_count)- 0:777923 1:668820 2:0 3:0 4:0 5:555723 6:0
+04-22 18:47:56.446  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1204305 GICv3:IPI(1):777923 GICv3:IPI(2):668820 GICv3:IPI(6):555723 GICv3:apps_rsc-drv-2(20):161584 GICv3:240b6400.qcom,bwmon-llcc(40):39069 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34289 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:48:00.147  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:48:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:48:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:48:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:48:05.918  6955  6955 I (cpu    : irq_count)- 0:1624703 1:738532 2:611043 3:229455 4:210316 5:183822
+04-22 18:48:05.918  6955  6955 I (ipi    : irq_count)- 0:778235 1:668856 2:0 3:0 4:0 5:555850 6:0
+04-22 18:48:05.918  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1204715 GICv3:IPI(1):778235 GICv3:IPI(2):668856 GICv3:IPI(6):555850 GICv3:apps_rsc-drv-2(20):161646 GICv3:240b6400.qcom,bwmon-llcc(40):39080 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34289 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:48:15.391  6898  6898 I (cpu    : irq_count)- 0:1624900 1:738583 2:611072 3:229464 4:210342 5:183840
+04-22 18:48:15.391  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1204883 GICv3:IPI(1):778269 GICv3:IPI(2):668877 GICv3:IPI(6):555932 GICv3:apps_rsc-drv-2(20):161668 GICv3:240b6400.qcom,bwmon-llcc(40):39082 GICv3:dwc3(390):35387 GICv3:ufshcd(35):34289 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:48:15.392  6898  6898 I (ipi    : irq_count)- 0:778269 1:668877 2:0 3:0 4:0 5:555932 6:0
+04-22 18:48:23.207  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:48:24.860  6955  6955 I (cpu    : irq_count)- 0:1626035 1:739574 2:611954 3:230210 4:210938 5:184686
+04-22 18:48:24.860  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1205651 GICv3:IPI(1):778623 GICv3:IPI(2):672683 GICv3:IPI(6):556061 GICv3:apps_rsc-drv-2(20):161738 GICv3:240b6400.qcom,bwmon-llcc(40):39092 GICv3:dwc3(390):35410 GICv3:ufshcd(35):34303 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:48:24.861  6955  6955 I (ipi    : irq_count)- 0:778623 1:672703 2:0 3:0 4:0 5:556061 6:0
+04-22 18:48:34.334  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1206501 GICv3:IPI(1):779084 GICv3:IPI(2):676576 GICv3:IPI(6):556209 GICv3:apps_rsc-drv-2(20):161845 GICv3:240b6400.qcom,bwmon-llcc(40):39117 GICv3:dwc3(390):35458 GICv3:ufshcd(35):34354 ipcc:glink-native-adsp(426):25135 GICv3:ipcc_0(37):25117
+04-22 18:48:34.335  6729  6729 I (cpu    : irq_count)- 0:1627350 1:740478 2:612992 3:230923 4:211690 5:185541
+04-22 18:48:34.335  6729  6729 I (ipi    : irq_count)- 0:779085 1:676576 2:0 3:0 4:0 5:556209 6:0
+04-22 18:48:38.789  1163  1163 W healthd : battery l=100 v=4340 t=25.0 h=2 st=3 c=-70314 fc=3500000 cc=0 chg=
+04-22 18:48:38.932  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:48:38.971  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:48:38.971  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:48:38.972  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:48:39.147  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:48:39.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:48:39.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:48:39.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:48:43.806  6932  6932 I (cpu    : irq_count)- 0:1628415 1:740944 2:613510 3:230936 4:211778 5:185553
+04-22 18:48:43.806  6932  6932 I (ipi    : irq_count)- 0:779689 1:676666 2:0 3:0 4:0 5:556496 6:0
+04-22 18:48:43.806  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1207362 GICv3:IPI(1):779689 GICv3:IPI(2):676666 GICv3:IPI(6):556496 GICv3:apps_rsc-drv-2(20):161950 GICv3:240b6400.qcom,bwmon-llcc(40):39132 GICv3:dwc3(390):35458 GICv3:ufshcd(35):34399 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:48:44.924  2761  3341 D DhcpClient: Broadcasting DHCPDISCOVER
+04-22 18:48:53.210  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:48:53.276  6898  6898 I (cpu    : irq_count)- 0:1629921 1:741964 2:614553 3:231608 4:212598 5:186443
+04-22 18:48:53.276  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1208252 GICv3:IPI(1):780188 GICv3:IPI(2):680811 GICv3:IPI(6):556722 GICv3:apps_rsc-drv-2(20):162040 GICv3:240b6400.qcom,bwmon-llcc(40):39153 GICv3:dwc3(390):35489 GICv3:ufshcd(35):34442 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:48:53.277  6898  6898 I (ipi    : irq_count)- 0:780188 1:680811 2:0 3:0 4:0 5:556722 6:0
+04-22 18:49:00.148  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:49:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:49:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:49:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:49:02.750  6729  6729 I (cpu    : irq_count)- 0:1630327 1:742264 2:614743 3:231619 4:212628 5:186451
+04-22 18:49:02.750  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1208660 GICv3:IPI(1):780470 GICv3:IPI(2):680847 GICv3:IPI(6):556829 GICv3:apps_rsc-drv-2(20):162093 GICv3:240b6400.qcom,bwmon-llcc(40):39163 GICv3:dwc3(390):35489 GICv3:ufshcd(35):34442 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:49:02.751  6729  6729 I (ipi    : irq_count)- 0:780470 1:680847 2:0 3:0 4:0 5:556829 6:0
+04-22 18:49:12.223  6932  6932 I (cpu    : irq_count)- 0:1630509 1:742353 2:614765 3:231628 4:212652 5:186468
+04-22 18:49:12.223  6932  6932 I (ipi    : irq_count)- 0:780512 1:680865 2:0 3:0 4:0 5:556904 6:0
+04-22 18:49:12.223  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1208837 GICv3:IPI(1):780512 GICv3:IPI(2):680865 GICv3:IPI(6):556904 GICv3:apps_rsc-drv-2(20):162119 GICv3:240b6400.qcom,bwmon-llcc(40):39166 GICv3:dwc3(390):35489 GICv3:ufshcd(35):34442 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:49:21.693  6898  6898 I (cpu    : irq_count)- 0:1630680 1:742412 2:614799 3:231634 4:212676 5:186477
+04-22 18:49:21.693  6898  6898 I (ipi    : irq_count)- 0:780550 1:680884 2:0 3:0 4:0 5:556973 6:0
+04-22 18:49:21.693  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1208989 GICv3:IPI(1):780550 GICv3:IPI(2):680884 GICv3:IPI(6):556973 GICv3:apps_rsc-drv-2(20):162141 GICv3:240b6400.qcom,bwmon-llcc(40):39168 GICv3:dwc3(390):35489 GICv3:ufshcd(35):34442 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:49:23.213  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:49:25.597  1944  4311 I ActivityManager: Force stopping vn.cabin.translate appid=10136 user=0: from pid 7035
+04-22 18:49:25.598  1944  4311 I am_uid_stopped: 10136
+04-22 18:49:25.599  1944  4311 I ActivityManager: Killing 4269:vn.cabin.translate/u0a136 (adj 0): stop vn.cabin.translate due to from pid 7035
+04-22 18:49:25.599  1944  4311 I am_kill : [0,4269,vn.cabin.translate,0,stop vn.cabin.translate due to from pid 7035]
+04-22 18:49:25.607  1944  4311 I wm_finish_activity: [0,103548237,133,vn.cabin.translate/.MainActivity,proc died without state saved]
+04-22 18:49:25.607  1944  4311 W ActivityTaskManager: Force removing ActivityRecord{62c054d u0 vn.cabin.translate/.MainActivity} t133 f}}: app died, no saved state
+04-22 18:49:25.618  1944  4311 W InputManager-JNI: Input channel object 'e8cb128 vn.cabin.translate/vn.cabin.translate.MainActivity (client)' was disposed without first being removed with the input manager!
+04-22 18:49:25.620  1944  2352 I libprocessgroup: Successfully killed process cgroup uid 10136 pid 4269 in 17ms
+04-22 18:49:25.621  1944  4311 I wm_task_removed: [133,removeChild:removeChild last r=ActivityRecord{62c054d u0 vn.cabin.translate/.MainActivity} t-1 f}} in t=Task{f13e877 #133 type=standard A=10136:vn.cabin.translate}]
+04-22 18:49:25.621  1944  4311 I wm_task_removed: [133,removeChild]
+04-22 18:49:25.623  1385  1563 W TransactionTracing: Could not find layer handle 0xb400006d60cf7f10
+04-22 18:49:25.624  1385  1563 W TransactionTracing: Could not find layer handle 0xb400006d60cf7f10
+04-22 18:49:25.632  1944  4311 I wm_set_resumed_activity: [0,com.android.launcher3/.uioverrides.QuickstepLauncher,resumeTopActivity - onActivityStateChanged]
+04-22 18:49:25.633  1944  4311 I wm_resume_activity: [0,76064488,132,com.android.launcher3/.uioverrides.QuickstepLauncher]
+04-22 18:49:25.634  1944  2333 I input_focus: [Requesting to set focus to null window,reason=UpdateInputWindows]
+04-22 18:49:25.639  1944  2332 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+04-22 18:49:25.642  1385  1563 W TransactionTracing: Could not find layer handle 0xb400006d60cf6650
+04-22 18:49:25.643  1385  1563 W TransactionTracing: Could not find layer handle 0xb400006d60cf6dd0
+04-22 18:49:25.647  3115  3115 I wm_on_restart_called: [76064488,com.android.launcher3.uioverrides.QuickstepLauncher,performRestartActivity]
+04-22 18:49:25.647  3115  3115 I wm_on_start_called: [76064488,com.android.launcher3.uioverrides.QuickstepLauncher,handleStartActivity]
+04-22 18:49:25.648  3115  3115 I wm_on_resume_called: [76064488,com.android.launcher3.uioverrides.QuickstepLauncher,RESUME_ACTIVITY]
+04-22 18:49:25.649  3115  3115 I wm_on_top_resumed_gained_called: [76064488,com.android.launcher3.uioverrides.QuickstepLauncher,topWhenResuming]
+04-22 18:49:25.652  1289  1289 E ANDR-PERF-LM: PrefAppsFeature: getData() 322: Could not get preferred apps, Prefered apps list is empty or device is low on memory.
+04-22 18:49:25.655  1944  1944 D CompatibilityInfo: applicationDensity - 340
+04-22 18:49:25.655  1944  1944 D CompatibilityInfo: applicationScale - 1.0
+04-22 18:49:25.655  1944  1944 D CompatibilityInfo: mCompatibilityFlags - 4
+04-22 18:49:25.665  1944  2333 I input_focus: [Focus request ff9ad54 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher,reason=UpdateInputWindows]
+04-22 18:49:25.667  1944  1944 I notification_cancel_all: [1000,1944,vn.cabin.translate,0,0,0,5,NULL]
+04-22 18:49:25.667  3115  3572 E OpenGLRenderer: Unable to match the desired swap behavior.
+04-22 18:49:25.678  1944  2333 I wm_wallpaper_surface: [0,1,Window{ff9ad54 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}]
+04-22 18:49:25.682  1699  1699 D tcmd    : DpmCom : 1 events pending, handling 17 for 11
+04-22 18:49:25.682  1699  1699 D tcmd    : DpmCom :fd '11' sent HUP.
+04-22 18:49:25.682  1699  1699 D tcmd    : DpmCom :there are 1 file descriptor(s) with events pending
+04-22 18:49:25.682  1699  1699 D tcmd    : DpmCom::removeComEventHandler fd 11
+04-22 18:49:25.682  1944  2059 V ActivityManager: Got obituary of 4269:vn.cabin.translate
+04-22 18:49:25.682  1944  2332 W ActivityManager: setHasOverlayUi called on unknown pid: 4269
+04-22 18:49:25.683  1699  1699 D tcmd    : waiting on events (-1ms)
+04-22 18:49:25.683  1822  5517 D NuPlayerDriver: reset(0xb400007596232590) at state 6
+04-22 18:49:25.684  1065  1065 I Zygote  : Process 4269 exited due to signal 9 (Killed)
+04-22 18:49:25.685   631   631 I binder  : undelivered transaction 194485, process died.
+04-22 18:49:25.689  1385  1385 E BpTransactionCompletedListener: Failed to transact (-32)
+04-22 18:49:25.692  1822  5878 D BufferPoolAccessor2.0: bufferpool2 0xb4000075b62471b8 : 0(0 size) total buffers - 0(0 size) used buffers - 4/12 (recycle/alloc) - 7/14 (fetch/transfer)
+04-22 18:49:25.692  1822  5878 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+04-22 18:49:25.693  1822  5877 D MediaCodec: flushMediametrics
+04-22 18:49:25.693  2007  3101 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+04-22 18:49:25.693  2007  3101 V C2Store : in ~ComponentModule
+04-22 18:49:25.693  2007  3101 V C2Store : unloading dll
+04-22 18:49:25.694  2007  3101 D BufferPoolAccessor2.0: Destruction - bufferpool2 0xb400006e3afe3c58 cached: 0/0M, 0/0% in use; allocs: 0, 0% recycled; transfers: 0, 0% unfetched
+04-22 18:49:25.694  2007  3101 D BufferPoolAccessor2.0: bufferpool2 0xb400006e3afe3c58 : 0(0 size) total buffers - 0(0 size) used buffers - 0/0 (recycle/alloc) - 0/0 (fetch/transfer)
+04-22 18:49:25.696  1944  2570 I input_focus: [Focus entering ff9ad54 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher (server),reason=setFocusedWindow]
+04-22 18:49:25.698  1944  2346 I am_pss  : [2909,1000,com.android.settings,60566528,38264832,7557120,196001792,0,15,10]
+04-22 18:49:25.699  1822  5872 D NuPlayerDriver: notifyResetComplete(0xb400007596232590)
+04-22 18:49:25.701  1376  1899 W AudioFlinger: session id 345 not found for pid 4269
+04-22 18:49:25.702  1944  7042 D CompatibilityInfo: applicationDensity - 340
+04-22 18:49:25.702  1944  7042 D CompatibilityInfo: applicationScale - 1.0
+04-22 18:49:25.702  1944  7042 D CompatibilityInfo: mCompatibilityFlags - 14
+04-22 18:49:25.703  1822  5517 W AMessage: failed to post message as target looper for handler 0 is gone.
+04-22 18:49:25.710  1944  2346 I am_pss  : [5363,10067,com.android.settings.intelligence,36282368,6713344,22589440,138125312,0,16,8]
+04-22 18:49:25.717  1385  1563 W TransactionTracing: Could not find layer handle 0xb400006d60cfa3d0
+04-22 18:49:25.717  3940  7045 D com.vng.inputmethod.labankeycloud.UserHistoryBackupHelper: No sign-in or no internet
+04-22 18:49:25.719  1944  2346 I am_pss  : [4214,10031,android.process.acore,12094464,3915776,5195776,105320448,0,19,6]
+04-22 18:49:25.729  1944  2346 I am_pss  : [4565,10117,com.android.permissioncontroller,17688576,7962624,7290880,104566784,0,19,7]
+04-22 18:49:25.737  1944  2346 I am_pss  : [4118,10057,com.android.traceur,11602944,5869568,3751936,97345536,0,19,6]
+04-22 18:49:25.746  1944  2346 I am_pss  : [5392,10091,com.android.emergency,11064320,7368704,1871872,96145408,0,19,6]
+04-22 18:49:25.755  1944  2346 I am_pss  : [4826,10123,com.opera.browser,65251328,42209280,2478080,136101888,0,19,7]
+04-22 18:49:25.764  1944  2346 I am_pss  : [4790,10130,com.google.ai.edge.gallery,27095040,16805888,7542784,116850688,0,19,7]
+04-22 18:49:25.773  1944  2346 I am_pss  : [4587,10033,com.android.providers.calendar,7495680,1691648,3588096,97267712,0,19,6]
+04-22 18:49:25.781  1944  2346 I am_pss  : [4767,10058,org.codeaurora.snapcam,11960320,9621504,0,104423424,0,19,6]
+04-22 18:49:25.789  1944  2346 I am_pss  : [3668,10046,com.android.printspooler,6429696,2826240,1720320,91889664,0,19,6]
+04-22 18:49:25.797  1944  2346 I am_pss  : [4019,10109,com.qualcomm.qtil.aptxui,8072192,4784128,1462272,93364224,0,19,7]
+04-22 18:49:25.805  1944  2346 I am_pss  : [4709,10065,com.qualcomm.qti.qms.service.connectionsecurity,7986176,6225920,0,93696000,0,19,6]
+04-22 18:49:25.814  1944  2346 I am_pss  : [3888,10105,com.qualcomm.qti.performancemode,5426176,3641344,0,91402240,0,19,6]
+04-22 18:49:25.822  1944  2346 I am_pss  : [3746,10063,com.qualcomm.qti.biometrics.fingerprint.service,5820416,3907584,0,91561984,0,19,5]
+04-22 18:49:25.830  1944  2346 I am_pss  : [3911,10063,com.qualcomm.qti.biometrics.fingerprint.service:remote,5782528,2433024,1429504,90099712,0,19,6]
+04-22 18:49:25.838  1944  2346 I am_pss  : [4656,10034,com.android.statementservice,9090048,6950912,0,101158912,0,19,6]
+04-22 18:49:25.846  1944  2346 I am_pss  : [4637,2000,com.android.shell,5935104,2334720,1740800,91623424,0,19,6]
+04-22 18:49:25.854  1944  2346 I am_pss  : [4613,10092,com.android.remoteprovisioner,8367104,5881856,0,102522880,0,19,6]
+04-22 18:49:25.862  1944  2346 I am_pss  : [4546,10028,com.android.packageinstaller,7683072,5890048,0,94101504,0,19,6]
+04-22 18:49:25.871  1944  2346 I am_pss  : [4527,10066,com.android.onetimeinitializer,5396480,3608576,0,91639808,0,19,5]
+04-22 18:49:25.881  1944  2346 I am_pss  : [4246,10035,com.android.externalstorage,5703680,3772416,0,94511104,0,19,6]
+04-22 18:49:25.890  1944  2346 I am_pss  : [4492,10040,com.android.managedprovisioning,8919040,7090176,0,95981568,0,19,6]
+04-22 18:49:25.900  1944  2346 I am_pss  : [4456,1000,com.android.localtransport,5558272,2138112,1515520,92127232,0,19,6]
+04-22 18:49:25.912  1944  2346 I am_pss  : [4415,1000,com.android.dynsystem:dynsystem,5750784,2056192,1642496,92352512,0,19,6]
+04-22 18:49:25.923  1385  1563 W TransactionTracing: Could not find layer handle 0xb400006d60cf9530
+04-22 18:49:25.923  1385  1563 W TransactionTracing: Could not find layer handle 0xb400006d60cf9530
+04-22 18:49:25.923  1944  2346 I am_pss  : [4347,1000,com.android.dynsystem,5472256,1978368,1634304,89997312,0,19,6]
+04-22 18:49:25.936  1944  2346 I am_pss  : [3604,1000,com.qti.diagservices,6676480,2375680,1912832,96182272,0,0,7]
+04-22 18:49:25.953  1944  2346 I am_pss  : [3614,1000,com.qualcomm.qti.services.secureui:sui_service,6025216,2179072,1851392,93753344,0,0,7]
+04-22 18:49:25.962  1944  2346 I am_pss  : [3498,10060,.powermodule,5806080,3809280,0,94224384,0,0,7]
+04-22 18:49:25.970  1944  2346 I am_pss  : [3430,10062,.pasr,5432320,3670016,0,90959872,0,0,6]
+04-22 18:49:25.978  1944  2346 I am_pss  : [3453,10108,com.qualcomm.qti.workloadclassifier,8921088,6946816,0,98148352,0,0,6]
+04-22 18:49:25.985  1944  2346 I am_pss  : [3450,10085,com.qualcomm.qti.services.systemhelper:systemhelper_service,6168576,4239360,0,94490624,0,0,6]
+04-22 18:49:25.992  1944  2346 I am_pss  : [2891,10107,com.qti.qcc,9042944,6365184,0,103911424,0,0,6]
+04-22 18:49:25.999  1944  2346 I am_pss  : [2863,1000,vendor.qti.qesdk.sysservice,5602304,2002944,1679360,92741632,0,0,5]
+04-22 18:49:26.006  1944  2346 I am_pss  : [2875,1068,com.android.se,5898240,1974272,1904640,94019584,0,0,5]
+04-22 18:49:26.012  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:49:26.013  1944  2346 I am_pss  : [2826,10095,com.qualcomm.qtil.aptxals,14541824,12197888,0,107061248,0,0,6]
+04-22 18:49:26.020  1944  2346 I am_pss  : [2799,10064,.qms,6189056,4202496,0,95703040,0,0,5]
+04-22 18:49:26.027  1944  2346 I am_pss  : [2793,10059,.qtidataservices,7492608,5419008,0,98471936,0,0,6]
+04-22 18:49:26.029  1944  2352 I ActivityManager: Process PhantomProcessRecord {510098b 4322:4269:libcabin_edge.so/u0a136} died
+04-22 18:49:26.032     1     1 I init    : Untracked pid 4322 did not have an associated service entry and will not be reaped
+04-22 18:49:26.032     1     1 I init    : Untracked pid 4322 received signal 9
+04-22 18:49:26.035  1944  2346 I am_pss  : [2816,10103,com.qualcomm.qtil.aptxacu,9190400,7315456,0,97456128,0,0,5]
+04-22 18:49:26.042  1944  2346 I am_pss  : [2781,1001,.dataservices,6217728,2367488,2031616,90718208,0,0,5]
+04-22 18:49:26.055  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:49:26.055  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:49:26.056  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:49:28.645  1944  3499 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+04-22 18:49:29.026  7097  7097 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+04-22 18:49:29.027  1385  2578 D PermissionCache: checking android.permission.CAPTURE_BLACKOUT_CONTENT for uid=2000 => denied (427 us)
+04-22 18:49:29.027  1385  2578 W ServiceManager: Permission failure: android.permission.CAPTURE_BLACKOUT_CONTENT from uid=2000 pid=7097
+04-22 18:49:29.106   551   551 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+04-22 18:49:29.108  7097  7098 I AdrenoUtils: <ReadGpuID:407>: Reading chip ID through GSL
+04-22 18:49:29.277  1944  2347 D CompatibilityInfo: mCompatibilityFlags - 4
+04-22 18:49:29.278  1944  2347 D CompatibilityInfo: applicationDensity - 340
+04-22 18:49:29.278  1944  2347 D CompatibilityInfo: applicationScale - 1.0
+04-22 18:49:29.289  1944  7042 D CompatibilityInfo: applicationDensity - 340
+04-22 18:49:29.289  1944  7042 D CompatibilityInfo: applicationScale - 1.0
+04-22 18:49:29.289  1944  7042 D CompatibilityInfo: mCompatibilityFlags - 4
+04-22 18:49:29.295  3649  3649 I auditd  : type=1400 audit(0.0:231): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 I auditd  : type=1400 audit(0.0:232): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 I auditd  : type=1400 audit(0.0:233): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 I auditd  : type=1400 audit(0.0:234): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 I auditd  : type=1400 audit(0.0:235): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 I auditd  : type=1400 audit(0.0:236): avc: denied { getattr } for comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 I auditd  : type=1400 audit(0.0:237): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 I auditd  : type=1400 audit(0.0:238): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 I auditd  : type=1400 audit(0.0:239): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:231): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:232): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:233): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:234): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:235): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:236): avc: denied { getattr } for comm=4173796E635461736B202331 path="/data/local/tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:237): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:238): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.295  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:239): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:49:29.297  3649  4247 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+04-22 18:49:29.301  4247  4247 E audit   : rate limit exceeded
+04-22 18:49:29.301  4247  4247 W audit   : audit_lost=159 audit_rate_limit=5 audit_backlog_limit=64
+04-22 18:49:29.304  3649  4247 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 1ms, 0 inserts 0 updates 0 deletes
+04-22 18:49:29.305  3649  4247 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+04-22 18:49:29.435  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:49:29.436  1944  2503 I am_unfreeze: [4347,com.android.dynsystem]
+04-22 18:49:29.436  1944  2660 D ActivityManager: sync unfroze 4347 com.android.dynsystem
+04-22 18:49:29.437  1944  2660 D ActivityManager: sync unfroze 4415 com.android.dynsystem:dynsystem
+04-22 18:49:29.438  1944  2503 I am_unfreeze: [4415,com.android.dynsystem:dynsystem]
+04-22 18:49:29.438  1944  2503 I am_unfreeze: [4456,com.android.localtransport]
+04-22 18:49:29.438  1944  2660 D ActivityManager: sync unfroze 4456 com.android.localtransport
+04-22 18:49:29.439  1944  2660 D ActivityManager: sync unfroze 4246 com.android.externalstorage
+04-22 18:49:29.440  1944  2503 I am_unfreeze: [4246,com.android.externalstorage]
+04-22 18:49:29.440  1944  2660 D ActivityManager: sync unfroze 4527 com.android.onetimeinitializer
+04-22 18:49:29.441  1944  2503 I am_unfreeze: [4527,com.android.onetimeinitializer]
+04-22 18:49:29.441  1944  2503 I am_unfreeze: [4613,com.android.remoteprovisioner]
+04-22 18:49:29.441  1944  2660 D ActivityManager: sync unfroze 4613 com.android.remoteprovisioner
+04-22 18:49:29.442  1944  2503 I am_unfreeze: [4656,com.android.statementservice]
+04-22 18:49:29.442  1944  2660 D ActivityManager: sync unfroze 4656 com.android.statementservice
+04-22 18:49:29.443  1944  2660 D ActivityManager: sync unfroze 3911 com.qualcomm.qti.biometrics.fingerprint.service:remote
+04-22 18:49:29.444  1944  2503 I am_unfreeze: [3911,com.qualcomm.qti.biometrics.fingerprint.service:remote]
+04-22 18:49:29.444  1944  2660 D ActivityManager: sync unfroze 3746 com.qualcomm.qti.biometrics.fingerprint.service
+04-22 18:49:29.445  1944  2660 D ActivityManager: sync unfroze 3888 com.qualcomm.qti.performancemode
+04-22 18:49:29.446  1944  2503 I am_unfreeze: [3746,com.qualcomm.qti.biometrics.fingerprint.service]
+04-22 18:49:29.446  1944  2503 I am_unfreeze: [3888,com.qualcomm.qti.performancemode]
+04-22 18:49:29.446  1944  2503 I am_unfreeze: [4709,com.qualcomm.qti.qms.service.connectionsecurity]
+04-22 18:49:29.446  1944  2660 D ActivityManager: sync unfroze 4019 com.qualcomm.qtil.aptxui
+04-22 18:49:29.446  1944  2660 D ActivityManager: sync unfroze 4709 com.qualcomm.qti.qms.service.connectionsecurity
+04-22 18:49:29.447  1944  2503 I am_unfreeze: [4019,com.qualcomm.qtil.aptxui]
+04-22 18:49:29.448  1944  2660 D ActivityManager: sync unfroze 3668 com.android.printspooler
+04-22 18:49:29.449  1944  2503 I am_unfreeze: [3668,com.android.printspooler]
+04-22 18:49:29.449  1944  2660 D ActivityManager: sync unfroze 4767 org.codeaurora.snapcam
+04-22 18:49:29.450  1944  2503 I am_unfreeze: [4587,com.android.providers.calendar]
+04-22 18:49:29.450  1944  2503 I am_unfreeze: [4767,org.codeaurora.snapcam]
+04-22 18:49:29.450  1944  2660 D ActivityManager: sync unfroze 4587 com.android.providers.calendar
+04-22 18:49:29.451  1944  2660 D ActivityManager: sync unfroze 4790 com.google.ai.edge.gallery
+04-22 18:49:29.453  1944  2660 D ActivityManager: sync unfroze 4826 com.opera.browser
+04-22 18:49:29.455  1944  2660 D ActivityManager: sync unfroze 5392 com.android.emergency
+04-22 18:49:29.456  1944  2660 D ActivityManager: sync unfroze 4118 com.android.traceur
+04-22 18:49:29.459  1944  2660 D ActivityManager: sync unfroze 4565 com.android.permissioncontroller
+04-22 18:49:29.460  1944  2660 D ActivityManager: sync unfroze 4214 android.process.acore
+04-22 18:49:29.460  1944  2660 D ActivityManager: sync unfroze 5363 com.android.settings.intelligence
+04-22 18:49:29.461  1944  2503 I am_unfreeze: [4790,com.google.ai.edge.gallery]
+04-22 18:49:29.462  1944  2503 I am_unfreeze: [4118,com.android.traceur]
+04-22 18:49:29.462  1944  2503 I am_unfreeze: [4214,android.process.acore]
+04-22 18:49:29.462  1944  2503 I am_unfreeze: [4565,com.android.permissioncontroller]
+04-22 18:49:29.462  1944  2503 I am_unfreeze: [4826,com.opera.browser]
+04-22 18:49:29.462  1944  2503 I am_unfreeze: [5363,com.android.settings.intelligence]
+04-22 18:49:29.462  1944  2503 I am_unfreeze: [5392,com.android.emergency]
+04-22 18:49:29.466  4826  4947 E Metadata: Google Play services missing or without correct permission.
+04-22 18:49:29.467  4826  4914 E Metadata: Google Play services missing or without correct permission.
+04-22 18:49:29.488  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:49:29.643  7104  7104 W libc    : Access denied finding property "ro.hardware.chipname"
+04-22 18:49:30.609  1944  2372 W BatteryExternalStatsWorker: error reading Bluetooth stats: 9
+04-22 18:49:30.611  1944  2372 W BatteryExternalStatsWorker: error reading modem stats:ERROR_PHONE_NOT_AVAILABLE
+04-22 18:49:30.635  1944  2372 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu7/cpufreq/stats/time_in_state: open failed: ENOENT (No such file or directory)
+04-22 18:49:30.694  1822  5250 D BufferPoolAccessor2.0: bufferpool2 0xb4000075b62471b8 : 0(0 size) total buffers - 0(0 size) used buffers - 4/12 (recycle/alloc) - 7/14 (fetch/transfer)
+04-22 18:49:30.694  1944  2373 W CpuPowerCalculator: UID 50156 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.694  1944  2373 W CpuPowerCalculator: UID 50157 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.695  1822  5250 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+04-22 18:49:30.695  1944  2373 W CpuPowerCalculator: UID 50130 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.695  1944  2373 W CpuPowerCalculator: UID 50135 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.695  1944  2373 W CpuPowerCalculator: UID 50136 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.695  1944  2373 W CpuPowerCalculator: UID 50137 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.696  1944  2373 W CpuPowerCalculator: UID 50124 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.696  1944  2373 W CpuPowerCalculator: UID 50125 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.696  2007  2697 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+04-22 18:49:30.697  1944  2373 W CpuPowerCalculator: UID 10157 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.697  1944  2373 W CpuPowerCalculator: UID 10157 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.698  1944  2373 W CpuPowerCalculator: UID 10157 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.698  1944  2373 W CpuPowerCalculator: UID 10157 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.699  1944  2373 W CpuPowerCalculator: UID 10152 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.699  1944  2373 W CpuPowerCalculator: UID 10157 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.700  1944  2373 W CpuPowerCalculator: UID 10152 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.700  1944  2373 W CpuPowerCalculator: UID 10152 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.701  1944  2373 W CpuPowerCalculator: UID 10137 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.701  1944  2373 W CpuPowerCalculator: UID 10137 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.702  1944  2373 W CpuPowerCalculator: UID 10137 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.702  1944  2373 W CpuPowerCalculator: UID 10137 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.702  1944  2373 W CpuPowerCalculator: UID 10137 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.703  1944  2373 W CpuPowerCalculator: UID 10136 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.703  1944  2373 W CpuPowerCalculator: UID 10136 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.704  1944  2373 W CpuPowerCalculator: UID 10136 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.704  1944  2373 W CpuPowerCalculator: UID 10136 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.705  1944  2373 W CpuPowerCalculator: UID 10131 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.705  1944  2373 W CpuPowerCalculator: UID 10131 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.706  1944  2373 W CpuPowerCalculator: UID 10131 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.706  1944  2373 W CpuPowerCalculator: UID 10131 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.707  1944  2373 W CpuPowerCalculator: UID 10130 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.708  1944  2373 W CpuPowerCalculator: UID 10130 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.708  1944  2373 W CpuPowerCalculator: UID 10130 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.709  1944  2373 W CpuPowerCalculator: UID 10125 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.709  1944  2373 W CpuPowerCalculator: UID 10129 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.709  1944  2373 W CpuPowerCalculator: UID 10129 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.710  1944  2373 W CpuPowerCalculator: UID 10125 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.710  1944  2373 W CpuPowerCalculator: UID 10125 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.710  1944  2373 W CpuPowerCalculator: UID 10125 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.711  1944  2373 W CpuPowerCalculator: UID 10123 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.711  1944  2373 W CpuPowerCalculator: UID 10124 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.711  1944  2373 W CpuPowerCalculator: UID 10125 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.711  1944  2373 W CpuPowerCalculator: UID 10125 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.712  1944  2373 W CpuPowerCalculator: UID 10123 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.712  1944  2373 W CpuPowerCalculator: UID 10123 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.713  1944  2373 W CpuPowerCalculator: UID 10123 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.713  1944  2373 W CpuPowerCalculator: UID 10123 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.713  1944  2373 W CpuPowerCalculator: UID 10123 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.714  1944  2373 W CpuPowerCalculator: UID 10120 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.714  1944  2373 W CpuPowerCalculator: UID 10120 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.714  1944  2373 W CpuPowerCalculator: UID 10120 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.715  1944  2373 W CpuPowerCalculator: UID 10119 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.715  1944  2373 W CpuPowerCalculator: UID 10119 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.715  1944  2373 W CpuPowerCalculator: UID 10119 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.716  1944  2373 W CpuPowerCalculator: UID 10117 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.716  1944  2373 W CpuPowerCalculator: UID 10117 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.716  1944  2373 W CpuPowerCalculator: UID 10117 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.717  1944  2373 W CpuPowerCalculator: UID 10117 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.717  1944  2373 W CpuPowerCalculator: UID 10117 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.717  1944  2373 W CpuPowerCalculator: UID 10117 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.718  1944  2373 W CpuPowerCalculator: UID 10109 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.718  1944  2373 W CpuPowerCalculator: UID 10109 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.718  1944  2373 W CpuPowerCalculator: UID 10109 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.719  1944  2373 W CpuPowerCalculator: UID 10108 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.719  1944  2373 W CpuPowerCalculator: UID 10108 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.719  1944  2373 W CpuPowerCalculator: UID 10108 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.720  1944  2373 W CpuPowerCalculator: UID 10107 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.720  1944  2373 W CpuPowerCalculator: UID 10107 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.720  1944  2373 W CpuPowerCalculator: UID 10107 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.721  1944  2373 W CpuPowerCalculator: UID 10105 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.721  1944  2373 W CpuPowerCalculator: UID 10105 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.722  1944  2373 W CpuPowerCalculator: UID 10104 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.722  1944  2373 W CpuPowerCalculator: UID 10105 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.723  1944  2373 W CpuPowerCalculator: UID 10103 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.723  1944  2373 W CpuPowerCalculator: UID 10104 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.723  1944  2373 W CpuPowerCalculator: UID 10104 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.724  1944  2373 W CpuPowerCalculator: UID 10100 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.724  1944  2373 W CpuPowerCalculator: UID 10103 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.724  1944  2373 W CpuPowerCalculator: UID 10103 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.725  1944  2373 W CpuPowerCalculator: UID 10097 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.725  1944  2373 W CpuPowerCalculator: UID 10100 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.725  1944  2373 W CpuPowerCalculator: UID 10100 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.726  1944  2373 W CpuPowerCalculator: UID 10096 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.726  1944  2373 W CpuPowerCalculator: UID 10097 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.726  1944  2373 W CpuPowerCalculator: UID 10097 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.726  1944  2373 W CpuPowerCalculator: UID 10097 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.727  1944  2373 W CpuPowerCalculator: UID 10096 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.727  1944  2373 W CpuPowerCalculator: UID 10096 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.727  1944  2373 W CpuPowerCalculator: UID 10096 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.727  1944  2373 W CpuPowerCalculator: UID 10096 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.728  1944  2373 W CpuPowerCalculator: UID 10095 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.728  1944  2373 W CpuPowerCalculator: UID 10096 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.728  1944  2373 W CpuPowerCalculator: UID 10096 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.729  1944  2373 W CpuPowerCalculator: UID 10092 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.729  1944  2373 W CpuPowerCalculator: UID 10092 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.729  1944  2373 W CpuPowerCalculator: UID 10095 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.729  1944  2373 W CpuPowerCalculator: UID 10095 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.730  1944  2373 W CpuPowerCalculator: UID 10091 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.730  1944  2373 W CpuPowerCalculator: UID 10091 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.730  1944  2373 W CpuPowerCalculator: UID 10092 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.731  1944  2373 W CpuPowerCalculator: UID 10090 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.731  1944  2373 W CpuPowerCalculator: UID 10090 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.731  1944  2373 W CpuPowerCalculator: UID 10090 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.731  1944  2373 W CpuPowerCalculator: UID 10091 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.732  1944  2373 W CpuPowerCalculator: UID 10085 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.732  1944  2373 W CpuPowerCalculator: UID 10085 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.732  1944  2373 W CpuPowerCalculator: UID 10088 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.732  1944  2373 W CpuPowerCalculator: UID 10088 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.732  1944  2373 W CpuPowerCalculator: UID 10088 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10079 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10079 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10079 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10080 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10080 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10080 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10082 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10082 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10082 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.733  1944  2373 W CpuPowerCalculator: UID 10085 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10074 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10074 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10074 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10074 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10075 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10075 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10075 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10077 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10077 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10077 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.734  1944  2373 W CpuPowerCalculator: UID 10077 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10065 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10066 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10066 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10066 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10067 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10067 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10067 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10069 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10069 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.735  1944  2373 W CpuPowerCalculator: UID 10069 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.736  1944  2373 W CpuPowerCalculator: UID 10062 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.736  1944  2373 W CpuPowerCalculator: UID 10063 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.736  1944  2373 W CpuPowerCalculator: UID 10063 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.736  1944  2373 W CpuPowerCalculator: UID 10063 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.736  1944  2373 W CpuPowerCalculator: UID 10064 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.736  1944  2373 W CpuPowerCalculator: UID 10064 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.736  1944  2373 W CpuPowerCalculator: UID 10064 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.736  1944  2373 W CpuPowerCalculator: UID 10065 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.736  1944  2373 W CpuPowerCalculator: UID 10065 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10058 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10058 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10058 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10058 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10059 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10059 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10059 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10060 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10060 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10060 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10062 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.737  1944  2373 W CpuPowerCalculator: UID 10062 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.738  1944  2373 W CpuPowerCalculator: UID 10046 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.738  1944  2373 W CpuPowerCalculator: UID 10046 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.738  1944  2373 W CpuPowerCalculator: UID 10046 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.738  1944  2373 W CpuPowerCalculator: UID 10046 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.738  1944  2373 W CpuPowerCalculator: UID 10057 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.738  1944  2373 W CpuPowerCalculator: UID 10057 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.738  1944  2373 W CpuPowerCalculator: UID 10057 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.738  1944  2373 W CpuPowerCalculator: UID 10058 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.738  1944  2373 W CpuPowerCalculator: UID 10058 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.739  1944  2373 W CpuPowerCalculator: UID 10034 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.739  1944  2373 W CpuPowerCalculator: UID 10034 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.739  1944  2373 W CpuPowerCalculator: UID 10034 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.739  1944  2373 W CpuPowerCalculator: UID 10035 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.739  1944  2373 W CpuPowerCalculator: UID 10035 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.739  1944  2373 W CpuPowerCalculator: UID 10035 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.739  1944  2373 W CpuPowerCalculator: UID 10040 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.739  1944  2373 W CpuPowerCalculator: UID 10040 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.739  1944  2373 W CpuPowerCalculator: UID 10040 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10028 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10028 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10028 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10031 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10031 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10031 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10031 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10033 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10033 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10033 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.740  1944  2373 W CpuPowerCalculator: UID 10033 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 10026 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 10026 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 10026 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 10026 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 10027 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 10027 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 10027 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 10028 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 2000 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 2000 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 2000 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 2903 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.741  1944  2373 W CpuPowerCalculator: UID 9999 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1047 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1053 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1058 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1066 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1067 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1068 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1068 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1068 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1069 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1072 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1073 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1073 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1073 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1076 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.742  1944  2373 W CpuPowerCalculator: UID 1092 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1002 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1002 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1002 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1003 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1010 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1013 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1017 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1019 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1020 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1021 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1036 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1040 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1041 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.743  1944  2373 W CpuPowerCalculator: UID 1046 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.744  1944  2373 W CpuPowerCalculator: UID 1000 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.744  1944  2373 W CpuPowerCalculator: UID 1001 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.744  1944  2373 W CpuPowerCalculator: UID 1001 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.744  1944  2373 W CpuPowerCalculator: UID 1001 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.744  1944  2373 W CpuPowerCalculator: UID 1002 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.745  1944  2373 W CpuPowerCalculator: UID 0 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.745  1944  2373 W CpuPowerCalculator: UID 1000 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:30.745  1944  2373 W CpuPowerCalculator: UID 1000 CPU freq # mismatch: Power Profile # 50 actual # 57
+04-22 18:49:31.164  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1213515 GICv3:IPI(1):784082 GICv3:IPI(2):712954 GICv3:IPI(6):557923 GICv3:apps_rsc-drv-2(20):162593 GICv3:240b6400.qcom,bwmon-llcc(40):39282 GICv3:dwc3(390):35586 GICv3:ufshcd(35):35013 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:49:31.165  6932  6932 I (cpu    : irq_count)- 0:1639743 1:749953 2:622834 3:238180 4:218746 5:191698
+04-22 18:49:31.165  6932  6932 I (ipi    : irq_count)- 0:784082 1:712954 2:0 3:0 4:0 5:557923 6:0
+04-22 18:49:35.621  1944  2423 I commit_sys_config_file: [package-user-0,12]
+04-22 18:49:36.001  2682  2806 D ControlsListingControllerImpl: Subscribing callback, service count: 0
+04-22 18:49:36.010  2682  2806 D ControlsListingControllerImpl: Unsubscribing callback
+04-22 18:49:40.635  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1218721 GICv3:IPI(1):786741 GICv3:IPI(2):715428 GICv3:IPI(6):558565 GICv3:apps_rsc-drv-2(20):163292 GICv3:240b6400.qcom,bwmon-llcc(40):39451 GICv3:ufshcd(35):36264 GICv3:dwc3(390):35591 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:49:40.636  6729  6729 I (cpu    : irq_count)- 0:1644934 1:751315 2:624176 3:238693 4:219176 5:196114
+04-22 18:49:40.636  6729  6729 I (ipi    : irq_count)- 0:786741 1:715428 2:0 3:0 4:0 5:558565 6:0
+04-22 18:49:42.990  7104  7104 W sherpa-onnx: /home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93
+04-22 18:49:42.990  7104  7104 W sherpa-onnx: Unknown token: shei2
+04-22 18:49:43.021  7104  7104 W sherpa-onnx: /home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93
+04-22 18:49:43.021  7104  7104 W sherpa-onnx: /home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93
+04-22 18:49:43.021  7104  7104 W sherpa-onnx: Unknown token: shei2
+04-22 18:49:43.021  7104  7104 W sherpa-onnx: Unknown token: shei2
+04-22 18:49:43.026  7104  7104 W sherpa-onnx: /home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93
+04-22 18:49:43.027  7104  7104 W sherpa-onnx: Unknown token: shei2
+04-22 18:49:44.980  1944  7042 D ActivityManager: freezer override set to true
+04-22 18:49:45.037  1944  7042 D ActivityManager: freezer override set to false
+04-22 18:49:47.308  7104  7104 W libc    : Access denied finding property "ro.hardware.chipname"
+04-22 18:49:50.108  6898  6898 I (cpu    : irq_count)- 0:1652874 1:753494 2:626231 3:239931 4:220809 5:202436
+04-22 18:49:50.108  6898  6898 I (ipi    : irq_count)- 0:790455 1:724274 2:0 3:0 4:0 5:559227 6:0
+04-22 18:49:50.108  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1224060 GICv3:IPI(1):790455 GICv3:IPI(2):724274 GICv3:IPI(6):559227 GICv3:apps_rsc-drv-2(20):163776 GICv3:240b6400.qcom,bwmon-llcc(40):39590 GICv3:ufshcd(35):38338 GICv3:dwc3(390):35591 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:49:50.512  7104  7104 W libc    : Access denied finding property "ro.vendor.gfx.opencl.enable_buffer_to_image"
+04-22 18:49:53.213  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:49:59.580  6955  6955 I (cpu    : irq_count)- 0:1658205 1:756880 2:631392 3:241136 4:224568 5:204735
+04-22 18:49:59.580  6955  6955 I (ipi    : irq_count)- 0:802593 1:725597 2:0 3:0 4:0 5:559904 6:0
+04-22 18:49:59.580  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1228988 GICv3:IPI(1):802591 GICv3:IPI(2):725597 GICv3:IPI(6):559904 GICv3:apps_rsc-drv-2(20):164287 GICv3:240b6400.qcom,bwmon-llcc(40):39708 GICv3:ufshcd(35):39451 GICv3:dwc3(390):35591 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:50:00.149  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:50:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:50:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:50:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:50:00.507  1944  7042 D ActivityManager: freezer override set to true
+04-22 18:50:00.592  1944  7042 D ActivityManager: freezer override set to false
+04-22 18:50:00.756   720   720 I binder  : undelivered transaction 195903, process died.
+04-22 18:50:09.052  6898  6898 I (cpu    : irq_count)- 0:1664472 1:761933 2:637920 3:242699 4:227087 5:206760
+04-22 18:50:09.052  6898  6898 I (ipi    : irq_count)- 0:809930 1:731919 2:0 3:0 4:0 5:560848 6:0
+04-22 18:50:09.052  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1235188 GICv3:IPI(1):809930 GICv3:IPI(2):731919 GICv3:IPI(6):560848 GICv3:apps_rsc-drv-2(20):165235 GICv3:ufshcd(35):40381 GICv3:240b6400.qcom,bwmon-llcc(40):39987 GICv3:dwc3(390):35591 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:50:16.141  1944  7042 D ActivityManager: freezer override set to true
+04-22 18:50:16.227  1944  7042 D ActivityManager: freezer override set to false
+04-22 18:50:18.524  6955  6955 I (cpu    : irq_count)- 0:1670557 1:766998 2:643160 3:244362 4:229480 5:209274
+04-22 18:50:18.524  6955  6955 I (ipi    : irq_count)- 0:816616 1:737998 2:0 3:0 4:0 5:561828 6:0
+04-22 18:50:18.524  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1241727 GICv3:IPI(1):816614 GICv3:IPI(2):737998 GICv3:IPI(6):561828 GICv3:apps_rsc-drv-2(20):166161 GICv3:ufshcd(35):40692 GICv3:240b6400.qcom,bwmon-llcc(40):40323 GICv3:dwc3(390):35591 ipcc:glink-native-adsp(426):25179 GICv3:ipcc_0(37):25154
+04-22 18:50:23.214  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:50:27.996  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1247958 GICv3:IPI(1):823540 GICv3:IPI(2):738406 GICv3:IPI(6):562789 GICv3:apps_rsc-drv-2(20):167169 GICv3:ufshcd(35):40897 GICv3:240b6400.qcom,bwmon-llcc(40):40697 GICv3:dwc3(390):35591 GICv3:hfi(329):25964 ipcc:glink-native-adsp(426):25179
+04-22 18:50:27.997  6898  6898 I (cpu    : irq_count)- 0:1675385 1:771181 2:647703 3:245342 4:231016 5:210564
+04-22 18:50:27.997  6898  6898 I (ipi    : irq_count)- 0:823540 1:738406 2:0 3:0 4:0 5:562789 6:0
+04-22 18:50:31.821  1944  7042 D ActivityManager: freezer override set to true
+04-22 18:50:31.885  1944  7042 D ActivityManager: freezer override set to false
+04-22 18:50:32.047   720   720 I binder  : undelivered transaction 196009, process died.
+04-22 18:50:37.468  6898  6898 I (cpu    : irq_count)- 0:1681108 1:776189 2:653120 3:247085 4:233801 5:213165
+04-22 18:50:37.468  6898  6898 I (ipi    : irq_count)- 0:830402 1:744520 2:0 3:0 4:0 5:563828 6:0
+04-22 18:50:37.468  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1254605 GICv3:IPI(1):830402 GICv3:IPI(2):744520 GICv3:IPI(6):563828 GICv3:apps_rsc-drv-2(20):168097 GICv3:ufshcd(35):41044 GICv3:240b6400.qcom,bwmon-llcc(40):41041 GICv3:dwc3(390):35591 GICv3:hfi(329):26945 ipcc:glink-native-adsp(426):25179
+04-22 18:50:46.940  6955  6955 I (cpu    : irq_count)- 0:1685764 1:780601 2:656852 3:248239 4:235343 5:214617
+04-22 18:50:46.940  6955  6955 I (ipi    : irq_count)- 0:836938 1:744938 2:0 3:0 4:0 5:564816 6:0
+04-22 18:50:46.940  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1260943 GICv3:IPI(1):836938 GICv3:IPI(2):744938 GICv3:IPI(6):564816 GICv3:apps_rsc-drv-2(20):169063 GICv3:240b6400.qcom,bwmon-llcc(40):41430 GICv3:ufshcd(35):41166 GICv3:dwc3(390):35591 GICv3:hfi(329):27899 ipcc:glink-native-adsp(426):25179
+04-22 18:50:47.464  1944  7042 D ActivityManager: freezer override set to true
+04-22 18:50:47.586  1944  7042 D ActivityManager: freezer override set to false
+04-22 18:50:53.215  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:50:56.412  6932  6932 I (cpu    : irq_count)- 0:1691755 1:785759 2:661965 3:250195 4:237680 5:217247
+04-22 18:50:56.412  6932  6932 I (ipi    : irq_count)- 0:843723 1:750899 2:0 3:0 4:0 5:565820 6:0
+04-22 18:50:56.412  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1267724 GICv3:IPI(1):843723 GICv3:IPI(2):750899 GICv3:IPI(6):565820 GICv3:apps_rsc-drv-2(20):170044 GICv3:240b6400.qcom,bwmon-llcc(40):41818 GICv3:ufshcd(35):41223 GICv3:dwc3(390):35591 GICv3:hfi(329):28892 ipcc:glink-native-adsp(426):25179
+04-22 18:51:00.130  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:51:00.171  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:51:00.172  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:51:00.173  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:51:03.200  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:51:03.333  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	... 9 more
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at android.net.IConnectivityManager$Stub.onTransact(IConnectivityManager.java:1574)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at android.os.Binder.dump(Binder.java:977)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at android.os.Binder.execTransact(Binder.java:1244)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at android.os.Binder.execTransactInternal(Binder.java:1285)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at android.os.Binder.onTransact(Binder.java:856)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at com.android.internal.util.FastPrintWriter.flush(FastPrintWriter.java:412)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at com.android.internal.util.FastPrintWriter.flushBytesLocked(FastPrintWriter.java:354)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at com.android.internal.util.FastPrintWriter.flushLocked(FastPrintWriter.java:377)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at java.io.FileOutputStream.write(FileOutputStream.java:401)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at libcore.io.BlockGuardOs.write(BlockGuardOs.java:448)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at libcore.io.ForwardingOs.write(ForwardingOs.java:943)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at libcore.io.IoBridge.write(IoBridge.java:646)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at libcore.io.IoBridge.write(IoBridge.java:651)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at libcore.io.Linux.write(Linux.java:296)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: 	at libcore.io.Linux.writeBytes(Native Method)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: Caused by: android.system.ErrnoException: write failed: EPIPE (Broken pipe)
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: Write failure
+04-22 18:51:03.500  1944  2660 W FastPrintWriter: java.io.IOException: write failed: EPIPE (Broken pipe)
+04-22 18:51:03.507   677   677 I binder  : undelivered transaction 196177, process died.
+04-22 18:51:05.883  6898  6898 I (cpu    : irq_count)- 0:1697950 1:790935 2:667394 3:252398 4:240189 5:219965
+04-22 18:51:05.883  6898  6898 I (ipi    : irq_count)- 0:850971 1:757142 2:0 3:0 4:0 5:566891 6:0
+04-22 18:51:05.883  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1274696 GICv3:IPI(1):850971 GICv3:IPI(2):757142 GICv3:IPI(6):566891 GICv3:apps_rsc-drv-2(20):171027 GICv3:240b6400.qcom,bwmon-llcc(40):42193 GICv3:ufshcd(35):41326 GICv3:dwc3(390):35591 GICv3:hfi(329):29877 ipcc:glink-native-adsp(426):25179
+04-22 18:51:15.356  6932  6932 I (cpu    : irq_count)- 0:1703058 1:794797 2:671387 3:253113 4:241730 5:221361
+04-22 18:51:15.356  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1281000 GICv3:IPI(1):857349 GICv3:IPI(2):757538 GICv3:IPI(6):567805 GICv3:apps_rsc-drv-2(20):171973 GICv3:240b6400.qcom,bwmon-llcc(40):42565 GICv3:ufshcd(35):41465 GICv3:dwc3(390):35591 GICv3:hfi(329):30829 ipcc:glink-native-adsp(426):25179
+04-22 18:51:15.357  6932  6932 I (ipi    : irq_count)- 0:857349 1:757538 2:0 3:0 4:0 5:567805 6:0
+04-22 18:51:18.938  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:51:19.099  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:51:23.215  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:51:24.828  6932  6932 I (cpu    : irq_count)- 0:1709402 1:799163 2:676372 3:255080 4:244263 5:224040
+04-22 18:51:24.828  6932  6932 I (virq   : irq_count)- GICv3:arch_timer(11):1287601 GICv3:IPI(1):863885 GICv3:IPI(2):763764 GICv3:IPI(6):568836 GICv3:apps_rsc-drv-2(20):172886 GICv3:240b6400.qcom,bwmon-llcc(40):42900 GICv3:ufshcd(35):41570 GICv3:dwc3(390):35593 GICv3:hfi(329):31762 ipcc:glink-native-adsp(426):25179
+04-22 18:51:24.829  6932  6932 I (ipi    : irq_count)- 0:863885 1:763764 2:0 3:0 4:0 5:568836 6:0
+04-22 18:51:34.299  6955  6955 I (cpu    : irq_count)- 0:1714591 1:801940 2:679054 3:256330 4:245382 5:225568
+04-22 18:51:34.299  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1293349 GICv3:IPI(1):868329 GICv3:IPI(2):765221 GICv3:IPI(6):569655 GICv3:apps_rsc-drv-2(20):173595 GICv3:240b6400.qcom,bwmon-llcc(40):43174 GICv3:ufshcd(35):41690 GICv3:dwc3(390):35593 GICv3:hfi(329):32610 ipcc:glink-native-adsp(426):25179
+04-22 18:51:34.300  6955  6955 I (ipi    : irq_count)- 0:868329 1:765221 2:0 3:0 4:0 5:569655 6:0
+04-22 18:51:34.649  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:51:34.717  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:51:43.772  6955  6955 I (cpu    : irq_count)- 0:1721900 1:806533 2:682626 3:258799 4:247806 5:228479
+04-22 18:51:43.772  6955  6955 I (ipi    : irq_count)- 0:873456 1:773639 2:0 3:0 4:0 5:570571 6:0
+04-22 18:51:43.772  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1299839 GICv3:IPI(1):873456 GICv3:IPI(2):773639 GICv3:IPI(6):570571 GICv3:apps_rsc-drv-2(20):174387 GICv3:240b6400.qcom,bwmon-llcc(40):43478 GICv3:ufshcd(35):41811 GICv3:dwc3(390):35614 GICv3:hfi(329):33553 ipcc:glink-native-adsp(426):25179
+04-22 18:51:50.239  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:51:50.327  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:51:53.216  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:51:53.244  6898  6898 I (cpu    : irq_count)- 0:1728829 1:810877 2:686031 3:260785 4:250375 5:231290
+04-22 18:51:53.244  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1306334 GICv3:IPI(1):878615 GICv3:IPI(2):780946 GICv3:IPI(6):571468 GICv3:apps_rsc-drv-2(20):175147 GICv3:240b6400.qcom,bwmon-llcc(40):43735 GICv3:ufshcd(35):41899 GICv3:dwc3(390):35624 GICv3:hfi(329):34478 ipcc:glink-native-adsp(426):25179
+04-22 18:51:53.245  6898  6898 I (ipi    : irq_count)- 0:878615 1:780946 2:0 3:0 4:0 5:571468 6:0
+04-22 18:52:00.145  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:52:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:52:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:52:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:52:02.716  6867  6867 I (cpu    : irq_count)- 0:1734025 1:813961 2:689059 3:261778 4:251555 5:232606
+04-22 18:52:02.716  6867  6867 I (ipi    : irq_count)- 0:883053 1:782299 2:0 3:0 4:0 5:572285 6:0
+04-22 18:52:02.716  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1312172 GICv3:IPI(1):883053 GICv3:IPI(2):782299 GICv3:IPI(6):572285 GICv3:apps_rsc-drv-2(20):175949 GICv3:240b6400.qcom,bwmon-llcc(40):44041 GICv3:ufshcd(35):41971 GICv3:dwc3(390):35624 GICv3:hfi(329):35438 ipcc:glink-native-adsp(426):25179
+04-22 18:52:05.925  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:52:06.033  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:52:12.189  6729  6729 I (cpu    : irq_count)- 0:1740008 1:817836 2:693374 3:264098 4:253944 5:235391
+04-22 18:52:12.189  6729  6729 I (ipi    : irq_count)- 0:887575 1:789301 2:0 3:0 4:0 5:573244 6:0
+04-22 18:52:12.189  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1319101 GICv3:IPI(1):887575 GICv3:IPI(2):789301 GICv3:IPI(6):573244 GICv3:apps_rsc-drv-2(20):176735 GICv3:240b6400.qcom,bwmon-llcc(40):44345 GICv3:ufshcd(35):42057 GICv3:hfi(329):36354 GICv3:dwc3(390):35624 ipcc:glink-native-adsp(426):25179
+04-22 18:52:21.659  6867  6867 I (cpu    : irq_count)- 0:1745229 1:821098 2:696838 3:265463 4:255377 5:237179
+04-22 18:52:21.659  6867  6867 I (ipi    : irq_count)- 0:891840 1:792315 2:0 3:0 4:0 5:574069 6:0
+04-22 18:52:21.659  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1325285 GICv3:IPI(1):891840 GICv3:IPI(2):792315 GICv3:IPI(6):574069 GICv3:apps_rsc-drv-2(20):177490 GICv3:240b6400.qcom,bwmon-llcc(40):44647 GICv3:ufshcd(35):42174 GICv3:hfi(329):37257 GICv3:dwc3(390):35637 ipcc:glink-native-adsp(426):25179
+04-22 18:52:21.685  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:52:21.768  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:52:23.217  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:52:31.132  6955  6955 I (cpu    : irq_count)- 0:1751141 1:825147 2:701051 3:267275 4:257744 5:239720
+04-22 18:52:31.132  6955  6955 I (ipi    : irq_count)- 0:896601 1:798729 2:0 3:0 4:0 5:575063 6:0
+04-22 18:52:31.132  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1331684 GICv3:IPI(1):896601 GICv3:IPI(2):798729 GICv3:IPI(6):575063 GICv3:apps_rsc-drv-2(20):178287 GICv3:240b6400.qcom,bwmon-llcc(40):44975 GICv3:ufshcd(35):42244 GICv3:hfi(329):38239 GICv3:dwc3(390):35646 ipcc:glink-native-adsp(426):25179
+04-22 18:52:37.347  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:52:37.425  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:52:39.287  1163  1163 W healthd : battery l=100 v=4314 t=25.0 h=2 st=3 c=-65919 fc=3500000 cc=0 chg=
+04-22 18:52:39.397  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:52:39.438  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:52:39.438  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:52:39.439  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:52:40.604  6729  6729 I (cpu    : irq_count)- 0:1757840 1:829784 2:706002 3:269664 4:260234 5:242740
+04-22 18:52:40.604  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1338743 GICv3:IPI(1):902259 GICv3:IPI(2):806916 GICv3:IPI(6):576000 GICv3:apps_rsc-drv-2(20):179066 GICv3:240b6400.qcom,bwmon-llcc(40):45260 GICv3:ufshcd(35):42289 GICv3:hfi(329):39201 GICv3:dwc3(390):35672 ipcc:glink-native-adsp(426):25226
+04-22 18:52:40.605  6729  6729 I (ipi    : irq_count)- 0:902259 1:806916 2:0 3:0 4:0 5:576000 6:0
+04-22 18:52:50.076  6955  6955 I (cpu    : irq_count)- 0:1762963 1:832910 2:709342 3:270891 4:261256 5:244220
+04-22 18:52:50.076  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1344863 GICv3:IPI(1):906932 GICv3:IPI(2):808325 GICv3:IPI(6):576826 GICv3:apps_rsc-drv-2(20):179863 GICv3:240b6400.qcom,bwmon-llcc(40):45561 GICv3:ufshcd(35):42370 GICv3:hfi(329):40162 GICv3:dwc3(390):35682 ipcc:glink-native-adsp(426):25226
+04-22 18:52:50.077  6955  6955 I (ipi    : irq_count)- 0:906932 1:808325 2:0 3:0 4:0 5:576826 6:0
+04-22 18:52:53.038  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:52:53.129  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:52:53.217  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:52:53.295   720   720 I binder  : undelivered transaction 196673, process died.
+04-22 18:52:59.548  6729  6729 I (cpu    : irq_count)- 0:1768775 1:836828 2:713843 3:273080 4:263707 5:246876
+04-22 18:52:59.548  6729  6729 I (ipi    : irq_count)- 0:911408 1:815618 2:0 3:0 4:0 5:577704 6:0
+04-22 18:52:59.548  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1351500 GICv3:IPI(1):911408 GICv3:IPI(2):815618 GICv3:IPI(6):577704 GICv3:apps_rsc-drv-2(20):180642 GICv3:240b6400.qcom,bwmon-llcc(40):45860 GICv3:ufshcd(35):42447 GICv3:hfi(329):41088 GICv3:dwc3(390):35682 ipcc:glink-native-adsp(426):25226
+04-22 18:53:00.130  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:53:00.171  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:53:00.171  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:53:00.173  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:53:08.756  1944  7042 D ActivityManager: freezer override set to true
+04-22 18:53:08.894  1944  7042 D ActivityManager: freezer override set to false
+04-22 18:53:09.020  6898  6898 I (cpu    : irq_count)- 0:1774712 1:840299 2:717775 3:274592 4:265074 5:248747
+04-22 18:53:09.020  6898  6898 I (ipi    : irq_count)- 0:916551 1:818843 2:0 3:0 4:0 5:578587 6:0
+04-22 18:53:09.020  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1357984 GICv3:IPI(1):916550 GICv3:IPI(2):818832 GICv3:IPI(6):578587 GICv3:apps_rsc-drv-2(20):181448 GICv3:240b6400.qcom,bwmon-llcc(40):46179 GICv3:ufshcd(35):42532 GICv3:hfi(329):42050 GICv3:dwc3(390):35682 ipcc:glink-native-adsp(426):25226
+04-22 18:53:18.492  6955  6955 I (cpu    : irq_count)- 0:1780356 1:843955 2:721903 3:276223 4:267075 5:251089
+04-22 18:53:18.492  6955  6955 I (ipi    : irq_count)- 0:920958 1:824190 2:0 3:0 4:0 5:579425 6:0
+04-22 18:53:18.492  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1364585 GICv3:IPI(1):920958 GICv3:IPI(2):824190 GICv3:IPI(6):579425 GICv3:apps_rsc-drv-2(20):182206 GICv3:240b6400.qcom,bwmon-llcc(40):46469 GICv3:hfi(329):42969 GICv3:ufshcd(35):42608 GICv3:dwc3(390):35682 ipcc:glink-native-adsp(426):25226
+04-22 18:53:23.218  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:53:24.539  1944  7042 D ActivityManager: freezer override set to true
+04-22 18:53:24.607  1944  7042 D ActivityManager: freezer override set to false
+04-22 18:53:27.964  6898  6898 I (cpu    : irq_count)- 0:1786699 1:848117 2:726171 3:278395 4:269515 5:253950
+04-22 18:53:27.964  6898  6898 I (ipi    : irq_count)- 0:925693 1:831691 2:0 3:0 4:0 5:580291 6:0
+04-22 18:53:27.964  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1371501 GICv3:IPI(1):925693 GICv3:IPI(2):831691 GICv3:IPI(6):580291 GICv3:apps_rsc-drv-2(20):182983 GICv3:240b6400.qcom,bwmon-llcc(40):46765 GICv3:hfi(329):43861 GICv3:ufshcd(35):42687 GICv3:dwc3(390):35694 ipcc:glink-native-adsp(426):25226
+04-22 18:53:37.435  6867  6867 I (cpu    : irq_count)- 0:1791812 1:851443 2:729717 3:279685 4:271012 5:255765
+04-22 18:53:37.435  6867  6867 I (ipi    : irq_count)- 0:930066 1:834517 2:0 3:0 4:0 5:581112 6:0
+04-22 18:53:37.435  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1377841 GICv3:IPI(1):930066 GICv3:IPI(2):834517 GICv3:IPI(6):581112 GICv3:apps_rsc-drv-2(20):183758 GICv3:240b6400.qcom,bwmon-llcc(40):47083 GICv3:hfi(329):44765 GICv3:ufshcd(35):42758 GICv3:dwc3(390):35709 ipcc:glink-native-adsp(426):25226
+04-22 18:53:39.768  1163  1163 W healthd : battery l=100 v=4302 t=25.0 h=2 st=3 c=-67018 fc=3500000 cc=0 chg=
+04-22 18:53:39.880  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:53:39.921  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:53:39.921  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:53:39.922  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:53:40.233  1944  7042 D ActivityManager: freezer override set to true
+04-22 18:53:40.363  1944  7042 D ActivityManager: freezer override set to false
+04-22 18:53:46.908  6955  6955 I (cpu    : irq_count)- 0:1798006 1:855627 2:734293 3:281969 4:273439 5:258465
+04-22 18:53:46.908  6955  6955 I (ipi    : irq_count)- 0:935428 1:841352 2:0 3:0 4:0 5:582036 6:0
+04-22 18:53:46.908  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1384680 GICv3:IPI(1):935428 GICv3:IPI(2):841352 GICv3:IPI(6):582036 GICv3:apps_rsc-drv-2(20):184581 GICv3:240b6400.qcom,bwmon-llcc(40):47388 GICv3:hfi(329):45720 GICv3:ufshcd(35):42803 GICv3:dwc3(390):35709 ipcc:glink-native-adsp(426):25275
+04-22 18:53:53.219  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:53:53.698  4826  4947 E Metadata: Google Play services missing or without correct permission.
+04-22 18:53:55.930  1944  7042 D ActivityManager: freezer override set to true
+04-22 18:53:56.062  1944  7042 D ActivityManager: freezer override set to false
+04-22 18:53:56.380  6955  6955 I (cpu    : irq_count)- 0:1803912 1:859368 2:738718 3:283834 4:276090 5:260990
+04-22 18:53:56.380  6955  6955 I (ipi    : irq_count)- 0:940440 1:847549 2:0 3:0 4:0 5:583015 6:0
+04-22 18:53:56.380  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1391314 GICv3:IPI(1):940440 GICv3:IPI(2):847549 GICv3:IPI(6):583015 GICv3:apps_rsc-drv-2(20):185380 GICv3:240b6400.qcom,bwmon-llcc(40):47728 GICv3:hfi(329):46646 GICv3:ufshcd(35):42850 GICv3:dwc3(390):35721 ipcc:glink-native-adsp(426):25275
+04-22 18:54:00.111  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:54:00.154  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:54:00.155  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:54:00.155  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:54:05.852  6898  6898 I (cpu    : irq_count)- 0:1808984 1:863175 2:742505 3:285228 4:277710 5:262909
+04-22 18:54:05.852  6898  6898 I (ipi    : irq_count)- 0:946415 1:849054 2:0 3:0 4:0 5:583971 6:0
+04-22 18:54:05.852  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1398238 GICv3:IPI(1):946415 GICv3:IPI(2):849054 GICv3:IPI(6):583971 GICv3:apps_rsc-drv-2(20):186209 GICv3:240b6400.qcom,bwmon-llcc(40):47997 GICv3:hfi(329):47502 GICv3:ufshcd(35):42943 GICv3:dwc3(390):35721 ipcc:glink-native-adsp(426):25275
+04-22 18:54:11.599  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:54:11.695  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:54:15.324  6867  6867 I (cpu    : irq_count)- 0:1814550 1:867075 2:747607 3:287292 4:280225 5:265722
+04-22 18:54:15.324  6867  6867 I (ipi    : irq_count)- 0:952104 1:855236 2:0 3:0 4:0 5:584946 6:0
+04-22 18:54:15.324  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1405037 GICv3:IPI(1):952104 GICv3:IPI(2):855236 GICv3:IPI(6):584946 GICv3:apps_rsc-drv-2(20):187062 GICv3:hfi(329):48344 GICv3:240b6400.qcom,bwmon-llcc(40):48275 GICv3:ufshcd(35):43110 GICv3:dwc3(390):35721 ipcc:glink-native-adsp(426):25275
+04-22 18:54:23.219  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:54:24.796  6729  6729 I (cpu    : irq_count)- 0:1819343 1:870159 2:751403 3:288623 4:281529 5:267492
+04-22 18:54:24.796  6729  6729 I (ipi    : irq_count)- 0:957658 1:856036 2:0 3:0 4:0 5:585872 6:0
+04-22 18:54:24.796  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1411494 GICv3:IPI(1):957658 GICv3:IPI(2):856036 GICv3:IPI(6):585872 GICv3:apps_rsc-drv-2(20):187921 GICv3:hfi(329):49182 GICv3:240b6400.qcom,bwmon-llcc(40):48564 GICv3:ufshcd(35):43275 GICv3:dwc3(390):35732 ipcc:glink-native-adsp(426):25275
+04-22 18:54:27.247  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:54:27.321  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:54:29.073  7819  7819 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+04-22 18:54:29.139   551   551 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+04-22 18:54:29.141  7819  7820 I AdrenoUtils: <ReadGpuID:407>: Reading chip ID through GSL
+04-22 18:54:29.337  1944  2347 D CompatibilityInfo: applicationDensity - 340
+04-22 18:54:29.337  1944  2347 D CompatibilityInfo: applicationScale - 1.0
+04-22 18:54:29.337  1944  2347 D CompatibilityInfo: mCompatibilityFlags - 4
+04-22 18:54:29.343  1944  7042 D CompatibilityInfo: applicationDensity - 340
+04-22 18:54:29.343  1944  7042 D CompatibilityInfo: applicationScale - 1.0
+04-22 18:54:29.343  1944  7042 D CompatibilityInfo: mCompatibilityFlags - 4
+04-22 18:54:29.349  1944  2346 I am_pss  : [3115,10096,com.android.launcher3,77630464,61771776,0,217628672,0,2,9]
+04-22 18:54:29.351  3649  3649 I auditd  : type=1400 audit(0.0:251): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  3649 I auditd  : type=1400 audit(0.0:252): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  3649 I auditd  : type=1400 audit(0.0:253): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  3649 I auditd  : type=1400 audit(0.0:254): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  3649 I auditd  : type=1400 audit(0.0:255): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:251): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:252): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:253): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:254): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:255): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 18:54:29.351  3649  4247 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+04-22 18:54:29.355  4247  4247 E audit   : rate limit exceeded
+04-22 18:54:29.355  4247  4247 W audit   : audit_lost=170 audit_rate_limit=5 audit_backlog_limit=64
+04-22 18:54:29.357  3649  4247 W ModernMediaScanner: Failed to visit /data/local/tmp/cabin/out/offline/shots/middle.png: java.nio.file.AccessDeniedException: /data/local/tmp/cabin/out/offline/shots/middle.png
+04-22 18:54:29.358  3649  4247 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 1ms, 0 inserts 0 updates 0 deletes
+04-22 18:54:29.359  3649  4247 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+04-22 18:54:29.513  4826  4914 E Metadata: Google Play services missing or without correct permission.
+04-22 18:54:34.268  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1418559 GICv3:IPI(1):963560 GICv3:IPI(2):864670 GICv3:IPI(6):586929 GICv3:apps_rsc-drv-2(20):188789 GICv3:hfi(329):50049 GICv3:240b6400.qcom,bwmon-llcc(40):48861 GICv3:ufshcd(35):43337 GICv3:dwc3(390):35732 ipcc:glink-native-adsp(426):25275
+04-22 18:54:34.269  6955  6955 I (cpu    : irq_count)- 0:1825635 1:874457 2:756488 3:291511 4:284316 5:271078
+04-22 18:54:34.269  6955  6955 I (ipi    : irq_count)- 0:963560 1:864670 2:0 3:0 4:0 5:586929 6:0
+04-22 18:54:40.236  1163  1163 W healthd : battery l=100 v=4305 t=25.0 h=2 st=3 c=-67750 fc=3500000 cc=0 chg=
+04-22 18:54:40.347  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:54:40.388  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:54:40.388  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:54:40.389  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:54:43.740  6867  6867 I (cpu    : irq_count)- 0:1830448 1:877586 2:760465 3:292770 4:285834 5:272897
+04-22 18:54:43.740  6867  6867 I (ipi    : irq_count)- 0:969669 1:865027 2:0 3:0 4:0 5:587955 6:0
+04-22 18:54:43.740  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1425249 GICv3:IPI(1):969669 GICv3:IPI(2):865027 GICv3:IPI(6):587955 GICv3:apps_rsc-drv-2(20):189621 GICv3:hfi(329):50915 GICv3:240b6400.qcom,bwmon-llcc(40):49126 GICv3:ufshcd(35):43431 GICv3:dwc3(390):35732 ipcc:glink-native-adsp(426):25333
+04-22 18:54:44.530  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:54:44.612  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:54:53.212  6729  6729 I (cpu    : irq_count)- 0:1836301 1:881372 2:765212 3:295209 4:288587 5:276034
+04-22 18:54:53.212  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1432137 GICv3:IPI(1):975640 GICv3:IPI(2):871597 GICv3:IPI(6):588957 GICv3:apps_rsc-drv-2(20):190475 GICv3:hfi(329):51769 GICv3:240b6400.qcom,bwmon-llcc(40):49404 GICv3:ufshcd(35):43531 GICv3:dwc3(390):35744 ipcc:glink-native-adsp(426):25333
+04-22 18:54:53.213  6729  6729 I (ipi    : irq_count)- 0:975640 1:871597 2:0 3:0 4:0 5:588957 6:0
+04-22 18:54:53.220  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:55:00.149  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:55:00.181  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:55:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:55:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:55:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:55:00.290  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:55:02.684  6729  6729 I (cpu    : irq_count)- 0:1841802 1:885440 2:769436 3:297622 4:290952 5:279004
+04-22 18:55:02.684  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1438944 GICv3:IPI(1):980937 GICv3:IPI(2):877788 GICv3:IPI(6):589983 GICv3:apps_rsc-drv-2(20):191288 GICv3:hfi(329):52628 GICv3:240b6400.qcom,bwmon-llcc(40):49674 GICv3:ufshcd(35):43630 GICv3:dwc3(390):35744 ipcc:glink-native-adsp(426):25333
+04-22 18:55:02.685  6729  6729 I (ipi    : irq_count)- 0:980937 1:877788 2:0 3:0 4:0 5:589983 6:0
+04-22 18:55:12.156  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1445543 GICv3:IPI(1):986346 GICv3:IPI(2):878139 GICv3:IPI(6):591003 GICv3:apps_rsc-drv-2(20):192086 GICv3:hfi(329):53492 GICv3:240b6400.qcom,bwmon-llcc(40):49930 GICv3:ufshcd(35):43694 GICv3:dwc3(390):35744 ipcc:glink-native-adsp(426):25333
+04-22 18:55:12.157  6729  6729 I (cpu    : irq_count)- 0:1846442 1:888499 2:772410 3:298911 4:292655 5:280851
+04-22 18:55:12.157  6729  6729 I (ipi    : irq_count)- 0:986346 1:878139 2:0 3:0 4:0 5:591003 6:0
+04-22 18:55:15.869  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:55:15.939  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:55:16.141   631   631 I binder  : undelivered transaction 197593, process died.
+04-22 18:55:21.628  6955  6955 I (cpu    : irq_count)- 0:1851671 1:893136 2:777166 3:301577 4:295256 5:283875
+04-22 18:55:21.628  6955  6955 I (ipi    : irq_count)- 0:992351 1:884784 2:0 3:0 4:0 5:592042 6:0
+04-22 18:55:21.628  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1452510 GICv3:IPI(1):992351 GICv3:IPI(2):884784 GICv3:IPI(6):592042 GICv3:apps_rsc-drv-2(20):192940 GICv3:hfi(329):54359 GICv3:240b6400.qcom,bwmon-llcc(40):50219 GICv3:ufshcd(35):43760 GICv3:dwc3(390):35756 ipcc:glink-native-adsp(426):25333
+04-22 18:55:23.221  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:55:28.061  1163  1163 W healthd : battery l=100 v=4315 t=25.0 h=2 st=3 c=-64820 fc=3500000 cc=0 chg=
+04-22 18:55:28.181  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:55:28.221  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:55:28.221  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:55:28.223  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:55:31.100  6729  6729 I (cpu    : irq_count)- 0:1856116 1:896055 2:780148 3:303124 4:296677 5:285634
+04-22 18:55:31.100  6729  6729 I (ipi    : irq_count)- 0:997322 1:885158 2:0 3:0 4:0 5:593019 6:0
+04-22 18:55:31.100  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1459061 GICv3:IPI(1):997322 GICv3:IPI(2):885158 GICv3:IPI(6):593019 GICv3:apps_rsc-drv-2(20):193709 GICv3:hfi(329):55215 GICv3:240b6400.qcom,bwmon-llcc(40):50468 GICv3:ufshcd(35):43816 GICv3:dwc3(390):35756 ipcc:glink-native-adsp(426):25384
+04-22 18:55:31.539  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:55:31.614  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:55:35.853  1944  2346 I UsageStatsService: User[0] Flushing usage stats to disk
+04-22 18:55:40.572  6729  6729 I (cpu    : irq_count)- 0:1861780 1:900486 2:784617 3:305505 4:299138 5:288716
+04-22 18:55:40.572  6729  6729 I (ipi    : irq_count)- 0:1003411 1:891320 2:0 3:0 4:0 5:594063 6:0
+04-22 18:55:40.572  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1466105 GICv3:IPI(1):1003411 GICv3:IPI(2):891320 GICv3:IPI(6):594063 GICv3:apps_rsc-drv-2(20):194514 GICv3:hfi(329):56069 GICv3:240b6400.qcom,bwmon-llcc(40):50730 GICv3:ufshcd(35):43893 GICv3:dwc3(390):35756 ipcc:glink-native-adsp(426):25384
+04-22 18:55:47.167  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:55:47.228  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:55:50.044  6898  6898 I (cpu    : irq_count)- 0:1867497 1:904561 2:788694 3:307993 4:301699 5:291875
+04-22 18:55:50.044  6898  6898 I (ipi    : irq_count)- 0:1008620 1:897868 2:0 3:0 4:0 5:595076 6:0
+04-22 18:55:50.044  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1473284 GICv3:IPI(1):1008620 GICv3:IPI(2):897868 GICv3:IPI(6):595076 GICv3:apps_rsc-drv-2(20):195313 GICv3:hfi(329):56889 GICv3:240b6400.qcom,bwmon-llcc(40):50988 GICv3:ufshcd(35):43961 GICv3:dwc3(390):35767 ipcc:glink-native-adsp(426):25384
+04-22 18:55:52.231  1944  2625 I storage_state: [41217664-9172-527a-b3d5-edabb50a7d69,0,0,37873750016,116907651072]
+04-22 18:55:53.222  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:55:59.516  6898  6898 I (cpu    : irq_count)- 0:1872140 1:907175 2:791895 3:309231 4:303032 5:293650
+04-22 18:55:59.516  6898  6898 I (ipi    : irq_count)- 0:1013484 1:898225 2:0 3:0 4:0 5:596009 6:0
+04-22 18:55:59.516  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1479750 GICv3:IPI(1):1013484 GICv3:IPI(2):898225 GICv3:IPI(6):596009 GICv3:apps_rsc-drv-2(20):196119 GICv3:hfi(329):57767 GICv3:240b6400.qcom,bwmon-llcc(40):51273 GICv3:ufshcd(35):44017 GICv3:dwc3(390):35767 ipcc:glink-native-adsp(426):25384
+04-22 18:56:00.132  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:56:00.172  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:56:00.172  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:56:00.173  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:56:02.808  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:56:02.875  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:56:08.988  6898  6898 I (cpu    : irq_count)- 0:1877822 1:911819 2:796639 3:311896 4:305116 5:296513
+04-22 18:56:08.988  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1486724 GICv3:IPI(1):1020137 GICv3:IPI(2):904089 GICv3:IPI(6):597022 GICv3:apps_rsc-drv-2(20):196918 GICv3:hfi(329):58654 GICv3:240b6400.qcom,bwmon-llcc(40):51531 GICv3:ufshcd(35):44082 GICv3:dwc3(390):35767 ipcc:glink-native-adsp(426):25384
+04-22 18:56:08.989  6898  6898 I (ipi    : irq_count)- 0:1020137 1:904089 2:0 3:0 4:0 5:597022 6:0
+04-22 18:56:18.464  6867  6867 I (cpu    : irq_count)- 0:1882521 1:914927 2:799884 3:313323 4:306931 5:298501
+04-22 18:56:18.464  6867  6867 I (ipi    : irq_count)- 0:1025360 1:905442 2:0 3:0 4:0 5:597986 6:0
+04-22 18:56:18.464  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1493302 GICv3:IPI(1):1025360 GICv3:IPI(2):905442 GICv3:IPI(6):597986 GICv3:apps_rsc-drv-2(20):197709 GICv3:hfi(329):59522 GICv3:240b6400.qcom,bwmon-llcc(40):51799 GICv3:ufshcd(35):44150 GICv3:dwc3(390):35777 ipcc:glink-native-adsp(426):25384
+04-22 18:56:18.484  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:56:18.574  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:56:23.223  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:56:27.932  6898  6898 I (cpu    : irq_count)- 0:1888612 1:920014 2:804535 3:315559 4:309334 5:301176
+04-22 18:56:27.932  6898  6898 I (ipi    : irq_count)- 0:1032256 1:911080 2:0 3:0 4:0 5:599146 6:0
+04-22 18:56:27.932  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1500195 GICv3:IPI(1):1032256 GICv3:IPI(2):911080 GICv3:IPI(6):599146 GICv3:apps_rsc-drv-2(20):198667 GICv3:hfi(329):60534 GICv3:240b6400.qcom,bwmon-llcc(40):52141 GICv3:ufshcd(35):44222 GICv3:dwc3(390):35777 ipcc:glink-native-adsp(426):25384
+04-22 18:56:34.120  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:56:34.259  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:56:37.404  6867  6867 I (cpu    : irq_count)- 0:1895125 1:925012 2:809469 3:317808 4:311799 5:303787
+04-22 18:56:37.404  6867  6867 I (ipi    : irq_count)- 0:1039180 1:917305 2:0 3:0 4:0 5:600268 6:0
+04-22 18:56:37.404  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1506941 GICv3:IPI(1):1039180 GICv3:IPI(2):917305 GICv3:IPI(6):600268 GICv3:apps_rsc-drv-2(20):199668 GICv3:hfi(329):61624 GICv3:240b6400.qcom,bwmon-llcc(40):52496 GICv3:ufshcd(35):44334 GICv3:dwc3(390):35777 ipcc:glink-native-adsp(426):25384
+04-22 18:56:40.182  1944  2503 D ActivityManager: freezing 4184 android.process.media
+04-22 18:56:40.187  1944  2503 I am_freeze: [4184,android.process.media]
+04-22 18:56:46.876  6867  6867 I (cpu    : irq_count)- 0:1900479 1:929050 2:813003 3:318966 4:313437 5:305379
+04-22 18:56:46.876  6867  6867 I (ipi    : irq_count)- 0:1045347 1:918262 2:0 3:0 4:0 5:601261 6:0
+04-22 18:56:46.876  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1513536 GICv3:IPI(1):1045346 GICv3:IPI(2):918262 GICv3:IPI(6):601261 GICv3:apps_rsc-drv-2(20):200617 GICv3:hfi(329):62658 GICv3:240b6400.qcom,bwmon-llcc(40):52844 GICv3:ufshcd(35):44402 GICv3:dwc3(390):35787 ipcc:glink-native-adsp(426):25384
+04-22 18:56:49.762  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:56:49.763  1944  2660 D ActivityManager: sync unfroze 4184 android.process.media
+04-22 18:56:49.764  1944  2503 I am_unfreeze: [4184,android.process.media]
+04-22 18:56:49.845  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:56:53.224  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:56:56.348  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1520460 GICv3:IPI(1):1052354 GICv3:IPI(2):924486 GICv3:IPI(6):602355 GICv3:apps_rsc-drv-2(20):201639 GICv3:hfi(329):63772 GICv3:240b6400.qcom,bwmon-llcc(40):53225 GICv3:ufshcd(35):44485 GICv3:dwc3(390):35787 ipcc:glink-native-adsp(426):25384
+04-22 18:56:56.349  6955  6955 I (cpu    : irq_count)- 0:1907263 1:934066 2:817583 3:321348 4:316111 5:307994
+04-22 18:56:56.349  6955  6955 I (ipi    : irq_count)- 0:1052354 1:924486 2:0 3:0 4:0 5:602355 6:0
+04-22 18:56:58.582  2761  3341 D DhcpClient: Broadcasting DHCPDISCOVER
+04-22 18:57:00.111  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:57:00.155  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:57:00.156  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:57:00.157  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:57:05.407  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:57:05.504  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:57:05.819  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1527233 GICv3:IPI(1):1059529 GICv3:IPI(2):929116 GICv3:IPI(6):603558 GICv3:apps_rsc-drv-2(20):202645 GICv3:hfi(329):64897 GICv3:240b6400.qcom,bwmon-llcc(40):53598 GICv3:ufshcd(35):44606 GICv3:dwc3(390):35787 ipcc:glink-native-adsp(426):25384
+04-22 18:57:05.820  6955  6955 I (cpu    : irq_count)- 0:1914049 1:938664 2:822391 3:323557 4:318145 5:310179
+04-22 18:57:05.820  6955  6955 I (ipi    : irq_count)- 0:1059530 1:929116 2:0 3:0 4:0 5:603559 6:0
+04-22 18:57:15.291  6867  6867 I (cpu    : irq_count)- 0:1920006 1:942646 2:827050 3:325150 4:319931 5:312078
+04-22 18:57:15.291  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1533946 GICv3:IPI(1):1066267 GICv3:IPI(2):931849 GICv3:IPI(6):604584 GICv3:apps_rsc-drv-2(20):203596 GICv3:hfi(329):65965 GICv3:240b6400.qcom,bwmon-llcc(40):53969 GICv3:ufshcd(35):44686 GICv3:dwc3(390):35798 ipcc:glink-native-adsp(426):25384
+04-22 18:57:15.292  6867  6867 I (ipi    : irq_count)- 0:1066267 1:931849 2:0 3:0 4:0 5:604584 6:0
+04-22 18:57:21.156  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:57:21.286  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:57:21.508  1944  2042 W system_server: Reducing the number of considered missed Gc histogram windows from 681 to 100
+04-22 18:57:23.225  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:57:24.764  6955  6955 I (cpu    : irq_count)- 0:1926897 1:947342 2:832349 3:327561 4:322611 5:314827
+04-22 18:57:24.764  6955  6955 I (virq   : irq_count)- GICv3:arch_timer(11):1541011 GICv3:IPI(1):1073845 GICv3:IPI(2):938055 GICv3:IPI(6):605705 GICv3:apps_rsc-drv-2(20):204599 GICv3:hfi(329):67077 GICv3:240b6400.qcom,bwmon-llcc(40):54330 GICv3:ufshcd(35):44770 GICv3:dwc3(390):35798 ipcc:glink-native-adsp(426):25384
+04-22 18:57:24.765  6955  6955 I (ipi    : irq_count)- 0:1073845 1:938055 2:0 3:0 4:0 5:605705 6:0
+04-22 18:57:34.237  6867  6867 I (cpu    : irq_count)- 0:1932567 1:950430 2:836532 3:328806 4:324058 5:316225
+04-22 18:57:34.237  6867  6867 I (ipi    : irq_count)- 0:1080274 1:938666 2:0 3:0 4:0 5:606670 6:0
+04-22 18:57:34.237  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1547435 GICv3:IPI(1):1080272 GICv3:IPI(2):938666 GICv3:IPI(6):606670 GICv3:apps_rsc-drv-2(20):205534 GICv3:hfi(329):68137 GICv3:240b6400.qcom,bwmon-llcc(40):54683 GICv3:ufshcd(35):44847 GICv3:dwc3(390):35798 ipcc:glink-native-adsp(426):25384
+04-22 18:57:36.897  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:57:36.964  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:57:40.723  1163  1163 W healthd : battery l=100 v=4309 t=25.0 h=2 st=3 c=-65187 fc=3500000 cc=0 chg=
+04-22 18:57:40.832  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:57:40.871  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:57:40.871  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:57:40.872  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:57:41.078  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:57:41.121  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:57:41.121  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:57:41.122  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:57:43.712  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1554621 GICv3:IPI(1):1087557 GICv3:IPI(2):945144 GICv3:IPI(6):607938 GICv3:apps_rsc-drv-2(20):206579 GICv3:hfi(329):69262 GICv3:240b6400.qcom,bwmon-llcc(40):55041 GICv3:ufshcd(35):44929 GICv3:dwc3(390):35809 ipcc:glink-native-adsp(426):25434
+04-22 18:57:43.713  6867  6867 I (cpu    : irq_count)- 0:1939447 1:955232 2:841968 3:331236 4:326865 5:319053
+04-22 18:57:43.713  6867  6867 I (ipi    : irq_count)- 0:1087557 1:945144 2:0 3:0 4:0 5:607938 6:0
+04-22 18:57:52.619  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:57:52.742  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:57:53.179  6729  6729 I (cpu    : irq_count)- 0:1945959 1:959696 2:846951 3:333443 4:329588 5:321621
+04-22 18:57:53.179  6729  6729 I (ipi    : irq_count)- 0:1094314 1:951017 2:0 3:0 4:0 5:609041 6:0
+04-22 18:57:53.179  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1561626 GICv3:IPI(1):1094314 GICv3:IPI(2):951017 GICv3:IPI(6):609041 GICv3:apps_rsc-drv-2(20):207563 GICv3:hfi(329):70348 GICv3:240b6400.qcom,bwmon-llcc(40):55410 GICv3:ufshcd(35):45002 GICv3:dwc3(390):35809 ipcc:glink-native-adsp(426):25434
+04-22 18:57:53.226  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:58:00.147  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:58:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:58:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:58:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:58:02.652  8182  8182 I (cpu    : irq_count)- 0:1951262 1:963328 2:851210 3:334757 4:331187 5:323267
+04-22 18:58:02.652  8182  8182 I (ipi    : irq_count)- 0:1100519 1:951943 2:0 3:0 4:0 5:610039 6:0
+04-22 18:58:02.652  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1568584 GICv3:IPI(1):1100519 GICv3:IPI(2):951943 GICv3:IPI(6):610039 GICv3:apps_rsc-drv-2(20):208539 GICv3:hfi(329):71374 GICv3:240b6400.qcom,bwmon-llcc(40):55778 GICv3:ufshcd(35):45074 GICv3:dwc3(390):35809 ipcc:glink-native-adsp(426):25434
+04-22 18:58:05.057  1944  2596 W BestClock: java.time.DateTimeException: Missing NTP fix
+04-22 18:58:05.065  1944  2596 I netstats_mobile_sample: [0,0,0,0,0,0,0,0,0,0,0,0,1776859085065]
+04-22 18:58:05.065  1944  2596 I netstats_wifi_sample: [0,0,0,0,0,0,0,0,0,0,0,0,1776859085065]
+04-22 18:58:05.065  1944  2596 W BestClock: java.time.DateTimeException: Missing NTP fix
+04-22 18:58:05.074  1944  2346 I am_pss  : [3115,10096,com.android.launcher3,77719552,61771776,0,217628672,0,2,17]
+04-22 18:58:05.078  1944  3557 I commit_sys_config_file: [appops,15740120]
+04-22 18:58:08.281  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:58:08.404  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:58:12.128  8182  8182 I (cpu    : irq_count)- 0:1958449 1:967797 2:856369 3:337136 4:333963 5:325778
+04-22 18:58:12.128  8182  8182 I (ipi    : irq_count)- 0:1107586 1:958522 2:0 3:0 4:0 5:611174 6:0
+04-22 18:58:12.128  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1575490 GICv3:IPI(1):1107586 GICv3:IPI(2):958522 GICv3:IPI(6):611174 GICv3:apps_rsc-drv-2(20):209553 GICv3:hfi(329):72475 GICv3:240b6400.qcom,bwmon-llcc(40):56131 GICv3:ufshcd(35):45158 GICv3:dwc3(390):35821 ipcc:glink-native-adsp(426):25434
+04-22 18:58:21.596  8182  8182 I (cpu    : irq_count)- 0:1963839 1:971069 2:860323 3:338360 4:335518 5:327469
+04-22 18:58:21.596  8182  8182 I (ipi    : irq_count)- 0:1113923 1:958994 2:0 3:0 4:0 5:612191 6:0
+04-22 18:58:21.596  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1582120 GICv3:IPI(1):1113923 GICv3:IPI(2):958994 GICv3:IPI(6):612191 GICv3:apps_rsc-drv-2(20):210523 GICv3:hfi(329):73458 GICv3:240b6400.qcom,bwmon-llcc(40):56483 GICv3:ufshcd(35):45277 GICv3:dwc3(390):35821 ipcc:glink-native-adsp(426):25434
+04-22 18:58:23.226  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:58:24.030  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:58:24.125  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:58:31.068  6898  6898 I (cpu    : irq_count)- 0:1969502 1:975061 2:864835 3:340427 4:337956 5:330347
+04-22 18:58:31.068  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1588927 GICv3:IPI(1):1119220 GICv3:IPI(2):965216 GICv3:IPI(6):613149 GICv3:apps_rsc-drv-2(20):211376 GICv3:hfi(329):74313 GICv3:240b6400.qcom,bwmon-llcc(40):56767 GICv3:ufshcd(35):45343 GICv3:dwc3(390):35821 ipcc:glink-native-adsp(426):25434
+04-22 18:58:31.069  6898  6898 I (ipi    : irq_count)- 0:1119220 1:965216 2:0 3:0 4:0 5:613149 6:0
+04-22 18:58:39.759  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:58:39.871  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:58:40.540  6867  6867 I (cpu    : irq_count)- 0:1975131 1:979363 2:869103 3:342814 4:340552 5:333348
+04-22 18:58:40.540  6867  6867 I (ipi    : irq_count)- 0:1124755 1:971812 2:0 3:0 4:0 5:614142 6:0
+04-22 18:58:40.540  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1595734 GICv3:IPI(1):1124755 GICv3:IPI(2):971812 GICv3:IPI(6):614142 GICv3:apps_rsc-drv-2(20):212232 GICv3:hfi(329):75150 GICv3:240b6400.qcom,bwmon-llcc(40):57058 GICv3:ufshcd(35):45406 GICv3:dwc3(390):35833 ipcc:glink-native-adsp(426):25434
+04-22 18:58:50.013  8182  8182 I (cpu    : irq_count)- 0:1979266 1:982133 2:872492 3:343903 4:342037 5:335041
+04-22 18:58:50.013  8182  8182 I (ipi    : irq_count)- 0:1129490 1:972161 2:0 3:0 4:0 5:615019 6:0
+04-22 18:58:50.013  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1602125 GICv3:IPI(1):1129490 GICv3:IPI(2):972161 GICv3:IPI(6):615019 GICv3:apps_rsc-drv-2(20):213066 GICv3:hfi(329):75958 GICv3:240b6400.qcom,bwmon-llcc(40):57368 GICv3:ufshcd(35):45459 GICv3:dwc3(390):35833 ipcc:glink-native-adsp(426):25434
+04-22 18:58:53.227  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:58:53.721  4826  4947 E Metadata: Google Play services missing or without correct permission.
+04-22 18:58:55.567  1944  2660 D ActivityManager: freezer override set to true
+04-22 18:58:55.730  1944  2660 D ActivityManager: freezer override set to false
+04-22 18:58:59.487  6867  6867 I (cpu    : irq_count)- 0:1985181 1:986329 2:876713 3:346141 4:344529 5:337984
+04-22 18:58:59.487  6867  6867 I (ipi    : irq_count)- 0:1135131 1:978287 2:0 3:0 4:0 5:616051 6:0
+04-22 18:58:59.487  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1609062 GICv3:IPI(1):1135131 GICv3:IPI(2):978287 GICv3:IPI(6):616051 GICv3:apps_rsc-drv-2(20):213936 GICv3:hfi(329):76825 GICv3:240b6400.qcom,bwmon-llcc(40):57642 GICv3:ufshcd(35):45528 GICv3:dwc3(390):35833 ipcc:glink-native-adsp(426):25434
+04-22 18:59:00.149  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 18:59:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 18:59:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 18:59:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 18:59:08.955  6867  6867 I (cpu    : irq_count)- 0:1989951 1:989638 2:880636 3:347213 4:346156 5:339693
+04-22 18:59:08.955  6867  6867 I (ipi    : irq_count)- 0:1140655 1:979072 2:0 3:0 4:0 5:617031 6:0
+04-22 18:59:08.955  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1615741 GICv3:IPI(1):1140655 GICv3:IPI(2):979072 GICv3:IPI(6):617031 GICv3:apps_rsc-drv-2(20):214850 GICv3:hfi(329):77754 GICv3:240b6400.qcom,bwmon-llcc(40):57943 GICv3:ufshcd(35):45599 GICv3:dwc3(390):35844 ipcc:glink-native-adsp(426):25434
+04-22 18:59:11.294  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:59:11.412  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:59:18.428  6729  6729 I (cpu    : irq_count)- 0:1995846 1:993860 2:885814 3:349581 4:348514 5:342601
+04-22 18:59:18.428  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1622749 GICv3:IPI(1):1147112 GICv3:IPI(2):985137 GICv3:IPI(6):618053 GICv3:apps_rsc-drv-2(20):215736 GICv3:hfi(329):78674 GICv3:240b6400.qcom,bwmon-llcc(40):58245 GICv3:ufshcd(35):45666 GICv3:dwc3(390):35844 ipcc:glink-native-adsp(426):25434
+04-22 18:59:18.429  6729  6729 I (ipi    : irq_count)- 0:1147112 1:985137 2:0 3:0 4:0 5:618053 6:0
+04-22 18:59:23.228  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:59:26.987  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:59:27.061  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:59:27.900  6898  6898 I (cpu    : irq_count)- 0:2001492 1:997709 2:890631 3:351850 4:350658 5:345503
+04-22 18:59:27.900  6898  6898 I (ipi    : irq_count)- 0:1152739 1:991135 2:0 3:0 4:0 5:618986 6:0
+04-22 18:59:27.900  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1629582 GICv3:IPI(1):1152739 GICv3:IPI(2):991135 GICv3:IPI(6):618986 GICv3:apps_rsc-drv-2(20):216599 GICv3:hfi(329):79512 GICv3:240b6400.qcom,bwmon-llcc(40):58533 GICv3:ufshcd(35):45725 GICv3:dwc3(390):35844 ipcc:glink-native-adsp(426):25434
+04-22 18:59:29.508  1944  2503 D ActivityManager: freezing 4347 com.android.dynsystem
+04-22 18:59:29.511  1944  2503 I am_freeze: [4347,com.android.dynsystem]
+04-22 18:59:29.513  1944  2503 D ActivityManager: freezing 4415 com.android.dynsystem:dynsystem
+04-22 18:59:29.515  1944  2503 I am_freeze: [4415,com.android.dynsystem:dynsystem]
+04-22 18:59:29.516  1944  2503 D ActivityManager: freezing 4456 com.android.localtransport
+04-22 18:59:29.518  1944  2503 I am_freeze: [4456,com.android.localtransport]
+04-22 18:59:29.519  1944  2503 D ActivityManager: freezing 4246 com.android.externalstorage
+04-22 18:59:29.521  1944  2503 I am_freeze: [4246,com.android.externalstorage]
+04-22 18:59:29.523  1944  2503 D ActivityManager: freezing 4527 com.android.onetimeinitializer
+04-22 18:59:29.524  1944  2503 I am_freeze: [4527,com.android.onetimeinitializer]
+04-22 18:59:29.525  1944  2503 D ActivityManager: freezing 4613 com.android.remoteprovisioner
+04-22 18:59:29.526  1944  2503 I am_freeze: [4613,com.android.remoteprovisioner]
+04-22 18:59:29.527  1944  2503 D ActivityManager: freezing 4656 com.android.statementservice
+04-22 18:59:29.528  1944  2503 I am_freeze: [4656,com.android.statementservice]
+04-22 18:59:29.529  1944  2503 D ActivityManager: freezing 3911 com.qualcomm.qti.biometrics.fingerprint.service:remote
+04-22 18:59:29.530  1944  2503 I am_freeze: [3911,com.qualcomm.qti.biometrics.fingerprint.service:remote]
+04-22 18:59:29.532  1944  2503 D ActivityManager: freezing 3746 com.qualcomm.qti.biometrics.fingerprint.service
+04-22 18:59:29.533  1944  2503 I am_freeze: [3746,com.qualcomm.qti.biometrics.fingerprint.service]
+04-22 18:59:29.534  1944  2503 D ActivityManager: freezing 3888 com.qualcomm.qti.performancemode
+04-22 18:59:29.535  1944  2503 I am_freeze: [3888,com.qualcomm.qti.performancemode]
+04-22 18:59:29.536  1944  2503 D ActivityManager: freezing 4709 com.qualcomm.qti.qms.service.connectionsecurity
+04-22 18:59:29.536  1944  2503 I am_freeze: [4709,com.qualcomm.qti.qms.service.connectionsecurity]
+04-22 18:59:29.537  1944  2503 D ActivityManager: freezing 4019 com.qualcomm.qtil.aptxui
+04-22 18:59:29.538  1944  2503 D ActivityManager: freezing 3668 com.android.printspooler
+04-22 18:59:29.538  1944  2503 I am_freeze: [4019,com.qualcomm.qtil.aptxui]
+04-22 18:59:29.539  1944  2503 I am_freeze: [3668,com.android.printspooler]
+04-22 18:59:29.540  1944  2503 D ActivityManager: freezing 4767 org.codeaurora.snapcam
+04-22 18:59:29.541  1944  2503 I am_freeze: [4767,org.codeaurora.snapcam]
+04-22 18:59:29.542  1944  2503 D ActivityManager: freezing 4587 com.android.providers.calendar
+04-22 18:59:29.543  1944  2503 D ActivityManager: freezing 4790 com.google.ai.edge.gallery
+04-22 18:59:29.543  1944  2503 I am_freeze: [4587,com.android.providers.calendar]
+04-22 18:59:29.545  1944  2503 I am_freeze: [4790,com.google.ai.edge.gallery]
+04-22 18:59:29.546  1944  2503 D ActivityManager: freezing 4826 com.opera.browser
+04-22 18:59:29.548  1944  2503 I am_freeze: [4826,com.opera.browser]
+04-22 18:59:29.549  1944  2503 D ActivityManager: freezing 5392 com.android.emergency
+04-22 18:59:29.549  1944  2503 I am_freeze: [5392,com.android.emergency]
+04-22 18:59:29.550  1944  2503 D ActivityManager: freezing 4118 com.android.traceur
+04-22 18:59:29.551  1944  2503 D ActivityManager: freezing 4565 com.android.permissioncontroller
+04-22 18:59:29.551  1944  2503 I am_freeze: [4118,com.android.traceur]
+04-22 18:59:29.552  1944  2503 I am_freeze: [4565,com.android.permissioncontroller]
+04-22 18:59:29.553  1944  2503 D ActivityManager: freezing 4214 android.process.acore
+04-22 18:59:29.554  1944  2503 I am_freeze: [4214,android.process.acore]
+04-22 18:59:29.555  1944  2503 D ActivityManager: freezing 5363 com.android.settings.intelligence
+04-22 18:59:29.556  1944  2503 I am_freeze: [5363,com.android.settings.intelligence]
+04-22 18:59:36.109  2682  2806 D ControlsListingControllerImpl: Subscribing callback, service count: 0
+04-22 18:59:36.128  2682  2806 D ControlsListingControllerImpl: Unsubscribing callback
+04-22 18:59:37.371  6898  6898 I (cpu    : irq_count)- 0:2006357 1:1000704 2:894160 3:353024 4:352053 5:347309
+04-22 18:59:37.371  6898  6898 I (ipi    : irq_count)- 0:1158053 1:991955 2:0 3:0 4:0 5:619891 6:0
+04-22 18:59:37.371  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1636098 GICv3:IPI(1):1158053 GICv3:IPI(2):991955 GICv3:IPI(6):619891 GICv3:apps_rsc-drv-2(20):217438 GICv3:hfi(329):80339 GICv3:240b6400.qcom,bwmon-llcc(40):58814 GICv3:ufshcd(35):45793 GICv3:dwc3(390):35855 ipcc:glink-native-adsp(426):25434
+04-22 18:59:42.733  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:59:42.734  1944  2503 I am_unfreeze: [4347,com.android.dynsystem]
+04-22 18:59:42.734  1944  2729 D ActivityManager: sync unfroze 4347 com.android.dynsystem
+04-22 18:59:42.735  1944  2503 I am_unfreeze: [4415,com.android.dynsystem:dynsystem]
+04-22 18:59:42.735  1944  2729 D ActivityManager: sync unfroze 4415 com.android.dynsystem:dynsystem
+04-22 18:59:42.736  1944  2503 I am_unfreeze: [4456,com.android.localtransport]
+04-22 18:59:42.736  1944  2729 D ActivityManager: sync unfroze 4456 com.android.localtransport
+04-22 18:59:42.737  1944  2503 I am_unfreeze: [4246,com.android.externalstorage]
+04-22 18:59:42.737  1944  2729 D ActivityManager: sync unfroze 4246 com.android.externalstorage
+04-22 18:59:42.737  1944  2729 D ActivityManager: sync unfroze 4527 com.android.onetimeinitializer
+04-22 18:59:42.738  1944  2503 I am_unfreeze: [4527,com.android.onetimeinitializer]
+04-22 18:59:42.738  1944  2503 I am_unfreeze: [4613,com.android.remoteprovisioner]
+04-22 18:59:42.738  1944  2729 D ActivityManager: sync unfroze 4613 com.android.remoteprovisioner
+04-22 18:59:42.739  1944  2729 D ActivityManager: sync unfroze 4656 com.android.statementservice
+04-22 18:59:42.740  1944  2729 D ActivityManager: sync unfroze 3911 com.qualcomm.qti.biometrics.fingerprint.service:remote
+04-22 18:59:42.741  1944  2503 I am_unfreeze: [3911,com.qualcomm.qti.biometrics.fingerprint.service:remote]
+04-22 18:59:42.741  1944  2503 I am_unfreeze: [4656,com.android.statementservice]
+04-22 18:59:42.741  1944  2729 D ActivityManager: sync unfroze 3746 com.qualcomm.qti.biometrics.fingerprint.service
+04-22 18:59:42.741  1944  2729 D ActivityManager: sync unfroze 3888 com.qualcomm.qti.performancemode
+04-22 18:59:42.742  1944  2503 I am_unfreeze: [3746,com.qualcomm.qti.biometrics.fingerprint.service]
+04-22 18:59:42.742  1944  2503 I am_unfreeze: [3888,com.qualcomm.qti.performancemode]
+04-22 18:59:42.742  1944  2729 D ActivityManager: sync unfroze 4709 com.qualcomm.qti.qms.service.connectionsecurity
+04-22 18:59:42.743  1944  2503 I am_unfreeze: [4019,com.qualcomm.qtil.aptxui]
+04-22 18:59:42.743  1944  2503 I am_unfreeze: [4709,com.qualcomm.qti.qms.service.connectionsecurity]
+04-22 18:59:42.743  1944  2729 D ActivityManager: sync unfroze 4019 com.qualcomm.qtil.aptxui
+04-22 18:59:42.744  1944  2503 I am_unfreeze: [3668,com.android.printspooler]
+04-22 18:59:42.744  1944  2729 D ActivityManager: sync unfroze 3668 com.android.printspooler
+04-22 18:59:42.745  1944  2503 I am_unfreeze: [4767,org.codeaurora.snapcam]
+04-22 18:59:42.745  1944  2729 D ActivityManager: sync unfroze 4767 org.codeaurora.snapcam
+04-22 18:59:42.746  1944  2503 I am_unfreeze: [4587,com.android.providers.calendar]
+04-22 18:59:42.746  1944  2729 D ActivityManager: sync unfroze 4587 com.android.providers.calendar
+04-22 18:59:42.747  1944  2503 I am_unfreeze: [4790,com.google.ai.edge.gallery]
+04-22 18:59:42.747  1944  2729 D ActivityManager: sync unfroze 4790 com.google.ai.edge.gallery
+04-22 18:59:42.749  1944  2729 D ActivityManager: sync unfroze 4826 com.opera.browser
+04-22 18:59:42.749  1944  2729 D ActivityManager: sync unfroze 5392 com.android.emergency
+04-22 18:59:42.750  1944  2729 D ActivityManager: sync unfroze 4118 com.android.traceur
+04-22 18:59:42.751  1944  2729 D ActivityManager: sync unfroze 4565 com.android.permissioncontroller
+04-22 18:59:42.752  1944  2729 D ActivityManager: sync unfroze 4214 android.process.acore
+04-22 18:59:42.753  1944  2503 I am_unfreeze: [4118,com.android.traceur]
+04-22 18:59:42.753  1944  2503 I am_unfreeze: [4214,android.process.acore]
+04-22 18:59:42.753  1944  2503 I am_unfreeze: [4565,com.android.permissioncontroller]
+04-22 18:59:42.753  1944  2503 I am_unfreeze: [4826,com.opera.browser]
+04-22 18:59:42.753  1944  2503 I am_unfreeze: [5363,com.android.settings.intelligence]
+04-22 18:59:42.753  1944  2503 I am_unfreeze: [5392,com.android.emergency]
+04-22 18:59:42.753  1944  2729 D ActivityManager: sync unfroze 5363 com.android.settings.intelligence
+04-22 18:59:42.758  4826  4914 E Metadata: Google Play services missing or without correct permission.
+04-22 18:59:42.848  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:59:46.844  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1643122 GICv3:IPI(1):1163828 GICv3:IPI(2):997947 GICv3:IPI(6):620927 GICv3:apps_rsc-drv-2(20):218330 GICv3:hfi(329):81224 GICv3:240b6400.qcom,bwmon-llcc(40):59108 GICv3:ufshcd(35):45896 GICv3:dwc3(390):35855 ipcc:glink-native-adsp(426):25434
+04-22 18:59:46.845  6898  6898 I (cpu    : irq_count)- 0:2012161 1:1004514 2:899130 3:355148 4:354754 5:350089
+04-22 18:59:46.846  6898  6898 I (ipi    : irq_count)- 0:1163828 1:997947 2:0 3:0 4:0 5:620927 6:0
+04-22 18:59:47.033  7104  7104 W sherpa-onnx: /home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181
+04-22 18:59:47.033  7104  7104 W sherpa-onnx: Ignore OOV 'consistently'
+04-22 18:59:53.228  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 18:59:56.316  8182  8182 I (cpu    : irq_count)- 0:2016930 1:1007588 2:902857 3:356093 4:356360 5:351766
+04-22 18:59:56.316  8182  8182 I (ipi    : irq_count)- 0:1169577 1:998289 2:0 3:0 4:0 5:621860 6:0
+04-22 18:59:56.316  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1649531 GICv3:IPI(1):1169577 GICv3:IPI(2):998289 GICv3:IPI(6):621860 GICv3:apps_rsc-drv-2(20):219225 GICv3:hfi(329):82129 GICv3:240b6400.qcom,bwmon-llcc(40):59432 GICv3:ufshcd(35):45956 GICv3:dwc3(390):35855 ipcc:glink-native-adsp(426):25434
+04-22 18:59:58.474  1944  2729 D ActivityManager: freezer override set to true
+04-22 18:59:58.547  1944  2729 D ActivityManager: freezer override set to false
+04-22 18:59:58.755   702   702 I binder  : undelivered transaction 199105, process died.
+04-22 19:00:00.147  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 19:00:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 19:00:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 19:00:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 19:00:05.433  7104  7104 W sherpa-onnx: /home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181
+04-22 19:00:05.433  7104  7104 W sherpa-onnx: Ignore OOV 'Nem'
+04-22 19:00:05.787  6898  6898 I (cpu    : irq_count)- 0:2022665 1:1011486 2:907361 3:358311 4:359099 5:354724
+04-22 19:00:05.787  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1656506 GICv3:IPI(1):1175275 GICv3:IPI(2):1004319 GICv3:IPI(6):622883 GICv3:apps_rsc-drv-2(20):220107 GICv3:hfi(329):83010 GICv3:240b6400.qcom,bwmon-llcc(40):59727 GICv3:ufshcd(35):46026 GICv3:dwc3(390):35855 ipcc:glink-native-adsp(426):25434
+04-22 19:00:05.788  6898  6898 I (ipi    : irq_count)- 0:1175275 1:1004319 2:0 3:0 4:0 5:622883 6:0
+04-22 19:00:14.156  1944  2660 D ActivityManager: freezer override set to true
+04-22 19:00:14.275  1944  2660 D ActivityManager: freezer override set to false
+04-22 19:00:15.260  6729  6729 I (cpu    : irq_count)- 0:2028645 1:1015583 2:912336 3:360807 4:361544 5:357647
+04-22 19:00:15.260  6729  6729 I (ipi    : irq_count)- 0:1181539 1:1010860 2:0 3:0 4:0 5:623852 6:0
+04-22 19:00:15.260  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1663402 GICv3:IPI(1):1181539 GICv3:IPI(2):1010860 GICv3:IPI(6):623852 GICv3:apps_rsc-drv-2(20):220943 GICv3:hfi(329):83892 GICv3:240b6400.qcom,bwmon-llcc(40):60006 GICv3:ufshcd(35):46087 GICv3:dwc3(390):35866 ipcc:glink-native-adsp(426):25434
+04-22 19:00:23.229  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:00:24.732  6729  6729 I (cpu    : irq_count)- 0:2033532 1:1018999 2:916037 3:361804 4:363291 5:359430
+04-22 19:00:24.732  6729  6729 I (ipi    : irq_count)- 0:1187637 1:1011225 2:0 3:0 4:0 5:624820 6:0
+04-22 19:00:24.732  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1670062 GICv3:IPI(1):1187637 GICv3:IPI(2):1011225 GICv3:IPI(6):624820 GICv3:apps_rsc-drv-2(20):221874 GICv3:hfi(329):84775 GICv3:240b6400.qcom,bwmon-llcc(40):60333 GICv3:ufshcd(35):46195 GICv3:dwc3(390):35866 ipcc:glink-native-adsp(426):25434
+04-22 19:00:29.961  1944  2660 D ActivityManager: freezer override set to true
+04-22 19:00:30.074  1944  2660 D ActivityManager: freezer override set to false
+04-22 19:00:33.353  7104  7104 W sherpa-onnx: /home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181
+04-22 19:00:33.353  7104  7104 W sherpa-onnx: /home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181
+04-22 19:00:33.353  7104  7104 W sherpa-onnx: Ignore OOV 'oàn'
+04-22 19:00:33.353  7104  7104 W sherpa-onnx: Ignore OOV 'đ'
+04-22 19:00:34.204  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1676782 GICv3:IPI(1):1192897 GICv3:IPI(2):1017388 GICv3:IPI(6):625824 GICv3:apps_rsc-drv-2(20):222761 GICv3:hfi(329):85628 GICv3:240b6400.qcom,bwmon-llcc(40):60663 GICv3:ufshcd(35):46260 GICv3:dwc3(390):35866 ipcc:glink-native-adsp(426):25434
+04-22 19:00:34.205  6729  6729 I (cpu    : irq_count)- 0:2038854 1:1023373 2:920291 3:363911 4:366020 5:362123
+04-22 19:00:34.205  6729  6729 I (ipi    : irq_count)- 0:1192897 1:1017388 2:0 3:0 4:0 5:625824 6:0
+04-22 19:00:43.675  8182  8182 I (cpu    : irq_count)- 0:2043643 1:1026091 2:924116 3:365464 4:367609 5:363932
+04-22 19:00:43.675  8182  8182 I (ipi    : irq_count)- 0:1198506 1:1018201 2:0 3:0 4:0 5:626774 6:0
+04-22 19:00:43.675  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1683359 GICv3:IPI(1):1198506 GICv3:IPI(2):1018201 GICv3:IPI(6):626774 GICv3:apps_rsc-drv-2(20):223628 GICv3:hfi(329):86520 GICv3:240b6400.qcom,bwmon-llcc(40):60974 GICv3:ufshcd(35):46330 GICv3:dwc3(390):35876 ipcc:glink-native-adsp(426):25434
+04-22 19:00:45.685  1944  2660 D ActivityManager: freezer override set to true
+04-22 19:00:45.796  1944  2660 D ActivityManager: freezer override set to false
+04-22 19:00:53.148  6729  6729 I (cpu    : irq_count)- 0:2049820 1:1030392 2:928888 3:367915 4:369753 5:366618
+04-22 19:00:53.148  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1690182 GICv3:IPI(1):1204423 GICv3:IPI(2):1024587 GICv3:IPI(6):627753 GICv3:apps_rsc-drv-2(20):224502 GICv3:hfi(329):87484 GICv3:240b6400.qcom,bwmon-llcc(40):61284 GICv3:ufshcd(35):46406 GICv3:dwc3(390):35876 ipcc:glink-native-adsp(426):25434
+04-22 19:00:53.149  6729  6729 I (ipi    : irq_count)- 0:1204424 1:1024587 2:0 3:0 4:0 5:627753 6:0
+04-22 19:00:53.230  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:01:00.130  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 19:01:00.171  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 19:01:00.171  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 19:01:00.173  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 19:01:01.383  1944  2660 D ActivityManager: freezer override set to true
+04-22 19:01:01.492  1944  2660 D ActivityManager: freezer override set to false
+04-22 19:01:02.620  6898  6898 I (cpu    : irq_count)- 0:2056351 1:1034596 2:933372 3:369911 4:372094 5:369285
+04-22 19:01:02.620  6898  6898 I (ipi    : irq_count)- 0:1210064 1:1031198 2:0 3:0 4:0 5:628726 6:0
+04-22 19:01:02.620  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1696742 GICv3:IPI(1):1210064 GICv3:IPI(2):1031194 GICv3:IPI(6):628726 GICv3:apps_rsc-drv-2(20):225351 GICv3:hfi(329):88529 GICv3:240b6400.qcom,bwmon-llcc(40):61610 GICv3:ufshcd(35):46455 GICv3:dwc3(390):35876 ipcc:glink-native-adsp(426):25434
+04-22 19:01:12.091  6898  6898 I (cpu    : irq_count)- 0:2061954 1:1037893 2:937160 3:371132 4:373557 5:370893
+04-22 19:01:12.091  6898  6898 I (ipi    : irq_count)- 0:1215805 1:1032469 2:0 3:0 4:0 5:629651 6:0
+04-22 19:01:12.091  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1703308 GICv3:IPI(1):1215805 GICv3:IPI(2):1032469 GICv3:IPI(6):629651 GICv3:apps_rsc-drv-2(20):226244 GICv3:hfi(329):89523 GICv3:240b6400.qcom,bwmon-llcc(40):61957 GICv3:ufshcd(35):46517 GICv3:dwc3(390):35887 ipcc:glink-native-adsp(426):25434
+04-22 19:01:17.086  1944  2660 D ActivityManager: freezer override set to true
+04-22 19:01:17.172  1944  2660 D ActivityManager: freezer override set to false
+04-22 19:01:21.565  6867  6867 I (cpu    : irq_count)- 0:2067806 1:1042010 2:941819 3:373407 4:375874 5:373540
+04-22 19:01:21.565  6867  6867 I (ipi    : irq_count)- 0:1221123 1:1039029 2:0 3:0 4:0 5:630662 6:0
+04-22 19:01:21.565  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1709911 GICv3:IPI(1):1221123 GICv3:IPI(2):1039029 GICv3:IPI(6):630662 GICv3:apps_rsc-drv-2(20):227070 GICv3:hfi(329):90519 GICv3:240b6400.qcom,bwmon-llcc(40):62302 GICv3:ufshcd(35):46571 GICv3:dwc3(390):35887 ipcc:glink-native-adsp(426):25434
+04-22 19:01:23.231  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:01:31.036  8182  8182 I (cpu    : irq_count)- 0:2073079 1:1045210 2:945282 3:374515 4:377007 5:374879
+04-22 19:01:31.036  8182  8182 I (ipi    : irq_count)- 0:1226510 1:1039693 2:0 3:0 4:0 5:631576 6:0
+04-22 19:01:31.036  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1715977 GICv3:IPI(1):1226510 GICv3:IPI(2):1039693 GICv3:IPI(6):631576 GICv3:apps_rsc-drv-2(20):227927 GICv3:hfi(329):91589 GICv3:240b6400.qcom,bwmon-llcc(40):62651 GICv3:ufshcd(35):46629 GICv3:dwc3(390):35887 ipcc:glink-native-adsp(426):25434
+04-22 19:01:32.791  1944  2660 D ActivityManager: freezer override set to true
+04-22 19:01:32.866  1944  2660 D ActivityManager: freezer override set to false
+04-22 19:01:40.508  6867  6867 I (cpu    : irq_count)- 0:2079716 1:1050328 2:950602 3:376905 4:379414 5:377623
+04-22 19:01:40.508  6867  6867 I (ipi    : irq_count)- 0:1233902 1:1046186 2:0 3:0 4:0 5:632648 6:0
+04-22 19:01:40.508  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1722934 GICv3:IPI(1):1233902 GICv3:IPI(2):1046186 GICv3:IPI(6):632648 GICv3:apps_rsc-drv-2(20):228914 GICv3:hfi(329):92660 GICv3:240b6400.qcom,bwmon-llcc(40):63014 GICv3:ufshcd(35):46700 GICv3:dwc3(390):35898 ipcc:glink-native-adsp(426):25434
+04-22 19:01:48.507  1944  2660 D ActivityManager: freezer override set to true
+04-22 19:01:48.579  1944  2660 D ActivityManager: freezer override set to false
+04-22 19:01:49.980  8182  8182 I (cpu    : irq_count)- 0:2085995 1:1054929 2:955563 3:379146 4:382136 5:380255
+04-22 19:01:49.980  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1729689 GICv3:IPI(1):1240534 GICv3:IPI(2):1052518 GICv3:IPI(6):633728 GICv3:apps_rsc-drv-2(20):229857 GICv3:hfi(329):93741 GICv3:240b6400.qcom,bwmon-llcc(40):63367 GICv3:ufshcd(35):46763 GICv3:dwc3(390):35898 ipcc:glink-native-adsp(426):25434
+04-22 19:01:49.981  8182  8182 I (ipi    : irq_count)- 0:1240534 1:1052518 2:0 3:0 4:0 5:633729 6:0
+04-22 19:01:53.232  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:01:59.456  6898  6898 I (cpu    : irq_count)- 0:2090927 1:1058023 2:958851 3:380129 4:383636 5:381713
+04-22 19:01:59.456  6898  6898 I (ipi    : irq_count)- 0:1245563 1:1053244 2:0 3:0 4:0 5:634644 6:0
+04-22 19:01:59.456  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1735872 GICv3:IPI(1):1245563 GICv3:IPI(2):1053244 GICv3:IPI(6):634644 GICv3:apps_rsc-drv-2(20):230671 GICv3:hfi(329):94793 GICv3:240b6400.qcom,bwmon-llcc(40):63683 GICv3:ufshcd(35):46815 GICv3:dwc3(390):35898 ipcc:glink-native-adsp(426):25434
+04-22 19:02:00.149  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 19:02:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 19:02:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 19:02:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 19:02:04.249  1944  2729 D ActivityManager: freezer override set to true
+04-22 19:02:04.340  1944  2729 D ActivityManager: freezer override set to false
+04-22 19:02:08.923  6867  6867 I (cpu    : irq_count)- 0:2097204 1:1062361 2:963456 3:382354 4:386154 5:384647
+04-22 19:02:08.923  6867  6867 I (virq   : irq_count)- GICv3:arch_timer(11):1742820 GICv3:IPI(1):1250973 GICv3:IPI(2):1060354 GICv3:IPI(6):635672 GICv3:apps_rsc-drv-2(20):231522 GICv3:hfi(329):95760 GICv3:240b6400.qcom,bwmon-llcc(40):64006 GICv3:ufshcd(35):46878 GICv3:dwc3(390):35907 ipcc:glink-native-adsp(426):25434
+04-22 19:02:08.924  6867  6867 I (ipi    : irq_count)- 0:1250973 1:1060354 2:0 3:0 4:0 5:635672 6:0
+04-22 19:02:18.396  8182  8182 I (cpu    : irq_count)- 0:2102755 1:1065648 2:967396 3:383612 4:387518 5:386017
+04-22 19:02:18.396  8182  8182 I (ipi    : irq_count)- 0:1257332 1:1060934 2:0 3:0 4:0 5:636645 6:0
+04-22 19:02:18.396  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1749084 GICv3:IPI(1):1257332 GICv3:IPI(2):1060934 GICv3:IPI(6):636645 GICv3:apps_rsc-drv-2(20):232434 GICv3:hfi(329):96857 GICv3:240b6400.qcom,bwmon-llcc(40):64371 GICv3:ufshcd(35):46943 GICv3:dwc3(390):35907 ipcc:glink-native-adsp(426):25434
+04-22 19:02:19.983  1944  2729 D ActivityManager: freezer override set to true
+04-22 19:02:20.074  1944  2729 D ActivityManager: freezer override set to false
+04-22 19:02:23.233  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:02:27.872  6729  6729 I (cpu    : irq_count)- 0:2108770 1:1069967 2:972123 3:385804 4:389917 5:388626
+04-22 19:02:27.872  6729  6729 I (ipi    : irq_count)- 0:1263085 1:1067253 2:0 3:0 4:0 5:637674 6:0
+04-22 19:02:27.872  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1755722 GICv3:IPI(1):1263085 GICv3:IPI(2):1067253 GICv3:IPI(6):637674 GICv3:apps_rsc-drv-2(20):233328 GICv3:hfi(329):97902 GICv3:240b6400.qcom,bwmon-llcc(40):64716 GICv3:ufshcd(35):47006 GICv3:dwc3(390):35907 ipcc:glink-native-adsp(426):25434
+04-22 19:02:35.674  1944  2729 D ActivityManager: freezer override set to true
+04-22 19:02:35.767  1944  2729 D ActivityManager: freezer override set to false
+04-22 19:02:37.340  8182  8182 I (cpu    : irq_count)- 0:2115311 1:1074273 2:977168 3:388068 4:392517 5:391456
+04-22 19:02:37.340  8182  8182 I (ipi    : irq_count)- 0:1269278 1:1074051 2:0 3:0 4:0 5:638721 6:0
+04-22 19:02:37.340  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1762639 GICv3:IPI(1):1269278 GICv3:IPI(2):1074051 GICv3:IPI(6):638721 GICv3:apps_rsc-drv-2(20):234284 GICv3:hfi(329):98921 GICv3:240b6400.qcom,bwmon-llcc(40):65093 GICv3:ufshcd(35):47070 GICv3:dwc3(390):35919 ipcc:glink-native-adsp(426):25434
+04-22 19:02:46.812  6898  6898 I (cpu    : irq_count)- 0:2120372 1:1077524 2:980759 3:389153 4:393684 5:392829
+04-22 19:02:46.812  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1768710 GICv3:IPI(1):1274702 GICv3:IPI(2):1074565 GICv3:IPI(6):639652 GICv3:apps_rsc-drv-2(20):235191 GICv3:hfi(329):100021 GICv3:240b6400.qcom,bwmon-llcc(40):65460 GICv3:ufshcd(35):47134 GICv3:dwc3(390):35919 ipcc:glink-native-adsp(426):25434
+04-22 19:02:46.813  6898  6898 I (ipi    : irq_count)- 0:1274703 1:1074565 2:0 3:0 4:0 5:639652 6:0
+04-22 19:02:51.400  1944  2729 D ActivityManager: freezer override set to true
+04-22 19:02:51.516  1944  2729 D ActivityManager: freezer override set to false
+04-22 19:02:53.233  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:02:56.284  8825  8825 I (virq   : irq_count)- GICv3:arch_timer(11):1775775 GICv3:IPI(1):1280800 GICv3:IPI(2):1082755 GICv3:IPI(6):640733 GICv3:apps_rsc-drv-2(20):236096 GICv3:hfi(329):101036 GICv3:240b6400.qcom,bwmon-llcc(40):65801 GICv3:ufshcd(35):47197 GICv3:dwc3(390):35937 ipcc:glink-native-adsp(426):25434
+04-22 19:02:56.286  8825  8825 I (cpu    : irq_count)- 0:2127011 1:1081892 2:985966 3:392015 4:396546 5:395847
+04-22 19:02:56.286  8825  8825 I (ipi    : irq_count)- 0:1280800 1:1082755 2:0 3:0 4:0 5:640733 6:0
+04-22 19:03:00.084  1385  1563 W TransactionTracing: Could not find layer id -1
+04-22 19:03:00.145  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 19:03:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 19:03:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 19:03:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 19:03:05.756  6898  6898 I (cpu    : irq_count)- 0:2132368 1:1085390 2:989656 3:393398 4:397693 5:397505
+04-22 19:03:05.756  6898  6898 I (ipi    : irq_count)- 0:1286644 1:1083677 2:0 3:0 4:0 5:641732 6:0
+04-22 19:03:05.756  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1782208 GICv3:IPI(1):1286644 GICv3:IPI(2):1083677 GICv3:IPI(6):641732 GICv3:apps_rsc-drv-2(20):236982 GICv3:hfi(329):102078 GICv3:240b6400.qcom,bwmon-llcc(40):66153 GICv3:ufshcd(35):47254 GICv3:dwc3(390):35949 ipcc:glink-native-adsp(426):25434
+04-22 19:03:07.197  1944  2729 D ActivityManager: freezer override set to true
+04-22 19:03:07.343  1944  2729 D ActivityManager: freezer override set to false
+04-22 19:03:15.228  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1788642 GICv3:IPI(1):1291971 GICv3:IPI(2):1090419 GICv3:IPI(6):642655 GICv3:apps_rsc-drv-2(20):237820 GICv3:hfi(329):103118 GICv3:240b6400.qcom,bwmon-llcc(40):66500 GICv3:ufshcd(35):47308 GICv3:dwc3(390):35949 ipcc:glink-native-adsp(426):25434
+04-22 19:03:15.229  8182  8182 I (cpu    : irq_count)- 0:2138395 1:1089435 2:994316 3:395732 4:399963 5:400029
+04-22 19:03:15.229  8182  8182 I (ipi    : irq_count)- 0:1291971 1:1090419 2:0 3:0 4:0 5:642655 6:0
+04-22 19:03:22.971  1944  2729 D ActivityManager: freezer override set to true
+04-22 19:03:23.083  1944  2729 D ActivityManager: freezer override set to false
+04-22 19:03:23.234  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:03:24.702  8182  8182 I (cpu    : irq_count)- 0:2147056 1:1096218 2:1001449 3:400811 4:404955 5:402902
+04-22 19:03:24.702  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1796044 GICv3:IPI(1):1297743 GICv3:IPI(2):1109431 GICv3:IPI(6):643688 GICv3:apps_rsc-drv-2(20):238688 GICv3:hfi(329):103982 GICv3:240b6400.qcom,bwmon-llcc(40):66823 GICv3:ufshcd(35):47364 GICv3:dwc3(390):35949 ipcc:glink-native-adsp(426):25434
+04-22 19:03:24.703  8182  8182 I (ipi    : irq_count)- 0:1297743 1:1109431 2:0 3:0 4:0 5:643688 6:0
+04-22 19:03:34.174  6898  6898 I (cpu    : irq_count)- 0:2147440 1:1096465 2:1001686 3:400915 4:404993 5:403009
+04-22 19:03:34.174  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1796347 GICv3:IPI(1):1297895 GICv3:IPI(2):1109891 GICv3:IPI(6):643796 GICv3:apps_rsc-drv-2(20):238745 GICv3:hfi(329):103982 GICv3:240b6400.qcom,bwmon-llcc(40):66830 GICv3:ufshcd(35):47380 GICv3:dwc3(390):35959 ipcc:glink-native-adsp(426):25434
+04-22 19:03:34.175  6898  6898 I (ipi    : irq_count)- 0:1297895 1:1109891 2:0 3:0 4:0 5:643796 6:0
+04-22 19:03:40.499  8960  8960 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+04-22 19:03:40.577   551   551 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+04-22 19:03:40.579  8960  8961 I AdrenoUtils: <ReadGpuID:407>: Reading chip ID through GSL
+04-22 19:03:40.747  1944  2347 D CompatibilityInfo: mCompatibilityFlags - 4
+04-22 19:03:40.748  1944  2347 D CompatibilityInfo: applicationDensity - 340
+04-22 19:03:40.748  1944  2347 D CompatibilityInfo: applicationScale - 1.0
+04-22 19:03:40.754  1944  2660 D CompatibilityInfo: mCompatibilityFlags - 4
+04-22 19:03:40.755  1944  2660 D CompatibilityInfo: applicationDensity - 340
+04-22 19:03:40.755  1944  2660 D CompatibilityInfo: applicationScale - 1.0
+04-22 19:03:40.759  3649  3649 I auditd  : type=1400 audit(0.0:271): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.759  3649  3649 I auditd  : type=1400 audit(0.0:272): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.759  3649  3649 I auditd  : type=1400 audit(0.0:273): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.759  3649  3649 I auditd  : type=1400 audit(0.0:274): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.759  3649  3649 I auditd  : type=1400 audit(0.0:275): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.759  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:271): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.759  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:272): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.759  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:273): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.759  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:274): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.759  3649  3649 W com.android.providers.media.module: type=1400 audit(0.0:275): avc: denied { search } for comm=4173796E635461736B202331 name="tmp" dev="dm-8" ino=99 scontext=u:r:mediaprovider_app:s0:c119,c256,c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 app=com.android.providers.media.module
+04-22 19:03:40.760  1944  2346 I am_pss  : [3115,10096,com.android.launcher3,77679616,61771776,0,217628672,0,2,11]
+04-22 19:03:40.761  3649  4247 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+04-22 19:03:40.764  4247  4247 E audit   : rate limit exceeded
+04-22 19:03:40.764  4247  4247 W audit   : audit_lost=185 audit_rate_limit=5 audit_backlog_limit=64
+04-22 19:03:40.767  3649  4247 W ModernMediaScanner: Failed to visit /data/local/tmp/cabin/out/offline/shots/end.png: java.nio.file.AccessDeniedException: /data/local/tmp/cabin/out/offline/shots/end.png
+04-22 19:03:40.768  3649  4247 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+04-22 19:03:40.768  3649  4247 I MediaProvider: Scanned internal due to REASON_DEMAND, found 0 items in 1ms, 0 inserts 0 updates 0 deletes
+04-22 19:03:40.773  1944  2346 I am_pss  : [3940,10131,com.vng.inputmethod.labankey,65833984,42659840,0,148312064,0,7,9]
+04-22 19:03:40.782  1944  2346 I am_pss  : [3649,10119,com.android.providers.media.module,40536064,36265984,0,146423808,0,0,8]
+04-22 19:03:40.790  1944  2346 I am_pss  : [3581,10082,com.qualcomm.location,8769536,6590464,0,99930112,0,0,6]
+04-22 19:03:40.797  1944  2346 I am_pss  : [2923,10120,android.ext.services,7645184,5386240,0,100982784,0,5,5]
+04-22 19:03:40.806  1944  2346 I am_pss  : [2761,1073,com.android.networkstack.process,32951296,27979776,2039808,129601536,0,0,7]
+04-22 19:03:40.821  1944  2346 I am_pss  : [2682,10097,com.android.systemui,119690240,101113856,0,268767232,0,0,12]
+04-22 19:03:40.842  1944  2346 I am_pss  : [1944,1000,system,278279168,175243264,0,567275520,0,0,19]
+04-22 19:03:40.864     1     1 I init    : Untracked pid 7050 did not have an associated service entry and will not be reaped
+04-22 19:03:40.864     1     1 I init    : Untracked pid 7050 exited with status 0
+04-22 19:03:43.646  8929  8929 I (cpu    : irq_count)- 0:2149619 1:1098375 2:1003486 3:402332 4:406213 5:404717
+04-22 19:03:43.646  8929  8929 I (ipi    : irq_count)- 0:1298538 1:1117521 2:0 3:0 4:0 5:644033 6:0
+04-22 19:03:43.646  8929  8929 I (virq   : irq_count)- GICv3:arch_timer(11):1797854 GICv3:IPI(1):1298538 GICv3:IPI(2):1117521 GICv3:IPI(6):644033 GICv3:apps_rsc-drv-2(20):238884 GICv3:hfi(329):103991 GICv3:240b6400.qcom,bwmon-llcc(40):66865 GICv3:ufshcd(35):47393 GICv3:dwc3(390):35959 ipcc:glink-native-adsp(426):25434
+04-22 19:03:52.709  1944  2625 I storage_state: [41217664-9172-527a-b3d5-edabb50a7d69,0,0,37802131456,116907651072]
+04-22 19:03:53.119  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1798085 GICv3:IPI(1):1298626 GICv3:IPI(2):1117549 GICv3:IPI(6):644128 GICv3:apps_rsc-drv-2(20):238929 GICv3:hfi(329):103991 GICv3:240b6400.qcom,bwmon-llcc(40):66868 GICv3:ufshcd(35):47410 GICv3:dwc3(390):35959 ipcc:glink-native-adsp(426):25434
+04-22 19:03:53.120  6729  6729 I (cpu    : irq_count)- 0:2149885 1:1098492 2:1003572 3:402338 4:406237 5:404726
+04-22 19:03:53.120  6729  6729 I (ipi    : irq_count)- 0:1298626 1:1117549 2:0 3:0 4:0 5:644128 6:0
+04-22 19:03:53.236  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:03:53.839  4826  4947 E Metadata: Google Play services missing or without correct permission.
+04-22 19:04:00.146  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 19:04:00.188  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 19:04:00.188  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 19:04:00.189  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 19:04:02.588  6729  6729 I (cpu    : irq_count)- 0:2155387 1:1104022 2:1011728 3:403708 4:407891 5:404932
+04-22 19:04:02.588  6729  6729 I (ipi    : irq_count)- 0:1310143 1:1118607 2:0 3:0 4:0 5:644815 6:0
+04-22 19:04:02.588  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1800997 GICv3:IPI(1):1310143 GICv3:IPI(2):1118607 GICv3:IPI(6):644815 GICv3:apps_rsc-drv-2(20):239161 GICv3:hfi(329):104021 GICv3:240b6400.qcom,bwmon-llcc(40):66947 GICv3:ufshcd(35):47414 GICv3:dwc3(390):41824 ipcc:glink-native-adsp(426):25434
+04-22 19:04:08.488  1385  2578 W DisplayIdentification: Invalid EDID: falling back to serial number due to missing display name.
+04-22 19:04:08.489  1385  2578 W DisplayIdentification: Invalid EDID: falling back to ASCII text due to missing serial number.
+04-22 19:04:08.490  1272  1592 I SDM     : HWCColorModeStc::GetColorModeCount: Supported color mode count = 1
+04-22 19:04:08.490  1272  1592 I SDM     : HWCColorModeStc::GetColorModes: Color mode = 0 is supported
+04-22 19:04:08.490  1385  2578 W DisplayIdentification: Invalid EDID: falling back to ASCII text due to missing serial number.
+04-22 19:04:08.490  1385  2578 W DisplayIdentification: Invalid EDID: falling back to serial number due to missing display name.
+04-22 19:04:08.491  1272  1592 I SDM     : HWCColorModeStc::GetColorModeCount: Supported color mode count = 1
+04-22 19:04:08.491  1272  1592 I SDM     : HWCColorModeStc::GetColorModes: Color mode = 0 is supported
+04-22 19:04:08.493  1385  2578 D DisplayDevice: getVsyncPeriodFromHWC: value is cached. return 16666666
+04-22 19:04:12.063  6729  6729 I (cpu    : irq_count)- 0:2162384 1:1111433 2:1022288 3:405595 4:410437 5:405212
+04-22 19:04:12.063  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1804605 GICv3:IPI(1):1325782 GICv3:IPI(2):1120203 GICv3:IPI(6):645658 GICv3:apps_rsc-drv-2(20):239328 GICv3:hfi(329):104021 GICv3:240b6400.qcom,bwmon-llcc(40):66988 GICv3:dwc3(390):49602 GICv3:ufshcd(35):47417 ipcc:glink-native-adsp(426):25434
+04-22 19:04:12.064  6729  6729 I (ipi    : irq_count)- 0:1325782 1:1120203 2:0 3:0 4:0 5:645658 6:0
+04-22 19:04:21.535  8929  8929 I (cpu    : irq_count)- 0:2163151 1:1111777 2:1022401 3:405601 4:410468 5:405228
+04-22 19:04:21.535  8929  8929 I (virq   : irq_count)- GICv3:arch_timer(11):1805130 GICv3:IPI(1):1325988 GICv3:IPI(2):1120275 GICv3:IPI(6):645963 GICv3:apps_rsc-drv-2(20):239427 GICv3:hfi(329):104021 GICv3:240b6400.qcom,bwmon-llcc(40):66993 GICv3:dwc3(390):49602 GICv3:ufshcd(35):47482 ipcc:glink-native-adsp(426):25434
+04-22 19:04:21.536  8929  8929 I (ipi    : irq_count)- 0:1325988 1:1120275 2:0 3:0 4:0 5:645963 6:0
+04-22 19:04:23.237  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:04:31.007  8929  8929 I (cpu    : irq_count)- 0:2164581 1:1112065 2:1022408 3:405607 4:410492 5:405238
+04-22 19:04:31.007  8929  8929 I (ipi    : irq_count)- 0:1326109 1:1120423 2:0 3:0 4:0 5:646562 6:0
+04-22 19:04:31.007  8929  8929 I (virq   : irq_count)- GICv3:arch_timer(11):1805925 GICv3:IPI(1):1326109 GICv3:IPI(2):1120423 GICv3:IPI(6):646562 GICv3:apps_rsc-drv-2(20):239529 GICv3:hfi(329):104021 GICv3:240b6400.qcom,bwmon-llcc(40):66994 GICv3:dwc3(390):49602 GICv3:ufshcd(35):47482 ipcc:glink-native-adsp(426):25434
+04-22 19:04:40.265  1385  2578 W DisplayIdentification: Invalid EDID: falling back to ASCII text due to missing serial number.
+04-22 19:04:40.265  1385  2578 W DisplayIdentification: Invalid EDID: falling back to ASCII text due to missing serial number.
+04-22 19:04:40.265  1385  2578 W DisplayIdentification: Invalid EDID: falling back to serial number due to missing display name.
+04-22 19:04:40.265  1385  2578 W DisplayIdentification: Invalid EDID: falling back to serial number due to missing display name.
+04-22 19:04:40.266  1272  1592 I SDM     : HWCColorModeStc::GetColorModeCount: Supported color mode count = 1
+04-22 19:04:40.266  1272  1592 I SDM     : HWCColorModeStc::GetColorModeCount: Supported color mode count = 1
+04-22 19:04:40.266  1272  1592 I SDM     : HWCColorModeStc::GetColorModes: Color mode = 0 is supported
+04-22 19:04:40.266  1272  1592 I SDM     : HWCColorModeStc::GetColorModes: Color mode = 0 is supported
+04-22 19:04:40.267  1385  2578 D DisplayDevice: getVsyncPeriodFromHWC: value is cached. return 16666666
+04-22 19:04:40.478  6729  6729 I (cpu    : irq_count)- 0:2166330 1:1112721 2:1022806 3:405846 4:410753 5:405538
+04-22 19:04:40.478  6729  6729 I (ipi    : irq_count)- 0:1326363 1:1122012 2:0 3:0 4:0 5:647173 6:0
+04-22 19:04:40.478  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1806930 GICv3:IPI(1):1326363 GICv3:IPI(2):1122012 GICv3:IPI(6):647173 GICv3:apps_rsc-drv-2(20):239642 GICv3:hfi(329):104021 GICv3:240b6400.qcom,bwmon-llcc(40):67002 GICv3:dwc3(390):49622 GICv3:ufshcd(35):47482 ipcc:glink-native-adsp(426):25434
+04-22 19:04:42.825  4826  4914 E Metadata: Google Play services missing or without correct permission.
+04-22 19:04:49.951  8182  8182 I (cpu    : irq_count)- 0:2167764 1:1113005 2:1022840 3:405851 4:410779 5:405549
+04-22 19:04:49.951  8182  8182 I (ipi    : irq_count)- 0:1326496 1:1122160 2:0 3:0 4:0 5:647770 6:0
+04-22 19:04:49.951  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1807744 GICv3:IPI(1):1326496 GICv3:IPI(2):1122160 GICv3:IPI(6):647770 GICv3:apps_rsc-drv-2(20):239742 GICv3:hfi(329):104021 GICv3:240b6400.qcom,bwmon-llcc(40):67004 GICv3:dwc3(390):49622 GICv3:ufshcd(35):47482 ipcc:glink-native-adsp(426):25434
+04-22 19:04:53.238  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:04:59.420  8182  8182 I (cpu    : irq_count)- 0:2169069 1:1113286 2:1022860 3:405859 4:410800 5:405559
+04-22 19:04:59.420  8182  8182 I (virq   : irq_count)- GICv3:arch_timer(11):1808564 GICv3:IPI(1):1326616 GICv3:IPI(2):1122314 GICv3:IPI(6):648215 GICv3:apps_rsc-drv-2(20):239848 GICv3:hfi(329):104021 GICv3:240b6400.qcom,bwmon-llcc(40):67004 GICv3:dwc3(390):49622 GICv3:ufshcd(35):47482 ipcc:glink-native-adsp(426):25434
+04-22 19:04:59.421  8182  8182 I (ipi    : irq_count)- 0:1326616 1:1122314 2:0 3:0 4:0 5:648215 6:0
+04-22 19:05:00.132  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 19:05:00.171  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 19:05:00.171  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 19:05:00.172  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 19:05:08.894  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1809313 GICv3:IPI(1):1326954 GICv3:IPI(2):1122408 GICv3:IPI(6):648544 GICv3:apps_rsc-drv-2(20):239952 GICv3:hfi(329):104051 GICv3:240b6400.qcom,bwmon-llcc(40):67013 GICv3:dwc3(390):49622 GICv3:ufshcd(35):47514 ipcc:glink-native-adsp(426):25434
+04-22 19:05:08.895  6898  6898 I (cpu    : irq_count)- 0:2170051 1:1113654 2:1023123 3:405869 4:410870 5:405568
+04-22 19:05:08.895  6898  6898 I (ipi    : irq_count)- 0:1326954 1:1122408 2:0 3:0 4:0 5:648544 6:0
+04-22 19:05:11.337  1944  2372 W BatteryExternalStatsWorker: error reading Bluetooth stats: 9
+04-22 19:05:11.347  1944  2372 W BatteryExternalStatsWorker: error reading modem stats:ERROR_PHONE_NOT_AVAILABLE
+04-22 19:05:11.370  1944  2372 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu7/cpufreq/stats/time_in_state: open failed: ENOENT (No such file or directory)
+04-22 19:05:11.471  1944  2346 I commit_sys_config_file: [batterystats,26]
+04-22 19:05:11.476  1944  2346 I commit_sys_config_file: [batterystats,4]
+04-22 19:05:18.367  6729  6729 I (cpu    : irq_count)- 0:2170329 1:1113827 2:1023195 3:405885 4:410898 5:405582
+04-22 19:05:18.367  6729  6729 I (virq   : irq_count)- GICv3:arch_timer(11):1809584 GICv3:IPI(1):1327073 GICv3:IPI(2):1122434 GICv3:IPI(6):648641 GICv3:apps_rsc-drv-2(20):239998 GICv3:hfi(329):104051 GICv3:240b6400.qcom,bwmon-llcc(40):67021 GICv3:dwc3(390):49622 GICv3:ufshcd(35):47521 ipcc:glink-native-adsp(426):25434
+04-22 19:05:18.368  6729  6729 I (ipi    : irq_count)- 0:1327074 1:1122434 2:0 3:0 4:0 5:648641 6:0
+04-22 19:05:23.241  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:05:27.836  6898  6898 I (cpu    : irq_count)- 0:2170519 1:1113889 2:1023211 3:405894 4:410924 5:405592
+04-22 19:05:27.836  6898  6898 I (ipi    : irq_count)- 0:1327103 1:1122451 2:0 3:0 4:0 5:648721 6:0
+04-22 19:05:27.836  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1809748 GICv3:IPI(1):1327103 GICv3:IPI(2):1122451 GICv3:IPI(6):648721 GICv3:apps_rsc-drv-2(20):240019 GICv3:hfi(329):104051 GICv3:240b6400.qcom,bwmon-llcc(40):67023 GICv3:dwc3(390):49622 GICv3:ufshcd(35):47521 ipcc:glink-native-adsp(426):25434
+04-22 19:05:28.079  1163  1163 W healthd : battery l=100 v=4339 t=25.0 h=2 st=3 c=-65553 fc=3500000 cc=0 chg=
+04-22 19:05:28.216  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 19:05:28.254  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 19:05:28.255  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 19:05:28.255  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 19:05:28.464  1272  1464 I SDM     : DisplayBase::CommitThread: Received idle timeout
+04-22 19:05:28.521  1272  1592 E SDM     : ColorManager::ConfigureCWBDither: Invalid stc_intf_ 0x0K, cwb_cfg 0x0K
+04-22 19:05:28.521  1272  1592 E SDM     : DisplayBase::ConfigureCwbParams: Release dither data failed.
+04-22 19:05:28.522  1272  1464 I SDM     : HWDeviceDRM::SetupConcurrentWriteback: Tear down the Concurrent Writeback topology
+04-22 19:05:37.310  8929  8929 I (cpu    : irq_count)- 0:2171284 1:1114336 2:1023547 3:405916 4:410969 5:405605
+04-22 19:05:37.310  8929  8929 I (virq   : irq_count)- GICv3:arch_timer(11):1810410 GICv3:IPI(1):1327568 GICv3:IPI(2):1122511 GICv3:IPI(6):648891 GICv3:apps_rsc-drv-2(20):240110 GICv3:hfi(329):104102 GICv3:240b6400.qcom,bwmon-llcc(40):67040 GICv3:dwc3(390):49622 GICv3:ufshcd(35):47521 ipcc:glink-native-adsp(426):25476
+04-22 19:05:37.311  8929  8929 I (ipi    : irq_count)- 0:1327568 1:1122511 2:0 3:0 4:0 5:648891 6:0
+04-22 19:05:46.782  6898  6898 I (cpu    : irq_count)- 0:2171540 1:1114473 2:1023594 3:405923 4:410997 5:405610
+04-22 19:05:46.782  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1810653 GICv3:IPI(1):1327640 GICv3:IPI(2):1122540 GICv3:IPI(6):648990 GICv3:apps_rsc-drv-2(20):240140 GICv3:hfi(329):104102 GICv3:240b6400.qcom,bwmon-llcc(40):67047 GICv3:dwc3(390):49622 GICv3:ufshcd(35):47521 ipcc:glink-native-adsp(426):25476
+04-22 19:05:46.783  6898  6898 I (ipi    : irq_count)- 0:1327640 1:1122540 2:0 3:0 4:0 5:648990 6:0
+04-22 19:05:53.243  1141  2404 I PAL: SpeakerProtection: isSpeakerInUse: 218: Speaker not in use
+04-22 19:05:56.254  6898  6898 I (cpu    : irq_count)- 0:2171738 1:1114557 2:1023618 3:405932 4:411021 5:405620
+04-22 19:05:56.254  6898  6898 I (ipi    : irq_count)- 0:1327680 1:1122562 2:0 3:0 4:0 5:649068 6:0
+04-22 19:05:56.254  6898  6898 I (virq   : irq_count)- GICv3:arch_timer(11):1810828 GICv3:IPI(1):1327680 GICv3:IPI(2):1122562 GICv3:IPI(6):649068 GICv3:apps_rsc-drv-2(20):240166 GICv3:hfi(329):104102 GICv3:240b6400.qcom,bwmon-llcc(40):67052 GICv3:dwc3(390):49622 GICv3:ufshcd(35):47521 ipcc:glink-native-adsp(426):25476

@@ -35,3 +35,22 @@ Verbatim log lines (start, first samples, middle, last samples, end):
 2026-04-22 19:03:23 default_network=none external_ipv4=[] ping8888=offline ping1111=offline airplane=0 wifi_setting=1 wav=904 mem=[ Graphics: 860640 860644 TOTAL PSS: 4287821 TOTAL RSS: 4319148 TOTAL SWAP (KB): 0 ]
 2026-04-22 19:03:38 default_network=none external_ipv4=[] ping8888=offline ping1111=offline airplane=0 wifi_setting=1 OFFLINE-CHECK-END rc=0 wav=904
 ```
+
+## System logs (Android logcat + bugreport, unfiltered) — `logcat/`
+
+Full logcat of every buffer and a full `adb bugreport` were collected from the tablet after the run (see `logcat/README.md`).
+
+Key system lines during the run (verbatim):
+
+```
+04-22 18:49:25.597  1944  4311 I ActivityManager: Force stopping vn.cabin.translate appid=10136 user=0: from pid 7035
+04-22 18:48:44.924  2761  3341 D DhcpClient: Broadcasting DHCPDISCOVER
+04-22 18:56:58.582  2761  3341 D DhcpClient: Broadcasting DHCPDISCOVER
+04-22 18:58:05.065  1944  2596 I netstats_wifi_sample: [0,0,0,0,0,0,0,0,0,0,0,0,1776859085065]
+```
+
+- `Force stopping vn.cabin.translate` (18:49:25): the app was closed right before the benchmark started (18:49:27).
+- `DhcpClient: Broadcasting DHCPDISCOVER` (18:48:44, 18:56:58): Wi-Fi kept asking for an address and got no answer — no network.
+- `netstats_wifi_sample: [0,0,0,...]` (18:58:05): Android's own Wi-Fi traffic counters were zero during the run.
+- `dumpsys_connectivity.txt`: `Active default network: none`.
+
