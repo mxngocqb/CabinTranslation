@@ -33,7 +33,11 @@ const QCS = latest("qcs8550", "device_bench_");
 // additional devices measured for latency only (optional: skipped if no complete run exists)
 const tryLatest = (d, p) => { try { return latest(d, p); } catch (e) { return null; } };
 const S25 = tryLatest("s25ultra", "s25ultra_gpu_");
-const s25p50 = () => rng(S25, "total_ms_p50");   // evaluated later (rng is defined below)
+const s25p50 = () => rng(S25, "total_ms_p50");
+// battery power/energy measured on the S25 Ultra (edge/tools/power_bench_android.py)
+const PWF = (() => { const d = path.join(R, "s25ultra"); return fs.existsSync(d) ? fs.readdirSync(d).filter((x) => x.startsWith("power_")).sort().reverse()
+  .map((x) => path.join(d, x, "summary.json")).find((f) => fs.existsSync(f)) : null; })();
+const PW = PWF ? JSON.parse(fs.readFileSync(PWF, "utf8")) : null;   // evaluated later (rng is defined below)
 const EXTRA = [
   ["Samsung Galaxy S25 Ultra (SM8750, Android 17)", "GPU · Adreno 830", tryLatest("s25ultra", "s25ultra_gpu_")],
 ].filter((e) => e[2]);
@@ -193,7 +197,7 @@ C.push(table([2300, W - 2300], ["Field", "Team response"], [
     BS("Single-call Vietnamese input (lower-case + system-prompt constraint) replacing a separate punctuation pass."),
     BS("An offline, relocatable judge package with pre-flight check and self-test."),
     BS("An Android app with VAD capture, tested on the QCS8550 tablet and the Galaxy S25 Ultra."),
-    BS("Battery power measured on the S25 Ultra (Table 4.5)."),
+    BS(PW ? `Energy consumption measured on the Galaxy S25 Ultra: ${Number(PW.pipeline_power_w).toFixed(2)} W for the pipeline, ${Number(PW.energy_per_utterance_j).toFixed(1)} J per translated utterance (Table 4.5).` : "Battery power measured on the S25 Ultra (Table 4.5)."),
     PS(""),
     PS("**Main limitations:**"),
     BS("Push-to-talk per utterance (no streaming)."),
@@ -423,7 +427,7 @@ C.push(B("Scoring on a PC."));
 C.push(P("**Runs:**", { after: 40, keep: true }));
 C.push(B(`Device A (VENTUNO Q), NPU: \`results/ventunoq/${NPU.name}\` — **submitted build**${npuOffline ? ", **measured fully offline**, installed from the judge package" : ""}`));
 C.push(B(`Device B (QCS8550, GPU): \`results/qcs8550/${QCS.name}\`${QCS.name.endsWith("_offline") ? " — **measured fully offline**" : ""}${qcsPunct ? " — earlier 2-call Vietnamese build" : ""}`));
-if (S25) C.push(B(`Device C (Galaxy S25 Ultra, GPU): \`results/s25ultra/${S25.name}\` (latency) + battery power (Table 4.5)`));
+if (S25) C.push(B(`Device C (Galaxy S25 Ultra, GPU): \`results/s25ultra/${S25.name}\` (latency)${PWF ? ` + energy consumption \`results/s25ultra/${path.basename(path.dirname(PWF))}\`` : ""} (Table 4.5)`));
 
 if (npuOffline) {
   const sd = path.join(NPU.dir, "syslog");
@@ -554,6 +558,14 @@ C.push(table([1700, W - 1700 - 1800, 1800], ["Area", "Result and method", "Evide
     ...(S25 ? [BS(`Galaxy S25 Ultra: ${mb(S25.s.device_summary.peak_rss_kb)} MB + ${mb((S25.s.meminfo_peak_kb || {}).graphics || 0)} MB graphics`)] : []),
     PS("Measured by the engine (VmHWM) and polled every ~1 s by the host."),
   ], "`summary.json` → device_summary.peak_rss_kb, `meminfo_samples.json`"],
+  ...(PW ? [["Power / energy", [
+    PS("**Energy consumption was measured on the Samsung Galaxy S25 Ultra** (Device C), on battery with the charger unplugged; `dumpsys battery` current / voltage / charge counter sampled ~1/s, no root."),
+    BS(`Idle baseline (screen on): ${Number(PW.idle.avg_power_w).toFixed(2)} W`),
+    BS(`Pipeline running (${PW.utterances} utterances, speech→speech, back-to-back): ${Number(PW.load.avg_power_w).toFixed(2)} W`),
+    BS(`Pipeline power (load − idle): **${Number(PW.pipeline_power_w).toFixed(2)} W**`),
+    BS(`Energy per translated utterance: **${Number(PW.energy_per_utterance_j).toFixed(1)} J** (pipeline only); ${Number(PW.total_energy_per_utterance_j).toFixed(1)} J including the screen/OS baseline`),
+    PS("Details: Table 4.5."),
+  ], `\`results/s25ultra/${path.basename(path.dirname(PWF))}/\` (summary.json, raw samples)`]] : []),
   ["Device operation & UX", [
     PS("**Scenario completed: yes**, on all three devices, offline."),
     BS("Uncut videos: 1:43 (S25 Ultra), 1:35 (QCS8550), 2:08 (VENTUNO Q), covering VI↔EN, VI↔KO and VI↔ZH with no crash or restart. A misrecognized utterance is simply repeated."),
@@ -580,8 +592,8 @@ C.push(table([1300, 3500, 3006, 2100], ["ID", "ASR transcript (device)", "Device
   EX.map((r) => [[r.id.split("__")[1], LBL[r.pair]], r.mt_in || r.asr, r.hyp, [r.ref, `**${f0(r.total_ms)} ms**`]]), { size: 16 }));
 
 if (EXTRA.length) {
-  C.push(H2("Table 4.5 — Same Android build on Samsung Galaxy S25 Ultra (latency only; network connected)"));
-  C.push(P(`Same engine, models and prompts; full sample set (${NUTT} utterances). Only timing is reported here, as requested; transcripts and translations are in each run's \`rows.jsonl\`.`, { size: 18 }));
+  C.push(H2("Table 4.5 — Same Android build on Samsung Galaxy S25 Ultra: latency and energy consumption"));
+  C.push(P(`Same engine, models and prompts; full sample set (${NUTT} utterances). Latency and energy are reported here (network connected for wireless adb); transcripts and translations are in each run's \`rows.jsonl\`.`, { size: 18 }));
   const ew = [1050, 1000, 1000, 1000, 1000, 1050, 1000, W - 7100];
   EXTRA.forEach(([dev, acc, run]) => {
     const ds = run.s.device_summary || {}, mp = run.s.meminfo_peak_kb || {};
@@ -593,13 +605,11 @@ if (EXTRA.length) {
     C.push(table(ew, ["Dir.", "ASR", "Punct.", "MT", "TTFT", "tok/s", "TTS", "Total p50 / p95"], latencyRows(run), { zebra: true, size: 17 }));
   });
   // battery power measured on the S25 Ultra (edge/tools/power_bench_android.py), if available
-  const pdir = path.join(R, "s25ultra");
-  const pw = fs.existsSync(pdir) ? fs.readdirSync(pdir).filter((x) => x.startsWith("power_")).sort().reverse()
-    .map((x) => path.join(pdir, x, "summary.json")).find((f) => fs.existsSync(f)) : null;
+  const pw = PWF;
   if (pw) {
     const q = JSON.parse(fs.readFileSync(pw, "utf8"));
     C.push(P("", { after: 40 }));
-    C.push(P("**Power consumption — Galaxy S25 Ultra**", { after: 20, size: 18, keep: true }));
+    C.push(P("**Energy consumption — measured on the Galaxy S25 Ultra**", { after: 20, size: 18, keep: true }));
     C.push(B(`Run: \`${path.basename(path.dirname(pw))}\``, 0, true));
     C.push(B("On battery, charger unplugged; no root", 0, true));
     C.push(B("`dumpsys battery` current / voltage / charge counter sampled ~1/s", 0, true));
