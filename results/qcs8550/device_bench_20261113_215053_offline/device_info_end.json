@@ -1,0 +1,17 @@
+{
+ "ro.soc.model": "QCS8550",
+ "ro.product.model": "Tablet Meeting",
+ "ro.build.version.release": "13",
+ "mem_total": "MemTotal:       15626272 kB",
+ "gpu": "GLES: Qualcomm, Adreno (TM) 740, OpenGL ES 3.2 V@0676.69 (GIT@1e9d6bfa18, Ia9449ce5a8, 1741259084) (Date:03/06/25)",
+ "network_source": "network.log written on the device during the run (airplane flag + ping 8.8.8.8 every ~15 s)",
+ "samples_online_during_run": 0,
+ "airplane_mode_on": "0",
+ "wifi_on": "1",
+ "default_network": "none",
+ "external_ipv4": "[]",
+ "ping_8.8.8.8": "offline",
+ "ping_1.1.1.1": "offline",
+ "internet": "offline",
+ "logged_at": "2026-04-22 19:03:38"
+}

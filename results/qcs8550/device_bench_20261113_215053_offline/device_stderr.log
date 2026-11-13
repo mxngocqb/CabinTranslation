@@ -1,0 +1,10 @@
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+loaded: {"load_ms":{"asr_en":4409.547134,"asr_ko":2710.07203,"asr_vi":1868.482655,"asr_zh":4210.241457,"mt":8668.516559,"tts_en":752.668594,"tts_ko":801.990103,"tts_vi":833.823021,"tts_zh":2005.06953},"mt_backend":"gpu","mt_max_num_tokens":384,"mt_model":"/data/local/tmp/cabin/models/gemma-4-E2B-it-gpu.litertlm","mt_num_threads":0,"mt_prefix_cache":true,"mt_sampler":"greedy","rss_after_load_kb":2228192,"rss_base_kb":47932}
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'consistently'
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'Nem'
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'đ'
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'oàn'
+done: {"load_ms":{"asr_en":4409.547134,"asr_ko":2710.07203,"asr_vi":1868.482655,"asr_zh":4210.241457,"mt":8668.516559,"tts_en":752.668594,"tts_ko":801.990103,"tts_vi":833.823021,"tts_zh":2005.06953},"mt_backend":"gpu","mt_max_num_tokens":384,"mt_model":"/data/local/tmp/cabin/models/gemma-4-E2B-it-gpu.litertlm","mt_num_threads":0,"mt_prefix_cache":true,"mt_sampler":"greedy","peak_rss_kb":4332308,"rss_after_load_kb":2228192,"rss_base_kb":47932}

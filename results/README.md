@@ -1,6 +1,6 @@
 # Results — CabinTranslation
 
-_Generated 2026-11-13 16:47 by `python dashboard/build_report.py`. Open the dashboard with `bash dashboard/serve.sh` (http://localhost:8000/dashboard/) for charts, per-utterance browsing and audio._
+_Generated 2026-11-13 21:53 by `python dashboard/build_report.py`. Open the dashboard with `bash dashboard/serve.sh` (http://localhost:8000/dashboard/) for charts, per-utterance browsing and audio._
 
 ## Layout
 
@@ -17,21 +17,21 @@ results/
   archive/               smoke tests, crashed or failed runs (kept for traceability)
 ```
 
-## Official on-device results — Qualcomm QCS8550 (`qcs8550/device_bench_20261111_161624`)
+## Official on-device results — Qualcomm QCS8550 (`qcs8550/device_bench_20261113_215053_offline`)
 
 - Device: QCS8550 / Tablet Meeting, Android 13, Adreno 740.
 - Runtime: Gemma 4 E2B on the GPU via LiteRT-LM (context 384); ASR and TTS on the CPU.
-- Peak RSS: 4254 MB (all 4 languages loaded). GPU (Graphics): 841 MB.
-- Network: online at start, online at end. **Re-run offline for the submission.**
+- Peak RSS: 4231 MB (all 4 languages loaded). GPU (Graphics): 840 MB.
+- Network: offline at start, offline at end. **Re-run offline for the submission.**
 
 | pair | n | ASR err | BLEU | chrF++ | COMET | ASR-BLEU | ASR ms | punct ms | MT ms | TTS ms | total p50 / p95 ms |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| VI→EN | 100 | WER 1.72 | 54.62 | 67.99 | 88.63 | 53.88 | 76 | 490 | 509 | 226 | 1221 / 1997 |
-| EN→VI | 100 | WER 7.8 | 42.07 | 60.03 | 84.08 | 40.4 | 189 | 0 | 969 | 395 | 1442 / 2464 |
-| VI→KO | 175 | WER 4.84 | 38.1 | 30.59 | 88.05 | 37.05 | 60 | 449 | 467 | 343 | 1254 / 2060 |
-| KO→VI | 177 | CER 7.86 | 22.51 | 41.09 | 83.41 | 22.1 | 87 | 0 | 448 | 136 | 629 / 1090 |
-| VI→ZH | 176 | WER 12.38 | 55.09 | 39.39 | 91.24 | 51.52 | 79 | 612 | 497 | 318 | 1328 / 2867 |
-| ZH→VI | 177 | CER 3.74 | 45.72 | 63.6 | 92.92 | 44.57 | 113 | 0 | 595 | 199 | 801 / 1699 |
+| VI→EN | 100 | WER 1.72 | 48.3 | 63.95 | 86.45 | 47.93 | 76 | 0 | 500 | 209 | 736 / 1204 |
+| EN→VI | 100 | WER 7.8 | 42.07 | 60.03 | 84.08 | 40.4 | 186 | 0 | 950 | 389 | 1434 / 2400 |
+| VI→KO | 175 | WER 4.84 | 34.93 | 28.05 | 87.46 | 34.36 | 62 | 0 | 434 | 332 | 794 / 1310 |
+| KO→VI | 177 | CER 7.86 | 22.51 | 41.09 | 83.41 | 22.1 | 87 | 0 | 428 | 137 | 619 / 1046 |
+| VI→ZH | 176 | WER 12.38 | 52.24 | 35.06 | 90.17 | 49.1 | 81 | 0 | 451 | 301 | 757 / 1488 |
+| ZH→VI | 177 | CER 3.74 | 45.72 | 63.6 | 92.92 | 44.57 | 113 | 0 | 569 | 200 | 796 / 1663 |
 
 BLEU for KO/ZH targets is character-level. ASR-BLEU is BLEU of the spoken output after re-recognition.
 
@@ -110,6 +110,7 @@ Network during these runs: online.
 
 | time | run | kind | status | pairs | note |
 |---|---|---|---|---|---|
+| 2026-11-13 21:50 | [device_bench_20261113_215053_offline](qcs8550/device_bench_20261113_215053_offline/summary.md) | qcs8550 | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
 | 2026-11-13 16:30 | [power_20261113_163018](s25ultra/power_20261113_163018/summary.md) | pc | superseded |  |  |
 | 2026-11-13 16:17 | [s25ultra_gpu_20261113_161738](s25ultra/s25ultra_gpu_20261113_161738/summary.md) | s25ultra-gpu | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
 | 2026-11-12 11:12 | [iq9075_cpu_20261112_111234](iq9075/iq9075_cpu_20261112_111234/summary.md) | iq9075-cpu | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
@@ -123,10 +124,10 @@ Network during these runs: online.
 | 2026-11-11 19:42 | ventunoq_gpu_20261111_194227__aborted_old_punct_pipeline | ventunoq-gpu | archived |  | aborted old punct pipeline |
 | 2026-11-11 19:39 | [ventunoq_cpu_20261111_193949__smoke_n3](archive/ventunoq_cpu_20261111_193949__smoke_n3/summary.md) | ventunoq-cpu | archived | vi-en, zh-vi | smoke n3 |
 | 2026-11-11 19:35 | [ventunoq_gpu_20261111_193548__smoke_n3](archive/ventunoq_gpu_20261111_193548__smoke_n3/summary.md) | ventunoq-gpu | archived | vi-en, ko-vi | smoke n3 |
-| 2026-11-11 16:16 | [device_bench_20261111_161624](qcs8550/device_bench_20261111_161624/summary.md) | qcs8550 | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
+| 2026-11-11 16:16 | [device_bench_20261111_161624__superseded_online_2call](archive/device_bench_20261111_161624__superseded_online_2call/summary.md) | qcs8550 | archived | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi | superseded online 2call |
 | 2026-11-11 16:02 | [device_tts_20261111_160254](qcs8550/device_tts_20261111_160254/summary.md) | qcs8550-tts | official | en, ko |  |
 | 2026-11-11 15:58 | device_tts_20261111_155803__piper_failed_sherpa2 | qcs8550-tts | archived |  | piper failed sherpa2 |
-| 2026-11-11 15:13 | [device_bench_20261111_151329](qcs8550/device_bench_20261111_151329/summary.md) | qcs8550 | superseded | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
+| 2026-11-11 15:13 | [device_bench_20261111_151329__superseded_online_2call](archive/device_bench_20261111_151329__superseded_online_2call/summary.md) | qcs8550 | archived | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi | superseded online 2call |
 | 2026-11-11 15:05 | device_bench_20261111_150546__crashed_empty_asr | qcs8550 | archived |  | crashed empty asr |
 | 2026-11-11 14:57 | [device_bench_20261111_145722__smoke_n5](archive/device_bench_20261111_145722__smoke_n5/summary.md) | qcs8550 | archived | vi-en, en-vi | smoke n5 |
 | 2026-11-11 13:41 | [bench_20261111_134125](pc/bench_20261111_134125/summary.md) | pc | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
