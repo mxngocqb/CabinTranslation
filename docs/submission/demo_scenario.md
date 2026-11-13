@@ -1,7 +1,7 @@
 # Demo scenario — "Shift handover and line fault at an electronics assembly plant" (~30 min)
 
 **Setting.** An electronics assembly plant in an industrial park in Bắc Ninh. Production line 3 assembles control boards.
-The interpreter runs offline on one device (VENTUNO Q or the QCS8550 tablet) placed on the line-side table. The two
+The interpreter runs offline on one device placed on the line-side table: Arduino VENTUNO Q (QCS8275, NPU), the QCS8550 meeting tablet, or a Samsung Galaxy S25 Ultra (SM8750) running the CabinTranslation app. The two
 speakers stand on either side of it, about 40–60 cm from the microphone. Light background noise from fans and conveyors.
 
 **Roles**
@@ -19,7 +19,7 @@ ASR / MT / TTS time. Each scene ends with a recap read back by the device.
 
 | # | Time | Pair | Scene |
 |---|---|---|---|
-| 0 | 00:00–02:00 | — | Show device, **disable network** (Wi-Fi off, cable out), start the app, ready state |
+| 0 | 00:00–02:00 | — | Show device, **disable network** (airplane mode on the tablet / S25 Ultra; Wi-Fi off and cable out on VENTUNO Q), start the app, ready state |
 | 1 | 02:00–08:00 | VI ⇄ EN | Safety briefing and line walk with the auditor |
 | 2 | 08:00–14:00 | VI ⇄ KO | Reflow-oven alarm: troubleshooting with the Korean engineer |
 | 3 | 14:00–20:00 | VI ⇄ ZH | Defective connectors: incoming inspection with the Chinese supplier |

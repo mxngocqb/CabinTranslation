@@ -13,7 +13,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#111}
 .legend span{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:middle;margin:0 5px 0 16px;border:1px solid #999}
 .dev2{margin-top:16px;border:2px solid #aaa;border-radius:12px;padding:10px 14px;font-size:13.5px;color:#333;background:#f6f6f6}
 </style></head><body><div class="wrap">
-<div class="dev"><div class="tag">DEVICE BOUNDARY — one process <code>cabin_edge</code> · no network calls during inference · Arduino VENTUNO Q (QCS8275, Ubuntu 24.04) or QCS8550 tablet (Android 13)</div>
+<div class="dev"><div class="tag">DEVICE BOUNDARY — one process <code>cabin_edge</code> · no network calls during inference · Arduino VENTUNO Q (QCS8275, Ubuntu 24.04) · QCS8550 tablet (Android 13) · Galaxy S25 Ultra (SM8750, Android 17)</div>
 <div class="row">
  <div class="box ui" style="width:150px"><h3>Input (mic)</h3>Touch web UI (hold-to-talk) or Android app<br><span class="small">16 kHz mono PCM16<br>pre/post-roll; app: Silero VAD</span></div>
  <div class="arrow">➜</div>
@@ -21,7 +21,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#111}
  <div class="arrow">➜</div>
  <div class="box cpu" style="width:170px"><h3>Text prep — CPU</h3>VI all-caps → lowercase + rule-based ?/.<br><span class="small">prompts generated from <code>cabin/mt.py</code></span></div>
  <div class="arrow">➜</div>
- <div class="box acc" style="width:330px"><h3>MT — Gemma 4 E2B-it (LiteRT-LM)</h3><b>VENTUNO Q: Hexagon v75 NPU</b> — AOT QCS8275 build (2.72 GB), LiteRT-LM 0.18 + Qualcomm dispatch + QAIRT 2.50, ~40 tok/s<br><b>QCS8550: Adreno 740 GPU</b> — <code style="white-space:nowrap">gemma-4-E2B-it-gpu.litertlm</code> (2.34 GB), LiteRT-LM C API 0.19.1, ctx 384, prompt-prefix cache<br><span class="small">Alt. on VENTUNO Q: Adreno 623 GPU (Vulkan) · CPU XNNPACK (generic 2.59 GB)<br>One call per utterance; system prompt per direction</span></div>
+ <div class="box acc" style="width:330px"><h3>MT — Gemma 4 E2B-it (LiteRT-LM)</h3><b>VENTUNO Q: Hexagon v75 NPU</b> — AOT QCS8275 build (2.72 GB), LiteRT-LM 0.18 + Qualcomm dispatch + QAIRT 2.50, ~40 tok/s<br><b>QCS8550: Adreno 740 GPU</b> — <code style="white-space:nowrap">gemma-4-E2B-it-gpu.litertlm</code> (2.34 GB), LiteRT-LM C API 0.19.1, ctx 384, prompt-prefix cache<br><b>Galaxy S25 Ultra: Adreno 830 GPU</b> — same Android build/APK, 34–52 tok/s<br><span class="small">Alt. on VENTUNO Q: Adreno 623 GPU (Vulkan) · CPU XNNPACK (generic 2.59 GB)<br>One call per utterance; system prompt per direction</span></div>
  <div class="arrow">➜</div>
  <div class="box cpu" style="width:230px"><h3>TTS — CPU</h3>2 threads<br>• vi: ViFastTts Ngọc Huyền (Rust FFI + ORT 1.28.2)<br>• en: Piper VITS lessac-medium<br>• ko: Supertonic-2 int8, 5 steps<br>• zh: Matcha zh-baker + Vocos 22 kHz</div>
  <div class="arrow">➜</div>
