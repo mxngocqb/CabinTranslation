@@ -1,0 +1,10 @@
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+Warning: maxDynamicUniformBuffersPerPipelineLayout artificially reduced from 500000 to 16 to fit dynamic offset allocation limit.
+Warning: maxDynamicStorageBuffersPerPipelineLayout artificially reduced from 500000 to 16 to fit dynamic offset allocation limit.
+loaded: {"load_ms":{"asr_en":6267.992981,"asr_ko":4009.041283,"asr_vi":2923.440331,"asr_zh":6389.96158,"mt":3397.032781,"tts_en":1104.956226,"tts_ko":753.671947,"tts_vi":743.77907,"tts_zh":2607.512033},"mt_backend":"gpu","mt_max_num_tokens":384,"mt_model":"/home/arduino/cabin/models/gemma-4-E2B-it-gpu.litertlm","mt_num_threads":0,"mt_prefix_cache":true,"mt_sampler":"greedy","rss_after_load_kb":1514280,"rss_base_kb":42964}
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'consistently'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'Nem'
+done: {"load_ms":{"asr_en":6267.992981,"asr_ko":4009.041283,"asr_vi":2923.440331,"asr_zh":6389.96158,"mt":3397.032781,"tts_en":1104.956226,"tts_ko":753.671947,"tts_vi":743.77907,"tts_zh":2607.512033},"mt_backend":"gpu","mt_max_num_tokens":384,"mt_model":"/home/arduino/cabin/models/gemma-4-E2B-it-gpu.litertlm","mt_num_threads":0,"mt_prefix_cache":true,"mt_sampler":"greedy","peak_rss_kb":3485960,"rss_after_load_kb":1514280,"rss_base_kb":42964}

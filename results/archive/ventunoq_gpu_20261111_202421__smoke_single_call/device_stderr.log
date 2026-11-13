@@ -1,0 +1,4 @@
+Warning: maxDynamicUniformBuffersPerPipelineLayout artificially reduced from 500000 to 16 to fit dynamic offset allocation limit.
+Warning: maxDynamicStorageBuffersPerPipelineLayout artificially reduced from 500000 to 16 to fit dynamic offset allocation limit.
+loaded: {"load_ms":{"asr_vi":2979.276988,"mt":3293.547196,"tts_en":1096.408749},"mt_backend":"gpu","mt_max_num_tokens":384,"mt_model":"/home/arduino/cabin/models/gemma-4-E2B-it-gpu.litertlm","mt_num_threads":0,"mt_prefix_cache":true,"mt_sampler":"greedy","rss_after_load_kb":449692,"rss_base_kb":42960}
+done: {"load_ms":{"asr_vi":2979.276988,"mt":3293.547196,"tts_en":1096.408749},"mt_backend":"gpu","mt_max_num_tokens":384,"mt_model":"/home/arduino/cabin/models/gemma-4-E2B-it-gpu.litertlm","mt_num_threads":0,"mt_prefix_cache":true,"mt_sampler":"greedy","peak_rss_kb":705812,"rss_after_load_kb":449692,"rss_base_kb":42960}

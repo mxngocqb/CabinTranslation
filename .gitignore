@@ -1,0 +1,34 @@
+# --- large assets (fetched / built locally, never committed)
+models/
+data/
+wheels/
+.venv/
+
+# --- secrets: never commit keys
+*.pem
+*.key
+edge/ventunoq-linux/cert/
+
+# --- Python
+__pycache__/
+*.pyc
+
+# --- audio: result wavs are evidence kept on disk / in the offline package, not in git
+*.wav
+!docs/**/*.wav
+
+# --- native build outputs (rebuild with edge/<platform>/build.sh)
+edge/qcs8550-android/dist/lib/
+edge/ventunoq-linux/dist/lib/
+edge/ventunoq-linux/dist/lib_npu/
+edge/android-app/app/build/
+edge/android-app/.gradle/
+edge/android-app/local.properties
+edge/android-app/app/src/main/jniLibs/
+*.apk
+
+# --- generated dashboard data (rebuild with python dashboard/build_report.py)
+dashboard/data.json
+
+# --- Office lock files
+~$*

@@ -1,0 +1,1 @@
+{"target": "linux", "backend": "cpu", "config": "/root/cabin/config_cpu.json", "pairs": ["vi-en", "en-vi", "vi-ko", "ko-vi", "vi-zh", "zh-vi"], "wall_s": 1201.8}

@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#111}
+.wrap{width:1560px;padding:24px}
+.dev{border:3px dashed #2a78d6;border-radius:14px;padding:18px 18px 14px;position:relative}
+.dev>.tag{position:absolute;top:-14px;left:18px;background:#fff;color:#2a78d6;font-weight:700;padding:0 8px;font-size:17px}
+.row{display:flex;align-items:stretch;gap:10px}
+.box{border:2px solid #333;border-radius:10px;padding:10px 12px;font-size:14.5px;line-height:1.35;background:#fafafa}
+.box h3{margin:0 0 6px;font-size:16.5px}
+.cpu{background:#eef5ff;border-color:#2a78d6}.acc{background:#e9f8f1;border-color:#1b9e6f}.ui{background:#fff7e6;border-color:#d98a00}
+.arrow{align-self:center;font-size:30px;color:#555}
+.small{font-size:12.5px;color:#444}
+.legend{margin-top:12px;font-size:13px;color:#333}
+.legend span{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:middle;margin:0 5px 0 16px;border:1px solid #999}
+.dev2{margin-top:16px;border:2px solid #aaa;border-radius:12px;padding:10px 14px;font-size:13.5px;color:#333;background:#f6f6f6}
+</style></head><body><div class="wrap">
+<div class="dev"><div class="tag">DEVICE BOUNDARY — one process <code>cabin_edge</code> · no network calls during inference · Arduino VENTUNO Q (QCS8275, Ubuntu 24.04) or QCS8550 tablet (Android 13)</div>
+<div class="row">
+ <div class="box ui" style="width:150px"><h3>Input (mic)</h3>Touch web UI (hold-to-talk) or Android app<br><span class="small">16 kHz mono PCM16<br>pre/post-roll; app: Silero VAD</span></div>
+ <div class="arrow">➜</div>
+ <div class="box cpu" style="width:250px"><h3>ASR — CPU</h3>sherpa-onnx 1.13.8 C API, int8, 4 thr<br>• vi: hynt Zipformer-30M RNNT (29 MB)<br>• en+zh: X-ASR Zipformer zh-en punct (167 MB)<br>• ko: k2-fsa Zipformer Korean (73 MB)</div>
+ <div class="arrow">➜</div>
+ <div class="box cpu" style="width:170px"><h3>Text prep — CPU</h3>VI all-caps → lowercase + rule-based ?/.<br><span class="small">prompts generated from <code>cabin/mt.py</code></span></div>
+ <div class="arrow">➜</div>
+ <div class="box acc" style="width:330px"><h3>MT — Gemma 4 E2B-it (LiteRT-LM)</h3><b>VENTUNO Q: Hexagon v75 NPU</b> — AOT QCS8275 build (2.72 GB), LiteRT-LM 0.18 + Qualcomm dispatch + QAIRT 2.50, ~40 tok/s<br><b>QCS8550: Adreno 740 GPU</b> — <code style="white-space:nowrap">gemma-4-E2B-it-gpu.litertlm</code> (2.34 GB), LiteRT-LM C API 0.19.1, ctx 384, prompt-prefix cache<br><span class="small">Alt. on VENTUNO Q: Adreno 623 GPU (Vulkan) · CPU XNNPACK (generic 2.59 GB)<br>One call per utterance; system prompt per direction</span></div>
+ <div class="arrow">➜</div>
+ <div class="box cpu" style="width:230px"><h3>TTS — CPU</h3>2 threads<br>• vi: ViFastTts Ngọc Huyền (Rust FFI + ORT 1.28.2)<br>• en: Piper VITS lessac-medium<br>• ko: Supertonic-2 int8, 5 steps<br>• zh: Matcha zh-baker + Vocos 22 kHz</div>
+ <div class="arrow">➜</div>
+ <div class="box ui" style="width:120px"><h3>Output (speaker)</h3>Speech + text on screen<br><span class="small">per-stage timing shown; replay button</span></div>
+</div>
+<div class="legend"><span style="background:#eef5ff;border-color:#2a78d6"></span>CPU <span style="background:#e9f8f1;border-color:#1b9e6f"></span>NPU / GPU accelerator <span style="background:#fff7e6;border-color:#d98a00"></span>User interface (HTTP :8080 · HTTPS :8443 for LAN mic · Android app)</div>
+</div>
+<div class="dev2"><b>Outside the device (development only, not in the runtime):</b> host PC cross-compiles the engine (Android NDK r27c / aarch64-linux-gnu), generates configs from the Python core, deploys over adb/ssh, and scores benchmarks (BLEU, chrF++, COMET wmt22-comet-da, ASR-BLEU). Qualcomm AI Hub / Device Cloud were not used to produce the runtime; the VENTUNO Q board used for testing was a QDC-hosted device.</div>
+</div></body></html>

@@ -1,0 +1,1 @@
+{"target": "linux", "backend": "npu", "config": "/home/arduino/cabin/config_npu.json", "pairs": ["vi-en", "en-vi", "vi-ko", "ko-vi", "vi-zh", "zh-vi"], "wall_s": 775.1}

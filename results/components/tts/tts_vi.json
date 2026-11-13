@@ -1,0 +1,512 @@
+{
+ "summary": {
+  "lang": "vi",
+  "n": 100,
+  "roundtrip_wer": 3.75,
+  "roundtrip_cer": 3.02,
+  "tts_rtf": 0.0369,
+  "avg_syn_s": 0.153
+ },
+ "rows": [
+  {
+   "text": "phát chỉ tất cả nhạc được phát hành giữa năm một nghìn chín trăm chín mươi và năm hai nghìn",
+   "asr": "PHÁT TRIỂN TẤT CẢ NHẠC ĐƯỢC PHÁT HÀNH GIỮA NĂM MỘT NGHÌN CHÍN TRĂM CHÍN MƯƠI VÀ NĂM HAI NGHÌN",
+   "syn_s": 0.244
+  },
+  {
+   "text": "ừ thì có lúc là có nhưng dung lượng lưu trữ trên điện thoại tôi không tuyệt lắm",
+   "asr": "Ừ THÌ CÓ LÚC LÀ CÓ NHỮNG DUNG LƯỢNG LƯU TRỮ TRÊN ĐIỆN THOẠI TÔI KHÔNG TUYỆT LẮM",
+   "syn_s": 0.271
+  },
+  {
+   "text": "tôi có nhớ đặt báo thức nhắc nhở cho cuộc hẹn bác sĩ tiếp theo của tôi không",
+   "asr": "TÔI CÓ NHỚ ĐẶT BÁO THỨC NHẮC NHỞ CHO CUỘC HẸN BÁC SĨ TIẾP THEO CỦA TÔI KHÔNG",
+   "syn_s": 0.18
+  },
+  {
+   "text": "hãy nhớ là tôi đã đặt một chiếc bánh cho tiệc sinh nhật tối nay vui lòng cho tôi biết tình trạng đơn hàng",
+   "asr": "HÃY NHỚ LÀ TÔI ĐÃ ĐẶT MỘT CHIẾC BÁNH CHO TIỆC SINH NHẬT TỐI NAY VUI LÒNG CHO TÔI BIẾT TÌNH TRẠNG ĐƠN HÀNG",
+   "syn_s": 0.207
+  },
+  {
+   "text": "được rồi chúng tôi sẽ gửi khoản thanh toán của anh tới fossil gas hôm nay anh còn cần tôi giúp gì nữa không",
+   "asr": "ĐƯỢC RỒI CHÚNG TÔI SẼ GỬI KHOẢN THANH TOÁN CỦA ANH TỚI ASIA S HÔM NAY ANH CÒN CẦN TÔI GIÚP GÌ NỮA KHÔNG",
+   "syn_s": 0.352
+  },
+  {
+   "text": "và tai tôi hơi vo ve cảm giác hơi lạ",
+   "asr": "VÀ TAI TÔI HƠI VO VE CẢM GIÁC HƠI LẠ",
+   "syn_s": 0.161
+  },
+  {
+   "text": "bảy trăm ba mươi bốn main street harper valley oregon sáu bảy hai chín bảy",
+   "asr": "BẢY TRĂM BA MƯƠI BỐN BÊN A A SÁU BẢY HAI CHÍN BẢY",
+   "syn_s": 0.171
+  },
+  {
+   "text": "vậy tôi nghĩ chúng ta có thể đặt lịch hẹn trực tiếp tại một trong các phòng khám đây không phải cấp cứu",
+   "asr": "VẬY TÔI NGHĨ CHÚNG TA CÓ THỂ ĐẶT LỊCH HẸN TRỰC TIẾP TẠI MỘT TRONG CÁC PHÒNG KHÁM ĐÂY KHÔNG PHẢI CẤP CỨU",
+   "syn_s": 0.152
+  },
+  {
+   "text": "bạn chỉ cần khoảng mười đô la cho đồ ăn và tiền xăng bạn tôi lái xe nên chúng tôi thường mỗi người góp vài đô tiền xăng",
+   "asr": "BẠN CHỈ CẦN KHOẢNG MƯỜI ĐÔ LA CHO ĐỒ ĂN VÀ TIỀN XĂNG BẠN TÔI LÁI XE NÊN CHÚNG TÔI THƯỜNG MỖI NGƯỜI GÓP VÀI ĐÔ TIỀN XĂNG",
+   "syn_s": 0.27
+  },
+  {
+   "text": "tôi rất tiếc khi nghe chuyện đó lúc ấy ông bao nhiêu tuổi",
+   "asr": "TÔI RẤT TIẾC KHI NGHE CHUYỆN ĐÓ LÚC ẤY ÔNG BAO NHIÊU TUỔI",
+   "syn_s": 0.13
+  },
+  {
+   "text": "vâng có điều gì cụ thể mà bạn hy vọng nhận được từ buổi tư vấn này không",
+   "asr": "VÂNG CÓ ĐIỀU GÌ CỤ THỂ MÀ BẠN HY VỌNG NHẬN ĐƯỢC TỪ BUỔI TƯ VẤN NÀY KHÔNG",
+   "syn_s": 0.29
+  },
+  {
+   "text": "được rồi đi tiếp nhanh nhé bác bác có bị dị ứng gì không",
+   "asr": "ĐƯỢC RỒI ĐI TIẾP NHANH NHÉ BÁC BÁC CÓ BỊ DỊ ỨNG GÌ KHÔNG",
+   "syn_s": 0.142
+  },
+  {
+   "text": "tôi có phải lo lắng về tuyết phủ kín xe tôi vào thứ ba trên đường vào nhà",
+   "asr": "TÔI CÓ PHẢI LO LẮNG VỀ TUYẾT PHỦ KÍN XE TÔI VÀO THỨ BA TRÊN ĐƯỜNG VÀO NHÀ",
+   "syn_s": 0.255
+  },
+  {
+   "text": "được rồi cơn đau đó có xuất hiện suốt không hay là lúc có lúc không",
+   "asr": "ĐƯỢC RỒI CƠN ĐAU ĐÓ CÓ XUẤT HIỆN SUỐT KHÔNG KHÔNG HAY LÀ LÚC CÓ LÚC KHÔNG",
+   "syn_s": 0.213
+  },
+  {
+   "text": "vậy chúng tôi sẽ gửi khoản thanh toán của bạn đến fossil gas còn điều gì tôi có thể giúp bạn không",
+   "asr": "VẬY CHÚNG TÔI SẼ GỬI KHOẢN THANH TOÁN CỦA BẠN ĐẾN AGS CÒN ĐIỀU GÌ TÔI CÓ THỂ GIÚP BẠN KHÔNG",
+   "syn_s": 0.208
+  },
+  {
+   "text": "tôi sẽ xem lại giờ làm việc thường ngày của tôi là khoảng từ mười hai giờ tới ba giờ",
+   "asr": "TÔI SẼ XEM LẠI GIỜ LÀM VIỆC THƯỜNG NGÀY CỦA TÔI LÀ KHOẢNG TỪ MƯỜI HAI GIỜ TỚI KHÔNG BA GIỜ",
+   "syn_s": 0.207
+  },
+  {
+   "text": "tôi làm chủ nhà hàng tôi có một quán sushi",
+   "asr": "TÔI LÀM CHỦ NHÀ HÀNG TÔI CÓ MỘT QUÁN A",
+   "syn_s": 0.116
+  },
+  {
+   "text": "không đó là tất cả những gì tôi cần giúp đỡ cảm ơn bạn rất nhiều vì sự giúp đỡ của bạn",
+   "asr": "KHÔNG ĐÓ LÀ TẤT CẢ NHỮNG GÌ TÔI CẦN GIÚP ĐỠ CẢM ƠN BẠN RẤT NHIỀU VÌ SỰ GIÚP ĐỠ CỦA BẠN",
+   "syn_s": 0.249
+  },
+  {
+   "text": "nhiệt độ sẽ giữ nguyên hay sẽ lạnh hơn",
+   "asr": "NHIỆT ĐỘ SẼ GIỮ NGUYÊN HAY SẼ LẠNH HƠN",
+   "syn_s": 0.153
+  },
+  {
+   "text": "thật tiếc một ngày đẹp trời thế anh nuôi mongey được bao lâu rồi",
+   "asr": "THẬT TIẾC MỘT NGÀY ĐẸP TRỜI THẾ ANH NUÔI A ĐƯỢC BAO LÂU RỒI",
+   "syn_s": 0.175
+  },
+  {
+   "text": "nếu có mười bước dễ dàng để làm giàu thì sẽ là gì",
+   "asr": "NẾU CÓ MƯỜI BƯỚC DỄ DÀNG ĐỂ LÀM GIÀU THÌ SẼ LÀ GÌ",
+   "syn_s": 0.134
+  },
+  {
+   "text": "một số người bị lo âu cần thuốc kiểm soát nhưng đó không phải điều chúng tôi đề xuất ngay",
+   "asr": "MỘT SỐ NGƯỜI BỊ LO ÂU CẦN THUỐC KIỂM SOÁT NHƯNG ĐÓ KHÔNG PHẢI ĐIỀU CHÚNG TÔI ĐỀ XUẤT NGAY",
+   "syn_s": 0.152
+  },
+  {
+   "text": "những sự bực bội lớn nhất mà mọi người tìm thấy liên quan đến sở thích cá nhân là ừm một thứ mà bạn đã đề cập trước đó ờ điều khiển từ xa thường bị thất lạc trong phòng",
+   "asr": "NHỮNG SỰ BỰC BỘI LỚN NHẤT MÀ MỌI NGƯỜI TÌM THẤY LIÊN QUAN ĐẾN SỞ THÍCH CÁ NHÂN LÀ ỨNG MỘT THỨ MÀ BẠN ĐÃ ĐỀ CẬP TRƯỚC ĐÓ Ở ĐIỀU KHIỂN TỪ XA THƯỜNG BỊ THẤT LẠC TRONG PHÒNG",
+   "syn_s": 0.357
+  },
+  {
+   "text": "không phải chỉ một lần đâu cứ mỗi lần tôi đi xe buýt là lại có chuyện không hay xảy ra với tôi hoặc với ai đó trên xe",
+   "asr": "KHÔNG PHẢI CHỈ MỘT LẦN ĐÂU CỨ MỖI LẦN TÔI ĐI XE BUÝT LÀ LẠI CÓ CHUYỆN KHÔNG HAY XẢY RA VỚI TÔI HOẶC VỚI AI ĐÓ TRÊN XE",
+   "syn_s": 0.233
+  },
+  {
+   "text": "tôi cần bạn thêm việc dắt chó đi dạo vào danh sách việc cần làm",
+   "asr": "TÔI CẦN BẠN THÊM VIỆC DẮT CHÓ ĐI DẠO VÀO DANH SÁCH VIỆC CẦN LÀM",
+   "syn_s": 0.237
+  },
+  {
+   "text": "chào anh tôi tên là patricia johnson tôi bị mất thẻ ghi nợ anh gửi cho tôi thẻ mới được không",
+   "asr": "CHÀO ANH TÔI TÊN LÀ A TÔI BỊ MẤT THẺ GHI NỢ ANH GỬI CHO TÔI THẺ MỚI ĐƯỢC KHÔNG",
+   "syn_s": 0.189
+  },
+  {
+   "text": "ừm công việc kiểu như ừm một chút căng thẳng vào lúc này tôi có rất nhiều việc đang diễn ra",
+   "asr": "ỪM CÔNG VIỆC KIỂU NHƯ ỪM MỘT CHÚT CĂNG THẲNG VÀO LÚC NÀY TÔI CÓ RẤT NHIỀU VIỆC ĐANG DIỄN RA",
+   "syn_s": 0.183
+  },
+  {
+   "text": "liên kết đặt lại mật khẩu đã được gửi đến điện thoại còn gì tôi có thể giúp không",
+   "asr": "LIÊN KẾT ĐẶT LẠI MẬT KHẨU ĐÃ ĐƯỢC GỬI ĐẾN ĐIỆN THOẠI CÒN GÌ TÔI CÓ THỂ GIÚP KHÔNG",
+   "syn_s": 0.167
+  },
+  {
+   "text": "dù không thể nói mọi thứ hoàn hảo ở đó tôi vẫn rất biết ơn những gì công ty đã cho đặc biệt nhiều cơ hội",
+   "asr": "DÙ KHÔNG THỂ NÓI MỌI THỨ HOÀN HẢO Ở ĐÓ TÔI VẪN RẤT BIẾT ƠN NHỮNG GÌ CÔNG TY ĐÃ CHO ĐẶC BIỆT NHIỀU CƠ HỘI",
+   "syn_s": 0.191
+  },
+  {
+   "text": "ai đó muốn ghép lại không thực ra tôi vẫn có thể ghép nếu bạn muốn bỏ phần của bạn vào cái này",
+   "asr": "AI ĐÓ MUỐN GHÉP LẠI KHÔNG THỰC RA TÔI VẪN CÓ THỂ GHÉP NẾU BẠN MUỐN BỎ PHẦN CỦA BẠN VÀO CÁI NÀY",
+   "syn_s": 0.32
+  },
+  {
+   "text": "tôi phải luộc một quả trứng trong bao lâu",
+   "asr": "TÔI PHẢI LUỘC MỘT QUẢ TRỨNG TRONG BAO LÂU",
+   "syn_s": 0.124
+  },
+  {
+   "text": "ba mươi hai tuổi được anh cho tôi dòng đầu địa chỉ và mã bưu điện được không",
+   "asr": "BA MƯƠI HAI TUỔI ĐƯỢC ANH CHO TÔI DÒNG ĐẦU ĐỊA CHỈ VÀ MÃ BƯU ĐIỆN ĐƯỢC KHÔNG",
+   "syn_s": 0.153
+  },
+  {
+   "text": "tìm cho tôi một xe tắc xi để đưa tôi đến sân bay vào thứ sáu lúc năm giờ ba mươi sáng",
+   "asr": "TÌM CHO TÔI MỘT XE TAXI ĐỂ ĐƯA TÔI ĐẾN SÂN BAY VÀO THỨ SÁU LÚC NĂM GIỜ BA MƯƠI SÁNG",
+   "syn_s": 0.179
+  },
+  {
+   "text": "vì vậy cảm ơn vì đã đến và ờ tôi sẽ gửi cho bạn biên bản cuộc họp và ờ xin vui lòng đưa tất cả thông tin của bạn vào thư mục chia sẻ để mọi người đều có thể chia sẻ thông tin",
+   "asr": "VÌ VẬY CẢM ƠN VÌ ĐÃ ĐẾN VÀ Ở TÔI SẼ GỬI CHO BẠN BIÊN BẢN CUỘC HỌP VÀ Ở XIN VUI LÒNG ĐƯA TẤT CẢ THÔNG TIN CỦA BẠN VÀO THƯ MỤC CHIA SẺ ĐỂ MỌI NGƯỜI ĐỀU CÓ THỂ CHIA SẺ THÔNG TIN",
+   "syn_s": 0.37
+  },
+  {
+   "text": "chúng tôi may mắn thật lấy được bàn đôi cuối cùng mà không cần đặt trước anh có thấy hàng dài phía sau không",
+   "asr": "CHÚNG TÔI MAY MẮN THẬT LẤY ĐƯỢC BÀN ĐÔI CUỐI CÙNG MÀ KHÔNG CẦN ĐẶT TRƯỚC ANH CÓ THẤY HÀNG DÀI PHÍA SAU KHÔNG",
+   "syn_s": 0.257
+  },
+  {
+   "text": "xin chào tên tôi là michael wilson ừm tôi muốn chuyển tiền giữa các tài khoản của tôi",
+   "asr": "XIN CHÀO TÊN TÔI LÀ A HANG TÔI MUỐN CHUYỂN TIỀN GIỮA CÁC TÀI KHOẢN CỦA TÔI",
+   "syn_s": 0.137
+  },
+  {
+   "text": "được rồi và với tình trạng tiêu chảy mỗi ngày bạn đi vệ sinh bao nhiêu lần",
+   "asr": "ĐƯỢC RỒI VÀ VỚI TÌNH TRẠNG TIÊU CHẢY MỖI NGÀY BẠN ĐI VỆ SINH BAO NHIÊU LẦN",
+   "syn_s": 0.19
+  },
+  {
+   "text": "đưa tôi chi tiết tiểu sử twitter của tôi bao gồm tổng số người theo dõi",
+   "asr": "ĐƯA TÔI CHI TIẾT TIỂU SỬ A CỦA TÔI BAO GỒM TỔNG SỐ NGƯỜI THEO DÕI",
+   "syn_s": 0.189
+  },
+  {
+   "text": "được rồi bây giờ tôi sẽ đọc to đoạn văn bản để chúng ta hiểu mình phải làm gì",
+   "asr": "ĐƯỢC RỒI BÂY GIỜ TÔI SẼ ĐỌC TO ĐOẠN VĂN BẢN ĐỂ CHÚNG TA HIỂU MÌNH PHẢI LÀM GÌ",
+   "syn_s": 0.188
+  },
+  {
+   "text": "bất ngờ đối với tôi là giống như ờ mọi người chú ý rất nhiều đến việc sửa đổi điện thoại di động giống như một sự thực sự muốn thấy một sự ra mắt mới hoặc một cái gì đó như thế",
+   "asr": "BẤT NGỜ ĐỐI VỚI TÔI LÀ GIỐNG NHƯ Ở MỌI NGƯỜI CHÚ Ý RẤT NHIỀU ĐẾN VIỆC SỬA ĐỔI ĐIỆN THOẠI DI ĐỘNG GIỐNG NHƯ MỘT SỰ THỰC SỰ MUỐN THẤY MỘT SỰ RA MẮT MỚI HOẶC MỘT CÁI GÌ ĐÓ NHƯ THẾ",
+   "syn_s": 0.33
+  },
+  {
+   "text": "chào anh tôi tên là elizabeth rodriguez cho tôi hỏi giờ làm việc của chi nhánh gần đây là mấy giờ",
+   "asr": "CHÀO ANH TÔI TÊN LÀ A CHO TÔI HỎI GIỜ LÀM VIỆC CỦA CHI NHÁNH GẦN ĐÂY LÀ MẤY GIỜ",
+   "syn_s": 0.186
+  },
+  {
+   "text": "không đời nào tôi biết rằng bạn đang thiếu tiền mặt một chút vào lúc này không cần bạn phải trả cho toàn bộ hóa đơn",
+   "asr": "KHÔNG ĐỜI NÀO TÔI BIẾT RẰNG BẠN ĐANG THIẾU TIỀN MẶT MỘT CHÚT VÀO LÚC NÀY KHÔNG CẦN BẠN PHẢI TRẢ CHO TOÀN BỘ HÓA ĐƠN",
+   "syn_s": 0.227
+  },
+  {
+   "text": "không dị ứng thuốc nhưng tôi dị ứng đậu phộng",
+   "asr": "KHÔNG DỊ ỨNG THUỐC NHƯNG TÔI DỊ ỨNG ĐẬU PHỘNG",
+   "syn_s": 0.17
+  },
+  {
+   "text": "chỉ để xác nhận bạn đặt báo thức kêu lúc tám giờ",
+   "asr": "CHỈ ĐỂ XÁC NHẬN BẠN ĐẶT BÁO THỨC KÊU LÚC TÁM GIỜ",
+   "syn_s": 0.16
+  },
+  {
+   "text": "bây giờ bạn có những triệu chứng đó ngay lúc này không hay chúng đã hết rồi",
+   "asr": "BÂY GIỜ BẠN CÓ NHỮNG TRIỆU CHỨNG ĐÓ NGAY LÚC NÀY KHÔNG HAY CHÚNG ĐÃ HẾT RỒI",
+   "syn_s": 0.232
+  },
+  {
+   "text": "được rồi được bạn có nhớ lúc đó mình đang làm gì không",
+   "asr": "ĐƯỢC RỒI ĐƯỢC BẠN CÓ NHỚ LÚC ĐÓ MÌNH ĐANG LÀM GÌ KHÔNG",
+   "syn_s": 0.145
+  },
+  {
+   "text": "tôi muốn thời gian chất lượng với bạn bè bên ngoài rất tuyệt nhưng chúng ta sẽ xem",
+   "asr": "TÔI MUỐN THỜI GIAN CHẤT LƯỢNG VỚI BẠN BÈ BÊN NGOÀI RẤT TUYỆT NHƯNG CHÚNG TA SẼ XEM",
+   "syn_s": 0.18
+  },
+  {
+   "text": "cho tôi biết nhiệt độ trong thành phố của chúng ta lúc mười hai giờ trưa là bao nhiêu",
+   "asr": "CHO TÔI BIẾT NHIỆT ĐỘ TRONG THÀNH PHỐ CỦA CHÚNG TA LÚC MƯỜI HAI GIỜ TRƯA LÀ BAO NHIÊU",
+   "syn_s": 0.144
+  },
+  {
+   "text": "đăng trạng thái mới trên facebook nói tôi đang tận hưởng thời tiết đẹp",
+   "asr": "ĐANG TRẠNG THÁI MỚI TRÊN FACEBOOK NÓI TÔI ĐANG TẬN HƯỞNG THỜI TIẾT ĐẸP",
+   "syn_s": 0.264
+  },
+  {
+   "text": "tôi có thể nhận được bản tóm tắt về những gì đang diễn ra với sprint ngay bây giờ không",
+   "asr": "TÔI CÓ THỂ NHẬN ĐƯỢC BẢN TÓM TẮT VỀ NHỮNG GÌ ĐANG DIỄN RA VỚI A NGAY BÂY GIỜ KHÔNG",
+   "syn_s": 0.297
+  },
+  {
+   "text": "à tôi vừa từ trường ngoại ngữ về ở đó chúng tôi phải nói tiếng pháp cả ngày không được dùng tiếng anh",
+   "asr": "À TÔI VỪA TỪ TRƯỜNG NGOẠI NGỮ VỀ Ở ĐÓ CHÚNG TÔI PHẢI NÓI TIẾNG PHÁP CẢ NGÀY KHÔNG ĐƯỢC DÙNG TIẾNG ANH",
+   "syn_s": 0.325
+  },
+  {
+   "text": "bạn đã đo nó gần đây chưa hoặc với iwatch hoặc thứ gì đó tương tự",
+   "asr": "BẠN ĐÃ ĐO NÓ GẦN ĐÂY CHƯA HOẶC VỚI A HOẶC THỨ GÌ ĐÓ TƯƠNG TỰ",
+   "syn_s": 0.242
+  },
+  {
+   "text": "nhưng chủ yếu tôi rất lo vì cái này rất lạ",
+   "asr": "NHƯNG CHỦ YẾU TÔI RẤT LO VÌ CÁI NÀY RẤT LẠ",
+   "syn_s": 0.158
+  },
+  {
+   "text": "tên tôi là sarah smith ngày sinh là hai mươi tháng tư năm một nghìn chín trăm tám mươi",
+   "asr": "TÊN TÔI LÀ A NGÀY SINH LÀ HAI MƯƠI THÁNG TƯ NĂM MỘT NGHÌN CHÍN TRĂM TÁM MƯƠI",
+   "syn_s": 0.241
+  },
+  {
+   "text": "nó ở phía sau mắt phải không đó có phải là nơi có cơn đau không",
+   "asr": "NÓ Ở PHÍA SAU MẮT PHẢI KHÔNG ĐÓ CÓ PHẢI LÀ NƠI CÓ CƠN ĐAU KHÔNG",
+   "syn_s": 0.17
+  },
+  {
+   "text": "khoảng bảy giờ và mất bao lâu để sưng lên",
+   "asr": "KHOẢNG BẢY GIỜ VÀ MẤT BAO LÂU ĐỂ SƯNG LÊN",
+   "syn_s": 0.133
+  },
+  {
+   "text": "một số người có thể bị cục máu đông và những cái đó có thể được tìm thấy ở chân hoặc ngực của bạn nên là trong phổi của bạn",
+   "asr": "MỘT SỐ NGƯỜI CÓ THỂ BỊ CỤC MÁU ĐÔNG VÀ NHỮNG CÁI ĐÓ CÓ THỂ ĐƯỢC TÌM THẤY Ở CHÂN HOẶC NGỰC CỦA BẠN NÊN LÀ TRONG PHỔI CỦA BẠN",
+   "syn_s": 0.29
+  },
+  {
+   "text": "ống hít màu xanh à vậy bạn không không dùng nó hằng ngày chỉ thỉnh thoảng dùng thôi đúng không",
+   "asr": "ÔNG HÍT MÀU XANH À VẬY BẠN KHÔNG KHÔNG DÙNG NÓ HÀNG NGÀY CHỈ THỈNH THOẢNG DÙNG THÔI ĐÚNG KHÔNG",
+   "syn_s": 0.182
+  },
+  {
+   "text": "được hoàn hảo cảm ơn rất nhiều vì đã giúp",
+   "asr": "ĐƯỢC HOÀN HẢO CẢM ƠN RẤT NHIỀU VÌ ĐÃ GIÚP",
+   "syn_s": 0.094
+  },
+  {
+   "text": "lịch hẹn của bạn đã được đặt vào thứ năm lúc tám giờ sáng còn điều gì tôi có thể giúp bạn không",
+   "asr": "LỊCH HẸN CỦA BẠN ĐÃ ĐƯỢC ĐẶT VÀO THỨ NĂM LÚC TÁM GIỜ SÁNG CÒN ĐIỀU GÌ TÔI CÓ THỂ GIÚP BẠN KHÔNG",
+   "syn_s": 0.262
+  },
+  {
+   "text": "dễ sử dụng đã luôn đã trở thành đã trở thành một mối quan tâm lớn khác ờ với bảng trắng chúng ta có thể thấy đó là một chiếc điều khiển dễ sử dụng",
+   "asr": "DỄ SỬ DỤNG ĐÃ LUÔN ĐÃ TRỞ THÀNH ĐÃ TRỞ THÀNH MỘT MỐI QUAN TÂM LỚN KHÁC Ở VỚI BẢNG TRẮNG CHÚNG TA CÓ THỂ THẤY ĐÓ LÀ MỘT CHIẾC ĐIỀU KHIỂN DỄ SỬ DỤNG",
+   "syn_s": 0.146
+  },
+  {
+   "text": "tôi sẽ cho lâu hơn thế khoảng một giờ",
+   "asr": "TÔI SẼ CHO LÂU HƠN THẾ KHOẢNG MỘT GIỜ",
+   "syn_s": 0.046
+  },
+  {
+   "text": "không anh ấy là vậy một số người sếp sẽ uốn nắn các quy tắc một chút đôi khi nhưng không phải sếp của tôi anh ấy luôn tuân thủ các quy tắc một cách chuẩn xác",
+   "asr": "KHÔNG ANH ẤY LÀ VẬY MỘT SỐ NGƯỜI SẾP SẼ UỐN NẮN CÁC QUY TẮC MỘT CHÚT ĐÔI KHI NHƯNG KHÔNG PHẢI SẾP CỦA TÔI ANH ẤY LUÔN TUÂN THỦ CÁC QUY TẮC MỘT CÁCH CHUẨN XÁC",
+   "syn_s": 0.138
+  },
+  {
+   "text": "và ừm tôi chỉ cảm thấy như tôi tôi cần gọi cho các bạn và cần lấy một số một số thông tin thêm về những gì có thể đang diễn ra",
+   "asr": "VÀ TÔI CHỈ CẢM THẤY NHƯ TÔI TÔI CẦN GỌI CHO CÁC BẠN VÀ CẦN LẤY MỘT SỐ MỘT SỐ THÔNG TIN THÊM VỀ NHỮNG GÌ CÓ THỂ ĐANG DIỄN RA",
+   "syn_s": 0.101
+  },
+  {
+   "text": "tôi nghĩ nhiều khả năng chị bị cái mà chúng tôi gọi là nhiễm trùng đường tiết niệu đơn thuần hay nhiễm trùng bàng quang và bệnh này điều trị được dễ dàng nên hôm nay tôi sẽ kê cho chị một đợt kháng sinh",
+   "asr": "TÔI NGHĨ NHIỀU KHẢ NĂNG CHỊ BỊ CÁI MÀ CHÚNG TÔI GỌI LÀ NHIỄM TRÙNG ĐƯỜNG TIẾT NIỆU ĐƠN THUẦN HAY NHIỄM TRÙNG BÀNG QUANG VÀ BỆNH NÀY ĐIỀU TRỊ ĐƯỢC DỄ DÀNG NÊN HÔM NAY TÔI SẼ KÊ CHO CHỊ MỘT ĐỢT KHÁNG SINH",
+   "syn_s": 0.18
+  },
+  {
+   "text": "được rồi cảm ơn vì đã gọi và chúc một ngày tuyệt vời",
+   "asr": "ĐƯỢC RỒI CẢM ƠN VÌ ĐÃ GỌI VÀ CHÚC KHÔNG MỘT NGÀY TUYỆT VỜI",
+   "syn_s": 0.044
+  },
+  {
+   "text": "cuộc hẹn của bạn đã được ấn định vào thứ tư lúc tám giờ ba mươi sáng",
+   "asr": "CUỘC HẸN CỦA BẠN ĐÃ ĐƯỢC ẤN ĐỊNH VÀO THỨ TƯ LÚC TÁM GIỜ BA MƯƠI SÁNG",
+   "syn_s": 0.051
+  },
+  {
+   "text": "chuyển hai nghìn ba trăm ba mươi từ giờ trung bình greenwich cộng bốn trăm ba mươi sang giờ trung bình greenwich hai trăm",
+   "asr": "CHUYỂN HAI NGHÌN BA TRĂM BA MƯƠI TỪ GIỜ TRUNG BÌNH A CỘNG BỐN TRĂM BA MƯƠI XĂNG GIỜ TRUNG BÌNH A HAI TRĂM",
+   "syn_s": 0.066
+  },
+  {
+   "text": "tôi sẽ mang dù để đi làm hôm nay hay không",
+   "asr": "TÔI SẼ MANG DÙ ĐỂ ĐI LÀM HÔM NAY HAY KHÔNG",
+   "syn_s": 0.044
+  },
+  {
+   "text": "anh có bị đau hay có mùi nặng hay phải đi vệ sinh nhiều hơn bình thường không",
+   "asr": "ANH CÓ BỊ ĐAU KHÔNG HAY CÓ MÙI NẶNG HAY PHẢI ĐI VỆ SINH NHIỀU HƠN BÌNH THƯỜNG KHÔNG",
+   "syn_s": 0.065
+  },
+  {
+   "text": "và nó có một cái kết hay tôi sẽ không tiết lộ trước cho anh đâu",
+   "asr": "VÀ NÓ CÓ MỘT CÁI KẾT HAI TÔI SẼ KHÔNG TIẾT LỘ TRƯỚC CHO ANH ĐÂU",
+   "syn_s": 0.046
+  },
+  {
+   "text": "để nếu người dùng không muốn dùng giọng nói thì có thể tắt đi và không bị điều khiển từ xa vô tình đổi kênh",
+   "asr": "ĐỂ NẾU NGƯỜI DÙNG KHÔNG MUỐN DÙNG GIỌNG NÓI THÌ CÓ THỂ TẮT ĐI VÀ KHÔNG BỊ ĐIỀU KHIỂN TỪ XA VÔ TÌNH ĐỔI KÊNH",
+   "syn_s": 0.077
+  },
+  {
+   "text": "có thể cho bạn cung cấp những lượt thích nhạc của tôi không",
+   "asr": "CÓ THỂ CHO BẠN CUNG CẤP NHỮNG LƯỢT THÍCH NHẠC CỦA TÔI KHÔNG",
+   "syn_s": 0.05
+  },
+  {
+   "text": "sếp tôi bảo tôi có thể về sớm hoặc hôm khác nghỉ trưa dài hơn tôi quyết định để dành hôm khác nghỉ trưa dài",
+   "asr": "SẾP TÔI BẢO TÔI CÓ THỂ VỀ SỚM HOẶC HÔM KHÁC NGHỈ CHƯA DÀI HƠN TÔI QUYẾT ĐỊNH ĐỂ DÀNH HÔM KHÁC NGHỈ CHƯA DÀI",
+   "syn_s": 0.08
+  },
+  {
+   "text": "tôi đã đặt cho anh một thẻ ghi nợ thay thế anh còn cần tôi giúp gì nữa không",
+   "asr": "TÔI ĐÃ ĐẶT CHO ANH MỘT THẺ GHI NỢ THAY THẾ ANH CÒN CẦN TÔI GIÚP GÌ NỮA KHÔNG",
+   "syn_s": 0.078
+  },
+  {
+   "text": "và để khám phá nhiều hơn hoặc để tìm ra những thứ chưa rõ ràng hoặc chưa được biết tới",
+   "asr": "VÀ ĐỂ KHÁM PHÁ NHIỀU HƠN HOẶC ĐỂ TÌM RA NHỮNG THỨ CHƯA RÕ RÀNG HOẶC CHƯA ĐƯỢC BIẾT TỚI",
+   "syn_s": 0.062
+  },
+  {
+   "text": "sao lại không à thôi tôi sẵn sàng ăn rồi không cần gọi bác sĩ nếu chúng ta chạy đến nhà hàng tôi có thể kịp vào nhà vệ sinh còn bạn thì gọi món",
+   "asr": "SAO LẠI KHÔNG À THÔI TÔI SẴN SÀNG ĂN RỒI KHÔNG CẦN GỌI BÁC SĨ NẾU CHÚNG TA CHẠY ĐẾN NHÀ HÀNG TÔI CÓ THỂ KỊP VÀO NHÀ VỆ SINH CÒN BẠN THÌ GỌI MÓN",
+   "syn_s": 0.133
+  },
+  {
+   "text": "được rồi tốt rồi được rồi bảo trọng nhé mọi điều tốt đẹp nhất",
+   "asr": "ĐƯỢC RỒI TỐT RỒI ĐƯỢC RỒI BẢO TRỌNG NHÉ MỌI ĐIỀU TỐT ĐẸP NHẤT",
+   "syn_s": 0.043
+  },
+  {
+   "text": "nhưng tôi chỉ mang theo chín trăm tiền mặt thôi anh để lại cho tôi chín trăm tệ được không",
+   "asr": "NHƯNG TÔI CHỈ MANG THEO CHÍN TRĂM TIỀN MẶT THÔI ANH ĐỂ LẠI CHO TÔI CHÍN TRĂM TỆ ĐƯỢC KHÔNG",
+   "syn_s": 0.057
+  },
+  {
+   "text": "có tôi ăn rồi nhưng cá hấp ở nhà hàng đó không ngon cá chưa chín tới mà lại mặn quá",
+   "asr": "CÓ TÔI ĂN RỒI NHƯNG CÁ HẤP Ở NHÀ HÀNG ĐÓ KHÔNG NGON CÁ CHƯA CHÍN TỚI MÀ LẠI MẶN QUÁ",
+   "syn_s": 0.068
+  },
+  {
+   "text": "như thế rất mỏi vì ngón cái của bạn hơi phải ngẩng lên nên họ nghĩ ra một kiểu như thế này cong lại như ở đây",
+   "asr": "NHƯ THẾ RẤT MỎI VÌ NGÓN CÁI CỦA BẠN HƠI PHẢI NGỪNG LÊN NÊN HỌ NGHĨ RA MỘT KIỂU NHƯ THẾ NÀY CONG LẠI NHƯ Ở ĐÂY",
+   "syn_s": 0.103
+  },
+  {
+   "text": "xin chào tên tôi là cô james johnson và tôi muốn biết số dư tài khoản của tôi",
+   "asr": "XIN CHÀO TÊN TÔI LÀ CÔ HA A VÀ TÔI MUỐN BIẾT SỐ DƯ TÀI KHOẢN CỦA TÔI",
+   "syn_s": 0.049
+  },
+  {
+   "text": "bây giờ bạn đã được đặt chỗ chuyến bay khởi hành lúc mười sáu giờ bốn mươi lăm và sự đến nơi của bạn ở sydney sẽ vào lúc chín giờ sáng giờ địa phương số hiệu chuyến bay là en vê kép a bốn bảy sáu",
+   "asr": "BÂY GIỜ BẠN ĐÃ ĐƯỢC ĐẶT CHỖ CHUYẾN BAY KHỞI HÀNH LÚC MƯỜI SÁU GIỜ BỐN MƯƠI NĂM VÀ SỰ ĐẾN NƠI CỦA BẠN Ở A SẼ VÀO LÚC CHÍN GIỜ SÁNG GIỜ ĐỊA PHƯƠNG SỐ HIỆU CHUYẾN BAY LÀ NV A BỐN BẢY SÁU",
+   "syn_s": 0.133
+  },
+  {
+   "text": "ừm hình ảnh này hình ảnh này sẽ cho bạn một chút cảm nhận về ừm vẻ ngoài và cảm giác mà ừm chiếc điều khiển nên có",
+   "asr": "ỪM HÌNH ẢNH NÀY HÌNH ẢNH NÀY SẼ CHO BẠN MỘT CHÚT CẢM NHẬN VỀ ỪNG VẺ NGOÀI VÀ CẢM GIÁC MÀ ỪM CHIẾC ĐIỀU KHIỂN NÊN CÓ",
+   "syn_s": 0.076
+  },
+  {
+   "text": "ai đã viết cho tôi hoặc nhắc đến tôi trên mạng xã hội",
+   "asr": "AI ĐÃ VIẾT CHO TÔI HOẶC NHẮC ĐẾN TÔI TRÊN MẠNG XÃ HỘI",
+   "syn_s": 0.038
+  },
+  {
+   "text": "bạn có nghĩ có thể có mối quan hệ giữa hai điều này không giữa kiểu như các sản phẩm bạn đang sử dụng và các triệu chứng của bạn",
+   "asr": "BẠN CÓ NGHĨ CÓ THỂ CÓ MỐI QUAN HỆ GIỮA HAI ĐIỀU NÀY KHÔNG GIỮA KIỂU NHƯ CÁC SẢN PHẨM BẠN ĐANG SỬ DỤNG VÀ CÁC TRIỆU CHỨNG CỦA BẠN",
+   "syn_s": 0.082
+  },
+  {
+   "text": "tuyệt anh đang ở chỗ bảo mật có thể nói thoải mái không",
+   "asr": "TUYỆN ANH ĐANG Ở CHỖ BẢO MẬT CÓ THỂ NÓI THOẢI MÁI KHÔNG",
+   "syn_s": 0.046
+  },
+  {
+   "text": "không nên quá to nhưng tôi nghĩ cũng không thể quá nhỏ vì phải có nhiều chức năng",
+   "asr": "KHÔNG NÊN QUÁ TO NHƯNG TÔI NGHĨ CŨNG KHÔNG THỂ QUÁ NHỎ VÌ PHẢI CÓ NHIỀU CHỨC NĂNG",
+   "syn_s": 0.061
+  },
+  {
+   "text": "bật chế độ im lặng cho đến khi tôi đi làm về",
+   "asr": "BẬT CHẾ ĐỘ IM LẶNG CHO ĐẾN KHI TÔI ĐI LÀM VIỆC",
+   "syn_s": 0.031
+  },
+  {
+   "text": "vậy tôi nghĩ chúng ta cần đồng bộ việc ra mắt thiết bị đã được người dùng thử nghiệm với một sự kiện đặc biệt nào đó",
+   "asr": "VẬY TÔI NGHĨ CHÚNG TA CẦN ĐỒNG BỘ VIỆC RA MẮT THIẾT BỊ ĐÃ ĐƯỢC NGƯỜI DÙNG THỬ NGHIỆM VỚI MỘT SỰ KIỆN ĐẶC BIỆT NÀO ĐÓ",
+   "syn_s": 0.074
+  },
+  {
+   "text": "xóa danh sách người bắt đầu từ chữ m trong danh sách liên hệ của tôi",
+   "asr": "XÓA DANH SÁCH NGƯỜI BẮT ĐẦU TỪ CHỮ EM TRONG DANH SÁCH LIÊN HỆ CỦA TÔI",
+   "syn_s": 0.051
+  },
+  {
+   "text": "ừ lại là bên trái quanh tai trái và dọc đây hàm dưới cảm giác hơi tê",
+   "asr": "Y LẠI LÀ BÊN TRÁI QUANH TAI TRÁI VÀ DỌC ĐÂY HÀM DƯỚI CẢM GIÁC HƠI TÊ",
+   "syn_s": 0.056
+  },
+  {
+   "text": "và họ phải đợi tới đúng mùa mới làm được",
+   "asr": "VÀ HỌ PHẢI ĐỢI TỚI ĐÚNG MÙA MỚI LÀM ĐƯỢC",
+   "syn_s": 0.036
+  },
+  {
+   "text": "vâng lúc anh gọi thì em đang tắm em thấy anh gọi và có gọi lại nhưng em nghĩ máy anh đã tắt",
+   "asr": "VÂNG LÚC ANH GỌI THÌ EM ĐANG TẮM EM THẤY ANH GỌI VÀ CÓ GỌI LẠI NHƯNG EM NGHĨ MÁY ANH ĐÃ TẮT",
+   "syn_s": 0.061
+  },
+  {
+   "text": "google tôi cần hút bụi phòng khách bạn có thể bật máy hút bụi lên không",
+   "asr": "GOOGLE TÔI CẦN HÚT BỤI PHÒNG KHÁCH BẠN CÓ THỂ BẬT MÁY HÚT BỤI LÊN KHÔNG",
+   "syn_s": 0.057
+  },
+  {
+   "text": "ở giữa bụng được rồi anh còn triệu chứng nào khác đi kèm không anh có buồn nôn hay nôn không",
+   "asr": "Ở GIỮA BỤNG ĐƯỢC RỒI ANH CÒN TRIỆU CHỨNG NÀO KHÁC ĐI KÈM KHÔNG ANH CÓ BUỒN NÔN HAY NÔN KHÔNG",
+   "syn_s": 0.063
+  },
+  {
+   "text": "chào buổi sáng tôi muốn mở tài khoản tiết kiệm anh cho tôi biết cách làm được không",
+   "asr": "TRAO BUỔI SÁNG TÔI MUỐN MỞ TÀI KHOẢN TIẾT KIỆM ANH CHO TÔI BIẾT CÁCH LÀM ĐƯỢC KHÔNG",
+   "syn_s": 0.059
+  },
+  {
+   "text": "tiền à được được cái nào bao nhiêu bada bing bada boom",
+   "asr": "TIÊN A ĐỰNG ĐƯỢC ĐƯỢC CÁI NÀO BAO NHIÊU B A DÊ ABIN B A D A BA",
+   "syn_s": 0.052
+  },
+  {
+   "text": "thay thẻ và anh muốn thay thẻ nào",
+   "asr": "THAY THỂ VÀ ANH MUỐN THAY THỂ NÀO",
+   "syn_s": 0.033
+  },
+  {
+   "text": "tốt rồi bạn có bất kỳ câu hỏi nào bạn muốn hỏi tôi không",
+   "asr": "TỐT RỒI BẠN CÓ BẤT KỲ CÂU HỎI NÀO BẠN MUỐN HỎI TÔI KHÔNG",
+   "syn_s": 0.042
+  }
+ ]
+}

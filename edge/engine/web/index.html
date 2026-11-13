@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>CabinTranslation</title>
+<style>
+  :root { --bg:#0f172a; --card:#1e293b; --vi:#2563eb; --xx:#059669; --txt:#e2e8f0; --mut:#94a3b8; --warn:#f59e0b; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font-family: system-ui, sans-serif; }
+  header { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; gap:12px; flex-wrap:wrap; }
+  h1 { font-size:1.25rem; margin:0; }
+  .pill { padding:4px 10px; border-radius:999px; background:var(--card); color:var(--mut); font-size:.85rem; }
+  .pill.off { color:#4ade80; } .pill.on { color:var(--warn); }
+  .langs { display:flex; gap:8px; }
+  .langs button { background:var(--card); color:var(--txt); border:2px solid transparent; border-radius:10px; padding:8px 14px; font-size:1rem; }
+  .langs button.sel { border-color:var(--xx); }
+  main { display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:0 16px; }
+  .side { background:var(--card); border-radius:16px; padding:16px; display:flex; flex-direction:column; align-items:center; gap:10px; }
+  .side h2 { margin:0; font-size:1.2rem; }
+  .talk { width:100%; min-height:150px; border:none; border-radius:16px; font-size:1.4rem; font-weight:600; color:white; touch-action:none; user-select:none; }
+  .talk.vi { background:var(--vi); } .talk.xx { background:var(--xx); }
+  .talk.rec { background:#dc2626 !important; animation:pulse 1s infinite; }
+  .talk:disabled { opacity:.5; }
+  @keyframes pulse { 50% { opacity:.75; } }
+  .hint { color:var(--mut); font-size:.85rem; text-align:center; }
+  #status { padding:10px 16px; color:var(--mut); font-size:.9rem; min-height:1.5em; }
+  #log { padding:0 16px 24px; display:flex; flex-direction:column; gap:10px; }
+  .turn { background:var(--card); border-radius:12px; padding:10px 14px; border-left:6px solid var(--vi); }
+  .turn.xx { border-left-color:var(--xx); }
+  .turn .src { color:var(--mut); } .turn .tr { font-size:1.25rem; margin-top:4px; }
+  .turn .t { color:var(--mut); font-size:.8rem; margin-top:4px; }
+  .turn button { background:none; border:1px solid var(--mut); color:var(--txt); border-radius:8px; padding:2px 8px; margin-left:8px; }
+  @media (max-width:640px) { main { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎧 CabinTranslation <span class="pill" id="net">…</span></h1>
+  <div class="langs" id="langs">
+    <button data-l="en" class="sel">🇬🇧 English</button>
+    <button data-l="ko">🇰🇷 한국어</button>
+    <button data-l="zh">🇨🇳 中文</button>
+  </div>
+</header>
+<main>
+  <section class="side">
+    <h2>🇻🇳 Tiếng Việt</h2>
+    <button class="talk vi" id="btn-vi">🎤 Giữ để nói</button>
+    <div class="hint">Giữ nút trong lúc nói rồi thả ra, hoặc chạm 1 lần để bắt đầu và chạm lại để dừng</div>
+  </section>
+  <section class="side">
+    <h2 id="xx-title">🇬🇧 English</h2>
+    <button class="talk xx" id="btn-xx">🎤 Hold to talk</button>
+    <div class="hint" id="xx-hint">Hold while speaking, release to translate</div>
+  </section>
+</main>
+<div style="padding:0 16px"><div style="height:6px;background:var(--card);border-radius:3px;overflow:hidden"><div id="meter" style="height:100%;width:0;background:#22c55e;transition:width .08s"></div></div></div>
+<div id="status">Đang kiểm tra máy chủ trên thiết bị…</div>
+<div id="log"></div>
+<script>
+const NAMES = { vi: "🇻🇳 Tiếng Việt", en: "🇬🇧 English", ko: "🇰🇷 한국어", zh: "🇨🇳 中文" };
+const HOLD = { en: ["🎤 Hold to talk", "Hold while speaking and release, or tap to start and tap again to stop"],
+               ko: ["🎤 누르고 말하기", "누른 채 말하고 놓거나, 한 번 눌러 시작하고 다시 눌러 끝내세요"],
+               zh: ["🎤 按住说话", "按住说话后松开，或点一下开始、再点一下结束"] };
+let backend = "", partner = "en", busy = false, ctx = null, stream = null, node = null, chunks = [], inRate = 48000;
+const $ = (id) => document.getElementById(id);
+const status = (s) => { $("status").textContent = s; };
+
+function updNet() { const on = navigator.onLine; $("net").textContent = on ? "🌐 ONLINE" : "✈️ OFFLINE";
+  $("net").className = "pill " + (on ? "on" : "off"); }
+addEventListener("online", updNet); addEventListener("offline", updNet); updNet();
+
+document.querySelectorAll("#langs button").forEach((b) => b.onclick = () => {
+  document.querySelectorAll("#langs button").forEach((x) => x.classList.remove("sel"));
+  b.classList.add("sel"); partner = b.dataset.l;
+  $("xx-title").textContent = NAMES[partner];
+  $("btn-xx").textContent = HOLD[partner][0]; $("xx-hint").textContent = HOLD[partner][1];
+});
+
+// ---- audio capture: one always-on 16 kHz pipeline (opened on first press) with a pre-roll ring,
+// so the first syllable is never lost to AudioContext start-up, and a short post-roll on release.
+const PRE_S = 0.5, POST_MS = 400;
+let preroll = [], prerollLen = 0, recording = false, recBtn = null, recDir = null, pressT = 0, toggleMode = false;
+// AudioWorklet runs on the audio thread, so a busy page can't drop samples (ScriptProcessor did).
+const WORKLET = `class Cap extends AudioWorkletProcessor {
+  constructor() { super(); this.buf = new Float32Array(1600); this.n = 0; }
+  process(inputs) {
+    const ch = inputs[0] && inputs[0][0];
+    if (ch) for (let i = 0; i < ch.length; i++) {
+      this.buf[this.n++] = ch[i];
+      if (this.n === this.buf.length) { this.port.postMessage(this.buf); this.buf = new Float32Array(1600); this.n = 0; }
+    }
+    return true;
+  }
+}
+registerProcessor("cap", Cap);`;
+function onChunk(x) {
+  let pk = 0; for (let i = 0; i < x.length; i += 8) pk = Math.max(pk, Math.abs(x[i]));
+  $("meter").style.width = Math.min(100, pk * 140) + "%";
+  if (recording) { chunks.push(x); return; }
+  preroll.push(x); prerollLen += x.length;
+  while (preroll.length > 1 && prerollLen - preroll[0].length > PRE_S * inRate) prerollLen -= preroll.shift().length;
+}
+async function ensureMic() {
+  if (ctx) { if (ctx.state === "suspended") await ctx.resume(); return; }
+  // raw capture like the native sherpa-onnx apps: no AEC/NS/AGC (they distort speech for ASR)
+  stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+  const AC = window.AudioContext || window.webkitAudioContext;
+  try { ctx = new AC({ sampleRate: 16000 }); } catch (e) { ctx = new AC(); }  // browser resamples with a proper filter
+  inRate = ctx.sampleRate;
+  if (ctx.state === "suspended") await ctx.resume();
+  const srcNode = ctx.createMediaStreamSource(stream);
+  try {
+    await ctx.audioWorklet.addModule(URL.createObjectURL(new Blob([WORKLET], { type: "application/javascript" })));
+    node = new AudioWorkletNode(ctx, "cap");
+    node.port.onmessage = (e) => onChunk(e.data);
+    // the graph must reach the destination or Chrome won't pull the worklet; a 0-gain node keeps it silent
+    const mute = ctx.createGain(); mute.gain.value = 0;
+    srcNode.connect(node); node.connect(mute); mute.connect(ctx.destination);
+  } catch (e) {              // old browsers: main-thread fallback
+    node = ctx.createScriptProcessor(4096, 1, 1);
+    node.onaudioprocess = (ev) => onChunk(new Float32Array(ev.inputBuffer.getChannelData(0)));
+    srcNode.connect(node); node.connect(ctx.destination);
+  }
+}
+
+async function startRec(btn, dir) {
+  if (busy || recording) return;
+  // mark recording synchronously so a quick tap's pointerup is seen even while the mic is still opening
+  recording = true; recBtn = btn; recDir = dir;
+  chunks = preroll.slice(); preroll = []; prerollLen = 0;     // keep the 0.5 s before the press
+  btn.classList.add("rec"); status("🔴 Đang ghi âm… thả tay (hoặc chạm lại) để dịch / Recording…");
+  try { await ensureMic(); }
+  catch (e) { recording = false; btn.classList.remove("rec"); status("Không mở được micro: " + e); }
+}
+
+function toWav16k(parts, rate) {
+  const n = parts.reduce((a, p) => a + p.length, 0), x = new Float32Array(n);
+  let o = 0; for (const p of parts) { x.set(p, o); o += p.length; }
+  let y = x;
+  if (rate !== 16000) {          // fallback only (browser refused a 16 kHz context): linear-interp resample
+    const m = Math.floor(n * 16000 / rate); y = new Float32Array(m);
+    for (let i = 0; i < m; i++) { const t = i * rate / 16000, a = Math.floor(t), f = t - a; y[i] = x[a] * (1 - f) + (x[Math.min(n - 1, a + 1)] || 0) * f; }
+  }
+  // gentle level normalization for quiet/far speakers (max gain 8x, peak -> ~ -4 dBFS)
+  let pk = 1e-4; for (let i = 0; i < y.length; i++) pk = Math.max(pk, Math.abs(y[i]));
+  const g = Math.min(8, 0.63 / pk);
+  const pcm = new Int16Array(y.length);
+  for (let i = 0; i < y.length; i++) { const v = Math.max(-1, Math.min(1, y[i] * g)); pcm[i] = v < 0 ? v * 32768 : v * 32767; }
+  const buf = new ArrayBuffer(44 + pcm.length * 2), dv = new DataView(buf);
+  const w = (off, str) => { for (let i = 0; i < str.length; i++) dv.setUint8(off + i, str.charCodeAt(i)); };
+  w(0, "RIFF"); dv.setUint32(4, 36 + pcm.length * 2, true); w(8, "WAVE"); w(12, "fmt ");
+  dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, 1, true); dv.setUint32(24, 16000, true);
+  dv.setUint32(28, 32000, true); dv.setUint16(32, 2, true); dv.setUint16(34, 16, true); w(36, "data");
+  dv.setUint32(40, pcm.length * 2, true); new Int16Array(buf, 44).set(pcm);
+  return { blob: new Blob([buf], { type: "audio/wav" }), secs: y.length / 16000, peak: pk };
+}
+
+function play(b64) { if (!b64) return; const a = new Audio("data:audio/wav;base64," + b64); a.play().catch(() => {}); return a; }
+
+async function stopRec(btn, src, tgt) {
+  if (!recording) return;
+  btn.classList.remove("rec");
+  status("⏺ …");
+  await new Promise((r) => setTimeout(r, POST_MS));   // post-roll: don't chop the last syllable
+  recording = false;
+  const { blob, secs, peak } = toWav16k(chunks, inRate);
+  chunks = [];
+  if (secs < 0.8) { status("⚠️ Đoạn ghi quá ngắn / Too short"); return; }
+  if (peak < 0.01) { status("⚠️ Micro không bắt được tiếng (quá nhỏ) / No speech picked up"); return; }
+  busy = true; document.querySelectorAll(".talk").forEach((b) => b.disabled = true);
+  status("⏳ Đang dịch trên thiết bị… / Translating on-device…");
+  const t0 = performance.now();
+  try {
+    const r = await fetch(`/api/translate?src=${src}&tgt=${tgt}`, { method: "POST", body: blob });
+    const j = await r.json(); const rt = performance.now() - t0;
+    addTurn(src, tgt, j.mt_in || j.asr || "…", j.hyp || "", j, rt);
+    play(j.audio_b64);
+    status(`⏱ ASR ${Math.round(j.asr_ms||0)} ms · ${j.punct_ms ? "punct " + Math.round(j.punct_ms) + " ms · " : ""}MT ${Math.round(j.mt_ms||0)} ms (Gemma 4 E2B${backend ? ", " + backend : ""}) · TTS ${Math.round(j.tts_ms||0)} ms · Tổng ${Math.round(j.total_ms||0)} ms · audio ${secs.toFixed(1)} s`);
+  } catch (e) { status("Lỗi: " + e); }
+  busy = false; document.querySelectorAll(".talk").forEach((b) => b.disabled = false);
+}
+
+function addTurn(src, tgt, said, tr, j, rt) {
+  const d = document.createElement("div"); d.className = "turn" + (src === "vi" ? "" : " xx");
+  d.innerHTML = `<div class="src">${NAMES[src]}: ${esc(said)}</div><div class="tr">➜ ${esc(tr)}</div>
+    <div class="t">${NAMES[tgt]} · ${Math.round(j.total_ms||rt)} ms <button>🔊</button></div>`;
+  d.querySelector("button").onclick = () => play(j.audio_b64);
+  $("log").prepend(d);
+}
+const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Hold to talk, or tap once to start and tap again to stop.
+function bindHold(btn, getDir) {
+  btn.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+    if (recording && recBtn === btn && toggleMode) { toggleMode = false; const [s, t] = getDir(); stopRec(btn, s, t); return; }
+    pressT = performance.now(); toggleMode = false; startRec(btn, getDir());
+  });
+  btn.addEventListener("pointerup", (e) => {
+    e.preventDefault();
+    if (!recording || recBtn !== btn) return;
+    if (performance.now() - pressT < 450) { toggleMode = true; status("🔴 Đang ghi âm… chạm lại để dừng / Tap again to stop"); return; }
+    const [s, t] = getDir(); stopRec(btn, s, t);
+  });
+}
+bindHold($("btn-vi"), () => ["vi", partner]);
+bindHold($("btn-xx"), () => [partner, "vi"]);
+
+fetch("/api/health").then((r) => r.json()).then((h) => {
+  backend = (h.mt_backend || "").toUpperCase();
+  status(`✅ Sẵn sàng · models loaded on device: ${(h.langs||[]).join(", ")} · LLM ${h.mt_backend || ""} · RAM ${Math.round((h.rss_kb||0)/1024)} MB`);
+}).catch(() => status("❌ Không kết nối được cabin_edge trên thiết bị"));
+</script>
+</body>
+</html>

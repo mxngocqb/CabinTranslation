@@ -1,0 +1,183 @@
+[2026-11-11T11:44:01.593] ENV {"host": "SOICT-HUST", "os": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.39", "python": "3.11.17", "cpu": "x86_64", "cpu_count": 16, "ram_gb": 50.5, "gpu": "NVIDIA GeForce RTX 4080 SUPER", "network_online_at_start": true}
+[2026-11-11T11:44:01.593] WARNING: network is ONLINE. For the official benchmark disconnect Wi-Fi/Ethernet first.
+[2026-11-11T11:44:11.198] models loaded in 9.54s; MT device=gpu
+[2026-11-11T11:44:11.412] MODEL_SIZES_MB {"asr:ko-zipformer": 359.1, "asr:vi-30m": 35.5, "mt:gemma-4-E2B-it-Q3_K_M.gguf": 2536.8, "tts:vifasttts-ngochuyen-small": 85.8, "tts:supertonic-3-int8": 145.3}
+[2026-11-11T11:44:13.350] ko-vi VK-0170 asr=0.02s mt=0.31s tts=0.019s total=0.349s | Có cuộc gọi đến.
+[2026-11-11T11:44:13.617] ko-vi VK-0242 asr=0.032s mt=0.06s tts=0.053s total=0.144s | Có hướng dẫn viên tiếng Việt không?
+[2026-11-11T11:44:13.950] ko-vi VK-0300 asr=0.031s mt=0.067s tts=0.034s total=0.131s | Khi nào có thời gian thì bạn làm gì?
+[2026-11-11T11:44:14.220] ko-vi VK-0307 asr=0.047s mt=0.04s tts=0.034s total=0.121s | Không có gì ạ?
+[2026-11-11T11:44:14.577] ko-vi VK-0332 asr=0.05s mt=0.075s tts=0.061s total=0.186s | Xin lỗi, tôi có thể biết nó ở đâu không?
+[2026-11-11T11:44:14.870] ko-vi VK-0403 asr=0.026s mt=0.047s tts=0.042s total=0.114s | Bạn đang ở đâu ạ?
+[2026-11-11T11:44:15.049] ko-vi VK-0415 asr=0.031s mt=0.068s tts=0.021s total=0.12s | Tôi thích màu sắc trầm.
+[2026-11-11T11:44:15.353] ko-vi VK-0419 asr=0.043s mt=0.062s tts=0.024s total=0.13s | Xin hãy chọn.
+[2026-11-11T11:44:15.741] ko-vi VK-0637 asr=0.039s mt=0.087s tts=0.027s total=0.154s | Tôi sẽ tính riêng từng người.
+[2026-11-11T11:44:16.037] ko-vi VK-0642 asr=0.038s mt=0.075s tts=0.027s total=0.14s | Cái này ngon không?
+[2026-11-11T11:44:16.418] ko-vi VK-0709 asr=0.04s mt=0.112s tts=0.027s total=0.179s | Nên về Việt Nam thì hơn.
+[2026-11-11T11:44:16.631] ko-vi VK-0753 asr=0.03s mt=0.099s tts=0.04s total=0.169s | Dịch vụ phòng là số mấy ạ?
+[2026-11-11T11:44:17.042] ko-vi VK-0755 asr=0.058s mt=0.1s tts=0.058s total=0.216s | Rất hài lòng. Bao nhiêu tiền ạ?
+[2026-11-11T11:44:17.286] ko-vi VK-0765 asr=0.045s mt=0.105s tts=0.041s total=0.191s | Dây an toàn thắt như thế nào ạ?
+[2026-11-11T11:44:17.584] ko-vi VK-0875 asr=0.071s mt=0.095s tts=0.075s total=0.241s | Chúng ta chưa gặp nhau sao?
+[2026-11-11T11:44:17.833] ko-vi VK-0918 asr=0.076s mt=0.095s tts=0.035s total=0.206s | Sở thích của bạn là gì?
+[2026-11-11T11:44:18.281] ko-vi VK-1113 asr=0.036s mt=0.113s tts=0.032s total=0.181s | Hôm nay tôi muốn check-out và sống.
+[2026-11-11T11:44:18.684] ko-vi VK-1115 asr=0.047s mt=0.101s tts=0.056s total=0.204s | Không có gì nghiêm trọng đâu. Là vì cần thiết thôi.
+[2026-11-11T11:44:18.865] ko-vi VK-1152 asr=0.047s mt=0.057s tts=0.034s total=0.139s | Rộng quá.
+[2026-11-11T11:44:19.091] ko-vi VK-1165 asr=0.047s mt=0.083s tts=0.048s total=0.178s | Có món sườn nướng ạ.
+[2026-11-11T11:44:19.278] ko-vi VK-1207 asr=0.051s mt=0.047s tts=0.053s total=0.152s | Không sao đâu.
+[2026-11-11T11:44:19.493] ko-vi VK-1262 asr=0.046s mt=0.068s tts=0.057s total=0.171s | Hôm qua bắt đầu rồi.
+[2026-11-11T11:44:19.733] ko-vi VK-1331 asr=0.088s mt=0.066s tts=0.056s total=0.21s | Bạn muốn ghế nào ạ?
+[2026-11-11T11:44:20.039] ko-vi VK-1348 asr=0.057s mt=0.052s tts=0.088s total=0.197s | Năm ngàn won.
+[2026-11-11T11:44:20.404] ko-vi VK-1453 asr=0.089s mt=0.158s tts=0.058s total=0.305s | Đắt quá không? Không được giảm giá à?
+[2026-11-11T11:44:20.646] ko-vi VK-1589 asr=0.05s mt=0.089s tts=0.049s total=0.187s | Bây giờ mấy giờ rồi?
+[2026-11-11T11:44:21.041] ko-vi VK-1679 asr=0.073s mt=0.135s tts=0.084s total=0.292s | Vâng, nếu cần giúp đỡ thì cứ gọi điện thoại nhé.
+[2026-11-11T11:44:21.256] ko-vi VK-1691 asr=0.039s mt=0.072s tts=0.034s total=0.145s | Mùa thu là mùa tốt nhất để đọc sách.
+[2026-11-11T11:44:21.519] ko-vi VK-1735 asr=0.038s mt=0.093s tts=0.061s total=0.193s | Tôi thích mùa thu và mùa xuân.
+[2026-11-11T11:44:21.807] ko-vi VK-1939 asr=0.079s mt=0.075s tts=0.081s total=0.235s | Năm tám mươi đô la.
+[2026-11-11T11:44:22.113] ko-vi VK-2035 asr=0.082s mt=0.081s tts=0.072s total=0.236s | Đến nơi thì báo cho tôi được không?
+[2026-11-11T11:44:22.307] ko-vi VK-2113 asr=0.051s mt=0.069s tts=0.034s total=0.154s | Mát mẻ.
+[2026-11-11T11:44:22.699] ko-vi VK-2270 asr=0.042s mt=0.097s tts=0.036s total=0.175s | Xin hãy chụp phần phía sau không bị cắt.
+[2026-11-11T11:44:23.150] ko-vi VK-2281 asr=0.054s mt=0.136s tts=0.037s total=0.227s | Có thể lật lại và ở đây rồi có thể quay lại.
+[2026-11-11T11:44:23.397] ko-vi VK-2317 asr=0.062s mt=0.087s tts=0.046s total=0.195s | Phòng 여전복 là tầng mấy ạ?
+[2026-11-11T11:44:23.631] ko-vi VK-2371 asr=0.074s mt=0.061s tts=0.056s total=0.19s | Một ngày bao nhiêu ạ?
+[2026-11-11T11:44:23.954] ko-vi VK-2385 asr=0.039s mt=0.076s tts=0.047s total=0.162s | Hôm nay tôi sẽ trả.
+[2026-11-11T11:44:24.375] ko-vi VK-2428 asr=0.048s mt=0.065s tts=0.036s total=0.149s | Hãy cho tôi biết vị trí chính xác.
+[2026-11-11T11:44:24.678] ko-vi VK-2509 asr=0.025s mt=0.041s tts=0.033s total=0.099s | Ngồi được không?
+[2026-11-11T11:44:24.837] ko-vi VK-2524 asr=0.034s mt=0.053s tts=0.028s total=0.115s | Hình như là hết giờ rồi.
+[2026-11-11T11:44:25.145] ko-vi VK-2542 asr=0.073s mt=0.086s tts=0.081s total=0.24s | Những người đó ăn cái gì vậy ạ?
+[2026-11-11T11:44:25.502] ko-vi VK-2775 asr=0.058s mt=0.087s tts=0.1s total=0.245s | Cảm ơn. Ở đây có chụp ảnh không ạ?
+[2026-11-11T11:44:25.901] ko-vi VK-2808 asr=0.065s mt=0.117s tts=0.073s total=0.254s | Tôi muốn đổi thành giường, có chỗ không ạ?
+[2026-11-11T11:44:26.146] ko-vi VK-2955 asr=0.026s mt=0.061s tts=0.04s total=0.126s | Tại sao vậy?
+[2026-11-11T11:44:26.405] ko-vi VK-3012 asr=0.059s mt=0.107s tts=0.045s total=0.21s | Hôm nay là thứ mấy ạ?
+[2026-11-11T11:44:26.639] ko-vi VK-3141 asr=0.065s mt=0.075s tts=0.049s total=0.189s | Tôi muốn đặt vé tàu.
+[2026-11-11T11:44:26.835] ko-vi VK-3169 asr=0.05s mt=0.065s tts=0.039s total=0.154s | Chúc ngủ ngon.
+[2026-11-11T11:44:29.615] ko-vi VK-3210 asr=0.052s mt=0.089s tts=0.052s total=0.194s | Có dịch vụ ủy thác không?
+[2026-11-11T11:44:30.012] ko-vi VK-3221 asr=0.049s mt=0.147s tts=0.033s total=0.23s | Bạn có thể chỉ đường cho tôi được không?
+[2026-11-11T11:44:30.397] ko-vi VK-3230 asr=0.041s mt=0.107s tts=0.046s total=0.193s | Cho tôi một cái hamburger và một lon cola nhỏ.
+[2026-11-11T11:44:30.746] ko-vi VK-3264 asr=0.031s mt=0.064s tts=0.058s total=0.153s | Thời gian biểu là bao nhiêu ạ?
+[2026-11-11T11:44:31.147] ko-vi VK-3292 asr=0.03s mt=0.041s tts=0.046s total=0.117s | R&D là
+[2026-11-11T11:44:31.351] ko-vi VK-3343 asr=0.049s mt=0.055s tts=0.024s total=0.128s | Tôi muốn đặt lịch hẹn.
+[2026-11-11T11:44:31.517] ko-vi VK-3366 asr=0.041s mt=0.052s tts=0.034s total=0.127s | Cứu tôi với.
+[2026-11-11T11:44:31.740] ko-vi VK-3408 asr=0.058s mt=0.078s tts=0.041s total=0.177s | Đi đến trung tâm bao nhiêu tiền ạ?
+[2026-11-11T11:44:31.926] ko-vi VK-3562 asr=0.049s mt=0.064s tts=0.038s total=0.151s | Có món ạ.
+[2026-11-11T11:44:32.349] ko-vi VK-3569 asr=0.029s mt=0.068s tts=0.019s total=0.116s | Đừng làm thế.
+[2026-11-11T11:44:32.706] ko-vi VK-3621 asr=0.064s mt=0.11s tts=0.037s total=0.211s | Xin đặt xe trước đèn tín hiệu nhé.
+[2026-11-11T11:44:33.034] ko-vi VK-3625 asr=0.025s mt=0.058s tts=0.072s total=0.155s | Mời vào.
+[2026-11-11T11:44:33.370] ko-vi VK-3675 asr=0.031s mt=0.072s tts=0.048s total=0.151s | Bạn dùng gì ạ?
+[2026-11-11T11:44:33.732] ko-vi VK-3681 asr=0.028s mt=0.105s tts=0.026s total=0.159s | Hôm nay sẽ làm gì ạ?
+[2026-11-11T11:44:33.996] ko-vi VK-3753 asr=0.038s mt=0.131s tts=0.04s total=0.21s | Đến rồi ạ. Đó là khách sạn Lotte.
+[2026-11-11T11:44:34.268] ko-vi VK-3778 asr=0.06s mt=0.098s tts=0.057s total=0.215s | Muộn bao nhiêu rồi ạ?
+[2026-11-11T11:44:34.662] ko-vi VK-3793 asr=0.082s mt=0.124s tts=0.096s total=0.302s | Anh sẽ làm ở đây hay là đóng gói ạ?
+[2026-11-11T11:44:34.975] ko-vi VK-3857 asr=0.045s mt=0.121s tts=0.042s total=0.208s | Đắt quá. Bạn có thể giảm giá không?
+[2026-11-11T11:44:35.300] ko-vi VK-3884 asr=0.097s mt=0.098s tts=0.065s total=0.26s | Xin chào, cảm ơn. Xin lỗi.
+[2026-11-11T11:44:35.531] ko-vi VK-4000 asr=0.039s mt=0.061s tts=0.081s total=0.181s | Có thể gọi điện được không?
+[2026-11-11T11:44:35.882] ko-vi VK-4089 asr=0.095s mt=0.087s tts=0.059s total=0.241s | Để giải tỏa căng thẳng thì làm gì vậy?
+[2026-11-11T11:44:36.255] ko-vi VK-4095 asr=0.031s mt=0.059s tts=0.07s total=0.16s | Say you are drunk.
+[2026-11-11T11:44:36.629] ko-vi VK-4284 asr=0.036s mt=0.091s tts=0.044s total=0.171s | Tôi có thể để thêm đồ vào đây không?
+[2026-11-11T11:44:36.973] ko-vi VK-4389 asr=0.037s mt=0.078s tts=0.05s total=0.165s | Đến Hồ Chí Minh mất bao nhiêu tiếng?
+[2026-11-11T11:44:37.219] ko-vi VK-4491 asr=0.032s mt=0.091s tts=0.053s total=0.176s | Còn giờ nào muộn hơn không ạ?
+[2026-11-11T11:44:37.561] ko-vi VK-4547 asr=0.042s mt=0.092s tts=0.076s total=0.21s | Nhờ bạn chuyển đồ đi.
+[2026-11-11T11:44:37.990] ko-vi VK-4594 asr=0.059s mt=0.172s tts=0.063s total=0.294s | Tôi hỏi thêm một câu nữa. Bến xe khách ngoại thành ở đâu ạ?
+[2026-11-11T11:44:38.444] ko-vi VK-4618 asr=0.061s mt=0.188s tts=0.051s total=0.3s | Khi bạn mang giấy tờ và ví tiền, hãy cẩn thận ở những nơi đông người.
+[2026-11-11T11:44:38.691] ko-vi VK-4689 asr=0.046s mt=0.076s tts=0.058s total=0.18s | Quầy vé ở đâu ạ?
+[2026-11-11T11:44:39.035] ko-vi VK-4690 asr=0.025s mt=0.057s tts=0.078s total=0.16s | Bạn có thường xuyên không?
+[2026-11-11T11:44:39.286] ko-vi VK-4827 asr=0.065s mt=0.084s tts=0.052s total=0.2s | Có phở Việt Nam không ạ?
+[2026-11-11T11:44:39.564] ko-vi VK-4860 asr=0.081s mt=0.079s tts=0.072s total=0.232s | Tôi chưa đặt lịch hẹn, có chỗ trống không?
+[2026-11-11T11:44:39.717] ko-vi VK-5013 asr=0.034s mt=0.046s tts=0.024s total=0.103s | Ai ạ?
+[2026-11-11T11:44:39.924] ko-vi VK-5250 asr=0.069s mt=0.046s tts=0.053s total=0.168s | Hãy lại gần hơn một chút.
+[2026-11-11T11:44:40.121] ko-vi VK-5333 asr=0.053s mt=0.054s tts=0.047s total=0.154s | Không phải đâu
+[2026-11-11T11:44:40.498] ko-vi VK-5369 asr=0.065s mt=0.088s tts=0.03s total=0.183s | Giá một người là bao nhiêu ạ?
+[2026-11-11T11:44:40.835] ko-vi VK-5371 asr=0.029s mt=0.074s tts=0.043s total=0.146s | Đi lối này được không ạ?
+[2026-11-11T11:44:41.190] ko-vi VK-5373 asr=0.03s mt=0.068s tts=0.021s total=0.119s | Cái này là gì?
+[2026-11-11T11:44:41.455] ko-vi VK-5428 asr=0.052s mt=0.102s tts=0.053s total=0.207s | Mọi người tập trung vào giữa.
+[2026-11-11T11:44:41.767] ko-vi VK-5456 asr=0.051s mt=0.096s tts=0.023s total=0.17s | Bắt đầu lúc mấy giờ ạ?
+[2026-11-11T11:44:41.902] ko-vi VK-5562 asr=0.018s mt=0.052s tts=0.035s total=0.105s | Không sao đâu.
+[2026-11-11T11:44:42.265] ko-vi VK-5592 asr=0.034s mt=0.068s tts=0.026s total=0.128s | Thường thì chơi golf.
+[2026-11-11T11:44:42.411] ko-vi VK-5615 asr=0.025s mt=0.068s tts=0.018s total=0.11s | Tôi muốn nghỉ ngơi.
+[2026-11-11T11:44:42.724] ko-vi VK-5664 asr=0.041s mt=0.128s tts=0.054s total=0.224s | Đừng lo lắng. Ở đây có chìa khóa master.
+[2026-11-11T11:44:43.008] ko-vi VK-5791 asr=0.063s mt=0.074s tts=0.095s total=0.231s | Xin lỗi, tôi làm mất cái này rồi.
+[2026-11-11T11:44:43.310] ko-vi VK-5840 asr=0.097s mt=0.115s tts=0.047s total=0.259s | Để đi đến đó thì đi như thế nào ạ?
+[2026-11-11T11:44:43.435] ko-vi VK-5871 asr=0.02s mt=0.049s tts=0.02s total=0.089s | Có bảng giá không ạ?
+[2026-11-11T11:44:43.812] ko-vi VK-5906 asr=0.079s mt=0.111s tts=0.08s total=0.271s | Cho tôi một phòng đơn. Một ngày bao nhiêu ạ?
+[2026-11-11T11:44:44.187] ko-vi VK-5925 asr=0.047s mt=0.114s tts=0.04s total=0.201s | Cửa lối vào ga tàu điện ngầm ở đâu ạ?
+[2026-11-11T11:44:44.445] ko-vi VK-6020 asr=0.021s mt=0.04s tts=0.038s total=0.099s | Có nóng không?
+[2026-11-11T11:44:44.863] ko-vi VK-6091 asr=0.08s mt=0.113s tts=0.091s total=0.284s | Nếu có chỗ nào đáng xem thì cho tôi biết.
+[2026-11-11T11:44:45.139] ko-vi VK-6135 asr=0.034s mt=0.088s tts=0.048s total=0.17s | Không sao đâu. Có thể sai.
+[2026-11-11T11:44:45.368] ko-vi VK-6217 asr=0.056s mt=0.072s tts=0.061s total=0.189s | Đã đỡ rồi.
+[2026-11-11T11:44:45.632] ko-vi VK-6249 asr=0.061s mt=0.074s tts=0.078s total=0.213s | Anh ấy nổi tiếng ạ?
+[2026-11-11T11:44:46.107] ko-vi VK-6275 asr=0.053s mt=0.161s tts=0.068s total=0.282s | Tôi hiểu rồi. Hóa đơn ở đây. Số tiền này là tiền gì ạ?
+[2026-11-11T11:44:46.395] ko-vi VK-6392 asr=0.026s mt=0.087s tts=0.076s total=0.189s | Xin hãy xuống ở khu vực Ohgu Geonjung.
+[2026-11-11T11:44:46.743] ko-vi VK-6417 asr=0.038s mt=0.063s tts=0.028s total=0.128s | Cho tôi cơm thôi.
+[2026-11-11T11:44:46.867] ko-vi VK-6481 asr=0.026s mt=0.047s tts=0.019s total=0.091s | Sửa lại đi.
+[2026-11-11T11:44:47.125] ko-vi VK-6503 asr=0.082s mt=0.096s tts=0.031s total=0.208s | Mở cái túi ra xem cái này là gì.
+[2026-11-11T11:44:47.377] ko-vi VK-6609 asr=0.033s mt=0.096s tts=0.024s total=0.153s | Anh đã đặt lịch hẹn chưa ạ?
+[2026-11-11T11:44:47.569] ko-vi VK-6753 asr=0.026s mt=0.066s tts=0.055s total=0.147s | Xin hãy xử lý phim.
+[2026-11-11T11:44:47.864] ko-vi VK-6787 asr=0.062s mt=0.104s tts=0.051s total=0.217s | Anh uống thử đi. Mỗi 8 tiếng uống 2 tiếng.
+[2026-11-11T11:44:48.051] ko-vi VK-6799 asr=0.042s mt=0.06s tts=0.038s total=0.141s | Tôi đã thấy Minsoo Songgu.
+[2026-11-11T11:44:48.307] ko-vi VK-6838 asr=0.038s mt=0.083s tts=0.068s total=0.189s | Đi thẳng vào. Bạn sẽ tìm thấy ở đó chứ?
+[2026-11-11T11:44:48.497] ko-vi VK-6861 asr=0.043s mt=0.066s tts=0.031s total=0.139s | Vâng, tôi sẽ chỉ cho bạn.
+[2026-11-11T11:44:48.673] ko-vi VK-6894 asr=0.038s mt=0.061s tts=0.034s total=0.134s | Tôi sẽ giảm giá bao nhiêu ạ?
+[2026-11-11T11:44:48.904] ko-vi VK-6985 asr=0.068s mt=0.076s tts=0.048s total=0.191s | Tôi không biết kích cỡ.
+[2026-11-11T11:44:49.177] ko-vi VK-7009 asr=0.058s mt=0.092s tts=0.076s total=0.227s | Thường thì bắt đầu vào tháng Sáu.
+[2026-11-11T11:44:49.544] ko-vi VK-7065 asr=0.068s mt=0.085s tts=0.049s total=0.202s | Xin lỗi. Anh ấy đang ở công ty.
+[2026-11-11T11:44:49.863] ko-vi VK-7281 asr=0.04s mt=0.073s tts=0.044s total=0.156s | Tôi đi đây.
+[2026-11-11T11:44:50.056] ko-vi VK-7335 asr=0.03s mt=0.062s tts=0.024s total=0.116s | Để bên kia đi.
+[2026-11-11T11:44:50.469] ko-vi VK-7340 asr=0.035s mt=0.078s tts=0.023s total=0.136s | Có vấn đề gì ạ?
+[2026-11-11T11:44:50.872] ko-vi VK-7347 asr=0.048s mt=0.106s tts=0.029s total=0.183s | Phòng có điều hòa không ạ?
+[2026-11-11T11:44:51.215] ko-vi VK-7390 asr=0.032s mt=0.089s tts=0.024s total=0.146s | Chi phí bao nhiêu ạ?
+[2026-11-11T11:44:51.681] ko-vi VK-7398 asr=0.049s mt=0.133s tts=0.037s total=0.219s | Tôi nên mua sản phẩm này ở đâu ạ?
+[2026-11-11T11:44:51.957] ko-vi VK-7403 asr=0.042s mt=0.051s tts=0.051s total=0.144s | Nhỏ quá.
+[2026-11-11T11:44:52.161] ko-vi VK-7490 asr=0.054s mt=0.058s tts=0.046s total=0.159s | Chào bạn.
+[2026-11-11T11:44:52.501] ko-vi VK-7505 asr=0.038s mt=0.064s tts=0.026s total=0.128s | Được rồi.
+[2026-11-11T11:44:52.738] ko-vi VK-7548 asr=0.024s mt=0.083s tts=0.057s total=0.164s | Áo này lạnh quá.
+[2026-11-11T11:44:53.125] ko-vi VK-7551 asr=0.033s mt=0.114s tts=0.035s total=0.182s | Thức ăn này không có vị gì nhỉ?
+[2026-11-11T11:44:53.478] ko-vi VK-7615 asr=0.038s mt=0.083s tts=0.035s total=0.156s | Làm nhanh lên đi.
+[2026-11-11T11:44:53.831] ko-vi VK-7702 asr=0.029s mt=0.097s tts=0.025s total=0.151s | Tôi có thể giúp gì cho bạn?
+[2026-11-11T11:44:54.242] ko-vi VK-7729 asr=0.057s mt=0.102s tts=0.031s total=0.189s | Đây là sản phẩm bán chạy nhất.
+[2026-11-11T11:44:54.567] ko-vi VK-7760 asr=0.025s mt=0.092s tts=0.026s total=0.143s | Bao nhiêu tiền ạ?
+[2026-11-11T11:44:54.730] ko-vi VK-7781 asr=0.041s mt=0.061s tts=0.018s total=0.12s | Ở nhà bố hả?
+[2026-11-11T11:44:54.874] ko-vi VK-7787 asr=0.043s mt=0.055s tts=0.016s total=0.114s | Ai hỏi vậy?
+[2026-11-11T11:44:55.045] ko-vi VK-7851 asr=0.026s mt=0.079s tts=0.026s total=0.132s | Đã đặt hàng chưa ạ?
+[2026-11-11T11:44:55.254] ko-vi VK-7927 asr=0.041s mt=0.091s tts=0.026s total=0.159s | Tôi có thể giúp gì cho bạn?
+[2026-11-11T11:44:55.411] ko-vi VK-8019 asr=0.034s mt=0.058s tts=0.028s total=0.12s | Là người Hàn à?
+[2026-11-11T11:44:55.704] ko-vi VK-8203 asr=0.046s mt=0.088s tts=0.078s total=0.212s | Uống một ly không?
+[2026-11-11T11:44:56.186] ko-vi VK-8259 asr=0.059s mt=0.152s tts=0.061s total=0.271s | Xin chào. Có áo mấy giờ ạ? Là 8135.
+[2026-11-11T11:44:56.479] ko-vi VK-8470 asr=0.036s mt=0.079s tts=0.069s total=0.185s | Hấp thụ không được, tôi nên uống thuốc gì ạ?
+[2026-11-11T11:44:56.693] ko-vi VK-8626 asr=0.057s mt=0.067s tts=0.038s total=0.162s | Thật tuyệt vời.
+[2026-11-11T11:44:56.932] ko-vi VK-8662 asr=0.047s mt=0.056s tts=0.076s total=0.179s | Thẻ tích điểm bao nhiêu ạ?
+[2026-11-11T11:44:57.237] ko-vi VK-8767 asr=0.043s mt=0.06s tts=0.028s total=0.132s | Khi tan ca thì thường làm gì ạ?
+[2026-11-11T11:44:57.600] ko-vi VK-8787 asr=0.028s mt=0.063s tts=0.036s total=0.127s | Vui lòng gửi hóa đơn đến phòng.
+[2026-11-11T11:44:57.921] ko-vi VK-8836 asr=0.064s mt=0.095s tts=0.07s total=0.229s | Bây giờ là mùa thấp điểm rồi. Hãy giảm bớt đi.
+[2026-11-11T11:44:58.109] ko-vi VK-8880 asr=0.037s mt=0.059s tts=0.041s total=0.136s | Tôi thích đi dạo trong rừng.
+[2026-11-11T11:44:58.343] ko-vi VK-8902 asr=0.055s mt=0.079s tts=0.048s total=0.182s | Có bao gồm bữa sáng không ạ?
+[2026-11-11T11:44:58.581] ko-vi VK-8921 asr=0.053s mt=0.09s tts=0.051s total=0.194s | Đến đó mất bao nhiêu tiếng ạ?
+[2026-11-11T11:44:58.935] ko-vi VK-8934 asr=0.063s mt=0.06s tts=0.041s total=0.164s | Nó vừa vặn với tôi.
+[2026-11-11T11:44:59.215] ko-vi VK-8940 asr=0.039s mt=0.082s tts=0.087s total=0.208s | Có điểm du lịch nào ở khu vực này không?
+[2026-11-11T11:44:59.576] ko-vi VK-9045 asr=0.041s mt=0.081s tts=0.053s total=0.176s | Ống hút đâu ạ?
+[2026-11-11T11:44:59.923] ko-vi VK-9056 asr=0.047s mt=0.077s tts=0.04s total=0.164s | Gọi bác sĩ đi.
+[2026-11-11T11:45:00.809] ko-vi VK-9110 asr=0.304s mt=0.119s tts=0.017s total=0.44s | Ông [tên người]
+[2026-11-11T11:45:01.006] ko-vi VK-9141 asr=0.028s mt=0.089s tts=0.033s total=0.15s | Vâng, tôi sẽ cho bạn biết.
+[2026-11-11T11:45:01.332] ko-vi VK-9191 asr=0.029s mt=0.049s tts=0.046s total=0.124s | Chúc may mắn.
+[2026-11-11T11:45:01.543] ko-vi VK-9206 asr=0.047s mt=0.076s tts=0.049s total=0.172s | Bị say tàu ạ.
+[2026-11-11T11:45:04.276] ko-vi VK-9279 asr=0.066s mt=0.088s tts=0.073s total=0.227s | Nước nóng ở đâu ạ?
+[2026-11-11T11:45:04.545] ko-vi VK-9335 asr=0.035s mt=0.068s tts=0.026s total=0.129s | Vé tàu ở đâu ạ?
+[2026-11-11T11:45:04.885] ko-vi VK-9371 asr=0.079s mt=0.119s tts=0.08s total=0.278s | Có thể mang bữa sáng đến phòng được không ạ?
+[2026-11-11T11:45:05.086] ko-vi VK-9419 asr=0.046s mt=0.062s tts=0.048s total=0.156s | Vui không?
+[2026-11-11T11:45:05.420] ko-vi VK-9598 asr=0.09s mt=0.123s tts=0.066s total=0.279s | Từ Seoul đến Thành phố Hồ Chí Minh mất khoảng năm tiếng.
+[2026-11-11T11:45:05.630] ko-vi VK-9619 asr=0.047s mt=0.073s tts=0.045s total=0.165s | Chi phí lưu trú là bao nhiêu ạ?
+[2026-11-11T11:45:05.854] ko-vi VK-9620 asr=0.06s mt=0.075s tts=0.033s total=0.168s | Xin lỗi đã để anh đợi.
+[2026-11-11T11:45:06.090] ko-vi VK-9635 asr=0.052s mt=0.07s tts=0.058s total=0.18s | Có thể mua vé du lịch không ạ?
+[2026-11-11T11:45:06.319] ko-vi VK-9660 asr=0.05s mt=0.07s tts=0.054s total=0.175s | Tiệm sửa xe đạp ở đâu ạ?
+[2026-11-11T11:45:06.509] ko-vi VK-9661 asr=0.059s mt=0.046s tts=0.038s total=0.143s | Bạn thích mùa nào?
+[2026-11-11T11:45:06.662] ko-vi VK-9675 asr=0.032s mt=0.049s tts=0.034s total=0.115s | Đó là gần.
+[2026-11-11T11:45:07.071] ko-vi VK-9688 asr=0.122s mt=0.1s tts=0.097s total=0.32s | Xin ghi lại thời gian bạn đến nơi bằng taxi mất bao lâu.
+[2026-11-11T11:45:07.431] ko-vi VK-9697 asr=0.04s mt=0.132s tts=0.064s total=0.236s | Tối nay tôi cần chỗ ở, có phòng trống không ạ?
+[2026-11-11T11:45:07.651] ko-vi VK-9706 asr=0.039s mt=0.086s tts=0.043s total=0.169s | Gần đây có nhà vệ sinh sạch hơn không ạ?
+[2026-11-11T11:45:08.005] ko-vi VK-9730 asr=0.058s mt=0.064s tts=0.034s total=0.157s | Xin lỗi. Không được.
+[2026-11-11T11:45:08.210] ko-vi VK-9738 asr=0.038s mt=0.064s tts=0.064s total=0.166s | Anh từ đâu đến?
+[2026-11-11T11:45:08.518] ko-vi VK-9807 asr=0.081s mt=0.107s tts=0.071s total=0.259s | Để đến đó thì tôi xuống ở đâu ạ?
+[2026-11-11T11:45:08.761] ko-vi VK-9831 asr=0.038s mt=0.121s tts=0.035s total=0.194s | Anh có thể nói một chút được không?
+[2026-11-11T11:45:09.049] ko-vi VK-9867 asr=0.042s mt=0.047s tts=0.022s total=0.112s | Tôi sẽ giúp bạn.
+[2026-11-11T11:45:09.202] ko-vi VK-9914 asr=0.037s mt=0.056s tts=0.026s total=0.119s | Tôi muốn hoàn tiền.
+[2026-11-11T11:45:09.478] ko-vi VK-9923 asr=0.055s mt=0.095s tts=0.082s total=0.231s | Rạp chiếu phim ở đâu ạ?
+[2026-11-11T11:45:09.763] ko-vi VK-9971 asr=0.032s mt=0.051s tts=0.04s total=0.122s | Ở đây ạ.
+[2026-11-11T11:45:21.584] SUMMARY ko-vi {"n": 177, "asr_cer": 7.86, "bleu": 23.24, "chrf++": 40.82, "asr_bleu_speech_out": 22.38, "asr_chrf_speech_out": 39.62, "asr_s_mean": 0.049, "asr_s_p50": 0.046, "asr_s_p95": 0.082, "mt_s_mean": 0.084, "mt_s_p50": 0.078, "mt_s_p95": 0.133, "tts_s_mean": 0.047, "tts_s_p50": 0.045, "tts_s_p95": 0.081, "total_s_mean": 0.181, "total_s_p50": 0.172, "total_s_p95": 0.282, "audio_s_mean": 2.96, "comet": 83.21}
+[2026-11-11T11:45:21.611] written /mnt/c/Users/ADMIN/ngocmx/CabinTranslation/results/bench_20261111_114401

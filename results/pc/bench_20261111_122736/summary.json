@@ -1,0 +1,71 @@
+{
+ "env": {
+  "host": "SOICT-HUST",
+  "os": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.11.17",
+  "cpu": "x86_64",
+  "cpu_count": 16,
+  "ram_gb": 50.5,
+  "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "network_online_at_start": true
+ },
+ "load_s": 10.1,
+ "model_sizes_mb": {
+  "asr:xasr-zh-en": 175.0,
+  "asr:vi-30m": 30.1,
+  "mt:gemma-4-E2B-it-Q3_K_M.gguf": 2536.8,
+  "tts:vifasttts-ngochuyen-small": 85.8,
+  "tts:supertonic-3-int8": 145.3
+ },
+ "total_model_mb": 2973.0,
+ "peak_ram_mb": 3735.5,
+ "peak_vram_mb": 1964,
+ "gpu_used_before_mb": 3831,
+ "pairs": {
+  "vi-en": {
+   "n": 100,
+   "asr_wer": 1.59,
+   "bleu": 50.96,
+   "chrf++": 65.25,
+   "asr_bleu_speech_out": 50.65,
+   "asr_chrf_speech_out": 65.06,
+   "asr_s_mean": 0.029,
+   "asr_s_p50": 0.025,
+   "asr_s_p95": 0.045,
+   "mt_s_mean": 0.14,
+   "mt_s_p50": 0.128,
+   "mt_s_p95": 0.234,
+   "tts_s_mean": 0.357,
+   "tts_s_p50": 0.335,
+   "tts_s_p95": 0.565,
+   "total_s_mean": 0.526,
+   "total_s_p50": 0.495,
+   "total_s_p95": 0.759,
+   "audio_s_mean": 3.34,
+   "comet": 87.59
+  },
+  "en-vi": {
+   "n": 100,
+   "asr_wer": 7.85,
+   "bleu": 43.72,
+   "chrf++": 60.56,
+   "asr_bleu_speech_out": 42.03,
+   "asr_chrf_speech_out": 58.51,
+   "asr_s_mean": 0.094,
+   "asr_s_p50": 0.086,
+   "asr_s_p95": 0.156,
+   "mt_s_mean": 0.136,
+   "mt_s_p50": 0.13,
+   "mt_s_p95": 0.218,
+   "tts_s_mean": 0.092,
+   "tts_s_p50": 0.091,
+   "tts_s_p95": 0.135,
+   "total_s_mean": 0.322,
+   "total_s_p50": 0.308,
+   "total_s_p95": 0.454,
+   "audio_s_mean": 5.96,
+   "comet": 84.38
+  }
+ },
+ "network_online_at_end": true
+}

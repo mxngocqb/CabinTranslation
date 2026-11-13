@@ -1,0 +1,6 @@
+{"id": "vi-en__VE-0037", "task": "e2e", "src": "vi", "tgt": "en", "wav": "/home/arduino/cabin/data/vi-en/VE-0037.wav"}
+{"id": "vi-en__VE-0046", "task": "e2e", "src": "vi", "tgt": "en", "wav": "/home/arduino/cabin/data/vi-en/VE-0046.wav"}
+{"id": "vi-en__VE-0247", "task": "e2e", "src": "vi", "tgt": "en", "wav": "/home/arduino/cabin/data/vi-en/VE-0247.wav"}
+{"id": "ko-vi__VK-0170", "task": "e2e", "src": "ko", "tgt": "vi", "wav": "/home/arduino/cabin/data/ko-vi/VK-0170.wav"}
+{"id": "ko-vi__VK-0242", "task": "e2e", "src": "ko", "tgt": "vi", "wav": "/home/arduino/cabin/data/ko-vi/VK-0242.wav"}
+{"id": "ko-vi__VK-0300", "task": "e2e", "src": "ko", "tgt": "vi", "wav": "/home/arduino/cabin/data/ko-vi/VK-0300.wav"}

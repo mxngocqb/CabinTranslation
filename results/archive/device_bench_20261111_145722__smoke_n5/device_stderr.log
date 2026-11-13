@@ -1,0 +1,2 @@
+loaded: {"gpu_kb_after_load":-1,"load_ms":{"asr_en":4117.795988,"asr_vi":1784.792448,"mt":7651.997445,"tts_en":784.998593,"tts_vi":656.273646},"mt_backend":"gpu","rss_after_load_kb":1705400,"rss_base_kb":47440}
+done: {"gpu_kb_after_load":-1,"load_ms":{"asr_en":4117.795988,"asr_vi":1784.792448,"mt":7651.997445,"tts_en":784.998593,"tts_vi":656.273646},"mt_backend":"gpu","peak_gpu_kb":-1,"peak_rss_kb":2482884,"rss_after_load_kb":1705400,"rss_base_kb":47440}

@@ -1,0 +1,1 @@
+{"target": "linux", "backend": "gpu", "config": "/root/cabin/config_gpu.json", "pairs": ["vi-en", "en-vi", "vi-ko", "ko-vi", "vi-zh", "zh-vi"], "wall_s": 1300.4}

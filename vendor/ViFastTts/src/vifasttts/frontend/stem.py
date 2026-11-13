@@ -1,0 +1,240 @@
+"""Chuẩn hoá STEM: công thức hoá học, LaTeX/toán, đơn vị vật lý → chữ đọc được."""
+
+from __future__ import annotations
+
+import re
+from collections.abc import Callable
+
+NumberReader = Callable[[int], str]
+
+# Lũy thừa dạng trần: a^2, x^3, 2^3, a^{n+1}. Chỉ nhận base 1 chữ cái/số,
+# exponent số đơn/chữ đơn/gói {...}; bỏ qua số thập phân và chữ dính sau.
+_BARE_POWER_RE = re.compile(r"(?<![\w.\\])([A-Za-z]|\d+)\s*\^\s*(\{[^{}]+\}|-?\d+|[A-Za-z])(?!\w|[.,]\d)")
+
+GREEK = {
+    "alpha":"an pha", "beta":"bê ta", "gamma":"gam ma", "delta":"đen ta",
+    "epsilon":"ép xi lon", "theta":"thê ta", "lambda":"lam đa", "mu":"miu",
+    "pi":"pi", "rho":"rô", "sigma":"xích ma", "phi":"phi", "omega":"ô mê ga",
+}
+
+MATH_COMMANDS = {
+    "times":"nhân", "cdot":"nhân", "div":"chia", "pm":"cộng hoặc trừ",
+    "neq":"khác", "ne":"khác", "le":"nhỏ hơn hoặc bằng", "leq":"nhỏ hơn hoặc bằng",
+    "ge":"lớn hơn hoặc bằng", "geq":"lớn hơn hoặc bằng", "approx":"xấp xỉ",
+    "infty":"vô cùng", "sum":"tổng", "prod":"tích", "int":"tích phân",
+    "partial":"đạo hàm riêng", "nabla":"na bla", "rightarrow":"suy ra",
+    "Rightarrow":"suy ra", "leftarrow":"suy ra ngược", "in":"thuộc",
+    "notin":"không thuộc", "subset":"là tập con của", "subseteq":"là tập con hoặc bằng của",
+    "cup":"hợp", "cap":"giao", "forall":"với mọi", "exists":"tồn tại",
+}
+
+VARIABLES = {
+    "x":"ích", "y":"i dài", "z":"dét", "a":"a", "b":"bê", "c":"xê",
+    "d":"dê", "đ":"đê", "e":"e", "f":"ép", "g":"giê", "h":"hát", "i":"i",
+    "j":"giây", "k":"ca", "l":"e lờ", "m":"em", "n":"en", "o":"o",
+    "p":"pê", "q":"quy", "r":"e rờ", "s":"ét", "t":"tê", "u":"u",
+    "v":"vê", "w":"vê kép",
+}
+
+ELEMENTS = {
+    "H":"hiđrô", "He":"heli", "Li":"liti", "Be":"beri", "B":"bo", "C":"cacbon",
+    "N":"nitơ", "O":"oxi", "F":"flo", "Ne":"neon", "Na":"natri", "Mg":"magiê",
+    "Al":"nhôm", "Si":"silic", "P":"phốt pho", "S":"lưu huỳnh", "Cl":"clo",
+    "K":"kali", "Ca":"canxi", "Fe":"sắt", "Cu":"đồng", "Zn":"kẽm", "Ag":"bạc",
+    "Au":"vàng", "Hg":"thủy ngân", "Pb":"chì", "Sn":"thiếc", "Mn":"mangan",
+    "Cr":"crom", "Co":"coban", "Ni":"niken", "Br":"brom", "I":"iốt", "Ba":"bari",
+}
+
+UNITS = {
+    "m":"mét", "km":"ki lô mét", "cm":"xen ti mét", "mm":"mi li mét",
+    "s":"giây", "ms":"mi li giây", "h":"giờ", "Hz":"héc", "kHz":"ki lô héc",
+    "MHz":"mê ga héc", "GHz":"gi ga héc", "kg":"ki lô gam", "g":"gam",
+    "N":"niu tơn", "Pa":"pát can", "kPa":"ki lô pát can", "J":"jun", "W":"oát",
+    "kW":"ki lô oát", "V":"vôn", "A":"ampe", "C":"cu lông", "Ω":"ôm",
+    "K":"ken vin", "°C":"độ xê", "mol":"mol", "L":"lít", "mL":"mi li lít",
+}
+
+
+def _read_int(text: str, read_number: NumberReader) -> str:
+    """Đọc số nguyên; nếu không phải số thì giữ nguyên chuỗi gốc."""
+    try: return read_number(int(text))
+    except ValueError: return text
+
+
+def _balanced_argument(text: str, command: str) -> tuple[str, str] | None:
+    """Tách tham số trong ngoặc của lệnh LaTeX `\\cmd{...}` (cân bằng ngoặc lồng)."""
+    prefix = "\\" + command + "{"
+    if not text.startswith(prefix): return None
+    depth = 1
+    for i in range(len(prefix), len(text)):
+        if text[i] == "{": depth += 1
+        elif text[i] == "}":
+            depth -= 1
+            if depth == 0: return text[len(prefix):i], text[i+1:]
+    return None
+
+
+def read_chemical_formula(formula: str, read_number: NumberReader, strict: bool = True) -> str:
+    """Đọc công thức hoá học thành chữ (H2O → "hát hai ô"; Fe3+ → "sắt ba dương").
+
+    Với `strict=True`, các mã trông giống công thức nhưng là tên sản phẩm
+    (RTX3080, MP3, N95, K2...) được giữ nguyên (xem `_is_plausible_formula`).
+    """
+    formula = formula.strip().replace("_{", "").replace("}", "")
+    parts=[]; pos=0; known: set[str] = set()
+    token_re=re.compile(r"([A-Z][a-z]?)(\d*)|([()])|(\d+)|([+\-])")
+    for m in token_re.finditer(formula):
+        if m.start()!=pos: return formula
+        pos=m.end()
+        if m.group(1):
+            element=m.group(1)
+            if element in ELEMENTS:
+                known.add(element)
+            parts.append(ELEMENTS.get(element, element))
+            if m.group(2): parts.append(_read_int(m.group(2),read_number))
+        elif m.group(3): parts.append("mở ngoặc" if m.group(3)=="(" else "đóng ngoặc")
+        elif m.group(4): parts.append(_read_int(m.group(4),read_number))
+        else: parts.append("dương" if m.group(5)=="+" else "âm")
+    if pos!=len(formula) or not parts:
+        return formula
+    only_element = next(iter(known)) if len(known) == 1 else None
+    if strict and not _is_plausible_formula(formula, len(known), only_element):
+        return formula
+    return " ".join(parts)
+
+
+# Phân tử đơn chất hai/ba nguyên tử phổ biến: O2, O3, H2, N2, F2, Cl2, Br2, I2.
+_DIATOMIC_ELEMENTS = {"H", "N", "O", "F", "Cl", "Br", "I"}
+_SINGLE_ELEMENT_RE = re.compile(r"([A-Z][a-z]?)([23]?)([+\-]?)")
+
+
+def _is_plausible_formula(formula: str, known: int, only_element: str | None) -> bool:
+    """Lọc mã sản phẩm/phiên bản trông giống công thức (RTX3080, MP3, N95, K2).
+
+    Chấp nhận khi có ≥2 nguyên tố đã biết, hoặc trường hợp một nguyên tố là
+    công thức thật: phân tử hai nguyên tử (O2, H2, Cl2) và ion có điện tích rõ
+    (Fe3+, O2-, Al3+). Còn lại giữ nguyên chuỗi gốc.
+    """
+    if known >= 2:
+        return True
+    if known != 1 or only_element is None:
+        return False
+    m = _SINGLE_ELEMENT_RE.fullmatch(formula)
+    if m is None:
+        return False
+    element, digit, charge = m.group(1), m.group(2), m.group(3)
+    if element != only_element:
+        return False
+    if charge:
+        return True
+    return digit in {"2", "3"} and element in _DIATOMIC_ELEMENTS
+
+
+def read_unit_expression(expr: str, read_number: NumberReader) -> str:
+    """Đọc biểu thức đơn vị SI (m/s² → "mét trên giây bình phương")."""
+    expr=expr.strip()
+    expr=re.sub(r"([A-Za-z°Ω]+)\^?([23])\b", lambda m: f"{UNITS.get(m.group(1),m.group(1))} {'bình phương' if m.group(2)=='2' else 'lập phương'}", expr)
+    pieces=re.split(r"([/·*])",expr); out=[]
+    for p in pieces:
+        p=p.strip()
+        if not p: continue
+        if p=="/": out.append("trên")
+        elif p in {"·","*"}: out.append("nhân")
+        else: out.append(UNITS.get(p,p))
+    return " ".join(out)
+
+
+def read_math_expression(expr: str, read_number: NumberReader) -> str:
+    """Đọc biểu thức LaTeX/toán thành chữ (đệ quy cho \\frac, \\sqrt, mũ/chỉ số)."""
+    expr=expr.strip().replace("\\\\", "\\")
+    expr=re.sub(r"\\+(?=[A-Za-z])", r"\\", expr)
+    # Các lệnh LaTeX có cấu trúc: xử lý đệ quy.
+    while "\\frac{" in expr:
+        m=re.search(r"\\frac\{([^{}]+)\}\{([^{}]+)\}",expr)
+        if not m: break
+        repl=f"phân số {read_math_expression(m.group(1),read_number)} trên {read_math_expression(m.group(2),read_number)}"
+        expr=expr[:m.start()]+repl+expr[m.end():]
+    expr=re.sub(r"\\sqrt\[([^]]+)\]\{([^{}]+)\}",lambda m:f"căn bậc {read_math_expression(m.group(1),read_number)} của {read_math_expression(m.group(2),read_number)}",expr)
+    expr=re.sub(r"\\sqrt\{([^{}]+)\}",lambda m:f"căn bậc hai của {read_math_expression(m.group(1),read_number)}",expr)
+    expr=re.sub(r"\\text\{([^{}]*)\}",r"\1",expr)
+    expr=re.sub(r"\\(?:mathrm|mathbf|mathit)\{([^{}]*)\}",r"\1",expr)
+    for k,v in sorted({**GREEK,**MATH_COMMANDS}.items(), key=lambda item: len(item[0]), reverse=True):
+        expr=expr.replace("\\" + k, v)
+    expr=expr.replace("\\,"," ").replace("\\;"," ").replace("\\!","")
+    # Mũ/chỉ số xử lý trước dấu câu chung.
+    expr=re.sub(r"\^\{([^{}]+)\}",lambda m:" mũ "+read_math_expression(m.group(1),read_number),expr)
+    expr=re.sub(r"\^([0-9A-Za-z])",lambda m:" mũ "+read_math_expression(m.group(1),read_number),expr)
+    expr=re.sub(r"_\{([^{}]+)\}",lambda m:" chỉ số "+read_math_expression(m.group(1),read_number),expr)
+    expr=re.sub(r"_([0-9A-Za-z])",lambda m:" chỉ số "+read_math_expression(m.group(1),read_number),expr)
+    replacements=[("<="," nhỏ hơn hoặc bằng "),(">="," lớn hơn hoặc bằng "),("!="," khác "),("=>"," suy ra "),("->"," suy ra "),("±"," cộng hoặc trừ "),("×"," nhân "),("÷"," chia "),("="," bằng "),("+"," cộng "),("-"," trừ "),("<"," nhỏ hơn "),(">"," lớn hơn "),("/"," trên "),("·"," nhân "),("*"," nhân "),("%"," phần trăm ")]
+    for a,b in replacements: expr=expr.replace(a,b)
+    expr=re.sub(r"\b\d+\b",lambda m:read_number(int(m.group())),expr)
+    expr=re.sub(r"\b([A-Za-z])\b",lambda m:VARIABLES.get(m.group().lower(),m.group()),expr)
+    expr=expr.replace("("," mở ngoặc ").replace(")"," đóng ngoặc ").replace("["," mở ngoặc vuông ").replace("]"," đóng ngoặc vuông ").replace("{"," mở ngoặc nhọn ").replace("}"," đóng ngoặc nhọn ")
+    return re.sub(r"\s+"," ",expr).strip()
+
+
+def normalize_stem(text: str, read_number: NumberReader) -> str:
+    """Chuẩn hoá LaTeX, công thức hoá học, phương trình và đơn vị SI thành chữ."""
+    # Nhận cả chuỗi JSON/Python có backslash nhân đôi.
+    text=text.replace("\\\\", "\\")
+    # Lệnh hoá học tường minh xử lý trước LaTeX chung.
+    text=re.sub(r"\\(?:ce|chem)\{([^{}]+)\}",lambda m:read_chemical_formula(m.group(1),read_number,strict=False),text)
+    # LaTeX dạng hiển thị và nội tuyến.
+    patterns=[r"\$\$([^$]+)\$\$",r"\$([^$]+)\$",r"\\\((.*?)\\\)",r"\\\[(.*?)\\\]"]
+    for pat in patterns: text=re.sub(pat,lambda m:read_math_expression(m.group(1),read_number),text,flags=re.DOTALL)
+    # Các cấu trúc LaTeX đứng riêng nhưng có ngoặc rõ ràng.
+    text=re.sub(r"\\frac\{[^{}]+\}\{[^{}]+\}", lambda m: read_math_expression(m.group(), read_number), text)
+    text=re.sub(r"\\sqrt(?:\[[^]]+\])?\{[^{}]+\}", lambda m: read_math_expression(m.group(), read_number), text)
+    # Công thức hoá học đứng riêng có chữ số hoặc nhiều ký hiệu nguyên tố.
+    # Cho phép hậu tố điện tích ([+\-]) nhưng không nuốt dấu gạch của khoảng giá trị.
+    chem_pat=re.compile(r"(?<!\w)(?=[A-Z][A-Za-z0-9()]*\d)([A-Z][A-Za-z0-9()]*)([+\-])?(?![\w+\-])")
+    text=chem_pat.sub(lambda m:read_chemical_formula(m.group(1)+(m.group(2) or ""),read_number),text)
+    # Số đi kèm đơn vị đã nhận diện.
+    # Lookahead phía sau tránh khớp tiền tố đơn vị nằm trong từ tiếng Việt,
+    # ví dụ "s" trong "sach" không được khớp "105 sach" thành "105 s" + "ach".
+    unit_keys="|".join(sorted((re.escape(x) for x in UNITS),key=len,reverse=True))
+    text=re.sub(rf"(?<!\w)(\d+(?:[,.]\d+)?)\s*({unit_keys})(?:\^?([23]))?(?:/({unit_keys})(?:\^?([23]))?)?(?![A-Za-zÀ-ỹĐđ])",lambda m:_read_measure(m,read_number),text)
+    # Đơn vị ghép khi số đứng trước đã được đọc (ví dụ sau biểu thức LaTeX).
+    text=re.sub(rf"(?<!\w)({unit_keys})(?:\^?([23]))?/({unit_keys})(?:\^?([23]))?(?![A-Za-zÀ-ỹĐđ])", lambda m: _read_composite_unit(m), text)
+    # Lũy thừa dạng trần chạy SAU đơn vị: "m/s^2"/"3 m^2" đã thành
+    # "mét trên giây bình phương"/"ba mét bình phương", không bị đổi lần nữa.
+    text=_BARE_POWER_RE.sub(lambda m: _read_bare_power(m, read_number), text)
+    return re.sub(r"\s+"," ",text).strip()
+
+
+def _read_measure(m: re.Match[str], read_number: NumberReader) -> str:
+    """Đọc cặp "<số> <đơn vị>" kèm số mũ và dạng tử/mẫu (m/s²)."""
+    number=m.group(1).replace(",",".")
+    if "." in number:
+        whole,frac=number.split(".",1); n=read_number(int(whole))+" phẩy "+" ".join(read_number(int(x)) for x in frac)
+    else: n=read_number(int(number))
+    unit=UNITS[m.group(2)]
+    if m.group(3): unit+= " bình phương" if m.group(3)=="2" else " lập phương"
+    if m.group(4):
+        denominator=UNITS[m.group(4)]
+        if m.group(5): denominator+= " bình phương" if m.group(5)=="2" else " lập phương"
+        unit+= " trên "+denominator
+    return n+" "+unit
+
+
+def _read_composite_unit(m: re.Match[str]) -> str:
+    """Đọc đơn vị ghép kiểu "kg/m³" khi phần số đã được đọc trước đó."""
+    numerator=UNITS[m.group(1)]
+    if m.group(2): numerator += " bình phương" if m.group(2)=="2" else " lập phương"
+    denominator=UNITS[m.group(3)]
+    if m.group(4): denominator += " bình phương" if m.group(4)=="2" else " lập phương"
+    return numerator + " trên " + denominator
+
+
+def _read_bare_power(m: re.Match[str], read_number: NumberReader) -> str:
+    """Đọc lũy thừa dạng trần: a^2 → "a bình phương", 2^3 → "hai mũ ba"."""
+    base, exp = m.group(1), m.group(2)
+    if exp.startswith("{") and exp.endswith("}"):
+        exp = exp[1:-1]
+    if base.isdigit():
+        return f"{read_number(int(base))} mũ {read_math_expression(exp, read_number)}"
+    base = VARIABLES.get(base.lower(), base)
+    if exp in {"2", "3"}:
+        return f"{base} {'bình phương' if exp == '2' else 'lập phương'}"
+    return f"{base} mũ {read_math_expression(exp, read_number)}"

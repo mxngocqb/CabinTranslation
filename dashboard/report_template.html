@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CabinTranslation Results</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10); --good:#006300;
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10); --good:#0ca30c;
+      --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10); --good:#0ca30c;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--page); color:var(--ink); font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  header { padding:20px 24px 8px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; align-items:baseline; }
+  header h1 { margin:0; font-size:1.35rem; }
+  header .meta { color:var(--ink2); font-size:.85rem; }
+  nav { display:flex; gap:4px; padding:0 24px; flex-wrap:wrap; border-bottom:1px solid var(--grid); }
+  nav button { background:none; border:none; color:var(--ink2); padding:10px 12px; font:inherit; cursor:pointer; border-bottom:2px solid transparent; }
+  nav button.on { color:var(--ink); border-bottom-color:var(--s1); font-weight:600; }
+  main { padding:16px 24px 48px; max-width:1240px; }
+  section { display:none; } section.on { display:block; }
+  .card { background:var(--surface); border:1px solid var(--ring); border-radius:12px; padding:16px; margin:0 0 16px; }
+  .card h2 { font-size:1.05rem; margin:0 0 4px; } .card p.sub { margin:0 0 12px; color:var(--ink2); font-size:.88rem; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin-bottom:16px; }
+  .tile { background:var(--surface); border:1px solid var(--ring); border-radius:12px; padding:14px; }
+  .tile .k { color:var(--ink2); font-size:.82rem; } .tile .v { font-size:1.6rem; font-weight:600; margin-top:2px; }
+  .tile .d { color:var(--muted); font-size:.8rem; }
+  table { border-collapse:collapse; width:100%; font-size:.86rem; }
+  th, td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--grid); font-variant-numeric:tabular-nums; }
+  th:first-child, td:first-child, th.l, td.l { text-align:left; }
+  th { color:var(--ink2); font-weight:600; }
+  tr.sel td { font-weight:600; }
+  .tag { display:inline-block; padding:1px 8px; border-radius:999px; font-size:.75rem; border:1px solid var(--ring); color:var(--ink2); }
+  .tag.official { color:var(--good); border-color:var(--good); }
+  .scroll { overflow-x:auto; }
+  .legend { display:flex; gap:14px; flex-wrap:wrap; font-size:.82rem; color:var(--ink2); margin:4px 0 8px; }
+  .legend i { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:6px; vertical-align:-1px; }
+  svg text { fill:var(--ink2); font-size:12px; }
+  svg .lbl { fill:var(--ink); }
+  .tip { position:fixed; pointer-events:none; background:var(--surface); color:var(--ink); border:1px solid var(--ring); border-radius:8px;
+         padding:6px 10px; font-size:.82rem; box-shadow:0 4px 16px rgba(0,0,0,.15); display:none; max-width:320px; z-index:9; }
+  .controls { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+  .controls select, .controls input { font:inherit; padding:6px 8px; border-radius:8px; border:1px solid var(--axis); background:var(--surface); color:var(--ink); }
+  .utt td { vertical-align:top; } .utt .src { color:var(--ink2); } .utt .hyp { font-weight:500; }
+  .utt button { font:inherit; font-size:.8rem; border:1px solid var(--axis); background:none; color:var(--ink); border-radius:6px; padding:2px 8px; cursor:pointer; }
+  details summary { cursor:pointer; color:var(--ink2); font-size:.85rem; margin-top:8px; }
+  .note { color:var(--ink2); font-size:.85rem; }
+  .warn { color:var(--s2); font-weight:600; }
+  @media (max-width:640px) { header, nav, main { padding-left:16px; padding-right:16px; } }
+  table.utt tr.ufirst td { border-top:2px solid var(--axis); }
+</style>
+</head>
+<body>
+<header>
+  <h1>CabinTranslation — Results</h1>
+  <div class="meta" id="meta"></div>
+</header>
+<nav id="nav"></nav>
+<main>
+  <section id="overview"></section>
+  <section id="edge"></section>
+  <section id="vq"></section>
+  <section id="iq"></section>
+  <section id="pc"></section>
+  <section id="studies"></section>
+  <section id="utts"></section>
+  <section id="runs"></section>
+</main>
+<div class="tip" id="tip"></div>
+<script>
+const D = /*__DATA__*/null;
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+const fmt = (v, d = 0) => v == null ? "–" : Number(v).toFixed(d);
+const SEC = [["overview","Tổng quan"],["edge","Thiết bị QCS8550"],["vq","VentunoQ (QCS8275)"],["iq","IQ-9075 (QCS9075)"],["pc","PC (RTX 4080)"],["studies","So sánh model"],["utts","Từng câu & nghe thử"],["runs","Lịch sử chạy"]];
+
+// ---------- nav
+$("#nav").innerHTML = SEC.map(([id, t]) => `<button data-s="${id}">${t}</button>`).join("");
+function show(id) {
+  document.querySelectorAll("nav button").forEach((b) => b.classList.toggle("on", b.dataset.s === id));
+  document.querySelectorAll("section").forEach((s) => s.classList.toggle("on", s.id === id));
+  try { localStorage.setItem("cabin_tab", id); } catch (e) {}
+}
+document.querySelectorAll("nav button").forEach((b) => b.onclick = () => show(b.dataset.s));
+$("#meta").textContent = `Generated ${D.generated} · official edge run ${D.edge_run} · PC run ${D.pc_run}`;
+
+// ---------- tooltip
+const tip = $("#tip");
+document.addEventListener("mousemove", (e) => {
+  const t = e.target.closest("[data-tip]");
+  if (!t) { tip.style.display = "none"; return; }
+  tip.innerHTML = t.dataset.tip; tip.style.display = "block";
+  const x = Math.min(e.clientX + 14, innerWidth - tip.offsetWidth - 8);
+  tip.style.left = x + "px"; tip.style.top = (e.clientY + 14) + "px";
+});
+
+const table = (cols, rows, sel) => `<div class="scroll"><table><thead><tr>${cols.map((c) => `<th class="${c.l ? "l" : ""}">${c.h}</th>`).join("")}</tr></thead>
+  <tbody>${rows.map((r) => `<tr class="${sel && sel(r) ? "sel" : ""}">${cols.map((c) => `<td class="${c.l ? "l" : ""}">${c.f ? c.f(r) : esc(r[c.k])}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+
+// ---------- charts (inline SVG)
+function dotPlot({ rows, series, min, max, w = 640 }) {
+  // Cleveland dot plot: one row per pair, one dot per series (non-zero axis is fine for dots)
+  const rowH = 30, left = 70, right = 20, top = 10, h = top + rows.length * rowH + 28;
+  const x = (v) => left + (v - min) / (max - min) * (w - left - right);
+  let g = "";
+  for (let t = min; t <= max; t += 2.5) g += `<line x1="${x(t)}" x2="${x(t)}" y1="${top}" y2="${h - 24}" stroke="var(--grid)"/>
+    <text x="${x(t)}" y="${h - 8}" text-anchor="middle">${t}</text>`;
+  rows.forEach((r, i) => {
+    const y = top + i * rowH + rowH / 2, vals = series.map((s) => r[s.k]);
+    g += `<text x="${left - 10}" y="${y + 4}" text-anchor="end" class="lbl">${r.label}</text>`;
+    g += `<line x1="${x(Math.min(...vals))}" x2="${x(Math.max(...vals))}" y1="${y}" y2="${y}" stroke="var(--axis)" stroke-width="2"/>`;
+    series.forEach((s) => {
+      const v = r[s.k];
+      g += `<circle cx="${x(v)}" cy="${y}" r="6" fill="var(${s.c})" stroke="var(--surface)" stroke-width="2"/>
+            <circle cx="${x(v)}" cy="${y}" r="12" fill="transparent" data-tip="<b>${r.label}</b><br>${s.n}: COMET ${fmt(v, 2)}"/>`;
+    });
+  });
+  return `<div class="legend">${series.map((s) => `<span><i style="background:var(${s.c})"></i>${s.n}</span>`).join("")}</div>
+    <svg viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="COMET by pair">${g}</svg>`;
+}
+
+function stackedBars({ rows, parts, w = 640, unit = "ms", extra }) {
+  const rowH = 30, left = 70, right = 90, top = 6, h = top + rows.length * rowH + 26;
+  const tot = (r) => parts.reduce((a, p) => a + (r[p.k] || 0), 0);
+  const max = Math.ceil(Math.max(...rows.map(tot)) / 500) * 500;
+  const x = (v) => left + v / max * (w - left - right);
+  let g = "";
+  for (let t = 0; t <= max; t += 500) g += `<line x1="${x(t)}" x2="${x(t)}" y1="${top}" y2="${h - 22}" stroke="var(--grid)"/>
+    <text x="${x(t)}" y="${h - 6}" text-anchor="middle">${t}</text>`;
+  rows.forEach((r, i) => {
+    const y = top + i * rowH + 6, bh = rowH - 12;
+    let acc = 0;
+    g += `<text x="${left - 10}" y="${y + bh / 2 + 4}" text-anchor="end" class="lbl">${r.label}</text>`;
+    const vis = parts.filter((p) => (r[p.k] || 0) > 0);
+    vis.forEach((p, j) => {
+      const v = r[p.k], x0 = x(acc) + (j ? 1 : 0), x1 = x(acc + v) - (j < vis.length - 1 ? 1 : 0);  // 2px surface gap
+      const last = j === vis.length - 1;
+      g += last ? `<path d="M${x0},${y} H${x1 - 4} Q${x1},${y} ${x1},${y + 4} V${y + bh - 4} Q${x1},${y + bh} ${x1 - 4},${y + bh} H${x0} Z" fill="var(${p.c})"
+                     data-tip="<b>${r.label}</b> · ${p.n}: ${fmt(v)} ${unit}"/>`
+                : `<rect x="${x0}" y="${y}" width="${Math.max(0, x1 - x0)}" height="${bh}" fill="var(${p.c})" data-tip="<b>${r.label}</b> · ${p.n}: ${fmt(v)} ${unit}"/>`;
+      acc += v;
+    });
+    g += `<text x="${x(acc) + 8}" y="${y + bh / 2 + 4}" class="lbl">${extra ? extra(r) : fmt(acc) + " " + unit}</text>`;
+  });
+  return `<div class="legend">${parts.map((p) => `<span><i style="background:var(${p.c})"></i>${p.n}</span>`).join("")}</div>
+    <svg viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="Latency breakdown">${g}</svg>`;
+}
+
+function hbars({ rows, k, label, max, ref, refLabel, w = 720, fmtv }) {
+  const rowH = 26, left = 230, right = 170, top = 24, h = top + rows.length * rowH + 26;
+  max = max || Math.max(...rows.map((r) => r[k])) * 1.05;
+  const x = (v) => left + Math.min(v, max) / max * (w - left - right);
+  const step = max > 2000 ? 1000 : max > 600 ? 250 : 100;
+  let g = "";
+  for (let t = 0; t <= max; t += step) g += `<line x1="${x(t)}" x2="${x(t)}" y1="${top}" y2="${h - 22}" stroke="var(--grid)"/>
+    <text x="${x(t)}" y="${h - 6}" text-anchor="middle">${t}</text>`;
+  rows.forEach((r, i) => {
+    const y = top + i * rowH + 5, bh = rowH - 10, x1 = x(r[k]);
+    g += `<text x="${left - 10}" y="${y + bh / 2 + 4}" text-anchor="end" class="lbl">${esc(label(r))}</text>`;
+    g += `<path d="M${left},${y} H${x1 - 4} Q${x1},${y} ${x1},${y + 4} V${y + bh - 4} Q${x1},${y + bh} ${x1 - 4},${y + bh} H${left} Z"
+            fill="var(--s1)" data-tip="${esc(label(r))}: ${fmtv(r)}"/>`;
+    g += `<text x="${x1 + 6}" y="${y + bh / 2 + 4}" paint-order="stroke" stroke="var(--surface)" stroke-width="4">${fmtv(r)}</text>`;
+  });
+  // quota line drawn first so bar value labels sit on top of it
+  const refG = ref ? `<line x1="${x(ref)}" x2="${x(ref)}" y1="${top}" y2="${h - 22}" stroke="var(--ink)" stroke-dasharray="4 3"/>
+    <text x="${x(ref)}" y="${top - 8}" text-anchor="middle" class="lbl">${refLabel}</text>` : "";
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" role="img">${refG}${g}</svg>`;
+}
+
+function scatter({ pts, xk, yk, xl, yl, label, hi, w = 640, h = 340 }) {
+  const left = 50, right = 20, top = 30, bottom = 40;
+  const xmax = Math.max(...pts.map((p) => p[xk])) * 1.08, ymax = Math.ceil(Math.max(...pts.map((p) => p[yk])) / 5) * 5;
+  const x = (v) => left + v / xmax * (w - left - right), y = (v) => h - bottom - v / ymax * (h - top - bottom);
+  let g = "";
+  for (let t = 0; t <= ymax; t += 5) g += `<line x1="${left}" x2="${w - right}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)"/><text x="${left - 8}" y="${y(t) + 4}" text-anchor="end">${t}</text>`;
+  const xs = xmax > 400 ? 100 : 50;
+  for (let t = 0; t <= xmax; t += xs) g += `<text x="${x(t)}" y="${h - bottom + 18}" text-anchor="middle">${t}</text>`;
+  g += `<text x="${(w + left) / 2}" y="${h - 4}" text-anchor="middle">${xl}</text>
+        <text x="${left - 8}" y="14" text-anchor="end">${yl}</text>`;
+  pts.forEach((p) => {
+    const on = hi(p);
+    g += `<circle cx="${x(p[xk])}" cy="${y(p[yk])}" r="${on ? 7 : 5}" fill="var(${on ? "--s2" : "--s1"})" stroke="var(--surface)" stroke-width="2"/>
+          <circle cx="${x(p[xk])}" cy="${y(p[yk])}" r="11" fill="transparent" data-tip="<b>${esc(p.model)}</b><br>${fmt(p[xk], 1)} MB · WER ${fmt(p[yk], 2)}% · ${fmt(p.lat)} ms"/>`;
+    if (on) { const L = label(p); g += `<text x="${x(p[xk]) + L.dx}" y="${y(p[yk]) + L.dy}" text-anchor="${L.anchor || "start"}" class="lbl">${esc(L.t)}</text>`; }
+  });
+  return `<div class="legend"><span><i style="background:var(--s1)"></i>candidate</span><span><i style="background:var(--s2)"></i>chosen / reference</span></div>
+          <svg viewBox="0 0 ${w} ${h}" width="100%" role="img">${g}</svg>`;
+}
+
+// ---------- overview
+(() => {
+  const e = D.edge, r = D.resources;
+  const avg = (k) => e.reduce((a, x) => a + (x[k] || 0), 0) / e.length;
+  $("#overview").innerHTML = `
+  <div class="tiles">
+    <div class="tile"><div class="k">COMET trung bình (6 chiều, thiết bị)</div><div class="v">${fmt(avg("comet"), 1)}</div><div class="d">PC: ${fmt(D.pc.reduce((a, x) => a + x.comet, 0) / 6, 1)}</div></div>
+    <div class="tile"><div class="k">Độ trễ p50 (trung vị 6 chiều)</div><div class="v">${fmt([...e].map((x) => x.p50).sort((a, b) => a - b)[2] / 1000, 2)} s</div><div class="d">giọng nói → giọng nói, trên QCS8550</div></div>
+    <div class="tile"><div class="k">RAM đỉnh (đủ 4 ngôn ngữ)</div><div class="v">${(r.peak_rss_mb / 1024).toFixed(2)} GB</div><div class="d">GPU (Graphics) ${r.graphics_mb} MB</div></div>
+    <div class="tile"><div class="k">Gemma 4 E2B trên GPU</div><div class="v">${fmt(avg("dec_tps"), 1)} tok/s</div><div class="d">TTFT ~${fmt(avg("ttft"))} ms · context ${r.mt_max_tokens}</div></div>
+  </div>
+  <div class="card"><h2>Chất lượng dịch: PC vs thiết bị (COMET)</h2>
+    <p class="sub">Đầu vào là giọng nói (qua ASR). Hai chấm càng gần nhau thì thiết bị giữ chất lượng như PC.</p>
+    ${dotPlot({ rows: e.map((x, i) => ({ label: x.label, edge: x.comet, pc: D.pc[i].comet })), series: [{ k: "pc", n: "PC (RTX 4080)", c: "--s1" }, { k: "edge", n: "QCS8550", c: "--s2" }], min: 80, max: 95 })}
+    <details><summary>Xem bảng</summary>${table([{ h: "Chiều", k: "label" }, { h: "COMET PC", f: (x) => fmt(D.pc.find((p) => p.pair === x.pair).comet, 2) }, { h: "COMET thiết bị", f: (x) => fmt(x.comet, 2) }], e)}</details>
+  </div>
+  <div class="card"><h2>Độ trễ từng giai đoạn trên thiết bị (ms, trung bình)</h2>
+    <p class="sub">Nhãn cuối thanh: tổng p50 / p95. MT và dấu câu chạy GPU (Gemma); ASR, TTS chạy CPU.</p>
+    ${stackedBars({ rows: e, parts: [{ k: "asr_ms", n: "ASR", c: "--s1" }, { k: "punct_ms", n: "Thêm dấu câu", c: "--s2" }, { k: "mt_ms", n: "Dịch (MT)", c: "--s3" }, { k: "tts_ms", n: "TTS", c: "--s4" }],
+      extra: (x) => `${(x.p50 / 1000).toFixed(2)} / ${(x.p95 / 1000).toFixed(2)} s` })}
+  </div>
+  <div class="card"><h2>Ghi chú</h2><ul class="note">
+    <li>Mạng khi đo: <span class="${r.network_start === "online" ? "warn" : ""}">${r.network_start}</span> (đầu) / ${r.network_end} (cuối). Bản nộp BTC cần chạy lại khi đã ngắt mạng.</li>
+    <li>BLEU sang tiếng Hàn / tiếng Trung tính theo ký tự. ASR-BLEU = BLEU của giọng đầu ra sau khi nhận dạng ngược.</li>
+    <li>Bộ dữ liệu mẫu KO có một số cặp bị lệch nhãn (ví dụ VK-0242), nên BLEU của KO→VI thấp hơn thực tế.</li>
+  </ul></div>`;
+})();
+
+// ---------- edge
+(() => {
+  const e = D.edge, r = D.resources;
+  $("#edge").innerHTML = `
+  <div class="card"><h2>Kết quả chính thức — ${esc(r.device["ro.soc.model"])} (${esc(r.device["ro.product.model"])}, Android ${esc(r.device["ro.build.version.release"])})</h2>
+    <p class="sub">Run <code>${D.edge_run}</code>: LiteRT-LM (Gemma 4 E2B, GPU), sherpa-onnx v1.13.8 (ASR/TTS, CPU), ViFastTts (TTS VI).</p>
+    ${table([{ h: "Chiều", k: "label" }, { h: "n", k: "n" }, { h: "Lỗi ASR", f: (x) => `${x.asr_kind} ${fmt(x.asr_err, 2)}%` }, { h: "BLEU", f: (x) => fmt(x.bleu, 2) }, { h: "chrF++", f: (x) => fmt(x.chrf, 2) },
+      { h: "COMET", f: (x) => fmt(x.comet, 2) }, { h: "ASR-BLEU", f: (x) => fmt(x.asr_bleu, 2) }, { h: "ASR ms", f: (x) => fmt(x.asr_ms) }, { h: "Dấu câu ms", f: (x) => fmt(x.punct_ms) },
+      { h: "MT ms", f: (x) => fmt(x.mt_ms) }, { h: "TTFT ms", f: (x) => fmt(x.ttft) }, { h: "tok/s", f: (x) => fmt(x.dec_tps, 1) }, { h: "TTS ms", f: (x) => fmt(x.tts_ms) },
+      { h: "Tổng p50 / p95 ms", f: (x) => `${fmt(x.p50)} / ${fmt(x.p95)}` }], e)}
+  </div>
+  <div class="card"><h2>Trước / sau khi đổi TTS (quota 500 ms cho EN, KO)</h2>
+    <p class="sub">So với run <code>${esc(D.edge_prev_run)}</code> (Supertonic-3 cho EN/KO).</p>
+    ${table([{ h: "Chiều", k: "label" }, { h: "TTS trước", f: (x) => fmt(x.prev_tts) }, { h: "TTS sau", f: (x) => fmt(x.tts_ms) }, { h: "p50 trước", f: (x) => fmt(x.prev_p50) }, { h: "p50 sau", f: (x) => fmt(x.p50) }], e)}
+  </div>
+  <div class="card"><h2>Tài nguyên</h2>
+    ${table([{ h: "Mục", k: "k", l: true }, { h: "Giá trị", k: "v", l: true }], [
+      { k: "RAM đỉnh tiến trình (VmHWM)", v: r.peak_rss_mb + " MB (nạp đủ 4 ngôn ngữ)" }, { k: "GPU (dumpsys Graphics)", v: r.graphics_mb + " MB" },
+      { k: "Context Gemma", v: r.mt_max_tokens + " tokens" }, { k: "Thời gian nạp (ms)", v: Object.entries(r.load_ms).map(([k, v]) => `${k} ${v}`).join(" · ") },
+      { k: "GPU", v: r.device.gpu }, { k: "RAM thiết bị", v: r.device.mem_total }])}
+  </div>`;
+})();
+
+// ---------- Linux boards (VentunoQ QCS8275, IQ-9075 QCS9075): Gemma on CPU / GPU / NPU, ASR+TTS on CPU
+function renderLinux(SEC_ID, V, DEVNAME, NAME, NOTES) {
+  V = V || { backends: {}, rows: [] };
+  if (!V.rows.length) { $("#" + SEC_ID).innerHTML = `<div class="card"><p class="sub">Chưa có run ${DEVNAME}.</p></div>`; return; }
+  const B = ["cpu", "gpu", "npu"].filter((b) => V.backends[b]);
+  const COL = { cpu: "--s1", gpu: "--s4", npu: "--s3" };
+  const get = (b, p) => V.rows.find((r) => r.backend === b && r.pair === p) || {};
+  const pairs = D.edge.map((x) => ({ pair: x.pair, label: x.label }));
+  const mean = (b, k) => { const rs = V.rows.filter((r) => r.backend === b); return rs.reduce((a, r) => a + (r[k] || 0), 0) / rs.length; };
+  const med = (b, k) => { const v = V.rows.filter((r) => r.backend === b).map((r) => r[k]).sort((x, y) => x - y); return (v[2] + v[3]) / 2; };
+  const best = B.includes("npu") ? "npu" : B[B.length - 1];
+  const dev = V.backends[B[0]].device;
+  const qcs = Object.fromEntries(D.edge.map((x) => [x.pair, x]));
+  const cmpRows = pairs.map((x) => Object.assign({ label: x.label, pair: x.pair, qcs8550: qcs[x.pair].comet },
+    ...B.map((b) => ({ [b]: get(b, x.pair).comet }))));
+  $("#" + SEC_ID).innerHTML = `
+  <div class="tiles">
+    <div class="tile"><div class="k">Độ trễ p50 trên ${best.toUpperCase()} (trung vị 6 chiều)</div><div class="v">${fmt(med(best, "p50") / 1000, 2)} s</div><div class="d">giọng nói → giọng nói · QCS8550: ${fmt([...D.edge].map((x) => x.p50).sort((a, b) => a - b)[2] / 1000, 2)} s</div></div>
+    <div class="tile"><div class="k">COMET trung bình (6 chiều)</div><div class="v">${B.map((b) => fmt(mean(b, "comet"), 1)).join(" / ")}</div><div class="d">${B.map((b) => b.toUpperCase()).join(" / ")}</div></div>
+    <div class="tile"><div class="k">Gemma decode</div><div class="v">${B.map((b) => fmt(mean(b, "dec_tps"), 0)).join(" / ")} tok/s</div><div class="d">${B.map((b) => b.toUpperCase()).join(" / ")}</div></div>
+    <div class="tile"><div class="k">TTFT Gemma</div><div class="v">${fmt(mean(best, "ttft"))} ms</div><div class="d">${B.filter((b) => b !== best).map((b) => `${b.toUpperCase()} ${fmt(mean(b, "ttft"))} ms`).join(" · ")}</div></div>
+  </div>
+  <div class="card"><h2>Chất lượng dịch theo backend (COMET)</h2>
+    <p class="sub">Cùng ASR/TTS, chỉ khác nơi chạy Gemma. Đầu vào tiếng Việt: 1 lần gọi Gemma (chữ thường + ràng buộc trong system prompt). QCS8550 dùng 2 lần gọi (thêm dấu câu), nên các chiều VI→ cao hơn.</p>
+    ${dotPlot({ rows: cmpRows, series: [...B.map((b) => ({ k: b, n: DEVNAME + " " + b.toUpperCase(), c: COL[b] })), { k: "qcs8550", n: "QCS8550 GPU", c: "--s2" }], min: 80, max: 95 })}
+  </div>
+  <div class="card"><h2>Độ trễ end-to-end (giọng nói → giọng nói)</h2>
+    <p class="sub">Tổng = ASR + chuẩn hoá + MT + TTS, đo từng câu trên board (không gồm thời gian nạp model).</p>
+    ${table([{ h: "Chiều", k: "label" }, ...B.map((b) => ({ h: `${b.toUpperCase()} p50 / p95 ms`, f: (x) => `${fmt(get(b, x.pair).p50)} / ${fmt(get(b, x.pair).p95)}` })),
+      { h: "QCS8550 p50 / p95 ms", f: (x) => `${fmt(qcs[x.pair].p50)} / ${fmt(qcs[x.pair].p95)}` }], pairs)}
+  </div>
+  <div class="card"><h2>Phân rã thời gian trên ${best.toUpperCase()} (ms, trung bình)</h2>
+    <p class="sub">Trên NPU, Gemma không còn là khâu chậm nhất: TTS tiếng Hàn / tiếng Trung (CPU) chiếm phần lớn.</p>
+    ${stackedBars({ rows: pairs.map((x) => Object.assign({ label: x.label }, get(best, x.pair))),
+      parts: [{ k: "asr_ms", n: "ASR (CPU)", c: "--s1" }, { k: "mt_ms", n: "Dịch (" + best.toUpperCase() + ")", c: "--s3" }, { k: "tts_ms", n: "TTS (CPU)", c: "--s4" }],
+      extra: (x) => `${(x.p50 / 1000).toFixed(2)} / ${(x.p95 / 1000).toFixed(2)} s` })}
+  </div>
+  <div class="card"><h2>Bảng đầy đủ</h2>
+    ${table([{ h: "Backend", f: (x) => x.backend.toUpperCase() }, { h: "Chiều", k: "label" }, { h: "Lỗi ASR", f: (x) => `${x.asr_kind} ${fmt(x.asr_err, 2)}%` }, { h: "BLEU", f: (x) => fmt(x.bleu, 2) },
+      { h: "chrF++", f: (x) => fmt(x.chrf, 2) }, { h: "COMET", f: (x) => fmt(x.comet, 2) }, { h: "ASR-BLEU", f: (x) => fmt(x.asr_bleu, 2) }, { h: "ASR ms", f: (x) => fmt(x.asr_ms) },
+      { h: "MT ms", f: (x) => fmt(x.mt_ms) }, { h: "TTFT ms", f: (x) => fmt(x.ttft) }, { h: "tok/s", f: (x) => fmt(x.dec_tps, 1) }, { h: "TTS ms", f: (x) => fmt(x.tts_ms) },
+      { h: "Tổng p50 / p95 ms", f: (x) => `${fmt(x.p50)} / ${fmt(x.p95)}` }], V.rows, (x) => x.backend === best)}
+  </div>
+  <div class="card"><h2>Tài nguyên theo backend</h2>
+    ${table([{ h: "Mục", k: "k", l: true }, ...B.map((b) => ({ h: NAME[b], f: (r) => r[b], l: true }))], [
+      { k: "Run", ...Object.fromEntries(B.map((b) => [b, `<code>${esc(V.backends[b].run)}</code>`])) },
+      { k: "File Gemma", ...Object.fromEntries(B.map((b) => [b, `${esc(V.backends[b].model)} (${V.backends[b].model_mb} MB)`])) },
+      { k: "RAM đỉnh (VmHWM, đủ 4 ngôn ngữ)", ...Object.fromEntries(B.map((b) => [b, V.backends[b].peak_rss_mb + " MB"])) },
+      { k: "Bộ nhớ GPU (DRM)", ...Object.fromEntries(B.map((b) => [b, V.backends[b].gpu_mb + " MB"])) },
+      { k: "Nạp Gemma", ...Object.fromEntries(B.map((b) => [b, V.backends[b].load_mt_ms + " ms"])) },
+      { k: "Prefix cache / context / sampler", ...Object.fromEntries(B.map((b) => [b, `${V.backends[b].prefix_cache ? "có" : "không"} / ${V.backends[b].ctx} / ${esc(V.backends[b].sampler)}`])) },
+      { k: "Luồng CPU (backend CPU)", ...Object.fromEntries(B.map((b) => [b, b === "cpu" ? String(V.backends[b].threads) : "–"])) },
+      { k: "Socket mạng của engine (max, ngoài loopback)", ...Object.fromEntries(B.map((b) => [b, V.backends[b].net_conns == null ? "chưa đo" : String(V.backends[b].net_conns)])) }])}
+    <p class="note">Thiết bị: ${esc(dev["ro.soc.model"])} · ${esc(dev["ro.build.version.release"])} · ${esc(dev.mem_total)} · ${esc(dev.gpu)} · CPU ${esc(dev.cpus || "")}</p>
+  </div>
+  <div class="card"><h2>Ghi chú</h2><ul class="note">
+    <li>Mạng khi đo: <span class="${V.backends[B[0]].network_start === "online" ? "warn" : ""}">${esc(V.backends[B[0]].network_start)}</span> (board QDC, không được tắt Wi-Fi); bằng chứng: số socket mạng ngoài loopback của engine trong bảng tài nguyên.</li>
+    ${NOTES.map((n) => `<li>${n}</li>`).join("")}
+  </ul></div>`;
+}
+renderLinux("vq", D.ventunoq, "VentunoQ", { cpu: "CPU (XNNPACK, 4 luồng)", gpu: "GPU (Adreno 623, Vulkan Mesa)", npu: "NPU (Hexagon v75)" }, [
+  "CPU: GREEDY/TOP_K chưa có trên CPU → dùng TOP_P với k=1 (argmax); clone conversation lỗi → tắt prefix cache (TTFT ~1.3 s).",
+  "NPU: model AOT cho QCS8275 nhúng QAIRT 2.50 → cần thư viện QAIRT 2.50 (apt chỉ có 2.49); runtime LiteRT-LM 0.18 qua shim ABI; không dùng được prefix cache.",
+  "Chi tiết đo đạc và các lựa chọn: <code>edge/ventunoq-linux/README.md</code>."]);
+renderLinux("iq", D.iq9075, "IQ-9075", { cpu: "CPU (XNNPACK, 8 luồng A78C)", gpu: "GPU (Adreno 663, Vulkan Qualcomm)", npu: "NPU (Hexagon)" }, [
+  "Cùng bản build Linux aarch64 như VentunoQ (không biên dịch lại); Qualcomm Linux 1.9 (Yocto), 8× Cortex-A78C, 32 GB RAM.",
+  "GPU dùng driver Vulkan Adreno chính hãng (KGSL) → decode ~2× VentunoQ GPU. CPU 8 luồng nhanh nhất cho MT.",
+  "NPU (đã thử): bản QCS8275 bị từ chối (Hexagon v75 ≠ v73). Bản tự biên dịch AOT cho QCS9075 (litert_lm_npu_compiler + QAIRT 2.50) nạp được nhưng khối trọng số 1.66 GB (v73 bung int4; v75 chỉ 761 MB) không ánh xạ được qua FastRPC trên kernel QLI → dùng CPU/GPU."]);
+
+// ---------- pc
+(() => {
+  const r = D.resources;
+  $("#pc").innerHTML = `<div class="card"><h2>PC tham chiếu — run <code>${D.pc_run}</code></h2>
+    <p class="sub">${esc(r.pc_env?.gpu || "")}. Gemma Q3_K_M qua llama.cpp CUDA; ASR/TTS CPU. RAM đỉnh ${r.pc_peak_ram_mb} MB, VRAM đỉnh ${r.pc_peak_vram_mb} MB.</p>
+    ${table([{ h: "Chiều", k: "label" }, { h: "n", k: "n" }, { h: "Lỗi ASR %", f: (x) => fmt(x.asr_err, 2) }, { h: "BLEU", f: (x) => fmt(x.bleu, 2) }, { h: "chrF++", f: (x) => fmt(x.chrf, 2) },
+      { h: "COMET", f: (x) => fmt(x.comet, 2) }, { h: "ASR-BLEU", f: (x) => fmt(x.asr_bleu, 2) }, { h: "ASR ms", k: "asr_ms" }, { h: "MT ms", k: "mt_ms" }, { h: "TTS ms", k: "tts_ms" },
+      { h: "Tổng p50 / p95 ms", f: (x) => `${x.p50} / ${x.p95}` }], D.pc)}
+    <p class="note">Model trên PC: ${Object.entries(r.pc_models_mb || {}).map(([k, v]) => `${esc(k)} ${v} MB`).join(" · ")}</p></div>`;
+})();
+
+// ---------- studies
+(() => {
+  const chosenASR = (p) => /^x-asr|^zipformer-gigaspeech|^parakeet-0.6b$/.test(p.model);
+  const asrLabel = (p) => /^x-asr/.test(p.model) ? { t: "X-ASR (mặc định)", dx: 12, dy: 5 }
+    : /gigaspeech/.test(p.model) ? { t: "GigaSpeech (lite)", dx: -8, dy: 28 }
+    : { t: "Parakeet 0.6B (quality)", dx: -10, dy: -12, anchor: "end" };
+  const tts = (D.tts_candidates || []).filter((t) => !t.error);
+  const chosenTTS = (t) => (t.lang === "en" && t.model === "piper-lessac-medium") || (t.lang === "ko" && t.model === "supertonic2-s5");
+  $("#studies").innerHTML = `
+  <div class="card"><h2>ASR tiếng Anh: ${D.asr_candidates.length} model (CPU 2 luồng, 100 câu BTC)</h2>
+    <p class="sub">Chọn X-ASR (mặc định, có dấu câu, hỗ trợ cả tiếng Trung). GigaSpeech là bản <code>lite</code>, Parakeet 0.6B là bản <code>quality</code>.</p>
+    ${scatter({ pts: D.asr_candidates, xk: "size_mb", yk: "wer", xl: "Dung lượng (MB)", yl: "WER %", hi: chosenASR, label: asrLabel })}
+    <details><summary>Xem bảng</summary>${table([{ h: "Model", k: "model", l: true }, { h: "MB", f: (x) => fmt(x.size_mb, 1) }, { h: "WER %", f: (x) => fmt(x.wer, 2) }, { h: "ms/câu", f: (x) => fmt(x.lat) }, { h: "COMET bản dịch", f: (x) => fmt(x.mt_comet, 2) }], D.asr_candidates, chosenASR)}</details>
+  </div>
+  <div class="card"><h2>TTS trên thiết bị (60 câu/ngôn ngữ, quota 500 ms)</h2>
+    <p class="sub">Đường đứt nét: quota 500 ms. Lỗi round-trip đo bằng cách nhận dạng ngược giọng đọc (EN: WER, KO: CER).</p>
+    ${["en", "ko"].map((lang) => `<h3 style="font-size:.95rem;margin:12px 0 4px">${lang === "en" ? "Tiếng Anh" : "Tiếng Hàn"}</h3>` + hbars({ rows: tts.filter((t) => t.lang === lang).sort((a, b) => a.tts_ms_mean - b.tts_ms_mean), k: "tts_ms_mean",
+      label: (t) => (chosenTTS(t) ? "✓ " : "") + t.model.replace("(current)", "(trước đây)"), ref: 500, refLabel: "quota 500 ms", max: lang === "en" ? 1300 : 1000,
+      fmtv: (t) => `${t.tts_ms_mean} ms · ${lang === "en" ? "WER " + t.roundtrip_wer : "CER " + t.roundtrip_cer}%` })).join("")}
+    <details><summary>Xem bảng</summary>${table([{ h: "Ngôn ngữ", k: "lang" }, { h: "Model", k: "model", l: true }, { h: "TB ms", k: "tts_ms_mean" }, { h: "p95 ms", k: "tts_ms_p95" }, { h: "RTF", k: "rtf" }, { h: "Lỗi round-trip %", f: (t) => t.roundtrip_wer ?? t.roundtrip_cer }], tts, chosenTTS)}</details>
+  </div>
+  <div class="card"><h2>Bản lượng tử hoá Gemma 4 E2B (PC, llama.cpp)</h2>
+    <p class="sub">Q3_K_M ngang QAT Q4_0 nhưng nhỏ hơn 24%; Q2 mất ~20 BLEU nên bị loại. Trên thiết bị dùng bản <code>gpu.litertlm</code> chính thức của LiteRT-LM.</p>
+    ${table([{ h: "Model", k: "model", l: true }, { h: "Chiều", k: "pair" }, { h: "Đầu vào", k: "input" }, { h: "BLEU", f: (x) => fmt(x.bleu, 2) }, { h: "COMET", f: (x) => fmt(x.comet, 2) }], D.quant)}
+  </div>
+  <div class="card"><h2>Biến thể system prompt (PC)</h2><p class="sub">Các biến thể chênh nhau trong mức nhiễu, nên giữ prompt <code>base</code>.</p>
+    ${table([{ h: "Chiều", k: "pair" }, { h: "Biến thể", k: "variant", l: true }, { h: "Đầu vào", k: "input" }, { h: "BLEU", k: "bleu" }, { h: "chrF++", k: "chrf++" }, { h: "COMET", k: "comet" }], D.ablation)}
+  </div>
+  <div class="card"><h2>ASR các ngôn ngữ khác (PC)</h2>
+    ${table([{ h: "Model", k: "model", l: true }, { h: "WER %", f: (x) => fmt(x.wer, 2) }, { h: "CER %", f: (x) => fmt(x.cer, 2) }, { h: "RTF", f: (x) => fmt(x.rtf, 4) }], D.pc_asr)}
+  </div>`;
+})();
+
+// ---------- utterances: one row per utterance, the output of every device run side by side
+(() => {
+  const S = D.samples, RUNS = D.sample_runs || [];
+  $("#utts").innerHTML = `<div class="card"><h2>Từng câu & nghe thử — ${RUNS.map((r) => esc(r.label)).join(" · ")}</h2>
+    <p class="sub">${S.length} câu, mỗi câu chạy thật trên từng thiết bị/backend. <b>▶ Gốc</b>: giọng nói đầu vào (bộ dữ liệu BTC, giống nhau cho mọi thiết bị).
+      Mỗi dòng bản dịch có nút <b>▶</b> để nghe giọng đọc do thiết bị đó tạo ra. Rê chuột vào số ms để xem thời gian từng giai đoạn.
+      Run: ${RUNS.map((r) => `${esc(r.label)} <code>${esc(r.run)}</code>`).join(" · ")}</p>
+    <div class="controls"><select id="u-pair"><option value="">Tất cả chiều</option>${[...new Set(S.map((s) => s.pair))].map((p) => `<option>${p}</option>`).join("")}</select>
+      <select id="u-run"><option value="">Mọi thiết bị</option>${RUNS.map((r) => `<option value="${r.key}">${esc(r.label)}</option>`).join("")}</select>
+      <input id="u-q" placeholder="Tìm trong câu…" size="24">
+      <select id="u-sort"><option value="">Thứ tự gốc</option><option value="slow">Chậm nhất trước</option><option value="diff">Bản dịch khác nhau giữa thiết bị</option></select></div>
+    <div class="scroll"><table class="utt"><thead><tr><th class="l">ID</th><th class="l">Câu gốc / Đáp án BTC</th><th class="l">Thiết bị</th><th class="l">ASR → bản dịch</th><th>ms</th><th class="l">Nghe</th></tr></thead><tbody id="u-body"></tbody></table></div>
+    <p class="note" id="u-count"></p></div>`;
+  let audio = null;
+  const byId = Object.fromEntries(S.map((s) => [s.id, s]));
+  const bundles = {};  // published mode: audio/<pair>.json = {id: {src: b64, <run key>: b64}}, fetched on first play
+  async function playUtt(s, k, btn) {
+    if (audio) audio.pause();
+    let url = k === "src" ? s.src_wav : (s.outs[k] || {}).wav;
+    if (D.audio_bundle) {
+      const old = btn.textContent; btn.textContent = "…";
+      try {
+        bundles[s.pair] = bundles[s.pair] || fetch(`audio/${s.pair}.json`).then((r) => r.json());
+        const b64 = ((await bundles[s.pair])[s.id] || {})[k];
+        url = b64 ? "data:audio/mpeg;base64," + b64 : null;
+      } catch (e) { url = null; }
+      btn.textContent = old;
+    }
+    if (!url) { btn.textContent = "–"; return; }
+    audio = new Audio(url);
+    audio.play().catch(() => {});
+  }
+  const norm = (t) => String(t || "").toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
+  const nDistinct = (s) => new Set(Object.values(s.outs).map((o) => norm(o.hyp))).size;
+  function render() {
+    const p = $("#u-pair").value, run = $("#u-run").value, q = $("#u-q").value.toLowerCase(), sort = $("#u-sort").value;
+    const keys = RUNS.map((r) => r.key).filter((k) => !run || k === run);
+    let rows = S.filter((s) => (!p || s.pair === p) && keys.some((k) => s.outs[k]) &&
+      (!q || [s.src_ref, s.ref, ...keys.flatMap((k) => [s.outs[k]?.asr, s.outs[k]?.hyp])].join(" ").toLowerCase().includes(q)));
+    const tmax = (s) => Math.max(...keys.map((k) => s.outs[k]?.total_ms || 0));
+    if (sort === "slow") rows = [...rows].sort((a, b) => tmax(b) - tmax(a));
+    if (sort === "diff") rows = rows.filter((s) => nDistinct(s) > 1).sort((a, b) => nDistinct(b) - nDistinct(a));
+    $("#u-count").textContent = `${rows.length} câu khớp (hiển thị tối đa 150)`;
+    $("#u-body").innerHTML = rows.slice(0, 150).map((s) => {
+      const ks = keys.filter((k) => s.outs[k]);
+      return ks.map((k, i) => {
+        const o = s.outs[k], lab = RUNS.find((r) => r.key === k).label;
+        const head = i ? "" : `<td class="l" rowspan="${ks.length}" style="white-space:nowrap;vertical-align:top">${esc(s.id.split("__")[1])}<br><span class="tag">${s.pair}</span><br>
+            ${s.src_wav || D.audio_bundle ? `<button data-id="${esc(s.id)}" data-k="src" title="Giọng gốc (đầu vào)">▶ Gốc</button>` : ""}</td>
+          <td class="l" rowspan="${ks.length}" style="vertical-align:top"><div>${esc(s.src_ref)}</div><div class="src">Ref: ${esc(s.ref)}</div></td>`;
+        return `<tr${i ? "" : ' class="ufirst"'}>${head}
+          <td class="l" style="white-space:nowrap"><span class="tag">${esc(lab)}</span></td>
+          <td class="l"><div class="hyp">${esc(o.hyp)}</div><div class="src">ASR → đầu vào dịch: ${esc(o.mt_in || o.asr)}</div></td>
+          <td data-tip="ASR ${o.asr_ms} · dấu câu ${o.punct_ms} · MT ${o.mt_ms} · TTS ${o.tts_ms} ms">${o.total_ms}</td>
+          <td class="l">${o.wav || D.audio_bundle ? `<button data-id="${esc(s.id)}" data-k="${k}" title="Giọng đọc bản dịch của ${esc(lab)}">▶</button>` : ""}</td></tr>`;
+      }).join("");
+    }).join("");
+    document.querySelectorAll("#u-body button").forEach((b) => b.onclick = () => playUtt(byId[b.dataset.id], b.dataset.k, b));
+  }
+  ["#u-pair", "#u-run", "#u-q", "#u-sort"].forEach((s) => $(s).addEventListener("input", render));
+  render();
+})();
+
+// ---------- runs
+(() => {
+  $("#runs").innerHTML = `<div class="card"><h2>Lịch sử các lượt chạy</h2>
+    <p class="sub"><b>official</b> = lượt đầy đủ 6 chiều mới nhất (số liệu báo cáo); <b>superseded</b> = lượt cũ hơn; <b>archived</b> = chạy thử / crash / lỗi.</p>
+    ${table([{ h: "Thời gian", k: "time", l: true }, { h: "Run", f: (h) => h.has_summary && !D.audio_bundle ? `<a href="../results/${esc(h.path)}/summary.md">${esc(h.run)}</a>` : esc(h.run), l: true },
+      { h: "Loại", k: "kind" }, { h: "Trạng thái", f: (h) => `<span class="tag ${h.status}">${h.status}</span>` }, { h: "Chiều", f: (h) => h.pairs.join(", "), l: true }, { h: "Ghi chú", k: "note", l: true }], D.history)}</div>`;
+})();
+
+let start = "overview";
+try { start = localStorage.getItem("cabin_tab") || start; } catch (e) {}
+show(SEC.some(([id]) => id === start) ? start : "overview");
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+ "prompts": "./prompts.json",
+ "web_root": "./web",
+ "live_dir": "./out/live",
+ "punct_pass": false,
+ "threads": 4,
+ "tts_threads": 2,
+ "mt": {
+  "model": "./models/gemma-4-E2B-it.litertlm",
+  "backend": "cpu",
+  "max_num_tokens": 1024,
+  "max_output_tokens": 128,
+  "cache_dir": "./cache",
+  "num_threads": 4,
+  "prefix_cache": false,
+  "sampler": "topk1"
+ },
+ "asr": {
+  "vi": {
+   "encoder": "./models/Zipformer-30M-RNNT-6000h/encoder-epoch-20-avg-10.int8.onnx",
+   "decoder": "./models/Zipformer-30M-RNNT-6000h/decoder-epoch-20-avg-10.int8.onnx",
+   "joiner": "./models/Zipformer-30M-RNNT-6000h/joiner-epoch-20-avg-10.int8.onnx",
+   "tokens": "./models/Zipformer-30M-RNNT-6000h/config.json"
+  },
+  "en": {
+   "encoder": "./models/sherpa-onnx-x-asr-zipformer-transducer-zh-en-punct-int8-2026-06-03/encoder-epoch-99-avg-1.int8.onnx",
+   "decoder": "./models/sherpa-onnx-x-asr-zipformer-transducer-zh-en-punct-int8-2026-06-03/decoder-epoch-99-avg-1.onnx",
+   "joiner": "./models/sherpa-onnx-x-asr-zipformer-transducer-zh-en-punct-int8-2026-06-03/joiner-epoch-99-avg-1.int8.onnx",
+   "tokens": "./models/sherpa-onnx-x-asr-zipformer-transducer-zh-en-punct-int8-2026-06-03/tokens.txt"
+  },
+  "zh": {
+   "encoder": "./models/sherpa-onnx-x-asr-zipformer-transducer-zh-en-punct-int8-2026-06-03/encoder-epoch-99-avg-1.int8.onnx",
+   "decoder": "./models/sherpa-onnx-x-asr-zipformer-transducer-zh-en-punct-int8-2026-06-03/decoder-epoch-99-avg-1.onnx",
+   "joiner": "./models/sherpa-onnx-x-asr-zipformer-transducer-zh-en-punct-int8-2026-06-03/joiner-epoch-99-avg-1.int8.onnx",
+   "tokens": "./models/sherpa-onnx-x-asr-zipformer-transducer-zh-en-punct-int8-2026-06-03/tokens.txt"
+  },
+  "ko": {
+   "encoder": "./models/sherpa-onnx-zipformer-korean-2024-06-24/encoder-epoch-99-avg-1.int8.onnx",
+   "decoder": "./models/sherpa-onnx-zipformer-korean-2024-06-24/decoder-epoch-99-avg-1.int8.onnx",
+   "joiner": "./models/sherpa-onnx-zipformer-korean-2024-06-24/joiner-epoch-99-avg-1.int8.onnx",
+   "tokens": "./models/sherpa-onnx-zipformer-korean-2024-06-24/tokens.txt"
+  }
+ },
+ "tts": {
+  "vi": {
+   "kind": "vifasttts",
+   "acoustic": "./models/vifasttts-ngochuyen-small/onnx/acoustic.onnx",
+   "vocoder": "./models/vifasttts-ngochuyen-small/onnx/vocoder.onnx"
+  },
+  "en": {
+   "kind": "vits",
+   "model": "./models/vits-piper-en_US-lessac-medium/en_US-lessac-medium.onnx",
+   "tokens": "./models/vits-piper-en_US-lessac-medium/tokens.txt",
+   "data_dir": "./models/vits-piper-en_US-lessac-medium/espeak-ng-data"
+  },
+  "ko": {
+   "kind": "supertonic",
+   "lang": "ko",
+   "num_steps": 5,
+   "duration_predictor": "./models/sherpa-onnx-supertonic-tts-int8-2026-03-06/duration_predictor.int8.onnx",
+   "text_encoder": "./models/sherpa-onnx-supertonic-tts-int8-2026-03-06/text_encoder.int8.onnx",
+   "vector_estimator": "./models/sherpa-onnx-supertonic-tts-int8-2026-03-06/vector_estimator.int8.onnx",
+   "vocoder": "./models/sherpa-onnx-supertonic-tts-int8-2026-03-06/vocoder.int8.onnx",
+   "tts_json": "./models/sherpa-onnx-supertonic-tts-int8-2026-03-06/tts.json",
+   "unicode_indexer": "./models/sherpa-onnx-supertonic-tts-int8-2026-03-06/unicode_indexer.bin",
+   "voice_style": "./models/sherpa-onnx-supertonic-tts-int8-2026-03-06/voice.bin"
+  },
+  "zh": {
+   "kind": "matcha",
+   "acoustic_model": "./models/matcha-icefall-zh-baker/model-steps-3.onnx",
+   "vocoder": "./models/vocos-22khz-univ.onnx",
+   "lexicon": "./models/matcha-icefall-zh-baker/lexicon.txt",
+   "tokens": "./models/matcha-icefall-zh-baker/tokens.txt",
+   "dict_dir": "./models/matcha-icefall-zh-baker/dict",
+   "rule_fsts": "./models/matcha-icefall-zh-baker/phone.fst,./models/matcha-icefall-zh-baker/date.fst,./models/matcha-icefall-zh-baker/number.fst"
+  }
+ }
+}

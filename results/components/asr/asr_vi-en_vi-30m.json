@@ -1,0 +1,614 @@
+{
+ "summary": {
+  "pair": "vi-en",
+  "model": "vi-30m",
+  "n": 100,
+  "wer": 1.59,
+  "cer": 0.72,
+  "rtf": 0.007,
+  "avg_latency_s": 0.023,
+  "load_s": 0.44
+ },
+ "rows": [
+  {
+   "id": "VE-0037",
+   "ref": "Anh giải thích lại chậm hơn được không?",
+   "hyp": "ANH GIẢI THÍCH LẠI CHẬM HƠN ĐƯỢC KHÔNG",
+   "sec": 0.027
+  },
+  {
+   "id": "VE-0046",
+   "ref": "Anh đang ở phòng nào để tôi kiểm tra?",
+   "hyp": "ANH ĐANG Ở PHÒNG NÀO ĐỂ TÔI KIỂM TRA",
+   "sec": 0.023
+  },
+  {
+   "id": "VE-0247",
+   "ref": "Bao lâu thì có đồ uống?",
+   "hyp": "BAO LÂU THÌ CÓ ĐỒ UỐNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-0371",
+   "ref": "Hạn cuối là thứ Sáu đúng không?",
+   "hyp": "HẸN CUỐI LÀ THỨ SÁU ĐÚNG KHÔNG",
+   "sec": 0.027
+  },
+  {
+   "id": "VE-0588",
+   "ref": "Anh cần thêm dây không?",
+   "hyp": "ANH CẦN THÊM DÂY KHÔNG",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-0589",
+   "ref": "Được, chúng tôi sẽ đi sau bữa tối.",
+   "hyp": "ĐƯỢC CHÚNG TÔI SẼ ĐI SAU BỮA TỐI",
+   "sec": 0.023
+  },
+  {
+   "id": "VE-0613",
+   "ref": "Có, biển màu xanh ngay trước cửa.",
+   "hyp": "CÓ BIỂN MÀU XANH NGAY TRƯỚC CỬA",
+   "sec": 0.027
+  },
+  {
+   "id": "VE-0717",
+   "ref": "Tôi muốn thuê xe đạp khoảng hai tiếng.",
+   "hyp": "TÔI MUỐN THUÊ XE ĐẠP KHOẢNG HAI TIẾNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-0928",
+   "ref": "Nếu chậm thêm thì buổi trình bày có ảnh hưởng không?",
+   "hyp": "NẾU CHẬM THÊM THÌ BUỔI TRÌNH BÀY CÓ BỊ ẢNH HƯỞNG KHÔNG",
+   "sec": 0.028
+  },
+  {
+   "id": "VE-0980",
+   "ref": "Anh cần máy cơ bản hay loại chuyên nghiệp?",
+   "hyp": "ANH CẦN MÁY CƠ BẢN HAY LOẠI CHUYÊN NGHIỆP",
+   "sec": 0.026
+  },
+  {
+   "id": "VE-1131",
+   "ref": "Tôi định đi đảo từ sáng, nhưng nhìn trời thế này thì hơi lo tàu sẽ bị hoãn.",
+   "hyp": "TÔI ĐỊNH ĐI ĐẢO TỪ SÁNG NHƯNG NHÌN TRỜI THẾ NÀY THÌ HƠI LO TÀU SẼ BỊ HOÃN",
+   "sec": 0.032
+  },
+  {
+   "id": "VE-1143",
+   "ref": "Tôi mua tai nghe này hai ngày trước, nhưng bên trái không có tiếng.",
+   "hyp": "TÔI MUA TAI NGHE NÀY HAI NGÀY TRƯỚC NHƯNG BÊN TRÁI KHÔNG CÓ TIẾNG",
+   "sec": 0.028
+  },
+  {
+   "id": "VE-1679",
+   "ref": "Anh còn phiếu bảo hành không?",
+   "hyp": "ANH CÒN PHIẾU BẢO HÀNH KHÔNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-1805",
+   "ref": "Tôi muốn rút tiền bằng thẻ quốc tế.",
+   "hyp": "TÔI MUỐN RÚT TIỀN BẰNG THẺ QUỐC TẾ",
+   "sec": 0.027
+  },
+  {
+   "id": "VE-1814",
+   "ref": "Tôi cần hàng trước trưa mai.",
+   "hyp": "TÔI CẦN HÀNG TRƯỚC TRƯA MAI",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-1926",
+   "ref": "Có một quán gia đình nhỏ, món khá dễ ăn.",
+   "hyp": "CÓ MỘT QUÁN GIA ĐÌNH NHỎ MÓN KHÁ DỄ ĂN",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-2035",
+   "ref": "Tôi mua băng cố định ở đây được không?",
+   "hyp": "TÔI MUA BĂNG CỐ ĐỊNH Ở ĐÂY ĐƯỢC KHÔNG",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-2091",
+   "ref": "Được, hẹn gặp lại.",
+   "hyp": "ĐƯỢC HẸN GẶP LẠI",
+   "sec": 0.015
+  },
+  {
+   "id": "VE-2272",
+   "ref": "Có, mũ đã bao gồm trong giá.",
+   "hyp": "CÓ MŨ ĐÃ BAO GỒM TRONG GIÁ",
+   "sec": 0.029
+  },
+  {
+   "id": "VE-2289",
+   "ref": "Anh mang xuống phòng rác tầng một.",
+   "hyp": "ANH MANG XUỐNG PHÒNG RÁC TẦNG MỘT",
+   "sec": 0.023
+  },
+  {
+   "id": "VE-2408",
+   "ref": "Đúng, tôi đứng ngay dưới biển đó.",
+   "hyp": "ĐÚNG TÔI ĐỨNG NGAY DƯỚI BIỂN ĐÓ",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-2437",
+   "ref": "Cháu mặc đồ màu gì và đi cùng ai?",
+   "hyp": "CHÁU MẶC ĐỒ MÀU GÌ VÀ ĐI CÙNG AI",
+   "sec": 0.025
+  },
+  {
+   "id": "VE-2657",
+   "ref": "Mai tôi rời khách sạn lúc tám giờ.",
+   "hyp": "MAI TÔI RỜI KHÁCH SẠN LÚC TÁM GIỜ",
+   "sec": 0.017
+  },
+  {
+   "id": "VE-2732",
+   "ref": "Anh đưa bà ra cầu thang bên trái.",
+   "hyp": "ANH ĐƯA BÀ RA CẦU THANG BÊN TRÁI",
+   "sec": 0.027
+  },
+  {
+   "id": "VE-2920",
+   "ref": "Quầy bên phải sẽ in thẻ cho anh.",
+   "hyp": "QUẦY BÊN PHẢI SẼ IN THẺ CHO ANH",
+   "sec": 0.023
+  },
+  {
+   "id": "VE-2952",
+   "ref": "Được, cảm ơn anh đã hỗ trợ.",
+   "hyp": "ĐƯỢC CẢM ƠN ANH ĐÃ HỖ TRỢ",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-2958",
+   "ref": "Anh thử âm thanh một chút nhé.",
+   "hyp": "ANH THỬ ÂM THANH MỘT CHÚT NHÉ",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-2963",
+   "ref": "Tôi ngồi lại khoảng nửa tiếng.",
+   "hyp": "TÔI NGỒI LẠI KHOẢNG NỬA TIẾNG",
+   "sec": 0.021
+  },
+  {
+   "id": "VE-3026",
+   "ref": "Anh chờ tôi một chút.",
+   "hyp": "ANH CHỜ TÔI MỘT CHÚT",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-3031",
+   "ref": "Tôi gửi lại đường dẫn cuộc họp.",
+   "hyp": "TÔI GỬI LẠI ĐƯỜNG DẪN CUỘC HỌP",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-3103",
+   "ref": "Vậy tôi gửi thông tin cho ai?",
+   "hyp": "VẬY TÔI GỬI THÔNG TIN CHO AI",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-3224",
+   "ref": "Anh đến sự kiện này lần đầu à?",
+   "hyp": "ANH ĐẾN SỰ KIỆN NÀY LẦN ĐẦU À",
+   "sec": 0.017
+  },
+  {
+   "id": "VE-3338",
+   "ref": "Có, nhưng bác sĩ sẽ chọn sau khi khám.",
+   "hyp": "CÓ NHƯNG BÁC SĨ SẼ CHỌN SAU KHI KHÁM",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-3393",
+   "ref": "Hóa đơn gửi trong bao lâu?",
+   "hyp": "HÓA ĐƠN GỬI TRONG BAO LÂU",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-3410",
+   "ref": "Sảnh chính ở tầng trệt đúng không?",
+   "hyp": "SẢNH CHÍNH Ở TẦNG TRỆT ĐÚNG KHÔNG",
+   "sec": 0.025
+  },
+  {
+   "id": "VE-3839",
+   "ref": "Tôi cần dung lượng mạng để gọi video và xem bản đồ.",
+   "hyp": "TÔI CẦN DUNG LƯỢNG MẠNG ĐỂ GỌI VIDEO VÀ XEM BẢN ĐỒ",
+   "sec": 0.03
+  },
+  {
+   "id": "VE-3937",
+   "ref": "Anh kiểm tra lại mã số thuế giúp tôi.",
+   "hyp": "ANH KIỂM TRA LẠI MÃ SỐ THUẾ GIÚP TÔI",
+   "sec": 0.023
+  },
+  {
+   "id": "VE-4118",
+   "ref": "Tôi có đặt phòng trước, nhưng đến sớm hơn dự kiến.",
+   "hyp": "TÔI CÓ ĐẶT PHÒNG TRƯỚC NHƯNG ĐẾN SỚM HƠN DỰ KIẾN",
+   "sec": 0.026
+  },
+  {
+   "id": "VE-4318",
+   "ref": "Đúng, từ bảy đến chín giờ tối.",
+   "hyp": "ĐÚNG TỪ BẢY ĐẾN CHÍN GIỜ TỐI",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-4326",
+   "ref": "Tôi thấy phần vai hơi chật.",
+   "hyp": "TÔI THẤY PHẦN VAI HƠI CHẬP",
+   "sec": 0.025
+  },
+  {
+   "id": "VE-4513",
+   "ref": "Anh uống tại quán hay mang đi?",
+   "hyp": "ANH UỐNG TẠI QUÁN HAY MANG ĐI",
+   "sec": 0.025
+  },
+  {
+   "id": "VE-4762",
+   "ref": "Tiêu chí đánh giá chính là gì?",
+   "hyp": "TIÊU CHÍ ĐÁNH GIÁ CHÍNH LÀ GÌ",
+   "sec": 0.026
+  },
+  {
+   "id": "VE-5093",
+   "ref": "Anh đã uống thuốc gì chưa?",
+   "hyp": "ANH ĐÃ UỐNG THUỐC GÌ CHƯA",
+   "sec": 0.017
+  },
+  {
+   "id": "VE-5204",
+   "ref": "Được, tôi điền ngay.",
+   "hyp": "ĐƯỢC TÔI ĐIỀN NGAY",
+   "sec": 0.019
+  },
+  {
+   "id": "VE-5433",
+   "ref": "Tôi nên xuống ở trạm nào để quay lại?",
+   "hyp": "TÔI NÊN XUỐNG Ở TRẠM NÀO ĐỂ QUAY LẠI",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-5439",
+   "ref": "Được, tôi sẽ gửi trước ba giờ.",
+   "hyp": "ĐƯỢC TÔI SẼ GỬI TRƯỚC BA GIỜ",
+   "sec": 0.021
+  },
+  {
+   "id": "VE-5468",
+   "ref": "Đừng thêm đường giúp tôi nhé.",
+   "hyp": "ĐỪNG THÊM ĐƯỜNG GIÚP TÔI NHÉ",
+   "sec": 0.023
+  },
+  {
+   "id": "VE-5753",
+   "ref": "Phần hỗ trợ kỹ thuật cần ghi rõ hơn, nhất là thời gian phản hồi khi có lỗi nghiêm trọng.",
+   "hyp": "PHẦN HỖ TRỢ KỸ THUẬT CẦN GHI RÕ HƠN NHẤT LÀ THỜI GIAN PHẢN HỒI KHI CÓ LỖI NGHIÊM TRỌNG",
+   "sec": 0.047
+  },
+  {
+   "id": "VE-5754",
+   "ref": "Cuối tuần này anh có rảnh không?",
+   "hyp": "CUỐI TUẦN NÀY ANH CÓ RẢNH KHÔNG",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-5821",
+   "ref": "Anh có cần gói riêng từng món không?",
+   "hyp": "ANH CÓ CẦN GÓI RIÊNG TỪNG MÓN KHÔNG",
+   "sec": 0.021
+  },
+  {
+   "id": "VE-5865",
+   "ref": "Thời gian giao đợt đầu là khi nào?",
+   "hyp": "THỜI GIAN GIAO ĐỢT ĐẦU LÀ KHI NÀO",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-5918",
+   "ref": "Được, tôi chờ thêm một chút.",
+   "hyp": "ĐƯỢC TÔI CHỜ THÊM MỘT CHÚT",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-6000",
+   "ref": "Anh đã sử dụng bao lâu?",
+   "hyp": "ANH ĐÃ SỬ DỤNG BAO LÂU",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-6065",
+   "ref": "Bản sao cũng được, nhưng nên mang thêm ảnh.",
+   "hyp": "BẢN SAO CŨNG ĐƯỢC NHƯNG NÊN MANG THEO ẢNH",
+   "sec": 0.026
+  },
+  {
+   "id": "VE-6066",
+   "ref": "Phòng đang dọn, khoảng hai mươi phút nữa là xong.",
+   "hyp": "PHÒNG ĐANG DỌN KHOẢNG HAI MƯƠI PHÚT NỮA LÀ XONG",
+   "sec": 0.029
+  },
+  {
+   "id": "VE-6177",
+   "ref": "Khoảng hai phút thôi.",
+   "hyp": "KHOẢNG HAI PHÚT THÔI",
+   "sec": 0.017
+  },
+  {
+   "id": "VE-6234",
+   "ref": "Bên tôi muốn chia thành ba đợt, vì kho không thể nhận toàn bộ hàng cùng lúc.",
+   "hyp": "BÊN TÔI MUỐN CHIA THÀNH BA ĐỢT VÌ KHO KHÔNG THỂ NHẬN TOÀN BỘ HÀNG CÙNG LÚC",
+   "sec": 0.04
+  },
+  {
+   "id": "VE-6311",
+   "ref": "Xin lỗi, tàu này có đi về trung tâm thành phố không?",
+   "hyp": "XIN LỖI TÀU NÀY CÓ ĐI VỀ TRUNG TÂM THÀNH PHỐ KHÔNG",
+   "sec": 0.028
+  },
+  {
+   "id": "VE-6500",
+   "ref": "Diễn giả đang ở khu giao lưu.",
+   "hyp": "DIỄN GIẢ ĐANG Ở KHU GIAO LƯU",
+   "sec": 0.025
+  },
+  {
+   "id": "VE-6619",
+   "ref": "Xe có sẵn ghế trẻ em không?",
+   "hyp": "XE CÓ SẴN GHẾ TRẺ EM KHÔNG",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-6797",
+   "ref": "Khoảng sáu giờ là vừa, chưa quá đông đâu.",
+   "hyp": "KHOẢNG SÁU GIỜ LÀ VỪA CHƯA QUÁ ĐÔNG ĐÂU",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-6855",
+   "ref": "Tôi tìm thấy rồi, đúng chiếc này không?",
+   "hyp": "TÔI TÌM THẤY RỒI ĐÚNG CHIẾC NÀY KHÔNG",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-6932",
+   "ref": "Có, tôi thêm một viên pin.",
+   "hyp": "CÓ TÔI THÊM MỘT VIÊN BI",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-6948",
+   "ref": "Được, nhờ gọi trước khi đến.",
+   "hyp": "ĐƯỢC NHỜ GỌI TRƯỚC KHI ĐẾN",
+   "sec": 0.023
+  },
+  {
+   "id": "VE-6965",
+   "ref": "Tôi gửi ngay bây giờ.",
+   "hyp": "TÔI GỬI NGAY BÂY GIỜ",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-7042",
+   "ref": "Tôi cần hỏi về đồ thất lạc.",
+   "hyp": "TÔI CẦN HỎI VỀ ĐỒ THẤT LẠC",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-7082",
+   "ref": "Tôi đi cùng em bé, có bàn thay tã không?",
+   "hyp": "TÔI ĐI CÙNG EM BÉ CÓ BÀN THAY TẢ KHÔNG",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-7194",
+   "ref": "Anh muốn giao trước mấy giờ?",
+   "hyp": "ANH MUỐN GIAO TRƯỚC MẤY GIỜ",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-7346",
+   "ref": "Anh gửi vị trí chính xác giúp tôi.",
+   "hyp": "ANH GỬI VỊ TRÍ CHÍNH XÁC GIÚP TÔI",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-7355",
+   "ref": "Tối đa sáu mươi lăm oát.",
+   "hyp": "TỐI ĐA SÁU MƯƠI LĂM MOT",
+   "sec": 0.021
+  },
+  {
+   "id": "VE-7452",
+   "ref": "Được rồi, tôi vào được rồi.",
+   "hyp": "ĐƯỢC RỒI TÔI VÀO ĐƯỢC RỒI",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-7542",
+   "ref": "Cho tôi thử chiếc áo này cỡ lớn được không?",
+   "hyp": "CHO TÔI THỬ CHIẾC ÁO NÀY CỠ LỚN ĐƯỢC KHÔNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-7611",
+   "ref": "Tôi muốn lấy mã theo dõi nhé.",
+   "hyp": "TÔI MUỐN LẤY MÃ THEO DÕI NHÉ",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-7745",
+   "ref": "Anh nghĩ mình mất ở đâu?",
+   "hyp": "ANH NGHĨ MÌNH MẤT Ở ĐÂU",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-7765",
+   "ref": "Tôi đứng gần cổng chính, cạnh quán cà phê.",
+   "hyp": "TÔI ĐỨNG GẦN CỔNG CHÍNH CẠNH QUÁN CÀ PHÊ",
+   "sec": 0.021
+  },
+  {
+   "id": "VE-7804",
+   "ref": "Tôi vừa chuyển xong, anh kiểm tra nhé.",
+   "hyp": "TÔI VỪA CHUYỂN XONG ANH KIỂM TRA NHÉ",
+   "sec": 0.023
+  },
+  {
+   "id": "VE-7809",
+   "ref": "Anh có muốn mua bắp rang không?",
+   "hyp": "ANH CÓ MUỐN MUA BẮP RANG KHÔNG",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-7845",
+   "ref": "Dịch vụ giặt nhanh nhận đồ trước tám giờ tối.",
+   "hyp": "DỊCH VỤ GIẬT NHANH NHẬN ĐỒ TRƯỚC TÁM GIỜ TỐI",
+   "sec": 0.021
+  },
+  {
+   "id": "VE-7938",
+   "ref": "Anh rời phòng ngay và dùng cầu thang bộ.",
+   "hyp": "ANH RỜI PHÒNG NGAY VÀ DÙNG CẦU THANG BỘ",
+   "sec": 0.025
+  },
+  {
+   "id": "VE-8014",
+   "ref": "Tôi chưa nhận được thư xác nhận.",
+   "hyp": "TÔI CHƯA NHẬN ĐƯỢC THƯ XÁC NHẬN",
+   "sec": 0.019
+  },
+  {
+   "id": "VE-8130",
+   "ref": "Tôi uống một viên giảm đau lúc sáng.",
+   "hyp": "TÔI UỐNG MỘT VIÊN GIẢM ĐAU LÚC SÁNG",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-8273",
+   "ref": "Tôi đang đứng trước cửa hàng tiện lợi, cạnh quán cà phê xanh.",
+   "hyp": "TÔI ĐANG ĐỨNG TRƯỚC CỬA HÀNG TIỆN LỢI CẢNH QUÁN CÀ PHÊ XANH",
+   "sec": 0.027
+  },
+  {
+   "id": "VE-8449",
+   "ref": "Được, tôi đang đi tới.",
+   "hyp": "ĐƯỢC TÔI ĐANG ĐI TỚI",
+   "sec": 0.02
+  },
+  {
+   "id": "VE-8558",
+   "ref": "Buổi tối mở đến mấy giờ?",
+   "hyp": "BUỔI TỐI MỞ ĐẾN MẤY GIỜ",
+   "sec": 0.017
+  },
+  {
+   "id": "VE-8606",
+   "ref": "Tạm thời chưa, nhưng cần bên nghiệp vụ xác nhận cách tính.",
+   "hyp": "TẠM THỜI CHƯA NHƯNG CẦN BÊN NGHIỆP VỤ XÁC NHẬN TÍNH CÁCH TÍNH",
+   "sec": 0.036
+  },
+  {
+   "id": "VE-8653",
+   "ref": "Tiến độ tuần này đang chậm hơn dự kiến một chút.",
+   "hyp": "TIẾN ĐỘ TUẦN NÀY ĐANG CHẬM HƠN DỰ KIẾN MỘT CHÚT",
+   "sec": 0.024
+  },
+  {
+   "id": "VE-8762",
+   "ref": "Địa chỉ đúng là nhà bên cạnh, nhưng người giao đang đứng nhầm ở đầu đường.",
+   "hyp": "ĐỊA CHỈ ĐÚNG LÀ NHÀ BÊN CẠNH NHƯNG NGƯỜI DAO ĐANG ĐỨNG NHẦM Ở ĐẦU ĐƯỜNG",
+   "sec": 0.041
+  },
+  {
+   "id": "VE-8785",
+   "ref": "Tôi chưa hiểu ví dụ thứ hai lắm.",
+   "hyp": "TÔI CHƯA HIỂU VÍ DỤ THỨ HAI LẮM",
+   "sec": 0.027
+  },
+  {
+   "id": "VE-8787",
+   "ref": "Không hủy, người hướng dẫn sẽ đổi tuyến trong nhà.",
+   "hyp": "KHÔNG HỦY NGƯỜI HƯỚNG DẪN SẼ ĐỔI TUYẾN TRONG NHÀ",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-8860",
+   "ref": "Anh có mang theo hộ chiếu không?",
+   "hyp": "ANH CÓ MANG THEO HỘ CHIẾU KHÔNG",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-8940",
+   "ref": "Được, tôi thử trước nhé.",
+   "hyp": "ĐƯỢC TÔI THỬ TRƯỚC NHÉ",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-9048",
+   "ref": "Mẫu này giảm hai mươi phần trăm.",
+   "hyp": "MẪU NÀY GIẢM HAI MƯƠI PHẦN TRĂM",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-9469",
+   "ref": "Khoảng ba mươi phút trước, sau khi đi bộ nhanh.",
+   "hyp": "KHOẢNG BA MƯƠI PHÚT TRƯỚC SAU KHI ĐI BỘ NHANH",
+   "sec": 0.029
+  },
+  {
+   "id": "VE-9558",
+   "ref": "Cảm ơn chị, tôi qua đó nhé.",
+   "hyp": "CẢM ƠN CHỊ TÔI QUA ĐÓ NHÉ",
+   "sec": 0.026
+  },
+  {
+   "id": "VE-9570",
+   "ref": "Thang máy có dùng được không?",
+   "hyp": "THANG MÁY CÓ DÙNG ĐƯỢC KHÔNG",
+   "sec": 0.018
+  },
+  {
+   "id": "VE-9663",
+   "ref": "Từ khách sạn đi bộ đến khu phố cổ có xa không?",
+   "hyp": "TỪ KHÁCH SẠN ĐI BỘ ĐỂ KHU PHỐ CỔ CÓ XA KHÔNG",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-9737",
+   "ref": "Một phần đang ra, phần còn lại cần thêm năm phút.",
+   "hyp": "MỘT PHẦN ĐEN RA PHẦN CÒN LẠI CẦN THÊM NĂM PHÚT",
+   "sec": 0.027
+  },
+  {
+   "id": "VE-9740",
+   "ref": "Bên tôi cần báo giá cho năm trăm sản phẩm.",
+   "hyp": "BÊN TÔI CẦN BÁO GIÁ CHO NĂM TRĂM SẢN PHẨM",
+   "sec": 0.028
+  },
+  {
+   "id": "VE-9890",
+   "ref": "Tôi nhập rồi, cửa vẫn chưa mở.",
+   "hyp": "TÔI NHẬP RỒI CỬA VẪN CHƯA MỞ",
+   "sec": 0.022
+  },
+  {
+   "id": "VE-9921",
+   "ref": "Anh đang làm trong lĩnh vực nào?",
+   "hyp": "ANH ĐANG LÀM TRONG LĨNH VỰC NÀO",
+   "sec": 0.02
+  }
+ ]
+}

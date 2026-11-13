@@ -1,0 +1,49 @@
+{
+ "env": {
+  "host": "SOICT-HUST",
+  "os": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python": "3.11.17",
+  "cpu": "x86_64",
+  "cpu_count": 16,
+  "ram_gb": 50.5,
+  "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "network_online_at_start": true
+ },
+ "load_s": 9.77,
+ "model_sizes_mb": {
+  "asr:en-gigaspeech": 73.7,
+  "asr:vi-30m": 30.1,
+  "mt:gemma-4-E2B-it-Q3_K_M.gguf": 2536.8,
+  "tts:vifasttts-ngochuyen-small": 85.8,
+  "tts:supertonic-3-int8": 145.3
+ },
+ "total_model_mb": 2871.7,
+ "peak_ram_mb": 3513.8,
+ "peak_vram_mb": 2038,
+ "gpu_used_before_mb": 3756,
+ "pairs": {
+  "en-vi": {
+   "n": 100,
+   "asr_wer": 9.53,
+   "bleu": 43.07,
+   "chrf++": 59.65,
+   "asr_bleu_speech_out": 41.71,
+   "asr_chrf_speech_out": 57.82,
+   "asr_s_mean": 0.066,
+   "asr_s_p50": 0.06,
+   "asr_s_p95": 0.117,
+   "mt_s_mean": 0.137,
+   "mt_s_p50": 0.127,
+   "mt_s_p95": 0.221,
+   "tts_s_mean": 0.078,
+   "tts_s_p50": 0.072,
+   "tts_s_p95": 0.126,
+   "total_s_mean": 0.281,
+   "total_s_p50": 0.27,
+   "total_s_p95": 0.416,
+   "audio_s_mean": 5.96,
+   "comet": 84.06
+  }
+ },
+ "network_online_at_end": true
+}

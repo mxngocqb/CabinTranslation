@@ -1,0 +1,512 @@
+{
+ "summary": {
+  "lang": "en",
+  "n": 100,
+  "roundtrip_wer": 1.03,
+  "roundtrip_cer": 0.37,
+  "tts_rtf": 0.1164,
+  "avg_syn_s": 0.372
+ },
+ "rows": [
+  {
+   "text": "Could you explain that again more slowly?",
+   "asr": "Could you explain that again more slowly?",
+   "syn_s": 0.346
+  },
+  {
+   "text": "Which room are you in so I can check?",
+   "asr": "Which room are you in so I can check?",
+   "syn_s": 0.315
+  },
+  {
+   "text": "How long until the drinks are ready?",
+   "asr": "How long until the drinks are ready?",
+   "syn_s": 0.306
+  },
+  {
+   "text": "The deadline is Friday, right?",
+   "asr": "The deadline is Friday, right?",
+   "syn_s": 0.294
+  },
+  {
+   "text": "Do you need an extra cable?",
+   "asr": "Do you need an extra cable?",
+   "syn_s": 0.243
+  },
+  {
+   "text": "Okay, we'll go after dinner.",
+   "asr": "Okay, we'll go after dinner.",
+   "syn_s": 0.257
+  },
+  {
+   "text": "Yes, there's a blue sign right in front of the door.",
+   "asr": "Yes, there's a blue sign right in front of the door.",
+   "syn_s": 0.373
+  },
+  {
+   "text": "I'd like to rent a bicycle for about two hours.",
+   "asr": "I'd like to rent a bicycle for about two hours.",
+   "syn_s": 0.342
+  },
+  {
+   "text": "If delayed further, will the presentation session be affected?",
+   "asr": "If delayed further, will the presentation session be affected?",
+   "syn_s": 0.423
+  },
+  {
+   "text": "Do you need a basic camera or a professional one?",
+   "asr": "Do you need a basic camera or a professional one?",
+   "syn_s": 0.376
+  },
+  {
+   "text": "I planned to go to the island since morning, but looking at the weather like this, I'm a bit worried the boat will be delayed.",
+   "asr": "I plan to go to the islands since morning, but looking at the weather like this, I'm a bit worried the boat will be delayed.",
+   "syn_s": 0.732
+  },
+  {
+   "text": "I bought these headphones two days ago, but there is no sound from the left side.",
+   "asr": "I bought these headphones two days ago, but there is no sound from the left side.",
+   "syn_s": 0.5
+  },
+  {
+   "text": "Do you still have the warranty card?",
+   "asr": "Do you still have the warranty card?",
+   "syn_s": 0.309
+  },
+  {
+   "text": "I'd like to withdraw money with an international card.",
+   "asr": "I'd like to withdraw money with an international card.",
+   "syn_s": 0.387
+  },
+  {
+   "text": "I need the goods before noon tomorrow.",
+   "asr": "I need the goods before noon tomorrow.",
+   "syn_s": 0.308
+  },
+  {
+   "text": "There's a small family-run place, the food is quite easy to eat.",
+   "asr": "There's a small family run place the food is quite easy eat",
+   "syn_s": 0.419
+  },
+  {
+   "text": "Can I buy a fixation bandage here?",
+   "asr": "Can I buy a fixation bandage here?",
+   "syn_s": 0.311
+  },
+  {
+   "text": "Okay, see you again.",
+   "asr": "Okay see you again.",
+   "syn_s": 0.235
+  },
+  {
+   "text": "Yes, the helmet is included in the price.",
+   "asr": "Yes, the helmet is included in the price.",
+   "syn_s": 0.335
+  },
+  {
+   "text": "Please take it down to the rubbish room on the first floor.",
+   "asr": "Please take it down to the rubbish room on the first floor.",
+   "syn_s": 0.417
+  },
+  {
+   "text": "Yes, I'm standing right under that sign.",
+   "asr": "Yes, I'm standing right on that sign.",
+   "syn_s": 0.321
+  },
+  {
+   "text": "What colour clothes is the child wearing, and who were they with?",
+   "asr": "What color clothes is the child wearing, and who were they with?",
+   "syn_s": 0.456
+  },
+  {
+   "text": "I'm checking out of the hotel at eight tomorrow.",
+   "asr": "I'm checking out of the hotel at 8 tomorrow.",
+   "syn_s": 0.35
+  },
+  {
+   "text": "Please take her to the stairs on the left.",
+   "asr": "Please take her to the stairs on the left.",
+   "syn_s": 0.336
+  },
+  {
+   "text": "The counter on the right will print your badge.",
+   "asr": "The counter on the right will print your badge.",
+   "syn_s": 0.346
+  },
+  {
+   "text": "Okay, thank you for your help.",
+   "asr": "Okay, thank you for your help.",
+   "syn_s": 0.295
+  },
+  {
+   "text": "Please test the audio for a moment.",
+   "asr": "Please test the audio for a moment.",
+   "syn_s": 0.311
+  },
+  {
+   "text": "I'll be staying for about half an hour.",
+   "asr": "I'll be staying for about half an hour.",
+   "syn_s": 0.307
+  },
+  {
+   "text": "Please wait a moment.",
+   "asr": "Please wait a moment.",
+   "syn_s": 0.242
+  },
+  {
+   "text": "I'll resend the meeting link.",
+   "asr": "I'll resent the meeting link.",
+   "syn_s": 0.245
+  },
+  {
+   "text": "Who should I send the information to, then?",
+   "asr": "Who should I send the information to then?",
+   "syn_s": 0.339
+  },
+  {
+   "text": "Is this your first time attending this event?",
+   "asr": "Is this your first time attending this event?",
+   "syn_s": 0.33
+  },
+  {
+   "text": "Yes, but the doctor will choose after the examination.",
+   "asr": "Yes, but the doctor will choose after the examination.",
+   "syn_s": 0.421
+  },
+  {
+   "text": "How long until the invoice is sent?",
+   "asr": "How long until the invoice is sent?",
+   "syn_s": 0.331
+  },
+  {
+   "text": "The main lobby is on the ground floor, right?",
+   "asr": "The main lobby is on the ground floor, right?",
+   "syn_s": 0.342
+  },
+  {
+   "text": "I need mobile data for video calls and maps.",
+   "asr": "I need mobile data for video calls and maps.",
+   "syn_s": 0.341
+  },
+  {
+   "text": "Please double-check the tax code for me.",
+   "asr": "Please double check the tax code for me.",
+   "syn_s": 0.33
+  },
+  {
+   "text": "I have a reservation, but I've arrived earlier than expected.",
+   "asr": "I have a reservation, but I've arrived earlier than expected.",
+   "syn_s": 0.409
+  },
+  {
+   "text": "Yes, from seven to nine in the evening.",
+   "asr": "Yes, from seven to nine in the evening.",
+   "syn_s": 0.318
+  },
+  {
+   "text": "I feel the shoulder section is a bit tight.",
+   "asr": "I feel the shoulder section is a bit tight.",
+   "syn_s": 0.348
+  },
+  {
+   "text": "Will you drink here or take it to go?",
+   "asr": "Will you drink here or take it to go?",
+   "syn_s": 2.279
+  },
+  {
+   "text": "What are the main evaluation criteria?",
+   "asr": "What are the main evaluation criteria?",
+   "syn_s": 0.33
+  },
+  {
+   "text": "Have you taken any medication?",
+   "asr": "Have you taken any medication?",
+   "syn_s": 0.261
+  },
+  {
+   "text": "Okay, I'll fill it in right away.",
+   "asr": "Okay, I'll fill it in right away.",
+   "syn_s": 0.319
+  },
+  {
+   "text": "Which station should I get off at to head back?",
+   "asr": "Which station should I get off at to head back?",
+   "syn_s": 0.334
+  },
+  {
+   "text": "Okay, I'll send it before three o'clock.",
+   "asr": "Okay, I'll send it before 3 o'clock.",
+   "syn_s": 0.338
+  },
+  {
+   "text": "Please don't add sugar for me.",
+   "asr": "Please don't add sugar for me.",
+   "syn_s": 0.244
+  },
+  {
+   "text": "The technical support section needs to be specified clearer, especially response time for critical errors.",
+   "asr": "The technical support section needs to be specified clearer, especially response time for critical errors.",
+   "syn_s": 0.689
+  },
+  {
+   "text": "Are you free this weekend?",
+   "asr": "Are you free this weekend?",
+   "syn_s": 0.246
+  },
+  {
+   "text": "Do you need each item wrapped separately?",
+   "asr": "Do you need each item wrapped separately?",
+   "syn_s": 0.328
+  },
+  {
+   "text": "When is the first shipment due to be delivered?",
+   "asr": "When is the first shipment due to be delivered?",
+   "syn_s": 0.335
+  },
+  {
+   "text": "Okay, I'll wait a bit longer.",
+   "asr": "Okay, I'll wait a bit longer.",
+   "syn_s": 0.306
+  },
+  {
+   "text": "How long have you used it?",
+   "asr": "How long have you used it?",
+   "syn_s": 0.258
+  },
+  {
+   "text": "A copy is fine, but it's better to bring an extra photo.",
+   "asr": "A copy is fine, but it's better to bring an extra photo.",
+   "syn_s": 0.412
+  },
+  {
+   "text": "The room is being cleaned, it'll be ready in about twenty minutes.",
+   "asr": "The room is being cleaned, it'll be ready in about 20 minutes.",
+   "syn_s": 0.466
+  },
+  {
+   "text": "Just about two minutes.",
+   "asr": "Just about two minutes.",
+   "syn_s": 0.245
+  },
+  {
+   "text": "We'd like to split it into three batches, since the warehouse can't take all the goods at once.",
+   "asr": "We'd like to split it into three batches, since the warehouse can't take all the goods at once.",
+   "syn_s": 0.557
+  },
+  {
+   "text": "Excuse me, does this train go to the city center?",
+   "asr": "Excuse me, does this train go to the city center?",
+   "syn_s": 0.385
+  },
+  {
+   "text": "The speaker is in the networking area.",
+   "asr": "The speaker is in the networking area.",
+   "syn_s": 0.325
+  },
+  {
+   "text": "Does the car have a child seat available?",
+   "asr": "Does the car have a child seat available?",
+   "syn_s": 0.33
+  },
+  {
+   "text": "Around six o'clock is just right, not too crowded yet.",
+   "asr": "Around six o'clock is just right, not too crowded yet.",
+   "syn_s": 0.406
+  },
+  {
+   "text": "I found it, is this the right one?",
+   "asr": "I found it. Is this the right one?",
+   "syn_s": 0.307
+  },
+  {
+   "text": "Yes, I'll add one battery.",
+   "asr": "Yes, I'll add one battery.",
+   "syn_s": 0.262
+  },
+  {
+   "text": "Okay, please call before arriving.",
+   "asr": "Okay, please call before arriving.",
+   "syn_s": 0.337
+  },
+  {
+   "text": "I'll send it right now.",
+   "asr": "I'll send it right now.",
+   "syn_s": 0.229
+  },
+  {
+   "text": "I need to ask about lost property.",
+   "asr": "I need to ask about lost property.",
+   "syn_s": 0.327
+  },
+  {
+   "text": "I am travelling with a baby. Is there a changing table?",
+   "asr": "I am traveling with a baby, is there a changing table?",
+   "syn_s": 0.416
+  },
+  {
+   "text": "Before what time would you like it delivered?",
+   "asr": "Before what time would you like it delivered?",
+   "syn_s": 0.342
+  },
+  {
+   "text": "Please send me your exact location.",
+   "asr": "Please send me your exact location.",
+   "syn_s": 0.309
+  },
+  {
+   "text": "Up to sixty-five watts.",
+   "asr": "Up to 65 watts.",
+   "syn_s": 0.236
+  },
+  {
+   "text": "All right, I managed to get in.",
+   "asr": "All right, I managed to get in.",
+   "syn_s": 0.304
+  },
+  {
+   "text": "Could I try this shirt in a large size?",
+   "asr": "Could I try this shirt in a large size?",
+   "syn_s": 0.34
+  },
+  {
+   "text": "I'd like to get a tracking code.",
+   "asr": "I'd like to get a tracking code.",
+   "syn_s": 0.304
+  },
+  {
+   "text": "Where do you think you lost it?",
+   "asr": "Where do you think you lost it?",
+   "syn_s": 0.256
+  },
+  {
+   "text": "I'm standing near the main gate, next to the coffee shop.",
+   "asr": "I'm standing near the main gate next to the coffee shop.",
+   "syn_s": 0.387
+  },
+  {
+   "text": "I have just completed the transfer, please check.",
+   "asr": "I have just completed the transfer, please check.",
+   "syn_s": 0.382
+  },
+  {
+   "text": "Would you like to buy some popcorn?",
+   "asr": "Would you like to buy some popcorn?",
+   "syn_s": 0.305
+  },
+  {
+   "text": "The express laundry service accepts items before eight p.m.",
+   "asr": "The express laundry service accepts items before 8 p.m.",
+   "syn_s": 0.469
+  },
+  {
+   "text": "Leave your room immediately and use the stairs.",
+   "asr": "Leave your room immediately and use the stairs.",
+   "syn_s": 0.399
+  },
+  {
+   "text": "I haven't received the confirmation email.",
+   "asr": "I haven't received the confirmation email.",
+   "syn_s": 0.334
+  },
+  {
+   "text": "I took a painkiller tablet this morning.",
+   "asr": "I took a painkiller tablet this morning.",
+   "syn_s": 0.342
+  },
+  {
+   "text": "I am standing in front of the convenience store, next to the blue café.",
+   "asr": "I am standing in front of the convenience store, next to the blue cafe.",
+   "syn_s": 0.53
+  },
+  {
+   "text": "Okay, I'm on my way.",
+   "asr": "Okay, I'm on my way.",
+   "syn_s": 0.274
+  },
+  {
+   "text": "Until what time is it open in the evening?",
+   "asr": "Until what time is it open in the evening?",
+   "syn_s": 0.33
+  },
+  {
+   "text": "Not for now, but we need the business team to confirm the calculation method.",
+   "asr": "Not for now, but we need the business team to confirm the calculation method.",
+   "syn_s": 0.522
+  },
+  {
+   "text": "This week's progress is running slightly behind schedule.",
+   "asr": "This week's progress is running slightly behind schedule.",
+   "syn_s": 0.412
+  },
+  {
+   "text": "The correct address is the house next door, but the delivery person is mistakenly waiting at the entrance to the street.",
+   "asr": "The correct address is the house next door, but the delivery person is mistakenly waiting at the entrance to the street.",
+   "syn_s": 0.783
+  },
+  {
+   "text": "I still don't quite understand the second example.",
+   "asr": "I still don't quite understand the second example.",
+   "syn_s": 0.379
+  },
+  {
+   "text": "Not canceled, the tour guide will change to an indoor route.",
+   "asr": "Not cancelled, the tour guide will change to an indoor route.",
+   "syn_s": 0.414
+  },
+  {
+   "text": "Do you have your passport with you?",
+   "asr": "Do you have your passport with you?",
+   "syn_s": 0.317
+  },
+  {
+   "text": "Okay, I will try first.",
+   "asr": "Okay I will try first.",
+   "syn_s": 0.24
+  },
+  {
+   "text": "This model is twenty percent off.",
+   "asr": "This model is 20% off.",
+   "syn_s": 0.315
+  },
+  {
+   "text": "About thirty minutes ago, after walking briskly.",
+   "asr": "About thirty minutes ago after walking briskly,",
+   "syn_s": 0.387
+  },
+  {
+   "text": "Thank you, I'll head over there.",
+   "asr": "Thank you I'll head over there.",
+   "syn_s": 0.34
+  },
+  {
+   "text": "Can we use the lift?",
+   "asr": "Can we use the lift?",
+   "syn_s": 0.236
+  },
+  {
+   "text": "Is it far to walk from the hotel to the old quarter?",
+   "asr": "Is it far to walk from the hotel to the old quarter?",
+   "syn_s": 0.382
+  },
+  {
+   "text": "One dish is on its way, and the rest will take another five minutes.",
+   "asr": "One dish is on its way, and the rest will take another five minutes.",
+   "syn_s": 0.482
+  },
+  {
+   "text": "We need a quotation for five hundred products.",
+   "asr": "We need a quotation for 500 products.",
+   "syn_s": 0.339
+  },
+  {
+   "text": "I entered it, but the door still has not opened.",
+   "asr": "I entered it, but the door still has not opened.",
+   "syn_s": 0.38
+  },
+  {
+   "text": "What field do you work in?",
+   "asr": "What field do you work in?",
+   "syn_s": 0.25
+  }
+ ]
+}

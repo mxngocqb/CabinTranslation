@@ -1,0 +1,1070 @@
+{
+ "summary": {
+  "pair": "vi-zh",
+  "model": "vi-30m",
+  "n": 176,
+  "wer": 12.38,
+  "cer": 10.22,
+  "rtf": 0.0067,
+  "avg_latency_s": 0.023,
+  "load_s": 0.44
+ },
+ "rows": [
+  {
+   "id": "VM-0223",
+   "ref": "Bạn đã mang hộ chiếu chưa?",
+   "hyp": "BẠN XEM HỘ CHIẾU CHƯA",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-0237",
+   "ref": "Tôi xin được giới thiệu cho các bạn trước chút, vị này là giáo sư trường tôi, vị này là hiệu trưởng trường tôi.",
+   "hyp": "TÔI XIN ĐƯỢC GIỚI THIỆU CHO CÁC BẠN CHÚT CHÚT VỊ NÀY LÀ GIÁO SƯ TRƯỜNG TÔI VỊ NÀY LÀ HIỆU TRƯỞNG TRƯỜNG TÔI",
+   "sec": 0.037
+  },
+  {
+   "id": "VM-0244",
+   "ref": "Lần trước bạn đã xem mấy căn chung cư rồi?",
+   "hyp": "LẦN TRƯỚC BẠN ĐÃ XEM MẤY CĂN CHUNG CƯ RỒI",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-0370",
+   "ref": "Tôi đã bơi một tiếng đồng hồ.",
+   "hyp": "TÔI ĐÃ BƠI MỘT TIẾNG ĐỒNG HỒ",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-0383",
+   "ref": "Được điểm tối đa.",
+   "hyp": "LẦN NÀY CÔ TA ĐÃ THAM GIA KỲ THI ĐẠI HỌC NƯỚC NGOÀI KỲ THI NÀY CỰC KỲ KHÓ NHƯNG MÀ CÔ TA ĐÃ THI RẤT TỐT KHI ĐƯỢC ĐIỂM TỐI ĐA",
+   "sec": 0.042
+  },
+  {
+   "id": "VM-0430",
+   "ref": "Bạn còn muốn cái khác không?",
+   "hyp": "BẠN CÒN MUỐN CÁI KHÁC KHÔNG",
+   "sec": 0.012
+  },
+  {
+   "id": "VM-0475",
+   "ref": "Hàng ngày tôi đều kiên trì luyện tập một tiếng đồng hồ.",
+   "hyp": "HÀNG NGÀY TÔI ĐỀU KIÊN TRÌ LUYỆN TẬP MỘT TIẾNG ĐỒNG HỒ",
+   "sec": 0.023
+  },
+  {
+   "id": "VM-0484",
+   "ref": "Vậy 101 nhân dân tệ nhé, được không?",
+   "hyp": "VẬY MỘT TRĂM LẺ MỘT NHÂN DÂN TỆ NHÃ ĐƯỢC KHÔNG",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-0527",
+   "ref": "Tôi cũng thường lên mạng xem phim HD Trung Quốc và phim bộ.",
+   "hyp": "TÔI CŨNG THƯỜNG LÊN MẠNG XEM PHIM H D TRUNG QUỐC VÀ PHIM BỘ",
+   "sec": 0.025
+  },
+  {
+   "id": "VM-0538",
+   "ref": "Vali của bạn nặng không?",
+   "hyp": "VALI CỦA BẠN NẶNG KHÔNG",
+   "sec": 0.016
+  },
+  {
+   "id": "VM-0571",
+   "ref": "Trong lúc tôi đi làm, cô ta ở nhà xem lên mạng chat chit với bạn bè.",
+   "hyp": "TRONG LÚC TÔI ĐI LÀM CÔ TA Ở NHÀ XEM LÊN MẠNG CHÁT CHÍT VỚI BẠN BÈ",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-0621",
+   "ref": "Tôi không nhìn thấy xe máy của bạn.",
+   "hyp": "TÔI KHÔNG NHÌN THẤY XE MÁY CỦA BẠN",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-0643",
+   "ref": "Máy bay đi Việt Nam sắp cất cánh rồi.",
+   "hyp": "MÁY BAY ĐI VIỆT NAM SẮP CẤT CÁNH RỒI",
+   "sec": 0.023
+  },
+  {
+   "id": "VM-0697",
+   "ref": "Cửa hàng các bạn có nước ngọt không?",
+   "hyp": "CỬA HÀNG CÁC BẠN CÓ NƯỚC NGỌT KHÔNG",
+   "sec": 0.014
+  },
+  {
+   "id": "VM-0708",
+   "ref": "Vì sao cô ta học tốt như vậy?",
+   "hyp": "VÌ SAO CÔ TA HỌC TỐT NHƯ VẬY",
+   "sec": 0.013
+  },
+  {
+   "id": "VM-0751",
+   "ref": "Buổi tối sau khi tôi về nhà, cô ta thường kể cho tôi nghe những chuyện thú vị ở trong trường học. Cô ta cũng muốn biết tình hình ở Việt Nam.",
+   "hyp": "BUỔI TỐI SAU KHI TÔI VỀ NHÀ CÔ TA THƯỜNG KỂ CHO TÔI NGHE NHỮNG CHUYỆN THÚ VỊ Ở TRONG TRƯỜNG HỌC CÔ TA CŨNG MUỐN BIẾT TÌNH HÌNH Ở VIỆT NAM",
+   "sec": 0.046
+  },
+  {
+   "id": "VM-0815",
+   "ref": "Ăn cơm xong, tôi thường đi dạo một lát, thỉnh thoảng trò chuyện với bạn bè.",
+   "hyp": "ĂN CƠM XONG TÔI THƯỜNG XUYÊN ĐI BỘ MỘT CHÚT LÁT THỈNH THOẢNG BUÔN DƯA LÊ CÙNG VỚI BẠN BÈ",
+   "sec": 0.039
+  },
+  {
+   "id": "VM-0925",
+   "ref": "Tối qua 12:00 tôi mới đi ngủ.",
+   "hyp": "TỐI QUA MƯỜI HAI GIỜ TÔI MỚI ĐI NGỦ",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-1028",
+   "ref": "Xe của bạn mầu gì?",
+   "hyp": "XE CỦA BẠN MỎNG GÌ",
+   "sec": 0.011
+  },
+  {
+   "id": "VM-1034",
+   "ref": "Bạn đi xe máy đi học phải không?",
+   "hyp": "BÀ ĐI XE MÁY ĐI HỌC PHẢI KHÔNG",
+   "sec": 0.024
+  },
+  {
+   "id": "VM-1043",
+   "ref": "Rất đơn giản, bạn ngồi taxi khoảng 5 phút là tới.",
+   "hyp": "RẤT ĐƠN GIẢN BẠN NGỒI TAXI KHOẢNG NĂM PHÚT LÀ TỚI",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-1076",
+   "ref": "Tôi thường lên mạng search tài liệu học Tiếng Trung.",
+   "hyp": "TÔI THƯỜNG LÊN MẠNG SET TÀI LIỆU HỌC TIẾNG TRUNG",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-1149",
+   "ref": "Đây là chiếc máy ảnh kỹ thuật số mới ra.",
+   "hyp": "ĐÂY LÀ CHIẾC MÁY ẢNH KỸ THUẬT SỐ MỚI RA",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-1173",
+   "ref": "Sau khi tốt nghiệp đại học tôi sẽ đi Mỹ du học.",
+   "hyp": "SAU KHI TỐT NGHIỆP ĐẠI HỌC TÔI SẼ ĐI MỸ DU HỌC",
+   "sec": 0.024
+  },
+  {
+   "id": "VM-1241",
+   "ref": "Trước đây tôi là nhân viên của công ty này, bây giờ tôi là giáo viên Tiếng Trung.",
+   "hyp": "TRƯỚC ĐÂY TÔI LÀ NHÂN VIÊN CỦA CÔNG TY NÀY BÂY GIỜ TÔI LÀ GIÁO VIÊN TIẾNG TRUNG",
+   "sec": 0.029
+  },
+  {
+   "id": "VM-1245",
+   "ref": "Tôi đang học trường Đại học Bắc Kinh.",
+   "hyp": "TÔI ĐANG HỌC TRƯỜNG ĐẠI HỌC BẮC KINH",
+   "sec": 0.013
+  },
+  {
+   "id": "VM-1328",
+   "ref": "Cảm ơn bạn đến đón tôi.",
+   "hyp": "CẢM ƠN BÀ NÀY ĐÓN TÔI",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-1455",
+   "ref": "Sau khi ra khỏi siêu thị, tôi đi thăm một người bạn, cô ta đến trung tâm mua sắm.",
+   "hyp": "SAU KHI RA KHỎI SIÊU THỊ TÔI ĐI THĂM MỘT NGƯỜI BẠN CÔ TA ĐẾN TRUNG TÂM MUA SẮM",
+   "sec": 0.039
+  },
+  {
+   "id": "VM-1475",
+   "ref": "Buổi sáng sớm hàng ngày bẩy giờ hơn tôi mới thức dậy, vì vậy thường xuyên không có thời gian ăn sáng, uống một cốc sữa là đi học luôn.",
+   "hyp": "BUỔI SÁNG SỚM HẰNG NGÀY BẢY GIỜ HƠN TÔI MỚI THỨC DẬY VÌ VẬY THƯỜNG XUYÊN KHÔNG CÓ THỜI GIAN ĂN SÁNG UỐNG MỘT CỐC SỮA LÀ ĐI HỌC LUÔN",
+   "sec": 0.049
+  },
+  {
+   "id": "VM-1482",
+   "ref": "Bạn quen với cuộc sống ở đây chứ?",
+   "hyp": "BẠN QUEN VỚI CUỘC SỐNG Ở ĐÂY CHỨ",
+   "sec": 0.023
+  },
+  {
+   "id": "VM-1506",
+   "ref": "Trong trường có bưu điện, bạn có thể đến đó gửi thư, mua tem, cũng có thể gửi đồ đạc.",
+   "hyp": "TRONG TRƯỜNG HỌC CÓ MỘT BƯU ĐIỆN BẠN CÓ THỂ ĐẾN ĐÓ GỬI THƯ MUA TEM THƯ CŨNG CÓ THỂ KÝ GỬI ĐỒ ĐẠC",
+   "sec": 0.068
+  },
+  {
+   "id": "VM-1639",
+   "ref": "Tối hôm nay tôi đến hiệu sách mua hai quyển từ điển Hán – Việt.",
+   "hyp": "TỐI HÔM NAY TÔI ĐẾN HIỆU SÁCH MUA HAI QUYỂN TỪ ĐIỂN HÁN VIỆT",
+   "sec": 0.023
+  },
+  {
+   "id": "VM-1698",
+   "ref": "Trường học của bạn ở Việt Nam phải không?",
+   "hyp": "TRƯỜNG HỌC CỦA BẠN Ở VIỆT NAM PHẢI KHÔNG",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-1730",
+   "ref": "Ngày mai một người bạn của tôi đến Việt Nam du lịch, tôi phải đến sân bay đón cô ta, vì vậy không đi cùng bạn được.",
+   "hyp": "NGÀY MAI MỘT NGƯỜI BẠN CỦA TÔI ĐẾN VIỆT NAM DU LỊCH TÔI PHẢI ĐẾN SÂN BAY ĐÓN CÔ TA VÌ VẬY KHÔNG ĐI CÙNG BẠN ĐƯỢC",
+   "sec": 0.039
+  },
+  {
+   "id": "VM-1966",
+   "ref": "Quyển sách Tiếng Trung đó mà cô ta cho bạn mượn bạn đã xem xong chưa?",
+   "hyp": "CUỐN SÁCH TIẾNG TRUNG ĐÓ MÀ CÔ TA CHO BẠN MƯỢN BẠN ĐÃ XEM XONG CHƯA",
+   "sec": 0.033
+  },
+  {
+   "id": "VM-1985",
+   "ref": "Hôm nay có người tới tìm bạn.",
+   "hyp": "HÔM NAY CÓ NGƯỜI TỚI TÌM BẠN",
+   "sec": 0.023
+  },
+  {
+   "id": "VM-1989",
+   "ref": "Buổi liên hoan khiêu vũ.",
+   "hyp": "TỐI NAY TRƯỜNG HỢP CÓ BUỔI LIÊN HOAN KHIÊU VŨ CHÚNG TA CÙNG ĐẾN ĐÓ NHẢY CHÚT ĐI CHƠI ĐÙA CHÚT",
+   "sec": 0.041
+  },
+  {
+   "id": "VM-2046",
+   "ref": "Cô ta viết chữ Hán không tốt.",
+   "hyp": "CÔ TA VIẾT CHỮ HÁN KHÔNG TỐT",
+   "sec": 0.015
+  },
+  {
+   "id": "VM-2114",
+   "ref": "Cô ta ngủ bao lâu rồi?",
+   "hyp": "CÔ TA NGỦ BAO LÂU RỒI",
+   "sec": 0.016
+  },
+  {
+   "id": "VM-2129",
+   "ref": "Lúc nghỉ ngơi tôi thường uống một tách café hoặc ăn một ít đồ.",
+   "hyp": "LÚC NGHỈ NGƠI TÔI THƯỜNG UỐNG MỘT TÁCH CÀ PHÊ HOẶC ĂN MỘT ÍT ĐỒ",
+   "sec": 0.024
+  },
+  {
+   "id": "VM-2461",
+   "ref": "Bạn đã nghe ghi âm bao lâu?",
+   "hyp": "BẠN ĐÃ NGHE GHI ÂM BAO LÂU",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-2584",
+   "ref": "Sau khi bạn mua được vé thì nói tôi biết nhé.",
+   "hyp": "SAU KHI BẠN MUA ĐƯỢC VÉ THÌ NÓI TÔI BIẾT NHÉ",
+   "sec": 0.032
+  },
+  {
+   "id": "VM-2635",
+   "ref": "Tôi cảm thấy rất cô đơn nên thường xuyên nhớ cô ta.",
+   "hyp": "TÔI CẢM THẤY RẤT CÔ ĐƠN NÊN THƯỜNG XUYÊN NHỚ CÔ TA",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-2670",
+   "ref": "Công ty các bạn có bao nhiêu nhân viên?",
+   "hyp": "CÔNG TY CÁC BẠN CÓ BAO NHIÊU NHÂN VIÊN",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-2675",
+   "ref": "Cô ta bị cảm rồi, chiều hôm nay không tới học được.",
+   "hyp": "CÔ TA BỊ CẢM RỒI CHIỀU HÔM NAY KHÔNG TỚI HỌC ĐƯỢC",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-2697",
+   "ref": "Tối hôm qua bạn đã làm bài tập chưa?",
+   "hyp": "TỐI HÔM QUA BẠN ĐÃ LÀM BÀI TẬP CHƯA",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-2711",
+   "ref": "Mời bạn tối mai tới văn phòng của tôi, tôi có việc muốn nói với bạn.",
+   "hyp": "MỜI BẠN TỐI MAI TỚI VĂN PHÒNG CỦA TÔI TÔI CÓ VIỆC MUỐN NÓI VỚI BẠN",
+   "sec": 0.029
+  },
+  {
+   "id": "VM-2738",
+   "ref": "Ba năm không gặp, bạn vẫn như trước.",
+   "hyp": "BA NĂM KHÔNG GẶP BÀ VỢ NHƯ TRƯỚC",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-2759",
+   "ref": "Họ đều rất khỏe.",
+   "hyp": "HỌ ĐỀU RẤT KHỎE",
+   "sec": 0.012
+  },
+  {
+   "id": "VM-2987",
+   "ref": "Cô ta là người nước nào?",
+   "hyp": "CÔ TA LÀ NGƯỜI NƯỚC NÀO",
+   "sec": 0.012
+  },
+  {
+   "id": "VM-3007",
+   "ref": "Tôi hỏi cô giáo có phải là chiều nào cũng đi học không.",
+   "hyp": "TÔI HỎI CÔ GIÁO CÓ PHẢI LÀ CHIỀU NÀO CŨNG ĐI HỌC KHÔNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-3185",
+   "ref": "Bạn đã làm bài tập chưa?",
+   "hyp": "BẠN ĐÃ LÀM BÀI TẬP CHƯA",
+   "sec": 0.012
+  },
+  {
+   "id": "VM-3528",
+   "ref": "Tôi nghĩ đó là một điều thật đáng tiếc.",
+   "hyp": "CÔ TA NGHE XONG THÌ THẤY RẤT VUI",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-3595",
+   "ref": "Tối nay tôi mới đến khách sạn Hà Nội.",
+   "hyp": "TỐI NAY TÔI MỚI BÀN ĂN TỐI Ở KHÁCH SẠN HÀ NỘI",
+   "sec": 0.033
+  },
+  {
+   "id": "VM-3628",
+   "ref": "Cô ta đã ăn một ít cá và thịt bò.",
+   "hyp": "CÔ TA ĐÃ ĂN MỘT ÍT CÁ VÀ THỊT BÒ",
+   "sec": 0.016
+  },
+  {
+   "id": "VM-3695",
+   "ref": "Trên đường đến Việt Nam bạn có mệt không?",
+   "hyp": "TRÊN ĐƯỜNG ĐI ĐẾN VIỆT NAM BẠN CÓ MỆT KHÔNG",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-3775",
+   "ref": "Phía trước tôi là cô giáo của tôi.",
+   "hyp": "PHÍA TRƯỚC TÔI LÀ CÔ GIÁO TÔI",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-3899",
+   "ref": "Rất ngon.",
+   "hyp": "RẤT NGON",
+   "sec": 0.015
+  },
+  {
+   "id": "VM-3937",
+   "ref": "Các bạn muốn uống mấy bát canh trứng gà?",
+   "hyp": "CÁC BẠN MUỐN UỐNG MẤY BÁT CANH TRỨNG GÀ",
+   "sec": 0.016
+  },
+  {
+   "id": "VM-3984",
+   "ref": "Thưa ông, những cái mầu trắng này là đồ gì vậy?",
+   "hyp": "THƯA ÔNG NHỮNG CÁI MÀU TRẮNG NÀY LÀ ĐỒ GÌ VẬY",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-4040",
+   "ref": "Bạn đã luyện khí công mấy năm?",
+   "hyp": "BẠN ĐÃ LUYỆN KHÍ CÔNG MẤY NĂM",
+   "sec": 0.026
+  },
+  {
+   "id": "VM-4079",
+   "ref": "Sáng hôm qua tôi có việc gấp.",
+   "hyp": "SÁNG HÔM QUA TÔI CÓ VIỆC GẤP",
+   "sec": 0.014
+  },
+  {
+   "id": "VM-4094",
+   "ref": "Một tiếng sau máy bay mới tới.",
+   "hyp": "MỘT TÍNH SAU MÁY BAY MỚI TỚI",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-4114",
+   "ref": "Chiều nay chúng tôi có môn Tiếng Trung.",
+   "hyp": "CHIỀU NAY CHÚNG TÔI CÓ MÔN TIẾNG TRUNG",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-4238",
+   "ref": "Phải, ông ta là bác sỹ của tôi.",
+   "hyp": "PHẢI ÔNG TA LÀ BÁC SĨ CỦA TÔI",
+   "sec": 0.015
+  },
+  {
+   "id": "VM-4265",
+   "ref": "Cô ta phải đến bệnh viện khám bệnh, vì vậy nhờ tôi xin nghỉ cho cô ta.",
+   "hyp": "CÔ TA PHẢI ĐẾN BỆNH VIỆN KHÁM BỆNH VÌ VẬY NHỜ TÔI XIN NGHỈ CHO CÔ TA",
+   "sec": 0.026
+  },
+  {
+   "id": "VM-4442",
+   "ref": "Anh trai bạn mua số di động này ở đâu?",
+   "hyp": "ANH TRAI BẠN MUA SỐ DI ĐỘNG NÀY Ở ĐÂU",
+   "sec": 0.016
+  },
+  {
+   "id": "VM-4450",
+   "ref": "Hôm qua bạn đã ăn gì rồi?",
+   "hyp": "HÔM QUA BẠN ĐÃ ĂN GÌ RỒI",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-4565",
+   "ref": "Hôm nay tôi đến khách sạn, xe dừng một lát là tới.",
+   "hyp": "HÔM NAY TÔI ĐẾN KHÁCH SẠN TÁM GIỜ VỚI XE CHÍN GIỜ MỚI TỚI",
+   "sec": 0.031
+  },
+  {
+   "id": "VM-4602",
+   "ref": "Những quần áo này tôi vẫn chưa giặt xong mà.",
+   "hyp": "NHỮNG QUẦN ÁO NÀY TÔI VẪN CHƯA DIỆT XONG MÀ",
+   "sec": 0.025
+  },
+  {
+   "id": "VM-4630",
+   "ref": "Tôi đi Việt Nam trước, sau đó từ Việt Nam đi Bắc Kinh.",
+   "hyp": "TÔI ĐI VIỆT NAM TRƯỚC SAU ĐÓ TỪ VIỆT NAM ĐI BẮC KINH",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-4635",
+   "ref": "Sáng nay cô ấy có ra ngoài không?",
+   "hyp": "SÁNG HÔM NAY CÔ TA CÓ RA NGOÀI KHÔNG",
+   "sec": 0.029
+  },
+  {
+   "id": "VM-4658",
+   "ref": "Đi trung tâm mua sắm, thế nào?",
+   "hyp": "ĐI TRUNG TÂM MUA SẮM THẾ NÀO",
+   "sec": 0.027
+  },
+  {
+   "id": "VM-4761",
+   "ref": "Tất nhiên là tôi rất muốn nhảy cùng bạn rồi.",
+   "hyp": "TẤT NHIÊN LÀ TÔI RẤT MUỐN NHẢY CÙNG BẠN RỒI",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-4870",
+   "ref": "Ngày mai là Chủ nhật, người đi xe chắc chắn sẽ rất đông, chúng ta đi sớm chút đi. Bẩy rưỡi đi thế nào?",
+   "hyp": "NGÀY MAI LÀ CHỦ NHẬT NGƯỜI ĐI XE CHẮC CHẮN SẼ RẤT ĐÔNG CHÚNG TA ĐI SỚM CHÚT ĐI BẢY RƯỠI ĐI THẾ NÀO",
+   "sec": 0.044
+  },
+  {
+   "id": "VM-4874",
+   "ref": "Vì sao bạn chạy nhanh như vậy?",
+   "hyp": "VÌ SAO BẠN CHẠY NHANH NHƯ VẬY",
+   "sec": 0.013
+  },
+  {
+   "id": "VM-4984",
+   "ref": "Công ty chúng tôi là công ty thương mại quốc tế.",
+   "hyp": "CÔNG TY CHÚNG TÔI LÀ CÔNG TY THƯƠNG MẠI QUỐC TẾ",
+   "sec": 0.016
+  },
+  {
+   "id": "VM-4999",
+   "ref": "Bạn gọi vào di động cô ta đi.",
+   "hyp": "BẠN GỌI VÀO DI ĐỘNG CÔ TA ĐI",
+   "sec": 0.013
+  },
+  {
+   "id": "VM-5021",
+   "ref": "Bạn muốn uống chút café không?",
+   "hyp": "BẠN MUỐN UỐNG CHÚT CÀ PHÊ KHÔNG",
+   "sec": 0.015
+  },
+  {
+   "id": "VM-5073",
+   "ref": "Hàng ngày bạn đều dậy sớm như vậy à?",
+   "hyp": "HÀNG NGÀY BẠN ĐỀU DẬY SỚM NHƯ VẬY À",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-5101",
+   "ref": "Chúng tôi đã học được khoảng hơn 6000 từ vựng rồi.",
+   "hyp": "TỪ VỰNG MÀ CHÚNG TÔI HỌC BÂY GIỜ CÓ KHOẢNG HƠN SÁU NGHÌN TỪ",
+   "sec": 0.03
+  },
+  {
+   "id": "VM-5201",
+   "ref": "Sốt.",
+   "hyp": "ĂN MÌ BÒ XONG NGƯỜI TÔI RA RẤT NHIỀU MỒ HÔI CÔ TA NÓI RẰNG RA MỒ HÔI CÓ THỂ SẼ KHÔNG SỐT NỮA",
+   "sec": 0.041
+  },
+  {
+   "id": "VM-5224",
+   "ref": "Hàng năm đều có rất nhiều lưu học sinh tới Trung Quốc học Tiếng Trung.",
+   "hyp": "HÀNG NĂM ĐỀU CÓ RẤT NHIỀU LƯU HỌC SINH TỚI TRUNG QUỐC HỌC TIẾNG TRUNG",
+   "sec": 0.025
+  },
+  {
+   "id": "VM-5274",
+   "ref": "Tôi đã học được hai năm ở trường Đại học Bắc Kinh.",
+   "hyp": "TÔI ĐÃ HỌC ĐƯỢC HAI NĂM Ở TRƯỜNG ĐẠI HỌC BẮC KINH",
+   "sec": 0.026
+  },
+  {
+   "id": "VM-5294",
+   "ref": "Ngày mai tôi không đi siêu thị, tôi phải đến sân bay đón cô ta.",
+   "hyp": "NGÀY MAI TÔI KHÔNG ĐI SIÊU THỊ TÔI PHẢI ĐẾN SÂN BAY ĐÓN CÔ TA",
+   "sec": 0.024
+  },
+  {
+   "id": "VM-5308",
+   "ref": "Tôi giới thiệu cho cô ta văn hóa của Đất Nước chúng tôi.",
+   "hyp": "TÔI GIỚI THIỆU CHO CÔ TA VĂN HÓA CỦA ĐẤT NƯỚC CHÚNG TÔI",
+   "sec": 0.024
+  },
+  {
+   "id": "VM-5351",
+   "ref": "Chủ Nhật bạn dậy sớm không?",
+   "hyp": "CHỦ NHẬT BẠN DẬY SỚM KHÔNG",
+   "sec": 0.015
+  },
+  {
+   "id": "VM-5382",
+   "ref": "Buổi trưa ăn cơm xong, tôi thường về ký túc xá xem sách một lát hoặc nghe một chút nhạc.",
+   "hyp": "BUỔI TRƯA ĂN CƠM XONG TÔI THƯỜNG VỀ KÝ TÚC XÁ XEM SÁCH MỘT LÚC HOẶC NGHE MỘT CHÚT NHẠC",
+   "sec": 0.039
+  },
+  {
+   "id": "VM-5408",
+   "ref": "Học Tiếng Trung tương đối khó, nhưng mà rất thú vị.",
+   "hyp": "HỌC TIẾNG TRUNG TƯƠNG ĐỐI KHÓ NHƯNG MÀ THÚ VỊ",
+   "sec": 0.023
+  },
+  {
+   "id": "VM-5432",
+   "ref": "Ô ng ta là bạn của bố tôi, ông ta là bác sỹ.",
+   "hyp": "ÔNG TA LÀ BẠN CỦA BỐ TÔI ÔNG TA LÀ BÁC SĨ",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-5471",
+   "ref": "Tôi hỏi một người, đến trường Đại học Hà Nội đi như thế nào, người đó nói không biết vì không phải là người Việt Nam.",
+   "hyp": "ĐẾN TRƯỜNG ĐẠI HỌC HÀ NỘI ĐI NHƯ THẾ NÀO NGƯỜI ĐÓ KHÔNG BIẾT VÌ KHÔNG PHẢI NGƯỜI VIỆT NAM",
+   "sec": 0.04
+  },
+  {
+   "id": "VM-5573",
+   "ref": "Thời gian rảnh rỗi tôi thường xem tivi hoặc chơi máy tính.",
+   "hyp": "THỜI GIAN RẢNH RỖI TÔI THƯỜNG XEM TIVI HOẶC CHƠI MÁY TÍNH",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-5652",
+   "ref": "Tôi hỏi lại cô ấy xem, cô ấy có đi hay không.",
+   "hyp": "ĐỂ TÔI HỎI LẠI ĐỂ TÍNH SAU ĐI",
+   "sec": 0.024
+  },
+  {
+   "id": "VM-5699",
+   "ref": "Tôi đã đăng ký rồi.",
+   "hyp": "TÔI ĐÃ ĐĂNG KÝ RỒI",
+   "sec": 0.013
+  },
+  {
+   "id": "VM-5719",
+   "ref": "Hôm nay trong giờ học, thầy giáo bảo chúng tôi nói về sở thích bản thân.",
+   "hyp": "HÔM NAY TRONG GIỜ HỌC THẦY GIÁO BẢO CHÚNG TÔI NÓI VỀ SỞ THÍCH BẢN THÂN",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-5912",
+   "ref": "Bạn đã gặp cô giáo Tiếng Trung của tôi chưa?",
+   "hyp": "BẠN ĐÃ GẶP CÔ GIÁO TIẾNG TRUNG CỦA TÔI CHƯA",
+   "sec": 0.026
+  },
+  {
+   "id": "VM-5919",
+   "ref": "Bạn học Tiếng Anh rất giỏi, tôi nghĩ bạn có thể xem hiểu được.",
+   "hyp": "BẠN HỌC TIẾNG ANH RẤT GIỎI TÔI NGHĨ BẠN CÓ THỂ XEM HIỂU ĐƯỢC",
+   "sec": 0.044
+  },
+  {
+   "id": "VM-5942",
+   "ref": "Rèn luyện thân thể.",
+   "hyp": "HÀNG NGÀY BUỔI CHIỀU TÔI ĐỀU ĐẾN SÂN TẬP RÈN LUYỆN SỨC KHỎE",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-5982",
+   "ref": "Tôi đã sống ở Bắc Kinh hai năm.",
+   "hyp": "TÔI ĐÃ SỐNG Ở BẮC KINH HAI NĂM",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-5987",
+   "ref": "Tôi muốn mua 4 cân táo.",
+   "hyp": "TÔI MUỐN MUA BỐN CÂN TÁO",
+   "sec": 0.014
+  },
+  {
+   "id": "VM-6021",
+   "ref": "Các bạn học Tiếng Trung ở đâu?",
+   "hyp": "CÁC BẠN HỌC TIẾNG TRUNG Ở ĐÂU",
+   "sec": 0.012
+  },
+  {
+   "id": "VM-6064",
+   "ref": "Trên đường về nhà, tôi rất nhớ cô ta.",
+   "hyp": "TRÊN ĐƯỜNG VỀ NHÀ TÔI RẤT NHỚ CÔ TA",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-6100",
+   "ref": "Các bạn học ở đâu?",
+   "hyp": "CẢ BẠN HỌC Ở ĐÂU",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-6143",
+   "ref": "Tối mai chúng tôi có một buổi tiệc trà âm nhạc, bạn cũng đến tham gia nhé.",
+   "hyp": "TỐI MAI CHÚNG TÔI CÓ MỘT BUỔI CHÀO TIỆC GIÁNG SINH BẠN CŨNG ĐẾN THAM GIA ĐI",
+   "sec": 0.049
+  },
+  {
+   "id": "VM-6147",
+   "ref": "Bạn sống ở Bắc Kinh bao lâu rồi?",
+   "hyp": "BẠN SỐNG Ở BẮC KINH BAO LÂU RỒI",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-6179",
+   "ref": "Lúc nghỉ ngơi bạn thường làm gì?",
+   "hyp": "LÚC NGHỈ NGƠI BẠN THƯỜNG LÀM GÌ",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-6250",
+   "ref": "Cô ta nói cô ta biết làm món Việt Nam, Thứ 7 cô ta mời tôi đến nhà cô ta chơi, sau đó thưởng thức món ăn cô ta tự tay làm cho tôi.",
+   "hyp": "LÀM MÓN VIỆT NAM THỨ BẢY CÔ TA MỜI TÔI ĐẾN NHÀ CÔ TA CHƠI SAU ĐÓ THƯỞNG THỨC MÓN ĂN CÔ TA TỰ TAY LÀM",
+   "sec": 0.053
+  },
+  {
+   "id": "VM-6262",
+   "ref": "Tan học xong tôi sẽ đi nhảy.",
+   "hyp": "TAN HỌC XONG TÔI SẼ ĐI NHẢY",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-6376",
+   "ref": "Bạn đã xem phim này chưa?",
+   "hyp": "BẠN ĐÃ XEM PHIM NÀY CHƯA",
+   "sec": 0.012
+  },
+  {
+   "id": "VM-6385",
+   "ref": "Đã rất muộn rồi, chúng ta mau về nhà đi.",
+   "hyp": "ĐÃ RẤT MUỘN RỒI CHÚNG TA MAU VỀ NHÀ ĐI",
+   "sec": 0.027
+  },
+  {
+   "id": "VM-6526",
+   "ref": "Tuyến xe này đến Đại học Bắc Kinh không?",
+   "hyp": "CHUYẾN XE NÀY ĐẾN ĐẠI HỌC BẮC KINH PHẢI KHÔNG",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-6546",
+   "ref": "Tôi đến ngân hàng đổi tiền xong sẽ lái xe đến đón bạn.",
+   "hyp": "TÔI ĐẾN NGÂN HÀNG ĐỘI TIỀN XONG SẼ LÁI XE ĐẾN ĐÓN BẠN",
+   "sec": 0.026
+  },
+  {
+   "id": "VM-6579",
+   "ref": "Thiên an môn ở Trung Quốc.",
+   "hyp": "THIÊN AN MÔN Ở TRUNG QUỐC",
+   "sec": 0.015
+  },
+  {
+   "id": "VM-6593",
+   "ref": "Ngày mai ăn cơm xong tôi sẽ đi tìm cô ta.",
+   "hyp": "NGÀY MAI ĂN CƠM XONG TÔI SẼ ĐI TÌM CÔ TA",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-6653",
+   "ref": "Bạn đã lái xe mấy năm rồi?",
+   "hyp": "BẠN ĐÃ LẤY XE MẤY NĂM RỒI",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-6721",
+   "ref": "Ngày mai tôi không đến ngân hàng rút tiền.",
+   "hyp": "NGÀY MAI TÔI KHÔNG ĐẾN NGÂN HÀNG RÚT TIỀN",
+   "sec": 0.016
+  },
+  {
+   "id": "VM-6816",
+   "ref": "Hai bọn họ đều là lưu học sinh nước Mỹ.",
+   "hyp": "HAI BỌN HỌ ĐỀU LÀ DU HỌC SINH NƯỚC MỸ",
+   "sec": 0.015
+  },
+  {
+   "id": "VM-6957",
+   "ref": "Dạo này bạn tiến bộ rất nhanh.",
+   "hyp": "DẠO NÀY BẠN TIẾN BỘ RẤT NHANH",
+   "sec": 0.012
+  },
+  {
+   "id": "VM-6997",
+   "ref": "Kết quả xét nghiệm có chưa?",
+   "hyp": "KẾT QUẢ XÉT NGHIỆM CÓ CHƯA",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-7082",
+   "ref": "Bài tập của tôi đã làm xong rồi, bài khóa vẫn chưa đọc thạo đâu.",
+   "hyp": "BÀI TẬP CỦA TÔI ĐÃ LÀM XONG RỒI BÀI KHÓA VẪN CHƯA ĐỌC THẠO ĐÂU",
+   "sec": 0.03
+  },
+  {
+   "id": "VM-7194",
+   "ref": "Tôi cảm thấy nghe rất khó khăn, các bạn học nghe một lần là hiểu, tôi nghe hai ba lần mới nghe hiểu.",
+   "hyp": "TÔI CẢM THẤY NGHE RẤT KHÓ KHĂN CÁC BẠN HỌC NGHE MỘT LẦN LÀ HIỂU TÔI NGHE HAI BA LẦN MỚI NGHE HIỂU",
+   "sec": 0.041
+  },
+  {
+   "id": "VM-7195",
+   "ref": "Khi nào thì bạn trở về?",
+   "hyp": "KHI NÀO THÌ BẠN TRỞ VỀ",
+   "sec": 0.011
+  },
+  {
+   "id": "VM-7215",
+   "ref": "Cái vali đó nặng bao nhiêu?",
+   "hyp": "ĐÓ CHÍNH LÀ BỆNH VIỆN BẢO TÀNG VIỆT NAM CÁI VALI NÀY NẶNG BAO NHIÊU",
+   "sec": 0.027
+  },
+  {
+   "id": "VM-7221",
+   "ref": "Tôi và cô ấy tuần trước đi nhảy ở khách sạn Hà Nội.",
+   "hyp": "TÔI VÀ CÔ TA HẸN TỐI NAY ĐI NHẢY Ở KHÁCH SẠN HÀ NỘI",
+   "sec": 0.027
+  },
+  {
+   "id": "VM-7327",
+   "ref": "Bạn có chị gái không?",
+   "hyp": "BẠN CÓ CHỊ GÁI KHÔNG",
+   "sec": 0.011
+  },
+  {
+   "id": "VM-7396",
+   "ref": "Cô ta đã đến chưa?",
+   "hyp": "CÔ TA ĐÃ ĐẾN CHƯA",
+   "sec": 0.013
+  },
+  {
+   "id": "VM-7427",
+   "ref": "Cô ta nói Tiếng Trung cũng được.",
+   "hyp": "CÔ TA NÓI TIẾNG TRUNG CŨNG ĐƯỢC",
+   "sec": 0.013
+  },
+  {
+   "id": "VM-7507",
+   "ref": "Nghe nói nem là món ăn nổi tiếng của Việt Nam.",
+   "hyp": "NGHE NÓI NEM LÀ MÓN ĂN NỔI TIẾNG CỦA VIỆT NAM",
+   "sec": 0.03
+  },
+  {
+   "id": "VM-7523",
+   "ref": "Chủ nhật chúng ta đi xem chút quần áo, thế nào?",
+   "hyp": "CHỦ NHẬT CHÚNG TA ĐI XEM CHÚT QUẦN ÁO THẾ NÀO",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-7636",
+   "ref": "Tôi không biết số di động của cô giáo tôi là bao nhiêu",
+   "hyp": "TÔI KHÔNG BIẾT SỐ DI ĐỘNG CỦA CÔ GIÁO TÔI LÀ BAO NHIÊU",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-7657",
+   "ref": "Hàng ngày 6:30 bạn thức dậy hay là 7h?",
+   "hyp": "HÀNG NGÀY SÁU GIỜ BA MƯƠI BẠN THỨC DẬY HAY LÀ BẢY GIỜ",
+   "sec": 0.024
+  },
+  {
+   "id": "VM-7703",
+   "ref": "Con sông này nước rất sạch.",
+   "hyp": "CON SÔNG NÀY NƯỚC RẤT SẠCH",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-7747",
+   "ref": "Tôi từng đến quán cơm đó ăn cơm.",
+   "hyp": "TÔI TỪNG ĐẾN QUÁN CƠM ĐÓ ĂN CƠM",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-7787",
+   "ref": "Câu này bạn làm không đúng.",
+   "hyp": "CÂU NÀY BẠN LÀM KHÔNG ĐÚNG",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-7843",
+   "ref": "Tối nay ăn cơm xong là tôi xem tivi.",
+   "hyp": "TỐI NAY ĂN CƠM XONG LÀ TÔI XEM TIVI",
+   "sec": 0.024
+  },
+  {
+   "id": "VM-7854",
+   "ref": "Tôi mua hai vé xem phim, mời bạn đi xem phim.",
+   "hyp": "TÔI ĐÃ MUA HAI CHIẾC VÉ XEM PHIM MUỐN MỜI BẠN ĐI XEM PHIM",
+   "sec": 0.029
+  },
+  {
+   "id": "VM-7870",
+   "ref": "Nhà tôi có hai đứa, đứa lớn là con gái, đứa thứ hai là con trai.",
+   "hyp": "NHÀ TÔI CÓ HAI ĐỨA ĐỨA LỚN LÀ CON GÁI ĐỨA THỨ HAI LÀ CON TRAI",
+   "sec": 0.027
+  },
+  {
+   "id": "VM-7998",
+   "ref": "Cô giáo bảo tôi nói trước, tôi nói tôi cực kỳ thích thư pháp của Trung Quốc, cô giáo cảm thấy rất ngạc nhiên.",
+   "hyp": "CÔ GIÁO BẢO TÔI NÓI TRƯỚC TÔI NÓI TÔI CỰC KỲ THÍCH THƯ PHÁP CỦA TRUNG QUỐC CÔ GIÁO CẢM THẤY RẤT NGẠC NHIÊN",
+   "sec": 0.039
+  },
+  {
+   "id": "VM-8069",
+   "ref": "Em gái bạn làm việc ở bệnh viện, chị gái bạn làm việc ở ngân hàng.",
+   "hyp": "EM GÁI TÔI LÀM VIỆC Ở BỆNH VIỆN CHỊ GÁI TÔI LÀM VIỆC Ở NGÂN HÀNG",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-8088",
+   "ref": "Tôi hơi nhớ bạn một chút.",
+   "hyp": "TÔI HƠI NHỚ BẠN MỘT CHÚT",
+   "sec": 0.015
+  },
+  {
+   "id": "VM-8116",
+   "ref": "Bạn xem cô ta viết chữ Hán thế nào?",
+   "hyp": "BẠN XEM CÔ TA VIẾT CHỮ HÁN THẾ NÀO",
+   "sec": 0.015
+  },
+  {
+   "id": "VM-8131",
+   "ref": "Bạn thích ăn món Việt Nam hay là món Trung Quốc?",
+   "hyp": "BẠN THÍCH ĂN MÓN VIỆT NAM HAY LÀ MÓN TRUNG QUỐC",
+   "sec": 0.014
+  },
+  {
+   "id": "VM-8316",
+   "ref": "Hôm qua chị gái tôi đến nhà cô giáo.",
+   "hyp": "HÔM QUA CHỊ GÁI TÔI ĐẾN NHÀ CÔ GIÁO",
+   "sec": 0.014
+  },
+  {
+   "id": "VM-8325",
+   "ref": "Lúc về đến ký túc xá, cô ta cảm thấy khó chịu trong người, tôi đi cùng cô ta đến bệnh viện khám bệnh.",
+   "hyp": "LÚC VỀ ĐẾN KÝ TÚC XÁ CÔ TA CẢM THẤY KHÓ CHỊU NGƯỜI TÔI ĐI CÙNG CÔ TA ĐẾN BỆNH VIỆN KHÁM BỆNH",
+   "sec": 0.048
+  },
+  {
+   "id": "VM-8351",
+   "ref": "Bạn đã bơi được bao lâu?",
+   "hyp": "BẠN ĐÃ BƠI ĐƯỢC BAO LÂU",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-8379",
+   "ref": "Hôm nay chúng tôi đều rất mệt.",
+   "hyp": "HÔM NAY CHÚNG TÔI ĐỀU RẤT MỆT",
+   "sec": 0.011
+  },
+  {
+   "id": "VM-8392",
+   "ref": "Tôi cảm thấy khí hậu Bắc Kinh cực kỳ khô hanh.",
+   "hyp": "TÔI CẢM THẤY KHÍ HẬU BẮC KINH CỰC KỲ KHÔ HANH",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-8473",
+   "ref": "Bạn đợi chút đi, cô ta sẽ tới.",
+   "hyp": "BẠN ĐỢI CHÚT ĐI CÔ TA SẼ TỚI",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-8541",
+   "ref": "Tôi biết nói chút ít Tiếng Trung.",
+   "hyp": "TÔI BIẾT NÓI CHÚT ÍT TIẾNG TRUNG",
+   "sec": 0.014
+  },
+  {
+   "id": "VM-8608",
+   "ref": "Công ty chúng tôi có khoảng 150 nhân viên.",
+   "hyp": "CÔNG TY CHÚNG TÔI CÓ KHOẢNG MỘT TRĂM NĂM MƯƠI NHÂN VIÊN",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-8630",
+   "ref": "Thời gian 8 năm ngắn quá, tôi muốn kéo dài thêm 2 năm nữa.",
+   "hyp": "THỜI GIAN TÁM NĂM NGẮN QUÁ TÔI MUỐN KÉO DÀI THÊM HAI NĂM NỮA",
+   "sec": 0.031
+  },
+  {
+   "id": "VM-8655",
+   "ref": "Từ nhà tôi đến nhà bạn rất xa.",
+   "hyp": "TỪ NHÀ TÔI ĐẾN NHÀ BẠN CÓ SA KHÔNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VM-8677",
+   "ref": "Môi trường xung quanh đây rất tốt.",
+   "hyp": "MÔI TRƯỜNG XUNG QUANH ĐÂY RẤT TỐT",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-8725",
+   "ref": "Tôi là cô giáo của cô ta, tôi tìm cô ta có chút việc.",
+   "hyp": "TÔI LÀ CÔ GIÁO CỦA CÔ TA TÔI TÌM CÔ TA CÓ CHÚT VIỆC",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-8830",
+   "ref": "Ngồi xe đi, chiều 3h tôi lái xe tới đón bạn.",
+   "hyp": "NGỒI XE ĐI CHƯA BAO GIỜ TÔI LẠI TỚI ĐÓN BẠN",
+   "sec": 0.04
+  },
+  {
+   "id": "VM-8882",
+   "ref": "Xin lỗi đã để bạn đợi lâu.",
+   "hyp": "XIN LỖI LÀ ĐỂ BẠN ĐỢI LÂU",
+   "sec": 0.027
+  },
+  {
+   "id": "VM-8924",
+   "ref": "Anh trai tôi biết bạn của cô ta sống ở đâu",
+   "hyp": "ANH TRAI TÔI BIẾT BẠN CỦA CÔ TA SỐNG Ở ĐÂU",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-8989",
+   "ref": "Tôi thấy kế hoạch này không tệ, chúng mình cứ thế mà làm.",
+   "hyp": "TÔI THẤY KẾ HOẠCH NÀY KHÔNG TỆ CHÚNG MÌNH CỨ THẾ MÀ LÀM",
+   "sec": 0.027
+  },
+  {
+   "id": "VM-9007",
+   "ref": "Hàng ngày buổi chiều 4h tôi thường đến sân tập rèn luyện sức khỏe, chạy bộ, chơi bóng, 6h về ký túc xá, tắm rửa, giặt quần áo.",
+   "hyp": "HÀNG NGÀY BUỔI CHIỀU BỐN GIỜ TÔI THƯỜNG ĐẾN SÂN TẬP RÈN LUYỆN SỨC KHỎE CHẠY BỘ CHƠI BÓNG SÁU GIỜ VỀ KÝ TÚC XÁ TẮM RỬA GIẶT QUẦN ÁO",
+   "sec": 0.064
+  },
+  {
+   "id": "VM-9169",
+   "ref": "Gập sách lại đi.",
+   "hyp": "GẶP SÁCH LẠI ĐI",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-9318",
+   "ref": "Ngày mai có một đoàn đại biểu đến Việt Nam du lịch, vì vậy ngày mai bạn giúp tôi đi phiên dịch cho họ nhé.",
+   "hyp": "NGÀY MAI CÓ MỘT ĐOÀN ĐẠI BIỂU ĐẾN VIỆT NAM DU LỊCH VÌ VẬY NGÀY MAI BẠN GIÚP TÔI ĐI PHIÊN DỊCH CHO HỌ NHÉ",
+   "sec": 0.032
+  },
+  {
+   "id": "VM-9374",
+   "ref": "Chúng tôi đã học đến bài thứ 16 rồi.",
+   "hyp": "CHÚNG TÔI ĐÃ HỌC ĐẾN BÀI THỨ MƯỜI SÁU RỒI",
+   "sec": 0.021
+  },
+  {
+   "id": "VM-9510",
+   "ref": "Sau khi kiểm tra xong bác sỹ nói không phải tôi bị viêm ruột, chỉ là tiêu hóa không tốt.",
+   "hyp": "SAU KHI KIỂM TRA XONG BÁC SĨ NÓI KHÔNG PHẢI TÔI BỊ VIÊM RUỘT CHỈ LÀ TIÊU HÓA KHÔNG TỐT",
+   "sec": 0.037
+  },
+  {
+   "id": "VM-9536",
+   "ref": "Tôi đi từ nhà đến công viên, cô ta đi về công ty.",
+   "hyp": "TÔI ĐI TỪ NHÀ ĐẾN CÔNG VIÊN CÔ TA ĐI VỀ CÔNG TY",
+   "sec": 0.019
+  },
+  {
+   "id": "VM-9540",
+   "ref": "Tôi đã nhảy hai tiếng đồng hồ.",
+   "hyp": "TÔI ĐÃ NHẢY HAI TIẾNG ĐỒNG HỒ",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-9568",
+   "ref": "Hôm nay trong giờ học, cô giáo hỏi mọi người, sau khi tốt nghiệp dự định làm gì.",
+   "hyp": "HÔM NAY TRONG GIỜ HỌC CÔ GIÁO HỎI MỌI NGƯỜI SAU KHI TỐT NGHIỆP DỰ ĐỊNH LÀM GÌ",
+   "sec": 0.033
+  },
+  {
+   "id": "VM-9577",
+   "ref": "Cô ấy nói tiếng Trung rất giỏi, giống như người Trung Quốc vậy.",
+   "hyp": "CÔ TA RẤT TỐT GIỐNG NHƯ NGƯỜI TRUNG",
+   "sec": 0.036
+  },
+  {
+   "id": "VM-9612",
+   "ref": "Tôi vừa học Tiếng Trung, tôi không nói được Tiếng Trung.",
+   "hyp": "TÔI VỪA HỌC TIẾNG TRUNG TÔI KHÔNG NÓI ĐƯỢC TIẾNG TRUNG",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-9686",
+   "ref": "Những câu này bạn dịch đúng rồi.",
+   "hyp": "NHỮNG CÂU NÀY BẠN DỊCH ĐÚNG RỒI",
+   "sec": 0.022
+  },
+  {
+   "id": "VM-9705",
+   "ref": "Vẫn chưa đến.",
+   "hyp": "VẪN CHƯA ĐẾN",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-9783",
+   "ref": "Bạn xem tivi bao lâu rồi?",
+   "hyp": "BẠN XEM TV BAO LÂU RỒI",
+   "sec": 0.025
+  },
+  {
+   "id": "VM-9841",
+   "ref": "Thầy Vũ dạy chúng tôi môn nghe và nói.",
+   "hyp": "THẦY VŨ DẠY CHÚNG TÔI MÔN NGHE VÀ NÓI",
+   "sec": 0.017
+  },
+  {
+   "id": "VM-9853",
+   "ref": "Xin hỏi, bạn biết Viện bảo tàng Việt Nam ở đâu không?",
+   "hyp": "XIN HỎI BẠN BIẾT VIỆN BẢO TÀNG VIỆT NAM Ở ĐÂU KHÔNG",
+   "sec": 0.034
+  },
+  {
+   "id": "VM-9891",
+   "ref": "Chụp được tòa nhà kia không?",
+   "hyp": "CHỤP ĐƯỢC TÒA NHÀ KIA KHÔNG",
+   "sec": 0.018
+  },
+  {
+   "id": "VM-9894",
+   "ref": "Bật máy tính lên, xem chút đĩa bạn mới mua đi.",
+   "hyp": "BẬT MÁY TÍNH LÊN XEM CHÚT ĐĨA BẠN MỚI MUA ĐI",
+   "sec": 0.025
+  },
+  {
+   "id": "VM-9953",
+   "ref": "Bạn cảm thấy phim tối qua thế nào?",
+   "hyp": "BẠN CẢM THẤY PHIM TỐI QUA THẾ NÀO",
+   "sec": 0.015
+  }
+ ]
+}

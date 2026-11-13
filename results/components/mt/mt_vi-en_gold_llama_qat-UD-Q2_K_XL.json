@@ -1,0 +1,715 @@
+{
+ "summary": {
+  "pair": "vi-en",
+  "input": "gold",
+  "asr": null,
+  "backend": "llama",
+  "n": 100,
+  "bleu": 33.13,
+  "chrf++": 51.92,
+  "sec_per_sent": 0.216,
+  "comet": 81.93
+ },
+ "rows": [
+  {
+   "id": "VE-0037",
+   "src": "Anh giải thích lại chậm hơn được không?",
+   "ref": "Could you explain that again more slowly?",
+   "hyp": "Can you explain it more slowly?",
+   "comet": 93.4
+  },
+  {
+   "id": "VE-0046",
+   "src": "Anh đang ở phòng nào để tôi kiểm tra?",
+   "ref": "Which room are you in so I can check?",
+   "hyp": "Where are you?",
+   "comet": 58.0
+  },
+  {
+   "id": "VE-0247",
+   "src": "Bao lâu thì có đồ uống?",
+   "ref": "How long until the drinks are ready?",
+   "hyp": "How long until the drink?",
+   "comet": 80.6
+  },
+  {
+   "id": "VE-0371",
+   "src": "Hạn cuối là thứ Sáu đúng không?",
+   "ref": "The deadline is Friday, right?",
+   "hyp": "Is the end of the week Friday?",
+   "comet": 66.2
+  },
+  {
+   "id": "VE-0588",
+   "src": "Anh cần thêm dây không?",
+   "ref": "Do you need an extra cable?",
+   "hyp": "Do you need more wire?",
+   "comet": 86.9
+  },
+  {
+   "id": "VE-0589",
+   "src": "Được, chúng tôi sẽ đi sau bữa tối.",
+   "ref": "Okay, we'll go after dinner.",
+   "hyp": "Okay, we will go after dinner.",
+   "comet": 96.7
+  },
+  {
+   "id": "VE-0613",
+   "src": "Có, biển màu xanh ngay trước cửa.",
+   "ref": "Yes, there's a blue sign right in front of the door.",
+   "hyp": "Yes, the blue biển is right in front.",
+   "comet": 63.5
+  },
+  {
+   "id": "VE-0717",
+   "src": "Tôi muốn thuê xe đạp khoảng hai tiếng.",
+   "ref": "I'd like to rent a bicycle for about two hours.",
+   "hyp": "I want to rent a bicycle for two hours.",
+   "comet": 93.3
+  },
+  {
+   "id": "VE-0928",
+   "src": "Nếu chậm thêm thì buổi trình bày có ảnh hưởng không?",
+   "ref": "If delayed further, will the presentation session be affected?",
+   "hyp": "If I am late, will it affect the presentation?",
+   "comet": 86.0
+  },
+  {
+   "id": "VE-0980",
+   "src": "Anh cần máy cơ bản hay loại chuyên nghiệp?",
+   "ref": "Do you need a basic camera or a professional one?",
+   "hyp": "Do you need a basic machine or a professional one?",
+   "comet": 90.7
+  },
+  {
+   "id": "VE-1131",
+   "src": "Tôi định đi đảo từ sáng, nhưng nhìn trời thế này thì hơi lo tàu sẽ bị hoãn.",
+   "ref": "I planned to go to the island since morning, but looking at the weather like this, I'm a bit worried the boat will be delayed.",
+   "hyp": "I'm going to go to the island, but looking at the sky like this, I'm worried the ship will be delayed.",
+   "comet": 84.1
+  },
+  {
+   "id": "VE-1143",
+   "src": "Tôi mua tai nghe này hai ngày trước, nhưng bên trái không có tiếng.",
+   "ref": "I bought these headphones two days ago, but there is no sound from the left side.",
+   "hyp": "I bought this headset two days ago, but the left one has no sound.",
+   "comet": 84.2
+  },
+  {
+   "id": "VE-1679",
+   "src": "Anh còn phiếu bảo hành không?",
+   "ref": "Do you still have the warranty card?",
+   "hyp": "Do you still have the warranty?",
+   "comet": 95.4
+  },
+  {
+   "id": "VE-1805",
+   "src": "Tôi muốn rút tiền bằng thẻ quốc tế.",
+   "ref": "I'd like to withdraw money with an international card.",
+   "hyp": "I want to withdraw money using an international card.",
+   "comet": 94.3
+  },
+  {
+   "id": "VE-1814",
+   "src": "Tôi cần hàng trước trưa mai.",
+   "ref": "I need the goods before noon tomorrow.",
+   "hyp": "I need the order before noon tomorrow.",
+   "comet": 91.7
+  },
+  {
+   "id": "VE-1926",
+   "src": "Có một quán gia đình nhỏ, món khá dễ ăn.",
+   "ref": "There's a small family-run place, the food is quite easy to eat.",
+   "hyp": "There is a small family, a family-friendly place, it's easy to eat.",
+   "comet": 76.8
+  },
+  {
+   "id": "VE-2035",
+   "src": "Tôi mua băng cố định ở đây được không?",
+   "ref": "Can I buy a fixation bandage here?",
+   "hyp": "Can I buy a fixed/permanent item here?",
+   "comet": 74.3
+  },
+  {
+   "id": "VE-2091",
+   "src": "Được, hẹn gặp lại.",
+   "ref": "Okay, see you again.",
+   "hyp": "Okay, see you later.",
+   "comet": 93.3
+  },
+  {
+   "id": "VE-2272",
+   "src": "Có, mũ đã bao gồm trong giá.",
+   "ref": "Yes, the helmet is included in the price.",
+   "hyp": "Yes, the hat is included in the price.",
+   "comet": 93.0
+  },
+  {
+   "id": "VE-2289",
+   "src": "Anh mang xuống phòng rác tầng một.",
+   "ref": "Please take it down to the rubbish room on the first floor.",
+   "hyp": "Please go down to the first floor.",
+   "comet": 65.0
+  },
+  {
+   "id": "VE-2408",
+   "src": "Đúng, tôi đứng ngay dưới biển đó.",
+   "ref": "Yes, I'm standing right under that sign.",
+   "hyp": "That's right, I'm standing right under that.",
+   "comet": 83.1
+  },
+  {
+   "id": "VE-2437",
+   "src": "Cháu mặc đồ màu gì và đi cùng ai?",
+   "ref": "What colour clothes is the child wearing, and who were they with?",
+   "hyp": "What color is the outfit and who are you going with?",
+   "comet": 75.5
+  },
+  {
+   "id": "VE-2657",
+   "src": "Mai tôi rời khách sạn lúc tám giờ.",
+   "ref": "I'm checking out of the hotel at eight tomorrow.",
+   "hyp": "I leave the hotel at eight o'clock.",
+   "comet": 84.2
+  },
+  {
+   "id": "VE-2732",
+   "src": "Anh đưa bà ra cầu thang bên trái.",
+   "ref": "Please take her to the stairs on the left.",
+   "hyp": "Bring her to the left staircase.",
+   "comet": 88.2
+  },
+  {
+   "id": "VE-2920",
+   "src": "Quầy bên phải sẽ in thẻ cho anh.",
+   "ref": "The counter on the right will print your badge.",
+   "hyp": "The right side will be in the card for you.",
+   "comet": 56.3
+  },
+  {
+   "id": "VE-2952",
+   "src": "Được, cảm ơn anh đã hỗ trợ.",
+   "ref": "Okay, thank you for your help.",
+   "hyp": "You're welcome.",
+   "comet": 57.7
+  },
+  {
+   "id": "VE-2958",
+   "src": "Anh thử âm thanh một chút nhé.",
+   "ref": "Please test the audio for a moment.",
+   "hyp": "Please try the sound.",
+   "comet": 73.4
+  },
+  {
+   "id": "VE-2963",
+   "src": "Tôi ngồi lại khoảng nửa tiếng.",
+   "ref": "I'll be staying for about half an hour.",
+   "hyp": "I'm sitting down for half an hour.",
+   "comet": 79.7
+  },
+  {
+   "id": "VE-3026",
+   "src": "Anh chờ tôi một chút.",
+   "ref": "Please wait a moment.",
+   "hyp": "I'll wait a moment.",
+   "comet": 77.0
+  },
+  {
+   "id": "VE-3031",
+   "src": "Tôi gửi lại đường dẫn cuộc họp.",
+   "ref": "I'll resend the meeting link.",
+   "hyp": "I sent the link again.",
+   "comet": 77.0
+  },
+  {
+   "id": "VE-3103",
+   "src": "Vậy tôi gửi thông tin cho ai?",
+   "ref": "Who should I send the information to, then?",
+   "hyp": "Who is the information for?",
+   "comet": 67.3
+  },
+  {
+   "id": "VE-3224",
+   "src": "Anh đến sự kiện này lần đầu à?",
+   "ref": "Is this your first time attending this event?",
+   "hyp": "Is this the first time?",
+   "comet": 78.5
+  },
+  {
+   "id": "VE-3338",
+   "src": "Có, nhưng bác sĩ sẽ chọn sau khi khám.",
+   "ref": "Yes, but the doctor will choose after the examination.",
+   "hyp": "Yes, but the doctor will choose after the examination.",
+   "comet": 96.9
+  },
+  {
+   "id": "VE-3393",
+   "src": "Hóa đơn gửi trong bao lâu?",
+   "ref": "How long until the invoice is sent?",
+   "hyp": "How long does the invoice take?",
+   "comet": 87.6
+  },
+  {
+   "id": "VE-3410",
+   "src": "Sảnh chính ở tầng trệt đúng không?",
+   "ref": "The main lobby is on the ground floor, right?",
+   "hyp": "Is the main hall on the ground floor?",
+   "comet": 85.9
+  },
+  {
+   "id": "VE-3839",
+   "src": "Tôi cần dung lượng mạng để gọi video và xem bản đồ.",
+   "ref": "I need mobile data for video calls and maps.",
+   "hyp": "I need network capacity to call video and view a map.",
+   "comet": 84.2
+  },
+  {
+   "id": "VE-3937",
+   "src": "Anh kiểm tra lại mã số thuế giúp tôi.",
+   "ref": "Please double-check the tax code for me.",
+   "hyp": "Please check the tax code for me.",
+   "comet": 92.7
+  },
+  {
+   "id": "VE-4118",
+   "src": "Tôi có đặt phòng trước, nhưng đến sớm hơn dự kiến.",
+   "ref": "I have a reservation, but I've arrived earlier than expected.",
+   "hyp": "I booked a room, but it's earlier than expected.",
+   "comet": 79.0
+  },
+  {
+   "id": "VE-4318",
+   "src": "Đúng, từ bảy đến chín giờ tối.",
+   "ref": "Yes, from seven to nine in the evening.",
+   "hyp": "That's correct, from seven to nine o'clock.",
+   "comet": 79.8
+  },
+  {
+   "id": "VE-4326",
+   "src": "Tôi thấy phần vai hơi chật.",
+   "ref": "I feel the shoulder section is a bit tight.",
+   "hyp": "I feel like the shoulder is a bit tight.",
+   "comet": 88.3
+  },
+  {
+   "id": "VE-4513",
+   "src": "Anh uống tại quán hay mang đi?",
+   "ref": "Will you drink here or take it to go?",
+   "hyp": "Should I drink at the quán or go?",
+   "comet": 78.5
+  },
+  {
+   "id": "VE-4762",
+   "src": "Tiêu chí đánh giá chính là gì?",
+   "ref": "What are the main evaluation criteria?",
+   "hyp": "What is the criteria for evaluation?",
+   "comet": 93.8
+  },
+  {
+   "id": "VE-5093",
+   "src": "Anh đã uống thuốc gì chưa?",
+   "ref": "Have you taken any medication?",
+   "hyp": "Have you taken the medicine yet?",
+   "comet": 88.1
+  },
+  {
+   "id": "VE-5204",
+   "src": "Được, tôi điền ngay.",
+   "ref": "Okay, I'll fill it in right away.",
+   "hyp": "Okay, I'll fill it in right away.",
+   "comet": 98.3
+  },
+  {
+   "id": "VE-5433",
+   "src": "Tôi nên xuống ở trạm nào để quay lại?",
+   "ref": "Which station should I get off at to head back?",
+   "hyp": "Which station should I go to?",
+   "comet": 81.3
+  },
+  {
+   "id": "VE-5439",
+   "src": "Được, tôi sẽ gửi trước ba giờ.",
+   "ref": "Okay, I'll send it before three o'clock.",
+   "hyp": "Okay, I will send it in three hours.",
+   "comet": 85.8
+  },
+  {
+   "id": "VE-5468",
+   "src": "Đừng thêm đường giúp tôi nhé.",
+   "ref": "Please don't add sugar for me.",
+   "hyp": "Don't add sugar for me.",
+   "comet": 89.4
+  },
+  {
+   "id": "VE-5753",
+   "src": "Phần hỗ trợ kỹ thuật cần ghi rõ hơn, nhất là thời gian phản hồi khi có lỗi nghiêm trọng.",
+   "ref": "The technical support section needs to be specified clearer, especially response time for critical errors.",
+   "hyp": "The technical support needs to be clearer, especially regarding the response time when there are serious issues.",
+   "comet": 89.1
+  },
+  {
+   "id": "VE-5754",
+   "src": "Cuối tuần này anh có rảnh không?",
+   "ref": "Are you free this weekend?",
+   "hyp": "Are you free this weekend?",
+   "comet": 98.9
+  },
+  {
+   "id": "VE-5821",
+   "src": "Anh có cần gói riêng từng món không?",
+   "ref": "Do you need each item wrapped separately?",
+   "hyp": "Do you need separate packages for each item?",
+   "comet": 85.6
+  },
+  {
+   "id": "VE-5865",
+   "src": "Thời gian giao đợt đầu là khi nào?",
+   "ref": "When is the first shipment due to be delivered?",
+   "hyp": "When is the first phase?",
+   "comet": 63.5
+  },
+  {
+   "id": "VE-5918",
+   "src": "Được, tôi chờ thêm một chút.",
+   "ref": "Okay, I'll wait a bit longer.",
+   "hyp": "Okay, I'll wait a moment.",
+   "comet": 93.6
+  },
+  {
+   "id": "VE-6000",
+   "src": "Anh đã sử dụng bao lâu?",
+   "ref": "How long have you used it?",
+   "hyp": "How long have you been using it?",
+   "comet": 97.8
+  },
+  {
+   "id": "VE-6065",
+   "src": "Bản sao cũng được, nhưng nên mang thêm ảnh.",
+   "ref": "A copy is fine, but it's better to bring an extra photo.",
+   "hyp": "It's also okay, but it should include a picture.",
+   "comet": 73.7
+  },
+  {
+   "id": "VE-6066",
+   "src": "Phòng đang dọn, khoảng hai mươi phút nữa là xong.",
+   "ref": "The room is being cleaned, it'll be ready in about twenty minutes.",
+   "hyp": "The room is cleaning, it will be done in about twenty minutes.",
+   "comet": 81.2
+  },
+  {
+   "id": "VE-6177",
+   "src": "Khoảng hai phút thôi.",
+   "ref": "Just about two minutes.",
+   "hyp": "About two minutes.",
+   "comet": 94.5
+  },
+  {
+   "id": "VE-6234",
+   "src": "Bên tôi muốn chia thành ba đợt, vì kho không thể nhận toàn bộ hàng cùng lúc.",
+   "ref": "We'd like to split it into three batches, since the warehouse can't take all the goods at once.",
+   "hyp": "I want to divide it into three parts because the warehouse cannot handle everything at once.",
+   "comet": 81.3
+  },
+  {
+   "id": "VE-6311",
+   "src": "Xin lỗi, tàu này có đi về trung tâm thành phố không?",
+   "ref": "Excuse me, does this train go to the city center?",
+   "hyp": "Excuse me, this train goes to the city center?",
+   "comet": 93.2
+  },
+  {
+   "id": "VE-6500",
+   "src": "Diễn giả đang ở khu giao lưu.",
+   "ref": "The speaker is in the networking area.",
+   "hyp": "The speaker is in the area.",
+   "comet": 76.6
+  },
+  {
+   "id": "VE-6619",
+   "src": "Xe có sẵn ghế trẻ em không?",
+   "ref": "Does the car have a child seat available?",
+   "hyp": "Do you have a chair for a child?",
+   "comet": 72.4
+  },
+  {
+   "id": "VE-6797",
+   "src": "Khoảng sáu giờ là vừa, chưa quá đông đâu.",
+   "ref": "Around six o'clock is just right, not too crowded yet.",
+   "hyp": "It's about six o'clock, not too crowded yet.",
+   "comet": 90.6
+  },
+  {
+   "id": "VE-6855",
+   "src": "Tôi tìm thấy rồi, đúng chiếc này không?",
+   "ref": "I found it, is this the right one?",
+   "hyp": "I found it, right?",
+   "comet": 80.0
+  },
+  {
+   "id": "VE-6932",
+   "src": "Có, tôi thêm một viên pin.",
+   "ref": "Yes, I'll add one battery.",
+   "hyp": "Yes, I'm adding a battery.",
+   "comet": 88.5
+  },
+  {
+   "id": "VE-6948",
+   "src": "Được, nhờ gọi trước khi đến.",
+   "ref": "Okay, please call before arriving.",
+   "hyp": "Okay, thanks.",
+   "comet": 61.9
+  },
+  {
+   "id": "VE-6965",
+   "src": "Tôi gửi ngay bây giờ.",
+   "ref": "I'll send it right now.",
+   "hyp": "I'm sending it right now.",
+   "comet": 94.3
+  },
+  {
+   "id": "VE-7042",
+   "src": "Tôi cần hỏi về đồ thất lạc.",
+   "ref": "I need to ask about lost property.",
+   "hyp": "I need to ask about lost items.",
+   "comet": 93.3
+  },
+  {
+   "id": "VE-7082",
+   "src": "Tôi đi cùng em bé, có bàn thay tã không?",
+   "ref": "I am travelling with a baby. Is there a changing table?",
+   "hyp": "I go with the baby, do you have a diaper?",
+   "comet": 61.3
+  },
+  {
+   "id": "VE-7194",
+   "src": "Anh muốn giao trước mấy giờ?",
+   "ref": "Before what time would you like it delivered?",
+   "hyp": "What time is it?",
+   "comet": 60.1
+  },
+  {
+   "id": "VE-7346",
+   "src": "Anh gửi vị trí chính xác giúp tôi.",
+   "ref": "Please send me your exact location.",
+   "hyp": "Please send the exact location.",
+   "comet": 92.3
+  },
+  {
+   "id": "VE-7355",
+   "src": "Tối đa sáu mươi lăm oát.",
+   "ref": "Up to sixty-five watts.",
+   "hyp": "The maximum is fifty.",
+   "comet": 56.0
+  },
+  {
+   "id": "VE-7452",
+   "src": "Được rồi, tôi vào được rồi.",
+   "ref": "All right, I managed to get in.",
+   "hyp": "Okay, I'm in.",
+   "comet": 69.6
+  },
+  {
+   "id": "VE-7542",
+   "src": "Cho tôi thử chiếc áo này cỡ lớn được không?",
+   "ref": "Could I try this shirt in a large size?",
+   "hyp": "Can I try this shirt?",
+   "comet": 80.5
+  },
+  {
+   "id": "VE-7611",
+   "src": "Tôi muốn lấy mã theo dõi nhé.",
+   "ref": "I'd like to get a tracking code.",
+   "hyp": "I want to get the tracking code.",
+   "comet": 93.7
+  },
+  {
+   "id": "VE-7745",
+   "src": "Anh nghĩ mình mất ở đâu?",
+   "ref": "Where do you think you lost it?",
+   "hyp": "Where do I think?",
+   "comet": 55.6
+  },
+  {
+   "id": "VE-7765",
+   "src": "Tôi đứng gần cổng chính, cạnh quán cà phê.",
+   "ref": "I'm standing near the main gate, next to the coffee shop.",
+   "hyp": "I am standing near the main gate, next to the coffee shop.",
+   "comet": 95.1
+  },
+  {
+   "id": "VE-7804",
+   "src": "Tôi vừa chuyển xong, anh kiểm tra nhé.",
+   "ref": "I have just completed the transfer, please check.",
+   "hyp": "I just finished, please check it.",
+   "comet": 78.9
+  },
+  {
+   "id": "VE-7809",
+   "src": "Anh có muốn mua bắp rang không?",
+   "ref": "Would you like to buy some popcorn?",
+   "hyp": "Do you want to buy the product?",
+   "comet": 68.5
+  },
+  {
+   "id": "VE-7845",
+   "src": "Dịch vụ giặt nhanh nhận đồ trước tám giờ tối.",
+   "ref": "The express laundry service accepts items before eight p.m.",
+   "hyp": "Quick laundry service, pick up before eight o'clock.",
+   "comet": 68.3
+  },
+  {
+   "id": "VE-7938",
+   "src": "Anh rời phòng ngay và dùng cầu thang bộ.",
+   "ref": "Leave your room immediately and use the stairs.",
+   "hyp": "I need to leave the room and use the stairs.",
+   "comet": 86.7
+  },
+  {
+   "id": "VE-8014",
+   "src": "Tôi chưa nhận được thư xác nhận.",
+   "ref": "I haven't received the confirmation email.",
+   "hyp": "I haven't received the confirmation yet.",
+   "comet": 92.7
+  },
+  {
+   "id": "VE-8130",
+   "src": "Tôi uống một viên giảm đau lúc sáng.",
+   "ref": "I took a painkiller tablet this morning.",
+   "hyp": "I take a pain reliever in the morning.",
+   "comet": 84.8
+  },
+  {
+   "id": "VE-8273",
+   "src": "Tôi đang đứng trước cửa hàng tiện lợi, cạnh quán cà phê xanh.",
+   "ref": "I am standing in front of the convenience store, next to the blue café.",
+   "hyp": "I am standing in front of the convenience store, next to the green cafe.",
+   "comet": 89.9
+  },
+  {
+   "id": "VE-8449",
+   "src": "Được, tôi đang đi tới.",
+   "ref": "Okay, I'm on my way.",
+   "hyp": "Okay, I'm on my way.",
+   "comet": 98.2
+  },
+  {
+   "id": "VE-8558",
+   "src": "Buổi tối mở đến mấy giờ?",
+   "ref": "Until what time is it open in the evening?",
+   "hyp": "What time does the evening start?",
+   "comet": 79.2
+  },
+  {
+   "id": "VE-8606",
+   "src": "Tạm thời chưa, nhưng cần bên nghiệp vụ xác nhận cách tính.",
+   "ref": "Not for now, but we need the business team to confirm the calculation method.",
+   "hyp": "I need to confirm the calculation.",
+   "comet": 73.5
+  },
+  {
+   "id": "VE-8653",
+   "src": "Tiến độ tuần này đang chậm hơn dự kiến một chút.",
+   "ref": "This week's progress is running slightly behind schedule.",
+   "hyp": "The pace this week is a bit slower than expected.",
+   "comet": 82.3
+  },
+  {
+   "id": "VE-8762",
+   "src": "Địa chỉ đúng là nhà bên cạnh, nhưng người giao đang đứng nhầm ở đầu đường.",
+   "ref": "The correct address is the house next door, but the delivery person is mistakenly waiting at the entrance to the street.",
+   "hyp": "The address is correct, but the delivery person is standing in the wrong spot.",
+   "comet": 73.6
+  },
+  {
+   "id": "VE-8785",
+   "src": "Tôi chưa hiểu ví dụ thứ hai lắm.",
+   "ref": "I still don't quite understand the second example.",
+   "hyp": "I don't understand the second example very much.",
+   "comet": 91.6
+  },
+  {
+   "id": "VE-8787",
+   "src": "Không hủy, người hướng dẫn sẽ đổi tuyến trong nhà.",
+   "ref": "Not canceled, the tour guide will change to an indoor route.",
+   "hyp": "No cancellation, the guide will change the route.",
+   "comet": 74.2
+  },
+  {
+   "id": "VE-8860",
+   "src": "Anh có mang theo hộ chiếu không?",
+   "ref": "Do you have your passport with you?",
+   "hyp": "Do you have a passport?",
+   "comet": 91.2
+  },
+  {
+   "id": "VE-8940",
+   "src": "Được, tôi thử trước nhé.",
+   "ref": "Okay, I will try first.",
+   "hyp": "Okay, I'll try it.",
+   "comet": 88.6
+  },
+  {
+   "id": "VE-9048",
+   "src": "Mẫu này giảm hai mươi phần trăm.",
+   "ref": "This model is twenty percent off.",
+   "hyp": "This will reduce it by twenty percent.",
+   "comet": 73.4
+  },
+  {
+   "id": "VE-9469",
+   "src": "Khoảng ba mươi phút trước, sau khi đi bộ nhanh.",
+   "ref": "About thirty minutes ago, after walking briskly.",
+   "hyp": "About thirty minutes ago, after walking quickly.",
+   "comet": 87.9
+  },
+  {
+   "id": "VE-9558",
+   "src": "Cảm ơn chị, tôi qua đó nhé.",
+   "ref": "Thank you, I'll head over there.",
+   "hyp": "Thank you, I will go.",
+   "comet": 84.8
+  },
+  {
+   "id": "VE-9570",
+   "src": "Thang máy có dùng được không?",
+   "ref": "Can we use the lift?",
+   "hyp": "Can the machine be used?",
+   "comet": 69.0
+  },
+  {
+   "id": "VE-9663",
+   "src": "Từ khách sạn đi bộ đến khu phố cổ có xa không?",
+   "ref": "Is it far to walk from the hotel to the old quarter?",
+   "hyp": "Is the hotel walking to the old town far?",
+   "comet": 79.1
+  },
+  {
+   "id": "VE-9737",
+   "src": "Một phần đang ra, phần còn lại cần thêm năm phút.",
+   "ref": "One dish is on its way, and the rest will take another five minutes.",
+   "hyp": "The part is done, the rest needs five minutes.",
+   "comet": 68.4
+  },
+  {
+   "id": "VE-9740",
+   "src": "Bên tôi cần báo giá cho năm trăm sản phẩm.",
+   "ref": "We need a quotation for five hundred products.",
+   "hyp": "I need a quote for five hundred items.",
+   "comet": 92.3
+  },
+  {
+   "id": "VE-9890",
+   "src": "Tôi nhập rồi, cửa vẫn chưa mở.",
+   "ref": "I entered it, but the door still has not opened.",
+   "hyp": "I've entered it, but the door is still closed.",
+   "comet": 88.5
+  },
+  {
+   "id": "VE-9921",
+   "src": "Anh đang làm trong lĩnh vực nào?",
+   "ref": "What field do you work in?",
+   "hyp": "What are you doing?",
+   "comet": 78.2
+  }
+ ]
+}

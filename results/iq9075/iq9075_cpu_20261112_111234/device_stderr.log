@@ -1,0 +1,23 @@
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+loaded: {"load_ms":{"asr_en":5304.890807,"asr_ko":3194.502326,"asr_vi":2386.566659,"asr_zh":5020.646661,"mt":254.244754,"tts_en":910.869178,"tts_ko":596.534598,"tts_vi":661.34339,"tts_zh":2160.933917},"mt_backend":"cpu","mt_max_num_tokens":1024,"mt_model":"/var/roothome/cabin/models/gemma-4-E2B-it.litertlm","mt_num_threads":8,"mt_prefix_cache":false,"mt_sampler":"topk1","rss_after_load_kb":1581596,"rss_base_kb":43092}
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'Kinh'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'đ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'oàn'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'V'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'ũ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'th'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'ầ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'y'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'd'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'ạ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'y'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'chúng'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'tôi'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'môn'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'nghe'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'và'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'nói'
+done: {"load_ms":{"asr_en":5304.890807,"asr_ko":3194.502326,"asr_vi":2386.566659,"asr_zh":5020.646661,"mt":254.244754,"tts_en":910.869178,"tts_ko":596.534598,"tts_vi":661.34339,"tts_zh":2160.933917},"mt_backend":"cpu","mt_max_num_tokens":1024,"mt_model":"/var/roothome/cabin/models/gemma-4-E2B-it.litertlm","mt_num_threads":8,"mt_prefix_cache":false,"mt_sampler":"topk1","peak_rss_kb":4503788,"rss_after_load_kb":1581596,"rss_base_kb":43092}

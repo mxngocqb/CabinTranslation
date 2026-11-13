@@ -1,0 +1,130 @@
+[
+ {
+  "pair": "en-vi",
+  "variant": "base",
+  "input": "gold",
+  "bleu": 45.5,
+  "chrf++": 62.61,
+  "comet": 86.61
+ },
+ {
+  "pair": "en-vi",
+  "variant": "base",
+  "input": "asr",
+  "bleu": 45.26,
+  "chrf++": 61.47,
+  "comet": 84.62
+ },
+ {
+  "pair": "en-vi",
+  "variant": "short",
+  "input": "gold",
+  "bleu": 44.33,
+  "chrf++": 62.89,
+  "comet": 86.34
+ },
+ {
+  "pair": "en-vi",
+  "variant": "short",
+  "input": "asr",
+  "bleu": 43.51,
+  "chrf++": 61.21,
+  "comet": 84.34
+ },
+ {
+  "pair": "en-vi",
+  "variant": "faithful",
+  "input": "gold",
+  "bleu": 46.06,
+  "chrf++": 63.44,
+  "comet": 86.91
+ },
+ {
+  "pair": "en-vi",
+  "variant": "faithful",
+  "input": "asr",
+  "bleu": 45.4,
+  "chrf++": 61.92,
+  "comet": 84.4
+ },
+ {
+  "pair": "en-vi",
+  "variant": "interp_vi",
+  "input": "gold",
+  "bleu": 46.07,
+  "chrf++": 63.14,
+  "comet": 86.76
+ },
+ {
+  "pair": "en-vi",
+  "variant": "interp_vi",
+  "input": "asr",
+  "bleu": 45.51,
+  "chrf++": 62.01,
+  "comet": 84.79
+ },
+ {
+  "pair": "vi-en",
+  "variant": "base",
+  "input": "gold",
+  "bleu": 56.83,
+  "chrf++": 70.28,
+  "comet": 90.08
+ },
+ {
+  "pair": "vi-en",
+  "variant": "base",
+  "input": "asr",
+  "bleu": 48.01,
+  "chrf++": 62.96,
+  "comet": 86.29
+ },
+ {
+  "pair": "vi-en",
+  "variant": "short",
+  "input": "gold",
+  "bleu": 53.81,
+  "chrf++": 68.19,
+  "comet": 89.65
+ },
+ {
+  "pair": "vi-en",
+  "variant": "short",
+  "input": "asr",
+  "bleu": 47.86,
+  "chrf++": 62.96,
+  "comet": 86.0
+ },
+ {
+  "pair": "vi-en",
+  "variant": "faithful",
+  "input": "gold",
+  "bleu": 55.98,
+  "chrf++": 69.44,
+  "comet": 89.88
+ },
+ {
+  "pair": "vi-en",
+  "variant": "faithful",
+  "input": "asr",
+  "bleu": 47.39,
+  "chrf++": 62.72,
+  "comet": 86.05
+ },
+ {
+  "pair": "vi-en",
+  "variant": "interp_vi",
+  "input": "gold",
+  "bleu": 55.87,
+  "chrf++": 69.53,
+  "comet": 90.07
+ },
+ {
+  "pair": "vi-en",
+  "variant": "interp_vi",
+  "input": "asr",
+  "bleu": 47.69,
+  "chrf++": 63.01,
+  "comet": 86.4
+ }
+]

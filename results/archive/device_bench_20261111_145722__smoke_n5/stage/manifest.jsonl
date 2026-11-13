@@ -1,0 +1,10 @@
+{"id": "vi-en__VE-0037", "task": "e2e", "src": "vi", "tgt": "en", "wav": "/data/local/tmp/cabin/data/vi-en/VE-0037.wav"}
+{"id": "vi-en__VE-0046", "task": "e2e", "src": "vi", "tgt": "en", "wav": "/data/local/tmp/cabin/data/vi-en/VE-0046.wav"}
+{"id": "vi-en__VE-0247", "task": "e2e", "src": "vi", "tgt": "en", "wav": "/data/local/tmp/cabin/data/vi-en/VE-0247.wav"}
+{"id": "vi-en__VE-0371", "task": "e2e", "src": "vi", "tgt": "en", "wav": "/data/local/tmp/cabin/data/vi-en/VE-0371.wav"}
+{"id": "vi-en__VE-0588", "task": "e2e", "src": "vi", "tgt": "en", "wav": "/data/local/tmp/cabin/data/vi-en/VE-0588.wav"}
+{"id": "en-vi__EV-0157", "task": "e2e", "src": "en", "tgt": "vi", "wav": "/data/local/tmp/cabin/data/en-vi/EV-0157.wav"}
+{"id": "en-vi__EV-0182", "task": "e2e", "src": "en", "tgt": "vi", "wav": "/data/local/tmp/cabin/data/en-vi/EV-0182.wav"}
+{"id": "en-vi__EV-0228", "task": "e2e", "src": "en", "tgt": "vi", "wav": "/data/local/tmp/cabin/data/en-vi/EV-0228.wav"}
+{"id": "en-vi__EV-0240", "task": "e2e", "src": "en", "tgt": "vi", "wav": "/data/local/tmp/cabin/data/en-vi/EV-0240.wav"}
+{"id": "en-vi__EV-0250", "task": "e2e", "src": "en", "tgt": "vi", "wav": "/data/local/tmp/cabin/data/en-vi/EV-0250.wav"}

@@ -1,0 +1,1051 @@
+{
+ "summary": {
+  "pair": "ko-vi",
+  "input": "gold",
+  "asr": null,
+  "backend": "llama",
+  "n": 148,
+  "bleu": 26.31,
+  "chrf++": 45.7,
+  "sec_per_sent": 0.052,
+  "comet": 87.39
+ },
+ "rows": [
+  {
+   "id": "VK-0170",
+   "src": "전화가 왔어요",
+   "ref": "Có điện thoại đến.",
+   "hyp": "Có cuộc gọi đến.",
+   "comet": 93.8
+  },
+  {
+   "id": "VK-0242",
+   "src": "베트남어 가이드가 있나요?",
+   "ref": "Xe buýt có máy lạnh không?",
+   "hyp": "Có hướng dẫn tiếng Việt không?",
+   "comet": 70.2
+  },
+  {
+   "id": "VK-0300",
+   "src": "시간이 있을 때 뭐 하세요?",
+   "ref": "Khi rỗi ăn thường làm gì?",
+   "hyp": "Khi nào có thời gian thì bạn làm gì?",
+   "comet": 88.1
+  },
+  {
+   "id": "VK-0307",
+   "src": "아무 것도 없어요",
+   "ref": "Có gì đâu.",
+   "hyp": "Không có gì cả.",
+   "comet": 89.5
+  },
+  {
+   "id": "VK-0332",
+   "src": "죄송합니다, 시내에 가면 어디에 있는지 알 수 있을까요?",
+   "ref": "Xin lỗi, vào trung tâm thành phố thì bác sẽ biết ở đâu vậy?",
+   "hyp": "Xin lỗi, tôi có thể biết nó ở đâu nếu tôi đi đến thành phố không?",
+   "comet": 85.1
+  },
+  {
+   "id": "VK-0403",
+   "src": "어디 계세요?",
+   "ref": "Anh chị đâu ở đâu?",
+   "hyp": "Bạn đang ở đâu ạ?",
+   "comet": 92.1
+  },
+  {
+   "id": "VK-0415",
+   "src": "저는 차분한 색상을 좋아해요.",
+   "ref": "Tôi thích loại có màu sắc bình thường.",
+   "hyp": "Tôi thích màu sắc trầm.",
+   "comet": 90.1
+  },
+  {
+   "id": "VK-0419",
+   "src": "골라 주세요.",
+   "ref": "Chọn giúp tôi, IEC 0.",
+   "hyp": "Xin hãy chọn cho tôi.",
+   "comet": 73.2
+  },
+  {
+   "id": "VK-0637",
+   "src": "각자 계산할게요.",
+   "ref": "Tôi sẽ làm riêng cho từng người ư.",
+   "hyp": "Từng người tính riêng đi.",
+   "comet": 74.2
+  },
+  {
+   "id": "VK-0642",
+   "src": "여기 뭐 맛있어요?",
+   "ref": "Ở đây có món gì ngon?",
+   "hyp": "Cái gì ngon ạ?",
+   "comet": 90.4
+  },
+  {
+   "id": "VK-0709",
+   "src": "베트남으로 돌아가는 게 낫겠어요.",
+   "ref": "Quay về Việt Nam thì tốt hơn",
+   "hyp": "Nên về Việt Nam thì tốt hơn.",
+   "comet": 95.1
+  },
+  {
+   "id": "VK-0753",
+   "src": "객실 서비스는 몇 번인가요?",
+   "ref": "Gọi dịch vụ phòng phải quay số bao nhiêu?",
+   "hyp": "Dịch vụ phòng là số mấy ạ?",
+   "comet": 74.5
+  },
+  {
+   "id": "VK-0755",
+   "src": "정말 만족합니다. 얼마죠?",
+   "ref": "Tôi rất hài lòng. Bao nhiêu tiền?",
+   "hyp": "Tôi rất hài lòng. Bao nhiêu tiền ạ?",
+   "comet": 96.6
+  },
+  {
+   "id": "VK-0765",
+   "src": "안전벨트는 어떻게 채우나요?",
+   "ref": "Xin lỗi, dây an toàn cài như thế nào ạ?",
+   "hyp": "Cách thắt dây an toàn như thế nào ạ?",
+   "comet": 91.8
+  },
+  {
+   "id": "VK-0875",
+   "src": "우린 아직 만나지 않았어",
+   "ref": "Chúng tôi chưa gặp nhau bao giờ cả.",
+   "hyp": "Chúng tôi vẫn chưa gặp nhau.",
+   "comet": 92.5
+  },
+  {
+   "id": "VK-0918",
+   "src": "당신의 취미는 무엇인가요?",
+   "ref": "Sở thích của anh là gì?",
+   "hyp": "Sở thích của bạn là gì?",
+   "comet": 97.6
+  },
+  {
+   "id": "VK-1113",
+   "src": "오늘 체크아웃하고 싶어요.",
+   "ref": "Hôm nay tôi muốn trả phòng.",
+   "hyp": "Tôi muốn check-out hôm nay.",
+   "comet": 82.0
+  },
+  {
+   "id": "VK-1115",
+   "src": "심각한 건 아닌 것 같아요. 피로와 스트레스 때문이에요.",
+   "ref": "Có vẻ như anh không phải là bệnh nặng gì đâu, do mệt mỏi và stress dồn nên vậy.",
+   "hyp": "Không có gì nghiêm trọng đâu. Là do mệt mỏi và căng thẳng thôi.",
+   "comet": 87.6
+  },
+  {
+   "id": "VK-1152",
+   "src": "너무 넓어",
+   "ref": "Nó rộng quá",
+   "hyp": "Rộng quá.",
+   "comet": 88.6
+  },
+  {
+   "id": "VK-1165",
+   "src": "갈비구이가 있어요.",
+   "ref": "Có món sườn nướng",
+   "hyp": "Có món sườn nướng ạ.",
+   "comet": 95.1
+  },
+  {
+   "id": "VK-1207",
+   "src": "괜찮아요",
+   "ref": "Không sao.",
+   "hyp": "Không sao đâu.",
+   "comet": 97.4
+  },
+  {
+   "id": "VK-1262",
+   "src": "어젯밤부터였어요.",
+   "ref": "Tôi bị từ tối hôm qua",
+   "hyp": "Từ tối qua rồi.",
+   "comet": 77.4
+  },
+  {
+   "id": "VK-1331",
+   "src": "어떤 좌석을 원하세요?",
+   "ref": "Vé này sao khác thế?",
+   "hyp": "Anh muốn ghế nào ạ?",
+   "comet": 72.4
+  },
+  {
+   "id": "VK-1348",
+   "src": "15,000원이에요.",
+   "ref": "15.000 won 15.000",
+   "hyp": "Mười lăm nghìn won.",
+   "comet": 66.5
+  },
+  {
+   "id": "VK-1453",
+   "src": "너무 비싸요, 할인 안 되나요?",
+   "ref": "Đắt quá, không giảm giá được sao?",
+   "hyp": "Nó đắt quá, không được giảm giá à?",
+   "comet": 96.2
+  },
+  {
+   "id": "VK-1589",
+   "src": "지금 몇시죠?",
+   "ref": "Bây giờ là mấy giờ?",
+   "hyp": "Bây giờ mấy giờ rồi ạ?",
+   "comet": 96.8
+  },
+  {
+   "id": "VK-1679",
+   "src": "네, 도움이 필요하면 전화해줘요.",
+   "ref": "Vâng, nếu cần giúp đỡ hãy gọi tôi Tôi là Suzy",
+   "hyp": "Vâng, nếu cần giúp đỡ thì cứ gọi điện thoại nhé.",
+   "comet": 84.7
+  },
+  {
+   "id": "VK-1691",
+   "src": "가을은 독서하기 가장 좋은 계절이에요.",
+   "ref": "Mùa thu là mùa đọc sách hợp nhất.",
+   "hyp": "Mùa thu là mùa tốt nhất để đọc sách.",
+   "comet": 96.7
+  },
+  {
+   "id": "VK-1735",
+   "src": "저는 가을과 봄을 좋아해요.",
+   "ref": "Tôi thích mùa thu và mùa xuân.",
+   "hyp": "Tôi thích mùa thu và mùa xuân.",
+   "comet": 99.0
+  },
+  {
+   "id": "VK-1939",
+   "src": "네, 80달러입니다.",
+   "ref": "Vâng, tiền trọ và tiền thế cộng lại là 80 USD ạ.",
+   "hyp": "Vâng, 80 đô la.",
+   "comet": 73.5
+  },
+  {
+   "id": "VK-2035",
+   "src": "도착하면 알려줄 수 있나요?",
+   "ref": "Khi đến nơi có thể cho tôi biết được không",
+   "hyp": "Đến nơi thì báo cho tôi được không?",
+   "comet": 92.4
+  },
+  {
+   "id": "VK-2113",
+   "src": "시원해요.",
+   "ref": "Mát mê.",
+   "hyp": "Mát mẻ.",
+   "comet": 77.5
+  },
+  {
+   "id": "VK-2270",
+   "src": "뒤에 건물이 나오게 찍어주세요.",
+   "ref": "Hãy chụp có cả tòa nhà phía sau.",
+   "hyp": "Xin hãy chụp cái tòa nhà phía sau.",
+   "comet": 87.9
+  },
+  {
+   "id": "VK-2281",
+   "src": "다시 뒤집어 놓을 수 있고, 여기까지 고, 다시 을 수 있습니다.",
+   "ref": "làm ngược như lúc nãy là được, đe vào chỗ này và rút ra là được.",
+   "hyp": "Có thể lật lại, và đến đây có thể.",
+   "comet": 43.9
+  },
+  {
+   "id": "VK-2317",
+   "src": "여성복 코너는 몇 층인가요?",
+   "ref": "Nồi bán quần áo nữ tầm mấy?",
+   "hyp": "Khu vực quần áo nữ ở tầng mấy ạ?",
+   "comet": 86.3
+  },
+  {
+   "id": "VK-2371",
+   "src": "하루에 얼마인가요?",
+   "ref": "Ở một ngày bao nhiêu?",
+   "hyp": "Một ngày bao nhiêu ạ?",
+   "comet": 91.7
+  },
+  {
+   "id": "VK-2385",
+   "src": "오늘은 제가 낼게요.",
+   "ref": "Hôm nay tôi sẽ trả cho",
+   "hyp": "Hôm nay tôi sẽ trả.",
+   "comet": 94.0
+  },
+  {
+   "id": "VK-2428",
+   "src": "정확한 위치를 알려줘요",
+   "ref": "Hãy chỉ cho tôi vị trí thật cụ thể.",
+   "hyp": "Cho tôi biết vị trí chính xác.",
+   "comet": 91.7
+  },
+  {
+   "id": "VK-2509",
+   "src": "앉을 수 있어?",
+   "ref": "Anh tìm hộ tôi chỗ ngồi được không?",
+   "hyp": "Ngồi được không?",
+   "comet": 66.7
+  },
+  {
+   "id": "VK-2524",
+   "src": "아마 감기인 것 같아요.",
+   "ref": "Có lẽ tôi bị cảm.",
+   "hyp": "Hình như là cảm lạnh rồi.",
+   "comet": 78.9
+  },
+  {
+   "id": "VK-2542",
+   "src": "저 사람들이 먹는 건 무슨 요리인가요?",
+   "ref": "Món những người kia đang ăn là món gì?",
+   "hyp": "Những người đó đang ăn món gì vậy?",
+   "comet": 95.4
+  },
+  {
+   "id": "VK-2775",
+   "src": "감사합니다, 여기서 사진 인화도 해주나요?",
+   "ref": "Cảm ơn, ở đây có rửa ảnh không à?",
+   "hyp": "Cảm ơn, ở đây có in ảnh không ạ?",
+   "comet": 94.6
+  },
+  {
+   "id": "VK-2808",
+   "src": "침대칸으로 바꾸고 싶은데 자리 있나요?",
+   "ref": "Tôi muốn đổi lại vé giường nằm Nhưng còn chỗ không?",
+   "hyp": "Muốn đổi sang phòng giường, có chỗ không ạ?",
+   "comet": 84.3
+  },
+  {
+   "id": "VK-2955",
+   "src": "그 이유가 뭐죠?",
+   "ref": "Thưa có lý do gì không ạ?",
+   "hyp": "Lý do là gì ạ?",
+   "comet": 95.5
+  },
+  {
+   "id": "VK-3012",
+   "src": "오늘 무슨 요일이죠?",
+   "ref": "Hôm nay là thứ mấy?",
+   "hyp": "Hôm nay là thứ mấy ạ?",
+   "comet": 97.2
+  },
+  {
+   "id": "VK-3141",
+   "src": "기차표 예매하고 싶어요.",
+   "ref": "Tôi muốn đặt mua bé tàu lửa.",
+   "hyp": "Tôi muốn đặt vé tàu.",
+   "comet": 82.5
+  },
+  {
+   "id": "VK-3169",
+   "src": "잘 자세요!",
+   "ref": "Chúc ngủ ngon!",
+   "hyp": "Chúc ngủ ngon!",
+   "comet": 99.5
+  },
+  {
+   "id": "VK-3210",
+   "src": "위탁 수하물 있나요?",
+   "ref": "Có hành lý cần gửi không?",
+   "hyp": "Có hành lý gửi?",
+   "comet": 93.3
+  },
+  {
+   "id": "VK-3221",
+   "src": "길을 안내해 주실 수 있나요?",
+   "ref": "có thể dẫn đường cho tôi được không",
+   "hyp": "Bạn có thể chỉ đường cho tôi được không?",
+   "comet": 97.4
+  },
+  {
+   "id": "VK-3230",
+   "src": "햄버거 하나하고 작은 콜라 하나 주세요.",
+   "ref": "Hãy cho tôi một cái bánh hamburger và một chai cola nhỏ.",
+   "hyp": "Cho tôi một cái hamburger và một lon cola nhỏ.",
+   "comet": 92.3
+  },
+  {
+   "id": "VK-3264",
+   "src": "공연 시간이 얼마나 되나요?",
+   "ref": "Mấy giờ bị diễn?",
+   "hyp": "Thời gian biểu diễn là bao lâu ạ?",
+   "comet": 86.4
+  },
+  {
+   "id": "VK-3292",
+   "src": "여름",
+   "ref": "Mùa hè",
+   "hyp": "Mùa hè.",
+   "comet": 96.8
+  },
+  {
+   "id": "VK-3343",
+   "src": "예약하고 싶어요",
+   "ref": "Tôi muốn đặt chỗ",
+   "hyp": "Tôi muốn đặt lịch hẹn.",
+   "comet": 91.6
+  },
+  {
+   "id": "VK-3366",
+   "src": "도와주세요.",
+   "ref": "Hãy giúp tôi với.",
+   "hyp": "Cứu tôi với.",
+   "comet": 93.5
+  },
+  {
+   "id": "VK-3408",
+   "src": "시내까지 얼마인가요?",
+   "ref": "Đi vào trong thành phố hết bao nhiêu tiền?",
+   "hyp": "Đến trung tâm bao nhiêu tiền ạ?",
+   "comet": 83.3
+  },
+  {
+   "id": "VK-3562",
+   "src": "메뉴 여기 있어요.",
+   "ref": "Có thực đơn đây.",
+   "hyp": "Menu ở đây ạ.",
+   "comet": 80.5
+  },
+  {
+   "id": "VK-3569",
+   "src": "속이지 마세요.",
+   "ref": "Xin ông đừng có lừa tôi",
+   "hyp": "Đừng lừa tôi.",
+   "comet": 90.1
+  },
+  {
+   "id": "VK-3621",
+   "src": "신호등 앞에 세워 주세요.",
+   "ref": "Hãy dừng lại ở phía trước đèn tín hiệu.",
+   "hyp": "Xin đặt trước đèn tín hiệu nhé.",
+   "comet": 60.8
+  },
+  {
+   "id": "VK-3625",
+   "src": "들어오세요",
+   "ref": "Xin mời vào.",
+   "hyp": "Mời vào.",
+   "comet": 92.4
+  },
+  {
+   "id": "VK-3675",
+   "src": "네, 뭘 쓰세요?",
+   "ref": "Vâng, anh dùng gì ạ?",
+   "hyp": "Vâng, dùng gì ạ?",
+   "comet": 96.5
+  },
+  {
+   "id": "VK-3681",
+   "src": "오늘 뭐 할 거예요?",
+   "ref": "Hôm nay anh chỉ định làm gì?",
+   "hyp": "Hôm nay bạn sẽ làm gì?",
+   "comet": 93.8
+  },
+  {
+   "id": "VK-3753",
+   "src": "다 왔어요, 여기가 롯데호텔이에요.",
+   "ref": "Đến nơi rồi, đây là khách sạn Lotte",
+   "hyp": "Đến rồi, đây là khách sạn Lotte.",
+   "comet": 96.2
+  },
+  {
+   "id": "VK-3778",
+   "src": "어, 얼마나 늦어요?",
+   "ref": "Hờ, đến trễ bao nhiêu lâu?",
+   "hyp": "Chậm bao lâu rồi ạ?",
+   "comet": 72.5
+  },
+  {
+   "id": "VK-3793",
+   "src": "여기서 드실 건가요, 아니면 포장하실 건가요?",
+   "ref": "Anh, chị, sẽ ăn ở đây hay là mang đi?",
+   "hyp": "Anh sẽ dùng ở đây hay sẽ đóng gói ạ?",
+   "comet": 80.3
+  },
+  {
+   "id": "VK-3857",
+   "src": "너무 비싸요. 할인해 주실 수 있나요?",
+   "ref": "Đắt quá có thể giảm giá cho được không?",
+   "hyp": "Nó đắt quá. Bạn có thể giảm giá không?",
+   "comet": 91.9
+  },
+  {
+   "id": "VK-3884",
+   "src": "안녕하세요, 감사합니다, 죄송합니다.",
+   "ref": "Chào, cảm ơn, xin lỗi.",
+   "hyp": "Xin chào, cảm ơn, xin lỗi.",
+   "comet": 97.5
+  },
+  {
+   "id": "VK-4000",
+   "src": "전화 할 수 있나요?",
+   "ref": "Tôi gọi điện thoại có được không ạ? Cho nhờ điện thoại chút có được không ạ?",
+   "hyp": "Có thể gọi điện được không?",
+   "comet": 85.8
+  },
+  {
+   "id": "VK-4089",
+   "src": "스트레스 풀려고 뭐 하세요?",
+   "ref": "Để bớt căng thẳng anh làm gì?",
+   "hyp": "Anh làm gì để giải tỏa căng thẳng vậy?",
+   "comet": 95.5
+  },
+  {
+   "id": "VK-4095",
+   "src": "술에 취해",
+   "ref": "Say rồi.",
+   "hyp": "Say you are drunk.",
+   "comet": 46.7
+  },
+  {
+   "id": "VK-4284",
+   "src": "여기에 짐을 둬도 되나요?",
+   "ref": "Tôi để hành lý ở đây có được không?",
+   "hyp": "Tôi có thể để đồ ở đây được không?",
+   "comet": 94.8
+  },
+  {
+   "id": "VK-4389",
+   "src": "호치민까지 몇 시간 걸려요?",
+   "ref": "Đến Hồ Chí Minh thì mất mấy tiếng?",
+   "hyp": "Đến Hồ Chí Minh mất bao nhiêu tiếng?",
+   "comet": 96.7
+  },
+  {
+   "id": "VK-4491",
+   "src": "좀 더 늦은 시간은 없나요?",
+   "ref": "Không có tàu chạy thời gian trễ hơn một chút sao?",
+   "hyp": "Không còn giờ muộn hơn nữa không ạ?",
+   "comet": 75.2
+  },
+  {
+   "id": "VK-4547",
+   "src": "짐 옮겨주세요.",
+   "ref": "Hãy chuyển hành lý giúp tôi.",
+   "hyp": "Nhờ bạn di chuyển đồ đi.",
+   "comet": 77.6
+  },
+  {
+   "id": "VK-4594",
+   "src": "하나 더 물을게요, 시외버스 터미널이 어디죠?",
+   "ref": "Tôi hỏi thêm một câu nữa Bến xe ngoại tỉnh nằm ở đâu ạ?",
+   "hyp": "Tôi hỏi thêm một câu nữa, bến xe khách ngoại thành ở đâu ạ?",
+   "comet": 95.8
+  },
+  {
+   "id": "VK-4618",
+   "src": "서류와 팔찌를 가지고 다니실 때는 사람 많은 곳에서 조심하세요.",
+   "ref": "Mang giấy chiền và vòng tay, nếu đi đến chỗ, đông người dẫu sao cũng phải để ý.",
+   "hyp": "Khi bạn mang giấy tờ và vòng tay đi lại, hãy cẩn thận ở những nơi đông người.",
+   "comet": 76.4
+  },
+  {
+   "id": "VK-4689",
+   "src": "매표소가 어디인가요?",
+   "ref": "Nơi bán vé ở đâu?",
+   "hyp": "Quầy vé ở đâu ạ?",
+   "comet": 93.8
+  },
+  {
+   "id": "VK-4690",
+   "src": "자주 가세요?",
+   "ref": "Anh đi thường xuyên không?",
+   "hyp": "Hay đi thường xuyên ạ?",
+   "comet": 92.2
+  },
+  {
+   "id": "VK-4827",
+   "src": "베트남 쌀국수 있나요?",
+   "ref": "Có món phở Việt Nam không?",
+   "hyp": "Có phở Việt Nam không ạ?",
+   "comet": 96.0
+  },
+  {
+   "id": "VK-4860",
+   "src": "예약 안 했는데 빈자리 있나요?",
+   "ref": "Tôi chưa đặt chỗ, không biết là còn chỗ trống không?",
+   "hyp": "Không đặt lịch hẹn mà còn chỗ trống không ạ?",
+   "comet": 89.9
+  },
+  {
+   "id": "VK-5013",
+   "src": "누구죠?",
+   "ref": "Cứ ai vậy?",
+   "hyp": "Ai ạ?",
+   "comet": 85.4
+  },
+  {
+   "id": "VK-5250",
+   "src": "좀 더 가까이 붙어주세요.",
+   "ref": "Hãy đứng sát hơn nữa.",
+   "hyp": "Xin hãy lại gần hơn.",
+   "comet": 82.0
+  },
+  {
+   "id": "VK-5333",
+   "src": "아니, 아니",
+   "ref": "Không có",
+   "hyp": "Không, không.",
+   "comet": 82.9
+  },
+  {
+   "id": "VK-5369",
+   "src": "싱글룸 요금이 얼마인가요?",
+   "ref": "Tiền phòng một người là bao nhiêu?",
+   "hyp": "Phòng đơn giá bao nhiêu ạ?",
+   "comet": 85.5
+  },
+  {
+   "id": "VK-5371",
+   "src": "이쪽으로 가면 돼요.",
+   "ref": "Nếu đi theo hướng đường này thì được.",
+   "hyp": "Anh đi lối này nhé.",
+   "comet": 76.7
+  },
+  {
+   "id": "VK-5373",
+   "src": "이게 뭐야?",
+   "ref": "Cái này là cái gì?",
+   "hyp": "Cái này là gì?",
+   "comet": 98.1
+  },
+  {
+   "id": "VK-5428",
+   "src": "가운데로 모여주세요.",
+   "ref": "Đứng tập trung vào giữa đi.",
+   "hyp": "Mọi người tập trung vào giữa.",
+   "comet": 86.0
+  },
+  {
+   "id": "VK-5456",
+   "src": "몇 시에 시작하나요?",
+   "ref": "Chương trình này lúc mấy giờ?",
+   "hyp": "Bắt đầu lúc mấy giờ ạ?",
+   "comet": 89.9
+  },
+  {
+   "id": "VK-5562",
+   "src": "괜찮아",
+   "ref": "Không có sao cả",
+   "hyp": "Không sao đâu.",
+   "comet": 94.7
+  },
+  {
+   "id": "VK-5592",
+   "src": "보통 골프를 쳐요.",
+   "ref": "Thường tôi chơi golf.",
+   "hyp": "Thường thì chơi golf.",
+   "comet": 95.8
+  },
+  {
+   "id": "VK-5615",
+   "src": "쉬고 싶어요.",
+   "ref": "Tôi muốn xin được khép.",
+   "hyp": "Tôi muốn nghỉ ngơi.",
+   "comet": 77.3
+  },
+  {
+   "id": "VK-5664",
+   "src": "걱정 마세요, 여기 마스터키가 있어요.",
+   "ref": "Ông bà đừng lo, có chìa khóa chung ở đây.",
+   "hyp": "Đừng lo, chìa khóa master ở đây.",
+   "comet": 88.1
+  },
+  {
+   "id": "VK-5791",
+   "src": "죄송합니다, 여권을 잃어버렸어요.",
+   "ref": "Xin lỗi, tôi đánh mất hộ chiếu rồi.",
+   "hyp": "Xin lỗi, tôi bị mất hộ chiếu rồi.",
+   "comet": 97.6
+  },
+  {
+   "id": "VK-5840",
+   "src": "여기로 가려면 어떻게 가야 하나요?",
+   "ref": "Tôi định đi đến nơi này thì phải đi bằng đường nào?",
+   "hyp": "Để đi đến đó thì đi như thế nào ạ?",
+   "comet": 91.1
+  },
+  {
+   "id": "VK-5871",
+   "src": "가격표 있나요?",
+   "ref": "Có toạn giá không?",
+   "hyp": "Có bảng giá không ạ?",
+   "comet": 87.8
+  },
+  {
+   "id": "VK-5906",
+   "src": "싱글룸 주세요. 하루에 얼마죠?",
+   "ref": "Cho tôi phòng đơn, mỗi ngày bao nhiêu?",
+   "hyp": "Cho tôi một phòng đơn. Một ngày bao nhiêu ạ?",
+   "comet": 94.1
+  },
+  {
+   "id": "VK-5925",
+   "src": "지하철역 입구가 어디인가요?",
+   "ref": "Lối vào nhà ga tàu điện ngầm ở đâu vậy?",
+   "hyp": "Cổng tàu điện ngầm ở đâu ạ?",
+   "comet": 95.6
+  },
+  {
+   "id": "VK-6020",
+   "src": "열이 나요.",
+   "ref": "Bị sốt",
+   "hyp": "Tôi bị sốt.",
+   "comet": 93.8
+  },
+  {
+   "id": "VK-6091",
+   "src": "여기 볼만한 곳 있으면 알려주세요.",
+   "ref": "Ở đây có chỗ nào đáng xem thì chỉ cho tôi biết với.",
+   "hyp": "Bạn có chỗ nào đáng đi không, cho tôi biết.",
+   "comet": 87.8
+  },
+  {
+   "id": "VK-6135",
+   "src": "괜찮아요, 틀릴 수도 있습니다.",
+   "ref": "Không sao mà, có thể nhầm mà.",
+   "hyp": "Không sao đâu, có thể sai.",
+   "comet": 94.8
+  },
+  {
+   "id": "VK-6217",
+   "src": "나아졌어요.",
+   "ref": "Đã tốt hơn rồi",
+   "hyp": "Đã đỡ rồi.",
+   "comet": 95.4
+  },
+  {
+   "id": "VK-6249",
+   "src": "그 배우는 유명한가요?",
+   "ref": "Động tác đó có nghĩa là gì?",
+   "hyp": "Diễn viên đó nổi tiếng không?",
+   "comet": 70.4
+  },
+  {
+   "id": "VK-6275",
+   "src": "알겠어요, 영수증 여기 있어요. 이 돈은 무슨 돈인가요?",
+   "ref": "Tui biết rồi, hóa đơn đây ạ. Tiền này là tiền gì?",
+   "hyp": "Được rồi, hóa đơn ở đây. Số tiền này là tiền gì ạ?",
+   "comet": 94.1
+  },
+  {
+   "id": "VK-6392",
+   "src": "5번 정류장에서 내리세요.",
+   "ref": "Hãy xuống xe ở bên thứ 5.",
+   "hyp": "Xuống ở trạm số 5.",
+   "comet": 80.8
+  },
+  {
+   "id": "VK-6417",
+   "src": "오늘 밤만요.",
+   "ref": "Chỉ đêm nay thôi",
+   "hyp": "Chỉ đêm nay thôi.",
+   "comet": 98.4
+  },
+  {
+   "id": "VK-6481",
+   "src": "빨리 고쳐라",
+   "ref": "Mong sửa nhanh cho.",
+   "hyp": "Sửa nhanh đi.",
+   "comet": 87.4
+  },
+  {
+   "id": "VK-6503",
+   "src": "가방 좀 열어봐요, 이게 뭐죠?",
+   "ref": "Hãy mở túi ra cho tôi coi. Cái này là cái gì?",
+   "hyp": "Mở cái túi ra xem, đây là cái gì?",
+   "comet": 93.9
+  },
+  {
+   "id": "VK-6609",
+   "src": "예약하셨나요?",
+   "ref": "Đã đặt trước rồi phải không?",
+   "hyp": "Anh đã đặt lịch hẹn chưa ạ?",
+   "comet": 87.3
+  },
+  {
+   "id": "VK-6753",
+   "src": "필름 현상해 주세요.",
+   "ref": "Hãy rửa phim cho tôi.",
+   "hyp": "Xin hãy rửa phim.",
+   "comet": 84.1
+  },
+  {
+   "id": "VK-6787",
+   "src": "이 약 드셔보세요. 8시간마다 2알씩 드세요.",
+   "ref": "Anh, chị thử uống thuốc này xem Cứ 8 tiếng đồng hồ lại uống 2 viên",
+   "hyp": "Anh dùng thuốc này đi. Mỗi 8 tiếng dùng 2 viên.",
+   "comet": 82.9
+  },
+  {
+   "id": "VK-6799",
+   "src": "민수, 송호를 본 적 있어?",
+   "ref": "Này Min Su, cậu đã gặp Song Ho lần nào chưa?",
+   "hyp": "Min-su, bạn đã gặp Song-ho chưa?",
+   "comet": 90.5
+  },
+  {
+   "id": "VK-6838",
+   "src": "똑바로 가자, 거기서 찾을 수 있을거야.",
+   "ref": "Hãy đi thẳng, vậy sẽ tìm thấy ở đó.",
+   "hyp": "Đi thẳng, bạn sẽ tìm thấy ở đó.",
+   "comet": 93.9
+  },
+  {
+   "id": "VK-6861",
+   "src": "네, 보여드릴게요",
+   "ref": "Có, tôi sẽ cho anh xem.",
+   "hyp": "Vâng, tôi sẽ chỉ cho bạn.",
+   "comet": 86.2
+  },
+  {
+   "id": "VK-6894",
+   "src": "2만 동 깎아 드릴게요.",
+   "ref": "sẽ bớt cho 20.120.",
+   "hyp": "Tôi sẽ giảm cho anh 20.000 đồng.",
+   "comet": 76.0
+  },
+  {
+   "id": "VK-6985",
+   "src": "제 사이즈를 모르겠어요.",
+   "ref": "Tôi không biết dã mình mặc số mấy nữa",
+   "hyp": "Tôi không biết size của tôi.",
+   "comet": 69.2
+  },
+  {
+   "id": "VK-7009",
+   "src": "보통 6월에 시작해요.",
+   "ref": "Bình thường bắt đầu tháng 6.",
+   "hyp": "Thường thì bắt đầu vào tháng Sáu.",
+   "comet": 89.0
+  },
+  {
+   "id": "VK-7065",
+   "src": "죄송합니다, 그는 직장에 있습니다.",
+   "ref": "Xin lỗi, ông ấy đi công tác rồi.",
+   "hyp": "Xin lỗi, anh ấy đang ở công ty.",
+   "comet": 88.1
+  },
+  {
+   "id": "VK-7281",
+   "src": "같이 가 봐요.",
+   "ref": "Hãy đi cùng Killbook xem.",
+   "hyp": "Đi cùng nhé.",
+   "comet": 78.0
+  },
+  {
+   "id": "VK-7335",
+   "src": "네, 이쪽에 두세요.",
+   "ref": "Vâng, hãy để sang phía bên này.",
+   "hyp": "Vâng, để ở bên này.",
+   "comet": 88.4
+  },
+  {
+   "id": "VK-7340",
+   "src": "뭐가 문제인가요?",
+   "ref": "Nó bị gì vậy trên có chuyện gì vây?",
+   "hyp": "Có vấn đề gì vậy ạ?",
+   "comet": 89.0
+  },
+  {
+   "id": "VK-7347",
+   "src": "방에 에어컨 있나요?",
+   "ref": "Ở phòng khách có máy lạnh không?",
+   "hyp": "Trong phòng có điều hòa không ạ?",
+   "comet": 95.3
+  },
+  {
+   "id": "VK-7390",
+   "src": "비용이 얼마인가요?",
+   "ref": "Hết bao nhiêu tiền?",
+   "hyp": "Giá bao nhiêu ạ?",
+   "comet": 82.6
+  },
+  {
+   "id": "VK-7398",
+   "src": "내가 어디 가서 특산물을 살 수 있을까요?",
+   "ref": "Tôi có thể đi đến đâu để mua các đặc sản?",
+   "hyp": "Tôi có thể mua sản vật ở đâu ạ?",
+   "comet": 91.3
+  },
+  {
+   "id": "VK-7403",
+   "src": "너무 작네",
+   "ref": "Nó quá nhỏ",
+   "hyp": "Nhỏ quá.",
+   "comet": 89.5
+  },
+  {
+   "id": "VK-7490",
+   "src": "안녕히 가세요.",
+   "ref": "Tạm biệt.",
+   "hyp": "Chào bạn.",
+   "comet": 60.3
+  },
+  {
+   "id": "VK-7505",
+   "src": "알겠습니다.",
+   "ref": "Dạ rất được.",
+   "hyp": "Được rồi.",
+   "comet": 81.1
+  },
+  {
+   "id": "VK-7548",
+   "src": "방이 너무 추워요.",
+   "ref": "Trong phòng quá lạnh",
+   "hyp": "Phòng lạnh quá.",
+   "comet": 94.6
+  },
+  {
+   "id": "VK-7551",
+   "src": "이 음식은 느끼하지 않죠?",
+   "ref": "Ăn món này không quá ngán phải không?",
+   "hyp": "Món này không bị ngấy phải không ạ?",
+   "comet": 85.8
+  },
+  {
+   "id": "VK-7615",
+   "src": "빨리 좀 해주세요.",
+   "ref": "Nhanh lên hộ nhé",
+   "hyp": "Làm nhanh lên đi.",
+   "comet": 85.5
+  },
+  {
+   "id": "VK-7702",
+   "src": "어떻게 도와드릴까요?",
+   "ref": "Tôi có thể giúp gì anh, chị?",
+   "hyp": "Tôi có thể giúp gì cho bạn?",
+   "comet": 96.4
+  },
+  {
+   "id": "VK-7729",
+   "src": "이게 가장 잘 팔리는 제품이에요.",
+   "ref": "Đây là hàng bán chạy nhất.",
+   "hyp": "Đây là sản phẩm bán chạy nhất.",
+   "comet": 96.4
+  },
+  {
+   "id": "VK-7760",
+   "src": "얼마예요?",
+   "ref": "Bao nhiêu vậy?",
+   "hyp": "Bao nhiêu tiền ạ?",
+   "comet": 95.3
+  },
+  {
+   "id": "VK-7781",
+   "src": "아빠, 집에 있어?",
+   "ref": "Ba, anh ta có ở nhà không?",
+   "hyp": "Bố ơi, ở nhà không?",
+   "comet": 94.2
+  },
+  {
+   "id": "VK-7787",
+   "src": "누가 물어봐요?",
+   "ref": "Xem hỏi ai vậy?",
+   "hyp": "Ai hỏi vậy?",
+   "comet": 95.6
+  },
+  {
+   "id": "VK-7851",
+   "src": "주문하셨나요?",
+   "ref": "Anh gọi món ăn chứ.",
+   "hyp": "Đã đặt hàng chưa ạ?",
+   "comet": 70.5
+  },
+  {
+   "id": "VK-7927",
+   "src": "네, 무엇을 도와드릴까요?",
+   "ref": "Tiết cân đây có thể giúp gì được ông, bà",
+   "hyp": "Vâng, tôi có thể giúp gì ạ?",
+   "comet": 73.6
+  },
+  {
+   "id": "VK-8019",
+   "src": "교환이 되겠나?",
+   "ref": "Có đổi không?",
+   "hyp": "Đổi được không?",
+   "comet": 93.2
+  },
+  {
+   "id": "VK-8203",
+   "src": "한 잔 더 할까요?",
+   "ref": "Thêm một ly nữa nhé.",
+   "hyp": "Thêm một ly nữa không ạ?",
+   "comet": 90.0
+  },
+  {
+   "id": "VK-8259",
+   "src": "안녕하세요, 제게 온 메시지 있나요? 813호인데요.",
+   "ref": "Xin chào, có ai liên lạc với tôi không? Tôi ở phòng 813.",
+   "hyp": "Xin chào, tôi có tin nhắn nào không? Là phòng 813 ạ.",
+   "comet": 78.4
+  },
+  {
+   "id": "VK-8470",
+   "src": "소화가 안 되는데 무슨 약을 먹죠?",
+   "ref": "Tôi ăn không tiêu phải loại thuốc nào ạ.",
+   "hyp": "Hấp không tiêu thì uống thuốc gì ạ?",
+   "comet": 80.9
+  },
+  {
+   "id": "VK-8626",
+   "src": "정말 훌륭해요.",
+   "ref": "Bộ biểu diễn hôm nay rất là tuyệt vời.",
+   "hyp": "Thật tuyệt vời.",
+   "comet": 75.4
+  },
+  {
+   "id": "VK-8662",
+   "src": "이 자켓은 얼마죠?",
+   "ref": "Chiếc áo khoác này bao nhiêu?",
+   "hyp": "Áo khoác này bao nhiêu tiền ạ?",
+   "comet": 94.4
+  },
+  {
+   "id": "VK-8767",
+   "src": "일 끝나면 보통 뭐 하세요?",
+   "ref": "Hết việc anh chị thường làm gì?",
+   "hyp": "Sau khi tan ca thì thường làm gì ạ?",
+   "comet": 93.7
+  },
+  {
+   "id": "VK-8787",
+   "src": "청구서를 방으로 보내주세요.",
+   "ref": "Hãy gửi hóa đơn đến phòng tôi.",
+   "hyp": "Vui lòng gửi hóa đơn đến phòng.",
+   "comet": 88.1
+  },
+  {
+   "id": "VK-8836",
+   "src": "지금은 비수기잖아요, 좀 깎아 주세요.",
+   "ref": "Bây giờ là đang mùa không đắt khắp, hãy giảm cho tôi một ít được không?",
+   "hyp": "Bây giờ là mùa thấp điểm rồi, giảm giá đi.",
+   "comet": 84.7
+  },
+  {
+   "id": "VK-8880",
+   "src": "숲속을 산책하는 걸 좋아해요.",
+   "ref": "Tôi thích đi dạo trong rừng.",
+   "hyp": "Tôi thích đi dạo trong rừng.",
+   "comet": 98.5
+  },
+  {
+   "id": "VK-8902",
+   "src": "아침 식사 포함인가요?",
+   "ref": "Có bao gồm ăn sáng không?",
+   "hyp": "Có bao gồm bữa sáng không ạ?",
+   "comet": 97.9
+  },
+  {
+   "id": "VK-8921",
+   "src": "거기까지 몇 시간 걸려요?",
+   "ref": "thì đến đâu phải mất mấy tiếng?",
+   "hyp": "Đến đó mất bao nhiêu tiếng ạ?",
+   "comet": 92.5
+  },
+  {
+   "id": "VK-8934",
+   "src": "저한테 딱 맞았어",
+   "ref": "Nó vừa vặn với tôi.",
+   "hyp": "Nó vừa vặn với tôi.",
+   "comet": 98.6
+  }
+ ]
+}

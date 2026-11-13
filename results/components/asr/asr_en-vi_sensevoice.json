@@ -1,0 +1,614 @@
+{
+ "summary": {
+  "pair": "en-vi",
+  "model": "sensevoice",
+  "n": 100,
+  "wer": 30.04,
+  "cer": 13.93,
+  "rtf": 0.0166,
+  "avg_latency_s": 0.099,
+  "load_s": 1.03
+ },
+ "rows": [
+  {
+   "id": "EV-0157",
+   "ref": "play only all music released between the year one thousand nine hundred and ninety and two thousand",
+   "hyp": "PLAY ONLY ALL MUSIC RELEASED BETWEEN THE YEAR ONE THOUSAND NINE HUNDRED AND NINETY AND TWO THOUSAND",
+   "sec": 0.151
+  },
+  {
+   "id": "EV-0182",
+   "ref": "well at one point yes but the storage on my phone not so wonderful",
+   "hyp": "WELL A ONE POINT YES BUT THE STO DRAMA FOL THAT'S SO WONDERFUL",
+   "sec": 0.141
+  },
+  {
+   "id": "EV-0228",
+   "ref": "did i remember to set a reminder alarm for my next doctor's appointment",
+   "hyp": "DID I REMEMBER TO SET A REMINDER ALOUM FOR MY NEXT DOCTOR'S APPOINTMENT",
+   "sec": 0.105
+  },
+  {
+   "id": "EV-0240",
+   "ref": "remember i have ordered a cake for tonight's birthday party let me know the status please",
+   "hyp": "REMEMBER I'VE ORDERED A CAKE FOR TONIGHT'S BIRTHDAY PARTY LET ME KNOW THE STATUS PLEASE",
+   "sec": 0.103
+  },
+  {
+   "id": "EV-0250",
+   "ref": "okey doke so we will send your payment to fossil gas is there anything else i can help you with today",
+   "hyp": "HE DO SO WEILL SEND YOUR PAIMET TOSOLAS I THERENYHIG ELE I CAN HELP YOUTH TODAY",
+   "sec": 0.089
+  },
+  {
+   "id": "EV-0333",
+   "ref": "and my ears are buzzing a bit i am just they are feeling a bit off",
+   "hyp": "AND MY EYARS ARE BUZZING A BIT JUST FILLING BIT OFF",
+   "sec": 0.073
+  },
+  {
+   "id": "EV-0358",
+   "ref": "seven hundred thirty four main street harper valley oregon six seven two nine seven",
+   "hyp": "SVEN HUNDRED THIRTY FOUR MAINSTREET HRPOR VALLEY ORGAN SIX SEVEN TWO NINE SEVEN",
+   "sec": 0.099
+  },
+  {
+   "id": "EV-0383",
+   "ref": "so um what i think we could do is um maybe if we book you in for a face to face appointment in one of our clinics it's not an emergency",
+   "hyp": "SO WHAT I THINK WE COULD DO IS MAYBE BOOK YOU INOR A FACE TO FACE APONTMENT IN ONE OF CLINICS ITS NOTN EMERGENCY",
+   "sec": 0.136
+  },
+  {
+   "id": "EV-0491",
+   "ref": "you'll just need roughly ten dollars for food and gas money my friend is driving so we usually all chip in a few dollars for gas money",
+   "hyp": "YOU'L JUST NEED ROUGHLY TEN零 DOLLARS FOR FOOD AND GAS MONEY MY FRIEND IS DRIVING SO WE USUALLY OLL CHIP IN A FEW DOLLARS FOR GUES MONEY",
+   "sec": 0.153
+  },
+  {
+   "id": "EV-0523",
+   "ref": "i am sorry to hear that um how old was he when that happened",
+   "hyp": "SO HOW OLD IS IT WHEN THAT HAPPENS",
+   "sec": 0.073
+  },
+  {
+   "id": "EV-0752",
+   "ref": "yeah anything that you had hoped particularly to get out of having this consultation",
+   "hyp": "YEAH ANYTHING THAT YOU'D HOPE PARTICARLY TO GET OUT OF HAVING THIS COSLTATION",
+   "sec": 0.094
+  },
+  {
+   "id": "EV-0894",
+   "ref": "okay all right and just moving on swiftly sir do you have any allergies at all",
+   "hyp": "OKAY ALL RIGHT I'M JUST MOVING ON SWIFTLY SO GIVE ME ALERGES ALL",
+   "sec": 0.077
+  },
+  {
+   "id": "EV-1173",
+   "ref": "am i going to have to worry about the snowplows burying my car in the driveway tuesday",
+   "hyp": "A I GOING TO HAVE TO WORRY ABOUT THE SNOW PLE BURRING MY CAR IN THE DRIVE WAY TUESDAY",
+   "sec": 0.092
+  },
+  {
+   "id": "EV-1212",
+   "ref": "okay and is the pain is that is it there all the time or does it come and go",
+   "hyp": "OKY AND IS A PAIN IS T IAT IS THERE ALL THE TIMER DOE IT COME AND GO",
+   "sec": 0.08
+  },
+  {
+   "id": "EV-1229",
+   "ref": "so we will send your payment to fossil gas is there anything else i can help you with",
+   "hyp": "SO WEILL SAY YOUR PAYMENT TO FAOLLO GES I THERE ANYHINGLSE I CAN HELP YOU WITH",
+   "sec": 0.087
+  },
+  {
+   "id": "EV-1508",
+   "ref": "i'll uh look at it like when my usual working hours are like from twelve o clock till three o clock or something",
+   "hyp": "I'LL LOOK AT IT LIKE WHEN MY USUAL WORKINGN HOURS ARE LIKE FROM TWELE O'COCK TO THREE OCOR OR SOMETHING",
+   "sec": 0.144
+  },
+  {
+   "id": "EV-1725",
+   "ref": "um i work as a restaurant owner so i own a sushi shop",
+   "hyp": "I WORK AS A RESTAURANT OWNER SO I OWN A SUSHI SHOP",
+   "sec": 0.078
+  },
+  {
+   "id": "EV-1829",
+   "ref": "no that's all i needed help with thank you very much for your help",
+   "hyp": "NNO THAT'S ALL NEEDO HELP WITH THAK YOU VERY MUCH FOR YOUR HELT",
+   "sec": 0.065
+  },
+  {
+   "id": "EV-1863",
+   "ref": "will the temperature stay about the same or is it going to get colder",
+   "hyp": "WITH THE TEMPERAURE STY ABUTHE SAMER IER GOING TOEURDE",
+   "sec": 0.057
+  },
+  {
+   "id": "EV-2177",
+   "ref": "sure shame fair day and uh how long did you have mongey for",
+   "hyp": "SH TRDY AND HOW LONG I DOS YOU HAVE MONKEY FOR",
+   "sec": 0.1
+  },
+  {
+   "id": "EV-2248",
+   "ref": "if there were ten easy steps to make myself rich what would they be",
+   "hyp": "IF THERE WERE TEN EASY STEPS TO MAKE MYSELF RE WHAT WOULD THEY BE",
+   "sec": 0.086
+  },
+  {
+   "id": "EV-2316",
+   "ref": "i mean some people with anxiety they do need to take medication to control that but that's not something that we would suggest in the first instance",
+   "hyp": "I MEAN SOME PEOPLE WITH ANXETY THEY DO NEED TO TAKE MEDICATN TO CONTROL THAT BUT THAT'S NOT SOMEHING THAT WE HAD SUGGSTEN THE FIRSXT INSTANTE",
+   "sec": 0.142
+  },
+  {
+   "id": "EV-2364",
+   "ref": "the biggest frustrations that people found with regard to personal preferences were um something that you you mentioned earlier uh remote controls are often lost in the room",
+   "hyp": "TE BIGEST FUSTRATIONS THAT PEOPLE FOUND WAS A GARDO PERSONAL PREFRENCES WER SOMETHING THAT YOU MENTIONED EARLIER REMOTE CONTROLS ARE OFTEN LOST IN THE ROO",
+   "sec": 0.144
+  },
+  {
+   "id": "EV-2388",
+   "ref": "it was not just once every single time i take the bus something bad happens to me or to someone else on the bus",
+   "hyp": "IT WASN'T JUST ONCE EVERY SINGLE TIME I TAKE THE BUS SOMEHING BAAT HAPPENS TO ME OR TO SOMEONE ELSE ON THE BUS",
+   "sec": 0.102
+  },
+  {
+   "id": "EV-2390",
+   "ref": "i need you to put walk the dog on my list to do",
+   "hyp": "I NEED YOU TO PUT WALK THE DOG ON MY LIST TO DO",
+   "sec": 0.066
+  },
+  {
+   "id": "EV-2401",
+   "ref": "uhm hi my name's patricia johnson um i lost my debit card can you send me a new one",
+   "hyp": "H MY NAME IS PATRICA JOHNSON AND I LOVE MY DEBIT CARD CAN YOU SEIND ME A MOR ONE",
+   "sec": 0.104
+  },
+  {
+   "id": "EV-2476",
+   "ref": "um work's kind of um a bit stressful at the moment i have got a lot going on",
+   "hyp": "WORK'S KIND OF ATIT STRESSFULN THE MOMENT I'VE GOT A LOT GOING ON",
+   "sec": 0.084
+  },
+  {
+   "id": "EV-2748",
+   "ref": "your password reset link has has been sent your phone is there anything else i can help you with",
+   "hyp": "我",
+   "sec": 0.096
+  },
+  {
+   "id": "EV-2802",
+   "ref": "although i could not say that everything is perfect there i still very much appreciate what the company has given me especially many chances",
+   "hyp": "ALTHOUGH I COULD NOT SAY THAT EVERYTHING IS PERFECT THERE I STILL VERY MUCH APPRECIATE WHAT THE COMPANY HAS GIVEN ME ESPECIALLY MANY CHANCES",
+   "sec": 0.145
+  },
+  {
+   "id": "EV-3057",
+   "ref": "um did someone else want to throw it togeth actually i can probably still throw it together if you want um put your parts into into this one",
+   "hyp": "HDEDONENE WAN TOHEHULY CANOBLY STL THRO TEOU WNTO PUT YOUR PARTS INTO INTO THIS ONE",
+   "sec": 0.113
+  },
+  {
+   "id": "EV-3248",
+   "ref": "how much time do i have to boil an egg",
+   "hyp": "HOW MUCH TIME DO I HAVE TO BOIL AN EGG",
+   "sec": 0.055
+  },
+  {
+   "id": "EV-3459",
+   "ref": "thirty two years old okay could you tell me the first line of your address and your postcode please",
+   "hyp": "LETER TWO YEARS OLD OKAY COULD YOU TELL ME THAT THE FIRST TIME OF YOUR ADRESTS AND YOUR POST GOOD PLEASE",
+   "sec": 0.097
+  },
+  {
+   "id": "EV-3775",
+   "ref": "get me a taxi to take me to the airport on friday at five thirty in the morning",
+   "hyp": "GET ME A TAXI TO TAKE ME TO THE AIRPORT ON FRIDAY FIVE HUDRED AND THIRTY AM",
+   "sec": 0.095
+  },
+  {
+   "id": "EV-3791",
+   "ref": "so thanks for coming and uh i'll send you minutes of meeting and uh please put your all information in the sharing folder so everybody can share the information",
+   "hyp": "SO THANKS FOR COMING AND LLLENTY MITS OF METING ANDLEASE PUT YOUR AL ANFOMATON THEARIN FOLER SR EVERBDYNHARE THE INFORATION",
+   "sec": 0.132
+  },
+  {
+   "id": "EV-4009",
+   "ref": "we really were lucky we got the last available table for two and we did not even have a reservation did you see the long lines behind us",
+   "hyp": "WE REALLY WERE LUCKY WE GOT THE LEST AVAILABLE TABLE FOR TWO AND WE DIDN'T EVEN HAVE A RESERVATION DID YOU SEE THE LONG LINES BEHIND US",
+   "sec": 0.148
+  },
+  {
+   "id": "EV-4177",
+   "ref": "hi my name is michael wilson um i would like to transfer money between my accounts",
+   "hyp": "HI MY NAME IS MICHAEL WILSON I WOULD LIKE TO TRANSFOR MONEY BETWEEN MY ACCOUNT",
+   "sec": 0.1
+  },
+  {
+   "id": "EV-4250",
+   "ref": "okay right and with the diarrhea how many times a day are you going to the toilet",
+   "hyp": "OKY RIGHT AND WITH THE DIAREA HOW MANY TIMES A DAY ARE YOU GOING TO THE TOILET",
+   "sec": 0.097
+  },
+  {
+   "id": "EV-4294",
+   "ref": "give me details of my twitter handle profile including the total number of followers",
+   "hyp": "GIVE ME DETAILS OF MY TWITTER HANDLE PROFILE INCLUDING THE TOTAL NUMBER OF FOLLOWERS",
+   "sec": 0.097
+  },
+  {
+   "id": "EV-4321",
+   "ref": "okay um i am going to read out the text now so we will understand what we are supposed to do",
+   "hyp": "OKA I'M GOING TO REIAD OUT THE TAXTS NOW SO WE WILL UNDERSTAND WHAT YOURE SURPPOSE TO DO",
+   "sec": 0.095
+  },
+  {
+   "id": "EV-4505",
+   "ref": "surprising to me is like uh people give a lot of attention to modifying mobile phones like a real want to see a new launch or something like that",
+   "hyp": "SURPRISING THING IS LIKE PEOPLE GIVE A LOT OF ATTENTION TO MORIYING MOBILEPHONES LIKE EVERY MONTH YOU SEE A NEW LAUNCH OR SOMETHING LIKE THAT",
+   "sec": 0.147
+  },
+  {
+   "id": "EV-4810",
+   "ref": "hi my name is elizabeth rodriguez what are the local branch hours",
+   "hyp": "HI MY NAME IS ELIZABETH RDRIGEZ WHAT ARE THE LOCAL BRANCH HOURS",
+   "sec": 0.075
+  },
+  {
+   "id": "EV-5187",
+   "ref": "no way i know that you are a little short on cash at the moment there's no need for you to pay for the whole bill",
+   "hyp": "NO WAY I KNOW THAT YOU'RE A LITTLE SHORT ON CASH AT THE MOMENT THERE'S NO NEED FOR YOU TO PAY FOR THE WHOLE BILL",
+   "sec": 0.114
+  },
+  {
+   "id": "EV-5269",
+   "ref": "not to any medication but i am allergic to peanuts",
+   "hyp": "NOT SNY MEDICATION IN VAAMOLRGIC SPNS",
+   "sec": 0.051
+  },
+  {
+   "id": "EV-5301",
+   "ref": "just to confirm you set the alarm to go off at eight hundred",
+   "hyp": "JUST TO CONFIRM YOU SET THE ALOUN TO GO OFF AT EIGH HUNDRED",
+   "sec": 0.058
+  },
+  {
+   "id": "EV-5455",
+   "ref": "now do you have those these symptoms right now or have they gone off now",
+   "hyp": "NOW DO YO HAVE THOSE THESE SYMTMMS RIGHT NOW OR HAVE THEY GON OFF NOW",
+   "sec": 0.069
+  },
+  {
+   "id": "EV-5482",
+   "ref": "right okay do you remember what you were doing at the time",
+   "hyp": "RIGHT OKAY DO YOUMBER WHAT YU ARE DOING AT THE TIME",
+   "sec": 0.066
+  },
+  {
+   "id": "EV-5600",
+   "ref": "yeah i want some quality time quality time with my friends outside like it's it's really nice but we will see",
+   "hyp": "YEAH I WANT TO SOME QULTIE QUALIT TIME WITH MY BRIENDS AND OUTSIDE LIKE I IT'S REALLS NICE BUT WE WILL SEE",
+   "sec": 0.134
+  },
+  {
+   "id": "EV-5621",
+   "ref": "tell me what was the temperature in our city at twelve noon",
+   "hyp": "TELL WHAT WAS THE TEMPERATURE IN OUR CITY A TWELVE P PMM",
+   "sec": 0.055
+  },
+  {
+   "id": "EV-5655",
+   "ref": "post a new status on facebook saying that i am enjoying the nice weather",
+   "hyp": "POST A NEW STATUS ON FACEBOOK SAYING THAT I AM ENJOYING THE NICE WEATHER",
+   "sec": 0.091
+  },
+  {
+   "id": "EV-5674",
+   "ref": "can i get a recap of what is going on with sprint right now",
+   "hyp": "CAN I GET A REAP OF BOARD IS GOING ON WITH SPRINCH RIGHT NOW",
+   "sec": 0.072
+  },
+  {
+   "id": "EV-5720",
+   "ref": "well i just got back from my language school we have to speak french all day there no english allowed",
+   "hyp": "WELL I JUST GOT BACK FROM MY LANGUGE SCHOOL WE HAVE TO SPEAK FRENCH ALL DAY THERE NO ENGLISH ALLOWED",
+   "sec": 0.118
+  },
+  {
+   "id": "EV-5761",
+   "ref": "have you measured it recently either with an iwatch or something similar",
+   "hyp": "AV YO MEASURED IT RECENTLYEITHR WITH AN I WATCHR SOMETIG SILAR",
+   "sec": 0.065
+  },
+  {
+   "id": "EV-5890",
+   "ref": "but it's more about me being really concerned because this is very weird",
+   "hyp": "BUT IT'S MORTE ABOUT ME BEING REALLY CONCERNED BECAUSE THIS IS VERY WEIRD",
+   "sec": 0.073
+  },
+  {
+   "id": "EV-5935",
+   "ref": "uh uh my name is sarah smith and my date of birth is the twentieth of april nineteen eighty",
+   "hyp": "MY NAME IS SARAH SMITH AND MY DATE OF BIARTH IS THE TWENTIENTH OF THE FOURTHINTEN EIGHTE",
+   "sec": 0.131
+  },
+  {
+   "id": "EV-5957",
+   "ref": "is it behind the eye is that where the pain is",
+   "hyp": "IS IT BEHIND THE EYE IS THAT WHERE THE PAIN IS",
+   "sec": 0.058
+  },
+  {
+   "id": "EV-6047",
+   "ref": "okay around seven o clock and um how long did it take to develop the swelling",
+   "hyp": "OKAY AROUN SEVEN O'CLOCK AND HOW LONG DID IT TAKE TO DEVELOP THE SWELLING",
+   "sec": 0.099
+  },
+  {
+   "id": "EV-6054",
+   "ref": "some people can suffer with clots and those can either be found in the legs or your chest so in your lungs",
+   "hyp": "SOME PEOPLE CAN SUFFER WITH CLOTS AND THOSE CAN EETHER BE FOUND IN THE LEGS OR YOUR CHEST SO IN YOUR LUNGS",
+   "sec": 0.113
+  },
+  {
+   "id": "EV-6218",
+   "ref": "the blue inhaler so you do not you do not use it everyday so you just use it on and off yeah",
+   "hyp": "THE BLEKN PAAILER SO YOU DON'T YOU DON'T USE IT EVERY DAY SO YOU JUST USE IT ON AND OFF YEAH",
+   "sec": 0.082
+  },
+  {
+   "id": "EV-6239",
+   "ref": "okay that's perfect thank you so much for your help",
+   "hyp": "OK THAT I'S PEFECT THANK YOU SO MUCH FOR YOUR HELH",
+   "sec": 0.055
+  },
+  {
+   "id": "EV-6340",
+   "ref": "your appointment has been scheduled for thursday at eight in the morning is there anything else i can help you with",
+   "hyp": "AER PLINMET HASENS SCUDULE FOR THRSDAY 八T AM I THER ANYTHING ELE I CANELP YOIH",
+   "sec": 0.081
+  },
+  {
+   "id": "EV-6426",
+   "ref": "easy to use has always has become has become another major interest that uh with the whiteboard we can see that it's a remote that's easy to use",
+   "hyp": "EASY TO USE AS ALWAYS BECOME HAS BECOME ANOTHER MAJOR INTEREST THAT WITH THE WHITE BOARD WE CAN SEE THAT IT'S A REMOTE THAT'S EASY TO USE",
+   "sec": 0.133
+  },
+  {
+   "id": "EV-6502",
+   "ref": "um i would give it longer than that give it a an hour or so",
+   "hyp": "I WOULD GIVE IT LONGER THAN THAT GIVE IT AN HOUR OR SO",
+   "sec": 0.072
+  },
+  {
+   "id": "EV-6534",
+   "ref": "no he is some bosses will bend the rules a bit sometimes but not my boss he always follows the rules to a t",
+   "hyp": "NO HE IS SOME BOSSES WILL BEAN THE RULES OF BIT SOMETIMES BUT NOT MY BOSS HE ALWAYS FOLLOWS THE RULES TO A TEA",
+   "sec": 0.131
+  },
+  {
+   "id": "EV-6557",
+   "ref": "and um i just felt like i i needed to call you guys and needed to get some some more information about what could be going on",
+   "hyp": "AND I JUST FELT LIKE I NEEDED TO CALL YOU GUYS AND NEDED TO GET SOME MORE INFORMATION ABOUT WHAT COULD BE GOING ON",
+   "sec": 0.156
+  },
+  {
+   "id": "EV-6602",
+   "ref": "i think probably do have what we call a simple urinary tract infection or urinary tract infection bladder infection um which can be readily treated so i'll give you a course of antibiotics today",
+   "hyp": "I THINK PROBABLY DO HAVE WHAT WE CALLT A SIMPLE UTI OR URINY TTRACT INFECTION AND BLADER INFECTION WHICH CAN BE READLY TREATED SO I'LL GIV YOU A CORSEF ANTIBOICS TODAY",
+   "sec": 0.175
+  },
+  {
+   "id": "EV-6618",
+   "ref": "alright thank you for calling and have a great day",
+   "hyp": "ALIGTHAN YOR CALLIN AND HAVE A GREAT DAY",
+   "sec": 0.047
+  },
+  {
+   "id": "EV-6709",
+   "ref": "your appointment has been scheduled for wednesday at eight thirty in the morning",
+   "hyp": "HER APPOITMENT HAS BEEN SCEULED FOR WEDNESDAY AT EIGH THIRT十 AM",
+   "sec": 0.066
+  },
+  {
+   "id": "EV-6929",
+   "ref": "convert two thousand three hundred and thirty from greenwich mean time plus four hundred and thirty to greenwich mean time two hundred",
+   "hyp": "CONVER TWO THOUSAND THREE HUNDRED AND THIRTY FROM GM MT PLUS FOUR HUNDRED AND THIRTY TO GM MT TWO HUNDRED",
+   "sec": 0.134
+  },
+  {
+   "id": "EV-6960",
+   "ref": "am i going to need to bring an umbrella to work today",
+   "hyp": "A I GOING TO NEED TO BRING OUR GELER TO WORK TODAY",
+   "sec": 0.062
+  },
+  {
+   "id": "EV-7227",
+   "ref": "any pain or strong smell or having to go more often than normal",
+   "hyp": "ANY PAIN OR STRONG SMELL OR HAVING TO GO MORE OFTEN THAN NORAL",
+   "sec": 0.074
+  },
+  {
+   "id": "EV-7335",
+   "ref": "and it has a good ending uh i am not going spoil it for you",
+   "hyp": "A IT HAS A GOOD ENDING I'M NOT GOING TO SQUIL IT FOR",
+   "sec": 0.07
+  },
+  {
+   "id": "EV-7389",
+   "ref": "so that if the user does not want to use their voice they can just turn it off and you do not have the remote control accidentally changing things on you",
+   "hyp": "SO THAT IF THER DOESN'T WANT TO USE VOENUST TURN OFNDON TOEINEOL ACCIDENTALLY CHANGING THINGS ON YOU",
+   "sec": 0.118
+  },
+  {
+   "id": "EV-7405",
+   "ref": "is it possible for you to provide the likes of my music",
+   "hyp": "IS IT POSSIBLE FOR YOU TO PROVIDE THE LIKES OF MY MUSIC",
+   "sec": 0.071
+  },
+  {
+   "id": "EV-7409",
+   "ref": "my boss told me that i could go home early or take a long lunch break another day i decided to wait and take a long lunch break another time",
+   "hyp": "MY BOSS TOLD ME THAT I COULD GO HOME EARLY TO TAKE A LONG LUNCH BREAK ANOTHER DAY I DECIDED TO WAIT AND TAKE A LONG LUNCH BREAK ANOTHER TIME",
+   "sec": 0.146
+  },
+  {
+   "id": "EV-7443",
+   "ref": "i have ordered you a replacement debit card is there anything else i can help you with",
+   "hyp": "I'VE ORDERED YOU REPLACEMENT DEBIT CAARD IS TER ANYHINGLSE I CAN HLP YOU WITH",
+   "sec": 0.074
+  },
+  {
+   "id": "EV-7496",
+   "ref": "and in order to explore more or to find things that are not uh obvious or uh known",
+   "hyp": "AND IN ORDER TO EXPLORE MORE TO FIND THINGS THAT ARE NOT OBVIOUSR KNOWN",
+   "sec": 0.139
+  },
+  {
+   "id": "EV-7675",
+   "ref": "why not oh well i am ready to eat no need call the doctor if we run to the restaurant i can make it to the restroom and you can order",
+   "hyp": "WHY NOT OH WELL I'M READY TO EAT YOU N'T NEED TO CALL THE DOCTOR IF WEU RUN TO THE RESTAURANT I CAN MAKE IT TO THE RESTROOM AND YOU CAN ORDER",
+   "sec": 0.156
+  },
+  {
+   "id": "EV-7690",
+   "ref": "alright then okay take care then all the best",
+   "hyp": "OR REPHEN OKAY TAKENRE THAT ALL THE BEST",
+   "sec": 0.048
+  },
+  {
+   "id": "EV-7713",
+   "ref": "but i only have nine hundred in cash here can you let it go for nine hundred yuan",
+   "hyp": "BUT I ONLY HAVE NINE HUNDRED AND CASH HERE CAN YOU LET IT GO FOR NIE HNDRED WIN",
+   "sec": 0.086
+  },
+  {
+   "id": "EV-7738",
+   "ref": "yes i have but the taste of steamed fish at that restaurant is not delicious the fish is not well done and too salty",
+   "hyp": "IS I HAVE BUT THE TASTE OF STEAM FISH AT THAT RESTAURANT IS NOT DELICIOUS THE FISH IS NOT WELL DONE AND TOO SALTY",
+   "sec": 0.142
+  },
+  {
+   "id": "EV-7757",
+   "ref": "that's very strenuous because your thumb is slightly up so they came up with something like this curled up so here",
+   "hyp": "THAT'S VRY STENEAUSECAUSEOU TUME SILLE UP SO THEY COME O WITH SOMEHING LIKE THIS COVRED UP SO HERE",
+   "sec": 0.108
+  },
+  {
+   "id": "EV-7818",
+   "ref": "hi my name is miss james johnson and i would like to know my account balance",
+   "hyp": "HI MY NAME IS MISS JAMES JONSON AND I WOUDS LIKE TO KNOW MY COUNT BALANCE",
+   "sec": 0.089
+  },
+  {
+   "id": "EV-7979",
+   "ref": "now you have been booked the flight leaves at sixteen forty five and your arrival in sydney will be at nine in the morning local time the flight number is n w a four seven six",
+   "hyp": "NOW YOU HAVE BEEN BOOKED THE FLIGHT LIVES AT 十千九百四十五 AND YOUR ARIVAL IN SYDNEY WILL BE AT N九NE AM LOCAL TIME THE FLIGHT NUMBER IS AND W A FOUR SEVEN SIX",
+   "sec": 0.206
+  },
+  {
+   "id": "EV-8062",
+   "ref": "um this is this image will give you a little bit of an impression about um the look and feel that um the remote should have",
+   "hyp": "UTHIS IS THIS IMAGE WILL GIVE YOU A LITTLE BIT OF AN IMPRESSION ABOUT  THE LOOK AND FEEL THAT THE REOMOTE SHOUL HAVE",
+   "sec": 0.165
+  },
+  {
+   "id": "EV-8179",
+   "ref": "who has written to me or mentioned me in social media",
+   "hyp": "WHO HAS WRTEN TO ME OR MENTIONED ME IN SOCIAL MEDIA",
+   "sec": 0.067
+  },
+  {
+   "id": "EV-8189",
+   "ref": "do you think there might be a relationship between the two between the kind of the products you are using and your symptoms",
+   "hyp": "YO THINK THEY MIGHT BE A REATIONSHIP BETWEEN THE TO BETWEEN THE KIND OF THE PRODUCTS YOU' USING AND YOUR SYNTOMS",
+   "sec": 0.103
+  },
+  {
+   "id": "EV-8453",
+   "ref": "great and uh are you in a sort of uh confidential place where you can speak freely",
+   "hyp": "GREAT AND ARE YOU IN A SORT OF CONFIDENTAL PLACE WHERE YOU CAN SPEAK FROUELY",
+   "sec": 0.113
+  },
+  {
+   "id": "EV-8573",
+   "ref": "it should not be too big but i do not think we can make it too small because it has to have a lot of functions so",
+   "hyp": "IT SOULN'T BE TOO BIG BUT I DON'T THINK WE CAN MAKE ITO SMAL BECAUSE IT HAS TO HAVE A LOT OF FUNCTIONS O",
+   "sec": 0.088
+  },
+  {
+   "id": "EV-8596",
+   "ref": "quiet mode on until i am home from work",
+   "hyp": "QUIE MODED ON UNTIL I'M HOME FROM WARK",
+   "sec": 0.049
+  },
+  {
+   "id": "EV-8630",
+   "ref": "so i think what we need to do is perhaps to synchronise the final the the launch of a user tested device with some special event",
+   "hyp": "SO I THINK WHAT WE NEED TO DO IS PERHAPS TO SYNCHRONIZEE FI THE LAUNCH OF A USER TESTED DEVICE WITH SOME SPECIAL EVENT",
+   "sec": 0.15
+  },
+  {
+   "id": "EV-8694",
+   "ref": "remove the list of person starting from letter m in my contact list",
+   "hyp": "REMOVE THE LIST OF PERSON STARTING FROM LETTER M IN MY CONTACT LIST",
+   "sec": 0.078
+  },
+  {
+   "id": "EV-8727",
+   "ref": "yeah so again it's the left side it's kind of like around my left ear and kind of along here so like my jawline's just all feeling a bit numb round here",
+   "hyp": "YEAH SO AGAIN IT'S THE LEFT SIDE IT'S KIND OF LIKE AROUND MY LEFT HERE AND KIND OF BELONG HERE SO LIKE MY JAWL LIES JUST ALLEING A BIT NMBER OUN HERE",
+   "sec": 0.144
+  },
+  {
+   "id": "EV-8769",
+   "ref": "and they have to wait for the right season to do",
+   "hyp": "AND THEU HAVE TO WAIT FOR THE RIGHT SEASON TO DO THOSE",
+   "sec": 0.07
+  },
+  {
+   "id": "EV-8971",
+   "ref": "yes i was taking a shower when you called i saw that you called and i tried to call you back but i think your phone was off",
+   "hyp": "YES I WAS TAKING A SHOWER WHEN YOU CALLD I SAW THAT YOU CALLED AND TRIED TO CALL YOU BACK BUT I THIN YOUR PHONE WAS OFF",
+   "sec": 0.11
+  },
+  {
+   "id": "EV-9018",
+   "ref": "google i need the living room vacuumed can you turn on the vacuum cleaner",
+   "hyp": "GOOGLE I NEED AHE LIVING ROOM VACUM CAN YOU TURN ON THE VACU CLIANER",
+   "sec": 0.081
+  },
+  {
+   "id": "EV-9209",
+   "ref": "in the middle okay and any other symptoms along that with that have you had any nausea or any vomiting",
+   "hyp": "IN THE MIDDLE OKAY AND ANY OTHER SYMTOMS ARONG THAT WITH THAT HAVE YOU HAD ANY NAOSSIER AND VOMITING",
+   "sec": 0.118
+  },
+  {
+   "id": "EV-9306",
+   "ref": "good morning i would like to open a savings account can you tell me on how to go about it",
+   "hyp": "GOOD MORNING I'D LIKE TO OPEN A SAVINGS ACCOUNT CAN YOU TELL ME ON HOW TO GO ABOUT IT",
+   "sec": 0.089
+  },
+  {
+   "id": "EV-9341",
+   "ref": "money sure sure which one how much bada bing bada boom",
+   "hyp": "MONEY SHURE SURE WHICH ONE HOW MUCH BBBING BETTR BOOM",
+   "sec": 0.063
+  },
+  {
+   "id": "EV-9462",
+   "ref": "replace card and which card would you like to replace",
+   "hyp": "PLACE CARD AND WHICH CARD WOULD YOU LIKE TO REPLACY",
+   "sec": 0.048
+  },
+  {
+   "id": "EV-9953",
+   "ref": "all right did you have any questions that you wanted to ask me",
+   "hyp": "ALLIHT DID YOU HAVE ANY QUESTIONS THAT YOU WND TO ASK ME",
+   "sec": 0.055
+  }
+ ]
+}

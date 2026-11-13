@@ -1,0 +1,82 @@
+{
+ "target": "linux",
+ "config": "/home/arduino/cabin/config_gpu.json",
+ "device": {
+  "ro.soc.model": "QCS8275",
+  "ro.product.model": "Qualcomm Technologies, Inc. Monaco Monza addons",
+  "ro.build.version.release": "Ubuntu 24.04.4 LTS, kernel 6.8.0-1080-qcom",
+  "ro.board.platform": "ventunoq",
+  "mem_total": "MemTotal:       15651776 kB",
+  "cpus": "Cortex-A55 Cortex-A78C/ 8 cores",
+  "gpu": "Adreno 623 (msm DRM, Mesa 25.2.8-0ubuntu0.24.04.2 Vulkan)",
+  "links": "end0=UP wlp3s0=UP",
+  "wifi_on": "1",
+  "airplane_mode_on": "n/a",
+  "internet": "online"
+ },
+ "device_end": {
+  "ro.soc.model": "QCS8275",
+  "ro.product.model": "Qualcomm Technologies, Inc. Monaco Monza addons",
+  "ro.build.version.release": "Ubuntu 24.04.4 LTS, kernel 6.8.0-1080-qcom",
+  "ro.board.platform": "ventunoq",
+  "mem_total": "MemTotal:       15651776 kB",
+  "cpus": "Cortex-A55 Cortex-A78C/ 8 cores",
+  "gpu": "Adreno 623 (msm DRM, Mesa 25.2.8-0ubuntu0.24.04.2 Vulkan)",
+  "links": "end0=UP wlp3s0=UP",
+  "wifi_on": "1",
+  "airplane_mode_on": "n/a",
+  "internet": "online"
+ },
+ "device_summary": {
+  "load_ms": {
+   "asr_vi": 2979.276988,
+   "mt": 3293.547196,
+   "tts_en": 1096.408749
+  },
+  "mt_backend": "gpu",
+  "mt_max_num_tokens": 384,
+  "mt_model": "/home/arduino/cabin/models/gemma-4-E2B-it-gpu.litertlm",
+  "mt_num_threads": 0,
+  "mt_prefix_cache": true,
+  "mt_sampler": "greedy",
+  "peak_rss_kb": 705812,
+  "rss_after_load_kb": 449692,
+  "rss_base_kb": 42960
+ },
+ "meminfo_peak_kb": {
+  "total_rss": 704012,
+  "vm_hwm": 704012,
+  "graphics": 1220188
+ },
+ "wall_s": 20.5,
+ "pairs": {
+  "vi-en": {
+   "n": 3,
+   "asr_wer": 0.0,
+   "bleu": 74.66,
+   "chrf++": 76.32,
+   "asr_bleu_speech_out": 74.66,
+   "asr_ms_mean": 95.0,
+   "asr_ms_p50": 96.4,
+   "asr_ms_p95": 106.2,
+   "punct_ms_mean": 0.0,
+   "punct_ms_p50": 0.0,
+   "punct_ms_p95": 0.0,
+   "mt_ms_mean": 1688.5,
+   "mt_ms_p50": 1600.2,
+   "mt_ms_p95": 1916.3,
+   "tts_ms_mean": 278.9,
+   "tts_ms_p50": 278.8,
+   "tts_ms_p95": 284.8,
+   "total_ms_mean": 2063.5,
+   "total_ms_p50": 1954.6,
+   "total_ms_p95": 2296.5,
+   "mt_ttft_ms_mean": 538.1,
+   "mt_prefill_tps_mean": 536.5,
+   "mt_decode_tps_mean": 7.3,
+   "mt_prefill_tok_mean": 215.0,
+   "mt_decode_tok_mean": 9.3,
+   "audio_s_mean": 3.13
+  }
+ }
+}

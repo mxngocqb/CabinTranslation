@@ -1,0 +1,3 @@
+loaded: {"gpu_kb_after_load":-1,"load_ms":{"asr_en":4105.014217,"asr_ko":2597.231978,"asr_vi":1776.929583,"asr_zh":4282.278905,"mt":7893.577236,"tts_en":801.948073,"tts_ko":814.786718,"tts_vi":655.625781,"tts_zh":1822.510312},"mt_backend":"gpu","mt_max_num_tokens":384,"mt_prefix_cache":true,"mt_speculative":"off","rss_after_load_kb":2350228,"rss_base_kb":49420}
+libc++abi: terminating due to uncaught exception of type nlohmann::json_abi_v3_11_3::detail::type_error: [json.exception.type_error.306] cannot use value() with null
+Aborted 

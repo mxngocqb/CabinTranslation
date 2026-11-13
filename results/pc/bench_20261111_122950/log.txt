@@ -1,0 +1,106 @@
+[2026-11-11T12:29:50.245] ENV {"host": "SOICT-HUST", "os": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.39", "python": "3.11.17", "cpu": "x86_64", "cpu_count": 16, "ram_gb": 50.5, "gpu": "NVIDIA GeForce RTX 4080 SUPER", "network_online_at_start": true}
+[2026-11-11T12:29:50.246] WARNING: network is ONLINE. For the official benchmark disconnect Wi-Fi/Ethernet first.
+[2026-11-11T12:30:00.089] models loaded in 9.77s; MT device=gpu
+[2026-11-11T12:30:00.134] MODEL_SIZES_MB {"asr:en-gigaspeech": 73.7, "asr:vi-30m": 30.1, "mt:gemma-4-E2B-it-Q3_K_M.gguf": 2536.8, "tts:vifasttts-ngochuyen-small": 85.8, "tts:supertonic-3-int8": 145.3}
+[2026-11-11T12:30:01.763] en-vi EV-0157 asr=0.068s mt=0.397s tts=0.047s total=0.512s | Chỉ phát tất cả nhạc phát hành từ năm một nghìn chín trăm đến hai nghìn.
+[2026-11-11T12:30:02.053] en-vi EV-0182 asr=0.06s mt=0.081s tts=0.066s total=0.206s | Một lúc, có chỗ để lưu trữ tôi không tốt lắm?
+[2026-11-11T12:30:02.537] en-vi EV-0228 asr=0.062s mt=0.11s tts=0.063s total=0.235s | Tôi có nhớ đặt lời nhắc cho cuộc hẹn bác sĩ tiếp theo của tôi không?
+[2026-11-11T12:30:02.934] en-vi EV-0240 asr=0.043s mt=0.17s tts=0.071s total=0.283s | Nhớ là tôi đã đặt một cái bánh cho bữa tiệc sinh nhật tối nay rồi, cho tôi biết tình trạng của nó nhé.
+[2026-11-11T12:30:03.335] en-vi EV-0250 asr=0.045s mt=0.132s tts=0.154s total=0.331s | Được rồi, chúng tôi sẽ gửi thanh toán cho fossil gas. Có gì khác tôi có thể giúp bạn hôm nay không?
+[2026-11-11T12:30:03.549] en-vi EV-0333 asr=0.058s mt=0.072s tts=0.035s total=0.165s | Tai tôi hơi ong ong và làm tôi mất tập trung.
+[2026-11-11T12:30:04.025] en-vi EV-0358 asr=0.114s mt=0.127s tts=0.093s total=0.333s | Bảy trăm ba mươi bốn đường Main Street Harper Valley Oregon sáu bảy hai chín bảy.
+[2026-11-11T12:30:04.479] en-vi EV-0383 asr=0.082s mt=0.216s tts=0.089s total=0.387s | Vậy ừm tôi nghĩ chúng ta có thể làm là có thể nếu bạn đặt lịch hẹn trực tiếp tại một trong các phòng khám của chúng tôi thì không phải là trường hợp khẩn cấp.
+[2026-11-11T12:30:04.940] en-vi EV-0491 asr=0.076s mt=0.231s tts=0.089s total=0.396s | Bạn sẽ chỉ cần khoảng mười đô la cho ăn uống và tiền xăng thôi bạn, bạn tôi lái xe nên chúng tôi thường góp vài đô la tiền xăng.
+[2026-11-11T12:30:05.253] en-vi EV-0523 asr=0.053s mt=0.057s tts=0.082s total=0.191s | Ông ấy già khi chuyện đó xảy ra.
+[2026-11-11T12:30:05.629] en-vi EV-0752 asr=0.076s mt=0.094s tts=0.058s total=0.229s | Có điều gì bạn mong muốn đặc biệt khi tham gia buổi tư vấn này không?
+[2026-11-11T12:30:06.049] en-vi EV-0894 asr=0.069s mt=0.182s tts=0.108s total=0.359s | Được rồi, và chúng ta chuyển sang việc tiếp theo nhanh nhé, thưa ông. Ông có dị ứng gì không?
+[2026-11-11T12:30:08.553] en-vi EV-1173 asr=0.049s mt=0.128s tts=0.056s total=0.233s | Thứ Ba tôi có phải lo lắng về tuyết rơi làm xe của tôi bị mắc kẹt trong lối đi không?
+[2026-11-11T12:30:08.817] en-vi EV-1212 asr=0.041s mt=0.107s tts=0.057s total=0.205s | Và là một phiền phức là nó có ở đó mọi lúc hay nó đến rồi đi?
+[2026-11-11T12:30:09.207] en-vi EV-1229 asr=0.056s mt=0.112s tts=0.11s total=0.278s | Chúng tôi sẽ gửi thanh toán của bạn đến fossil. Có gì khác tôi có thể giúp bạn không?
+[2026-11-11T12:30:09.657] en-vi EV-1508 asr=0.083s mt=0.138s tts=0.119s total=0.34s | Tôi sẽ xem nó giống như khi giờ làm việc thường của tôi là từ mười hai giờ đến ba giờ hoặc đại loại thế.
+[2026-11-11T12:30:09.896] en-vi EV-1725 asr=0.041s mt=0.098s tts=0.058s total=0.196s | Tôi làm chủ một nhà hàng nên tôi sở hữu một tiệm sushi.
+[2026-11-11T12:30:10.314] en-vi EV-1829 asr=0.061s mt=0.161s tts=0.061s total=0.284s | Không có gì, tôi đã giúp được bạn rồi. Cảm ơn bạn rất nhiều vì sự giúp đỡ.
+[2026-11-11T12:30:10.588] en-vi EV-1863 asr=0.047s mt=0.106s tts=0.033s total=0.186s | Nhiệt độ sẽ giữ nguyên hay sẽ lạnh hơn?
+[2026-11-11T12:30:10.803] en-vi EV-2177 asr=0.054s mt=0.086s tts=0.035s total=0.175s | Thật đáng tiếc và bạn có khỉ đó bao lâu rồi?
+[2026-11-11T12:30:11.093] en-vi EV-2248 asr=0.058s mt=0.11s tts=0.079s total=0.248s | Nếu có mười bước dễ dàng để làm giàu thì đó sẽ là gì.
+[2026-11-11T12:30:11.660] en-vi EV-2316 asr=0.117s mt=0.205s tts=0.093s total=0.415s | Ý tôi là một số người bị lo âu họ cần dùng thuốc để kiểm soát điều đó nhưng đó không phải là điều chúng ta có thể đề xuất ngay từ đầu.
+[2026-11-11T12:30:12.124] en-vi EV-2364 asr=0.076s mt=0.205s tts=0.12s total=0.401s | Những điều gây thất vọng lớn nhất mà mọi người gặp phải liên quan đến sở thích cá nhân là cái điều bạn đã đề cập trước đó, điều khiển từ xa thường bị thất lạc trong phòng.
+[2026-11-11T12:30:12.547] en-vi EV-2388 asr=0.047s mt=0.184s tts=0.139s total=0.37s | Không phải chỉ một lần mỗi khi tôi đi xe buýt thì có chuyện gì đó không tốt xảy ra với tôi hoặc người khác trên xe buýt.
+[2026-11-11T12:30:12.853] en-vi EV-2390 asr=0.049s mt=0.083s tts=0.106s total=0.238s | Tôi cần bạn thêm walkedog vào danh sách việc cần làm của tôi.
+[2026-11-11T12:30:13.342] en-vi EV-2401 asr=0.062s mt=0.153s tts=0.065s total=0.28s | Tên tôi là Patricia Johnson và tôi bị mất thẻ nhân viên của tôi, bạn có thể gửi cho tôi không?
+[2026-11-11T12:30:13.728] en-vi EV-2476 asr=0.046s mt=0.118s tts=0.107s total=0.27s | Công việc hơi căng thẳng một chút lúc này tôi có nhiều việc phải làm.
+[2026-11-11T12:30:13.917] en-vi EV-2748 asr=0.047s mt=0.036s tts=0.032s total=0.115s | Và.
+[2026-11-11T12:30:14.523] en-vi EV-2802 asr=0.122s mt=0.173s tts=0.09s total=0.385s | Mặc dù tôi không thể nói rằng mọi thứ đều hoàn hảo nhưng tôi vẫn rất trân trọng những gì công ty đã cho tôi, đặc biệt là nhiều cơ hội.
+[2026-11-11T12:30:14.942] en-vi EV-3057 asr=0.062s mt=0.219s tts=0.084s total=0.366s | Có ai khác muốn ghép nó lại không thực ra tôi có thể vẫn ghép được nếu bạn muốn cho các bộ phận của bạn vào cái này.
+[2026-11-11T12:30:15.180] en-vi EV-3248 asr=0.03s mt=0.08s tts=0.063s total=0.173s | Tôi có bao nhiêu thời gian để luộc trứng?
+[2026-11-11T12:30:15.704] en-vi EV-3459 asr=0.094s mt=0.166s tts=0.065s total=0.325s | Ba mươi hai tuổi được rồi bạn có thể cho tôi biết dòng đầu tiên của địa chỉ của bạn trên mã bưu chính được không
+[2026-11-11T12:30:16.034] en-vi EV-3775 asr=0.05s mt=0.121s tts=0.076s total=0.247s | Gọi cho tôi một chiếc taxi để đưa tôi ra sân bay vào thứ sáu lúc năm giờ ba mươi.
+[2026-11-11T12:30:16.512] en-vi EV-3791 asr=0.057s mt=0.207s tts=0.146s total=0.409s | Cảm ơn bạn đã đến và tôi sẽ gửi biên bản cuộc họp cho bạn và vui lòng đặt tất cả thông tin của bạn vào thư mục chia sẻ để mọi người có thể chia sẻ thông tin.
+[2026-11-11T12:30:17.011] en-vi EV-4009 asr=0.091s mt=0.221s tts=0.127s total=0.439s | Chúng tôi thực sự may mắn khi có được bàn cuối cùng còn trống cho hai người và chúng tôi thậm chí còn không có đặt chỗ. Bạn có thấy những hàng dài phía sau chúng ta không.
+[2026-11-11T12:30:17.257] en-vi EV-4177 asr=0.044s mt=0.095s tts=0.054s total=0.192s | Chào tôi tên là Michael Wilson tôi muốn chuyển tiền giữa các tài khoản của tôi.
+[2026-11-11T12:30:17.485] en-vi EV-4250 asr=0.051s mt=0.088s tts=0.045s total=0.183s | Và với tiêu chảy thì bạn đi vệ sinh bao nhiêu lần một ngày?
+[2026-11-11T12:30:17.743] en-vi EV-4294 asr=0.065s mt=0.093s tts=0.055s total=0.212s | Cho tôi chi tiết hồ sơ Twitter của tôi bao gồm tổng số người theo dõi.
+[2026-11-11T12:30:18.093] en-vi EV-4321 asr=0.051s mt=0.122s tts=0.058s total=0.23s | Được rồi, tôi sẽ đọc số thuế bây giờ để chúng ta hiểu những gì bạn cần làm.
+[2026-11-11T12:30:18.640] en-vi EV-4505 asr=0.113s mt=0.197s tts=0.106s total=0.415s | Điều đáng ngạc nhiên là mọi người chú ý rất nhiều đến việc sửa đổi điện thoại di động như thế nào mỗi tháng bạn lại thấy một sản phẩm mới ra mắt hoặc đại loại thế.
+[2026-11-11T12:30:18.952] en-vi EV-4810 asr=0.038s mt=0.106s tts=0.123s total=0.266s | Chào tôi tên là Elizabeth Rodriguez, giờ làm việc của chi nhánh địa phương là mấy giờ ạ?
+[2026-11-11T12:30:19.263] en-vi EV-5187 asr=0.082s mt=0.116s tts=0.071s total=0.27s | Không thể nào tôi biết là bạn đang thiếu tiền lúc này, không cần phải trả toàn bộ hóa đơn.
+[2026-11-11T12:30:19.436] en-vi EV-5269 asr=0.025s mt=0.071s tts=0.039s total=0.135s | Không dùng thuốc nào vì dị ứng với đậu phộng.
+[2026-11-11T12:30:19.790] en-vi EV-5301 asr=0.068s mt=0.136s tts=0.115s total=0.318s | Chỉ để xác nhận là bạn đã đặt báo thức kêu lúc tám giờ.
+[2026-11-11T12:30:20.104] en-vi EV-5455 asr=0.044s mt=0.118s tts=0.08s total=0.242s | Bây giờ bạn có những triệu chứng đó ngay bây giờ hay chúng đã hết rồi?
+[2026-11-11T12:30:20.460] en-vi EV-5482 asr=0.076s mt=0.144s tts=0.095s total=0.315s | Được rồi, bạn có nhớ lúc đó bạn đang làm gì không?
+[2026-11-11T12:30:20.899] en-vi EV-5600 asr=0.122s mt=0.15s tts=0.088s total=0.361s | Tôi đã đi chơi chất lượng với bạn bè và bên ngoài, thật sự rất tuyệt, nhưng chúng ta sẽ xem sao.
+[2026-11-11T12:30:21.246] en-vi EV-5621 asr=0.028s mt=0.13s tts=0.098s total=0.256s | Cho tôi biết nhiệt độ ở thành phố của chúng ta lúc mười hai giờ.
+[2026-11-11T12:30:21.604] en-vi EV-5655 asr=0.079s mt=0.12s tts=0.078s total=0.278s | Đăng một trạng thái mới trên Facebook nói rằng tôi đang tận hưởng thời tiết đẹp.
+[2026-11-11T12:30:21.871] en-vi EV-5674 asr=0.073s mt=0.099s tts=0.055s total=0.227s | Xin cho tôi tóm tắt lại tình hình sprint hiện tại.
+[2026-11-11T12:30:22.297] en-vi EV-5720 asr=0.146s mt=0.161s tts=0.068s total=0.375s | Tôi vừa mới đi học ngôn ngữ về, ở đó chúng tôi phải nói tiếng Pháp cả ngày, không được dùng tiếng Anh.
+[2026-11-11T12:30:22.629] en-vi EV-5761 asr=0.034s mt=0.174s tts=0.059s total=0.267s | Anh đã đo nó gần đây bằng một cái đồng hồ đo mắt hay thứ gì tương tự chưa?
+[2026-11-11T12:30:22.864] en-vi EV-5890 asr=0.055s mt=0.094s tts=0.042s total=0.192s | Nhưng không phải là tôi thực sự lo lắng vì điều này rất kỳ lạ.
+[2026-11-11T12:30:23.329] en-vi EV-5935 asr=0.083s mt=0.141s tts=0.058s total=0.282s | Tên tôi là Sarah Smith và ngày sinh của tôi là ngày hai mươi tháng bốn năm mười chín mười tám.
+[2026-11-11T12:30:23.563] en-vi EV-5957 asr=0.037s mt=0.055s tts=0.039s total=0.131s | Đau ở phía sau mắt phải không?
+[2026-11-11T12:30:23.852] en-vi EV-6047 asr=0.098s mt=0.104s tts=0.043s total=0.245s | Khoảng bảy giờ và... mất bao lâu để sưng lên vậy?
+[2026-11-11T12:30:24.292] en-vi EV-6054 asr=0.135s mt=0.169s tts=0.06s total=0.364s | Một số người bị tắc mạch và những người khác có thể được tìm thấy ở chân hoặc ngực trong phổi của bạn.
+[2026-11-11T12:30:24.678] en-vi EV-6218 asr=0.06s mt=0.169s tts=0.069s total=0.298s | Màu xanh nhạt ấy, bạn không dùng nó mỗi ngày nên bạn chỉ dùng nó thỉnh thoảng thôi.
+[2026-11-11T12:30:25.034] en-vi EV-6239 asr=0.033s mt=0.157s tts=0.117s total=0.307s | Được rồi, vậy là hoàn hảo. Cảm ơn bạn rất nhiều vì đã giúp đỡ.
+[2026-11-11T12:30:25.428] en-vi EV-6340 asr=0.05s mt=0.18s tts=0.093s total=0.323s | Cuộc hẹn của họ đã được lên lịch vào thứ Năm tám giờ sáng. Tôi có thể giúp gì khác cho bạn không?
+[2026-11-11T12:30:25.841] en-vi EV-6426 asr=0.081s mt=0.186s tts=0.094s total=0.362s | Dễ sử dụng đã luôn trở thành một mối quan tâm lớn khác rằng với bảng trắng chúng ta có thể thấy đó là một thiết bị dễ sử dụng.
+[2026-11-11T12:30:26.108] en-vi EV-6502 asr=0.064s mt=0.108s tts=0.06s total=0.233s | Tôi sẽ cho nó lâu hơn thế, khoảng một giờ ấy.
+[2026-11-11T12:30:26.573] en-vi EV-6534 asr=0.064s mt=0.164s tts=0.076s total=0.304s | Không, anh ấy là một vài sếp sẽ bẻ luật một chút đôi khi nhưng không phải sếp của tôi anh ấy luôn tuân thủ luật lệ.
+[2026-11-11T12:30:27.009] en-vi EV-6557 asr=0.091s mt=0.143s tts=0.076s total=0.31s | Và ừm tôi chỉ cảm thấy cần phải gọi cho các bạn và cần có thêm thông tin về những gì đang xảy ra.
+[2026-11-11T12:30:27.580] en-vi EV-6602 asr=0.094s mt=0.24s tts=0.101s total=0.435s | Tôi nghĩ có lẽ là nhiễm trùng đường tiết niệu đơn giản hoặc nhiễm trùng đường tiểu từ bàng quang, cái này có thể điều trị dễ dàng nên tôi sẽ cho bạn một đợt kháng sinh hôm nay.
+[2026-11-11T12:30:27.812] en-vi EV-6618 asr=0.03s mt=0.125s tts=0.04s total=0.195s | Cảm ơn đã gọi, chúc anh một ngày tốt lành.
+[2026-11-11T12:30:28.206] en-vi EV-6709 asr=0.054s mt=0.105s tts=0.069s total=0.228s | Lịch hẹn của bạn đã được sắp xếp vào thứ Tư lúc tám giờ rưỡi sáng.
+[2026-11-11T12:30:28.525] en-vi EV-6929 asr=0.082s mt=0.126s tts=0.065s total=0.273s | Chuyển hai nghìn ba trăm ba mươi từ GMT cộng bốn trăm ba mươi sang GMT hai trăm.
+[2026-11-11T12:30:28.698] en-vi EV-6960 asr=0.038s mt=0.066s tts=0.044s total=0.147s | Và tôi sẽ cần mang theo ô hôm nay.
+[2026-11-11T12:30:29.006] en-vi EV-7227 asr=0.06s mt=0.102s tts=0.099s total=0.261s | Có đau hay mùi nồng hay phải đi vệ sinh thường xuyên hơn bình thường không?
+[2026-11-11T12:30:29.337] en-vi EV-7335 asr=0.074s mt=0.134s tts=0.084s total=0.292s | Và nó có một kết thúc tốt, tôi sẽ không làm hỏng nó đâu.
+[2026-11-11T12:30:29.899] en-vi EV-7389 asr=0.113s mt=0.205s tts=0.12s total=0.438s | Vậy nếu người dùng không muốn dùng giọng nói thì họ có thể tắt nó đi và bạn không vô tình thay đổi bất cứ thứ gì trên thiết bị của bạn bằng điều khiển từ xa.
+[2026-11-11T12:30:30.091] en-vi EV-7405 asr=0.032s mt=0.078s tts=0.042s total=0.152s | Bạn có thể cung cấp những bài nhạc như của tôi được không?
+[2026-11-11T12:30:30.555] en-vi EV-7409 asr=0.084s mt=0.23s tts=0.099s total=0.413s | Sếp bảo tôi có thể về sớm để nghỉ trưa dài hơn vào một ngày khác nên tôi quyết định đợi và nghỉ trưa dài hơn vào một lúc khác.
+[2026-11-11T12:30:30.858] en-vi EV-7443 asr=0.065s mt=0.114s tts=0.087s total=0.265s | Tôi đã đặt thẻ ghi nợ thay thế của bạn. Có gì khác tôi có thể giúp bạn không?
+[2026-11-11T12:30:31.193] en-vi EV-7496 asr=0.108s mt=0.098s tts=0.086s total=0.292s | Và để khám phá thêm để tìm ra những điều không hiển nhiên hay đã biết.
+[2026-11-11T12:30:31.761] en-vi EV-7675 asr=0.105s mt=0.204s tts=0.101s total=0.409s | Tại sao không, thôi được rồi tôi sẵn sàng ăn không cần gọi bác sĩ nếu bạn chạy đến nhà hàng tôi có thể đến nhà vệ sinh và bạn có thể gọi món.
+[2026-11-11T12:30:31.989] en-vi EV-7690 asr=0.025s mt=0.09s tts=0.071s total=0.186s | Được rồi, ok, cẩn thận nhé, chúc mọi điều tốt đẹp.
+[2026-11-11T12:30:32.380] en-vi EV-7713 asr=0.038s mt=0.149s tts=0.149s total=0.336s | Nhưng tôi chỉ có chín trăm đô la tiền mặt ở đây, bạn có thể cho đi chín trăm đô la được không?
+[2026-11-11T12:30:32.776] en-vi EV-7738 asr=0.09s mt=0.142s tts=0.066s total=0.299s | Vâng tôi có nhưng vị cá hấp ở nhà hàng đó không ngon, cá không chín kỹ và quá mặn.
+[2026-11-11T12:30:33.230] en-vi EV-7757 asr=0.064s mt=0.212s tts=0.065s total=0.341s | Điều đó rất vất vả vì ngón cái của bạn hơi nhô lên nên chúng đi qua thứ gì đó được che phủ như thế này.
+[2026-11-11T12:30:33.503] en-vi EV-7818 asr=0.043s mt=0.109s tts=0.061s total=0.212s | Chào tôi tên là Miss James Johnson và tôi muốn biết số dư tài khoản của tôi.
+[2026-11-11T12:30:34.149] en-vi EV-7979 asr=0.177s mt=0.278s tts=0.126s total=0.581s | Bây giờ bạn đã được đặt chuyến bay khởi hành lúc mười sáu giờ bốn mươi lăm và bạn sẽ đến Sydney lúc chín giờ sáng giờ địa phương. Số chuyến bay là n w a bốn bảy sáu.
+[2026-11-11T12:30:34.574] en-vi EV-8062 asr=0.084s mt=0.163s tts=0.119s total=0.367s | Hình ảnh này sẽ cho bạn một chút ấn tượng về hình dáng và cảm giác mà cái điều khiển nên có.
+[2026-11-11T12:30:34.782] en-vi EV-8179 asr=0.044s mt=0.083s tts=0.045s total=0.173s | Ai đã viết thư cho tôi hoặc nhắc đến tôi trên mạng xã hội?
+[2026-11-11T12:30:35.101] en-vi EV-8189 asr=0.05s mt=0.13s tts=0.079s total=0.259s | Bạn có nghĩ rằng có mối liên hệ nào giữa loại sản phẩm bạn đang sử dụng và các triệu chứng của bạn không?
+[2026-11-11T12:30:35.465] en-vi EV-8453 asr=0.102s mt=0.104s tts=0.108s total=0.314s | Tuyệt vời và bạn ở một nơi bí mật để bạn có thể nói thoải mái.
+[2026-11-11T12:30:35.824] en-vi EV-8573 asr=0.055s mt=0.143s tts=0.096s total=0.294s | Nó không nên quá lớn nhưng tôi không nghĩ chúng ta có thể làm nó quá nhỏ vì nó phải có nhiều chức năng.
+[2026-11-11T12:30:36.012] en-vi EV-8596 asr=0.034s mt=0.084s tts=0.041s total=0.16s | Chế độ im lặng cho đến khi tôi về nhà.
+[2026-11-11T12:30:36.334] en-vi EV-8630 asr=0.066s mt=0.13s tts=0.066s total=0.261s | Tôi nghĩ chúng ta cần đồng bộ việc ra mắt thiết bị đã được người dùng thử nghiệm với một sự kiện đặc biệt.
+[2026-11-11T12:30:36.560] en-vi EV-8694 asr=0.049s mt=0.095s tts=0.043s total=0.187s | Xóa danh sách người bắt đầu bằng chữ M trong danh bạ của tôi.
+[2026-11-11T12:30:37.012] en-vi EV-8727 asr=0.065s mt=0.206s tts=0.12s total=0.392s | Vâng, lại là bên trái nó hơi giống như xung quanh tai trái của tôi và hơi dài ở đây, kiểu như đường viền hàm của tôi đang cảm thấy hơi tê ở khu vực này.
+[2026-11-11T12:30:37.237] en-vi EV-8769 asr=0.044s mt=0.07s tts=0.079s total=0.193s | Và họ phải đợi mùa thích hợp mới làm được.
+[2026-11-11T12:30:37.555] en-vi EV-8971 asr=0.056s mt=0.139s tts=0.068s total=0.263s | Vâng tôi đang tắm thì bạn gọi tôi thấy bạn gọi và cố gọi lại nhưng tôi nghĩ điện thoại của bạn đã tắt rồi.
+[2026-11-11T12:30:37.944] en-vi EV-9018 asr=0.052s mt=0.122s tts=0.061s total=0.236s | Google tôi cần máy hút bụi phòng khách bạn có thể bật máy hút bụi lên được không?
+[2026-11-11T12:30:38.350] en-vi EV-9209 asr=0.07s mt=0.151s tts=0.057s total=0.277s | Ở giữa và các triệu chứng khác kèm theo đó bạn có bị buồn nôn hay nôn mửa không?
+[2026-11-11T12:30:38.693] en-vi EV-9306 asr=0.05s mt=0.118s tts=0.066s total=0.234s | Chào buổi sáng, tôi muốn mở tài khoản tiết kiệm, bạn cho tôi biết cách làm như thế nào.
+[2026-11-11T12:30:38.953] en-vi EV-9341 asr=0.041s mt=0.078s tts=0.087s total=0.206s | Tiền chắc chắn rồi cái nào bao nhiêu đồng bạc baht boom.
+[2026-11-11T12:30:39.297] en-vi EV-9462 asr=0.059s mt=0.076s tts=0.074s total=0.21s | Thẻ đặt chỗ và bạn muốn thay thẻ nào?
+[2026-11-11T12:30:39.650] en-vi EV-9953 asr=0.052s mt=0.09s tts=0.055s total=0.196s | Anh có câu hỏi nào muốn hỏi tôi không?
+[2026-11-11T12:30:54.731] SUMMARY en-vi {"n": 100, "asr_wer": 9.53, "bleu": 43.07, "chrf++": 59.65, "asr_bleu_speech_out": 41.71, "asr_chrf_speech_out": 57.82, "asr_s_mean": 0.066, "asr_s_p50": 0.06, "asr_s_p95": 0.117, "mt_s_mean": 0.137, "mt_s_p50": 0.127, "mt_s_p95": 0.221, "tts_s_mean": 0.078, "tts_s_p50": 0.072, "tts_s_p95": 0.126, "total_s_mean": 0.281, "total_s_p50": 0.27, "total_s_p95": 0.416, "audio_s_mean": 5.96, "comet": 84.06}
+[2026-11-11T12:30:54.767] written /mnt/c/Users/ADMIN/ngocmx/CabinTranslation/results/bench_20261111_122950

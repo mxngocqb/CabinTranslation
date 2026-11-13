@@ -1,0 +1,37 @@
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+===== BEGIN DUMP OF OVERRIDDEN SETTINGS =====
+===== END DUMP OF OVERRIDDEN SETTINGS =====
+Unknown struct with type 0x2f provided to vkCreateInstance
+Unknown struct with type 0x2f provided to vkCreateInstance
+Unknown struct with type 0x2f provided to vkCreateInstance
+Unknown struct with type 0x3b9cbe04 provided to vkCreateInstance
+===== BEGIN DUMP OF OVERRIDDEN SETTINGS =====
+===== END DUMP OF OVERRIDDEN SETTINGS =====
+QUALCOMM build          : 5f5f20ff38, I3154701dae
+Build Date              : 03/25/26
+Shader Compiler Version : E031.50.31.01
+Local Branch            : 
+Remote Branch           : 
+Remote Branch           : 
+Reconstruct Branch      : 
+
+Build Config            : G QGL_C_COMPILER_OPT 4.4.0 AArch64
+Driver Path             : /usr/lib/libvulkan_adreno.so.1
+Driver Version          : 0855.3
+PFP                     : 0x016dc112
+ME                      : 0x00000000
+Application Name    : (null)
+Process Name        : cabin_edge
+Application Version : 0x00000000
+Engine Name         : Dawn
+Engine Version      : 0x00000000
+Api Version         : 0x00401000
+Warning: maxDynamicUniformBuffersPerPipelineLayout artificially reduced from 32 to 16 to fit dynamic offset allocation limit.
+Unknown struct with type 0x30 provided to vkCreateDevice
+loaded: {"load_ms":{"asr_en":4949.260666,"asr_ko":3050.505934,"asr_vi":2200.503806,"asr_zh":4937.252517,"mt":1461.847795,"tts_en":892.534385,"tts_ko":580.421276,"tts_vi":652.911984,"tts_zh":2159.176577},"mt_backend":"gpu","mt_max_num_tokens":384,"mt_model":"/var/roothome/cabin/models/gemma-4-E2B-it-gpu.litertlm","mt_num_threads":0,"mt_prefix_cache":true,"mt_sampler":"greedy","rss_after_load_kb":1496164,"rss_base_kb":43076}
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'consistently'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'Nem'
+done: {"load_ms":{"asr_en":4949.260666,"asr_ko":3050.505934,"asr_vi":2200.503806,"asr_zh":4937.252517,"mt":1461.847795,"tts_en":892.534385,"tts_ko":580.421276,"tts_vi":652.911984,"tts_zh":2159.176577},"mt_backend":"gpu","mt_max_num_tokens":384,"mt_model":"/var/roothome/cabin/models/gemma-4-E2B-it-gpu.litertlm","mt_num_threads":0,"mt_prefix_cache":true,"mt_sampler":"greedy","peak_rss_kb":3514516,"rss_after_load_kb":1496164,"rss_base_kb":43076}

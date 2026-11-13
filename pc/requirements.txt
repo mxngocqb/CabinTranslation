@@ -1,0 +1,25 @@
+# Runtime (offline inference) — Python 3.11
+sherpa-onnx==2.0.1
+onnxruntime==1.31.1
+numpy==2.4.6
+scipy==1.17.1
+soundfile==0.14.0
+librosa==0.11.0
+sentencepiece==0.2.3
+num2words==0.5.14
+psutil==7.2.2
+pyyaml==6.0.3
+typer==0.29.0
+gradio==6.31.0
+# llama-cpp-python: build with CUDA for GPU, see scripts/install.sh
+llama-cpp-python==0.3.36
+# ViFastTts (Vietnamese TTS) — installed from vendor/ViFastTts by scripts/install.sh
+# vifasttts==0.1.1
+
+# Evaluation only
+pandas==3.1.1
+openpyxl==3.1.5
+jiwer==4.0.0
+sacrebleu==2.6.0
+huggingface-hub==2.4.0
+onnx  # setup only: int8 quantization in scripts/download_models.py

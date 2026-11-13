@@ -1,0 +1,69 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vifasttts"
+version = "0.1.1"
+description = "Vietnamese single-speaker TTS toolkit: structured 5-component syllable frontend, non-autoregressive model, ONNX export"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT OR Apache-2.0"}
+authors = [{name = "ViFastTts contributors"}]
+dependencies = [
+  "numpy>=1.26",
+  "pyyaml>=6.0",
+  "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.11"]
+audio = ["soundfile>=0.12", "scipy>=1.12", "librosa>=0.10"]
+# F0 chất lượng cao (harvest + stonemask). pyworld 0.3.5 import `pkg_resources` nên
+# cần setuptools<81 đi kèm (setuptools mới đã bỏ pkg_resources).
+f0 = ["pyworld>=0.3", "setuptools<81"]
+train = ["torch>=2.3", "torchaudio>=2.3", "tensorboard>=2.17"]
+# onnxscript chỉ cần cho exporter mặc định mới của torch; export.py dùng
+# exporter TorchScript (dynamo=False) nên graph vẫn xuất được nếu thiếu.
+onnx = ["onnx>=1.16", "onnxruntime>=1.18", "onnxscript>=0.1"]
+# Lọc âm thanh không phải giọng chủ kênh (tools/diarize_filter.py) bằng NVIDIA Nemotron 3
+# Diarization qua transformers; cần torch (đã có trong extra "train").
+diar = ["transformers>=5.19", "librosa>=1.0"]
+# Lấy dữ liệu từ kênh YouTube của bạn: yt-dlp tải, imageio-ffmpeg cấp binary
+# ffmpeg tích hợp (khỏi cần brew) để giải mã m4a/webm → WAV 24 kHz mono.
+youtube = ["yt-dlp>=2023.12.30", "imageio-ffmpeg>=0.5"]
+# Cổng CER (Whisper) cho `eval_acoustic --mode free`; thiếu extra này thì CER = None (mất cổng
+# im lặng — kiểm toán 14/10/2026).
+asr = ["faster-whisper>=1.0"]
+all = [
+  "soundfile>=0.12", "scipy>=1.12", "librosa>=0.10",
+  "pyworld>=0.3", "setuptools<81",
+  "torch>=2.3", "torchaudio>=2.3", "tensorboard>=2.17",
+  "onnx>=1.16", "onnxruntime>=1.18", "onnxscript>=0.1",
+  "yt-dlp>=2023.12.30", "imageio-ffmpeg>=0.5",
+  "faster-whisper>=1.0",
+  "pytest>=8", "ruff>=0.6", "mypy>=1.11"
+]
+
+[project.scripts]
+vifasttts = "vifasttts.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vifasttts"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+  "slow: baseline đầy đủ/chấm BAK-UTMOS; không chạy trong suite mặc định",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

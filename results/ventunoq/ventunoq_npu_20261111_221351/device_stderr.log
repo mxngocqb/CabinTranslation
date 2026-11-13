@@ -1,0 +1,296 @@
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+loaded: {"load_ms":{"asr_en":6375.834452,"asr_ko":4002.726197,"asr_vi":2947.518357,"asr_zh":6388.988684,"mt":668.144277,"tts_en":1078.081822,"tts_ko":756.194591,"tts_vi":752.650092,"tts_zh":2619.455848},"mt_backend":"npu","mt_max_num_tokens":384,"mt_model":"/home/arduino/cabin/models/gemma-4-E2B-it_Qualcomm_QCS8275.litertlm","mt_num_threads":0,"mt_prefix_cache":false,"mt_sampler":"greedy","rss_after_load_kb":2214552,"rss_base_kb":10352}
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'đ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'ông'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'Kinh'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'Bao'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'Nem'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'đ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'oàn'
+done: {"load_ms":{"asr_en":6375.834452,"asr_ko":4002.726197,"asr_vi":2947.518357,"asr_zh":6388.988684,"mt":668.144277,"tts_en":1078.081822,"tts_ko":756.194591,"tts_vi":752.650092,"tts_zh":2619.455848},"mt_backend":"npu","mt_max_num_tokens":384,"mt_model":"/home/arduino/cabin/models/gemma-4-E2B-it_Qualcomm_QCS8275.litertlm","mt_num_threads":0,"mt_prefix_cache":false,"mt_sampler":"greedy","peak_rss_kb":4273968,"rss_after_load_kb":2214552,"rss_base_kb":10352}
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:38:dummy call to rpcmem_init, rpcmem APIs will be used from libxdsprpc
+ <E> Failed to find memHandle 0x1e
+ <E> Cannot find memHandle 0x1e
+ <E> Failed to get context from memHandle 0x1e
+ <E> Failed to find memHandle 0x1e
+ <E> Cannot find memHandle 0x1e
+ <E> Failed to get context from memHandle 0x1e
+ <E> Invalid context associate with mem handle 0x1e
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x9
+ <E> Cannot find memHandle 0x9
+ <E> Failed to get context from memHandle 0x9
+ <E> Failed to find memHandle 0x9
+ <E> Cannot find memHandle 0x9
+ <E> Failed to get context from memHandle 0x9
+ <E> Invalid context associate with mem handle 0x9
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x1f
+ <E> Cannot find memHandle 0x1f
+ <E> Failed to get context from memHandle 0x1f
+ <E> Failed to find memHandle 0x1f
+ <E> Cannot find memHandle 0x1f
+ <E> Failed to get context from memHandle 0x1f
+ <E> Invalid context associate with mem handle 0x1f
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x15
+ <E> Cannot find memHandle 0x15
+ <E> Failed to get context from memHandle 0x15
+ <E> Failed to find memHandle 0x15
+ <E> Cannot find memHandle 0x15
+ <E> Failed to get context from memHandle 0x15
+ <E> Invalid context associate with mem handle 0x15
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x24
+ <E> Cannot find memHandle 0x24
+ <E> Failed to get context from memHandle 0x24
+ <E> Failed to find memHandle 0x24
+ <E> Cannot find memHandle 0x24
+ <E> Failed to get context from memHandle 0x24
+ <E> Invalid context associate with mem handle 0x24
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0xe
+ <E> Cannot find memHandle 0xe
+ <E> Failed to get context from memHandle 0xe
+ <E> Failed to find memHandle 0xe
+ <E> Cannot find memHandle 0xe
+ <E> Failed to get context from memHandle 0xe
+ <E> Invalid context associate with mem handle 0xe
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x1
+ <E> Cannot find memHandle 0x1
+ <E> Failed to get context from memHandle 0x1
+ <E> Failed to find memHandle 0x1
+ <E> Cannot find memHandle 0x1
+ <E> Failed to get context from memHandle 0x1
+ <E> Invalid context associate with mem handle 0x1
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x1d
+ <E> Cannot find memHandle 0x1d
+ <E> Failed to get context from memHandle 0x1d
+ <E> Failed to find memHandle 0x1d
+ <E> Cannot find memHandle 0x1d
+ <E> Failed to get context from memHandle 0x1d
+ <E> Invalid context associate with mem handle 0x1d
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x19
+ <E> Cannot find memHandle 0x19
+ <E> Failed to get context from memHandle 0x19
+ <E> Failed to find memHandle 0x19
+ <E> Cannot find memHandle 0x19
+ <E> Failed to get context from memHandle 0x19
+ <E> Invalid context associate with mem handle 0x19
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0xa
+ <E> Cannot find memHandle 0xa
+ <E> Failed to get context from memHandle 0xa
+ <E> Failed to find memHandle 0xa
+ <E> Cannot find memHandle 0xa
+ <E> Failed to get context from memHandle 0xa
+ <E> Invalid context associate with mem handle 0xa
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x22
+ <E> Cannot find memHandle 0x22
+ <E> Failed to get context from memHandle 0x22
+ <E> Failed to find memHandle 0x22
+ <E> Cannot find memHandle 0x22
+ <E> Failed to get context from memHandle 0x22
+ <E> Invalid context associate with mem handle 0x22
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x10
+ <E> Cannot find memHandle 0x10
+ <E> Failed to get context from memHandle 0x10
+ <E> Failed to find memHandle 0x10
+ <E> Cannot find memHandle 0x10
+ <E> Failed to get context from memHandle 0x10
+ <E> Invalid context associate with mem handle 0x10
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0xf
+ <E> Cannot find memHandle 0xf
+ <E> Failed to get context from memHandle 0xf
+ <E> Failed to find memHandle 0xf
+ <E> Cannot find memHandle 0xf
+ <E> Failed to get context from memHandle 0xf
+ <E> Invalid context associate with mem handle 0xf
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x5
+ <E> Cannot find memHandle 0x5
+ <E> Failed to get context from memHandle 0x5
+ <E> Failed to find memHandle 0x5
+ <E> Cannot find memHandle 0x5
+ <E> Failed to get context from memHandle 0x5
+ <E> Invalid context associate with mem handle 0x5
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x3
+ <E> Cannot find memHandle 0x3
+ <E> Failed to get context from memHandle 0x3
+ <E> Failed to find memHandle 0x3
+ <E> Cannot find memHandle 0x3
+ <E> Failed to get context from memHandle 0x3
+ <E> Invalid context associate with mem handle 0x3
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0xc
+ <E> Cannot find memHandle 0xc
+ <E> Failed to get context from memHandle 0xc
+ <E> Failed to find memHandle 0xc
+ <E> Cannot find memHandle 0xc
+ <E> Failed to get context from memHandle 0xc
+ <E> Invalid context associate with mem handle 0xc
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x20
+ <E> Cannot find memHandle 0x20
+ <E> Failed to get context from memHandle 0x20
+ <E> Failed to find memHandle 0x20
+ <E> Cannot find memHandle 0x20
+ <E> Failed to get context from memHandle 0x20
+ <E> Invalid context associate with mem handle 0x20
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x11
+ <E> Cannot find memHandle 0x11
+ <E> Failed to get context from memHandle 0x11
+ <E> Failed to find memHandle 0x11
+ <E> Cannot find memHandle 0x11
+ <E> Failed to get context from memHandle 0x11
+ <E> Invalid context associate with mem handle 0x11
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x14
+ <E> Cannot find memHandle 0x14
+ <E> Failed to get context from memHandle 0x14
+ <E> Failed to find memHandle 0x14
+ <E> Cannot find memHandle 0x14
+ <E> Failed to get context from memHandle 0x14
+ <E> Invalid context associate with mem handle 0x14
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x23
+ <E> Cannot find memHandle 0x23
+ <E> Failed to get context from memHandle 0x23
+ <E> Failed to find memHandle 0x23
+ <E> Cannot find memHandle 0x23
+ <E> Failed to get context from memHandle 0x23
+ <E> Invalid context associate with mem handle 0x23
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x12
+ <E> Cannot find memHandle 0x12
+ <E> Failed to get context from memHandle 0x12
+ <E> Failed to find memHandle 0x12
+ <E> Cannot find memHandle 0x12
+ <E> Failed to get context from memHandle 0x12
+ <E> Invalid context associate with mem handle 0x12
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x1a
+ <E> Cannot find memHandle 0x1a
+ <E> Failed to get context from memHandle 0x1a
+ <E> Failed to find memHandle 0x1a
+ <E> Cannot find memHandle 0x1a
+ <E> Failed to get context from memHandle 0x1a
+ <E> Invalid context associate with mem handle 0x1a
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0xb
+ <E> Cannot find memHandle 0xb
+ <E> Failed to get context from memHandle 0xb
+ <E> Failed to find memHandle 0xb
+ <E> Cannot find memHandle 0xb
+ <E> Failed to get context from memHandle 0xb
+ <E> Invalid context associate with mem handle 0xb
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0xd
+ <E> Cannot find memHandle 0xd
+ <E> Failed to get context from memHandle 0xd
+ <E> Failed to find memHandle 0xd
+ <E> Cannot find memHandle 0xd
+ <E> Failed to get context from memHandle 0xd
+ <E> Invalid context associate with mem handle 0xd
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x17
+ <E> Cannot find memHandle 0x17
+ <E> Failed to get context from memHandle 0x17
+ <E> Failed to find memHandle 0x17
+ <E> Cannot find memHandle 0x17
+ <E> Failed to get context from memHandle 0x17
+ <E> Invalid context associate with mem handle 0x17
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x18
+ <E> Cannot find memHandle 0x18
+ <E> Failed to get context from memHandle 0x18
+ <E> Failed to find memHandle 0x18
+ <E> Cannot find memHandle 0x18
+ <E> Failed to get context from memHandle 0x18
+ <E> Invalid context associate with mem handle 0x18
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x2
+ <E> Cannot find memHandle 0x2
+ <E> Failed to get context from memHandle 0x2
+ <E> Failed to find memHandle 0x2
+ <E> Cannot find memHandle 0x2
+ <E> Failed to get context from memHandle 0x2
+ <E> Invalid context associate with mem handle 0x2
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+ <E> Failed to find memHandle 0x1c
+ <E> Cannot find memHandle 0x1c
+ <E> Failed to get context from memHandle 0x1c
+ <E> Failed to find memHandle 0x1c
+ <E> Cannot find memHandle 0x1c
+ <E> Failed to get context from memHandle 0x1c
+ <E> Invalid context associate with mem handle 0x1c
+ <E> Failed to deregister memHandles
+ <E> Deregister mem handles failed
+ <E> Failed to deregister memHandles with error 0x1f41
+/local/mnt/workspace/mlg_user_admin/QAIRT/SRC/SNPE_SRC/avante-tools/prebuilt/dsp/hexagon-sdk-5.5.5/ipc/fastrpc/rpcmem/src/rpcmem_android.c:42:dummy call to rpcmem_deinit, rpcmem APIs will be used from libxdsprpc

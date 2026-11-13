@@ -1,0 +1,1254 @@
+{
+ "summary": {
+  "pair": "zh-vi",
+  "input": "gold",
+  "asr": null,
+  "backend": "llama",
+  "n": 177,
+  "bleu": 49.5,
+  "chrf++": 65.72,
+  "sec_per_sent": 0.072,
+  "comet": 93.96
+ },
+ "rows": [
+  {
+   "id": "VM-0223",
+   "src": "你带护照了吗？",
+   "ref": "Bạn đã mang hộ chiếu chưa?",
+   "hyp": "Anh có mang hộ chiếu không?",
+   "comet": 96.7
+  },
+  {
+   "id": "VM-0237",
+   "src": "我给大家介绍一下，这位是我们学校的教授，这位是我们学校的校长。",
+   "ref": "Tôi xin được giới thiệu cho các bạn trước chút, vị này là giáo sư trường tôi, vị này là hiệu trưởng trường tôi.",
+   "hyp": "Tôi giới thiệu cho mọi người, đây là giáo sư của trường chúng tôi, đây là hiệu trưởng của trường chúng tôi.",
+   "comet": 92.0
+  },
+  {
+   "id": "VM-0244",
+   "src": "上次你看了几套公寓了？",
+   "ref": "Lần trước bạn đã xem mấy căn chung cư rồi?",
+   "hyp": "Lần trước bạn đã xem mấy căn hộ nào rồi?",
+   "comet": 96.2
+  },
+  {
+   "id": "VM-0370",
+   "src": "我游了一个小时了。",
+   "ref": "Tôi đã bơi một tiếng đồng hồ.",
+   "hyp": "Tôi đi bộ một tiếng rồi.",
+   "comet": 78.9
+  },
+  {
+   "id": "VM-0383",
+   "src": "这次她参加了国外大学考试。这次考试非常难，但是她考得很好，得了满分。",
+   "ref": "Được điểm tối đa.",
+   "hyp": "Lần này cô ấy đã tham gia kỳ thi đại học ở nước ngoài. Kỳ thi lần này rất khó, nhưng cô ấy đã thi rất tốt, đạt điểm tuyệt đối.",
+   "comet": 69.1
+  },
+  {
+   "id": "VM-0430",
+   "src": "你还要别的吗？",
+   "ref": "Bạn còn muốn cái khác không?",
+   "hyp": "Anh còn muốn cái khác nữa không?",
+   "comet": 97.0
+  },
+  {
+   "id": "VM-0475",
+   "src": "我每天都坚持练习一个小时。",
+   "ref": "Hàng ngày tôi đều kiên trì luyện tập một tiếng đồng hồ.",
+   "hyp": "Tôi mỗi ngày đều kiên trì luyện tập một giờ.",
+   "comet": 95.4
+  },
+  {
+   "id": "VM-0484",
+   "src": "那101块钱吧，行吗？",
+   "ref": "Vậy 101 nhân dân tệ nhé, được không?",
+   "hyp": "101 tệ nhé, được không?",
+   "comet": 94.0
+  },
+  {
+   "id": "VM-0527",
+   "src": "我也经常上网看高清中国电影和电视剧。",
+   "ref": "Tôi cũng thường lên mạng xem phim HD Trung Quốc và phim bộ.",
+   "hyp": "Tôi cũng thường lên mạng xem phim và chương trình truyền hình chất lượng cao của Trung Quốc.",
+   "comet": 89.3
+  },
+  {
+   "id": "VM-0538",
+   "src": "你的行李箱重吗？",
+   "ref": "Vali của bạn nặng không?",
+   "hyp": "Vali của bạn nặng không?",
+   "comet": 99.1
+  },
+  {
+   "id": "VM-0571",
+   "src": "我去上班的时候，她在家上网跟朋友聊天。",
+   "ref": "Trong lúc tôi đi làm, cô ta ở nhà xem lên mạng chat chit với bạn bè.",
+   "hyp": "Khi tôi đi làm, cô ấy ở nhà lướt mạng trò chuyện với bạn bè.",
+   "comet": 92.7
+  },
+  {
+   "id": "VM-0621",
+   "src": "我没看见你的摩托车。",
+   "ref": "Tôi không nhìn thấy xe máy của bạn.",
+   "hyp": "Tôi không thấy xe máy của bạn.",
+   "comet": 94.7
+  },
+  {
+   "id": "VM-0643",
+   "src": "去越南的飞机快起飞了。",
+   "ref": "Máy bay đi Việt Nam sắp cất cánh rồi.",
+   "hyp": "Máy bay đi Việt Nam sắp cất cánh rồi.",
+   "comet": 98.5
+  },
+  {
+   "id": "VM-0697",
+   "src": "你们商店有饮料吗？",
+   "ref": "Cửa hàng các bạn có nước ngọt không?",
+   "hyp": "Cửa hàng của bạn có đồ uống không?",
+   "comet": 94.2
+  },
+  {
+   "id": "VM-0708",
+   "src": "她为什么学得那么好。",
+   "ref": "Vì sao cô ta học tốt như vậy?",
+   "hyp": "Tại sao cô ấy học giỏi vậy.",
+   "comet": 96.7
+  },
+  {
+   "id": "VM-0751",
+   "src": "晚上我回家后，她常给我讲学校里有趣的事。她也很想知道越南的情况。",
+   "ref": "Buổi tối sau khi tôi về nhà, cô ta thường kể cho tôi nghe những chuyện thú vị ở trong trường học. Cô ta cũng muốn biết tình hình ở Việt Nam.",
+   "hyp": "Tối về nhà, cô ấy thường kể cho tôi nghe những chuyện thú vị ở trường. Cô ấy cũng rất muốn biết về tình hình Việt Nam.",
+   "comet": 93.6
+  },
+  {
+   "id": "VM-0815",
+   "src": "吃完饭，我经常散一会儿步，偶尔跟朋友聊聊天。",
+   "ref": "Ăn cơm xong, tôi thường đi dạo một lát, thỉnh thoảng trò chuyện với bạn bè.",
+   "hyp": "Ăn cơm xong, tôi thường đi dạo một lát, thỉnh thoảng trò chuyện với bạn bè.",
+   "comet": 97.7
+  },
+  {
+   "id": "VM-0925",
+   "src": "昨晚12点我才睡觉。",
+   "ref": "Tối qua 12:00 tôi mới đi ngủ.",
+   "hyp": "Tối qua mười hai giờ tôi mới ngủ.",
+   "comet": 93.6
+  },
+  {
+   "id": "VM-1034",
+   "src": "你骑摩托车上学吧？",
+   "ref": "Bạn đi xe máy đi học phải không?",
+   "hyp": "Anh đi xe máy đi học à?",
+   "comet": 93.3
+  },
+  {
+   "id": "VM-1043",
+   "src": "很简单，你坐出租车大概5分钟就到了。",
+   "ref": "Rất đơn giản, bạn ngồi taxi khoảng 5 phút là tới.",
+   "hyp": "Rất đơn giản, bạn ngồi taxi khoảng 5 phút là tới.",
+   "comet": 98.3
+  },
+  {
+   "id": "VM-1076",
+   "src": "我经常上网查中文学习资料。",
+   "ref": "Tôi thường lên mạng search tài liệu học Tiếng Trung.",
+   "hyp": "Tôi thường lên mạng tìm tài liệu học tiếng Trung.",
+   "comet": 97.3
+  },
+  {
+   "id": "VM-1149",
+   "src": "这是最新款的数码相机。",
+   "ref": "Đây là chiếc máy ảnh kỹ thuật số mới ra.",
+   "hyp": "Đây là máy ảnh kỹ thuật số mới nhất.",
+   "comet": 92.8
+  },
+  {
+   "id": "VM-1173",
+   "src": "大学毕业后，我要去美国留学。",
+   "ref": "Sau khi tốt nghiệp đại học tôi sẽ đi Mỹ du học.",
+   "hyp": "Sau khi tốt nghiệp đại học, tôi sẽ đi du học Mỹ.",
+   "comet": 98.3
+  },
+  {
+   "id": "VM-1241",
+   "src": "以前我是这家公司的员工。现在我是中文老师。",
+   "ref": "Trước đây tôi là nhân viên của công ty này, bây giờ tôi là giáo viên Tiếng Trung.",
+   "hyp": "Trước đây tôi là nhân viên của công ty này. Bây giờ tôi là giáo viên tiếng Trung.",
+   "comet": 96.8
+  },
+  {
+   "id": "VM-1245",
+   "src": "我在北京大学上学。",
+   "ref": "Tôi đang học trường Đại học Bắc Kinh.",
+   "hyp": "Tôi học ở Đại học Bắc Kinh.",
+   "comet": 94.6
+  },
+  {
+   "id": "VM-1328",
+   "src": "谢谢你来接我。",
+   "ref": "Cảm ơn bạn đến đón tôi.",
+   "hyp": "Cảm ơn bạn đã đến đón tôi.",
+   "comet": 98.0
+  },
+  {
+   "id": "VM-1455",
+   "src": "出了超市以后，我去看望一个朋友，她去购物中心了。",
+   "ref": "Sau khi ra khỏi siêu thị, tôi đi thăm một người bạn, cô ta đến trung tâm mua sắm.",
+   "hyp": "Sau khi ra siêu thị, tôi đi thăm một người bạn, cô ấy đã đi đến trung tâm mua sắm rồi.",
+   "comet": 91.6
+  },
+  {
+   "id": "VM-1475",
+   "src": "每天早晨，7点多我才起床，所以经常没时间吃早饭，喝一杯牛奶就去上课了。",
+   "ref": "Buổi sáng sớm hàng ngày bẩy giờ hơn tôi mới thức dậy, vì vậy thường xuyên không có thời gian ăn sáng, uống một cốc sữa là đi học luôn.",
+   "hyp": "Mỗi sáng tôi mới dậy khoảng 7 giờ, nên thường không có thời gian ăn sáng, uống một ly sữa là đi học luôn.",
+   "comet": 90.9
+  },
+  {
+   "id": "VM-1482",
+   "src": "你习惯这儿的生活吗？",
+   "ref": "Bạn quen với cuộc sống ở đây chứ?",
+   "hyp": "Anh quen với cuộc sống ở đây chưa?",
+   "comet": 97.4
+  },
+  {
+   "id": "VM-1506",
+   "src": "学校里有一个邮局，你可以去那儿寄信、买邮票，也可以寄东西。",
+   "ref": "Trong trường có bưu điện, bạn có thể đến đó gửi thư, mua tem, cũng có thể gửi đồ đạc.",
+   "hyp": "Trong trường có một bưu điện, bạn có thể đến đó gửi thư, mua tem, hoặc gửi đồ.",
+   "comet": 94.5
+  },
+  {
+   "id": "VM-1639",
+   "src": "今晚，我去书店买两本汉越词典。",
+   "ref": "Tối hôm nay tôi đến hiệu sách mua hai quyển từ điển Hán – Việt.",
+   "hyp": "Tối nay, tôi sẽ đi hiệu sách mua hai cuốn từ điển Hán Việt.",
+   "comet": 94.0
+  },
+  {
+   "id": "VM-1698",
+   "src": "你的学校在越南吧？",
+   "ref": "Trường học của bạn ở Việt Nam phải không?",
+   "hyp": "Trường của bạn ở Việt Nam à?",
+   "comet": 94.7
+  },
+  {
+   "id": "VM-1730",
+   "src": "明天，我的一个朋友来越南旅游。我得去机场接她。所以不能跟你一起去了。",
+   "ref": "Ngày mai một người bạn của tôi đến Việt Nam du lịch, tôi phải đến sân bay đón cô ta, vì vậy không đi cùng bạn được.",
+   "hyp": "Ngày mai, một người bạn của tôi sẽ đến Việt Nam du lịch. Tôi phải đến đón cô ấy ở sân bay. Vì vậy tôi không thể đi cùng bạn.",
+   "comet": 94.0
+  },
+  {
+   "id": "VM-1966",
+   "src": "她借给你的那本中文书你看完了吗？",
+   "ref": "Quyển sách Tiếng Trung đó mà cô ta cho bạn mượn bạn đã xem xong chưa?",
+   "hyp": "Quyển sách tiếng Trung cô ấy cho bạn mượn, bạn xem xong chưa?",
+   "comet": 95.0
+  },
+  {
+   "id": "VM-1985",
+   "src": "今天有人来找你。",
+   "ref": "Hôm nay có người tới tìm bạn.",
+   "hyp": "Hôm nay có người đến tìm bạn.",
+   "comet": 97.5
+  },
+  {
+   "id": "VM-1989",
+   "src": "今晚学校有舞会。我们一起到那儿去跳跳舞吧，玩一玩。",
+   "ref": "Buổi liên hoan khiêu vũ.",
+   "hyp": "Tối nay trường có vũ hội. Chúng ta cùng đến đó nhảy múa đi, chơi một chút đi.",
+   "comet": 72.4
+  },
+  {
+   "id": "VM-2046",
+   "src": "她汉字写得不好。",
+   "ref": "Cô ta viết chữ Hán không tốt.",
+   "hyp": "Viết chữ Hán của cô ấy không tốt.",
+   "comet": 93.2
+  },
+  {
+   "id": "VM-2114",
+   "src": "她睡了多长时间了？",
+   "ref": "Cô ta ngủ bao lâu rồi?",
+   "hyp": "Cô ấy đã ngủ bao lâu rồi?",
+   "comet": 98.2
+  },
+  {
+   "id": "VM-2129",
+   "src": "休息的时候，我常喝一杯咖啡或者吃点儿东西。",
+   "ref": "Lúc nghỉ ngơi tôi thường uống một tách café hoặc ăn một ít đồ.",
+   "hyp": "Khi nghỉ ngơi, tôi thường uống một ly cà phê hoặc ăn chút gì đó.",
+   "comet": 95.1
+  },
+  {
+   "id": "VM-2461",
+   "src": "你听了多长时间的录音了？",
+   "ref": "Bạn đã nghe ghi âm bao lâu?",
+   "hyp": "Bạn nghe đoạn ghi âm này bao lâu rồi?",
+   "comet": 97.0
+  },
+  {
+   "id": "VM-2584",
+   "src": "你买到票以后告诉我一声。",
+   "ref": "Sau khi bạn mua được vé thì nói tôi biết nhé.",
+   "hyp": "Anh mua vé rồi thì báo cho tôi biết nhé.",
+   "comet": 93.0
+  },
+  {
+   "id": "VM-2635",
+   "src": "我觉得很孤独所以经常想她。",
+   "ref": "Tôi cảm thấy rất cô đơn nên thường xuyên nhớ cô ta.",
+   "hyp": "Tôi cảm thấy rất cô đơn nên thường nghĩ đến cô ấy.",
+   "comet": 96.3
+  },
+  {
+   "id": "VM-2670",
+   "src": "你们公司有多少员工？",
+   "ref": "Công ty các bạn có bao nhiêu nhân viên?",
+   "hyp": "Công ty các bạn có bao nhiêu nhân viên?",
+   "comet": 99.1
+  },
+  {
+   "id": "VM-2675",
+   "src": "她感冒了，今天下午不能来上课了。",
+   "ref": "Cô ta bị cảm rồi, chiều hôm nay không tới học được.",
+   "hyp": "Cô ấy bị cảm rồi, chiều nay không thể đến lớp được.",
+   "comet": 95.7
+  },
+  {
+   "id": "VM-2697",
+   "src": "昨晚你做作业了吗？",
+   "ref": "Tối hôm qua bạn đã làm bài tập chưa?",
+   "hyp": "Tối qua bạn làm bài tập chưa?",
+   "comet": 97.7
+  },
+  {
+   "id": "VM-2711",
+   "src": "请你明天晚上来我的办公室。我有事想跟你说。",
+   "ref": "Mời bạn tối mai tới văn phòng của tôi, tôi có việc muốn nói với bạn.",
+   "hyp": "Ngày mai tối hãy đến văn phòng của tôi. Tôi có chuyện muốn nói với bạn.",
+   "comet": 94.5
+  },
+  {
+   "id": "VM-2738",
+   "src": "三年不见了，你还是老样子。",
+   "ref": "Ba năm không gặp, bạn vẫn như trước.",
+   "hyp": "Ba năm không gặp, bạn vẫn vậy.",
+   "comet": 93.1
+  },
+  {
+   "id": "VM-2759",
+   "src": "他们身体都很好。",
+   "ref": "Họ đều rất khỏe.",
+   "hyp": "Sức khỏe của họ đều rất tốt.",
+   "comet": 96.8
+  },
+  {
+   "id": "VM-2987",
+   "src": "她是哪国人？",
+   "ref": "Cô ta là người nước nào?",
+   "hyp": "Cô ấy là người nước nào?",
+   "comet": 98.8
+  },
+  {
+   "id": "VM-3007",
+   "src": "我问老师是不是每天下午都上课。",
+   "ref": "Tôi hỏi cô giáo có phải là chiều nào cũng đi học không.",
+   "hyp": "Tôi hỏi thầy có phải mỗi buổi chiều đều có lớp không.",
+   "comet": 90.5
+  },
+  {
+   "id": "VM-3185",
+   "src": "你做作业了吗？",
+   "ref": "Bạn đã làm bài tập chưa?",
+   "hyp": "Bạn làm bài tập chưa?",
+   "comet": 98.7
+  },
+  {
+   "id": "VM-3528",
+   "src": "我觉得很可惜。",
+   "ref": "Tôi nghĩ đó là một điều thật đáng tiếc.",
+   "hyp": "Tôi thấy tiếc thật.",
+   "comet": 86.6
+  },
+  {
+   "id": "VM-3595",
+   "src": "今晚我才到河内酒店。",
+   "ref": "Tối nay tôi mới đến khách sạn Hà Nội.",
+   "hyp": "Tối nay tôi mới đến khách sạn Hà Nội.",
+   "comet": 98.3
+  },
+  {
+   "id": "VM-3628",
+   "src": "她吃了一些鱼肉和牛肉。",
+   "ref": "Cô ta đã ăn một ít cá và thịt bò.",
+   "hyp": "Cô ấy đã ăn một ít cá và thịt bò.",
+   "comet": 96.9
+  },
+  {
+   "id": "VM-3695",
+   "src": "来越南的路上，你累吗？",
+   "ref": "Trên đường đến Việt Nam bạn có mệt không?",
+   "hyp": "Trên đường đến Việt Nam, bạn mệt không?",
+   "comet": 96.8
+  },
+  {
+   "id": "VM-3775",
+   "src": "我前面是我的老师。",
+   "ref": "Phía trước tôi là cô giáo của tôi.",
+   "hyp": "Trước tôi là thầy của tôi.",
+   "comet": 80.9
+  },
+  {
+   "id": "VM-3899",
+   "src": "很好吃。",
+   "ref": "Rất ngon.",
+   "hyp": "Ngon lắm.",
+   "comet": 84.6
+  },
+  {
+   "id": "VM-3937",
+   "src": "你们想喝几碗鸡蛋汤？",
+   "ref": "Các bạn muốn uống mấy bát canh trứng gà?",
+   "hyp": "Mấy bát canh trứng bạn muốn uống ạ?",
+   "comet": 86.4
+  },
+  {
+   "id": "VM-3984",
+   "src": "先生，这些白色的东西是什么？",
+   "ref": "Thưa ông, những cái mầu trắng này là đồ gì vậy?",
+   "hyp": "Thưa ông, những thứ màu trắng này là gì ạ?",
+   "comet": 92.6
+  },
+  {
+   "id": "VM-4040",
+   "src": "你练了几年的气功了？",
+   "ref": "Bạn đã luyện khí công mấy năm?",
+   "hyp": "Anh tập khí công mấy năm rồi?",
+   "comet": 93.9
+  },
+  {
+   "id": "VM-4079",
+   "src": "昨天早上我有急事。",
+   "ref": "Sáng hôm qua tôi có việc gấp.",
+   "hyp": "Sáng hôm qua tôi có việc gấp.",
+   "comet": 98.9
+  },
+  {
+   "id": "VM-4094",
+   "src": "一个小时以后飞机才到。",
+   "ref": "Một tiếng sau máy bay mới tới.",
+   "hyp": "Máy bay sẽ đến sau một tiếng nữa.",
+   "comet": 89.0
+  },
+  {
+   "id": "VM-4114",
+   "src": "今天下午我们有中文课。",
+   "ref": "Chiều nay chúng tôi có môn Tiếng Trung.",
+   "hyp": "Chiều nay chúng ta có lớp tiếng Trung.",
+   "comet": 95.1
+  },
+  {
+   "id": "VM-4238",
+   "src": "对，他是我的医生。",
+   "ref": "Phải, ông ta là bác sỹ của tôi.",
+   "hyp": "Đúng, ông ấy là bác sĩ của tôi.",
+   "comet": 95.9
+  },
+  {
+   "id": "VM-4265",
+   "src": "她得去医院看病，所以托我给她请假。",
+   "ref": "Cô ta phải đến bệnh viện khám bệnh, vì vậy nhờ tôi xin nghỉ cho cô ta.",
+   "hyp": "Cô ấy phải đi bệnh viện khám bệnh, nên tôi đã nhờ cô ấy xin nghỉ phép.",
+   "comet": 93.9
+  },
+  {
+   "id": "VM-4442",
+   "src": "你哥哥在哪儿买的这个手机号？",
+   "ref": "Anh trai bạn mua số di động này ở đâu?",
+   "hyp": "Anh trai bạn mua số điện thoại này ở đâu?",
+   "comet": 97.0
+  },
+  {
+   "id": "VM-4450",
+   "src": "昨天你吃什么了？",
+   "ref": "Hôm qua bạn đã ăn gì rồi?",
+   "hyp": "Hôm qua bạn ăn gì vậy?",
+   "comet": 97.1
+  },
+  {
+   "id": "VM-4565",
+   "src": "今天我去酒店，车停了一下就到了。",
+   "ref": "Hôm nay tôi đến khách sạn, xe dừng một lát là tới.",
+   "hyp": "Hôm nay tôi đi khách sạn, xe dừng một chút rồi đến.",
+   "comet": 89.1
+  },
+  {
+   "id": "VM-4602",
+   "src": "这些衣服我还没洗完呢。",
+   "ref": "Những quần áo này tôi vẫn chưa giặt xong mà.",
+   "hyp": "Những bộ quần áo này tôi vẫn chưa giặt xong.",
+   "comet": 94.7
+  },
+  {
+   "id": "VM-4630",
+   "src": "我先去越南，然后从越南去北京。",
+   "ref": "Tôi đi Việt Nam trước, sau đó từ Việt Nam đi Bắc Kinh.",
+   "hyp": "Tôi đi Việt Nam trước, sau đó từ Việt Nam đến Bắc Kinh.",
+   "comet": 96.5
+  },
+  {
+   "id": "VM-4635",
+   "src": "今天早上她出去了吗？",
+   "ref": "Sáng nay cô ấy có ra ngoài không?",
+   "hyp": "Sáng nay cô ấy đi ra ngoài rồi à?",
+   "comet": 95.8
+  },
+  {
+   "id": "VM-4658",
+   "src": "去购物中心怎么样？",
+   "ref": "Đi trung tâm mua sắm, thế nào?",
+   "hyp": "Đi trung tâm thương mại thì sao?",
+   "comet": 89.9
+  },
+  {
+   "id": "VM-4761",
+   "src": "当然我很想跟你跳舞了。",
+   "ref": "Tất nhiên là tôi rất muốn nhảy cùng bạn rồi.",
+   "hyp": "Tôi rất muốn nhảy với bạn.",
+   "comet": 84.0
+  },
+  {
+   "id": "VM-4870",
+   "src": "明天是星期天，坐车的人肯定很多。我们早点儿走吧，7点半怎么样？",
+   "ref": "Ngày mai là Chủ nhật, người đi xe chắc chắn sẽ rất đông, chúng ta đi sớm chút đi. Bẩy rưỡi đi thế nào?",
+   "hyp": "Ngày mai là Chủ nhật, chắc chắn sẽ có rất nhiều người đi xe. Chúng ta đi sớm thôi, bảy giờ rưỡi được không?",
+   "comet": 90.9
+  },
+  {
+   "id": "VM-4874",
+   "src": "你为什么跑得那么快？",
+   "ref": "Vì sao bạn chạy nhanh như vậy?",
+   "hyp": "Sao bạn chạy nhanh vậy?",
+   "comet": 96.0
+  },
+  {
+   "id": "VM-4984",
+   "src": "我们公司是国际贸易公司。",
+   "ref": "Công ty chúng tôi là công ty thương mại quốc tế.",
+   "hyp": "Công ty chúng tôi là công ty thương mại quốc tế.",
+   "comet": 98.4
+  },
+  {
+   "id": "VM-4999",
+   "src": "你打我的手机吧。",
+   "ref": "Bạn gọi vào di động cô ta đi.",
+   "hyp": "Anh gọi điện thoại cho tôi đi.",
+   "comet": 82.9
+  },
+  {
+   "id": "VM-5021",
+   "src": "你想喝点儿咖啡吗？",
+   "ref": "Bạn muốn uống chút café không?",
+   "hyp": "Bạn có muốn uống chút cà phê không?",
+   "comet": 97.3
+  },
+  {
+   "id": "VM-5073",
+   "src": "你每天都起得这么早吗？",
+   "ref": "Hàng ngày bạn đều dậy sớm như vậy à?",
+   "hyp": "Anh dậy sớm như vậy mỗi ngày à?",
+   "comet": 96.8
+  },
+  {
+   "id": "VM-5101",
+   "src": "我们现在学过的词汇大概有6000多个。",
+   "ref": "Chúng tôi đã học được khoảng hơn 6000 từ vựng rồi.",
+   "hyp": "Chúng ta đã học khoảng hơn 6000 từ.",
+   "comet": 92.4
+  },
+  {
+   "id": "VM-5201",
+   "src": "吃完牛肉面，我出了一些汗。她说出汗可能就不发烧了。",
+   "ref": "Sốt.",
+   "hyp": "Ăn mì bò xong, tôi đổ mồ hôi. Cô ấy nói đổ mồ hôi có thể không bị sốt nữa.",
+   "comet": 63.2
+  },
+  {
+   "id": "VM-5224",
+   "src": "每年都有很多留学生来中国学中文。",
+   "ref": "Hàng năm đều có rất nhiều lưu học sinh tới Trung Quốc học Tiếng Trung.",
+   "hyp": "Mỗi năm đều có rất nhiều du học sinh đến Trung Quốc học tiếng Trung.",
+   "comet": 95.8
+  },
+  {
+   "id": "VM-5274",
+   "src": "我在北京大学学了两年了。",
+   "ref": "Tôi đã học được hai năm ở trường Đại học Bắc Kinh.",
+   "hyp": "Tôi đã học ở Đại học Bắc Kinh hai năm rồi.",
+   "comet": 94.9
+  },
+  {
+   "id": "VM-5294",
+   "src": "明天我不去超市了，我得去机场接她。",
+   "ref": "Ngày mai tôi không đi siêu thị, tôi phải đến sân bay đón cô ta.",
+   "hyp": "Ngày mai tôi sẽ không đến siêu thị nữa, tôi phải đến sân bay đón cô ấy.",
+   "comet": 94.0
+  },
+  {
+   "id": "VM-5308",
+   "src": "我给她介绍我们国家的文化。",
+   "ref": "Tôi giới thiệu cho cô ta văn hóa của Đất Nước chúng tôi.",
+   "hyp": "Tôi giới thiệu cho cô ấy về văn hóa nước chúng tôi.",
+   "comet": 95.9
+  },
+  {
+   "id": "VM-5351",
+   "src": "星期天你起得早吗？",
+   "ref": "Chủ Nhật bạn dậy sớm không?",
+   "hyp": "Cuối tuần bạn dậy sớm không?",
+   "comet": 96.6
+  },
+  {
+   "id": "VM-5382",
+   "src": "中午吃完饭，我常回宿舍看一会儿书或者听点儿音乐。",
+   "ref": "Buổi trưa ăn cơm xong, tôi thường về ký túc xá xem sách một lát hoặc nghe một chút nhạc.",
+   "hyp": "Buổi trưa ăn cơm xong, tôi thường về ký túc xá đọc sách một lát hoặc nghe nhạc.",
+   "comet": 96.8
+  },
+  {
+   "id": "VM-5408",
+   "src": "学中文比较难但是很有意思。",
+   "ref": "Học Tiếng Trung tương đối khó, nhưng mà rất thú vị.",
+   "hyp": "Học tiếng Trung thì khó nhưng rất thú vị.",
+   "comet": 95.5
+  },
+  {
+   "id": "VM-5432",
+   "src": "他是我爸爸的朋友。他是医生。",
+   "ref": "Ô ng ta là bạn của bố tôi, ông ta là bác sỹ.",
+   "hyp": "Ông ấy là bạn của bố tôi. Ông ấy là bác sĩ.",
+   "comet": 95.9
+  },
+  {
+   "id": "VM-5471",
+   "src": "去河内大学怎么走？那个人不知道，因为不是越南人。",
+   "ref": "Tôi hỏi một người, đến trường Đại học Hà Nội đi như thế nào, người đó nói không biết vì không phải là người Việt Nam.",
+   "hyp": "Đi Đại học Hà Nội đi đường nào? Người đó không biết, vì không phải người Việt Nam.",
+   "comet": 86.3
+  },
+  {
+   "id": "VM-5573",
+   "src": "我空闲时间常看电视或者玩电脑。",
+   "ref": "Thời gian rảnh rỗi tôi thường xem tivi hoặc chơi máy tính.",
+   "hyp": "Thời gian rảnh tôi thường xem TV hoặc chơi máy tính.",
+   "comet": 96.6
+  },
+  {
+   "id": "VM-5652",
+   "src": "我再问问她，我再问问她，她去不去。",
+   "ref": "Tôi hỏi lại cô ấy xem, cô ấy có đi hay không.",
+   "hyp": "Tôi hỏi lại cô ấy xem cô ấy có đi không.",
+   "comet": 95.7
+  },
+  {
+   "id": "VM-5699",
+   "src": "我报名了。",
+   "ref": "Tôi đã đăng ký rồi.",
+   "hyp": "Tôi đã đăng ký rồi.",
+   "comet": 99.0
+  },
+  {
+   "id": "VM-5719",
+   "src": "今天上课的时候，老师让我们说说自己的爱好。",
+   "ref": "Hôm nay trong giờ học, thầy giáo bảo chúng tôi nói về sở thích bản thân.",
+   "hyp": "Hôm nay trong lớp, thầy cô bảo chúng tôi nói về sở thích của mình.",
+   "comet": 94.9
+  },
+  {
+   "id": "VM-5912",
+   "src": "你见过我的中文老师吗？",
+   "ref": "Bạn đã gặp cô giáo Tiếng Trung của tôi chưa?",
+   "hyp": "Bạn đã gặp giáo viên tiếng Trung của tôi chưa?",
+   "comet": 96.8
+  },
+  {
+   "id": "VM-5919",
+   "src": "你英语很好，我想你能看懂。",
+   "ref": "Bạn học Tiếng Anh rất giỏi, tôi nghĩ bạn có thể xem hiểu được.",
+   "hyp": "Tiếng Anh của bạn giỏi, tôi nghĩ bạn có thể hiểu được.",
+   "comet": 91.5
+  },
+  {
+   "id": "VM-5942",
+   "src": "每天下午我都去操场锻炼身体。",
+   "ref": "Rèn luyện thân thể.",
+   "hyp": "Mỗi chiều tôi đều đi sân tập để rèn luyện sức khỏe.",
+   "comet": 83.3
+  },
+  {
+   "id": "VM-5982",
+   "src": "我在北京住了两年了。",
+   "ref": "Tôi đã sống ở Bắc Kinh hai năm.",
+   "hyp": "Tôi đã sống ở Bắc Kinh hai năm rồi.",
+   "comet": 96.3
+  },
+  {
+   "id": "VM-5987",
+   "src": "我想买4斤苹果。",
+   "ref": "Tôi muốn mua 4 cân táo.",
+   "hyp": "Tôi muốn mua 4 cân táo.",
+   "comet": 98.4
+  },
+  {
+   "id": "VM-6021",
+   "src": "你们在哪儿学中文？",
+   "ref": "Các bạn học Tiếng Trung ở đâu?",
+   "hyp": "Các bạn học tiếng Trung ở đâu?",
+   "comet": 98.3
+  },
+  {
+   "id": "VM-6064",
+   "src": "在回家的路上，我很想她。",
+   "ref": "Trên đường về nhà, tôi rất nhớ cô ta.",
+   "hyp": "Trên đường về nhà, tôi rất nhớ cô ấy.",
+   "comet": 97.2
+  },
+  {
+   "id": "VM-6100",
+   "src": "你们在哪儿上学？",
+   "ref": "Các bạn học ở đâu?",
+   "hyp": "Các bạn học ở đâu?",
+   "comet": 99.1
+  },
+  {
+   "id": "VM-6143",
+   "src": "明天晚上我们有一个音乐茶话会，你也来参加吧。",
+   "ref": "Tối mai chúng tôi có một buổi tiệc trà âm nhạc, bạn cũng đến tham gia nhé.",
+   "hyp": "Tối mai chúng ta có một buổi trà nhạc, bạn cũng tham gia nhé.",
+   "comet": 94.9
+  },
+  {
+   "id": "VM-6147",
+   "src": "你在北京住了多长时间了？",
+   "ref": "Bạn sống ở Bắc Kinh bao lâu rồi?",
+   "hyp": "Anh đã ở Bắc Kinh bao lâu rồi?",
+   "comet": 97.6
+  },
+  {
+   "id": "VM-6179",
+   "src": "休息的时候，你常做什么？",
+   "ref": "Lúc nghỉ ngơi bạn thường làm gì?",
+   "hyp": "Khi nghỉ ngơi, bạn thường làm gì?",
+   "comet": 98.3
+  },
+  {
+   "id": "VM-6250",
+   "src": "星期六她请我去她家玩，然后品尝她亲手做的越南菜。",
+   "ref": "Cô ta nói cô ta biết làm món Việt Nam, Thứ 7 cô ta mời tôi đến nhà cô ta chơi, sau đó thưởng thức món ăn cô ta tự tay làm cho tôi.",
+   "hyp": "Thứ bảy cô ấy mời tôi đến nhà cô ấy chơi, rồi nếm thử món Việt Nam do chính tay cô ấy nấu.",
+   "comet": 88.4
+  },
+  {
+   "id": "VM-6262",
+   "src": "我上完课就去跳舞。",
+   "ref": "Tan học xong tôi sẽ đi nhảy.",
+   "hyp": "Tôi học xong là đi nhảy.",
+   "comet": 91.7
+  },
+  {
+   "id": "VM-6376",
+   "src": "你看这部电影了吗？",
+   "ref": "Bạn đã xem phim này chưa?",
+   "hyp": "Bạn xem bộ phim đó chưa?",
+   "comet": 97.4
+  },
+  {
+   "id": "VM-6385",
+   "src": "已经很晚了，我们快回家吧。",
+   "ref": "Đã rất muộn rồi, chúng ta mau về nhà đi.",
+   "hyp": "Đã muộn rồi, chúng ta về nhà thôi.",
+   "comet": 96.1
+  },
+  {
+   "id": "VM-6526",
+   "src": "这趟车去北京大学吗？",
+   "ref": "Tuyến xe này đến Đại học Bắc Kinh không?",
+   "hyp": "Chuyến xe này đi Đại học Bắc Kinh à?",
+   "comet": 90.7
+  },
+  {
+   "id": "VM-6546",
+   "src": "我去银行换完钱就开车去接妈妈。",
+   "ref": "Tôi đến ngân hàng đổi tiền xong sẽ lái xe đến đón bạn.",
+   "hyp": "Tôi đến ngân hàng đổi tiền xong rồi lái xe đi đón mẹ.",
+   "comet": 92.5
+  },
+  {
+   "id": "VM-6579",
+   "src": "天安门在中国。",
+   "ref": "Thiên an môn ở Trung Quốc.",
+   "hyp": "Thiên An Môn ở Trung Quốc.",
+   "comet": 88.2
+  },
+  {
+   "id": "VM-6593",
+   "src": "明天我吃完饭就去找她。",
+   "ref": "Ngày mai ăn cơm xong tôi sẽ đi tìm cô ta.",
+   "hyp": "Ngày mai tôi ăn xong sẽ đi tìm cô ấy.",
+   "comet": 95.4
+  },
+  {
+   "id": "VM-6653",
+   "src": "你开了几年的车了？",
+   "ref": "Bạn đã lái xe mấy năm rồi?",
+   "hyp": "Anh đã lái xe mấy năm rồi?",
+   "comet": 98.3
+  },
+  {
+   "id": "VM-6721",
+   "src": "明天我不去银行取钱。",
+   "ref": "Ngày mai tôi không đến ngân hàng rút tiền.",
+   "hyp": "Ngày mai tôi sẽ không đến ngân hàng rút tiền.",
+   "comet": 97.3
+  },
+  {
+   "id": "VM-6816",
+   "src": "他们两个都是美国留学生。",
+   "ref": "Hai bọn họ đều là lưu học sinh nước Mỹ.",
+   "hyp": "Hai người đó đều là du học sinh Mỹ.",
+   "comet": 96.0
+  },
+  {
+   "id": "VM-6957",
+   "src": "最近你进步得很快。",
+   "ref": "Dạo này bạn tiến bộ rất nhanh.",
+   "hyp": "Gần đây bạn tiến bộ rất nhanh.",
+   "comet": 94.9
+  },
+  {
+   "id": "VM-6997",
+   "src": "化验结果出来了吗？",
+   "ref": "Kết quả xét nghiệm có chưa?",
+   "hyp": "Kết quả xét nghiệm ra chưa?",
+   "comet": 98.0
+  },
+  {
+   "id": "VM-7082",
+   "src": "我的作业已经做完了，课文还没读熟呢。",
+   "ref": "Bài tập của tôi đã làm xong rồi, bài khóa vẫn chưa đọc thạo đâu.",
+   "hyp": "Bài tập của tôi làm xong rồi, bài khóa chưa đọc thuộc.",
+   "comet": 93.4
+  },
+  {
+   "id": "VM-7194",
+   "src": "我觉得听力很难。同学们听一遍就懂了。我听两三遍才听懂。",
+   "ref": "Tôi cảm thấy nghe rất khó khăn, các bạn học nghe một lần là hiểu, tôi nghe hai ba lần mới nghe hiểu.",
+   "hyp": "Tôi thấy nghe khó. Học sinh nghe một lần là hiểu ngay. Tôi nghe hai ba lần mới hiểu.",
+   "comet": 91.2
+  },
+  {
+   "id": "VM-7195",
+   "src": "你什么时候回去？",
+   "ref": "Khi nào thì bạn trở về?",
+   "hyp": "Khi nào bạn về?",
+   "comet": 97.0
+  },
+  {
+   "id": "VM-7215",
+   "src": "那个行李箱有多重？",
+   "ref": "Cái vali đó nặng bao nhiêu?",
+   "hyp": "Vali đó nặng bao nhiêu?",
+   "comet": 97.4
+  },
+  {
+   "id": "VM-7221",
+   "src": "我和她上周去河内酒店跳舞了。",
+   "ref": "Tôi và cô ấy tuần trước đi nhảy ở khách sạn Hà Nội.",
+   "hyp": "Tuần trước tôi và cô ấy đã đi nhảy ở khách sạn ở Hà Nội.",
+   "comet": 94.6
+  },
+  {
+   "id": "VM-7327",
+   "src": "你有姐姐吗？",
+   "ref": "Bạn có chị gái không?",
+   "hyp": "Bạn có chị gái không?",
+   "comet": 99.4
+  },
+  {
+   "id": "VM-7396",
+   "src": "她来了吗？",
+   "ref": "Cô ta đã đến chưa?",
+   "hyp": "Cô ấy đến chưa?",
+   "comet": 97.9
+  },
+  {
+   "id": "VM-7427",
+   "src": "她中文说得还可以。",
+   "ref": "Cô ta nói Tiếng Trung cũng được.",
+   "hyp": "Cô ấy nói tiếng Trung cũng được.",
+   "comet": 97.7
+  },
+  {
+   "id": "VM-7507",
+   "src": "听说春卷是越南有名的菜。",
+   "ref": "Nghe nói nem là món ăn nổi tiếng của Việt Nam.",
+   "hyp": "Nghe nói bánh cuốn là món nổi tiếng ở Việt Nam.",
+   "comet": 92.7
+  },
+  {
+   "id": "VM-7523",
+   "src": "星期天我们去看看衣服怎么样。",
+   "ref": "Chủ nhật chúng ta đi xem chút quần áo, thế nào?",
+   "hyp": "Cuối tuần chúng ta đi xem quần áo thế nào.",
+   "comet": 92.3
+  },
+  {
+   "id": "VM-7636",
+   "src": "我不知道我老师的手机号码是多少。",
+   "ref": "Tôi không biết số di động của cô giáo tôi là bao nhiêu",
+   "hyp": "Tôi không biết số điện thoại của thầy giáo là bao nhiêu.",
+   "comet": 93.2
+  },
+  {
+   "id": "VM-7657",
+   "src": "你每天6点半起床还是7点？",
+   "ref": "Hàng ngày 6:30 bạn thức dậy hay là 7h?",
+   "hyp": "Mỗi ngày anh dậy lúc sáu rưỡi hay bảy giờ?",
+   "comet": 87.4
+  },
+  {
+   "id": "VM-7703",
+   "src": "这条河的水很干净。",
+   "ref": "Con sông này nước rất sạch.",
+   "hyp": "Nước sông này rất sạch.",
+   "comet": 98.4
+  },
+  {
+   "id": "VM-7747",
+   "src": "我去那家饭馆吃过饭。",
+   "ref": "Tôi từng đến quán cơm đó ăn cơm.",
+   "hyp": "Tôi đã đi ăn ở nhà hàng đó rồi.",
+   "comet": 85.5
+  },
+  {
+   "id": "VM-7787",
+   "src": "这道题你做不对。",
+   "ref": "Câu này bạn làm không đúng.",
+   "hyp": "Bài này bạn làm không đúng.",
+   "comet": 93.3
+  },
+  {
+   "id": "VM-7843",
+   "src": "今晚我吃完饭就看电视了。",
+   "ref": "Tối nay ăn cơm xong là tôi xem tivi.",
+   "hyp": "Tối nay tôi ăn cơm xong sẽ xem TV.",
+   "comet": 94.8
+  },
+  {
+   "id": "VM-7854",
+   "src": "我买了两张电影票，请你看电影。",
+   "ref": "Tôi mua hai vé xem phim, mời bạn đi xem phim.",
+   "hyp": "Tôi đã mua hai vé xem phim, mời anh xem phim.",
+   "comet": 94.5
+  },
+  {
+   "id": "VM-7870",
+   "src": "我家有两个，老大是女孩，老二是男孩。",
+   "ref": "Nhà tôi có hai đứa, đứa lớn là con gái, đứa thứ hai là con trai.",
+   "hyp": "Nhà tôi có hai người, người lớn tuổi hơn là con gái, người thứ hai là con trai.",
+   "comet": 88.8
+  },
+  {
+   "id": "VM-7998",
+   "src": "老师让我先说。我说我极其喜欢中国书法。老师觉得很惊讶。",
+   "ref": "Cô giáo bảo tôi nói trước, tôi nói tôi cực kỳ thích thư pháp của Trung Quốc, cô giáo cảm thấy rất ngạc nhiên.",
+   "hyp": "Thầy bảo tôi nói trước. Tôi nói tôi rất thích thư pháp Trung Quốc. Thầy thấy rất ngạc nhiên.",
+   "comet": 91.1
+  },
+  {
+   "id": "VM-8036",
+   "src": "越南水上木偶戏很有意思，以后我还想去看。",
+   "ref": "Múa rối nước Việt Nam rất thú vị, sau này tôi còn muốn đi xem nữa.",
+   "hyp": "Múa rối nước Việt Nam rất thú vị, sau này tôi còn muốn đi xem nữa.",
+   "comet": 97.7
+  },
+  {
+   "id": "VM-8069",
+   "src": "你妹妹在医院工作，你姐姐在银行工作。",
+   "ref": "Em gái bạn làm việc ở bệnh viện, chị gái bạn làm việc ở ngân hàng.",
+   "hyp": "Em gái bạn làm việc ở bệnh viện, chị gái bạn làm việc ở ngân hàng.",
+   "comet": 98.5
+  },
+  {
+   "id": "VM-8088",
+   "src": "我有点儿想你。",
+   "ref": "Tôi hơi nhớ bạn một chút.",
+   "hyp": "Tôi hơi nhớ bạn.",
+   "comet": 94.5
+  },
+  {
+   "id": "VM-8116",
+   "src": "你看她汉字写得怎么样？",
+   "ref": "Bạn xem cô ta viết chữ Hán thế nào?",
+   "hyp": "Bạn xem chữ Hán của cô ấy viết thế nào?",
+   "comet": 96.4
+  },
+  {
+   "id": "VM-8131",
+   "src": "你喜欢吃越南菜还是中国菜？",
+   "ref": "Bạn thích ăn món Việt Nam hay là món Trung Quốc?",
+   "hyp": "Bạn thích ăn món Việt Nam hay món Trung Quốc?",
+   "comet": 98.2
+  },
+  {
+   "id": "VM-8316",
+   "src": "昨天我姐姐去老师家了。",
+   "ref": "Hôm qua chị gái tôi đến nhà cô giáo.",
+   "hyp": "Hôm qua chị tôi đã đến nhà thầy giáo rồi.",
+   "comet": 90.5
+  },
+  {
+   "id": "VM-8325",
+   "src": "回到宿舍的时候，她感觉身体不舒服。我跟她一起去医院看病。",
+   "ref": "Lúc về đến ký túc xá, cô ta cảm thấy khó chịu trong người, tôi đi cùng cô ta đến bệnh viện khám bệnh.",
+   "hyp": "Khi về ký túc xá, cô ấy cảm thấy không khỏe. Tôi đã cùng cô ấy đi bệnh viện khám bệnh.",
+   "comet": 93.6
+  },
+  {
+   "id": "VM-8351",
+   "src": "你游了多长时间的泳了？",
+   "ref": "Bạn đã bơi được bao lâu?",
+   "hyp": "Bạn bơi bao lâu rồi?",
+   "comet": 96.8
+  },
+  {
+   "id": "VM-8379",
+   "src": "今天我们都很累。",
+   "ref": "Hôm nay chúng tôi đều rất mệt.",
+   "hyp": "Hôm nay chúng ta đều mệt.",
+   "comet": 94.2
+  },
+  {
+   "id": "VM-8392",
+   "src": "我觉得北京的气候非常干燥。",
+   "ref": "Tôi cảm thấy khí hậu Bắc Kinh cực kỳ khô hanh.",
+   "hyp": "Tôi thấy khí hậu ở Bắc Kinh rất khô.",
+   "comet": 95.6
+  },
+  {
+   "id": "VM-8473",
+   "src": "你等一下吧，她就来了。",
+   "ref": "Bạn đợi chút đi, cô ta sẽ tới.",
+   "hyp": "Đợi một chút, cô ấy đến rồi.",
+   "comet": 90.4
+  },
+  {
+   "id": "VM-8541",
+   "src": "我会说一点儿中文。",
+   "ref": "Tôi biết nói chút ít Tiếng Trung.",
+   "hyp": "Tôi có thể nói một chút tiếng Trung.",
+   "comet": 93.6
+  },
+  {
+   "id": "VM-8608",
+   "src": "我们公司大概有150个员工。",
+   "ref": "Công ty chúng tôi có khoảng 150 nhân viên.",
+   "hyp": "Công ty chúng tôi có khoảng 150 nhân viên.",
+   "comet": 98.7
+  },
+  {
+   "id": "VM-8630",
+   "src": "8年的时间太短了，我想再延长2年。",
+   "ref": "Thời gian 8 năm ngắn quá, tôi muốn kéo dài thêm 2 năm nữa.",
+   "hyp": "Tám năm quá ngắn, tôi muốn gia hạn thêm hai năm nữa.",
+   "comet": 94.8
+  },
+  {
+   "id": "VM-8655",
+   "src": "从我家到你家很远。",
+   "ref": "Từ nhà tôi đến nhà bạn rất xa.",
+   "hyp": "Từ nhà tôi đến nhà bạn rất xa.",
+   "comet": 98.2
+  },
+  {
+   "id": "VM-8677",
+   "src": "这周围的环境很好。",
+   "ref": "Môi trường xung quanh đây rất tốt.",
+   "hyp": "Môi trường xung quanh này rất tốt.",
+   "comet": 98.4
+  },
+  {
+   "id": "VM-8725",
+   "src": "我是她的老师。我找她有点儿事。",
+   "ref": "Tôi là cô giáo của cô ta, tôi tìm cô ta có chút việc.",
+   "hyp": "Tôi là giáo viên của cô ấy. Tôi có chút chuyện muốn tìm cô ấy.",
+   "comet": 90.1
+  },
+  {
+   "id": "VM-8830",
+   "src": "坐车去吧，下午3点我来接你。",
+   "ref": "Ngồi xe đi, chiều 3h tôi lái xe tới đón bạn.",
+   "hyp": "Đi xe đi, ba giờ chiều tôi sẽ đón bạn.",
+   "comet": 89.2
+  },
+  {
+   "id": "VM-8882",
+   "src": "对不起让你久等了。",
+   "ref": "Xin lỗi đã để bạn đợi lâu.",
+   "hyp": "Xin lỗi đã để bạn đợi lâu.",
+   "comet": 98.7
+  },
+  {
+   "id": "VM-8924",
+   "src": "我哥哥知道她朋友住在哪儿。",
+   "ref": "Anh trai tôi biết bạn của cô ta sống ở đâu",
+   "hyp": "Anh trai tôi biết bạn cô ấy ở đâu.",
+   "comet": 94.3
+  },
+  {
+   "id": "VM-8989",
+   "src": "我觉得这个计划不错，我们就这么做吧。",
+   "ref": "Tôi thấy kế hoạch này không tệ, chúng mình cứ thế mà làm.",
+   "hyp": "Tôi thấy kế hoạch này tốt, chúng ta cứ làm như vậy đi.",
+   "comet": 95.2
+  },
+  {
+   "id": "VM-9007",
+   "src": "每天下午4点，我常去操场锻炼身体、跑步、打球。6点回宿舍、洗澡、洗衣服。",
+   "ref": "Hàng ngày buổi chiều 4h tôi thường đến sân tập rèn luyện sức khỏe, chạy bộ, chơi bóng, 6h về ký túc xá, tắm rửa, giặt quần áo.",
+   "hyp": "Mỗi chiều 4 giờ, tôi thường đến sân tập để rèn luyện sức khỏe, chạy bộ, chơi bóng. 6 giờ về ký túc xá, tắm rửa, giặt quần áo.",
+   "comet": 95.2
+  },
+  {
+   "id": "VM-9169",
+   "src": "把书合上吧。",
+   "ref": "Gập sách lại đi.",
+   "hyp": "Đóng sách lại đi.",
+   "comet": 88.8
+  },
+  {
+   "id": "VM-9318",
+   "src": "明天有一个代表团去越南旅游，所以明天你帮我去给他们当翻译吧。",
+   "ref": "Ngày mai có một đoàn đại biểu đến Việt Nam du lịch, vì vậy ngày mai bạn giúp tôi đi phiên dịch cho họ nhé.",
+   "hyp": "Ngày mai có một đoàn khách đi du lịch Việt Nam, nên ngày mai bạn giúp tôi làm phiên dịch cho họ nhé.",
+   "comet": 93.1
+  },
+  {
+   "id": "VM-9374",
+   "src": "我们已经学到第16课了。",
+   "ref": "Chúng tôi đã học đến bài thứ 16 rồi.",
+   "hyp": "Chúng ta đã học đến bài 16 rồi.",
+   "comet": 97.4
+  },
+  {
+   "id": "VM-9510",
+   "src": "检查完后，医生说我得的不是肠炎，只是消化不良。",
+   "ref": "Sau khi kiểm tra xong bác sỹ nói không phải tôi bị viêm ruột, chỉ là tiêu hóa không tốt.",
+   "hyp": "Sau khi kiểm tra xong, bác sĩ nói tôi không bị viêm ruột, chỉ là khó tiêu thôi.",
+   "comet": 94.6
+  },
+  {
+   "id": "VM-9536",
+   "src": "我从家去公园，她去公司。",
+   "ref": "Tôi đi từ nhà đến công viên, cô ta đi về công ty.",
+   "hyp": "Tôi đi từ nhà đến công viên, cô ấy đi đến công ty.",
+   "comet": 94.2
+  },
+  {
+   "id": "VM-9540",
+   "src": "我跳了两个小时了。",
+   "ref": "Tôi đã nhảy hai tiếng đồng hồ.",
+   "hyp": "Tôi đã nhảy được hai tiếng rồi.",
+   "comet": 89.1
+  },
+  {
+   "id": "VM-9568",
+   "src": "今天上课的时候，老师问大家毕业后打算做什么。",
+   "ref": "Hôm nay trong giờ học, cô giáo hỏi mọi người, sau khi tốt nghiệp dự định làm gì.",
+   "hyp": "Hôm nay trong lớp, thầy hỏi mọi người sau khi tốt nghiệp dự định làm gì.",
+   "comet": 95.3
+  },
+  {
+   "id": "VM-9577",
+   "src": "她中文说得很好，就像中国人一样。",
+   "ref": "Cô ấy nói tiếng Trung rất giỏi, giống như người Trung Quốc vậy.",
+   "hyp": "Cô ấy nói tiếng Trung rất giỏi, giống như người Trung Quốc vậy.",
+   "comet": 98.5
+  },
+  {
+   "id": "VM-9612",
+   "src": "我刚学中文，我不会说中文。",
+   "ref": "Tôi vừa học Tiếng Trung, tôi không nói được Tiếng Trung.",
+   "hyp": "Tôi mới học tiếng Trung, tôi không nói được tiếng Trung.",
+   "comet": 95.1
+  },
+  {
+   "id": "VM-9686",
+   "src": "这几句话你翻译对了。",
+   "ref": "Những câu này bạn dịch đúng rồi.",
+   "hyp": "Những câu này bạn dịch đúng rồi.",
+   "comet": 98.6
+  },
+  {
+   "id": "VM-9698",
+   "src": "你学了几年的中文了？",
+   "ref": "Bạn học Tiếng Trung mấy năm rồi?",
+   "hyp": "Bạn học tiếng Trung bao nhiêu năm rồi?",
+   "comet": 97.9
+  },
+  {
+   "id": "VM-9705",
+   "src": "还没到。",
+   "ref": "Vẫn chưa đến.",
+   "hyp": "Chưa tới.",
+   "comet": 80.8
+  },
+  {
+   "id": "VM-9783",
+   "src": "你看了多长时间的电视了？",
+   "ref": "Bạn xem tivi bao lâu rồi?",
+   "hyp": "Bạn xem TV bao lâu rồi?",
+   "comet": 98.4
+  },
+  {
+   "id": "VM-9841",
+   "src": "武老师教我们听力和口语。",
+   "ref": "Thầy Vũ dạy chúng tôi môn nghe và nói.",
+   "hyp": "Thầy Vũ dạy chúng tôi nghe và nói.",
+   "comet": 95.6
+  },
+  {
+   "id": "VM-9853",
+   "src": "请问，你知道越南博物馆在哪儿吗？",
+   "ref": "Xin hỏi, bạn biết Viện bảo tàng Việt Nam ở đâu không?",
+   "hyp": "Cho tôi hỏi, bạn có biết bảo tàng Việt Nam ở đâu không?",
+   "comet": 96.5
+  },
+  {
+   "id": "VM-9891",
+   "src": "那座楼能拍到吗？",
+   "ref": "Chụp được tòa nhà kia không?",
+   "hyp": "Tòa nhà đó có chụp được không?",
+   "comet": 93.0
+  },
+  {
+   "id": "VM-9894",
+   "src": "把电脑打开，看看你新买的影碟吧。",
+   "ref": "Bật máy tính lên, xem chút đĩa bạn mới mua đi.",
+   "hyp": "Mở máy tính lên xem mấy đĩa phim mới mua đi.",
+   "comet": 93.1
+  },
+  {
+   "id": "VM-9953",
+   "src": "你觉得那部电影怎么样？",
+   "ref": "Bạn cảm thấy phim tối qua thế nào?",
+   "hyp": "Bộ phim đó thế nào bạn nghĩ?",
+   "comet": 92.4
+  }
+ ]
+}

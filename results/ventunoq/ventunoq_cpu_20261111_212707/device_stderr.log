@@ -1,0 +1,23 @@
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+loaded: {"load_ms":{"asr_en":6350.506461,"asr_ko":4037.0114,"asr_vi":2945.136052,"asr_zh":6381.351478,"mt":306.262184,"tts_en":1065.457111,"tts_ko":734.180604,"tts_vi":761.512757,"tts_zh":2613.707888},"mt_backend":"cpu","mt_max_num_tokens":1024,"mt_model":"/home/arduino/cabin/models/gemma-4-E2B-it.litertlm","mt_num_threads":4,"mt_prefix_cache":false,"mt_sampler":"topk1","rss_after_load_kb":1586384,"rss_base_kb":42968}
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'Kinh'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'đ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'oàn'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'V'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'ũ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'th'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'ầ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'y'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'd'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'ạ'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'y'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'chúng'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'tôi'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'môn'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'nghe'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'và'
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/character-lexicon.cc:ConvertTextToTokenIds:181 Ignore OOV 'nói'
+done: {"load_ms":{"asr_en":6350.506461,"asr_ko":4037.0114,"asr_vi":2945.136052,"asr_zh":6381.351478,"mt":306.262184,"tts_en":1065.457111,"tts_ko":734.180604,"tts_vi":761.512757,"tts_zh":2613.707888},"mt_backend":"cpu","mt_max_num_tokens":1024,"mt_model":"/home/arduino/cabin/models/gemma-4-E2B-it.litertlm","mt_num_threads":4,"mt_prefix_cache":false,"mt_sampler":"topk1","peak_rss_kb":4418996,"rss_after_load_kb":1586384,"rss_base_kb":42968}

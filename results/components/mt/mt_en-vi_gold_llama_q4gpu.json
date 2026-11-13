@@ -1,0 +1,715 @@
+{
+ "summary": {
+  "pair": "en-vi",
+  "input": "gold",
+  "asr": null,
+  "backend": "llama",
+  "n": 100,
+  "bleu": 43.94,
+  "chrf++": 61.25,
+  "sec_per_sent": 0.109,
+  "comet": 87.23
+ },
+ "rows": [
+  {
+   "id": "EV-0157",
+   "src": "play only all music released between the year one thousand nine hundred and ninety and two thousand",
+   "ref": "phát chỉ tất cả nhạc được phát hành giữa năm một nghìn chín trăm chín mươi và năm hai nghìn",
+   "hyp": "Chỉ phát tất cả các bài hát được phát hành từ năm một ngàn chín trăm đến hai ngàn.",
+   "comet": 81.2
+  },
+  {
+   "id": "EV-0182",
+   "src": "well at one point yes but the storage on my phone not so wonderful",
+   "ref": "ừ thì có lúc là có nhưng dung lượng lưu trữ trên điện thoại tôi không tuyệt lắm",
+   "hyp": "Ừ, có lúc thì có nhưng cái chỗ lưu trữ trên điện thoại không được tốt lắm.",
+   "comet": 89.2
+  },
+  {
+   "id": "EV-0228",
+   "src": "did i remember to set a reminder alarm for my next doctor's appointment",
+   "ref": "tôi có nhớ đặt báo thức nhắc nhở cho cuộc hẹn bác sĩ tiếp theo của tôi không",
+   "hyp": "Tôi có nhớ đặt báo thức nhắc nhở cho cuộc hẹn bác sĩ tiếp theo của mình không",
+   "comet": 96.6
+  },
+  {
+   "id": "EV-0240",
+   "src": "remember i have ordered a cake for tonight's birthday party let me know the status please",
+   "ref": "hãy nhớ là tôi đã đặt một chiếc bánh cho tiệc sinh nhật tối nay vui lòng cho tôi biết tình trạng đơn hàng",
+   "hyp": "Tôi nhớ là tôi đã đặt một cái bánh cho bữa tiệc sinh nhật tối nay, cho tôi biết tình trạng của nó được không?",
+   "comet": 85.7
+  },
+  {
+   "id": "EV-0250",
+   "src": "okey doke so we will send your payment to fossil gas is there anything else i can help you with today",
+   "ref": "được rồi chúng tôi sẽ gửi khoản thanh toán của anh tới fossil gas hôm nay anh còn cần tôi giúp gì nữa không",
+   "hyp": "Được rồi, chúng tôi sẽ gửi thanh toán cho Fossil Gas. Còn điều gì tôi có thể giúp bạn hôm nay không?",
+   "comet": 86.3
+  },
+  {
+   "id": "EV-0333",
+   "src": "and my ears are buzzing a bit i am just they are feeling a bit off",
+   "ref": "và tai tôi hơi vo ve cảm giác hơi lạ",
+   "hyp": "Và tai tôi hơi ù một chút, tôi cảm thấy hơi không ổn.",
+   "comet": 78.8
+  },
+  {
+   "id": "EV-0358",
+   "src": "seven hundred thirty four main street harper valley oregon six seven two nine seven",
+   "ref": "bảy trăm ba mươi bốn main street harper valley oregon sáu bảy hai chín bảy",
+   "hyp": "Bảy trăm ba mươi bốn đường Main Street, Harper Valley, Oregon, sáu bảy hai chín bảy.",
+   "comet": 78.7
+  },
+  {
+   "id": "EV-0383",
+   "src": "so um what i think we could do is um maybe if we book you in for a face to face appointment in one of our clinics it's not an emergency",
+   "ref": "vậy tôi nghĩ chúng ta có thể đặt lịch hẹn trực tiếp tại một trong các phòng khám đây không phải cấp cứu",
+   "hyp": "Tôi nghĩ chúng ta có thể làm thế này, có lẽ nếu bạn đặt lịch hẹn trực tiếp tại một trong các phòng khám của chúng tôi thì không phải là trường hợp khẩn cấp.",
+   "comet": 87.2
+  },
+  {
+   "id": "EV-0491",
+   "src": "you'll just need roughly ten dollars for food and gas money my friend is driving so we usually all chip in a few dollars for gas money",
+   "ref": "bạn chỉ cần khoảng mười đô la cho đồ ăn và tiền xăng bạn tôi lái xe nên chúng tôi thường mỗi người góp vài đô tiền xăng",
+   "hyp": "Bạn chỉ cần khoảng mười đô la cho ăn và xăng thôi, bạn tôi lái xe nên chúng tôi thường góp vài đô la tiền xăng.",
+   "comet": 91.6
+  },
+  {
+   "id": "EV-0523",
+   "src": "i am sorry to hear that um how old was he when that happened",
+   "ref": "tôi rất tiếc khi nghe chuyện đó lúc ấy ông bao nhiêu tuổi",
+   "hyp": "Tôi rất tiếc khi nghe điều đó, anh ấy bao nhiêu tuổi khi chuyện đó xảy ra vậy?",
+   "comet": 91.0
+  },
+  {
+   "id": "EV-0752",
+   "src": "yeah anything that you had hoped particularly to get out of having this consultation",
+   "ref": "vâng có điều gì cụ thể mà bạn hy vọng nhận được từ buổi tư vấn này không",
+   "hyp": "vâng có điều gì mà bạn đặc biệt mong muốn đạt được sau buổi tư vấn này không",
+   "comet": 93.9
+  },
+  {
+   "id": "EV-0894",
+   "src": "okay all right and just moving on swiftly sir do you have any allergies at all",
+   "ref": "được rồi đi tiếp nhanh nhé bác bác có bị dị ứng gì không",
+   "hyp": "Được rồi, chuyển sang việc tiếp theo luôn ạ. Anh có dị ứng gì không ạ?",
+   "comet": 89.9
+  },
+  {
+   "id": "EV-1173",
+   "src": "am i going to have to worry about the snowplows burying my car in the driveway tuesday",
+   "ref": "tôi có phải lo lắng về tuyết phủ kín xe tôi vào thứ ba trên đường vào nhà",
+   "hyp": "Thứ ba tôi có phải lo lắng về việc xe của tôi bị xe dọn tuyết chôn trong lối đi không?",
+   "comet": 74.9
+  },
+  {
+   "id": "EV-1212",
+   "src": "okay and is the pain is that is it there all the time or does it come and go",
+   "ref": "được rồi cơn đau đó có xuất hiện suốt không hay là lúc có lúc không",
+   "hyp": "và đau là nó có lúc luôn ở đó hay là nó đến rồi đi",
+   "comet": 60.4
+  },
+  {
+   "id": "EV-1229",
+   "src": "so we will send your payment to fossil gas is there anything else i can help you with",
+   "ref": "vậy chúng tôi sẽ gửi khoản thanh toán của bạn đến fossil gas còn điều gì tôi có thể giúp bạn không",
+   "hyp": "Vậy chúng tôi sẽ chuyển khoản thanh toán cho Fossil Gas. Còn điều gì tôi có thể giúp bạn nữa không?",
+   "comet": 89.8
+  },
+  {
+   "id": "EV-1508",
+   "src": "i'll uh look at it like when my usual working hours are like from twelve o clock till three o clock or something",
+   "ref": "tôi sẽ xem lại giờ làm việc thường ngày của tôi là khoảng từ mười hai giờ tới ba giờ",
+   "hyp": "Tôi sẽ xem nó giống như khi giờ làm việc thường của tôi là từ mười hai giờ đến ba giờ hay gì đó",
+   "comet": 85.8
+  },
+  {
+   "id": "EV-1725",
+   "src": "um i work as a restaurant owner so i own a sushi shop",
+   "ref": "tôi làm chủ nhà hàng tôi có một quán sushi",
+   "hyp": "Tôi làm chủ một nhà hàng, tôi sở hữu một tiệm sushi.",
+   "comet": 92.4
+  },
+  {
+   "id": "EV-1829",
+   "src": "no that's all i needed help with thank you very much for your help",
+   "ref": "không đó là tất cả những gì tôi cần giúp đỡ cảm ơn bạn rất nhiều vì sự giúp đỡ của bạn",
+   "hyp": "Không cần giúp gì nữa, cảm ơn bạn rất nhiều vì sự giúp đỡ.",
+   "comet": 87.0
+  },
+  {
+   "id": "EV-1863",
+   "src": "will the temperature stay about the same or is it going to get colder",
+   "ref": "nhiệt độ sẽ giữ nguyên hay sẽ lạnh hơn",
+   "hyp": "Nhiệt độ sẽ giữ nguyên hay sẽ lạnh hơn vậy?",
+   "comet": 96.9
+  },
+  {
+   "id": "EV-2177",
+   "src": "sure shame fair day and uh how long did you have mongey for",
+   "ref": "thật tiếc một ngày đẹp trời thế anh nuôi mongey được bao lâu rồi",
+   "hyp": "Chắc là tiếc thật, ngày hôm nay đẹp nhỉ, và anh có bao nhiêu tiền để...",
+   "comet": 63.2
+  },
+  {
+   "id": "EV-2248",
+   "src": "if there were ten easy steps to make myself rich what would they be",
+   "ref": "nếu có mười bước dễ dàng để làm giàu thì sẽ là gì",
+   "hyp": "Nếu có mười bước dễ dàng để làm giàu thì đó sẽ là những bước nào?",
+   "comet": 95.4
+  },
+  {
+   "id": "EV-2316",
+   "src": "i mean some people with anxiety they do need to take medication to control that but that's not something that we would suggest in the first instance",
+   "ref": "một số người bị lo âu cần thuốc kiểm soát nhưng đó không phải điều chúng tôi đề xuất ngay",
+   "hyp": "Ý tôi là một số người bị lo âu họ cần dùng thuốc để kiểm soát điều đó nhưng đó không phải là điều chúng tôi sẽ đề xuất ngay từ đầu.",
+   "comet": 92.6
+  },
+  {
+   "id": "EV-2364",
+   "src": "the biggest frustrations that people found with regard to personal preferences were um something that you you mentioned earlier uh remote controls are often lost in the room",
+   "ref": "những sự bực bội lớn nhất mà mọi người tìm thấy liên quan đến sở thích cá nhân là ừm một thứ mà bạn đã đề cập trước đó ờ điều khiển từ xa thường bị thất lạc trong phòng",
+   "hyp": "Sự khó chịu lớn nhất mà mọi người gặp phải liên quan đến sở thích cá nhân là cái điều mà bạn đã đề cập trước đó, là điều khiển từ xa thường bị thất lạc trong phòng.",
+   "comet": 83.4
+  },
+  {
+   "id": "EV-2388",
+   "src": "it was not just once every single time i take the bus something bad happens to me or to someone else on the bus",
+   "ref": "không phải chỉ một lần đâu cứ mỗi lần tôi đi xe buýt là lại có chuyện không hay xảy ra với tôi hoặc với ai đó trên xe",
+   "hyp": "Không phải chỉ một lần thôi, mỗi lần tôi đi xe buýt đều có chuyện không may xảy ra với tôi hoặc người khác trên xe.",
+   "comet": 92.3
+  },
+  {
+   "id": "EV-2390",
+   "src": "i need you to put walk the dog on my list to do",
+   "ref": "tôi cần bạn thêm việc dắt chó đi dạo vào danh sách việc cần làm",
+   "hyp": "Tôi cần thêm việc dắt chó đi dạo vào danh sách việc cần làm của tôi.",
+   "comet": 93.1
+  },
+  {
+   "id": "EV-2401",
+   "src": "uhm hi my name's patricia johnson um i lost my debit card can you send me a new one",
+   "ref": "chào anh tôi tên là patricia johnson tôi bị mất thẻ ghi nợ anh gửi cho tôi thẻ mới được không",
+   "hyp": "Dạ, xin chào, tôi tên là Patricia Johnson. Tôi làm mất thẻ ghi nợ, bạn có thể gửi lại cho tôi một cái mới được không?",
+   "comet": 87.2
+  },
+  {
+   "id": "EV-2476",
+   "src": "um work's kind of um a bit stressful at the moment i have got a lot going on",
+   "ref": "ừm công việc kiểu như ừm một chút căng thẳng vào lúc này tôi có rất nhiều việc đang diễn ra",
+   "hyp": "Công việc hiện tại hơi căng thẳng một chút, tôi có nhiều việc phải làm.",
+   "comet": 76.3
+  },
+  {
+   "id": "EV-2748",
+   "src": "your password reset link has has been sent your phone is there anything else i can help you with",
+   "ref": "liên kết đặt lại mật khẩu đã được gửi đến điện thoại còn gì tôi có thể giúp không",
+   "hyp": "Link đặt lại mật khẩu đã được gửi đến điện thoại của bạn, còn có gì tôi có thể giúp bạn nữa không?",
+   "comet": 94.2
+  },
+  {
+   "id": "EV-2802",
+   "src": "although i could not say that everything is perfect there i still very much appreciate what the company has given me especially many chances",
+   "ref": "dù không thể nói mọi thứ hoàn hảo ở đó tôi vẫn rất biết ơn những gì công ty đã cho đặc biệt nhiều cơ hội",
+   "hyp": "Mặc dù tôi không thể nói rằng mọi thứ đều hoàn hảo nhưng tôi vẫn rất trân trọng những gì công ty đã cho tôi, đặc biệt là nhiều cơ hội.",
+   "comet": 92.8
+  },
+  {
+   "id": "EV-3057",
+   "src": "um did someone else want to throw it togeth actually i can probably still throw it together if you want um put your parts into into this one",
+   "ref": "ai đó muốn ghép lại không thực ra tôi vẫn có thể ghép nếu bạn muốn bỏ phần của bạn vào cái này",
+   "hyp": "Có ai muốn ném nó lại không, thực ra tôi có thể vẫn lắp được nếu bạn muốn, cứ cho các bộ phận vào cái này.",
+   "comet": 72.1
+  },
+  {
+   "id": "EV-3248",
+   "src": "how much time do i have to boil an egg",
+   "ref": "tôi phải luộc một quả trứng trong bao lâu",
+   "hyp": "Tôi có bao nhiêu thời gian để luộc một quả trứng?",
+   "comet": 88.4
+  },
+  {
+   "id": "EV-3459",
+   "src": "thirty two years old okay could you tell me the first line of your address and your postcode please",
+   "ref": "ba mươi hai tuổi được anh cho tôi dòng đầu địa chỉ và mã bưu điện được không",
+   "hyp": "Tôi ba mươi hai tuổi được không, bạn có thể cho tôi biết dòng địa chỉ đầu tiên và mã bưu điện của bạn được không?",
+   "comet": 88.8
+  },
+  {
+   "id": "EV-3775",
+   "src": "get me a taxi to take me to the airport on friday at five thirty in the morning",
+   "ref": "tìm cho tôi một xe tắc xi để đưa tôi đến sân bay vào thứ sáu lúc năm giờ ba mươi sáng",
+   "hyp": "Cho tôi một taxi đưa tôi ra sân bay vào thứ sáu lúc năm rưỡi sáng.",
+   "comet": 87.4
+  },
+  {
+   "id": "EV-3791",
+   "src": "so thanks for coming and uh i'll send you minutes of meeting and uh please put your all information in the sharing folder so everybody can share the information",
+   "ref": "vì vậy cảm ơn vì đã đến và ờ tôi sẽ gửi cho bạn biên bản cuộc họp và ờ xin vui lòng đưa tất cả thông tin của bạn vào thư mục chia sẻ để mọi người đều có thể chia sẻ thông tin",
+   "hyp": "Cảm ơn anh đã đến và tôi sẽ gửi biên bản cuộc họp cho anh và xin anh lưu tất cả thông tin vào thư mục chia sẻ để mọi người có thể chia sẻ thông tin.",
+   "comet": 90.1
+  },
+  {
+   "id": "EV-4009",
+   "src": "we really were lucky we got the last available table for two and we did not even have a reservation did you see the long lines behind us",
+   "ref": "chúng tôi may mắn thật lấy được bàn đôi cuối cùng mà không cần đặt trước anh có thấy hàng dài phía sau không",
+   "hyp": "Chúng tôi thực sự may mắn vì chúng tôi có được bàn cuối cùng cho hai người mà chúng tôi thậm chí còn không đặt trước, bạn có thấy những hàng dài phía sau chúng tôi không",
+   "comet": 84.0
+  },
+  {
+   "id": "EV-4177",
+   "src": "hi my name is michael wilson um i would like to transfer money between my accounts",
+   "ref": "xin chào tên tôi là michael wilson ừm tôi muốn chuyển tiền giữa các tài khoản của tôi",
+   "hyp": "Chào tôi tên là Michael Wilson, tôi muốn chuyển tiền giữa các tài khoản của tôi.",
+   "comet": 90.6
+  },
+  {
+   "id": "EV-4250",
+   "src": "okay right and with the diarrhea how many times a day are you going to the toilet",
+   "ref": "được rồi và với tình trạng tiêu chảy mỗi ngày bạn đi vệ sinh bao nhiêu lần",
+   "hyp": "Rồi với cái tiêu chảy thì mỗi ngày bạn đi vệ sinh mấy lần?",
+   "comet": 87.3
+  },
+  {
+   "id": "EV-4294",
+   "src": "give me details of my twitter handle profile including the total number of followers",
+   "ref": "đưa tôi chi tiết tiểu sử twitter của tôi bao gồm tổng số người theo dõi",
+   "hyp": "Cho tôi chi tiết về hồ sơ Twitter của tôi bao gồm tổng số người theo dõi.",
+   "comet": 93.1
+  },
+  {
+   "id": "EV-4321",
+   "src": "okay um i am going to read out the text now so we will understand what we are supposed to do",
+   "ref": "được rồi bây giờ tôi sẽ đọc to đoạn văn bản để chúng ta hiểu mình phải làm gì",
+   "hyp": "Được rồi, tôi sẽ đọc văn bản bây giờ để chúng ta hiểu chúng ta cần làm gì.",
+   "comet": 92.6
+  },
+  {
+   "id": "EV-4505",
+   "src": "surprising to me is like uh people give a lot of attention to modifying mobile phones like a real want to see a new launch or something like that",
+   "ref": "bất ngờ đối với tôi là giống như ờ mọi người chú ý rất nhiều đến việc sửa đổi điện thoại di động giống như một sự thực sự muốn thấy một sự ra mắt mới hoặc một cái gì đó như thế",
+   "hyp": "Tôi ngạc nhiên là mọi người chú ý nhiều đến việc sửa đổi điện thoại di động như muốn xem một sản phẩm mới hay gì đó.",
+   "comet": 80.4
+  },
+  {
+   "id": "EV-4810",
+   "src": "hi my name is elizabeth rodriguez what are the local branch hours",
+   "ref": "chào anh tôi tên là elizabeth rodriguez cho tôi hỏi giờ làm việc của chi nhánh gần đây là mấy giờ",
+   "hyp": "Chào tôi, tên tôi là Elizabeth Rodriguez, giờ làm việc của chi nhánh địa phương là mấy giờ ạ?",
+   "comet": 89.0
+  },
+  {
+   "id": "EV-5187",
+   "src": "no way i know that you are a little short on cash at the moment there's no need for you to pay for the whole bill",
+   "ref": "không đời nào tôi biết rằng bạn đang thiếu tiền mặt một chút vào lúc này không cần bạn phải trả cho toàn bộ hóa đơn",
+   "hyp": "Không thể nào tôi biết là bây giờ bạn hơi thiếu tiền, không cần phải trả hết hóa đơn đâu.",
+   "comet": 82.4
+  },
+  {
+   "id": "EV-5269",
+   "src": "not to any medication but i am allergic to peanuts",
+   "ref": "không dị ứng thuốc nhưng tôi dị ứng đậu phộng",
+   "hyp": "không dùng thuốc gì cả nhưng tôi bị dị ứng đậu phộng",
+   "comet": 91.0
+  },
+  {
+   "id": "EV-5301",
+   "src": "just to confirm you set the alarm to go off at eight hundred",
+   "ref": "chỉ để xác nhận bạn đặt báo thức kêu lúc tám giờ",
+   "hyp": "Chỉ để xác nhận là bạn đã đặt báo thức để báo lúc tám giờ đúng không?",
+   "comet": 85.0
+  },
+  {
+   "id": "EV-5455",
+   "src": "now do you have those these symptoms right now or have they gone off now",
+   "ref": "bây giờ bạn có những triệu chứng đó ngay lúc này không hay chúng đã hết rồi",
+   "hyp": "Bây giờ anh có những triệu chứng đó không hay là chúng đã hết rồi?",
+   "comet": 93.7
+  },
+  {
+   "id": "EV-5482",
+   "src": "right okay do you remember what you were doing at the time",
+   "ref": "được rồi được bạn có nhớ lúc đó mình đang làm gì không",
+   "hyp": "Đúng rồi, anh nhớ lúc đó anh đang làm gì không?",
+   "comet": 92.1
+  },
+  {
+   "id": "EV-5600",
+   "src": "yeah i want some quality time quality time with my friends outside like it's it's really nice but we will see",
+   "ref": "tôi muốn thời gian chất lượng với bạn bè bên ngoài rất tuyệt nhưng chúng ta sẽ xem",
+   "hyp": "Ừ, tôi muốn có chút thời gian chất lượng với bạn bè ở ngoài, nó thực sự rất tuyệt nhưng chúng ta sẽ xem.",
+   "comet": 88.4
+  },
+  {
+   "id": "EV-5621",
+   "src": "tell me what was the temperature in our city at twelve noon",
+   "ref": "cho tôi biết nhiệt độ trong thành phố của chúng ta lúc mười hai giờ trưa là bao nhiêu",
+   "hyp": "Nhiệt độ ở thành phố của chúng ta lúc mười hai giờ trưa là bao nhiêu ạ?",
+   "comet": 95.1
+  },
+  {
+   "id": "EV-5655",
+   "src": "post a new status on facebook saying that i am enjoying the nice weather",
+   "ref": "đăng trạng thái mới trên facebook nói tôi đang tận hưởng thời tiết đẹp",
+   "hyp": "Đăng một bài trạng thái mới trên Facebook nói rằng tôi đang tận hưởng thời tiết đẹp.",
+   "comet": 95.6
+  },
+  {
+   "id": "EV-5674",
+   "src": "can i get a recap of what is going on with sprint right now",
+   "ref": "tôi có thể nhận được bản tóm tắt về những gì đang diễn ra với sprint ngay bây giờ không",
+   "hyp": "Cho tôi tóm tắt lại tình hình sprint hiện tại được không?",
+   "comet": 80.0
+  },
+  {
+   "id": "EV-5720",
+   "src": "well i just got back from my language school we have to speak french all day there no english allowed",
+   "ref": "à tôi vừa từ trường ngoại ngữ về ở đó chúng tôi phải nói tiếng pháp cả ngày không được dùng tiếng anh",
+   "hyp": "Tôi vừa đi học tiếng Pháp về, ở đó phải nói tiếng Pháp cả ngày, không được dùng tiếng Anh.",
+   "comet": 89.3
+  },
+  {
+   "id": "EV-5761",
+   "src": "have you measured it recently either with an iwatch or something similar",
+   "ref": "bạn đã đo nó gần đây chưa hoặc với iwatch hoặc thứ gì đó tương tự",
+   "hyp": "Anh có đo nó gần đây bằng iWatch hay cái gì tương tự không?",
+   "comet": 90.8
+  },
+  {
+   "id": "EV-5890",
+   "src": "but it's more about me being really concerned because this is very weird",
+   "ref": "nhưng chủ yếu tôi rất lo vì cái này rất lạ",
+   "hyp": "nhưng tôi lo lắng hơn vì cái này rất kỳ lạ",
+   "comet": 95.8
+  },
+  {
+   "id": "EV-5935",
+   "src": "uh uh my name is sarah smith and my date of birth is the twentieth of april nineteen eighty",
+   "ref": "tên tôi là sarah smith ngày sinh là hai mươi tháng tư năm một nghìn chín trăm tám mươi",
+   "hyp": "Tôi tên là Sarah Smith và ngày sinh của tôi là ngày 20 tháng 4 năm 1980.",
+   "comet": 74.1
+  },
+  {
+   "id": "EV-5957",
+   "src": "is it behind the eye is that where the pain is",
+   "ref": "nó ở phía sau mắt phải không đó có phải là nơi có cơn đau không",
+   "hyp": "Đau ở phía sau mắt à? Đó là chỗ bị đau hả?",
+   "comet": 83.1
+  },
+  {
+   "id": "EV-6047",
+   "src": "okay around seven o clock and um how long did it take to develop the swelling",
+   "ref": "khoảng bảy giờ và mất bao lâu để sưng lên",
+   "hyp": "khoảng bảy giờ và ờ mất bao lâu để sưng lên vậy",
+   "comet": 88.0
+  },
+  {
+   "id": "EV-6054",
+   "src": "some people can suffer with clots and those can either be found in the legs or your chest so in your lungs",
+   "ref": "một số người có thể bị cục máu đông và những cái đó có thể được tìm thấy ở chân hoặc ngực của bạn nên là trong phổi của bạn",
+   "hyp": "Một số người có thể bị huyết khối và những người đó có thể được tìm thấy ở chân hoặc ngực, trong phổi của bạn.",
+   "comet": 79.9
+  },
+  {
+   "id": "EV-6218",
+   "src": "the blue inhaler so you do not you do not use it everyday so you just use it on and off yeah",
+   "ref": "ống hít màu xanh à vậy bạn không không dùng nó hằng ngày chỉ thỉnh thoảng dùng thôi đúng không",
+   "hyp": "Cái ống hít màu xanh ấy, bạn không dùng nó mỗi ngày đâu, bạn chỉ dùng lúc cần thôi.",
+   "comet": 83.3
+  },
+  {
+   "id": "EV-6239",
+   "src": "okay that's perfect thank you so much for your help",
+   "ref": "được hoàn hảo cảm ơn rất nhiều vì đã giúp",
+   "hyp": "Được rồi hoàn hảo cảm ơn bạn rất nhiều vì sự giúp đỡ",
+   "comet": 93.5
+  },
+  {
+   "id": "EV-6340",
+   "src": "your appointment has been scheduled for thursday at eight in the morning is there anything else i can help you with",
+   "ref": "lịch hẹn của bạn đã được đặt vào thứ năm lúc tám giờ sáng còn điều gì tôi có thể giúp bạn không",
+   "hyp": "Cuộc hẹn của bạn đã được lên lịch vào thứ Năm lúc tám giờ sáng. Tôi có thể giúp gì thêm cho bạn không?",
+   "comet": 92.4
+  },
+  {
+   "id": "EV-6426",
+   "src": "easy to use has always has become has become another major interest that uh with the whiteboard we can see that it's a remote that's easy to use",
+   "ref": "dễ sử dụng đã luôn đã trở thành đã trở thành một mối quan tâm lớn khác ờ với bảng trắng chúng ta có thể thấy đó là một chiếc điều khiển dễ sử dụng",
+   "hyp": "Dễ sử dụng luôn trở thành một mối quan tâm lớn khác mà với bảng trắng chúng ta có thể thấy nó là một công cụ dễ sử dụng",
+   "comet": 84.4
+  },
+  {
+   "id": "EV-6502",
+   "src": "um i would give it longer than that give it a an hour or so",
+   "ref": "tôi sẽ cho lâu hơn thế khoảng một giờ",
+   "hyp": "Tôi sẽ cho nó lâu hơn thế, khoảng một tiếng ấy.",
+   "comet": 91.3
+  },
+  {
+   "id": "EV-6534",
+   "src": "no he is some bosses will bend the rules a bit sometimes but not my boss he always follows the rules to a t",
+   "ref": "không anh ấy là vậy một số người sếp sẽ uốn nắn các quy tắc một chút đôi khi nhưng không phải sếp của tôi anh ấy luôn tuân thủ các quy tắc một cách chuẩn xác",
+   "hyp": "Không, anh ấy là một số sếp sẽ bẻ luật một chút đôi khi nhưng không phải sếp của tôi, anh ấy luôn tuân thủ luật lệ tuyệt đối.",
+   "comet": 87.7
+  },
+  {
+   "id": "EV-6557",
+   "src": "and um i just felt like i i needed to call you guys and needed to get some some more information about what could be going on",
+   "ref": "và ừm tôi chỉ cảm thấy như tôi tôi cần gọi cho các bạn và cần lấy một số một số thông tin thêm về những gì có thể đang diễn ra",
+   "hyp": "Và ừm tôi chỉ cảm thấy mình cần gọi cho mọi người và cần biết thêm thông tin về chuyện gì đang xảy ra",
+   "comet": 86.8
+  },
+  {
+   "id": "EV-6602",
+   "src": "i think probably do have what we call a simple urinary tract infection or urinary tract infection bladder infection um which can be readily treated so i'll give you a course of antibiotics today",
+   "ref": "tôi nghĩ nhiều khả năng chị bị cái mà chúng tôi gọi là nhiễm trùng đường tiết niệu đơn thuần hay nhiễm trùng bàng quang và bệnh này điều trị được dễ dàng nên hôm nay tôi sẽ kê cho chị một đợt kháng sinh",
+   "hyp": "Tôi nghĩ có lẽ là nhiễm trùng đường tiết niệu đơn giản hoặc nhiễm trùng bàng quang, cái này có thể điều trị dễ dàng nên tôi sẽ cho anh một phác đồ kháng sinh hôm nay.",
+   "comet": 90.4
+  },
+  {
+   "id": "EV-6618",
+   "src": "alright thank you for calling and have a great day",
+   "ref": "được rồi cảm ơn vì đã gọi và chúc một ngày tuyệt vời",
+   "hyp": "Cảm ơn anh đã gọi và chúc anh một ngày tốt lành.",
+   "comet": 90.2
+  },
+  {
+   "id": "EV-6709",
+   "src": "your appointment has been scheduled for wednesday at eight thirty in the morning",
+   "ref": "cuộc hẹn của bạn đã được ấn định vào thứ tư lúc tám giờ ba mươi sáng",
+   "hyp": "Cuộc hẹn của bạn đã được lên lịch vào thứ Tư lúc tám giờ rưỡi sáng.",
+   "comet": 91.3
+  },
+  {
+   "id": "EV-6929",
+   "src": "convert two thousand three hundred and thirty from greenwich mean time plus four hundred and thirty to greenwich mean time two hundred",
+   "ref": "chuyển hai nghìn ba trăm ba mươi từ giờ trung bình greenwich cộng bốn trăm ba mươi sang giờ trung bình greenwich hai trăm",
+   "hyp": "Chuyển hai ngàn ba trăm ba mươi từ Greenwich Mean Time cộng bốn trăm ba mươi sang Greenwich Mean Time hai trăm.",
+   "comet": 78.8
+  },
+  {
+   "id": "EV-6960",
+   "src": "am i going to need to bring an umbrella to work today",
+   "ref": "tôi sẽ mang dù để đi làm hôm nay hay không",
+   "hyp": "Hôm nay tôi có cần mang ô đi làm không?",
+   "comet": 83.6
+  },
+  {
+   "id": "EV-7227",
+   "src": "any pain or strong smell or having to go more often than normal",
+   "ref": "anh có bị đau hay có mùi nặng hay phải đi vệ sinh nhiều hơn bình thường không",
+   "hyp": "Có đau hay có mùi lạ hay phải đi vệ sinh thường xuyên hơn bình thường không?",
+   "comet": 93.9
+  },
+  {
+   "id": "EV-7335",
+   "src": "and it has a good ending uh i am not going spoil it for you",
+   "ref": "và nó có một cái kết hay tôi sẽ không tiết lộ trước cho anh đâu",
+   "hyp": "và nó có một cái kết tốt tôi sẽ không làm hỏng nó cho bạn",
+   "comet": 70.7
+  },
+  {
+   "id": "EV-7389",
+   "src": "so that if the user does not want to use their voice they can just turn it off and you do not have the remote control accidentally changing things on you",
+   "ref": "để nếu người dùng không muốn dùng giọng nói thì có thể tắt đi và không bị điều khiển từ xa vô tình đổi kênh",
+   "hyp": "Để nếu người dùng không muốn dùng giọng nói thì họ có thể tắt nó đi và bạn không vô tình thay đổi cài đặt gì trên thiết bị của họ.",
+   "comet": 88.8
+  },
+  {
+   "id": "EV-7405",
+   "src": "is it possible for you to provide the likes of my music",
+   "ref": "có thể cho bạn cung cấp những lượt thích nhạc của tôi không",
+   "hyp": "Bạn có thể cung cấp cho tôi những bài nhạc như của tôi được không?",
+   "comet": 83.2
+  },
+  {
+   "id": "EV-7409",
+   "src": "my boss told me that i could go home early or take a long lunch break another day i decided to wait and take a long lunch break another time",
+   "ref": "sếp tôi bảo tôi có thể về sớm hoặc hôm khác nghỉ trưa dài hơn tôi quyết định để dành hôm khác nghỉ trưa dài",
+   "hyp": "Sếp bảo tôi có thể về sớm hoặc nghỉ trưa dài vào một ngày khác nên tôi quyết định đợi và nghỉ trưa dài vào một dịp khác",
+   "comet": 88.2
+  },
+  {
+   "id": "EV-7443",
+   "src": "i have ordered you a replacement debit card is there anything else i can help you with",
+   "ref": "tôi đã đặt cho anh một thẻ ghi nợ thay thế anh còn cần tôi giúp gì nữa không",
+   "hyp": "Tôi đã đặt thẻ ghi nợ thay thế cho bạn, còn có gì tôi có thể giúp bạn nữa không?",
+   "comet": 92.2
+  },
+  {
+   "id": "EV-7496",
+   "src": "and in order to explore more or to find things that are not uh obvious or uh known",
+   "ref": "và để khám phá nhiều hơn hoặc để tìm ra những thứ chưa rõ ràng hoặc chưa được biết tới",
+   "hyp": "và để khám phá thêm hoặc tìm ra những thứ không hiển nhiên hay đã biết",
+   "comet": 87.3
+  },
+  {
+   "id": "EV-7675",
+   "src": "why not oh well i am ready to eat no need call the doctor if we run to the restaurant i can make it to the restroom and you can order",
+   "ref": "sao lại không à thôi tôi sẵn sàng ăn rồi không cần gọi bác sĩ nếu chúng ta chạy đến nhà hàng tôi có thể kịp vào nhà vệ sinh còn bạn thì gọi món",
+   "hyp": "Sao không, thôi tôi sẵn sàng ăn rồi, không cần gọi bác sĩ đâu, nếu chúng ta chạy đến nhà hàng tôi có thể đến nhà vệ sinh và bạn có thể gọi món.",
+   "comet": 87.4
+  },
+  {
+   "id": "EV-7690",
+   "src": "alright then okay take care then all the best",
+   "ref": "được rồi tốt rồi được rồi bảo trọng nhé mọi điều tốt đẹp nhất",
+   "hyp": "Được rồi, vậy tôi sẽ cẩn thận nhé. Chúc bạn mọi điều tốt lành.",
+   "comet": 81.0
+  },
+  {
+   "id": "EV-7713",
+   "src": "but i only have nine hundred in cash here can you let it go for nine hundred yuan",
+   "ref": "nhưng tôi chỉ mang theo chín trăm tiền mặt thôi anh để lại cho tôi chín trăm tệ được không",
+   "hyp": "Nhưng tôi chỉ có chín trăm tệ tiền mặt ở đây, bạn có thể cho tôi chín trăm tệ được không?",
+   "comet": 87.4
+  },
+  {
+   "id": "EV-7738",
+   "src": "yes i have but the taste of steamed fish at that restaurant is not delicious the fish is not well done and too salty",
+   "ref": "có tôi ăn rồi nhưng cá hấp ở nhà hàng đó không ngon cá chưa chín tới mà lại mặn quá",
+   "hyp": "Vâng tôi có nhưng vị cá hấp ở nhà hàng đó không ngon, cá không chín kỹ và quá mặn.",
+   "comet": 86.0
+  },
+  {
+   "id": "EV-7757",
+   "src": "that's very strenuous because your thumb is slightly up so they came up with something like this curled up so here",
+   "ref": "như thế rất mỏi vì ngón cái của bạn hơi phải ngẩng lên nên họ nghĩ ra một kiểu như thế này cong lại như ở đây",
+   "hyp": "Điều đó rất vất vả vì ngón cái của bạn hơi cong lên nên họ đã nghĩ ra cái này cuộn lại như thế này",
+   "comet": 87.3
+  },
+  {
+   "id": "EV-7818",
+   "src": "hi my name is miss james johnson and i would like to know my account balance",
+   "ref": "xin chào tên tôi là cô james johnson và tôi muốn biết số dư tài khoản của tôi",
+   "hyp": "Chào tôi, tôi là cô James Johnson và tôi muốn biết số dư tài khoản của tôi.",
+   "comet": 88.7
+  },
+  {
+   "id": "EV-7979",
+   "src": "now you have been booked the flight leaves at sixteen forty five and your arrival in sydney will be at nine in the morning local time the flight number is n w a four seven six",
+   "ref": "bây giờ bạn đã được đặt chỗ chuyến bay khởi hành lúc mười sáu giờ bốn mươi lăm và sự đến nơi của bạn ở sydney sẽ vào lúc chín giờ sáng giờ địa phương số hiệu chuyến bay là en vê kép a bốn bảy sáu",
+   "hyp": "Bây giờ bạn đã được đặt chuyến bay khởi hành lúc bốn giờ bốn mươi lăm và bạn sẽ đến Sydney lúc chín giờ sáng giờ địa phương, số hiệu chuyến bay là n w a bốn bảy sáu.",
+   "comet": 86.1
+  },
+  {
+   "id": "EV-8062",
+   "src": "um this is this image will give you a little bit of an impression about um the look and feel that um the remote should have",
+   "ref": "ừm hình ảnh này hình ảnh này sẽ cho bạn một chút cảm nhận về ừm vẻ ngoài và cảm giác mà ừm chiếc điều khiển nên có",
+   "hyp": "Đây là hình ảnh này sẽ cho bạn một chút ấn tượng về kiểu dáng và cảm giác mà cái điều khiển nên có.",
+   "comet": 81.8
+  },
+  {
+   "id": "EV-8179",
+   "src": "who has written to me or mentioned me in social media",
+   "ref": "ai đã viết cho tôi hoặc nhắc đến tôi trên mạng xã hội",
+   "hyp": "Ai đã viết thư cho tôi hoặc nhắc đến tôi trên mạng xã hội?",
+   "comet": 96.3
+  },
+  {
+   "id": "EV-8189",
+   "src": "do you think there might be a relationship between the two between the kind of the products you are using and your symptoms",
+   "ref": "bạn có nghĩ có thể có mối quan hệ giữa hai điều này không giữa kiểu như các sản phẩm bạn đang sử dụng và các triệu chứng của bạn",
+   "hyp": "Anh có nghĩ có mối liên hệ nào giữa loại sản phẩm anh đang dùng và các triệu chứng của anh không?",
+   "comet": 88.5
+  },
+  {
+   "id": "EV-8453",
+   "src": "great and uh are you in a sort of uh confidential place where you can speak freely",
+   "ref": "tuyệt anh đang ở chỗ bảo mật có thể nói thoải mái không",
+   "hyp": "Tuyệt vời và à bạn có ở một nơi nào đó kín đáo để nói chuyện thoải mái không?",
+   "comet": 79.8
+  },
+  {
+   "id": "EV-8573",
+   "src": "it should not be too big but i do not think we can make it too small because it has to have a lot of functions so",
+   "ref": "không nên quá to nhưng tôi nghĩ cũng không thể quá nhỏ vì phải có nhiều chức năng",
+   "hyp": "Nó không được quá lớn nhưng tôi không nghĩ chúng ta có thể làm nó quá nhỏ vì nó phải có nhiều chức năng nên",
+   "comet": 89.0
+  },
+  {
+   "id": "EV-8596",
+   "src": "quiet mode on until i am home from work",
+   "ref": "bật chế độ im lặng cho đến khi tôi đi làm về",
+   "hyp": "Chế độ im lặng cho đến khi tôi về nhà sau giờ làm.",
+   "comet": 92.1
+  },
+  {
+   "id": "EV-8630",
+   "src": "so i think what we need to do is perhaps to synchronise the final the the launch of a user tested device with some special event",
+   "ref": "vậy tôi nghĩ chúng ta cần đồng bộ việc ra mắt thiết bị đã được người dùng thử nghiệm với một sự kiện đặc biệt nào đó",
+   "hyp": "Tôi nghĩ chúng ta cần đồng bộ việc ra mắt thiết bị đã được người dùng thử nghiệm với một sự kiện đặc biệt nào đó.",
+   "comet": 95.0
+  },
+  {
+   "id": "EV-8694",
+   "src": "remove the list of person starting from letter m in my contact list",
+   "ref": "xóa danh sách người bắt đầu từ chữ m trong danh sách liên hệ của tôi",
+   "hyp": "Xóa danh sách người bắt đầu bằng chữ M trong danh bạ của tôi.",
+   "comet": 90.8
+  },
+  {
+   "id": "EV-8727",
+   "src": "yeah so again it's the left side it's kind of like around my left ear and kind of along here so like my jawline's just all feeling a bit numb round here",
+   "ref": "ừ lại là bên trái quanh tai trái và dọc đây hàm dưới cảm giác hơi tê",
+   "hyp": "Vâng, lại là bên trái, nó kiểu như quanh tai trái và dọc chỗ này ấy, kiểu như đường quai hàm của tôi cứ bị tê một chút ở chỗ này.",
+   "comet": 78.2
+  },
+  {
+   "id": "EV-8769",
+   "src": "and they have to wait for the right season to do",
+   "ref": "và họ phải đợi tới đúng mùa mới làm được",
+   "hyp": "và họ phải đợi mùa thích hợp mới làm được",
+   "comet": 96.0
+  },
+  {
+   "id": "EV-8971",
+   "src": "yes i was taking a shower when you called i saw that you called and i tried to call you back but i think your phone was off",
+   "ref": "vâng lúc anh gọi thì em đang tắm em thấy anh gọi và có gọi lại nhưng em nghĩ máy anh đã tắt",
+   "hyp": "Vâng, lúc tôi đang tắm thì anh gọi, tôi thấy anh gọi nên tôi đã cố gọi lại nhưng tôi nghĩ điện thoại của anh đã tắt rồi.",
+   "comet": 90.1
+  },
+  {
+   "id": "EV-9018",
+   "src": "google i need the living room vacuumed can you turn on the vacuum cleaner",
+   "ref": "google tôi cần hút bụi phòng khách bạn có thể bật máy hút bụi lên không",
+   "hyp": "Google ơi, tôi cần hút bụi phòng khách, bạn bật máy hút bụi giúp tôi được không?",
+   "comet": 89.6
+  },
+  {
+   "id": "EV-9209",
+   "src": "in the middle okay and any other symptoms along that with that have you had any nausea or any vomiting",
+   "ref": "ở giữa bụng được rồi anh còn triệu chứng nào khác đi kèm không anh có buồn nôn hay nôn không",
+   "hyp": "Ở giữa và các triệu chứng khác, anh có bị buồn nôn hay nôn không?",
+   "comet": 76.4
+  },
+  {
+   "id": "EV-9306",
+   "src": "good morning i would like to open a savings account can you tell me on how to go about it",
+   "ref": "chào buổi sáng tôi muốn mở tài khoản tiết kiệm anh cho tôi biết cách làm được không",
+   "hyp": "Chào buổi sáng, tôi muốn mở một tài khoản tiết kiệm, bạn có thể cho tôi biết cách làm như thế nào?",
+   "comet": 92.6
+  },
+  {
+   "id": "EV-9341",
+   "src": "money sure sure which one how much bada bing bada boom",
+   "ref": "tiền à được được cái nào bao nhiêu bada bing bada boom",
+   "hyp": "Tiền chắc chắn rồi cái nào bao nhiêu bada bing bada boom",
+   "comet": 83.5
+  },
+  {
+   "id": "EV-9462",
+   "src": "replace card and which card would you like to replace",
+   "ref": "thay thẻ và anh muốn thay thẻ nào",
+   "hyp": "Thay thẻ và bạn muốn thay thẻ nào?",
+   "comet": 95.5
+  },
+  {
+   "id": "EV-9953",
+   "src": "all right did you have any questions that you wanted to ask me",
+   "ref": "tốt rồi bạn có bất kỳ câu hỏi nào bạn muốn hỏi tôi không",
+   "hyp": "Anh có câu hỏi nào muốn hỏi tôi không?",
+   "comet": 89.6
+  }
+ ]
+}

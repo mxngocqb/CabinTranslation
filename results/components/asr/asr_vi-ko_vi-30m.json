@@ -1,0 +1,1064 @@
+{
+ "summary": {
+  "pair": "vi-ko",
+  "model": "vi-30m",
+  "n": 175,
+  "wer": 5.08,
+  "cer": 2.59,
+  "rtf": 0.007,
+  "avg_latency_s": 0.017,
+  "load_s": 0.43
+ },
+ "rows": [
+  {
+   "id": "VK-0170",
+   "ref": "Có điện thoại đến.",
+   "hyp": "CÓ ĐIỆN THOẠI ĐẾN",
+   "sec": 0.012
+  },
+  {
+   "id": "VK-0242",
+   "ref": "Xe buýt có máy lạnh không?",
+   "hyp": "XE BUÝT CÓ MÁY LẠNH KHÔNG",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-0300",
+   "ref": "Khi rỗi ăn thường làm gì?",
+   "hyp": "KHI RỖI ANH THƯỜNG LÀM GÌ",
+   "sec": 0.021
+  },
+  {
+   "id": "VK-0307",
+   "ref": "Có gì đâu.",
+   "hyp": "CÓ GÌ ĐÂU",
+   "sec": 0.01
+  },
+  {
+   "id": "VK-0332",
+   "ref": "Xin lỗi, vào trung tâm thành phố thì bác sẽ biết ở đâu vậy?",
+   "hyp": "XIN LỖI VÀO TRUNG TÂM THÀNH PHỐ THÌ BẮT XE BUÝT Ở ĐÂU VẬY",
+   "sec": 0.026
+  },
+  {
+   "id": "VK-0403",
+   "ref": "Anh chị đâu ở đâu?",
+   "hyp": "ANH CHỊ ĐAU Ở ĐÂU",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-0415",
+   "ref": "Tôi thích loại có màu sắc bình thường.",
+   "hyp": "TÔI THÍCH LOẠI CÓ MÀU SẮC BÌNH THƯỜNG",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-0419",
+   "ref": "Chọn giúp tôi, IEC 0.",
+   "hyp": "CHỌN GIÚP TÔI IOC KHÔNG",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-0637",
+   "ref": "Tôi sẽ làm riêng cho từng người ư.",
+   "hyp": "TÔI SẼ LÀM RIÊNG CHO TỪNG NGƯỜI Ư",
+   "sec": 0.022
+  },
+  {
+   "id": "VK-0642",
+   "ref": "Ở đây có món gì ngon?",
+   "hyp": "Ở ĐÂY CÓ MÓN GÌ NGON",
+   "sec": 0.021
+  },
+  {
+   "id": "VK-0709",
+   "ref": "Quay về Việt Nam thì tốt hơn",
+   "hyp": "QUAY VỀ VIỆT NAM THÌ TỐT HƠN",
+   "sec": 0.019
+  },
+  {
+   "id": "VK-0753",
+   "ref": "Gọi dịch vụ phòng phải quay số bao nhiêu?",
+   "hyp": "GỌI DỊCH VỤ PHÒNG PHẢI QUAY SỐ BAO NHIÊU",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-0755",
+   "ref": "Tôi rất hài lòng. Bao nhiêu tiền?",
+   "hyp": "TÔI RẤT HÀI LÒNG BAO NHIÊU TIỀN",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-0765",
+   "ref": "Xin lỗi, dây an toàn cài như thế nào ạ?",
+   "hyp": "XIN LỖI DÂY AN TOÀN CÀI NHƯ THẾ NÀO Ạ",
+   "sec": 0.019
+  },
+  {
+   "id": "VK-0875",
+   "ref": "Chúng tôi chưa gặp nhau bao giờ cả.",
+   "hyp": "CHÚNG TÔI CHƯA GẶP NHAU BAO GIỜ CẢ",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-0918",
+   "ref": "Sở thích của anh là gì?",
+   "hyp": "SỞ THÍCH CỦA ANH LÀ GÌ",
+   "sec": 0.024
+  },
+  {
+   "id": "VK-1113",
+   "ref": "Hôm nay tôi muốn trả phòng.",
+   "hyp": "HÔM NAY TÔI MUỐN TRẢ PHÒNG",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-1115",
+   "ref": "Có vẻ như anh không phải là bệnh nặng gì đâu, do mệt mỏi và stress dồn nên vậy.",
+   "hyp": "CÓ VẺ NHƯ ANH KHÔNG PHẢI LÀ BỆNH NẶNG GÌ ĐÂU DO MỆT MỎI VÀ STRESS DỒN NÊN VẬY",
+   "sec": 0.039
+  },
+  {
+   "id": "VK-1152",
+   "ref": "Nó rộng quá",
+   "hyp": "NÓ RỘNG QUÁ",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-1165",
+   "ref": "Có món sườn nướng",
+   "hyp": "CÓ MÓN SƯỜN NƯỚNG",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-1207",
+   "ref": "Không sao.",
+   "hyp": "KHÔNG SAO",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-1262",
+   "ref": "Tôi bị từ tối hôm qua",
+   "hyp": "TÔI BỊ TỪ TỐI HÔM QUA",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-1331",
+   "ref": "Vé này sao khác thế?",
+   "hyp": "VÉ NÀY SAO KHÁC THẾ",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-1348",
+   "ref": "15.000 won 15.000",
+   "hyp": "MƯỜI LĂM NGÀN QUÂN MƯỜI LĂM NGÀN",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-1453",
+   "ref": "Đắt quá, không giảm giá được sao?",
+   "hyp": "ĐẮT QUÁ KHÔNG GIẢM GIÁ ĐƯỢC SAO",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-1589",
+   "ref": "Bây giờ là mấy giờ?",
+   "hyp": "BÂY GIỜ LÀ MẤY GIỜ",
+   "sec": 0.011
+  },
+  {
+   "id": "VK-1679",
+   "ref": "Vâng, nếu cần giúp đỡ hãy gọi tôi Tôi là Suzy",
+   "hyp": "VÂNG NẾU CẦN GIÚP ĐỠ HÃY GỌI TÔI TÔI LÀ SUZY",
+   "sec": 0.023
+  },
+  {
+   "id": "VK-1691",
+   "ref": "Mùa thu là mùa đọc sách hợp nhất.",
+   "hyp": "MÙA THU LÀ MÙA ĐỌC SÁCH HỢP NHẤT",
+   "sec": 0.019
+  },
+  {
+   "id": "VK-1735",
+   "ref": "Tôi thích mùa thu và mùa xuân.",
+   "hyp": "TÔI THÍCH MÙA THU VÀ MÙA XUÂN",
+   "sec": 0.021
+  },
+  {
+   "id": "VK-1939",
+   "ref": "Vâng, tiền trọ và tiền thế cộng lại là 80 USD ạ.",
+   "hyp": "VÂNG TIỀN TRỌ VÀ TIỀN THẾ CỘNG LẠI LÀ TÁM MƯƠI USD Ạ",
+   "sec": 0.028
+  },
+  {
+   "id": "VK-2035",
+   "ref": "Khi đến nơi có thể cho tôi biết được không",
+   "hyp": "KHI ĐẾN NƠI CÓ THỂ CHO TÔI BIẾT ĐƯỢC KHÔNG",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-2113",
+   "ref": "Mát mê.",
+   "hyp": "MÁT MẺ",
+   "sec": 0.01
+  },
+  {
+   "id": "VK-2270",
+   "ref": "Hãy chụp có cả tòa nhà phía sau.",
+   "hyp": "HÃY CHỤP CÓ CẢ TÒA NHÀ PHÍA SAU",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-2281",
+   "ref": "làm ngược như lúc nãy là được, đe vào chỗ này và rút ra là được.",
+   "hyp": "LÀM NGƯỢC NHƯ LÚC NÃY LÀ ĐƯỢC ĐE VÀO CHỖ NÀY VÀ RÚT RA LÀ ĐƯỢC",
+   "sec": 0.023
+  },
+  {
+   "id": "VK-2317",
+   "ref": "Nồi bán quần áo nữ tầm mấy?",
+   "hyp": "NỒI BẮN QUẦN ÁO NỮ Ở TẦM MÁY",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-2371",
+   "ref": "Ở một ngày bao nhiêu?",
+   "hyp": "Ở MỘT NGÀY BAO NHIÊU",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-2385",
+   "ref": "Hôm nay tôi sẽ trả cho",
+   "hyp": "HÔM NAY TÔI SẼ TRẢ CHO",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-2428",
+   "ref": "Hãy chỉ cho tôi vị trí thật cụ thể.",
+   "hyp": "HÃY CHỈ CHO TÔI VỊ TRÍ THẬT CỤ THỂ",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-2509",
+   "ref": "Anh tìm hộ tôi chỗ ngồi được không?",
+   "hyp": "ANH TÌM HỘ TÔI CHỖ NGỒI ĐƯỢC KHÔNG",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-2524",
+   "ref": "Có lẽ tôi bị cảm.",
+   "hyp": "CÓ LẼ TÔI BỊ CẢM",
+   "sec": 0.028
+  },
+  {
+   "id": "VK-2542",
+   "ref": "Món những người kia đang ăn là món gì?",
+   "hyp": "MÓN NHỮNG NGƯỜI KIA ĐANG ĂN LÀ MÓN GÌ",
+   "sec": 0.023
+  },
+  {
+   "id": "VK-2775",
+   "ref": "Cảm ơn, ở đây có rửa ảnh không à?",
+   "hyp": "CẢM ƠN Ở ĐÂY CÓ RỬA ẢNH KHÔNG Ạ",
+   "sec": 0.021
+  },
+  {
+   "id": "VK-2808",
+   "ref": "Tôi muốn đổi lại vé giường nằm Nhưng còn chỗ không?",
+   "hyp": "TÔI MUỐN ĐỔI LẠI VÉ GIƯỜNG NẰM NHƯNG CÒN CHỖ KHÔNG",
+   "sec": 0.041
+  },
+  {
+   "id": "VK-2955",
+   "ref": "Thưa có lý do gì không ạ?",
+   "hyp": "THƯA CÓ LÝ DO GÌ KHÔNG Ạ",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-3012",
+   "ref": "Hôm nay là thứ mấy?",
+   "hyp": "HÔM NAY LÀ THỨ MẤY",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-3141",
+   "ref": "Tôi muốn đặt mua bé tàu lửa.",
+   "hyp": "TÔI MUỐN ĐẶT MUA VÉ TÀU LỬA",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-3169",
+   "ref": "Chúc ngủ ngon!",
+   "hyp": "CHÚC NGỦ NGON",
+   "sec": 0.011
+  },
+  {
+   "id": "VK-3210",
+   "ref": "Có hành lý cần gửi không?",
+   "hyp": "CÓ HÀNH LÝ CẦN GỬI KHÔNG",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-3221",
+   "ref": "có thể dẫn đường cho tôi được không",
+   "hyp": "CÓ THỂ DẪN ĐƯỜNG CHO TÔI ĐƯỢC KHÔNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-3230",
+   "ref": "Hãy cho tôi một cái bánh hamburger và một chai cola nhỏ.",
+   "hyp": "HÃY CHO TÔI MỘT CÁI BÁNH HAMBURGER VÀ MỘT CHAI COLA NHỎ",
+   "sec": 0.026
+  },
+  {
+   "id": "VK-3292",
+   "ref": "Mùa hè",
+   "hyp": "MÙA HÈ",
+   "sec": 0.01
+  },
+  {
+   "id": "VK-3343",
+   "ref": "Tôi muốn đặt chỗ",
+   "hyp": "TÔI MUỐN ĐẶT CHỖ",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-3366",
+   "ref": "Hãy giúp tôi với.",
+   "hyp": "HÃY GIÚP TÔI VỚI",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-3408",
+   "ref": "Đi vào trong thành phố hết bao nhiêu tiền?",
+   "hyp": "ĐI VÀO TRONG THÀNH PHỐ HẾT BAO NHIÊU TIỀN",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-3562",
+   "ref": "Có thực đơn đây.",
+   "hyp": "CÓ THỰC ĐƠN ĐÂY",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-3569",
+   "ref": "Xin ông đừng có lừa tôi",
+   "hyp": "XIN ÔNG ĐỪNG CÓ LỪA TÔI",
+   "sec": 0.019
+  },
+  {
+   "id": "VK-3621",
+   "ref": "Hãy dừng lại ở phía trước đèn tín hiệu.",
+   "hyp": "HÃY DỪNG LẠI Ở PHÍA TRƯỚC ĐÈN TÍN HIỆU",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-3625",
+   "ref": "Xin mời vào.",
+   "hyp": "XIN MỜI VÀO",
+   "sec": 0.011
+  },
+  {
+   "id": "VK-3675",
+   "ref": "Vâng, anh dùng gì ạ?",
+   "hyp": "VÂNG ANH DÙNG GÌ Ạ",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-3681",
+   "ref": "Hôm nay anh chỉ định làm gì?",
+   "hyp": "HÔM NAY ANH CHỈ ĐỊNH LÀM GÌ",
+   "sec": 0.026
+  },
+  {
+   "id": "VK-3753",
+   "ref": "Đến nơi rồi, đây là khách sạn Lotte",
+   "hyp": "ĐẾN NƠI RỒI ĐÂY LÀ KHÁCH SẠN LÓT XE",
+   "sec": 0.024
+  },
+  {
+   "id": "VK-3778",
+   "ref": "Hờ, đến trễ bao nhiêu lâu?",
+   "hyp": "ĐẾN TRỄ BAO NHIÊU LÂU",
+   "sec": 0.021
+  },
+  {
+   "id": "VK-3793",
+   "ref": "Anh, chị, sẽ ăn ở đây hay là mang đi?",
+   "hyp": "ANH CHỊ SẼ ĂN Ở ĐÂY HAY LÀ MANG ĐI",
+   "sec": 0.025
+  },
+  {
+   "id": "VK-3857",
+   "ref": "Đắt quá có thể giảm giá cho được không?",
+   "hyp": "ĐẮT QUÁ CÓ THỂ GIẢM GIÁ CHO ĐƯỢC KHÔNG",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-3884",
+   "ref": "Chào, cảm ơn, xin lỗi.",
+   "hyp": "CHO CẢM ƠN XIN LỖI",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-4000",
+   "ref": "Tôi gọi điện thoại có được không ạ? Cho nhờ điện thoại chút có được không ạ?",
+   "hyp": "TÔI GỌI ĐIỆN THOẠI CÓ ĐƯỢC KHÔNG Ạ CHO NHỜ ĐIỆN THOẠI CHÚT CÓ ĐƯỢC KHÔNG Ạ",
+   "sec": 0.025
+  },
+  {
+   "id": "VK-4089",
+   "ref": "Để bớt căng thẳng anh làm gì?",
+   "hyp": "ĐỂ BỚT CĂNG THẲNG ANH LÀM GÌ",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-4095",
+   "ref": "Say rồi.",
+   "hyp": "SAY RỒI",
+   "sec": 0.008
+  },
+  {
+   "id": "VK-4284",
+   "ref": "Tôi để hành lý ở đây có được không?",
+   "hyp": "TÔI ĐỂ HÀNH LÝ Ở ĐÂY CÓ ĐƯỢC KHÔNG",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-4389",
+   "ref": "Đến Hồ Chí Minh thì mất mấy tiếng?",
+   "hyp": "ĐẾN HỒ CHÍ MINH THÌ MẤT MẤY TIẾNG",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-4491",
+   "ref": "Không có tàu chạy thời gian trễ hơn một chút sao?",
+   "hyp": "KHÔNG CÓ TÀU CHẠY THỜI GIAN TRỄ HƠN MỘT CHÚT SAO",
+   "sec": 0.025
+  },
+  {
+   "id": "VK-4547",
+   "ref": "Hãy chuyển hành lý giúp tôi.",
+   "hyp": "HÃY CHUYỂN HÀNH LÝ GIÚP TÔI",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-4594",
+   "ref": "Tôi hỏi thêm một câu nữa Bến xe ngoại tỉnh nằm ở đâu ạ?",
+   "hyp": "TÔI HỎI THÊM MỘT CÂU NỮA BẾN XE NGOẠI TỈNH NẰM Ở ĐÂU Ạ",
+   "sec": 0.022
+  },
+  {
+   "id": "VK-4618",
+   "ref": "Mang giấy chiền và vòng tay, nếu đi đến chỗ, đông người dẫu sao cũng phải để ý.",
+   "hyp": "MANG DÂY CHUYỀN VÀ VÒNG TAY NẾU ĐI ĐẾN CHỖ ĐÔNG NGƯỜI DẪU SAO CŨNG PHẢI ĐỂ Ý",
+   "sec": 0.037
+  },
+  {
+   "id": "VK-4689",
+   "ref": "Nơi bán vé ở đâu?",
+   "hyp": "NƠI BÁN VÉ Ở ĐÂU",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-4690",
+   "ref": "Anh đi thường xuyên không?",
+   "hyp": "ANH ĐI THƯỜNG XUYÊN KHÔNG",
+   "sec": 0.021
+  },
+  {
+   "id": "VK-4827",
+   "ref": "Có món phở Việt Nam không?",
+   "hyp": "CÓ MÓN PHỞ VIỆT NAM KHÔNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-4860",
+   "ref": "Tôi chưa đặt chỗ, không biết là còn chỗ trống không?",
+   "hyp": "TÔI CHƯA ĐẶT CHỖ KHÔNG BIẾT LÀ CÒN CHỖ TRỐNG KHÔNG",
+   "sec": 0.024
+  },
+  {
+   "id": "VK-5013",
+   "ref": "Cứ ai vậy?",
+   "hyp": "THƯA AI VẬY",
+   "sec": 0.01
+  },
+  {
+   "id": "VK-5250",
+   "ref": "Hãy đứng sát hơn nữa.",
+   "hyp": "HÃY ĐỨNG SÁT HƠN NỮA",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-5333",
+   "ref": "Không có",
+   "hyp": "KHÔNG CÓ",
+   "sec": 0.012
+  },
+  {
+   "id": "VK-5369",
+   "ref": "Tiền phòng một người là bao nhiêu?",
+   "hyp": "TIỀN PHÒNG MỘT NGƯỜI LÀ BAO NHIÊU",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-5371",
+   "ref": "Nếu đi theo hướng đường này thì được.",
+   "hyp": "NẾU ĐI THEO HƯỚNG ĐƯỜNG NÀY THÌ ĐƯỢC",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-5373",
+   "ref": "Cái này là cái gì?",
+   "hyp": "CÁI NÀY LÀ CÁI GÌ",
+   "sec": 0.01
+  },
+  {
+   "id": "VK-5428",
+   "ref": "Đứng tập trung vào giữa đi.",
+   "hyp": "ĐỨNG TẬP TRUNG VÀO GIỮA ĐI",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-5456",
+   "ref": "Chương trình này lúc mấy giờ?",
+   "hyp": "CHƯƠNG TRÌNH NÀY LÚC MẤY GIỜ",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-5562",
+   "ref": "Không có sao cả",
+   "hyp": "KHÔNG CÓ SAO CẢ",
+   "sec": 0.01
+  },
+  {
+   "id": "VK-5592",
+   "ref": "Thường tôi chơi golf.",
+   "hyp": "THƯỜNG TÔI CHƠI GOLF",
+   "sec": 0.023
+  },
+  {
+   "id": "VK-5615",
+   "ref": "Tôi muốn xin được khép.",
+   "hyp": "TÔI MUỐN XIN ĐƯỢC KHÁM",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-5664",
+   "ref": "Ông bà đừng lo, có chìa khóa chung ở đây.",
+   "hyp": "ÔNG BÀ ĐỪNG LO CÓ CHÌA KHÓA CHUNG Ở ĐÂY",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-5791",
+   "ref": "Xin lỗi, tôi đánh mất hộ chiếu rồi.",
+   "hyp": "XIN LỖI TÔI ĐÁNH MẤT HỘ CHIẾU RỒI",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-5840",
+   "ref": "Tôi định đi đến nơi này thì phải đi bằng đường nào?",
+   "hyp": "TÔI ĐỊNH ĐI ĐẾN NƠI NÀY THÌ PHẢI ĐI BẰNG ĐƯỜNG NÀO",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-5871",
+   "ref": "Có toạn giá không?",
+   "hyp": "CÓ BẢNG GIÁ KHÔNG",
+   "sec": 0.011
+  },
+  {
+   "id": "VK-5906",
+   "ref": "Cho tôi phòng đơn, mỗi ngày bao nhiêu?",
+   "hyp": "CHO TÔI PHÒNG ĐƠN MỖI NGÀY BAO NHIÊU",
+   "sec": 0.024
+  },
+  {
+   "id": "VK-5925",
+   "ref": "Lối vào nhà ga tàu điện ngầm ở đâu vậy?",
+   "hyp": "LỐI VÀO NHÀ GA TÀU ĐIỆN NGẦM Ở ĐÂU VẬY",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-6020",
+   "ref": "Bị sốt",
+   "hyp": "BỊ SỐT",
+   "sec": 0.012
+  },
+  {
+   "id": "VK-6091",
+   "ref": "Ở đây có chỗ nào đáng xem thì chỉ cho tôi biết với.",
+   "hyp": "Ở ĐÂY CÓ CHỖ NÀO ĐÁNG XEM THÌ CHỈ CHO TÔI BIẾT VỚI",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-6135",
+   "ref": "Không sao mà, có thể nhầm mà.",
+   "hyp": "KHÔNG SAO MÀ CÓ THỂ NHẦM MÀ",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-6249",
+   "ref": "Động tác đó có nghĩa là gì?",
+   "hyp": "ĐỘNG TÁC ĐÓ CÓ NGHĨA LÀ GÌ",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-6392",
+   "ref": "Hãy xuống xe ở bên thứ 5.",
+   "hyp": "HÃY XUỐNG XE Ở BẾN THỨ NĂM",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-6417",
+   "ref": "Chỉ đêm nay thôi",
+   "hyp": "CHỈ ĐÊM NAY THÔI",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-6481",
+   "ref": "Mong sửa nhanh cho.",
+   "hyp": "MONG SỬA NHANH CHO",
+   "sec": 0.012
+  },
+  {
+   "id": "VK-6503",
+   "ref": "Hãy mở túi ra cho tôi coi. Cái này là cái gì?",
+   "hyp": "HÃY MỞ TÚI RA CHO TÔI COI CÁI NÀY LÀ CÁI GÌ",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-6609",
+   "ref": "Đã đặt trước rồi phải không?",
+   "hyp": "ĐÃ ĐẶT TRƯỚC RỒI PHẢI KHÔNG",
+   "sec": 0.021
+  },
+  {
+   "id": "VK-6753",
+   "ref": "Hãy rửa phim cho tôi.",
+   "hyp": "HÃY RỬA PHIM CHO TÔI",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-6787",
+   "ref": "Anh, chị thử uống thuốc này xem Cứ 8 tiếng đồng hồ lại uống 2 viên",
+   "hyp": "ANH CHỊ THỬ UỐNG THUỐC NÀY XEM CỨ TÁM TIẾNG ĐỒNG HỒ LẠI UỐNG HAI VIÊN",
+   "sec": 0.033
+  },
+  {
+   "id": "VK-6799",
+   "ref": "Này Min Su, cậu đã gặp Song Ho lần nào chưa?",
+   "hyp": "NÀY MINSU CẬU ĐÃ GẶP XONG HỒ LẦN NÀO CHƯA",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-6838",
+   "ref": "Hãy đi thẳng, vậy sẽ tìm thấy ở đó.",
+   "hyp": "HÃY ĐI THẲNG VẬY SẼ TÌM THẤY Ở ĐÓ",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-6861",
+   "ref": "Có, tôi sẽ cho anh xem.",
+   "hyp": "CÓ TÔI SẼ CHO ANH XEM",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-6894",
+   "ref": "sẽ bớt cho 20.120.",
+   "hyp": "SẼ BỚT CHO HAI MƯƠI NGHÌN WON HAI MƯƠI",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-6985",
+   "ref": "Tôi không biết dã mình mặc số mấy nữa",
+   "hyp": "TÔI KHÔNG BIẾT RÕ MÌNH MẶC SỐ MẤY NỮA",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-7009",
+   "ref": "Bình thường bắt đầu tháng 6.",
+   "hyp": "BÌNH THƯỜNG BẮT ĐẦU THÁNG SÁU",
+   "sec": 0.022
+  },
+  {
+   "id": "VK-7065",
+   "ref": "Xin lỗi, ông ấy đi công tác rồi.",
+   "hyp": "XIN LỖI ÔNG ẤY ĐI CÔNG TÁC RỒI",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-7281",
+   "ref": "Hãy đi cùng Killbook xem.",
+   "hyp": "HÃY ĐI CÙNG KYO BOOK XEM",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-7335",
+   "ref": "Vâng, hãy để sang phía bên này.",
+   "hyp": "VÂNG HÃY ĐỂ SANG PHÍA BÊN NÀY",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-7340",
+   "ref": "Nó bị gì vậy trên có chuyện gì vây?",
+   "hyp": "NÓ BỊ GÌ VẬY TRÊN CÓ CHUYỆN GÌ VẬY",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-7347",
+   "ref": "Ở phòng khách có máy lạnh không?",
+   "hyp": "Ở PHÒNG KHÁCH CÓ MÁY LẠNH KHÔNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-7390",
+   "ref": "Hết bao nhiêu tiền?",
+   "hyp": "HẾT BAO NHIÊU TIỀN",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-7398",
+   "ref": "Tôi có thể đi đến đâu để mua các đặc sản?",
+   "hyp": "TÔI CÓ THỂ ĐI ĐẾN ĐÂU ĐỂ MUA CÁC ĐẶC SẢN",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-7403",
+   "ref": "Nó quá nhỏ",
+   "hyp": "NÓ QUÁ NHỎ",
+   "sec": 0.01
+  },
+  {
+   "id": "VK-7490",
+   "ref": "Tạm biệt.",
+   "hyp": "TẠM BIỆT",
+   "sec": 0.009
+  },
+  {
+   "id": "VK-7505",
+   "ref": "Dạ rất được.",
+   "hyp": "DẠ RẤT ĐƯỢC",
+   "sec": 0.012
+  },
+  {
+   "id": "VK-7548",
+   "ref": "Trong phòng quá lạnh",
+   "hyp": "TRONG PHÒNG QUÁ LẠNH",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-7551",
+   "ref": "Ăn món này không quá ngán phải không?",
+   "hyp": "ĂN MÓN NÀY KHÔNG QUÁ NGÁN PHẢI KHÔNG",
+   "sec": 0.02
+  },
+  {
+   "id": "VK-7615",
+   "ref": "Nhanh lên hộ nhé",
+   "hyp": "NHANH LÊN HỘ NHẮC",
+   "sec": 0.012
+  },
+  {
+   "id": "VK-7702",
+   "ref": "Tôi có thể giúp gì anh, chị?",
+   "hyp": "TÔI CÓ THỂ GIÚP GÌ ANH CHỊ",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-7729",
+   "ref": "Đây là hàng bán chạy nhất.",
+   "hyp": "ĐÂY LÀ HÀNG BÁN CHẠY NHẤT",
+   "sec": 0.011
+  },
+  {
+   "id": "VK-7760",
+   "ref": "Bao nhiêu vậy?",
+   "hyp": "BAO NHIÊU VẬY",
+   "sec": 0.011
+  },
+  {
+   "id": "VK-7781",
+   "ref": "Ba, anh ta có ở nhà không?",
+   "hyp": "BA ANH TA CÓ Ở NHÀ KHÔNG",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-7787",
+   "ref": "Xem hỏi ai vậy?",
+   "hyp": "XIN HỎI AI VẬY",
+   "sec": 0.01
+  },
+  {
+   "id": "VK-7851",
+   "ref": "Anh gọi món ăn chứ.",
+   "hyp": "ANH GỌI MÓN ĂN CHỨ",
+   "sec": 0.019
+  },
+  {
+   "id": "VK-7927",
+   "ref": "Tiết cân đây có thể giúp gì được ông, bà",
+   "hyp": "TIA TÂN ĐÂY CÓ THỂ GIÚP GÌ ĐƯỢC ÔNG BÀ À",
+   "sec": 0.032
+  },
+  {
+   "id": "VK-8019",
+   "ref": "Có đổi không?",
+   "hyp": "CÓ ĐỔI KHÔNG",
+   "sec": 0.008
+  },
+  {
+   "id": "VK-8203",
+   "ref": "Thêm một ly nữa nhé.",
+   "hyp": "THÊM MỘT LY NỮA NHÉ",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-8259",
+   "ref": "Xin chào, có ai liên lạc với tôi không? Tôi ở phòng 813.",
+   "hyp": "XIN CHÀO CÓ ANH LIÊN LẠC VỚI TÔI KHÔNG TÔI Ở PHÒNG TÁM MƯƠI BA",
+   "sec": 0.026
+  },
+  {
+   "id": "VK-8470",
+   "ref": "Tôi ăn không tiêu phải loại thuốc nào ạ.",
+   "hyp": "TÔI ĂN KHÔNG TIÊU PHẢI LOẠI THUỐC NÀO Ạ",
+   "sec": 0.03
+  },
+  {
+   "id": "VK-8626",
+   "ref": "Bộ biểu diễn hôm nay rất là tuyệt vời.",
+   "hyp": "BUỔI BIỂU DIỄN HÔM NAY RẤT LÀ TUYỆT VỜI",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-8662",
+   "ref": "Chiếc áo khoác này bao nhiêu?",
+   "hyp": "CHIẾC ÁO KHOÁC NÀY BAO NHIÊU",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-8767",
+   "ref": "Hết việc anh chị thường làm gì?",
+   "hyp": "HẾT VIỆC ANH CHỊ THƯỜNG LÀM GÌ",
+   "sec": 0.023
+  },
+  {
+   "id": "VK-8787",
+   "ref": "Hãy gửi hóa đơn đến phòng tôi.",
+   "hyp": "HÃY GỬI HÓA ĐƠN ĐẾN PHÒNG TÔI",
+   "sec": 0.017
+  },
+  {
+   "id": "VK-8836",
+   "ref": "Bây giờ là đang mùa không đắt khắp, hãy giảm cho tôi một ít được không?",
+   "hyp": "BÂY GIỜ LÀ ĐANG MÙA KHÔNG ĐẮT KHÁCH HÃY GIẢM CHO TÔI MỘT ÍT ĐƯỢC KHÔNG",
+   "sec": 0.03
+  },
+  {
+   "id": "VK-8880",
+   "ref": "Tôi thích đi dạo trong rừng.",
+   "hyp": "TÔI THÍCH ĐI DẠO TRONG RỪNG",
+   "sec": 0.021
+  },
+  {
+   "id": "VK-8902",
+   "ref": "Có bao gồm ăn sáng không?",
+   "hyp": "CÓ BAO GIỜ ĂN SÁNG KHÔNG",
+   "sec": 0.012
+  },
+  {
+   "id": "VK-8921",
+   "ref": "thì đến đâu phải mất mấy tiếng?",
+   "hyp": "ĐI ĐẾN ĐÓ PHẢI MẤT MẤY TIẾNG",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-8934",
+   "ref": "Nó vừa vặn với tôi.",
+   "hyp": "NÓ VỪA VẶN VỚI TÔI",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-8940",
+   "ref": "Ở khu vực này có danh lam thắng cảnh du lịch không?",
+   "hyp": "Ở KHU VỰC NÀY CÓ DANH LAM THẮNG CẢNH DU LỊCH KHÔNG",
+   "sec": 0.023
+  },
+  {
+   "id": "VK-9045",
+   "ref": "Ống hục ở đâu?",
+   "hyp": "ỐNG HÚT Ở ĐÂU",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-9056",
+   "ref": "Gọi bác sĩ giúp tôi được không?",
+   "hyp": "ANH CÓ THỂ GỌI BÁC SĨ GIÚP TÔI ĐƯỢC KHÔNG",
+   "sec": 0.023
+  },
+  {
+   "id": "VK-9110",
+   "ref": "Anh chị sách hộ dùng tôi các túi sách có được không?",
+   "hyp": "ANH CHỊ XÁCH HỘ DÙNG TÔI CÁC TÚI SÁCH CÓ ĐƯỢC KHÔNG",
+   "sec": 0.019
+  },
+  {
+   "id": "VK-9141",
+   "ref": "Vâng, tôi sẽ báo",
+   "hyp": "VÂNG TÔI SẼ BÁO",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-9191",
+   "ref": "Chúc ông đêm may mắn!",
+   "hyp": "CHÚ ÔM ĐI MAY MẮN",
+   "sec": 0.009
+  },
+  {
+   "id": "VK-9206",
+   "ref": "Tôi bị chạy xe",
+   "hyp": "TÔI BỊ SAY XE",
+   "sec": 0.022
+  },
+  {
+   "id": "VK-9279",
+   "ref": "Nước nóng ở đâu vậy?",
+   "hyp": "NƯỚC NÓNG Ở ĐÂU VẬY",
+   "sec": 0.009
+  },
+  {
+   "id": "VK-9335",
+   "ref": "Mua vé tàu ở đâu vậy?",
+   "hyp": "MUA VÉ TÀU Ở ĐÂU VẬY",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-9371",
+   "ref": "Tôi có thể gọi bữa ăn sáng lên phòng được không?",
+   "hyp": "TÔI CÓ THỂ GỌI BỮA ĂN SÁNG LÊN PHÒNG ĐƯỢC KHÔNG",
+   "sec": 0.022
+  },
+  {
+   "id": "VK-9407",
+   "ref": "Xin hãy đợi tôi một chút.",
+   "hyp": "XIN HÃY ĐỢI TÔI MỘT CHÚT",
+   "sec": 0.011
+  },
+  {
+   "id": "VK-9419",
+   "ref": "Vậy hả? Có vui không?",
+   "hyp": "VẬY HẢ CÓ VUI KHÔNG",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-9598",
+   "ref": "Từ Seoul tới thành phố Hồ Chí Minh mất 5 tiếng đồng hồ.",
+   "hyp": "TỪ SEOUL TỚI THÀNH PHỐ HỒ CHÍ MINH MẤT NĂM TIẾNG ĐỒNG HỒ",
+   "sec": 0.018
+  },
+  {
+   "id": "VK-9619",
+   "ref": "Tiền trọ là bao nhiêu?",
+   "hyp": "TIỀN TRỌ LÀ BAO NHIÊU",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-9620",
+   "ref": "Xin lỗi bắt anh chị đợi.",
+   "hyp": "XIN LỖI BẮT ANH CHỊ ĐỢI",
+   "sec": 0.012
+  },
+  {
+   "id": "VK-9635",
+   "ref": "Tôi có thể mua vé du lịch bằng xe buýt được không?",
+   "hyp": "TÔI CÓ THỂ MUA VÉ DU LỊCH BẰNG XE BUÝT ĐƯỢC KHÔNG",
+   "sec": 0.026
+  },
+  {
+   "id": "VK-9660",
+   "ref": "Nơi sửa xe đạp ở đâu vậy?",
+   "hyp": "NƠI SỬA XE ĐẠP Ở ĐÂU VẬY",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-9661",
+   "ref": "Anh thích mùa nào?",
+   "hyp": "ANH THÍCH MÙA NÀO",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-9675",
+   "ref": "trong chốc lát thôi",
+   "hyp": "TRONG CHỐC LÁT THÔI",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-9688",
+   "ref": "ghi đến chỗ này bằng taxi mất bao lâu.",
+   "hyp": "ĐI ĐẾN CHỖ NÀY BẰNG TAXI MẤT BAO LÂU",
+   "sec": 0.016
+  },
+  {
+   "id": "VK-9697",
+   "ref": "Tôi cần phòng trú đêm nay, còn phòng trống không vậy.",
+   "hyp": "TÔI CẦN PHÒNG TRÚ ĐÊM NAY CÒN PHÒNG TRỐNG KHÔNG VẬY",
+   "sec": 0.023
+  },
+  {
+   "id": "VK-9706",
+   "ref": "Dưới vệ sinh bán ở đâu thế?",
+   "hyp": "GIẤY VỆ SINH BÁN Ở ĐÂU THẾ",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-9730",
+   "ref": "Xin lỗi nhưng mà không được.",
+   "hyp": "XIN LỖI NHƯNG MÀ KHÔNG ĐƯỢC",
+   "sec": 0.015
+  },
+  {
+   "id": "VK-9738",
+   "ref": "Anh từ đâu tới vậy?",
+   "hyp": "ANH TỪ ĐÂU TỚI VẬY",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-9807",
+   "ref": "Đi đến đó phải xuống ở đâu?",
+   "hyp": "ĐI ĐẾN ĐÓ PHẢI XUỐNG Ở ĐÂU",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-9831",
+   "ref": "có biết nói chút ít.",
+   "hyp": "CÓ BIẾT NÓI CHÚT ÍT",
+   "sec": 0.013
+  },
+  {
+   "id": "VK-9867",
+   "ref": "Vâng, mời ông xem.",
+   "hyp": "VÂNG MỜI ÔNG XEM",
+   "sec": 0.014
+  },
+  {
+   "id": "VK-9914",
+   "ref": "Ra cầu lửa đâu vậy?",
+   "hyp": "GA TÀU LỬA Ở ĐÂU VẬY",
+   "sec": 0.011
+  },
+  {
+   "id": "VK-9923",
+   "ref": "Tôi có thể xem muối rối nước ở đâu?",
+   "hyp": "TÔI CÓ THỂ XEM MÚA RỐI NƯỚC Ở ĐÂU",
+   "sec": 0.019
+  },
+  {
+   "id": "VK-9971",
+   "ref": "Có đây.",
+   "hyp": "CÓ ĐÂY",
+   "sec": 0.008
+  }
+ ]
+}
