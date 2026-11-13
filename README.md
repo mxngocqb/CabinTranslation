@@ -15,8 +15,9 @@ OneVoice AI Challenge 2026, Phase 3 prototype.
 | **Qualcomm QCS8550 tablet** (Android 13) | Adreno 740 GPU | 0.63–1.44 s | 88.1 ¹ |
 | **Arduino VENTUNO Q** (QCS8275, Ubuntu 24.04) | **Hexagon v75 NPU** | **0.54–1.21 s** | 87.5 |
 | Arduino VENTUNO Q | Adreno 623 GPU / CPU | 1.98–4.48 s / 2.09–3.76 s | 87.5 / 87.4 |
+| **Samsung Galaxy S25 Ultra** (SM8750, Android 17), same Android build / APK | **Adreno 830 GPU** | **0.51–1.16 s** | latency-only run ² |
 
-¹ Earlier 2-call Vietnamese build. Sample set: organizer Round 3 sample (905 utterances).
+¹ Earlier 2-call Vietnamese build. ² COMET not computed for this run. Sample set: organizer Round 3 sample (905 utterances).
 All runs above were measured with the network connected. During the VENTUNO Q NPU run the engine opened
 **no** non-loopback network socket (sampled every second over the 905 utterances). See [results/README.md](results/README.md).
 
@@ -36,6 +37,8 @@ CabinTranslation/
 ├── results/                    measured results, one folder per scenario
 │   ├── qcs8550/                on-device runs on the QCS8550 tablet
 │   ├── ventunoq/               on-device runs on VENTUNO Q (cpu / gpu / npu)
+│   ├── s25ultra/               on-device runs on Galaxy S25 Ultra (latency, power)
+│   ├── iq9075/                 on-device runs on Qualcomm IQ-9075 EVK (cpu / gpu; extra board, same Linux build)
 │   ├── pc/                     PC reference runs
 │   ├── components/             model comparisons (26 English ASR models, Gemma quants, prompts, TTS)
 │   └── archive/                smoke tests, aborted or failed runs (kept for traceability)
@@ -51,7 +54,7 @@ CabinTranslation/
 |---|---|
 | Run the interpreter on the QCS8550 tablet | [edge/qcs8550-android/README.md](edge/qcs8550-android/README.md) |
 | Run it on Arduino VENTUNO Q (NPU), or install the judges' offline package | [edge/ventunoq-linux/README.md](edge/ventunoq-linux/README.md) and [package/README_INSTALL.md](edge/ventunoq-linux/package/README_INSTALL.md) |
-| Install the Android app (APK) | [edge/android-app/README.md](edge/android-app/README.md) |
+| Install the Android app (APK) on a tablet or phone (QCS8550, Galaxy S25 Ultra) | [edge/android-app/README.md](edge/android-app/README.md) |
 | Understand the native engine or the deploy/benchmark tools | [edge/README.md](edge/README.md) |
 | Run the PC reference or the component evaluations | [pc/README.md](pc/README.md) |
 | See every measured number, the logs and the audio | [results/README.md](results/README.md) · `bash dashboard/serve.sh` → http://localhost:8000/dashboard/ |
@@ -69,6 +72,12 @@ sh start.sh npu                                               # open http://127.
 ```bash
 bash edge/qcs8550-android/build.sh && python edge/tools/make_device_bundle.py --push
 adb shell sh /data/local/tmp/cabin/start.sh                    # opens the UI in the tablet browser
+```
+
+**Android phone or tablet (APK)**, e.g. Galaxy S25 Ultra over wireless debugging:
+```bash
+adb connect <phone-ip>:<port>                 # the port changes after reconnects: check `adb devices -l`
+bash edge/android-app/install.sh              # installs the APK, grants file access, pushes models (~2.8 GB) if missing
 ```
 
 **Use:** pick the partner language (EN / KO / ZH). Each speaker holds their 🎤 button and speaks.
@@ -96,6 +105,8 @@ on the organizer sample set. The reasons are in each platform README and in [pc/
 ```bash
 python edge/tools/run_device_bench.py --pairs vi-en en-vi vi-ko ko-vi vi-zh zh-vi                       # QCS8550 (adb)
 python edge/tools/run_device_bench.py --target linux --ssh "ssh -p 2222 arduino@<host>" --backend npu --pairs ...  # VENTUNO Q
+python edge/tools/run_device_bench.py --serial <phone> --device-tag s25ultra --no-comet --pairs ...      # any Android phone
+python edge/tools/power_bench_android.py --serial <phone> --tag s25ultra                                 # battery power (no root)
 python scripts/benchmark_e2e.py --pairs vi-en en-vi vi-ko ko-vi vi-zh zh-vi                              # PC
 python dashboard/build_report.py                                                                         # results/README.md + dashboard
 ```

@@ -1,6 +1,6 @@
 # Results — CabinTranslation
 
-_Generated 2026-11-12 11:40 by `python dashboard/build_report.py`. Open the dashboard with `bash dashboard/serve.sh` (http://localhost:8000/dashboard/) for charts, per-utterance browsing and audio._
+_Generated 2026-11-13 16:47 by `python dashboard/build_report.py`. Open the dashboard with `bash dashboard/serve.sh` (http://localhost:8000/dashboard/) for charts, per-utterance browsing and audio._
 
 ## Layout
 
@@ -11,6 +11,7 @@ results/
   qcs8550/               on-device runs, QCS8550 tablet (Android, Gemma on GPU): device_bench_* (end-to-end), device_tts_* (TTS candidates)
   ventunoq/              on-device runs, Arduino VENTUNO Q / QCS8275 (Linux, Gemma on CPU/GPU/NPU): ventunoq_<backend>_*
   iq9075/                on-device runs, Qualcomm IQ-9075 EVK / QCS9075 (Qualcomm Linux, Gemma on CPU/GPU): iq9075_<backend>_*
+  s25ultra/              on-device runs, Samsung Galaxy S25 Ultra / SM8750 (Android, Gemma on GPU): s25ultra_gpu_*
   pc/                    PC reference runs (RTX 4080): bench_* (end-to-end)
   components/asr|mt|tts/ component evaluations and model comparisons
   archive/               smoke tests, crashed or failed runs (kept for traceability)
@@ -75,6 +76,25 @@ Same native pipeline; only the Gemma backend differs (ASR/TTS on CPU). VI input 
 
 Network during these runs: online.
 
+## Samsung Galaxy S25 Ultra — SM8750, Android 17 (latency run, COMET not computed) (`s25ultra/`)
+
+Same native pipeline; only the Gemma backend differs (ASR/TTS on CPU). VI input = 1 Gemma call. Runs: GPU `s25ultra_gpu_20261113_161738`. Details: `edge/qcs8550-android/README.md (same Android build)`.
+
+| pair | COMET gpu | BLEU gpu | p50 gpu ms |
+|---|---|---|---|
+| VI→EN | None | 50.22 | 509 |
+| EN→VI | None | 42.91 | 1159 |
+| VI→KO | None | 35.97 | 625 |
+| KO→VI | None | 21.11 | 574 |
+| VI→ZH | None | 52.88 | 574 |
+| ZH→VI | None | 45.62 | 738 |
+
+| backend | Gemma file | decode tok/s | TTFT ms | peak RSS MB | GPU MB | engine net sockets (max) |
+|---|---|---|---|---|---|---|
+| GPU | gemma-4-E2B-it-gpu.litertlm (2232 MB) | 40.6 | 103 | 2906 | 1953 | n/a |
+
+Network during these runs: online.
+
 ## PC reference — RTX 4080 (`pc/bench_20261111_134125`)
 
 | pair | ASR err | BLEU | chrF++ | COMET | total p50 / p95 ms |
@@ -90,6 +110,8 @@ Network during these runs: online.
 
 | time | run | kind | status | pairs | note |
 |---|---|---|---|---|---|
+| 2026-11-13 16:30 | [power_20261113_163018](s25ultra/power_20261113_163018/summary.md) | pc | superseded |  |  |
+| 2026-11-13 16:17 | [s25ultra_gpu_20261113_161738](s25ultra/s25ultra_gpu_20261113_161738/summary.md) | s25ultra-gpu | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
 | 2026-11-12 11:12 | [iq9075_cpu_20261112_111234](iq9075/iq9075_cpu_20261112_111234/summary.md) | iq9075-cpu | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
 | 2026-11-12 10:48 | [iq9075_gpu_20261112_104813](iq9075/iq9075_gpu_20261112_104813/summary.md) | iq9075-gpu | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
 | 2026-11-11 23:52 | [ventunoq_npu_20261111_235211](ventunoq/ventunoq_npu_20261111_235211/summary.md) | ventunoq-npu | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |

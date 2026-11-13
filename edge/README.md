@@ -13,10 +13,14 @@ edge/
 ├── ventunoq-linux/          Linux aarch64 glibc: build.sh, start.sh, stop.sh, https_proxy.py, package.sh, dist/
 │                                                                                              → VENTUNO Q, Gemma on NPU / GPU / CPU
 ├── android-app/             Kotlin app (APK) that runs the engine as a child process + Silero VAD capture
+│                                                                    → tested on QCS8550 tablet and Galaxy S25 Ultra
 └── tools/
     ├── make_device_bundle.py   generate config_*.json + prompts.json from cabin/mt.py & cabin/normalize.py; push (adb or ssh)
     ├── run_device_bench.py     full-sample-set benchmark on the device, scored on the host → results/<device>/
-    └── bench_device_tts.py     on-device TTS candidate comparison (QCS8550)
+    ├── bench_device_tts.py     on-device TTS candidate comparison (QCS8550)
+    ├── power_bench_android.py  battery power/energy per utterance on an Android phone (dumpsys battery, no root)
+    ├── net_socks.py            counts the engine's non-loopback sockets on Linux boards (evidence of no network use)
+    └── compile_npu_model.sh    AOT-compile the Gemma NPU_Uncompiled bundle for a Qualcomm SoC (x86 host)
 ```
 
 ## Runtime per stage
@@ -32,7 +36,7 @@ edge/
 ```bash
 bash edge/<platform>/build.sh                                         # cross-compile on the host → edge/<platform>/dist/
 python edge/tools/make_device_bundle.py [--target linux --ssh "..."] --push [--no-models]
-python edge/tools/run_device_bench.py   [--target linux --ssh "..." --backend npu] --pairs vi-en en-vi vi-ko ko-vi vi-zh zh-vi
+python edge/tools/run_device_bench.py   [--target linux --ssh "..." --backend npu] [--device-tag <name>] --pairs vi-en en-vi vi-ko ko-vi vi-zh zh-vi
 python dashboard/build_report.py                                      # refresh results/README.md + dashboard
 ```
 

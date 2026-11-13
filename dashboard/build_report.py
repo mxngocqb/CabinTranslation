@@ -109,6 +109,7 @@ def main():
     # ---------------- Linux boards (same engine): VENTUNO Q (QCS8275) and IQ-9075 (QCS9075); ASR+TTS on CPU
     vq = load_linux("ventunoq")
     iq = load_linux("iq9075")
+    s25 = load_linux("s25ultra")   # Galaxy S25 Ultra (SM8750, Android), Gemma on the Adreno 830 GPU
 
     # ---------------- component studies
     asr_c = []
@@ -156,7 +157,9 @@ def main():
         (f"vq_{b}", f"VentunoQ {b.upper()}", R / "ventunoq" / vq["backends"][b]["run"])
         for b in ("npu", "gpu", "cpu") if b in vq["backends"]] + [
         (f"iq_{b}", f"IQ-9075 {b.upper()}", R / "iq9075" / iq["backends"][b]["run"])
-        for b in ("npu", "gpu", "cpu") if b in iq["backends"]]
+        for b in ("npu", "gpu", "cpu") if b in iq["backends"]] + [
+        (f"s25_{b}", f"S25 Ultra {b.upper()}", R / "s25ultra" / s25["backends"][b]["run"])
+        for b in ("gpu",) if b in s25["backends"]]
     by_id = {}
     for key, label, rd in sample_runs:
         rel_run = rd.relative_to(R)
@@ -176,15 +179,16 @@ def main():
 
     # ---------------- run history
     history = []
-    for d in sorted(glob.glob(str(R / "qcs8550/*")) + glob.glob(str(R / "ventunoq/*")) + glob.glob(str(R / "iq9075/*")) + glob.glob(str(R / "pc/*")) + glob.glob(str(R / "archive/*"))):
+    for d in sorted(glob.glob(str(R / "qcs8550/*")) + glob.glob(str(R / "ventunoq/*")) + glob.glob(str(R / "iq9075/*")) + glob.glob(str(R / "s25ultra/*")) + glob.glob(str(R / "pc/*")) + glob.glob(str(R / "archive/*"))):
         d = Path(d)
         s = jload(d / "summary.json")
         kind = ("ventunoq-" + d.name.split("_")[1] if d.name.startswith("ventunoq_") else
                 "iq9075-" + d.name.split("_")[1] if d.name.startswith("iq9075_") else
+                "s25ultra-" + d.name.split("_")[1] if d.name.startswith("s25ultra_") else
                 "qcs8550" if d.name.startswith("device_bench") else "qcs8550-tts" if d.name.startswith("device_tts") else "pc")
-        vq_runs = {v["run"] for v in vq["backends"].values()} | {v["run"] for v in iq["backends"].values()}
+        vq_runs = {v["run"] for v in vq["backends"].values()} | {v["run"] for v in iq["backends"].values()} | {v["run"] for v in s25["backends"].values()}
         status = ("official" if d in (edge_dir, pc_dir) or (tts_dir and d == Path(tts_dir)) or
-                  (d.parent.name in ("ventunoq", "iq9075") and d.name in vq_runs)
+                  (d.parent.name in ("ventunoq", "iq9075", "s25ultra") and d.name in vq_runs)
                   else "archived" if d.parent.name == "archive" else "superseded")
         pairs = list((s or {}).get("pairs", {}).keys()) if isinstance(s, dict) else []
         note = d.name.split("__")[1].replace("_", " ") if "__" in d.name else ""
@@ -200,7 +204,7 @@ def main():
             "edge": edge_rows, "pc": pc_rows, "resources": resources, "asr_candidates": asr_c, "quant": quant,
             "ablation": ablation, "tts_candidates": tts_c, "pc_asr": pc_asr, "samples": samples,
             "sample_runs": [{"key": k, "label": lb, "run": rd.name} for k, lb, rd in sample_runs], "history": history,
-            "ventunoq": vq, "iq9075": iq}
+            "ventunoq": vq, "iq9075": iq, "s25ultra": s25}
     DASH.mkdir(exist_ok=True)
     tpl = (DASH / "report_template.html").read_text()
     (DASH / "index.html").write_text(tpl.replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False)))
@@ -221,6 +225,7 @@ def write_readme(d):
          "  qcs8550/               on-device runs, QCS8550 tablet (Android, Gemma on GPU): device_bench_* (end-to-end), device_tts_* (TTS candidates)",
          "  ventunoq/              on-device runs, Arduino VENTUNO Q / QCS8275 (Linux, Gemma on CPU/GPU/NPU): ventunoq_<backend>_*",
          "  iq9075/                on-device runs, Qualcomm IQ-9075 EVK / QCS9075 (Qualcomm Linux, Gemma on CPU/GPU): iq9075_<backend>_*",
+         "  s25ultra/              on-device runs, Samsung Galaxy S25 Ultra / SM8750 (Android, Gemma on GPU): s25ultra_gpu_*",
          "  pc/                    PC reference runs (RTX 4080): bench_* (end-to-end)",
          "  components/asr|mt|tts/ component evaluations and model comparisons",
          "  archive/               smoke tests, crashed or failed runs (kept for traceability)", "```", "",
@@ -239,7 +244,8 @@ def write_readme(d):
                  f"{r['p50']:.0f} / {r['p95']:.0f} |")
     L += ["", "BLEU for KO/ZH targets is character-level. ASR-BLEU is BLEU of the spoken output after re-recognition.", ""]
     for key, title, det in [("ventunoq", "Arduino VENTUNO Q — QCS8275, Ubuntu 24.04", "edge/ventunoq-linux/README.md"),
-                            ("iq9075", "Qualcomm IQ-9075 EVK — QCS9075, Qualcomm Linux 1.9", "edge/ventunoq-linux/README.md (same Linux build)")]:
+                            ("iq9075", "Qualcomm IQ-9075 EVK — QCS9075, Qualcomm Linux 1.9", "edge/ventunoq-linux/README.md (same Linux build)"),
+                            ("s25ultra", "Samsung Galaxy S25 Ultra — SM8750, Android 17 (latency run, COMET not computed)", "edge/qcs8550-android/README.md (same Android build)")]:
         vq = d.get(key, {})
         if not vq.get("rows"):
             continue

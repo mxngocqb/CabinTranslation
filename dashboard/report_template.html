@@ -77,6 +77,7 @@
   <section id="edge"></section>
   <section id="vq"></section>
   <section id="iq"></section>
+  <section id="s25"></section>
   <section id="pc"></section>
   <section id="studies"></section>
   <section id="utts"></section>
@@ -88,7 +89,7 @@ const D = /*__DATA__*/null;
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
 const fmt = (v, d = 0) => v == null ? "–" : Number(v).toFixed(d);
-const SEC = [["overview","Tổng quan"],["edge","Thiết bị QCS8550"],["vq","VentunoQ (QCS8275)"],["iq","IQ-9075 (QCS9075)"],["pc","PC (RTX 4080)"],["studies","So sánh model"],["utts","Từng câu & nghe thử"],["runs","Lịch sử chạy"]];
+const SEC = [["overview","Tổng quan"],["edge","Thiết bị QCS8550"],["vq","VentunoQ (QCS8275)"],["iq","IQ-9075 (QCS9075)"],["s25","Galaxy S25 Ultra"],["pc","PC (RTX 4080)"],["studies","So sánh model"],["utts","Từng câu & nghe thử"],["runs","Lịch sử chạy"]];
 
 // ---------- nav
 $("#nav").innerHTML = SEC.map(([id, t]) => `<button data-s="${id}">${t}</button>`).join("");
@@ -322,6 +323,10 @@ renderLinux("iq", D.iq9075, "IQ-9075", { cpu: "CPU (XNNPACK, 8 luồng A78C)", g
   "Cùng bản build Linux aarch64 như VentunoQ (không biên dịch lại); Qualcomm Linux 1.9 (Yocto), 8× Cortex-A78C, 32 GB RAM.",
   "GPU dùng driver Vulkan Adreno chính hãng (KGSL) → decode ~2× VentunoQ GPU. CPU 8 luồng nhanh nhất cho MT.",
   "NPU (đã thử): bản QCS8275 bị từ chối (Hexagon v75 ≠ v73). Bản tự biên dịch AOT cho QCS9075 (litert_lm_npu_compiler + QAIRT 2.50) nạp được nhưng khối trọng số 1.66 GB (v73 bung int4; v75 chỉ 761 MB) không ánh xạ được qua FastRPC trên kernel QLI → dùng CPU/GPU."]);
+renderLinux("s25", D.s25ultra, "S25 Ultra", { gpu: "GPU (Adreno 830, OpenCL)" }, [
+  "Cùng bản build Android (cabin_edge) như QCS8550; Samsung Galaxy S25 Ultra, Snapdragon 8 Elite (SM8750), Android 17, 12 GB RAM.",
+  "Lượt đo này chỉ đo thời gian (không tính COMET) — cột COMET để trống.",
+  "App Android (APK) cũng đã chạy trên máy này: ví dụ VI→EN 562 ms (ASR 53 · dịch 279 · TTS 228 ms)."]);
 
 // ---------- pc
 (() => {

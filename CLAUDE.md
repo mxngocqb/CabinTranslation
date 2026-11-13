@@ -162,3 +162,11 @@ Pipeline (`cabin/pipeline.py`, class `VoiceTranslator`):
 - NPU is blocked. A self-compiled QCS9075 build exists (`edge/tools/compile_npu_model.sh`, `~/edge/models/gemma-4-E2B-it_Qualcomm_QCS9075.litertlm`): it loads, but its 1.66 GB weight buffer cannot be FastRPC-mapped. On v73 the int4 weights are expanded (761 MB on v75).
 - The image is minimal: no `ss`, `ldd` or Python `statistics`. Device scripts must use only basic Python and coreutils.
 
+## Android phone (Samsung Galaxy S25 Ultra, SM8750, Android 17) — same `edge/qcs8550-android` engine and APK
+
+- Wireless debugging is used so the phone can stay on battery. Its port **changes** on reconnect (seen: :42591 → :33041); re-check with `adb devices -l`.
+- `edge/android-app/install.sh [serial]` auto-detects the device. It pushes the models to `/sdcard/CabinTranslation/models` (`make_device_bundle.py --models-only --models-dir`) when they are missing.
+- Benchmark: copy the models on the device into `/data/local/tmp/cabin/models`, then `run_device_bench.py --device-tag s25ultra --no-comet`. Result: p50 0.51–1.16 s.
+- Power: `edge/tools/power_bench_android.py` samples `dumpsys battery` (shell cannot read `/sys/class/power_supply` on Android 17). Measure on battery.
+- The APK is built from `~/build/android-app` (Linux FS) with `~/gradle-8.10.2`, `~/jdk17` and `~/android-sdk`. Verify that `punct_pass` is false inside the APK.
+

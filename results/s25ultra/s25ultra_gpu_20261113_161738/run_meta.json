@@ -1,0 +1,1 @@
+{"target": "android", "backend": "gpu", "config": "/data/local/tmp/cabin/config.json", "pairs": ["vi-en", "en-vi", "vi-ko", "ko-vi", "vi-zh", "zh-vi"], "wall_s": 680.3}

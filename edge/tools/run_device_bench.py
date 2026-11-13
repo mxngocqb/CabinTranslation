@@ -211,7 +211,8 @@ def main():
     ap.add_argument("--serial", default="10.5.14.32:5555")
     ap.add_argument("--ssh", default="ssh -p 2222 arduino@localhost", help="linux target: ssh command prefix")
     ap.add_argument("--backend", default="gpu", help="linux target: LLM backend -> config_<backend>.json")
-    ap.add_argument("--device-tag", default="ventunoq", help="linux target: results/<tag>/<tag>_<backend>_<ts> (e.g. iq9075)")
+    ap.add_argument("--device-tag", default=None,
+                    help="results/<tag>/<tag>_<backend>_<ts> (e.g. iq9075, s25ultra); default: ventunoq (linux), qcs8550 (android)")
     ap.add_argument("--dev-dir", default=None, help="linux target: deployed folder on the device (default /home/arduino/cabin)")
     ap.add_argument("--pairs", nargs="+", default=["vi-en", "en-vi"])
     ap.add_argument("--n", type=int, default=0)
@@ -227,12 +228,14 @@ def main():
     if a.target == "linux":
         d = SshDevice(a.ssh, a.dev_dir or LINUX_DEV)
         a.config = a.config or f"{d.dev}/config_{a.backend}.json"
-        out = ROOT / "results" / a.device_tag / f"{a.device_tag}_{a.backend}_{stamp}"
+        tag = a.device_tag or "ventunoq"
+        out = ROOT / "results" / tag / f"{tag}_{a.backend}_{stamp}"
         d.push(Path(__file__).with_name("net_socks.py"), f"{d.dev}/out/net_socks.py")
     else:
         d = AdbDevice(a.serial)
         a.config = a.config or f"{DEV}/config.json"
-        out = ROOT / "results" / "qcs8550" / f"device_bench_{stamp}"
+        out = (ROOT / "results" / a.device_tag / f"{a.device_tag}_gpu_{stamp}" if a.device_tag
+               else ROOT / "results" / "qcs8550" / f"device_bench_{stamp}")
     DEVD = d.dev
     if a.rescore:
         rescore(a, d, Path(a.rescore))

@@ -165,6 +165,11 @@ def main():
     ap.add_argument("--punct-pass", action="store_true", help="re-enable the 2-call VI punctuation pass")
     ap.add_argument("--push", action="store_true")
     ap.add_argument("--no-models", action="store_true")
+    ap.add_argument("--models-only", action="store_true", help="android: only push models (e.g. for the APK)")
+    ap.add_argument("--models-dir", default=None,
+                    help="android: device folder for models (default <dev>/models; the APK uses /sdcard/CabinTranslation/models)")
+    ap.add_argument("--gemma", default=str(Path.home() / "edge" / "models" / "gemma-4-E2B-it-gpu.litertlm"),
+                    help="android: host path of the Gemma GPU .litertlm pushed with the models")
     a = ap.parse_args()
     a.dev_dir = a.dev_dir or (LINUX_DEV if a.target == "linux" else DEV)
     out = ROOT / "edge" / DIST_DIR[a.target] / "dist"
@@ -201,6 +206,9 @@ def main():
         return
     if not a.push:
         return
+    if a.models_only:
+        push_android_models(a)
+        return
     adb(a.serial, "shell", f"mkdir -p {DEV}/lib {DEV}/models {DEV}/cache {DEV}/out")
     for f in ["cabin_edge", "prompts.json", "config.json", "start.sh", "stop.sh"]:
         adb(a.serial, "push", str(out / f), f"{DEV}/")
@@ -212,14 +220,26 @@ def main():
     adb(a.serial, "shell", f"chmod 755 {DEV}/cabin_edge")
     if a.no_models:
         return
-    for d, files in MODEL_FILES.items():
-        dst = f"{DEV}/models" + ("" if d == "." else f"/{d}")
-        for f in files:
-            src = M / d / f
-            target = f"{dst}/{Path(f).parent}" if "/" in f else dst
-            adb(a.serial, "shell", f"mkdir -p {target}")
-            r = adb(a.serial, "push", str(src), f"{target}/", check=False)
-            print(("ok  " if r.returncode == 0 else "ERR ") + f"{d}/{f}", r.stderr.strip()[-80:] if r.returncode else "")
+    push_android_models(a)
+
+
+def push_android_models(a):
+    """Push ASR/TTS models + the Gemma GPU file; skips files already present with the same size."""
+    root = a.models_dir or f"{DEV}/models"
+    used = {k: v for k, v in MODEL_FILES.items() if "supertonic-3" not in k}   # Supertonic-3 is not used on device
+    items = [(M / d / f, (root if d == "." else f"{root}/{d}") + (f"/{Path(f).parent}" if "/" in f else "")) for d, fs in used.items() for f in fs]
+    items.append((Path(a.gemma), root))
+    for src, target in items:
+        size = src.stat().st_size if src.is_file() else None
+        dst = f"{target}/{src.name}"
+        if size is not None:
+            r = adb(a.serial, "shell", f"stat -c %s '{dst}' 2>/dev/null", check=False)
+            if r.stdout.strip() == str(size):
+                print("skip", dst)
+                continue
+        adb(a.serial, "shell", f"mkdir -p '{target}'")
+        r = adb(a.serial, "push", str(src), f"{target}/", check=False)
+        print(("ok  " if r.returncode == 0 else "ERR ") + dst, r.stderr.strip()[-80:] if r.returncode else "")
 
 
 if __name__ == "__main__":

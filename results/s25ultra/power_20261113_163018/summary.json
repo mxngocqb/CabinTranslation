@@ -1,0 +1,47 @@
+{
+ "device": "SM-S938B",
+ "soc": "SM8750",
+ "utterances": 905,
+ "load_wall_s": 778.3,
+ "idle": {
+  "duration_s": 197.0,
+  "samples": 199,
+  "avg_current_ma": 337.0,
+  "avg_voltage_v": 3.99,
+  "avg_power_w": 1.344,
+  "charge_used_mah": 34.5,
+  "energy_from_counter_j": 495.2,
+  "temp_c_start_end": [
+   40.3,
+   38.0
+  ],
+  "level_start_end": [
+   69,
+   69
+  ]
+ },
+ "load": {
+  "duration_s": 776.9,
+  "samples": 782,
+  "avg_current_ma": 1103.5,
+  "avg_voltage_v": 3.928,
+  "avg_power_w": 4.33,
+  "charge_used_mah": 251.2,
+  "energy_from_counter_j": 3551.5,
+  "temp_c_start_end": [
+   38.0,
+   39.7
+  ],
+  "level_start_end": [
+   69,
+   63
+  ]
+ },
+ "charging_at_start": false,
+ "charging_at_end": false,
+ "engine_rc": 0,
+ "pipeline_power_w": 2.986,
+ "energy_per_utterance_j": 2.57,
+ "total_energy_per_utterance_j": 3.72,
+ "utterances_per_1pct_battery": 151.0
+}

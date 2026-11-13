@@ -3,6 +3,9 @@
 > Source: [`../engine/`](../engine) (shared with the VENTUNO Q build). Build: [`build.sh`](build.sh). Launch scripts:
 > [`start.sh`](start.sh) / [`stop.sh`](stop.sh). Deploy/benchmark tools: [`../tools/`](../tools). Results: [`results/qcs8550/`](../../results/qcs8550).
 > The installable Android app (APK) wrapping this engine is in [`../android-app/`](../android-app).
+> **The same build runs unchanged on a Samsung Galaxy S25 Ultra** (Snapdragon 8 Elite, Adreno 830, Android 17):
+> end-to-end p50 0.51–1.16 s, Gemma decode 34–52 tok/s. Results are in [`results/s25ultra/`](../../results/s25ultra).
+> On phones, deploy with `--serial <adb-serial>` and run benchmarks with `--device-tag s25ultra`.
 > **Vietnamese input uses one Gemma call** (`punct_pass: false`, lower-case + system-prompt note) since 2026-11-11.
 > The results table below is from the earlier 2-call build and will be re-measured offline.
 

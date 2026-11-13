@@ -32,6 +32,11 @@ const NPU = latest("ventunoq", "ventunoq_npu_");
 const GPU = latest("ventunoq", "ventunoq_gpu_");
 const CPU = latest("ventunoq", "ventunoq_cpu_");
 const QCS = latest("qcs8550", "device_bench_");
+// additional devices measured for latency only (optional: skipped if no complete run exists)
+const tryLatest = (d, p) => { try { return latest(d, p); } catch (e) { return null; } };
+const EXTRA = [
+  ["Samsung Galaxy S25 Ultra (SM8750, Android 17)", "GPU · Adreno 830", tryLatest("s25ultra", "s25ultra_gpu_")],
+].filter((e) => e[2]);
 const f1 = (v) => (v == null ? "–" : Number(v).toFixed(1));
 const f2 = (v) => (v == null ? "–" : Number(v).toFixed(2));
 const f0 = (v) => (v == null ? "–" : Math.round(v).toString());
@@ -223,7 +228,7 @@ C.push(table([1700, W - 1700 - 1800, 1800], ["Area", "Result and method", "Evide
     P(`Mean COMET over the six directions: **${f1(mean(NPU, "comet"))}** (VENTUNO Q NPU), ${f1(mean(GPU, "comet"))} (GPU), ${f1(mean(CPU, "comet"))} (CPU), ${f1(mean(QCS, "comet"))} (QCS8550${qcsPunct ? ", 2-call build" : ""}). Per-direction BLEU / chrF++ / COMET / ASR-BLEU in Tables 4.1–4.2.`, { size: 18 }),
     P(`Representative outputs and failures in Table 4.4. Known failures: empty ASR on ${emptyAsr.length} utterance(s) (${emptyAsr.join(", ") || "none"}); KO references in the sample set contain misaligned pairs (e.g. VK-0242), which lowers KO→VI BLEU.`, { size: 18 }),
   ], "`summary.md`, `rows.jsonl` of each run"],
-  ["Inference / response time", `End-to-end speech-in → speech-out, p50 / p95 per direction: **VENTUNO Q NPU ${sec(npuP50[0])}–${sec(npuP50[1])} s / ${sec(npuP95[0])}–${sec(npuP95[1])} s**; QCS8550 GPU ${sec(qcsP50[0])}–${sec(qcsP50[1])} s / ${sec(qcsP95[0])}–${sec(qcsP95[1])} s. Gemma on NPU: ${f0(mean(NPU, "mt_ttft_ms_mean"))} ms TTFT, ${f1(mean(NPU, "mt_decode_tps_mean"))} tokens/s decode. Component means in Table 4.3. 905 utterances per run, one run per configuration.`, "`result.jsonl` (per-utterance asr/mt/tts/total ms)"],
+  ["Inference / response time", `End-to-end speech-in → speech-out, p50 / p95 per direction: **VENTUNO Q NPU ${sec(npuP50[0])}–${sec(npuP50[1])} s / ${sec(npuP95[0])}–${sec(npuP95[1])} s**; QCS8550 GPU ${sec(qcsP50[0])}–${sec(qcsP50[1])} s / ${sec(qcsP95[0])}–${sec(qcsP95[1])} s. Gemma on NPU: ${f0(mean(NPU, "mt_ttft_ms_mean"))} ms TTFT, ${f1(mean(NPU, "mt_decode_tps_mean"))} tokens/s decode. Component means in Table 4.3. 905 utterances per run, one run per configuration.${EXTRA.length ? " Same engine on additional devices (Table 4.5): " + EXTRA.map((e) => `${e[0].split(" (")[0]} ${e[1].split(" · ")[0]} p50 ${sec(rng(e[2], "total_ms_p50")[0])}–${sec(rng(e[2], "total_ms_p50")[1])} s`).join("; ") + "." : ""}`, "`result.jsonl` (per-utterance asr/mt/tts/total ms)"],
   ["Model size", "Model files in the VENTUNO Q package: **3,255 MB** = Gemma 4 E2B QCS8275 NPU 2,596 MB + ASR 268 MB (Zipformer-30M vi 29, X-ASR zh-en 167, Zipformer-ko 73) + TTS 390 MB (ViFastTts 82, Piper 77, Supertonic-2 92, Matcha 88, Vocos 51). Libraries 189 MB (+107 MB QAIRT). Total installation 3.45 GB (+0.1 GB). QCS8550: Gemma `-gpu` 2,232 MB + same ASR/TTS.", "`SHA256SUMS`; `du` listing in the package README"],
   ["Peak memory", `Process peak RSS (VmHWM, all four languages loaded, whole run): VENTUNO Q NPU **${npuRSS} MB**, GPU ${mb(GPU.s.device_summary.peak_rss_kb)} MB + ${gpuGfx} MB GPU buffers (DRM fdinfo), CPU ${mb(CPU.s.device_summary.peak_rss_kb)} MB; QCS8550 ${qcsRSS} MB + ${qcsGfx} MB graphics (dumpsys meminfo). Measured by the engine (VmHWM) and polled every ~1 s by the host.`, "`summary.json` → device_summary.peak_rss_kb, `meminfo_samples.json`"],
   ["Device operation & UX", "[[Scenario completed: yes/no; actual duration; interruptions/recoveries]]. Live UI test on VENTUNO Q (2026-11-11): utterances spoken through a laptop browser over HTTPS were recognized, translated on the NPU and spoken back (e.g. a 6 s introduction in 2.9 s). Startup ~25 s; restart with `stop.sh/start.sh`.", "[[Video timestamps]]; `out/server.log`, `out/live/*.wav`"],
@@ -243,6 +248,30 @@ C.push(table(lw, ["Dir.", "ASR", "Punct.", "MT", "TTFT", "tok/s", "TTS", "Total 
 C.push(H2("Table 4.4 — Representative inputs and outputs (VENTUNO Q NPU run)"));
 C.push(table([1300, 3500, 3606 - 600, 1500 + 600], ["ID", "ASR transcript (device)", "Device translation", "Reference / time"],
   EX.map((r) => [`${r.id.split("__")[1]} ${LBL[r.pair]}`, r.mt_in || r.asr, r.hyp, `${r.ref} · ${f0(r.total_ms)} ms`]), { size: 16 }));
+
+if (EXTRA.length) {
+  C.push(H2("Table 4.5 — Same Android build on Samsung Galaxy S25 Ultra (latency only; network connected)"));
+  C.push(P("Same engine, models and prompts; full sample set (905 utterances). Only timing is reported here, as requested; transcripts and translations are in each run's `rows.jsonl`.", { size: 18 }));
+  const ew = [1050, 1000, 1000, 1000, 1000, 1050, 1000, W - 7100];
+  EXTRA.forEach(([dev, acc, run]) => {
+    const ds = run.s.device_summary || {}, mp = run.s.meminfo_peak_kb || {};
+    C.push(P(`**${dev} — Gemma on ${acc}** · \`${run.name}\` · peak RSS ${mb(ds.peak_rss_kb || 0)} MB${mp.graphics ? ` + ${mb(mp.graphics)} MB GPU` : ""}${"net_conns" in mp ? ` · engine network sockets max ${mp.net_conns}` : ""}`, { after: 40, size: 18 }));
+    C.push(table(ew, ["Dir.", "ASR", "Punct.", "MT", "TTFT", "tok/s", "TTS", "Total p50 / p95"], latencyRows(run), { zebra: true, size: 17 }));
+  });
+  // battery power measured on the S25 Ultra (edge/tools/power_bench_android.py), if available
+  const pdir = path.join(R, "s25ultra");
+  const pw = fs.existsSync(pdir) ? fs.readdirSync(pdir).filter((x) => x.startsWith("power_")).sort().reverse()
+    .map((x) => path.join(pdir, x, "summary.json")).find((f) => fs.existsSync(f)) : null;
+  if (pw) {
+    const q = JSON.parse(fs.readFileSync(pw, "utf8"));
+    C.push(P(`**Power consumption — Galaxy S25 Ultra** (\`${path.basename(path.dirname(pw))}\`; on battery, charger unplugged; \`dumpsys battery\` current/voltage/charge counter sampled ~1/s; no root).`, { after: 40, size: 18 }));
+    C.push(table([3300, 1300, 1300, 1300, 1300, W - 8500], ["Phase", "Duration s", "Avg current mA", "Avg power W", "Charge used mAh", "Battery temp °C"], [
+      ["Idle baseline (screen on, nothing running)", f0(q.idle.duration_s), f0(q.idle.avg_current_ma), f2(q.idle.avg_power_w), f1(q.idle.charge_used_mah), `${q.idle.temp_c_start_end[0]} → ${q.idle.temp_c_start_end[1]}`],
+      [`Pipeline running (${q.utterances} utterances, speech→speech)`, f0(q.load.duration_s), f0(q.load.avg_current_ma), f2(q.load.avg_power_w), f1(q.load.charge_used_mah), `${q.load.temp_c_start_end[0]} → ${q.load.temp_c_start_end[1]}`],
+    ], { zebra: true, size: 17 }));
+    C.push(P(`Pipeline power (load − idle): **${f2(q.pipeline_power_w)} W**. Energy per translated utterance: **${f1(q.energy_per_utterance_j)} J** for the pipeline alone, ${f1(q.total_energy_per_utterance_j)} J including the screen/OS baseline (${q.utterances} utterances in ${f0(q.load_wall_s)} s; back-to-back, i.e. the worst case — in a real conversation the device idles between turns).`, { size: 18 }));
+  }
+}
 
 C.push(H2("Known limitations"));
 [
