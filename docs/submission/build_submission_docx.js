@@ -29,8 +29,6 @@ function latest(dir, prefix) {
   throw new Error("no complete run for " + dir + "/" + prefix);
 }
 const NPU = latest("ventunoq", "ventunoq_npu_");
-const GPU = latest("ventunoq", "ventunoq_gpu_");
-const CPU = latest("ventunoq", "ventunoq_cpu_");
 const QCS = latest("qcs8550", "device_bench_");
 // additional devices measured for latency only (optional: skipped if no complete run exists)
 const tryLatest = (d, p) => { try { return latest(d, p); } catch (e) { return null; } };
@@ -100,7 +98,7 @@ function table(widths, header, body, opt = {}) {
 const npuP50 = rng(NPU, "total_ms_p50"), npuP95 = rng(NPU, "total_ms_p95");
 const qcsP50 = rng(QCS, "total_ms_p50"), qcsP95 = rng(QCS, "total_ms_p95");
 const npuRSS = mb(NPU.s.device_summary.peak_rss_kb), qcsRSS = mb(QCS.s.device_summary.peak_rss_kb);
-const qcsGfx = mb((QCS.s.meminfo_peak_kb || {}).graphics || 0), gpuGfx = mb((GPU.s.meminfo_peak_kb || {}).graphics || 0);
+const qcsGfx = mb((QCS.s.meminfo_peak_kb || {}).graphics || 0);
 const qcsPunct = QCS.s.pairs["vi-en"].punct_ms_mean > 0;
 const rmeta = (run) => { try { return JSON.parse(fs.readFileSync(path.join(run.dir, "run_meta.json"), "utf8")); } catch (e) { return {}; } };
 const npuOffline = !!rmeta(NPU).offline;
@@ -190,7 +188,7 @@ C.push(table([2300, W - 2300], ["Field", "Team response"], [
     PS("**Delivered in Phase 3:**"),
     BS("A single native process with no Python and no network calls (sherpa-onnx ASR/TTS, LiteRT-LM for Gemma, ViFastTts FFI)."),
     BS(`Gemma 4 E2B on the **Hexagon NPU** of QCS8275: ~${f0(mean(NPU, "mt_decode_tps_mean"))} tokens/s, ${f0(mean(NPU, "mt_ttft_ms_mean"))} ms time-to-first-token, end-to-end p50 ${sec(npuP50[0])}–${sec(npuP50[1])} s.`),
-    BS("GPU builds for Adreno 740 (QCS8550), Adreno 830 (Galaxy S25 Ultra / SM8750) and Adreno 623, plus a CPU build — all measured."),
+    BS("GPU builds for Adreno 740 (QCS8550) and Adreno 830 (Galaxy S25 Ultra / SM8750), both measured."),
     BS("Device TTS chosen under a 500 ms budget (Piper EN, Supertonic-2 KO)."),
     BS("Single-call Vietnamese input (lower-case + system-prompt constraint) replacing a separate punctuation pass."),
     BS("An offline, relocatable judge package with pre-flight check and self-test."),
@@ -424,7 +422,6 @@ C.push(B("Each utterance goes speech-in → speech-out on the device in batch mo
 C.push(B("Scoring on a PC."));
 C.push(P("**Runs:**", { after: 40, keep: true }));
 C.push(B(`Device A (VENTUNO Q), NPU: \`results/ventunoq/${NPU.name}\` — **submitted build**${npuOffline ? ", **measured fully offline**, installed from the judge package" : ""}`));
-C.push(B(`Device A, GPU: \`${GPU.name}\`; CPU: \`${CPU.name}\``));
 C.push(B(`Device B (QCS8550, GPU): \`results/qcs8550/${QCS.name}\`${QCS.name.endsWith("_offline") ? " — **measured fully offline**" : ""}${qcsPunct ? " — earlier 2-call Vietnamese build" : ""}`));
 if (S25) C.push(B(`Device C (Galaxy S25 Ultra, GPU): \`results/s25ultra/${S25.name}\` (latency) + battery power (Table 4.5)`));
 
@@ -498,7 +495,7 @@ C.push(B("Confirmed by the team on all three devices: the demo videos were recor
 if (npuOffline) C.push(B("VENTUNO Q NPU benchmark (submitted build): fully offline, with raw logs (above)."));
 if (qcsOffline) C.push(B("QCS8550 benchmark: fully offline, with raw logs (above)."));
 const onl = [!npuOffline && "VENTUNO Q", !qcsOffline && "QCS8550", S25 && "Galaxy S25 Ultra"].filter(Boolean);
-if (npuOffline) C.push(B(`VENTUNO Q GPU/CPU comparison runs${S25 ? " and the Galaxy S25 Ultra latency/power runs" : ""}: orchestrated from a host PC over ssh / adb with the network connected, so their logs record that control link.`));
+if (npuOffline && S25) C.push(B("Galaxy S25 Ultra latency/power runs: orchestrated from a host PC over wireless adb with the network connected, so their logs record that control link."));
 else if (onl.length) C.push(B(`${onl.join(" and ")} benchmarks: the ${NUTT}-utterance batch runs were orchestrated from a host PC over ssh / adb, so the log fields record that control link.`));
 if (!npuOffline) C.push(B(`VENTUNO Q: internet ${net(NPU)}`, 1));
 if (!qcsOffline) C.push(B(`QCS8550: ${net(QCS)}`, 1));
@@ -527,7 +524,6 @@ C.push(table([1700, W - 1700 - 1800, 1800], ["Area", "Result and method", "Evide
   ["Translation quality", [
     PS("**Mean COMET** over the six directions:"),
     BS(`VENTUNO Q NPU: **${f1(mean(NPU, "comet"))}**`),
-    BS(`VENTUNO Q GPU: ${f1(mean(GPU, "comet"))} · CPU: ${f1(mean(CPU, "comet"))}`),
     BS(`QCS8550 GPU: ${f1(mean(QCS, "comet"))}${qcsPunct ? " (2-call build)" : ""}`),
     PS("Per-direction BLEU / chrF++ / COMET / ASR-BLEU: Tables 4.1–4.2."),
     PS("Representative outputs and failures: Table 4.4."),
@@ -554,8 +550,6 @@ C.push(table([1700, W - 1700 - 1800, 1800], ["Area", "Result and method", "Evide
   ["Peak memory", [
     PS("Process peak RSS (VmHWM, all four languages loaded, whole run):"),
     BS(`VENTUNO Q NPU: **${npuRSS} MB**`),
-    BS(`VENTUNO Q GPU: ${mb(GPU.s.device_summary.peak_rss_kb)} MB + ${gpuGfx} MB GPU buffers (DRM fdinfo)`),
-    BS(`VENTUNO Q CPU: ${mb(CPU.s.device_summary.peak_rss_kb)} MB`),
     BS(`QCS8550: ${qcsRSS} MB + ${qcsGfx} MB graphics (dumpsys meminfo)`),
     ...(S25 ? [BS(`Galaxy S25 Ultra: ${mb(S25.s.device_summary.peak_rss_kb)} MB + ${mb((S25.s.meminfo_peak_kb || {}).graphics || 0)} MB graphics`)] : []),
     PS("Measured by the engine (VmHWM) and polled every ~1 s by the host."),
@@ -578,10 +572,6 @@ C.push(H2("Table 4.3 — Latency per stage (mean ms) and end-to-end p50 / p95 (m
 const lw = [1100, 900, 1000, 1000, 1000, 1100, 1000, W - 7100];
 C.push(P("**VENTUNO Q NPU**", { after: 40, keep: true }));
 C.push(table(lw, ["Dir.", "ASR", "Punct.", "MT", "TTFT", "tok/s", "TTS", "Total p50 / p95"], latencyRows(NPU), { zebra: true, size: 17 }));
-C.push(P("", { after: 40 }));
-C.push(P(`**VENTUNO Q GPU (Adreno 623) and CPU** — end-to-end total, p50 / p95 ms (mean COMET GPU ${f1(mean(GPU, "comet"))}, CPU ${f1(mean(CPU, "comet"))}):`, { after: 40, size: 18, keep: true }));
-C.push(table([2000, (W - 2000) / 2, (W - 2000) / 2], ["Dir.", "GPU p50 / p95", "CPU p50 / p95"],
-  PAIRS.map((p) => [LBL[p], `${f0(GPU.s.pairs[p].total_ms_p50)} / ${f0(GPU.s.pairs[p].total_ms_p95)}`, `${f0(CPU.s.pairs[p].total_ms_p50)} / ${f0(CPU.s.pairs[p].total_ms_p95)}`]), { zebra: true, size: 17 }));
 C.push(P("", { after: 40 }));
 C.push(P(`**QCS8550 GPU**${qcsOffline ? " (measured offline)" : ""}`, { after: 40, keep: true }));
 C.push(table(lw, ["Dir.", "ASR", "Punct.", "MT", "TTFT", "tok/s", "TTS", "Total p50 / p95"], latencyRows(QCS), { zebra: true, size: 17 }));
@@ -630,9 +620,9 @@ C.push(H2("Known limitations"));
   ["Push-to-talk per utterance; no streaming recognition or barge-in yet.", ["The Android app already segments with Silero VAD."]],
   ["Single-call Vietnamese input trades accuracy for speed.", ["VI→EN loses ~1.8 COMET / ~7 BLEU against the 2-call punctuation pass.", "`--punct-pass` restores it."]],
   ["Vietnamese ASR on the VI–ZH sample voices: WER 12.3% vs 1.7–4.8% on the other sets.", ["ASR errors propagate to translation."]],
-  ["One utterance with empty ASR output (EV-2748); occasional untranslated short sentences on CPU/GPU builds (VK-0300).", []],
+  ["One utterance with empty ASR output (EV-2748).", []],
   ["Network evidence differs per device.", npuOffline
-    ? ["VENTUNO Q NPU and QCS8550 benchmarks: fully offline, with raw system logs.", "The VENTUNO Q GPU/CPU runs and the Galaxy S25 Ultra latency/power runs were orchestrated over ssh / wireless adb, so their logs record that control link."]
+    ? ["VENTUNO Q NPU and QCS8550 benchmarks: fully offline, with raw system logs.", "The Galaxy S25 Ultra latency/power runs were orchestrated over wireless adb, so their logs record that control link."]
     : ["QCS8550 benchmark: fully offline (on-device `network.log` 55/55 samples offline, plus logcat).", "VENTUNO Q and Galaxy S25 Ultra batch runs: orchestrated over ssh / wireless adb, so their logs record that control link.", "Engine network sockets on VENTUNO Q = 0."]],
   ["The NPU requires QAIRT 2.50 runtime libraries, distributed separately from the main package.", []],
 ].forEach(([t, sub]) => { C.push(B(t)); sub.forEach((x) => C.push(B(x, 1))); });
@@ -668,4 +658,4 @@ const doc = new Document({
   }],
 });
 const out = process.env.OUT || path.join(__dirname, `${TEAM.replace(/[\[\]]/g, "")}_Prototype Submission_V3.docx`);  // OUT=... if the file is open in Word
-Packer.toBuffer(doc).then((b) => { fs.writeFileSync(out, b); console.log("wrote", out, "| runs:", NPU.name, GPU.name, CPU.name, QCS.name); });
+Packer.toBuffer(doc).then((b) => { fs.writeFileSync(out, b); console.log("wrote", out, "| runs:", NPU.name, QCS.name); });

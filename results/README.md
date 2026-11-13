@@ -1,6 +1,6 @@
 # Results — CabinTranslation
 
-_Generated 2026-11-13 23:01 by `python dashboard/build_report.py`. Open the dashboard with `bash dashboard/serve.sh` (http://localhost:8000/dashboard/) for charts, per-utterance browsing and audio._
+_Generated 2026-11-13 23:06 by `python dashboard/build_report.py`. Open the dashboard with `bash dashboard/serve.sh` (http://localhost:8000/dashboard/) for charts, per-utterance browsing and audio._
 
 ## Layout
 
@@ -37,24 +37,22 @@ BLEU for KO/ZH targets is character-level. ASR-BLEU is BLEU of the spoken output
 
 ## Arduino VENTUNO Q — QCS8275, Ubuntu 24.04 (`ventunoq/`)
 
-Same native pipeline; only the Gemma backend differs (ASR/TTS on CPU). VI input = 1 Gemma call. Runs: CPU `ventunoq_cpu_20261111_212707`, GPU `ventunoq_gpu_20261111_202616`, NPU `ventunoq_npu_20261113_224456`. Details: `edge/ventunoq-linux/README.md`.
+Same native pipeline; only the Gemma backend differs (ASR/TTS on CPU). VI input = 1 Gemma call. Runs: NPU `ventunoq_npu_20261113_224456`. Details: `edge/ventunoq-linux/README.md`.
 
-| pair | COMET cpu | COMET gpu | COMET npu | BLEU cpu | BLEU gpu | BLEU npu | p50 cpu ms | p50 gpu ms | p50 npu ms |
-|---|---|---|---|---|---|---|---|---|---|
-| VI→EN | 86.44 | 86.82 | 86.82 | 48.48 | 47.44 | 47.72 | 2328 | 2174 | 673 |
-| EN→VI | 83.68 | 83.9 | 83.93 | 42.04 | 42.73 | 40.75 | 3762 | 4484 | 1125 |
-| VI→KO | 87.22 | 87.72 | 87.2 | 35.89 | 38.19 | 34.58 | 2426 | 2214 | 828 |
-| KO→VI | 83.68 | 83.15 | 83.47 | 22.71 | 21.97 | 22.32 | 2094 | 1982 | 514 |
-| VI→ZH | 90.55 | 90.66 | 90.6 | 51.94 | 51.62 | 51.72 | 2284 | 2095 | 720 |
-| ZH→VI | 93.05 | 92.97 | 92.81 | 46.52 | 46.98 | 45.85 | 2456 | 2506 | 653 |
+| pair | COMET npu | BLEU npu | p50 npu ms |
+|---|---|---|---|
+| VI→EN | 86.82 | 47.72 | 673 |
+| EN→VI | 83.93 | 40.75 | 1125 |
+| VI→KO | 87.2 | 34.58 | 828 |
+| KO→VI | 83.47 | 22.32 | 514 |
+| VI→ZH | 90.6 | 51.72 | 720 |
+| ZH→VI | 92.81 | 45.85 | 653 |
 
 | backend | Gemma file | decode tok/s | TTFT ms | peak RSS MB | GPU MB | engine net sockets (max) |
 |---|---|---|---|---|---|---|
-| CPU | gemma-4-E2B-it.litertlm (2468 MB) | 13.8 | 1305 | 4315 | 0 | n/a |
-| GPU | gemma-4-E2B-it-gpu.litertlm (2232 MB) | 7.2 | 589 | 3404 | 1212 | n/a |
 | NPU | gemma-4-E2B-it_Qualcomm_QCS8275.litertlm (2596 MB) | 42.7 | 68 | 4151 | 0 | 0 |
 
-Network during these runs: online.
+Network during these runs: offline.
 
 ## Qualcomm IQ-9075 EVK — QCS9075, Qualcomm Linux 1.9 (`iq9075/`)
 
@@ -119,9 +117,9 @@ Network during these runs: online.
 | 2026-11-12 10:48 | [iq9075_gpu_20261112_104813](iq9075/iq9075_gpu_20261112_104813/summary.md) | iq9075-gpu | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
 | 2026-11-11 23:52 | [ventunoq_npu_20261111_235211__superseded_online](archive/ventunoq_npu_20261111_235211__superseded_online/summary.md) | ventunoq-npu | archived | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi | superseded online |
 | 2026-11-11 23:10 | device_bench_20261111_231045__aborted_stopped_by_user | qcs8550 | archived |  | aborted stopped by user |
-| 2026-11-11 22:13 | [ventunoq_npu_20261111_221351](ventunoq/ventunoq_npu_20261111_221351/summary.md) | ventunoq-npu | superseded | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
-| 2026-11-11 21:27 | [ventunoq_cpu_20261111_212707](ventunoq/ventunoq_cpu_20261111_212707/summary.md) | ventunoq-cpu | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
-| 2026-11-11 20:26 | [ventunoq_gpu_20261111_202616](ventunoq/ventunoq_gpu_20261111_202616/summary.md) | ventunoq-gpu | official | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi |  |
+| 2026-11-11 22:13 | [ventunoq_npu_20261111_221351__kept_not_shown](archive/ventunoq_npu_20261111_221351__kept_not_shown/summary.md) | ventunoq-npu | archived | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi | kept not shown |
+| 2026-11-11 21:27 | [ventunoq_cpu_20261111_212707__kept_not_shown](archive/ventunoq_cpu_20261111_212707__kept_not_shown/summary.md) | ventunoq-cpu | archived | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi | kept not shown |
+| 2026-11-11 20:26 | [ventunoq_gpu_20261111_202616__kept_not_shown](archive/ventunoq_gpu_20261111_202616__kept_not_shown/summary.md) | ventunoq-gpu | archived | vi-en, en-vi, vi-ko, ko-vi, vi-zh, zh-vi | kept not shown |
 | 2026-11-11 20:24 | [ventunoq_gpu_20261111_202421__smoke_single_call](archive/ventunoq_gpu_20261111_202421__smoke_single_call/summary.md) | ventunoq-gpu | archived | vi-en | smoke single call |
 | 2026-11-11 19:42 | ventunoq_gpu_20261111_194227__aborted_old_punct_pipeline | ventunoq-gpu | archived |  | aborted old punct pipeline |
 | 2026-11-11 19:39 | [ventunoq_cpu_20261111_193949__smoke_n3](archive/ventunoq_cpu_20261111_193949__smoke_n3/summary.md) | ventunoq-cpu | archived | vi-en, zh-vi | smoke n3 |
