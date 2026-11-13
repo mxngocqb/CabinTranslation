@@ -5,7 +5,7 @@
 # on the device (edge/tools/make_device_bundle.py --push), they are copied on-device instead.
 set -euo pipefail
 cd "$(dirname "$0")"
-S=${1:-10.5.14.32:5555}; A="adb -s $S"
+S=${1:-10.5.10.143:42591}; A="adb -s $S"
 APK=${APK:-dist/CabinTranslation.apk}
 $A install -r -g "$APK"
 $A shell appops set vn.cabin.translate MANAGE_EXTERNAL_STORAGE allow

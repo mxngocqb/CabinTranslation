@@ -115,9 +115,9 @@ C.push(P("Fields highlighted in [[yellow]] must be completed by the team (names,
 // 1
 C.push(H1("1. Prototype summary"));
 C.push(table([2300, W - 2300], ["Field", "Team response"], [
-  ["Team / individual participant", "[[Registered team name]]"],
+  ["Team / individual participant", TEAM],
   ["Project name", "**CabinTranslation** — offline two-way voice-to-voice interpreter for workers in factories, warehouses and construction sites."],
-  ["Submitted build", `**v1.0**, ${TODAY}. One native engine (\`cabin_edge\`) shipped for two Qualcomm devices: **VENTUNO Q package** \`CabinTranslation-VentunoQ-v1.0\` (engine build 085aba7cad5c) and **QCS8550 Android bundle v1.0** ([[build ID after the final QCS8550 rebuild]]). Source: private GitHub repository (Section 3.1).`],
+  ["Submitted build", `**v1.0**, ${TODAY}. One native engine (\`cabin_edge\`) shipped for two Qualcomm devices: **VENTUNO Q package** \`CabinTranslation-VentunoQ-v1.0\` (engine build 085aba7cad5c) and **QCS8550 Android bundle v1.0** (app \`vn.cabin.translate\` v1.0, APK sha256 21471b6e6d79…, \`CabinTranslation-QCS8550-v1.0\`). Source: private GitHub repository (Section 3.1).`],
   ["Demo language(s)", "Registered pairs **VI⇄EN, VI⇄KO, VI⇄ZH**. All six directions run end to end and were benchmarked (Section 4). The demo video covers all three pairs in one factory scenario: [[confirm the directions actually shown in the video]]."],
   ["Test scenario", "\"Shift handover and line fault at an electronics assembly plant\" (~30 min). A Vietnamese line leader talks with an English-speaking customer auditor (safety walk, audit findings), a Korean equipment engineer (reflow-oven alarm), and a Chinese supplier QA (defective connectors), then hands over the shift. Script: Appendix A and `docs/submission/demo_scenario.md`."],
   ["Test conditions", "[[Actual duration mm:ss]]; [[indoor, light background noise (fans/conveyor audio) — describe]]; speakers 40–60 cm from the microphone; push-to-talk; network disabled before the first exchange ([[how: Wi-Fi off / cable unplugged]])."],
@@ -144,11 +144,11 @@ C.push(H2("3.1 Files and access"));
 C.push(table([2300, W - 2300], ["Item", "Details"], [
   ["Offline package — VENTUNO Q", [
     P("**CabinTranslation-VentunoQ-v1.0.tar** (3.4 GB; SHA-256 fb5c3ffdee100fceaa6c0621a0911e3d290cfd8c0b5a616350d7ae5ccbfaf97a) + **qairt-2.50-libs.tar** (107 MB; SHA-256 7cc90dd40d50a58f0b865ebd69e219798585c3e0d40bab63e0cb307789f5d346; Qualcomm AI Runtime 2.50 runtime libraries, shipped separately under Qualcomm's terms; `fetch_qairt.py` re-downloads them from Qualcomm with pinned hashes).", { size: 18 }),
-    P("Download: [[Google Drive URL]]", { size: 18 }),
+    P("Download: GitHub release v1.0 — https://github.com/mxngocqb/CabinTranslation/releases/tag/v1.0 (assets `CabinTranslation-VentunoQ-v1.0.tar.part-*`, `qairt-2.50-libs.tar`, `SHA256SUMS.txt`)", { size: 18 }),
   ]],
-  ["Offline package — QCS8550", "[[CabinTranslation-QCS8550-v1.0 bundle (engine + libs + models + launch scripts) and CabinTranslation.apk — Drive URL]]"],
+  ["Offline package — QCS8550", "`CabinTranslation-QCS8550-v1.0` (CabinTranslation.apk + models + install.sh, offline over adb) — GitHub release v1.0: https://github.com/mxngocqb/CabinTranslation/releases/tag/v1.0 (assets `CabinTranslation-QCS8550-v1.0.tar.part-*`, `CabinTranslation.apk`)"],
   ["Format", "Packaged native executables + models + launch scripts (VENTUNO Q, Linux aarch64); Android: native bundle installed over adb, and an APK."],
-  ["Source repository", "Private GitHub repository shared with **saigonaihub**: [[https://github.com/<org>/CabinTranslation, release/commit]]. Layout: `edge/engine` (native engine), `edge/ventunoq-linux`, `edge/qcs8550-android`, `edge/android-app`, `edge/tools`, `cabin` (Python core / prompts), `pc` (reference app), `scripts` (evaluations), `results` (all runs and logs), `dashboard`, `docs`."],
+  ["Source repository", "Private GitHub repository shared with **saigonaihub**: https://github.com/mxngocqb/CabinTranslation (tag **v1.0**). Layout: `edge/engine` (native engine), `edge/ventunoq-linux`, `edge/qcs8550-android`, `edge/android-app`, `edge/tools`, `cabin` (Python core / prompts), `pc` (reference app), `scripts` (evaluations), `results` (all runs and logs), `dashboard`, `docs`."],
   ["Package contents (VENTUNO Q)", [
     B("`cabin_edge`, `cabin_edge_npu` — engine (HTTP server + touch UI, batch mode); `lib/`, `lib_npu/` — runtime libraries"),
     B("`models/` — ASR, TTS and the Gemma 4 E2B QCS8275 NPU model (3.25 GB in total)"),
@@ -192,11 +192,11 @@ C.push(H2("3.4 Install and run offline"));
 C.push(table([2300, W - 2300], ["Step", "VENTUNO Q (Device A)  ·  QCS8550 tablet (Device B)"], [
   ["Prepare", [
     P("**A:** copy `CabinTranslation-VentunoQ-v1.0.tar` and `qairt-2.50-libs.tar` to the board (USB stick or scp). Nothing else is downloaded.", { size: 18 }),
-    P("**B:** host PC with adb; copy the QCS8550 bundle (or `CabinTranslation.apk` + `models/`) to the host. [[Final QCS8550 bundle name]]", { size: 18 }),
+    P("**B:** host PC with adb; copy the QCS8550 bundle `CabinTranslation-QCS8550-v1.0` (join the release parts: `cat CabinTranslation-QCS8550-v1.0.tar.part-* > CabinTranslation-QCS8550-v1.0.tar`, then `tar -xf`) to the host.", { size: 18 }),
   ]],
   ["Install", [
     P("**A:** `tar -xf CabinTranslation-VentunoQ-v1.0.tar && cd CabinTranslation-VentunoQ-v1.0 && tar -xf ../qairt-2.50-libs.tar -C lib_npu && sh check.sh` → `CHECK PASSED` (verifies SoC, NPU access, libraries, SHA-256 of every file).", { size: 18 }),
-    P("**B:** `bash install.sh <adb-serial>` (pushes engine, libraries, models and UI to `/data/local/tmp/cabin`), or `bash edge/android-app/install.sh <serial> <models-dir>` for the app.", { size: 18 }),
+    P("**B:** inside `CabinTranslation-QCS8550-v1.0/`: `bash install.sh <adb-serial>` — installs the APK, grants file access, pins landscape, pushes `models/` to `/sdcard/CabinTranslation/models` and starts the app.", { size: 18 }),
   ]],
   ["Disconnect and launch", [
     P("**A:** disable networking (`nmcli radio wifi off`, unplug Ethernet), then `sh start.sh npu`. Ready after ~25 s: `READY: open http://127.0.0.1:8080/`; the UI status shows `Sẵn sàng · models loaded on device: en, ko, vi, zh · LLM npu`. For a phone/laptop on a local cable: `HOST=0.0.0.0 HTTPS=1 sh start.sh npu` and open https://<board-ip>:8443/.", { size: 18 }),
@@ -215,7 +215,7 @@ C.push(H1("4. Self-recorded test results"));
 C.push(P(`**Test record.** Organizer Round 3 sample set, all six directions, ${NPU.s.pairs["vi-en"].n + NPU.s.pairs["en-vi"].n + NPU.s.pairs["vi-ko"].n + NPU.s.pairs["ko-vi"].n + NPU.s.pairs["vi-zh"].n + NPU.s.pairs["zh-vi"].n} utterances per run (VI→EN 100, EN→VI 100, VI→KO 175, KO→VI 177, VI→ZH 176, ZH→VI 177). Each utterance goes speech-in → speech-out on the device in batch mode (same engine and models as the UI); scoring on a PC.`));
 C.push(P(`**Runs.** Device A (VENTUNO Q): NPU \`results/ventunoq/${NPU.name}\` (submitted build), GPU \`${GPU.name}\`, CPU \`${CPU.name}\`. Device B (QCS8550, GPU): \`results/qcs8550/${QCS.name}\`${qcsPunct ? " — **earlier 2-call Vietnamese build**; the 1-call v1.0 build will be re-measured offline: [[update after the QCS8550 offline run]]" : ""}.`));
 C.push(P(`**Network condition (stated honestly).** VENTUNO Q runs: the board's Wi-Fi stayed connected (internet ${net(NPU)}) because the board is a remotely hosted device whose session would drop; instead, the engine's network sockets were sampled every ~1 s during the run: **maximum non-loopback TCP/UDP sockets of the engine process = ${sock(NPU) ?? "n/a"}**. QCS8550 run: Wi-Fi on (adb over Wi-Fi), internet ${net(QCS)}. [[Offline re-runs: add here]].`));
-C.push(P("**Evidence folder:** [[Drive/GitHub URL]] → `results/<device>/<run>/`: `summary.md`, `summary.json`, `result.jsonl` (raw device output, per-utterance timings), `rows.jsonl` (with references), `device_stderr.log`, `meminfo_samples.json` (memory / GPU / socket samples), `stage/` (16 kHz inputs), `wav/` (spoken outputs). Dashboard with audio: `dashboard/index.html`."));
+C.push(P("**Evidence folder:** https://github.com/mxngocqb/CabinTranslation/tree/main/results → `results/<device>/<run>/`: `summary.md`, `summary.json`, `result.jsonl` (raw device output, per-utterance timings), `rows.jsonl` (with references), `device_stderr.log`, `meminfo_samples.json` (memory / GPU / socket samples), `stage/` (16 kHz inputs), `wav/` (spoken outputs). Dashboard with audio: `dashboard/index.html`."));
 C.push(P("**Metric definitions.** BLEU and chrF++ (sacreBLEU) on normalized text (lower-case, no punctuation, numbers spelled out); KO/ZH targets character-level BLEU. COMET = Unbabel/wmt22-comet-da. ASR error: WER (VI, EN) or CER (KO, ZH). ASR-BLEU = BLEU of the spoken output re-recognized by ASR on the PC. Latency = wall time inside the engine from reading the input WAV to finishing the output WAV (ASR + text prep + MT + TTS), excluding one-time model loading; p50/p95 over all utterances of a direction.", { size: 18 }));
 
 C.push(table([1700, W - 1700 - 1800, 1800], ["Area", "Result and method", "Evidence reference"], [
