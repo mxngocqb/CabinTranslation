@@ -20,14 +20,14 @@ ASR / MT / TTS time. Each scene ends with a recap read back by the device.
 | # | Time | Pair | Scene |
 |---|---|---|---|
 | 0 | 00:00–02:00 | — | Show device, **disable network** (airplane mode on the tablet / S25 Ultra; Wi-Fi off and cable out on VENTUNO Q), start the app, ready state |
-| 1 | 02:00–08:00 | VI ⇄ EN | Safety briefing and line walk with the auditor |
-| 2 | 08:00–14:00 | VI ⇄ KO | Reflow-oven alarm: troubleshooting with the Korean engineer |
-| 3 | 14:00–20:00 | VI ⇄ ZH | Defective connectors: incoming inspection with the Chinese supplier |
-| 4 | 20:00–25:00 | VI ⇄ EN | Audit findings, numbers, dates and corrective actions |
-| 5 | 25:00–29:00 | VI ⇄ KO / ZH | Shift handover, confirmation of next steps |
+| 1 | 02:00–08:00 | VI ↔ EN | Safety briefing and line walk with the auditor |
+| 2 | 08:00–14:00 | VI ↔ KO | Reflow-oven alarm: troubleshooting with the Korean engineer |
+| 3 | 14:00–20:00 | VI ↔ ZH | Defective connectors: incoming inspection with the Chinese supplier |
+| 4 | 20:00–25:00 | VI ↔ EN | Audit findings, numbers, dates and corrective actions |
+| 5 | 25:00–29:00 | VI ↔ KO / ZH | Shift handover, confirmation of next steps |
 | 6 | 29:00–30:00 | — | Show logs / timings; still offline |
 
-## Scene 1 — Safety briefing (VI ⇄ EN)
+## Scene 1 — Safety briefing (VI ↔ EN)
 
 | Speaker | Utterance |
 |---|---|
@@ -44,7 +44,7 @@ ASR / MT / TTS time. Each scene ends with a recap read back by the device.
 | Lan (vi) | Hàng lỗi để trong thùng màu đỏ ở cuối chuyền, có dán nhãn. |
 | James (en) | Okay, please show me the inspection station first. |
 
-## Scene 2 — Reflow-oven alarm (VI ⇄ KO)
+## Scene 2 — Reflow-oven alarm (VI ↔ KO)
 
 | Speaker | Utterance |
 |---|---|
@@ -61,7 +61,7 @@ ASR / MT / TTS time. Each scene ends with a recap read back by the device.
 | Lan (vi) | Mất khoảng bao lâu thì chuyền chạy lại được? |
 | Kim (ko) | 한 시간 정도 걸릴 거예요. |
 
-## Scene 3 — Defective connectors (VI ⇄ ZH)
+## Scene 3 — Defective connectors (VI ↔ ZH)
 
 | Speaker | Utterance |
 |---|---|
@@ -76,7 +76,7 @@ ASR / MT / TTS time. Each scene ends with a recap read back by the device.
 | Lan (vi) | Từ lô sau, xin chị đóng gói bằng khay chống va đập. |
 | Wang (zh) | 好的，我会通知包装部门。 |
 
-## Scene 4 — Audit findings (VI ⇄ EN)
+## Scene 4 — Audit findings (VI ↔ EN)
 
 | Speaker | Utterance |
 |---|---|
@@ -91,7 +91,7 @@ ASR / MT / TTS time. Each scene ends with a recap read back by the device.
 | James (en) | Great. Overall the line is clean and well organized. |
 | Lan (vi) | Cảm ơn anh, chúng tôi sẽ tiếp tục cải tiến. |
 
-## Scene 5 — Shift handover (VI ⇄ KO, VI ⇄ ZH)
+## Scene 5 — Shift handover (VI ↔ KO, VI ↔ ZH)
 
 | Speaker | Utterance |
 |---|---|
