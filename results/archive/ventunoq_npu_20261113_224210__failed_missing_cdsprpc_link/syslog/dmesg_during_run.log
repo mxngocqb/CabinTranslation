@@ -1,0 +1,1447 @@
+[Fri Nov 13 14:52:22 2026] Booting Linux on physical CPU 0x0000000000 [0x410fd4b2]
+[Fri Nov 13 14:52:22 2026] Linux version 6.8.0-1080-qcom (buildd@bos03-arm64-026) (aarch64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #85-Ubuntu SMP PREEMPT_DYNAMIC Thu Jul  9 20:29:30 UTC 2026 (Ubuntu 6.8.0-1080.85-qcom 6.8.12)
+[Fri Nov 13 14:52:22 2026] KASLR enabled
+[Fri Nov 13 14:52:22 2026] Machine model: Qualcomm Technologies, Inc. Monaco Monza addons
+[Fri Nov 13 14:52:22 2026] efi: EFI v2.7 by Qualcomm Technologies, Inc.
+[Fri Nov 13 14:52:22 2026] efi: RTPROP=0xad595098 MEMATTR=0xac60b018 ESRT=0xac930718 MOKvar=0xac618000 INITRD=0xac617698 RNG=0xac4db018 MEMRESERVE=0xac4e0b18 
+[Fri Nov 13 14:52:22 2026] random: crng init done
+[Fri Nov 13 14:52:22 2026] secureboot: Secure boot disabled
+[Fri Nov 13 14:52:22 2026] esrt: Reserving ESRT space from 0x00000000ac930718 to 0x00000000ac930750.
+[Fri Nov 13 14:52:22 2026] Reserved memory: created CMA memory pool at 0x00000000f7800000, size 16 MiB
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: initialized node qcom,qseecom-ta, compatible id shared-dma-pool
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000f7800000..0x00000000f87fffff (16384 KiB) map reusable qcom,qseecom-ta
+[Fri Nov 13 14:52:22 2026] Reserved memory: created CMA memory pool at 0x00000000f6400000, size 20 MiB
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: initialized node qcom,qseecom, compatible id shared-dma-pool
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000f6400000..0x00000000f77fffff (20480 KiB) map reusable qcom,qseecom
+[Fri Nov 13 14:52:22 2026] Reserved memory: created CMA memory pool at 0x00000000f3400000, size 48 MiB
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: initialized node mem-dump-region, compatible id shared-dma-pool
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000f3400000..0x00000000f63fffff (49152 KiB) map reusable mem-dump-region
+[Fri Nov 13 14:52:22 2026] Reserved memory: created CMA memory pool at 0x00000000f2400000, size 16 MiB
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: initialized node qcom,audio-ml, compatible id shared-dma-pool
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000f2400000..0x00000000f33fffff (16384 KiB) map reusable qcom,audio-ml
+[Fri Nov 13 14:52:22 2026] Reserved memory: created CMA memory pool at 0x00000000f0400000, size 32 MiB
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: initialized node secure-cdsp-region, compatible id shared-dma-pool
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000f0400000..0x00000000f23fffff (32768 KiB) map reusable secure-cdsp-region
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000080000000..0x000000008fffffff (262144 KiB) nomap non-reusable sail-ss-region@80000000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000090000000..0x00000000905fffff (6144 KiB) nomap non-reusable hyp-region@90000000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000090600000..0x00000000907fffff (2048 KiB) nomap non-reusable xbl-boot-region@90600000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000090800000..0x000000009085ffff (384 KiB) nomap non-reusable aop-image-region@90800000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000090860000..0x000000009087ffff (128 KiB) nomap non-reusable aop-cmd-db-region@90860000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000908b0000..0x00000000908bffff (64 KiB) nomap non-reusable uefi-logs-region@908b0000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000908c0000..0x00000000908c0fff (4 KiB) nomap non-reusable ddr-training-checksum-data-region@908c0000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000908f0000..0x00000000908fdfff (56 KiB) nomap non-reusable reserved-region@908f0000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000908fe000..0x00000000908fffff (8 KiB) nomap non-reusable secboot-emulation-region@908fe000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000090900000..0x0000000090afffff (2048 KiB) nomap non-reusable smem@90900000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000090c00000..0x0000000090cfffff (1024 KiB) nomap non-reusable tz-sail-mailbox-region@90c00000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000090d00000..0x0000000090dfffff (1024 KiB) nomap non-reusable sail-mailbox-region@90d00000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000090e00000..0x00000000910fffff (3072 KiB) nomap non-reusable sail-ota-region@90e00000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000091a40000..0x0000000091a7ffff (256 KiB) nomap non-reusable xbl-dtlog-region@91a40000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000091a80000..0x0000000091afffff (512 KiB) nomap non-reusable gunyah-md-region@91a80000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000091b00000..0x0000000091b3ffff (256 KiB) nomap non-reusable aoss-backup-region@91b00000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000091b40000..0x0000000091b7ffff (256 KiB) nomap non-reusable cpucp-backup-region@91b40000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000091b80000..0x0000000091b8ffff (64 KiB) nomap non-reusable tz-config-backup-region@91b80000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000091b90000..0x0000000091b9ffff (64 KiB) nomap non-reusable ddr-training-data-region@91b90000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000091ba0000..0x0000000091ba0fff (4 KiB) nomap non-reusable cdt-data-backup-region@91ba0000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000093b00000..0x00000000949fffff (15360 KiB) nomap non-reusable lpass-machine-learning-region@93b00000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000094a00000..0x00000000951fffff (8192 KiB) nomap non-reusable adsp-rpc-remote-heap-region@94a00000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000095200000..0x00000000958fffff (7168 KiB) nomap non-reusable pil-camera-region@95200000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000095c00000..0x00000000979fffff (30720 KiB) nomap non-reusable pil-adsp-region@95c00000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000097a00000..0x0000000097a7ffff (512 KiB) nomap non-reusable q6-adsp-dtb-region@97a00000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000097a80000..0x0000000097afffff (512 KiB) nomap non-reusable q6-gpdsp-dtb-region@97a80000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000097b00000..0x00000000998fffff (30720 KiB) nomap non-reusable pil-gpdsp-region@97b00000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x0000000099900000..0x000000009b6fffff (30720 KiB) nomap non-reusable pil_cdsp-region@99900000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x000000009b700000..0x000000009b77ffff (512 KiB) nomap non-reusable q6-cdsp-dtb-region@9b700000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x000000009b780000..0x000000009b781fff (8 KiB) nomap non-reusable pil-gpu-region@9b780000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x000000009b782000..0x000000009be81fff (7168 KiB) nomap non-reusable pil-cvp-region@9b782000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x000000009be82000..0x000000009c581fff (7168 KiB) nomap non-reusable pil-video-region@9be82000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000ae000000..0x00000000aeffffff (16384 KiB) nomap non-reusable audio-mdf-region@ae000000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000b0000000..0x00000000b07fffff (8192 KiB) nomap non-reusable firmware-region@b0000000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000d0000000..0x00000000d003ffff (256 KiB) nomap non-reusable scmi-region@d0000000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000d0040000..0x00000000d004ffff (64 KiB) nomap non-reusable firmware-logs-region@d0040000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000d0050000..0x00000000d0053fff (16 KiB) nomap non-reusable firmware-audio-region@d0050000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000d0054000..0x00000000d00effff (624 KiB) nomap non-reusable firmware-reserved@d0054000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000d00f0000..0x00000000d00fffff (64 KiB) nomap non-reusable firmwarequantum-test-region@d00f0000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000d0100000..0x00000000d08fffff (8192 KiB) nomap non-reusable tags-region@d0100000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000d1300000..0x00000000d17fffff (5120 KiB) nomap non-reusable qtee-region@d1300000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000d1800000..0x00000000d18fffff (1024 KiB) nomap non-reusable deep-sleep-back-up-region@d1800000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000d1900000..0x00000000d31fffff (25600 KiB) nomap non-reusable trusted-apps-region@d1900000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000db100000..0x00000000db1fffff (1024 KiB) nomap non-reusable tz-stat-region@db100000
+[Fri Nov 13 14:52:22 2026] OF: reserved mem: 0x00000000db200000..0x00000000db2fffff (1024 KiB) nomap non-reusable cpucp-fw-region@db200000
+[Fri Nov 13 14:52:22 2026] earlycon: qcom_geni0 at MMIO 0x000000000099c000 (options '115200n8')
+[Fri Nov 13 14:52:22 2026] printk: legacy bootconsole [qcom_geni0] enabled
+[Fri Nov 13 14:52:22 2026] NUMA: No NUMA configuration found
+[Fri Nov 13 14:52:22 2026] NUMA: Faking a node at [mem 0x0000000090000000-0x0000000f7fffffff]
+[Fri Nov 13 14:52:22 2026] NUMA: NODE_DATA [mem 0xf7dfb48c0-0xf7dfb7fff]
+[Fri Nov 13 14:52:22 2026] Zone ranges:
+[Fri Nov 13 14:52:22 2026]   DMA      [mem 0x0000000090000000-0x00000000ffffffff]
+[Fri Nov 13 14:52:22 2026]   DMA32    empty
+[Fri Nov 13 14:52:22 2026]   Normal   [mem 0x0000000100000000-0x0000000f7fffffff]
+[Fri Nov 13 14:52:22 2026]   Device   empty
+[Fri Nov 13 14:52:22 2026] Movable zone start for each node
+[Fri Nov 13 14:52:22 2026] Early memory node ranges
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x0000000090000000-0x00000000907fffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x0000000090880000-0x00000000908affff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000908b0000-0x00000000908bffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000908c1000-0x00000000908effff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000908f0000-0x00000000908fffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x0000000090b00000-0x0000000090bfffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x0000000091100000-0x0000000091a3ffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x0000000091a40000-0x0000000091ba0fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x0000000091ba1000-0x0000000093afffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x000000009c600000-0x00000000ac617fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ac618000-0x00000000ac618fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ac619000-0x00000000ac9bafff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ac9bb000-0x00000000ac9ccfff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ac9cd000-0x00000000ac9f3fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ac9f4000-0x00000000ac9f8fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ac9f9000-0x00000000ac9fdfff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ac9fe000-0x00000000aca0afff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000aca0b000-0x00000000aca52fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000aca53000-0x00000000aca65fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000aca66000-0x00000000aca70fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000aca71000-0x00000000aca79fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000aca7a000-0x00000000acabcfff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000acabd000-0x00000000acac1fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000acac2000-0x00000000acacdfff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000acace000-0x00000000acaecfff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000acaed000-0x00000000acafffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000acb00000-0x00000000acffffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ad000000-0x00000000ad03efff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ad03f000-0x00000000ad047fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ad048000-0x00000000ad078fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ad079000-0x00000000ad091fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ad092000-0x00000000ad54bfff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ad54c000-0x00000000ad5c3fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ad5c4000-0x00000000adff4fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000ae000000-0x00000000aeffffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000af000000-0x00000000af5f6fff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000af5f7000-0x00000000af5fffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000af600000-0x00000000afffffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000b0000000-0x00000000b07fffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000b0800000-0x00000000bdffffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000c0000000-0x00000000cfffffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000d0000000-0x00000000d00fffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000d1800000-0x00000000d18fffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000d4400000-0x00000000db0fffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000db100000-0x00000000db1fffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x00000000db300000-0x00000000f87fffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x0000000a00000000-0x0000000bffffffff]
+[Fri Nov 13 14:52:22 2026]   node   0: [mem 0x0000000e00000000-0x0000000f7fffffff]
+[Fri Nov 13 14:52:22 2026] Initmem setup node 0 [mem 0x0000000090000000-0x0000000f7fffffff]
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 128 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 1 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 512 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 1280 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 35584 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 11 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 8192 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 5888 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 11008 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone DMA: 256 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] On node 0, zone Normal: 30720 pages in unavailable ranges
+[Fri Nov 13 14:52:22 2026] cma: Reserved 32 MiB at 0x00000000ee400000 on node -1
+[Fri Nov 13 14:52:22 2026] psci: probing for conduit method from DT.
+[Fri Nov 13 14:52:22 2026] psci: PSCIv1.1 detected in firmware.
+[Fri Nov 13 14:52:22 2026] psci: Using standard PSCI v0.2 function IDs
+[Fri Nov 13 14:52:22 2026] psci: MIGRATE_INFO_TYPE not supported.
+[Fri Nov 13 14:52:22 2026] psci: SMC Calling Convention v1.3
+[Fri Nov 13 14:52:22 2026] psci: OSI mode supported.
+[Fri Nov 13 14:52:22 2026] percpu: Embedded 53 pages/cpu s93800 r8192 d115096 u217088
+[Fri Nov 13 14:52:22 2026] pcpu-alloc: s93800 r8192 d115096 u217088 alloc=53*4096
+[Fri Nov 13 14:52:22 2026] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[Fri Nov 13 14:52:22 2026] Detected PIPT I-cache on CPU0
+[Fri Nov 13 14:52:22 2026] CPU features: detected: GIC system register CPU interface
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Spectre-v4
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Spectre-BHB
+[Fri Nov 13 14:52:22 2026] CPU features: kernel page table isolation forced ON by KASLR
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Kernel page table isolation (KPTI)
+[Fri Nov 13 14:52:22 2026] CPU features: detected: SSBS not fully self-synchronizing
+[Fri Nov 13 14:52:22 2026] alternatives: applying boot alternatives
+[Fri Nov 13 14:52:22 2026] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-6.8.0-1080-qcom root=UUID=a56f7e24-a1c7-415f-81f3-4e7c737a2d70 ro console=ttyMSM0,115200n8 pcie_pme=nomsi earlycon video=LVDS-1:d
+[Fri Nov 13 14:52:22 2026] Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[Fri Nov 13 14:52:22 2026] Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[Fri Nov 13 14:52:22 2026] Fallback order for Node 0: 0 
+[Fri Nov 13 14:52:22 2026] Built 1 zonelists, mobility grouping on.  Total pages: 3972138
+[Fri Nov 13 14:52:22 2026] Policy zone: Normal
+[Fri Nov 13 14:52:22 2026] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[Fri Nov 13 14:52:22 2026] stackdepot: allocating hash table via alloc_large_system_hash
+[Fri Nov 13 14:52:22 2026] stackdepot hash table entries: 1048576 (order: 12, 16777216 bytes, linear)
+[Fri Nov 13 14:52:22 2026] software IO TLB: area num 8.
+[Fri Nov 13 14:52:22 2026] software IO TLB: mapped [mem 0x00000000ea400000-0x00000000ee400000] (64MB)
+[Fri Nov 13 14:52:22 2026] Memory: 15401196K/16140752K available (22656K kernel code, 5552K rwdata, 15652K rodata, 11136K init, 913K bss, 571620K reserved, 167936K cma-reserved)
+[Fri Nov 13 14:52:22 2026] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[Fri Nov 13 14:52:22 2026] ftrace: allocating 60702 entries in 238 pages
+[Fri Nov 13 14:52:22 2026] ftrace: allocated 238 pages with 6 groups
+[Fri Nov 13 14:52:22 2026] Dynamic Preempt: voluntary
+[Fri Nov 13 14:52:22 2026] rcu: Preemptible hierarchical RCU implementation.
+[Fri Nov 13 14:52:22 2026] rcu: 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=8.
+[Fri Nov 13 14:52:22 2026] 	Trampoline variant of Tasks RCU enabled.
+[Fri Nov 13 14:52:22 2026] 	Rude variant of Tasks RCU enabled.
+[Fri Nov 13 14:52:22 2026] 	Tracing variant of Tasks RCU enabled.
+[Fri Nov 13 14:52:22 2026] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[Fri Nov 13 14:52:22 2026] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[Fri Nov 13 14:52:22 2026] RCU Tasks: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[Fri Nov 13 14:52:22 2026] RCU Tasks Rude: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[Fri Nov 13 14:52:22 2026] RCU Tasks Trace: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[Fri Nov 13 14:52:22 2026] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[Fri Nov 13 14:52:22 2026] GICv3: 988 SPIs implemented
+[Fri Nov 13 14:52:22 2026] GICv3: 992 Extended SPIs implemented
+[Fri Nov 13 14:52:22 2026] Root IRQ handler: gic_handle_irq
+[Fri Nov 13 14:52:22 2026] GICv3: GICv3 features: 16 PPIs
+[Fri Nov 13 14:52:22 2026] GICv3: CPU0: found redistributor 0 region 0:0x0000000017a60000
+[Fri Nov 13 14:52:22 2026] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[Fri Nov 13 14:52:22 2026] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[Fri Nov 13 14:52:22 2026] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[Fri Nov 13 14:52:22 2026] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[Fri Nov 13 14:52:22 2026] arm-pv: using stolen time PV
+[Fri Nov 13 14:52:22 2026] Console: colour dummy device 80x25
+[Fri Nov 13 14:52:22 2026] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=19200)
+[Fri Nov 13 14:52:22 2026] pid_max: default: 32768 minimum: 301
+[Fri Nov 13 14:52:22 2026] LSM: initializing lsm=lockdown,capability,landlock,yama,apparmor,integrity
+[Fri Nov 13 14:52:22 2026] landlock: Up and running.
+[Fri Nov 13 14:52:22 2026] Yama: becoming mindful.
+[Fri Nov 13 14:52:22 2026] AppArmor: AppArmor initialized
+[Fri Nov 13 14:52:22 2026] Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[Fri Nov 13 14:52:22 2026] Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[Fri Nov 13 14:52:22 2026] rcu: Hierarchical SRCU implementation.
+[Fri Nov 13 14:52:22 2026] rcu: 	Max phase no-delay instances is 400.
+[Fri Nov 13 14:52:22 2026] Remapping and enabling EFI services.
+[Fri Nov 13 14:52:22 2026] smp: Bringing up secondary CPUs ...
+[Fri Nov 13 14:52:22 2026] Detected PIPT I-cache on CPU1
+[Fri Nov 13 14:52:22 2026] GICv3: CPU1: found redistributor 100 region 0:0x0000000017a80000
+[Fri Nov 13 14:52:22 2026] CPU1: Booted secondary processor 0x0000000100 [0x410fd4b2]
+[Fri Nov 13 14:52:22 2026] Detected PIPT I-cache on CPU2
+[Fri Nov 13 14:52:22 2026] GICv3: CPU2: found redistributor 200 region 0:0x0000000017aa0000
+[Fri Nov 13 14:52:22 2026] CPU2: Booted secondary processor 0x0000000200 [0x410fd4b2]
+[Fri Nov 13 14:52:22 2026] Detected PIPT I-cache on CPU3
+[Fri Nov 13 14:52:22 2026] GICv3: CPU3: found redistributor 300 region 0:0x0000000017ac0000
+[Fri Nov 13 14:52:22 2026] CPU3: Booted secondary processor 0x0000000300 [0x410fd4b2]
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Qualcomm erratum 1009, or ARM erratum 1286807, 2441009
+[Fri Nov 13 14:52:22 2026] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[Fri Nov 13 14:52:22 2026] Detected VIPT I-cache on CPU4
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64ISAR0_EL1. Boot CPU: 0x10100010211120, CPU4: 0x00100010211120
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64ISAR1_EL1. Boot CPU: 0x00000000200001, CPU4: 0x00000000100001
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR2_EL1. Boot CPU: 0x00000100001011, CPU4: 0x00000000001011
+[Fri Nov 13 14:52:22 2026] CPU features: Unsupported CPU feature variation detected.
+[Fri Nov 13 14:52:22 2026] GICv3: CPU4: found redistributor 10000 region 0:0x0000000017ae0000
+[Fri Nov 13 14:52:22 2026] CPU4: Booted secondary processor 0x0000010000 [0x412fd050]
+[Fri Nov 13 14:52:22 2026] Detected VIPT I-cache on CPU5
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64ISAR0_EL1. Boot CPU: 0x10100010211120, CPU5: 0x00100010211120
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64ISAR1_EL1. Boot CPU: 0x00000000200001, CPU5: 0x00000000100001
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR2_EL1. Boot CPU: 0x00000100001011, CPU5: 0x00000000001011
+[Fri Nov 13 14:52:22 2026] GICv3: CPU5: found redistributor 10100 region 0:0x0000000017b00000
+[Fri Nov 13 14:52:22 2026] CPU5: Booted secondary processor 0x0000010100 [0x412fd050]
+[Fri Nov 13 14:52:22 2026] Detected VIPT I-cache on CPU6
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64ISAR0_EL1. Boot CPU: 0x10100010211120, CPU6: 0x00100010211120
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64ISAR1_EL1. Boot CPU: 0x00000000200001, CPU6: 0x00000000100001
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR2_EL1. Boot CPU: 0x00000100001011, CPU6: 0x00000000001011
+[Fri Nov 13 14:52:22 2026] GICv3: CPU6: found redistributor 10200 region 0:0x0000000017b20000
+[Fri Nov 13 14:52:22 2026] CPU6: Booted secondary processor 0x0000010200 [0x412fd050]
+[Fri Nov 13 14:52:22 2026] Detected VIPT I-cache on CPU7
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64ISAR0_EL1. Boot CPU: 0x10100010211120, CPU7: 0x00100010211120
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64ISAR1_EL1. Boot CPU: 0x00000000200001, CPU7: 0x00000000100001
+[Fri Nov 13 14:52:22 2026] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR2_EL1. Boot CPU: 0x00000100001011, CPU7: 0x00000000001011
+[Fri Nov 13 14:52:22 2026] GICv3: CPU7: found redistributor 10300 region 0:0x0000000017b40000
+[Fri Nov 13 14:52:22 2026] CPU7: Booted secondary processor 0x0000010300 [0x412fd050]
+[Fri Nov 13 14:52:22 2026] smp: Brought up 1 node, 8 CPUs
+[Fri Nov 13 14:52:22 2026] SMP: Total of 8 processors activated.
+[Fri Nov 13 14:52:22 2026] CPU: All CPU(s) started at EL1
+[Fri Nov 13 14:52:22 2026] CPU features: detected: 32-bit EL0 Support
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Common not Private translations
+[Fri Nov 13 14:52:22 2026] CPU features: detected: CRC32 instructions
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Data cache clean to Point of Persistence
+[Fri Nov 13 14:52:22 2026] CPU features: detected: RCpc load-acquire (LDAPR)
+[Fri Nov 13 14:52:22 2026] CPU features: detected: LSE atomic instructions
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Privileged Access Never
+[Fri Nov 13 14:52:22 2026] CPU features: detected: RAS Extension Support
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[Fri Nov 13 14:52:22 2026] alternatives: applying system-wide alternatives
+[Fri Nov 13 14:52:22 2026] CPU features: detected: Hardware dirty bit management on CPU0-3
+[Fri Nov 13 14:52:22 2026] devtmpfs: initialized
+[Fri Nov 13 14:52:22 2026] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[Fri Nov 13 14:52:22 2026] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[Fri Nov 13 14:52:22 2026] pinctrl core: initialized pinctrl subsystem
+[Fri Nov 13 14:52:22 2026] DMI not present or invalid.
+[Fri Nov 13 14:52:22 2026] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[Fri Nov 13 14:52:22 2026] DMA: preallocated 2048 KiB GFP_KERNEL pool for atomic allocations
+[Fri Nov 13 14:52:22 2026] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[Fri Nov 13 14:52:22 2026] DMA: preallocated 2048 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[Fri Nov 13 14:52:22 2026] audit: initializing netlink subsys (disabled)
+[Fri Nov 13 14:52:22 2026] audit: type=2000 audit(0.125:1): state=initialized audit_enabled=0 res=1
+[Fri Nov 13 14:52:22 2026] thermal_sys: Registered thermal governor 'fair_share'
+[Fri Nov 13 14:52:22 2026] thermal_sys: Registered thermal governor 'bang_bang'
+[Fri Nov 13 14:52:22 2026] thermal_sys: Registered thermal governor 'step_wise'
+[Fri Nov 13 14:52:22 2026] thermal_sys: Registered thermal governor 'user_space'
+[Fri Nov 13 14:52:22 2026] thermal_sys: Registered thermal governor 'power_allocator'
+[Fri Nov 13 14:52:22 2026] cpuidle: using governor ladder
+[Fri Nov 13 14:52:22 2026] cpuidle: using governor menu
+[Fri Nov 13 14:52:23 2026] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[Fri Nov 13 14:52:23 2026] ASID allocator initialised with 32768 entries
+[Fri Nov 13 14:52:23 2026] Serial: AMBA PL011 UART driver
+[Fri Nov 13 14:52:23 2026] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c14000
+[Fri Nov 13 14:52:23 2026] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c04000
+[Fri Nov 13 14:52:23 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/rsc@18200000/hdmi-connector
+[Fri Nov 13 14:52:23 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[Fri Nov 13 14:52:23 2026] /soc@0/phy@1c04000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[Fri Nov 13 14:52:23 2026] /soc@0/phy@1c14000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[Fri Nov 13 14:52:23 2026] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[Fri Nov 13 14:52:23 2026] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af54000
+[Fri Nov 13 14:52:23 2026] /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d
+[Fri Nov 13 14:52:23 2026] /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[Fri Nov 13 14:52:23 2026] /soc@0/display-subsystem@ae00000/displayport-controller@af54000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[Fri Nov 13 14:52:23 2026] /soc@0/interrupt-controller@17a00000: Fixed dependency cycle(s) with /soc@0/interrupt-controller@17a00000
+[Fri Nov 13 14:52:23 2026] /soc@0/rsc@18200000/hdmi-connector: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d
+[Fri Nov 13 14:52:23 2026] /soc@0/stm@4002000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/tpdm@400f000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@400f000: Fixed dependency cycle(s) with /soc@0/tpda@4004000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/stm@4002000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/tpda@4004000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[Fri Nov 13 14:52:23 2026] /soc@0/replicator@4046000: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[Fri Nov 13 14:52:23 2026] /soc@0/replicator@4046000: Fixed dependency cycle(s) with /soc@0/replicator@404e000
+[Fri Nov 13 14:52:23 2026] /soc@0/tmc@4048000: Fixed dependency cycle(s) with /soc@0/replicator@404e000
+[Fri Nov 13 14:52:23 2026] /soc@0/replicator@404e000: Fixed dependency cycle(s) with /soc@0/replicator@4046000
+[Fri Nov 13 14:52:23 2026] /soc@0/replicator@404e000: Fixed dependency cycle(s) with /soc@0/tmc@404f000
+[Fri Nov 13 14:52:23 2026] /soc@0/replicator@404e000: Fixed dependency cycle(s) with /soc@0/tmc@4048000
+[Fri Nov 13 14:52:23 2026] /soc@0/tmc@404f000: Fixed dependency cycle(s) with /soc@0/replicator@404e000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4841000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4850000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4860000: Fixed dependency cycle(s) with /soc@0/tpda@4864000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4864000: Fixed dependency cycle(s) with /soc@0/tpdm@4860000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4864000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/funnel@4c45000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/funnel@4c55000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/tpda@4864000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4980000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4983000: Fixed dependency cycle(s) with /soc@0/tpdm@4980000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4983000: Fixed dependency cycle(s) with /soc@0/tpda@4c44000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@49d0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4ac0000: Fixed dependency cycle(s) with /soc@0/tpda@4ac4000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4ac4000: Fixed dependency cycle(s) with /soc@0/tpdm@4ac0000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4ac4000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4ac5000: Fixed dependency cycle(s) with /soc@0/tpda@4ac4000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4ac5000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4ad0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4ad0000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4850000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@49d0000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4841000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[Fri Nov 13 14:52:23 2026] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[Fri Nov 13 14:52:23 2026] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[Fri Nov 13 14:52:23 2026] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[Fri Nov 13 14:52:23 2026] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /dummy-sink
+[Fri Nov 13 14:52:23 2026] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /soc@0/replicator@4046000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0d000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0c000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0b000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0a000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b09000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4b09000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4b0a000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4b0b000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4b0c000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4b0d000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4b80000: Fixed dependency cycle(s) with /soc@0/tpda@4b86000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4b86000: Fixed dependency cycle(s) with /soc@0/tpdm@4b80000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4b86000: Fixed dependency cycle(s) with /soc@0/funnel@4b87000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4b87000: Fixed dependency cycle(s) with /soc@0/tpda@4b86000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4b87000: Fixed dependency cycle(s) with /soc@0/funnel@4c45000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4c40000: Fixed dependency cycle(s) with /soc@0/tpda@4c44000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4c44000: Fixed dependency cycle(s) with /soc@0/tpdm@4c40000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4c45000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4c45000: Fixed dependency cycle(s) with /soc@0/funnel@4b87000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4c45000: Fixed dependency cycle(s) with /soc@0/tpda@4c44000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4c45000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4c50000: Fixed dependency cycle(s) with /soc@0/tpda@4c54000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4c54000: Fixed dependency cycle(s) with /soc@0/tpdm@4c50000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4c54000: Fixed dependency cycle(s) with /soc@0/funnel@4c55000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4c55000: Fixed dependency cycle(s) with /soc@0/tpda@4c54000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4c55000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4e00000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/tpdm@4e00000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4e10000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4e12000: Fixed dependency cycle(s) with /soc@0/tpdm@4e10000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4e12000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[Fri Nov 13 14:52:23 2026] /soc@0/tpdm@4e20000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4e22000: Fixed dependency cycle(s) with /soc@0/tpdm@4e20000
+[Fri Nov 13 14:52:23 2026] /soc@0/funnel@4e22000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[Fri Nov 13 14:52:23 2026] /soc@0/etm@6040000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:23 2026] /soc@0/etm@6140000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:23 2026] /soc@0/etm@6240000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:23 2026] /soc@0/etm@6340000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:24 2026] /soc@0/etm@6440000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:24 2026] /soc@0/etm@6540000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:24 2026] /soc@0/etm@6640000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:24 2026] /soc@0/etm@6740000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6740000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6640000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6540000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6440000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6340000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6240000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6140000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6040000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@6860000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@6861000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@6861000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@6860000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68c0000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68a0000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68b0000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@68a0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@68b0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@68c0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:24 2026] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c14000
+[Fri Nov 13 14:52:24 2026] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c04000
+[Fri Nov 13 14:52:24 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/rsc@18200000/hdmi-connector
+[Fri Nov 13 14:52:24 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[Fri Nov 13 14:52:24 2026] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c04000
+[Fri Nov 13 14:52:24 2026] /soc@0/phy@1c04000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[Fri Nov 13 14:52:24 2026] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c14000
+[Fri Nov 13 14:52:24 2026] /soc@0/phy@1c14000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[Fri Nov 13 14:52:24 2026] /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[Fri Nov 13 14:52:24 2026] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[Fri Nov 13 14:52:24 2026] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af54000
+[Fri Nov 13 14:52:24 2026] /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d
+[Fri Nov 13 14:52:24 2026] /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[Fri Nov 13 14:52:24 2026] /soc@0/display-subsystem@ae00000/displayport-controller@af54000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[Fri Nov 13 14:52:24 2026] /soc@0/display-subsystem@ae00000: Fixed dependency cycle(s) with /soc@0/clock-controller@af00000
+[Fri Nov 13 14:52:24 2026] /soc@0/rsc@18200000/hdmi-connector: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d
+[Fri Nov 13 14:52:24 2026] /soc@0/stm@4002000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/tpdm@400f000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/tpdm@400f000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@400f000: Fixed dependency cycle(s) with /soc@0/tpda@4004000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4004000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[Fri Nov 13 14:52:24 2026] /soc@0/stm@4002000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/stm@4002000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/tpda@4004000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4041000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4041000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[Fri Nov 13 14:52:24 2026] /soc@0/replicator@4046000: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[Fri Nov 13 14:52:24 2026] /soc@0/replicator@4046000: Fixed dependency cycle(s) with /soc@0/replicator@404e000
+[Fri Nov 13 14:52:24 2026] /soc@0/tmc@4048000: Fixed dependency cycle(s) with /soc@0/replicator@404e000
+[Fri Nov 13 14:52:24 2026] /soc@0/tmc@4048000: Fixed dependency cycle(s) with /soc@0/replicator@404e000
+[Fri Nov 13 14:52:24 2026] /soc@0/replicator@4046000: Fixed dependency cycle(s) with /soc@0/replicator@404e000
+[Fri Nov 13 14:52:24 2026] /soc@0/replicator@404e000: Fixed dependency cycle(s) with /soc@0/replicator@4046000
+[Fri Nov 13 14:52:24 2026] /soc@0/replicator@404e000: Fixed dependency cycle(s) with /soc@0/tmc@404f000
+[Fri Nov 13 14:52:24 2026] /soc@0/replicator@404e000: Fixed dependency cycle(s) with /soc@0/tmc@4048000
+[Fri Nov 13 14:52:24 2026] /soc@0/replicator@404e000: Fixed dependency cycle(s) with /soc@0/tmc@404f000
+[Fri Nov 13 14:52:24 2026] /soc@0/tmc@404f000: Fixed dependency cycle(s) with /soc@0/replicator@404e000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4841000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4850000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4860000: Fixed dependency cycle(s) with /soc@0/tpda@4864000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4860000: Fixed dependency cycle(s) with /soc@0/tpda@4864000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4864000: Fixed dependency cycle(s) with /soc@0/tpdm@4860000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4864000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4864000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/funnel@4c45000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/funnel@4c55000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/tpda@4864000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4980000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4980000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4983000: Fixed dependency cycle(s) with /soc@0/tpdm@4980000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4983000: Fixed dependency cycle(s) with /soc@0/tpda@4c44000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@49d0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4ac0000: Fixed dependency cycle(s) with /soc@0/tpda@4ac4000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4ac0000: Fixed dependency cycle(s) with /soc@0/tpda@4ac4000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4ac4000: Fixed dependency cycle(s) with /soc@0/tpdm@4ac0000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4ac4000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4ac4000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ac5000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4ac5000: Fixed dependency cycle(s) with /soc@0/tpda@4ac4000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4ac5000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4ad0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4ad0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@49d0000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4850000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpdm@4841000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4ad0000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4850000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@49d0000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/tpdm@4841000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[Fri Nov 13 14:52:24 2026] /soc@0/tpda@4ad3000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/tpda@4ad3000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4045000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/funnel@4045000
+[Fri Nov 13 14:52:24 2026] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[Fri Nov 13 14:52:25 2026] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[Fri Nov 13 14:52:25 2026] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[Fri Nov 13 14:52:25 2026] /soc@0/tmc@4b05000: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[Fri Nov 13 14:52:25 2026] /soc@0/replicator@4046000: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[Fri Nov 13 14:52:25 2026] /dummy-sink: Fixed dependency cycle(s) with /soc@0/replicator@4b06000
+[Fri Nov 13 14:52:25 2026] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /soc@0/tmc@4b05000
+[Fri Nov 13 14:52:25 2026] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /dummy-sink
+[Fri Nov 13 14:52:25 2026] /soc@0/replicator@4b06000: Fixed dependency cycle(s) with /soc@0/replicator@4046000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0d000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0c000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0b000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0a000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b09000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b09000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4b09000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0a000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4b0a000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0b000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4b0b000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0c000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4b0c000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b08000: Fixed dependency cycle(s) with /soc@0/tpdm@4b0d000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4b0d000: Fixed dependency cycle(s) with /soc@0/tpda@4b08000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4b80000: Fixed dependency cycle(s) with /soc@0/tpda@4b86000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4b80000: Fixed dependency cycle(s) with /soc@0/tpda@4b86000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b86000: Fixed dependency cycle(s) with /soc@0/tpdm@4b80000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b86000: Fixed dependency cycle(s) with /soc@0/funnel@4b87000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4b86000: Fixed dependency cycle(s) with /soc@0/funnel@4b87000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4b87000: Fixed dependency cycle(s) with /soc@0/tpda@4b86000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4b87000: Fixed dependency cycle(s) with /soc@0/funnel@4c45000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4c40000: Fixed dependency cycle(s) with /soc@0/tpda@4c44000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4c40000: Fixed dependency cycle(s) with /soc@0/tpda@4c44000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4983000: Fixed dependency cycle(s) with /soc@0/tpda@4c44000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4c44000: Fixed dependency cycle(s) with /soc@0/tpdm@4c40000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4983000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4c45000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4c44000: Fixed dependency cycle(s) with /soc@0/funnel@4c45000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4b87000: Fixed dependency cycle(s) with /soc@0/funnel@4c45000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/funnel@4c45000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4c45000: Fixed dependency cycle(s) with /soc@0/funnel@4b87000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4c45000: Fixed dependency cycle(s) with /soc@0/tpda@4c44000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4c45000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4c50000: Fixed dependency cycle(s) with /soc@0/tpda@4c54000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4c50000: Fixed dependency cycle(s) with /soc@0/tpda@4c54000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4c54000: Fixed dependency cycle(s) with /soc@0/tpdm@4c50000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4c54000: Fixed dependency cycle(s) with /soc@0/funnel@4c55000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4c54000: Fixed dependency cycle(s) with /soc@0/funnel@4c55000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4865000: Fixed dependency cycle(s) with /soc@0/funnel@4c55000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4c55000: Fixed dependency cycle(s) with /soc@0/tpda@4c54000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4c55000: Fixed dependency cycle(s) with /soc@0/funnel@4865000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4e00000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4e00000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/tpdm@4e00000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4ad4000: Fixed dependency cycle(s) with /soc@0/funnel@4e04000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4e04000: Fixed dependency cycle(s) with /soc@0/funnel@4ad4000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4e10000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4e10000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e12000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4e12000: Fixed dependency cycle(s) with /soc@0/tpdm@4e10000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4e12000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4e20000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@4e20000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@4e03000: Fixed dependency cycle(s) with /soc@0/funnel@4e22000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4e22000: Fixed dependency cycle(s) with /soc@0/tpdm@4e20000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4e22000: Fixed dependency cycle(s) with /soc@0/tpda@4e03000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6040000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6140000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6240000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6340000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6440000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6540000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6640000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6740000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6740000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6640000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6540000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6440000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6340000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6240000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6140000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/etm@6040000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6740000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6640000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6540000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6440000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6340000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6240000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6140000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/etm@6040000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6800000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4042000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/funnel@6800000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/funnel@4042000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@6860000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@6861000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@6861000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@6860000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@6810000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@6861000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@6860000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68c0000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68a0000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68b0000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/funnel@6810000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68a0000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@68a0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68b0000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@68b0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpda@6863000: Fixed dependency cycle(s) with /soc@0/tpdm@68c0000
+[Fri Nov 13 14:52:25 2026] /soc@0/tpdm@68c0000: Fixed dependency cycle(s) with /soc@0/tpda@6863000
+[Fri Nov 13 14:52:25 2026] /lpass-stm: Fixed dependency cycle(s) with /lpi_funnel
+[Fri Nov 13 14:52:25 2026] /soc@0/funnel@4b04000: Fixed dependency cycle(s) with /lpi_funnel
+[Fri Nov 13 14:52:25 2026] /audio-etm0: Fixed dependency cycle(s) with /lpi_funnel
+[Fri Nov 13 14:52:25 2026] /lpi_funnel: Fixed dependency cycle(s) with /lpass-stm
+[Fri Nov 13 14:52:25 2026] /lpi_funnel: Fixed dependency cycle(s) with /audio-etm0
+[Fri Nov 13 14:52:26 2026] /lpi_funnel: Fixed dependency cycle(s) with /soc@0/funnel@4b04000
+[Fri Nov 13 14:52:26 2026] /soc@0/geniqup@ac0000/i2c@a90000/typec@8/connector@0: Fixed dependency cycle(s) with /usb@a6f8800
+[Fri Nov 13 14:52:26 2026] /usb@a6f8800: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/typec@8/connector@0
+[Fri Nov 13 14:52:26 2026] /soc@0/funnel@4b87000: Fixed dependency cycle(s) with /turing0-etm0
+[Fri Nov 13 14:52:26 2026] /soc@0/funnel@4940000: Fixed dependency cycle(s) with /turing0-etm0
+[Fri Nov 13 14:52:26 2026] /turing0-etm0: Fixed dependency cycle(s) with /soc@0/funnel@4940000
+[Fri Nov 13 14:52:26 2026] /soc@0/display-subsystem@ae00000/displayport-controller@af54000: Fixed dependency cycle(s) with /edp-connector
+[Fri Nov 13 14:52:26 2026] /edp-connector: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af54000
+[Fri Nov 13 14:52:26 2026] Modules: 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[Fri Nov 13 14:52:26 2026] Modules: 0 pages in range for non-PLT usage
+[Fri Nov 13 14:52:26 2026] Modules: 510256 pages in range for PLT usage
+[Fri Nov 13 14:52:26 2026] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[Fri Nov 13 14:52:26 2026] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[Fri Nov 13 14:52:26 2026] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[Fri Nov 13 14:52:26 2026] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[Fri Nov 13 14:52:26 2026] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[Fri Nov 13 14:52:26 2026] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[Fri Nov 13 14:52:26 2026] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[Fri Nov 13 14:52:26 2026] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[Fri Nov 13 14:52:26 2026] ACPI: Interpreter disabled.
+[Fri Nov 13 14:52:26 2026] iommu: Default domain type: Translated
+[Fri Nov 13 14:52:26 2026] iommu: DMA domain TLB invalidation policy: strict mode
+[Fri Nov 13 14:52:26 2026] SCSI subsystem initialized
+[Fri Nov 13 14:52:26 2026] libata version 3.00 loaded.
+[Fri Nov 13 14:52:26 2026] usbcore: registered new interface driver usbfs
+[Fri Nov 13 14:52:26 2026] usbcore: registered new interface driver hub
+[Fri Nov 13 14:52:26 2026] usbcore: registered new device driver usb
+[Fri Nov 13 14:52:26 2026] pps_core: LinuxPPS API ver. 1 registered
+[Fri Nov 13 14:52:26 2026] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[Fri Nov 13 14:52:26 2026] PTP clock support registered
+[Fri Nov 13 14:52:26 2026] EDAC MC: Ver: 3.0.0
+[Fri Nov 13 14:52:26 2026] CPUidle PSCI: Initialized CPU PM domain topology using OSI mode
+[Fri Nov 13 14:52:26 2026] scmi_core: SCMI protocol bus registered
+[Fri Nov 13 14:52:26 2026] efivars: Registered efivars operations
+[Fri Nov 13 14:52:26 2026] qcom_scm: convention: smc arm 64
+[Fri Nov 13 14:52:26 2026] qcom_scm firmware:scm: qseecom: found qseecom with version 0x1402000
+[Fri Nov 13 14:52:26 2026] qcom_scm firmware:scm: qseecom: untested machine, skipping
+[Fri Nov 13 14:52:26 2026] NetLabel: Initializing
+[Fri Nov 13 14:52:26 2026] NetLabel:  domain hash size = 128
+[Fri Nov 13 14:52:26 2026] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[Fri Nov 13 14:52:26 2026] NetLabel:  unlabeled traffic allowed by default
+[Fri Nov 13 14:52:26 2026] mctp: management component transport protocol core
+[Fri Nov 13 14:52:26 2026] NET: Registered PF_MCTP protocol family
+[Fri Nov 13 14:52:26 2026] vgaarb: loaded
+[Fri Nov 13 14:52:26 2026] clocksource: Switched to clocksource arch_sys_counter
+[Fri Nov 13 14:52:26 2026] VFS: Disk quotas dquot_6.6.0
+[Fri Nov 13 14:52:26 2026] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[Fri Nov 13 14:52:26 2026] AppArmor: AppArmor Filesystem Enabled
+[Fri Nov 13 14:52:26 2026] pnp: PnP ACPI: disabled
+[Fri Nov 13 14:52:26 2026] NET: Registered PF_INET protocol family
+[Fri Nov 13 14:52:26 2026] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[Fri Nov 13 14:52:26 2026] tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[Fri Nov 13 14:52:26 2026] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[Fri Nov 13 14:52:26 2026] TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[Fri Nov 13 14:52:26 2026] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[Fri Nov 13 14:52:26 2026] TCP: Hash tables configured (established 131072 bind 65536)
+[Fri Nov 13 14:52:26 2026] MPTCP token hash table entries: 16384 (order: 7, 393216 bytes, linear)
+[Fri Nov 13 14:52:26 2026] UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[Fri Nov 13 14:52:26 2026] UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[Fri Nov 13 14:52:26 2026] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[Fri Nov 13 14:52:26 2026] NET: Registered PF_XDP protocol family
+[Fri Nov 13 14:52:26 2026] PCI: CLS 0 bytes, default 64
+[Fri Nov 13 14:52:26 2026] Trying to unpack rootfs image as initramfs...
+[Fri Nov 13 14:52:26 2026] kvm [1]: HYP mode not available
+[Fri Nov 13 14:52:26 2026] Initialise system trusted keyrings
+[Fri Nov 13 14:52:26 2026] Key type blacklist registered
+[Fri Nov 13 14:52:26 2026] workingset: timestamp_bits=42 max_order=22 bucket_order=0
+[Fri Nov 13 14:52:26 2026] zbud: loaded
+[Fri Nov 13 14:52:26 2026] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[Fri Nov 13 14:52:26 2026] fuse: init (API version 7.39)
+[Fri Nov 13 14:52:26 2026] integrity: Platform Keyring initialized
+[Fri Nov 13 14:52:26 2026] integrity: Machine keyring initialized
+[Fri Nov 13 14:52:26 2026] Key type asymmetric registered
+[Fri Nov 13 14:52:26 2026] Asymmetric key parser 'x509' registered
+[Fri Nov 13 14:52:26 2026] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 243)
+[Fri Nov 13 14:52:26 2026] io scheduler mq-deadline registered
+[Fri Nov 13 14:52:26 2026] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[Fri Nov 13 14:52:26 2026] msm_mem_dump mem-dump: assigned reserved memory node mem-dump-region
+[Fri Nov 13 14:52:26 2026] MSM Memory Dump apps data table set up
+[Fri Nov 13 14:52:26 2026] MSM Memory Dump base table set up in IMEM
+[Fri Nov 13 14:52:26 2026] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[Fri Nov 13 14:52:26 2026] msm_serial: driver initialized
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: probing hardware configuration...
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: SMMUv2 with:
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: 	stage 1 translation
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: 	coherent table walk
+[Fri Nov 13 14:52:26 2026] Freeing initrd memory: 71532K
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: 	stream matching with 170 register groups
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: 	101 context banks (0 stage-2 only)
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: 	Limiting the stream matching groups to 128
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: 	Supported page sizes: 0x61311000
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: 	Stage-1: 36-bit VA -> 36-bit IPA
+[Fri Nov 13 14:52:26 2026] arm-smmu 15000000.iommu: 	preserved 0 boot mappings
+[Fri Nov 13 14:52:26 2026] arm-smmu 15200000.iommu: probing hardware configuration...
+[Fri Nov 13 14:52:26 2026] arm-smmu 15200000.iommu: SMMUv2 with:
+[Fri Nov 13 14:52:26 2026] arm-smmu 15200000.iommu: 	stage 1 translation
+[Fri Nov 13 14:52:26 2026] arm-smmu 15200000.iommu: 	coherent table walk
+[Fri Nov 13 14:52:26 2026] arm-smmu 15200000.iommu: 	stream matching with 64 register groups
+[Fri Nov 13 14:52:26 2026] arm-smmu 15200000.iommu: 	63 context banks (0 stage-2 only)
+[Fri Nov 13 14:52:26 2026] arm-smmu 15200000.iommu: 	Supported page sizes: 0x61311000
+[Fri Nov 13 14:52:26 2026] arm-smmu 15200000.iommu: 	Stage-1: 36-bit VA -> 36-bit IPA
+[Fri Nov 13 14:52:26 2026] arm-smmu 15200000.iommu: 	preserved 0 boot mappings
+[Fri Nov 13 14:52:26 2026] loop: module loaded
+[Fri Nov 13 14:52:26 2026] qcom_system_heap_create: DMA-BUF Heap: Created 'qcom,system'
+[Fri Nov 13 14:52:26 2026] qcom_secure_system_heap_create: DMA-BUF Heap: Created 'qcom,secure-pixel'
+[Fri Nov 13 14:52:26 2026] qcom_secure_system_heap_create: DMA-BUF Heap: Created 'qcom,secure-non-pixel'
+[Fri Nov 13 14:52:26 2026] platform soc@0:qcom,dma-heaps:qcom,secure_cdsp: assigned reserved memory node secure-cdsp-region
+[Fri Nov 13 14:52:26 2026] platform soc@0:qcom,dma-heaps:qcom,qseecom_ta: assigned reserved memory node qcom,qseecom-ta
+[Fri Nov 13 14:52:26 2026] platform soc@0:qcom,dma-heaps:qcom,qseecom: assigned reserved memory node qcom,qseecom
+[Fri Nov 13 14:52:26 2026] qcom_dma_heap_probe: DMA-BUF Heap: Created qcom,cma-secure-cdsp
+[Fri Nov 13 14:52:26 2026] qcom_dma_heap_probe: DMA-BUF Heap: Created qcom,qseecom-ta
+[Fri Nov 13 14:52:26 2026] qcom_dma_heap_probe: DMA-BUF Heap: Created qcom,qseecom
+[Fri Nov 13 14:52:26 2026] spmi spmi-0: PMIC arbiter version v5 (0x50020000)
+[Fri Nov 13 14:52:26 2026] tun: Universal TUN/TAP device driver, 1.6
+[Fri Nov 13 14:52:26 2026] usbcore: registered new interface driver ax_usb_nic
+[Fri Nov 13 14:52:26 2026] PPP generic driver version 2.4.2
+[Fri Nov 13 14:52:26 2026] mousedev: PS/2 mouse device common for all mice
+[Fri Nov 13 14:52:26 2026] i2c_dev: i2c /dev entries driver
+[Fri Nov 13 14:52:26 2026] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[Fri Nov 13 14:52:26 2026] device-mapper: uevent: version 1.0.3
+[Fri Nov 13 14:52:26 2026] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+[Fri Nov 13 14:52:26 2026] sdhci: Secure Digital Host Controller Interface driver
+[Fri Nov 13 14:52:26 2026] sdhci: Copyright(c) Pierre Ossman
+[Fri Nov 13 14:52:26 2026] Synopsys Designware Multimedia Card Interface Driver
+[Fri Nov 13 14:52:26 2026] sdhci-pltfm: SDHCI platform and OF driver helper
+[Fri Nov 13 14:52:26 2026] ledtrig-cpu: registered to indicate activity on CPUs
+[Fri Nov 13 14:52:26 2026] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[Fri Nov 13 14:52:26 2026] hw perfevents: enabled with armv8_cortex_a55 PMU driver, 7 counters available
+[Fri Nov 13 14:52:26 2026] hw perfevents: enabled with armv8_cortex_a78 PMU driver, 7 counters available
+[Fri Nov 13 14:52:26 2026] watchdog: Delayed init of the lockup detector failed: -19
+[Fri Nov 13 14:52:26 2026] watchdog: Hard watchdog permanently disabled
+[Fri Nov 13 14:52:26 2026] drop_monitor: Initializing network drop monitor service
+[Fri Nov 13 14:52:26 2026] NET: Registered PF_INET6 protocol family
+[Fri Nov 13 14:52:27 2026] Segment Routing with IPv6
+[Fri Nov 13 14:52:27 2026] In-situ OAM (IOAM) with IPv6
+[Fri Nov 13 14:52:27 2026] NET: Registered PF_PACKET protocol family
+[Fri Nov 13 14:52:27 2026] Key type dns_resolver registered
+[Fri Nov 13 14:52:27 2026] registered taskstats version 1
+[Fri Nov 13 14:52:27 2026] Loading compiled-in X.509 certificates
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Build time autogenerated kernel key: fe24c08699b4d61b37ef92553749851d7cf41f5a'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing 2025 Kmod: d541cef61dc7e793b7eb7e899970a2eef0b5dc8c'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing 2025 Kmod: 4627603d2357a2a3f81006370894c221175893e9'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[Fri Nov 13 14:52:27 2026] blacklist: Loading compiled-in revocation X.509 certificates
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+[Fri Nov 13 14:52:27 2026] Key type .fscrypt registered
+[Fri Nov 13 14:52:27 2026] Key type fscrypt-provisioning registered
+[Fri Nov 13 14:52:27 2026] Key type encrypted registered
+[Fri Nov 13 14:52:27 2026] AppArmor: AppArmor sha256 policy hashing enabled
+[Fri Nov 13 14:52:27 2026] ima: secureboot mode disabled
+[Fri Nov 13 14:52:27 2026] ima: No TPM chip found, activating TPM-bypass!
+[Fri Nov 13 14:52:27 2026] Loading compiled-in module X.509 certificates
+[Fri Nov 13 14:52:27 2026] Loaded X.509 cert 'Build time autogenerated kernel key: fe24c08699b4d61b37ef92553749851d7cf41f5a'
+[Fri Nov 13 14:52:27 2026] ima: Allocated hash algorithm: sha256
+[Fri Nov 13 14:52:27 2026] ima: No architecture policies found
+[Fri Nov 13 14:52:27 2026] evm: Initialising EVM extended attributes:
+[Fri Nov 13 14:52:27 2026] evm: security.selinux
+[Fri Nov 13 14:52:27 2026] evm: security.SMACK64
+[Fri Nov 13 14:52:27 2026] evm: security.SMACK64EXEC
+[Fri Nov 13 14:52:27 2026] evm: security.SMACK64TRANSMUTE
+[Fri Nov 13 14:52:27 2026] evm: security.SMACK64MMAP
+[Fri Nov 13 14:52:27 2026] evm: security.apparmor
+[Fri Nov 13 14:52:27 2026] evm: security.ima
+[Fri Nov 13 14:52:27 2026] evm: security.capability
+[Fri Nov 13 14:52:27 2026] evm: HMAC attrs: 0x1
+[Fri Nov 13 14:52:27 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/rsc@18200000/hdmi-connector
+[Fri Nov 13 14:52:27 2026] /soc@0/rsc@18200000/hdmi-connector: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d
+[Fri Nov 13 14:52:27 2026] vreg_s5c: Setting 1104000-1104000uV
+[Fri Nov 13 14:52:27 2026] vreg_l3a: Setting 1200000-1200000uV
+[Fri Nov 13 14:52:27 2026] vreg_l1c: Setting 300000-512000uV
+[Fri Nov 13 14:52:27 2026] vreg_l4a: Setting 880000-912000uV
+[Fri Nov 13 14:52:27 2026] bam-dma-engine 1dc4000.dma-controller: Adding to iommu group 0
+[Fri Nov 13 14:52:27 2026] vreg_l2c: Setting 900000-904000uV
+[Fri Nov 13 14:52:27 2026] vreg_l5a: Setting 1200000-1200000uV
+[Fri Nov 13 14:52:27 2026] geni_se_qup 9c0000.geniqup: Adding to iommu group 1
+[Fri Nov 13 14:52:27 2026] geni_se_qup ac0000.geniqup: Adding to iommu group 2
+[Fri Nov 13 14:52:27 2026] vreg_l4c: Setting 1200000-1200000uV
+[Fri Nov 13 14:52:27 2026] vreg_l7c: Setting 1800000-1800000uV
+[Fri Nov 13 14:52:27 2026] vreg_l6a: Setting 880000-912000uV
+[Fri Nov 13 14:52:27 2026] /soc@0/geniqup@ac0000/i2c@a90000/typec@8/connector@0: Fixed dependency cycle(s) with /usb@a6f8800
+[Fri Nov 13 14:52:27 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/rsc@18200000/hdmi-connector
+[Fri Nov 13 14:52:27 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[Fri Nov 13 14:52:27 2026] vreg_l8c: Setting 1800000-1800000uV
+[Fri Nov 13 14:52:27 2026] qcom-ice 87c8000.crypto: Found QC Inline Crypto Engine (ICE) v3.2.0
+[Fri Nov 13 14:52:27 2026] qcom-ice 87c8000.crypto: QC ICE HWKM (Hardware Key Manager) version = 1
+[Fri Nov 13 14:52:27 2026] vreg_l7a: Setting 880000-912000uV
+[Fri Nov 13 14:52:27 2026] vreg_l9c: Setting 1800000-1800000uV
+[Fri Nov 13 14:52:27 2026] vreg_l8a: Setting 2504000-2960000uV
+[Fri Nov 13 14:52:27 2026] 99c000.serial: ttyMSM0 at MMIO 0x99c000 (irq = 221, base_baud = 0) is a MSM
+[Fri Nov 13 14:52:27 2026] printk: legacy console [ttyMSM0] enabled
+[Fri Nov 13 14:52:27 2026] vreg_l9a: Setting 2970000-3072000uV
+[Fri Nov 13 14:52:27 2026] printk: legacy bootconsole [qcom_geni0] disabled
+[Fri Nov 13 14:52:27 2026] a88000.serial: ttyHS1 at MMIO 0xa88000 (irq = 222, base_baud = 0) is a MSM
+[Fri Nov 13 14:52:27 2026] serial serial0: tty port ttyHS1 registered
+[Fri Nov 13 14:52:27 2026] /soc@0/geniqup@ac0000/i2c@a90000/typec@8/connector@0: Fixed dependency cycle(s) with /usb@a6f8800
+[Fri Nov 13 14:52:27 2026] /soc@0/rsc@18200000/hdmi-connector: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d
+[Fri Nov 13 14:52:27 2026] /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d
+[Fri Nov 13 14:52:27 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/rsc@18200000/hdmi-connector
+[Fri Nov 13 14:52:27 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[Fri Nov 13 14:52:27 2026] sdhci_msm 87c4000.mmc: Adding to iommu group 3
+[Fri Nov 13 14:52:27 2026] mmc0: CQHCI version 5.10
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c10000.pci: supply vddpe-3v3 not found, using dummy regulator
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c00000.pci: supply vdda not found, using dummy regulator
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c00000.pci: supply vddpe-3v3 not found, using dummy regulator
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c00000.pci: host bridge /soc@0/pci@1c00000 ranges:
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c00000.pci:       IO 0x0040200000..0x00402fffff -> 0x0000000000
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c00000.pci:      MEM 0x0040300000..0x005fffffff -> 0x0040300000
+[Fri Nov 13 14:52:27 2026] clk: Disabling unused clocks
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c10000.pci: host bridge /soc@0/pci@1c10000 ranges:
+[Fri Nov 13 14:52:27 2026] mmc0: SDHCI controller on 87c4000.mmc [87c4000.mmc] using ADMA 64-bit
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c10000.pci:       IO 0x0060200000..0x00602fffff -> 0x0000000000
+[Fri Nov 13 14:52:27 2026] sdhci_msm 87c4000.mmc: mmc0: CQE init: success
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c10000.pci:      MEM 0x0060300000..0x007fffffff -> 0x0060300000
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c00000.pci: iATU: unroll T, 32 ob, 8 ib, align 4K, limit 1024G
+[Fri Nov 13 14:52:27 2026] mmc0: Command Queue Engine enabled
+[Fri Nov 13 14:52:27 2026] mmc0: new HS400 Enhanced strobe MMC card at address 0001
+[Fri Nov 13 14:52:27 2026] mmcblk0: mmc0:0001 AIM20F 59.3 GiB
+[Fri Nov 13 14:52:27 2026]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 p28 p29 p30 p31 p32 p33 p34 p35 p36 p37 p38 p39 p40 p41 p42 p43 p44 p45 p46 p47 p48 p49 p50 p51 p52 p53 p54 p55 p56 p57 p58 p59 p60 p61 p62 p63 p64 p65 p66 p67 p68 p69 p70 p71
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c10000.pci: iATU: unroll T, 32 ob, 8 ib, align 4K, limit 1024G
+[Fri Nov 13 14:52:27 2026] mmcblk0boot0: mmc0:0001 AIM20F 31.5 MiB
+[Fri Nov 13 14:52:27 2026] mmcblk0boot1: mmc0:0001 AIM20F 31.5 MiB
+[Fri Nov 13 14:52:27 2026] mmcblk0rpmb: mmc0:0001 AIM20F 4.00 MiB, chardev (234:0)
+[Fri Nov 13 14:52:27 2026] qcom-pcie 1c00000.pci: PCIe Gen.2 x1 link up
+[Fri Nov 13 14:52:28 2026] qcom-pcie 1c00000.pci: PCI host bridge to bus 0000:00
+[Fri Nov 13 14:52:28 2026] pci_bus 0000:00: root bus resource [bus 00-ff]
+[Fri Nov 13 14:52:28 2026] pci_bus 0000:00: root bus resource [io  0x0000-0xfffff]
+[Fri Nov 13 14:52:28 2026] pci_bus 0000:00: root bus resource [mem 0x40300000-0x5fffffff]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: [17cb:0115] type 01 class 0x060400 PCIe Root Port
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0:   bridge window [io  0x0000-0x0fff]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: PTM enabled (root), 16ns granularity
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0: [12d8:b304] type 01 class 0x060400 PCIe Switch Upstream Port
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0: PCI bridge to [bus 00]
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0:   bridge window [io  0x0000-0x0fff]
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0: supports D1 D2
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0: PTM enabled, 16ns granularity
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0: 4.000 Gb/s available PCIe bandwidth, limited by 5.0 GT/s PCIe x1 link at 0000:00:00.0 (capable of 8.000 Gb/s with 5.0 GT/s PCIe x2 link)
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0: [12d8:b304] type 01 class 0x060400 PCIe Switch Downstream Port
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0: PCI bridge to [bus 00]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0:   bridge window [io  0x0000-0x0fff]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0:   bridge window [mem 0x00000000-0x000fffff]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0: supports D1 D2
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0: PME# supported from D0 D1 D2 D3hot D3cold
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0: [12d8:b304] type 01 class 0x060400 PCIe Switch Downstream Port
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0: PCI bridge to [bus 00]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0:   bridge window [io  0x0000-0x0fff]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0:   bridge window [mem 0x00000000-0x000fffff]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0: supports D1 D2
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0: PME# supported from D0 D1 D2 D3hot D3cold
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[Fri Nov 13 14:52:28 2026] pci 0000:03:00.0: [17cb:1103] type 00 class 0x028000 PCIe Endpoint
+[Fri Nov 13 14:52:28 2026] pci 0000:03:00.0: BAR 0 [mem 0x00000000-0x001fffff 64bit]
+[Fri Nov 13 14:52:28 2026] pci 0000:03:00.0: PME# supported from D0 D3hot D3cold
+[Fri Nov 13 14:52:28 2026] pci 0000:03:00.0: 4.000 Gb/s available PCIe bandwidth, limited by 5.0 GT/s PCIe x1 link at 0000:00:00.0 (capable of 7.876 Gb/s with 8.0 GT/s PCIe x1 link)
+[Fri Nov 13 14:52:28 2026] pci_bus 0000:03: busn_res: [bus 03-ff] end is updated to 03
+[Fri Nov 13 14:52:28 2026] pci 0000:04:00.0: [104c:8241] type 00 class 0x0c0330 PCIe Endpoint
+[Fri Nov 13 14:52:28 2026] pci 0000:04:00.0: BAR 0 [mem 0x00000000-0x0000ffff 64bit]
+[Fri Nov 13 14:52:28 2026] pci 0000:04:00.0: BAR 2 [mem 0x00000000-0x00001fff 64bit]
+[Fri Nov 13 14:52:28 2026] pci 0000:04:00.0: supports D1 D2
+[Fri Nov 13 14:52:28 2026] pci 0000:04:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[Fri Nov 13 14:52:28 2026] pci_bus 0000:04: busn_res: [bus 04-ff] end is updated to 04
+[Fri Nov 13 14:52:28 2026] pci_bus 0000:02: busn_res: [bus 02-ff] end is updated to 04
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: bridge window [mem 0x40300000-0x405fffff]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: bridge window [mem 0x40600000-0x407fffff 64bit pref]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: BAR 0 [mem 0x40800000-0x40800fff]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: bridge window [io  0x1000-0x1fff]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0: bridge window [mem 0x40300000-0x405fffff]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0: bridge window [mem 0x40400000-0x405fffff]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0: bridge window [mem 0x40300000-0x403fffff]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:03:00.0: BAR 0 [mem 0x40400000-0x405fffff 64bit]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0: PCI bridge to [bus 03]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:01.0:   bridge window [mem 0x40400000-0x405fffff]
+[Fri Nov 13 14:52:28 2026] pci 0000:04:00.0: BAR 0 [mem 0x40300000-0x4030ffff 64bit]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:04:00.0: BAR 2 [mem 0x40310000-0x40311fff 64bit]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0: PCI bridge to [bus 04]
+[Fri Nov 13 14:52:28 2026] pci 0000:02:02.0:   bridge window [mem 0x40300000-0x403fffff]
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0: PCI bridge to [bus 02-04]
+[Fri Nov 13 14:52:28 2026] pci 0000:01:00.0:   bridge window [mem 0x40300000-0x405fffff]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0:   bridge window [io  0x1000-0x1fff]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0:   bridge window [mem 0x40300000-0x405fffff]
+[Fri Nov 13 14:52:28 2026] pci 0000:00:00.0:   bridge window [mem 0x40600000-0x407fffff 64bit pref]
+[Fri Nov 13 14:52:28 2026] pcieport 0000:00:00.0: Adding to iommu group 4
+[Fri Nov 13 14:52:28 2026] pcieport 0000:00:00.0: Cannot get wake GPIO
+[Fri Nov 13 14:52:28 2026] pcieport 0000:00:00.0: PME: Signaling with IRQ 242
+[Fri Nov 13 14:52:28 2026] pcieport 0000:00:00.0: AER: enabled with IRQ 242
+[Fri Nov 13 14:52:28 2026] pcieport 0000:00:00.0: pciehp: Slot #0 AttnBtn+ PwrCtrl+ MRL+ AttnInd+ PwrInd+ HotPlug+ Surprise+ Interlock+ NoCompl+ IbPresDis- LLActRep+
+[Fri Nov 13 14:52:28 2026] pcieport 0000:01:00.0: Adding to iommu group 5
+[Fri Nov 13 14:52:28 2026] pcieport 0000:01:00.0: Cannot get wake GPIO
+[Fri Nov 13 14:52:28 2026] pcieport 0000:01:00.0: enabling device (0000 -> 0002)
+[Fri Nov 13 14:52:28 2026] pcieport 0000:02:01.0: Adding to iommu group 6
+[Fri Nov 13 14:52:28 2026] pcieport 0000:02:01.0: Cannot get wake GPIO
+[Fri Nov 13 14:52:28 2026] pcieport 0000:02:01.0: enabling device (0000 -> 0002)
+[Fri Nov 13 14:52:28 2026] pcieport 0000:02:02.0: Adding to iommu group 7
+[Fri Nov 13 14:52:28 2026] pcieport 0000:02:02.0: Cannot get wake GPIO
+[Fri Nov 13 14:52:28 2026] pcieport 0000:02:02.0: enabling device (0000 -> 0002)
+[Fri Nov 13 14:52:28 2026] pci 0000:04:00.0: enabling device (0000 -> 0002)
+[Fri Nov 13 14:52:28 2026] qcom-pcie 1c10000.pci: Phy link never came up
+[Fri Nov 13 14:52:28 2026] qcom-pcie 1c10000.pci: PCI host bridge to bus 0001:00
+[Fri Nov 13 14:52:28 2026] pci_bus 0001:00: root bus resource [bus 00-ff]
+[Fri Nov 13 14:52:28 2026] pci_bus 0001:00: root bus resource [io  0x100000-0x1fffff] (bus address [0x0000-0xfffff])
+[Fri Nov 13 14:52:28 2026] pci_bus 0001:00: root bus resource [mem 0x60300000-0x7fffffff]
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0: [17cb:0115] type 01 class 0x060400 PCIe Root Port
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0:   bridge window [io  0x100000-0x100fff]
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0: PME# supported from D0 D3hot D3cold
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0: PTM enabled (root), 16ns granularity
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0: bridge window [mem 0x60300000-0x604fffff]: assigned
+[Fri Nov 13 14:52:28 2026] pci 0001:00:00.0: bridge window [mem 0x60500000-0x606fffff 64bit pref]: assigned
+[Fri Nov 13 14:52:29 2026] pci 0001:00:00.0: BAR 0 [mem 0x60700000-0x60700fff]: assigned
+[Fri Nov 13 14:52:29 2026] pci 0001:00:00.0: bridge window [io  0x100000-0x100fff]: assigned
+[Fri Nov 13 14:52:29 2026] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[Fri Nov 13 14:52:29 2026] pci 0001:00:00.0:   bridge window [io  0x100000-0x100fff]
+[Fri Nov 13 14:52:29 2026] pci 0001:00:00.0:   bridge window [mem 0x60300000-0x604fffff]
+[Fri Nov 13 14:52:29 2026] pci 0001:00:00.0:   bridge window [mem 0x60500000-0x606fffff 64bit pref]
+[Fri Nov 13 14:52:29 2026] pcieport 0001:00:00.0: Adding to iommu group 8
+[Fri Nov 13 14:52:29 2026] pcieport 0001:00:00.0: Cannot get wake GPIO
+[Fri Nov 13 14:52:29 2026] pcieport 0001:00:00.0: PME: Signaling with IRQ 245
+[Fri Nov 13 14:52:29 2026] pcieport 0001:00:00.0: AER: enabled with IRQ 245
+[Fri Nov 13 14:52:29 2026] pcieport 0001:00:00.0: pciehp: Slot #0 AttnBtn+ PwrCtrl+ MRL+ AttnInd+ PwrInd+ HotPlug+ Surprise+ Interlock+ NoCompl+ IbPresDis- LLActRep+
+[Fri Nov 13 14:52:29 2026] Freeing unused kernel memory: 11136K
+[Fri Nov 13 14:52:29 2026] Checked W+X mappings: passed, no W+X pages found
+[Fri Nov 13 14:52:29 2026] Run /init as init process
+[Fri Nov 13 14:52:29 2026]   with arguments:
+[Fri Nov 13 14:52:29 2026]     /init
+[Fri Nov 13 14:52:29 2026]   with environment:
+[Fri Nov 13 14:52:29 2026]     HOME=/
+[Fri Nov 13 14:52:29 2026]     TERM=linux
+[Fri Nov 13 14:52:29 2026] i2c-gpio cci1_i2c1_gpio: using lines 567 (SDA) and 568 (SCL)
+[Fri Nov 13 14:52:29 2026] dwc3-qcom a600000.usb: Adding to iommu group 9
+[Fri Nov 13 14:52:29 2026] arm-smmu 3da0000.iommu: probing hardware configuration...
+[Fri Nov 13 14:52:29 2026] arm-smmu 3da0000.iommu: SMMUv2 with:
+[Fri Nov 13 14:52:29 2026] arm-smmu 3da0000.iommu: 	stage 1 translation
+[Fri Nov 13 14:52:29 2026] arm-smmu 3da0000.iommu: 	coherent table walk
+[Fri Nov 13 14:52:29 2026] xhci_hcd 0000:04:00.0: Adding to iommu group 7
+[Fri Nov 13 14:52:29 2026] xhci_hcd 0000:04:00.0: xHCI Host Controller
+[Fri Nov 13 14:52:29 2026] arm-smmu 3da0000.iommu: 	stream matching with 9 register groups
+[Fri Nov 13 14:52:29 2026] xhci_hcd 0000:04:00.0: new USB bus registered, assigned bus number 1
+[Fri Nov 13 14:52:29 2026] arm-smmu 3da0000.iommu: 	7 context banks (0 stage-2 only)
+[Fri Nov 13 14:52:29 2026] xhci_hcd 0000:04:00.0: hcc params 0x0270f06d hci version 0x96 quirks 0x0000000004000000
+[Fri Nov 13 14:52:29 2026] arm-smmu 3da0000.iommu: 	Supported page sizes: 0x61311000
+[Fri Nov 13 14:52:29 2026] xhci_hcd 0000:04:00.0: xHCI Host Controller
+[Fri Nov 13 14:52:29 2026] dwc3 a400000.usb: Adding to iommu group 10
+[Fri Nov 13 14:52:29 2026] arm-smmu 3da0000.iommu: 	Stage-1: 48-bit VA -> 36-bit IPA
+[Fri Nov 13 14:52:29 2026] arm-smmu 3da0000.iommu: 	preserved 0 boot mappings
+[Fri Nov 13 14:52:29 2026] xhci_hcd 0000:04:00.0: new USB bus registered, assigned bus number 2
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: Adding to iommu group 11
+[Fri Nov 13 14:52:29 2026] xhci_hcd 0000:04:00.0: Host supports USB 3.0 SuperSpeed
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: IRQ eth_wake_irq not found
+[Fri Nov 13 14:52:29 2026] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.08
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: User ID: 0x20, Synopsys ID: 0x52
+[Fri Nov 13 14:52:29 2026] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Fri Nov 13 14:52:29 2026] usb usb1: Product: xHCI Host Controller
+[Fri Nov 13 14:52:29 2026] usb usb1: Manufacturer: Linux 6.8.0-1080-qcom xhci-hcd
+[Fri Nov 13 14:52:29 2026] usb usb1: SerialNumber: 0000:04:00.0
+[Fri Nov 13 14:52:29 2026] hub 1-0:1.0: USB hub found
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: 	DWMAC4/5
+[Fri Nov 13 14:52:29 2026] hub 1-0:1.0: 4 ports detected
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: DMA HW capability register supported
+[Fri Nov 13 14:52:29 2026] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: RX Checksum Offload Engine supported
+[Fri Nov 13 14:52:29 2026] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.08
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: TX Checksum insertion supported
+[Fri Nov 13 14:52:29 2026] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Fri Nov 13 14:52:29 2026] usb usb2: Product: xHCI Host Controller
+[Fri Nov 13 14:52:29 2026] usb usb2: Manufacturer: Linux 6.8.0-1080-qcom xhci-hcd
+[Fri Nov 13 14:52:29 2026] usb usb2: SerialNumber: 0000:04:00.0
+[Fri Nov 13 14:52:29 2026] hub 2-0:1.0: USB hub found
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: TSO supported
+[Fri Nov 13 14:52:29 2026] hub 2-0:1.0: 4 ports detected
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[Fri Nov 13 14:52:29 2026] ucsi_ccg 12-0008: ccg device info: fw_version:524288 mode:146 bl_mode:0 silicon_id:0x3e00 bl_last_row:0x0001
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: device MAC address 8a:79:17:c9:3a:61
+[Fri Nov 13 14:52:29 2026] rtc-pm8xxx c440000.spmi:pmic@0:rtc@6100: registered as rtc0
+[Fri Nov 13 14:52:29 2026] rtc-pm8xxx c440000.spmi:pmic@0:rtc@6100: setting system clock to 1970-01-01T00:00:30 UTC (30)
+[Fri Nov 13 14:52:29 2026] ucsi_ccg 12-0008: uc->fw_version:524288
+[Fri Nov 13 14:52:29 2026] qcom-ethqos 23040000.ethernet: Enabled L3L4 Flow TC (entries=8)
+[Fri Nov 13 14:52:30 2026] qcom-ethqos 23040000.ethernet: Enabled RFS Flow TC (entries=10)
+[Fri Nov 13 14:52:30 2026] qcom-ethqos 23040000.ethernet: Enabling HW TC (entries=128, max_off=64)
+[Fri Nov 13 14:52:30 2026] qcom-ethqos 23040000.ethernet: TSO feature enabled
+[Fri Nov 13 14:52:30 2026] qcom-ethqos 23040000.ethernet: Using 36/40 bits DMA host/device width
+[Fri Nov 13 14:52:30 2026] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[Fri Nov 13 14:52:30 2026] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 3
+[Fri Nov 13 14:52:30 2026] xhci-hcd xhci-hcd.0.auto: USB3 root hub has no ports
+[Fri Nov 13 14:52:30 2026] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x0000008000000010
+[Fri Nov 13 14:52:30 2026] xhci-hcd xhci-hcd.0.auto: irq 275, io mem 0x0a400000
+[Fri Nov 13 14:52:30 2026] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.08
+[Fri Nov 13 14:52:30 2026] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[Fri Nov 13 14:52:30 2026] usb usb3: Product: xHCI Host Controller
+[Fri Nov 13 14:52:30 2026] usb usb3: Manufacturer: Linux 6.8.0-1080-qcom xhci-hcd
+[Fri Nov 13 14:52:30 2026] usb usb3: SerialNumber: xhci-hcd.0.auto
+[Fri Nov 13 14:52:30 2026] hub 3-0:1.0: USB hub found
+[Fri Nov 13 14:52:30 2026] hub 3-0:1.0: 1 port detected
+[Fri Nov 13 14:52:30 2026] measure-debugcc-qcs8300 soc@0:clock-controller@0: Registered debug measure clocks
+[Fri Nov 13 14:52:30 2026] qcom-ethqos 23040000.ethernet end0: renamed from eth0
+[Fri Nov 13 14:52:30 2026] raid6: neonx8   gen() 11431 MB/s
+[Fri Nov 13 14:52:30 2026] raid6: neonx4   gen() 11266 MB/s
+[Fri Nov 13 14:52:30 2026] raid6: neonx2   gen() 10602 MB/s
+[Fri Nov 13 14:52:30 2026] raid6: neonx1   gen()  9281 MB/s
+[Fri Nov 13 14:52:30 2026] raid6: int64x8  gen()  6903 MB/s
+[Fri Nov 13 14:52:30 2026] raid6: int64x4  gen()  6681 MB/s
+[Fri Nov 13 14:52:30 2026] raid6: int64x2  gen()  5496 MB/s
+[Fri Nov 13 14:52:30 2026] raid6: int64x1  gen()  4398 MB/s
+[Fri Nov 13 14:52:30 2026] raid6: using algorithm neonx8 gen() 11431 MB/s
+[Fri Nov 13 14:52:30 2026] raid6: .... xor() 9104 MB/s, rmw enabled
+[Fri Nov 13 14:52:30 2026] raid6: using neon recovery algorithm
+[Fri Nov 13 14:52:30 2026] xor: measuring software checksum speed
+[Fri Nov 13 14:52:30 2026]    8regs           : 16780 MB/sec
+[Fri Nov 13 14:52:30 2026]    32regs          : 15712 MB/sec
+[Fri Nov 13 14:52:30 2026]    arm64_neon      : 22204 MB/sec
+[Fri Nov 13 14:52:30 2026] xor: using function: arm64_neon (22204 MB/sec)
+[Fri Nov 13 14:52:30 2026] async_tx: api initialized (async)
+[Fri Nov 13 14:52:30 2026] Btrfs loaded, zoned=yes, fsverity=yes
+[Fri Nov 13 14:52:31 2026] EXT4-fs (mmcblk0p71): mounted filesystem a56f7e24-a1c7-415f-81f3-4e7c737a2d70 ro with ordered data mode. Quota mode: none.
+[Fri Nov 13 14:52:32 2026] EXT4-fs (mmcblk0p71): re-mounted a56f7e24-a1c7-415f-81f3-4e7c737a2d70 r/w.
+[Fri Nov 13 14:52:32 2026] EXT4-fs (mmcblk0p71): re-mounted a56f7e24-a1c7-415f-81f3-4e7c737a2d70 ro.
+[Fri Nov 13 14:52:32 2026] systemd[1]: System time before build time, advancing clock.
+[Fri Nov 13 14:52:32 2026] systemd[1]: Inserted module 'autofs4'
+[Fri Nov 13 14:52:32 2026] systemd[1]: systemd 255.4-1ubuntu8.16 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[Fri Nov 13 14:52:32 2026] systemd[1]: Detected architecture arm64.
+[Fri Nov 13 14:52:32 2026] systemd[1]: Hostname set to <ventunoq>.
+[Fri Nov 13 14:52:33 2026] systemd[1]: Queued start job for default target graphical.target.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Created slice user.slice - User and Session Slice.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Expecting device dev-disk-by\x2dlabel-persist.device - /dev/disk/by-label/persist...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Expecting device dev-disk-by\x2dlabel-system\x2dboot.device - /dev/disk/by-label/system-boot...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Expecting device dev-ttyMSM0.device - /dev/ttyMSM0...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Reached target slices.target - Slice Units.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Reached target snapd.mounts-pre.target - Mounting snaps.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Reached target swap.target - Swaps.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on multipathd.socket - multipathd control socket.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on syslog.socket - Syslog Socket.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on systemd-oomd.socket - Userspace Out-Of-Memory (OOM) Killer Socket.
+[Fri Nov 13 14:52:34 2026] systemd[1]: systemd-pcrextend.socket - TPM2 PCR Extension (Varlink) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting systemd-journald.service - Journal Service...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[Fri Nov 13 14:52:34 2026] systemd-journald[564]: Collecting audit messages is disabled.
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+[Fri Nov 13 14:52:34 2026] pstore: Using crash dump compression: deflate
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting systemd-fsck-root.service - File System Check on Root Device...
+[Fri Nov 13 14:52:34 2026] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[Fri Nov 13 14:52:35 2026] pstore: Registered efi_pstore as persistent store backend
+[Fri Nov 13 14:52:35 2026] systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[Fri Nov 13 14:52:35 2026] systemd[1]: systemd-tpm2-setup-early.service - TPM2 SRK Setup (Early) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[Fri Nov 13 14:52:35 2026] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[Fri Nov 13 14:52:35 2026] systemd[1]: Started systemd-journald.service - Journal Service.
+[Fri Nov 13 14:52:35 2026] EXT4-fs (mmcblk0p71): re-mounted a56f7e24-a1c7-415f-81f3-4e7c737a2d70 r/w.
+[Fri Nov 13 14:52:35 2026] systemd-journald[564]: Received client request to flush runtime journal.
+[Fri Nov 13 14:52:35 2026] loop0: detected capacity change from 0 to 8
+[Fri Nov 13 14:52:35 2026] loop1: detected capacity change from 0 to 126688
+[Fri Nov 13 14:52:35 2026] loop2: detected capacity change from 0 to 1132440
+[Fri Nov 13 14:52:35 2026] loop3: detected capacity change from 0 to 491856
+[Fri Nov 13 14:52:35 2026] loop4: detected capacity change from 0 to 357512
+[Fri Nov 13 14:52:35 2026] loop5: detected capacity change from 0 to 187776
+[Fri Nov 13 14:52:35 2026] loop6: detected capacity change from 0 to 30504
+[Fri Nov 13 14:52:35 2026] loop7: detected capacity change from 0 to 88824
+[Fri Nov 13 14:52:35 2026] loop8: detected capacity change from 0 to 1600
+[Fri Nov 13 14:52:36 2026] cpu cpu0: Voltage update failed freq=902400
+[Fri Nov 13 14:52:36 2026] cpu cpu0: failed to update OPP for freq=902400
+[Fri Nov 13 14:52:36 2026] cpu cpu0: Voltage update failed freq=1017600
+[Fri Nov 13 14:52:36 2026] cpu cpu0: failed to update OPP for freq=1017600
+[Fri Nov 13 14:52:36 2026] cpu cpu0: EM: OPP:1824000 is inefficient
+[Fri Nov 13 14:52:36 2026] cpu cpu0: EM: OPP:1747200 is inefficient
+[Fri Nov 13 14:52:36 2026] cpu cpu0: EM: OPP:1670400 is inefficient
+[Fri Nov 13 14:52:36 2026] cpu cpu0: EM: OPP:1574400 is inefficient
+[Fri Nov 13 14:52:36 2026] cpu cpu0: EM: created perf domain
+[Fri Nov 13 14:52:36 2026] qcrypto 1dfa000.crypto: Adding to iommu group 0
+[Fri Nov 13 14:52:36 2026] cpu cpu2: Voltage update failed freq=940800
+[Fri Nov 13 14:52:36 2026] cpu cpu2: failed to update OPP for freq=940800
+[Fri Nov 13 14:52:36 2026] cpu cpu2: Voltage update failed freq=1094400
+[Fri Nov 13 14:52:36 2026] cpu cpu2: failed to update OPP for freq=1094400
+[Fri Nov 13 14:52:36 2026] leds-pca963x 13-0022: Led pca963x:red renamed to pca963x:red_1 due to name collision
+[Fri Nov 13 14:52:36 2026] cpu cpu2: EM: created perf domain
+[Fri Nov 13 14:52:36 2026] cpu cpu4: Voltage update failed freq=844800
+[Fri Nov 13 14:52:36 2026] cpu cpu4: failed to update OPP for freq=844800
+[Fri Nov 13 14:52:36 2026] cpu cpu4: Voltage update failed freq=1459200
+[Fri Nov 13 14:52:36 2026] cpu cpu4: failed to update OPP for freq=1459200
+[Fri Nov 13 14:52:36 2026] leds-pca963x 13-0022: Led pca963x:green renamed to pca963x:green_1 due to name collision
+[Fri Nov 13 14:52:36 2026] leds-pca963x 13-0022: Led pca963x:blue renamed to pca963x:blue_1 due to name collision
+[Fri Nov 13 14:52:36 2026] leds-pca963x 13-0022: Led pca963x:red renamed to pca963x:red_2 due to name collision
+[Fri Nov 13 14:52:36 2026] leds-pca963x 13-0022: Led pca963x:green renamed to pca963x:green_2 due to name collision
+[Fri Nov 13 14:52:36 2026] cpu cpu4: EM: created perf domain
+[Fri Nov 13 14:52:36 2026] leds-pca963x 13-0022: Led pca963x:blue renamed to pca963x:blue_2 due to name collision
+[Fri Nov 13 14:52:36 2026] leds-pca963x 13-0022: Led pca963x:red renamed to pca963x:red_3 due to name collision
+[Fri Nov 13 14:52:36 2026] leds-pca963x 13-0022: Led pca963x:green renamed to pca963x:green_3 due to name collision
+[Fri Nov 13 14:52:36 2026] leds-pca963x 13-0022: Led pca963x:blue renamed to pca963x:blue_3 due to name collision
+[Fri Nov 13 14:52:36 2026] gpi 900000.dma-controller: Adding to iommu group 12
+[Fri Nov 13 14:52:36 2026] mc: Linux media interface: v0.10
+[Fri Nov 13 14:52:36 2026] EDAC DEVICE0: Giving out device to module qcom_llcc_edac controller llcc: DEV qcom_llcc_edac (INTERRUPT)
+[Fri Nov 13 14:52:36 2026] videodev: Linux video capture interface: v2.00
+[Fri Nov 13 14:52:36 2026] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[Fri Nov 13 14:52:36 2026] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[Fri Nov 13 14:52:36 2026] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[Fri Nov 13 14:52:36 2026] NET: Registered PF_QIPCRTR protocol family
+[Fri Nov 13 14:52:36 2026] remoteproc remoteproc0: 3000000.remoteproc is available
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc0: powering up 3000000.remoteproc
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc0: Booting fw image qcom/qcs8300/adsp.mbn, size 6791168
+[Fri Nov 13 14:52:37 2026] gpi a00000.dma-controller: Adding to iommu group 13
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc1: 20c00000.remoteproc is available
+[Fri Nov 13 14:52:37 2026] ath11k_pci 0000:03:00.0: Adding to iommu group 6
+[Fri Nov 13 14:52:37 2026] ath11k_pci 0000:03:00.0: BAR 0 [mem 0x40400000-0x405fffff 64bit]: assigned
+[Fri Nov 13 14:52:37 2026] ath11k_pci 0000:03:00.0: enabling device (0000 -> 0002)
+[Fri Nov 13 14:52:37 2026] msm_vidc_v4l2 aa00000.video-codec: Adding to iommu group 14
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc1: powering up 20c00000.remoteproc
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc0: remote processor 3000000.remoteproc is now up
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc1: Booting fw image qcom/qcs8300/gpdsp0.mbn, size 5988352
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc2: 26300000.remoteproc is available
+[Fri Nov 13 14:52:37 2026] msm_vidc: err : ffffffff: codec: __init_power_domains: opp name mx
+[Fri Nov 13 14:52:37 2026] msm_vidc: err : ffffffff: codec: __init_power_domains: opp name mmcx
+[Fri Nov 13 14:52:37 2026] ath11k_pci 0000:03:00.0: MSI vectors: 32
+[Fri Nov 13 14:52:37 2026] ath11k_pci 0000:03:00.0: qca2066 hw2.1
+[Fri Nov 13 14:52:37 2026] qcom,apr 3000000.remoteproc:glink-edge.adsp_apps.-1.-1: Adding APR/GPR dev: gprsvc:service:2:1
+[Fri Nov 13 14:52:37 2026] qcom,apr 3000000.remoteproc:glink-edge.adsp_apps.-1.-1: Adding APR/GPR dev: gprsvc:service:2:2
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc2: powering up 26300000.remoteproc
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc2: Booting fw image qcom/qcs8300/cdsp0.mbn, size 3170304
+[Fri Nov 13 14:52:37 2026] msm_vidc_v4l2 aa00000.video-codec:non_secure_pixel_cb: Adding to iommu group 14
+[Fri Nov 13 14:52:37 2026] ina2xx 12-0040: power monitor ina232 (Rshunt = 2000 uOhm)
+[Fri Nov 13 14:52:37 2026] EXT4-fs (mmcblk0p70): mounted filesystem 55c68bf0-398c-4cbb-ad8b-b5b40d5c7f8d r/w with ordered data mode. Quota mode: none.
+[Fri Nov 13 14:52:37 2026] msm_vidc_v4l2 aa00000.video-codec:non_secure_cb: Adding to iommu group 14
+[Fri Nov 13 14:52:37 2026] msm_vidc_v4l2 aa00000.video-codec: bound aa00000.video-codec:non_secure_pixel_cb (ops msm_vidc_component_ops [iris_vpu])
+[Fri Nov 13 14:52:37 2026] msm_vidc_v4l2 aa00000.video-codec: bound aa00000.video-codec:non_secure_cb (ops msm_vidc_component_ops [iris_vpu])
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc1: remote processor 20c00000.remoteproc is now up
+[Fri Nov 13 14:52:37 2026] msm_vidc: err : ffffffff: codec: __switch_gdsc_mode_iris3: Failed to read WRAPPER_CORE_POWER_STATUS register to 0x0
+[Fri Nov 13 14:52:37 2026] msm_vidc: err : ffffffff: codec: Failed to switch GDSC into HW control, err: -110
+[Fri Nov 13 14:52:37 2026] msm_vidc: err : ffffffff: codec: __sys_set_power_control: skipping as power control hanfoff was not done
+[Fri Nov 13 14:52:37 2026] mhi mhi0: Requested to power ON
+[Fri Nov 13 14:52:37 2026] mhi mhi0: Power on setup success
+[Fri Nov 13 14:52:37 2026] input: pmic_pwrkey as /devices/platform/soc@0/c440000.spmi/spmi-0/0-00/c440000.spmi:pmic@0:pon@1200/c440000.spmi:pmic@0:pon@1200:pwrkey/input/input0
+[Fri Nov 13 14:52:37 2026] Bluetooth: Core ver 2.22
+[Fri Nov 13 14:52:37 2026] NET: Registered PF_BLUETOOTH protocol family
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI device and connection manager initialized
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI socket layer initialized
+[Fri Nov 13 14:52:37 2026] Bluetooth: L2CAP socket layer initialized
+[Fri Nov 13 14:52:37 2026] Bluetooth: SCO socket layer initialized
+[Fri Nov 13 14:52:37 2026] input: pmic_resin as /devices/platform/soc@0/c440000.spmi/spmi-0/0-00/c440000.spmi:pmic@0:pon@1200/c440000.spmi:pmic@0:pon@1200:resin/input/input1
+[Fri Nov 13 14:52:37 2026] remoteproc remoteproc2: remote processor 26300000.remoteproc is now up
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART driver ver 2.3
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol H4 registered
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol BCSP registered
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol LL registered
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol ATH3K registered
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol Intel registered
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol Broadcom registered
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol QCA registered
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol AG6XX registered
+[Fri Nov 13 14:52:37 2026] mhi mhi0: Wait for device to enter SBL or Mission mode
+[Fri Nov 13 14:52:37 2026] Bluetooth: HCI UART protocol Marvell registered
+[Fri Nov 13 14:52:37 2026] Bluetooth: hci0: setting up qca2066
+[Fri Nov 13 14:52:37 2026] adreno 3d00000.gpu: Adding to iommu group 15
+[Fri Nov 13 14:52:37 2026] msm-mdss ae00000.display-subsystem: Adding to iommu group 16
+[Fri Nov 13 14:52:37 2026] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[Fri Nov 13 14:52:37 2026] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af54000
+[Fri Nov 13 14:52:37 2026] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[Fri Nov 13 14:52:37 2026] /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/dsi@ae94000
+[Fri Nov 13 14:52:37 2026] /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/geniqup@ac0000/i2c@a90000/hdmi@3d
+[Fri Nov 13 14:52:37 2026] /soc@0/display-subsystem@ae00000/dsi@ae94000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.295:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=967 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.295:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=964 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.295:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=963 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.295:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="cam" pid=970 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.296:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=968 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.296:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=965 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.296:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=966 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.297:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="buildah" pid=969 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.299:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-checkns" pid=981 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] audit: type=1400 audit(1780673794.306:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="chrome" pid=986 comm="apparmor_parser"
+[Fri Nov 13 14:52:37 2026] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@af54000
+[Fri Nov 13 14:52:38 2026] /soc@0/display-subsystem@ae00000/displayport-controller@af54000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[Fri Nov 13 14:52:38 2026] msm_dsi ae94000.dsi: supply refgen not found, using dummy regulator
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc 3000000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[Fri Nov 13 14:52:38 2026] fastrpc: fastrpc_setup_service_locator: pdr_add_lookup enabled for avs/audio (audio_pdr_adsp, msm/adsp/audio_pd)
+[Fri Nov 13 14:52:38 2026] fastrpc: fastrpc_setup_service_locator: pdr_add_lookup enabled for tms/servreg (sensors_pdr_adsp, msm/adsp/sensor_pd)
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 3000000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 17
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 3000000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 18
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 3000000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 19
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc 20c00000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 20c00000.remoteproc:glink-edge:fastrpc:compute-cb@1: Adding to iommu group 20
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0093-7925621ff52ecb7b1565341042c4e5ffd4fc76ce
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=PROD
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hw-tdoradla-hyd
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Aug 25 2025 23:47:14
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0093-7925621ff52ecb7b1565341042c4e5ffd4fc76ce
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=PROD
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hw-tdoradla-hyd
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Aug 25 2025 23:47:14
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0093-7925621ff52ecb7b1565341042c4e5ffd4fc76ce
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=PROD
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hw-tdoradla-hyd
+[Fri Nov 13 14:52:38 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Aug 25 2025 23:47:14
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 20c00000.remoteproc:glink-edge:fastrpc:compute-cb@2: Adding to iommu group 21
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 20c00000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 22
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc 26300000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: no reserved DMA memory for FASTRPC
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@1: Adding to iommu group 23
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@2: Adding to iommu group 24
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@3: Adding to iommu group 25
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@4: Adding to iommu group 26
+[Fri Nov 13 14:52:38 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@5: Adding to iommu group 27
+[Fri Nov 13 14:52:39 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@6: Adding to iommu group 28
+[Fri Nov 13 14:52:39 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@7: Adding to iommu group 29
+[Fri Nov 13 14:52:39 2026] ath11k_pci 0000:03:00.0: chip_id 0x12 chip_family 0xb board_id 0xff soc_id 0x400c1211
+[Fri Nov 13 14:52:39 2026] ath11k_pci 0000:03:00.0: fw_version 0x110a8122 fw_build_timestamp 2026-07-21 04:50 fw_build_id WLAN.HSP.1.1.c6-00290-QCAHSPSWPL_V1_V2_SILICONZ_LITE-1
+[Fri Nov 13 14:52:39 2026] msm_dpu ae01000.display-controller: bound af54000.displayport-controller (ops msm_dp_display_comp_ops [msm])
+[Fri Nov 13 14:52:39 2026] msm_dpu ae01000.display-controller: bound ae94000.dsi (ops dsi_ops [msm])
+[Fri Nov 13 14:52:39 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@8: Adding to iommu group 30
+[Fri Nov 13 14:52:39 2026] adreno 3d00000.gpu: supply vdd not found, using dummy regulator
+[Fri Nov 13 14:52:39 2026] adreno 3d00000.gpu: supply vddcx not found, using dummy regulator
+[Fri Nov 13 14:52:39 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@9: Adding to iommu group 31
+[Fri Nov 13 14:52:39 2026] platform 3d6a000.gmu: Adding to iommu group 32
+[Fri Nov 13 14:52:39 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@11: Adding to iommu group 33
+[Fri Nov 13 14:52:39 2026] msm_dpu ae01000.display-controller: bound 3d00000.gpu (ops a3xx_ops [msm])
+[Fri Nov 13 14:52:39 2026] qcom,fastrpc-cb 26300000.remoteproc:glink-edge:fastrpc:compute-cb@12: Adding to iommu group 34
+[Fri Nov 13 14:52:39 2026] [drm:dpu_kms_hw_init:1088] dpu hardware revision:0x80040000
+[Fri Nov 13 14:52:39 2026] [drm] Initialized msm 1.12.0 20130625 for ae01000.display-controller on minor 0
+[Fri Nov 13 14:52:39 2026] msm_dpu ae01000.display-controller: [drm:adreno_request_fw [msm]] loaded qcom/a650_sqe.fw from new location
+[Fri Nov 13 14:52:39 2026] msm_dpu ae01000.display-controller: [drm:adreno_request_fw [msm]] loaded qcom/a623_gmu.bin from new location
+[Fri Nov 13 14:52:39 2026] msm_dpu ae01000.display-controller: [drm] Cannot find any crtc or sizes
+[Fri Nov 13 14:52:39 2026] msm_dpu ae01000.display-controller: [drm] Cannot find any crtc or sizes
+[Fri Nov 13 14:52:39 2026] msm_dpu ae01000.display-controller: [drm] Cannot find any crtc or sizes
+[Fri Nov 13 14:52:39 2026] ath11k_pci 0000:03:00.0 wlp3s0: renamed from wlan0
+[Fri Nov 13 14:52:40 2026] Bluetooth: hci0: command 0xfc00 tx timeout
+[Fri Nov 13 14:52:40 2026] Bluetooth: hci0: Reading QCA version information failed (-110)
+[Fri Nov 13 14:52:40 2026] Bluetooth: hci0: Retry BT power ON:0
+[Fri Nov 13 14:52:40 2026] Bluetooth: Received HCI_IBS_WAKE_ACK in tx state 0
+[Fri Nov 13 14:52:40 2026] Bluetooth: hci0: QCA Product ID   :0x00000013
+[Fri Nov 13 14:52:40 2026] Bluetooth: hci0: QCA SOC Version  :0x400c1211
+[Fri Nov 13 14:52:40 2026] Bluetooth: hci0: QCA ROM Version  :0x00000201
+[Fri Nov 13 14:52:40 2026] Bluetooth: hci0: QCA Patch Version:0x000038e6
+[Fri Nov 13 14:52:40 2026] Bluetooth: hci0: QCA controller version 0x12110201
+[Fri Nov 13 14:52:40 2026] Bluetooth: hci0: QCA Downloading qca/hpbtfw21.tlv
+[Fri Nov 13 14:52:40 2026] qcom-apm gprsvc:service:2:1: CMD timeout for [1001021] opcode
+[Fri Nov 13 14:52:40 2026] q6apm-dai 3000000.remoteproc:glink-edge:gpr:service@1:dais: Adding to iommu group 35
+[Fri Nov 13 14:52:40 2026] snd-qcs9100 sound: ASoC: Parent card not yet available, widget card binding deferred
+[Fri Nov 13 14:52:40 2026] max98090 12-0010: MAX98091 REVID=0x52
+[Fri Nov 13 14:52:40 2026] max98090 12-0010: use default 2.8v micbias
+[Fri Nov 13 14:52:40 2026] ALSA: Control name 'stream0.vol_ctrl0 MultiMedia1 Playback Volume' truncated to 'stream0.vol_ctrl0 MultiMedia1 Playback Volu'
+[Fri Nov 13 14:52:40 2026] ALSA: Control name 'stream2.vol_ctrl2 MultiMedia3 Playback Volume' truncated to 'stream2.vol_ctrl2 MultiMedia3 Playback Volu'
+[Fri Nov 13 14:52:41 2026] Bluetooth: hci0: QCA Downloading qca/hpnv21g.bin
+[Fri Nov 13 14:52:41 2026] Bluetooth: hci0: QCA setup on UART is completed
+[Fri Nov 13 14:52:41 2026] Bluetooth: hci0: HFP non-HCI data transport is supported
+[Fri Nov 13 14:52:42 2026] kauditd_printk_skb: 127 callbacks suppressed
+[Fri Nov 13 14:52:42 2026] audit: type=1400 audit(1780673799.525:139): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.mesa-2404.hook.post-refresh" pid=1580 comm="apparmor_parser"
+[Fri Nov 13 14:52:42 2026] audit: type=1400 audit(1780673799.560:140): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.firefox.hook.disconnect-plug-host-hunspell" pid=1573 comm="apparmor_parser"
+[Fri Nov 13 14:52:43 2026] audit: type=1400 audit(1780673799.778:141): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.mesa-2404.hook.install" pid=1579 comm="apparmor_parser"
+[Fri Nov 13 14:52:43 2026] audit: type=1400 audit(1780673799.890:142): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.firefox" pid=1566 comm="apparmor_parser"
+[Fri Nov 13 14:52:43 2026] audit: type=1400 audit(1780673799.994:143): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.snapd-desktop-integration" pid=1569 comm="apparmor_parser"
+[Fri Nov 13 14:52:43 2026] audit: type=1400 audit(1780673800.174:144): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.firefox.geckodriver" pid=1571 comm="apparmor_parser"
+[Fri Nov 13 14:52:43 2026] audit: type=1400 audit(1780673800.205:145): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.firefox.firefox" pid=1570 comm="apparmor_parser"
+[Fri Nov 13 14:52:43 2026] audit: type=1400 audit(1780673800.549:146): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.snap-store.hook.configure" pid=1581 comm="apparmor_parser"
+[Fri Nov 13 14:52:44 2026] audit: type=1400 audit(1780673800.611:147): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.snap-store" pid=1568 comm="apparmor_parser"
+[Fri Nov 13 14:52:44 2026] audit: type=1400 audit(1780673800.820:148): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.snap-store.show-updates" pid=1583 comm="apparmor_parser"
+[Fri Nov 13 14:52:49 2026] EXT4-fs (mmcblk0p71): resizing filesystem from 3986821 to 14647296 blocks
+[Fri Nov 13 14:52:51 2026] platform gpio-keys: deferred probe pending: platform: wait for supplier /thermal-zones/gpio_sleep_button_default
+[Fri Nov 13 14:52:51 2026] qnoc-qcs8300 interconnect-mc-virt: Timed out. Forcing sync_state()
+[Fri Nov 13 14:52:51 2026] qnoc-qcs8300 interconnect-mmss-noc: Timed out. Forcing sync_state()
+[Fri Nov 13 14:52:51 2026] qnoc-qcs8300 interconnect-config-noc: Timed out. Forcing sync_state()
+[Fri Nov 13 14:52:51 2026] qnoc-qcs8300 interconnect-gem-noc: Timed out. Forcing sync_state()
+[Fri Nov 13 14:52:51 2026] EXT4-fs (mmcblk0p71): resized filesystem to 14647296
+[Fri Nov 13 14:52:54 2026] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[Fri Nov 13 14:52:54 2026] Bluetooth: BNEP filters: protocol multicast
+[Fri Nov 13 14:52:54 2026] Bluetooth: BNEP socket layer initialized
+[Fri Nov 13 14:52:54 2026] Bluetooth: MGMT ver 1.22
+[Fri Nov 13 14:52:54 2026] NET: Registered PF_ALG protocol family
+[Fri Nov 13 14:52:54 2026] PDR: service lookup for tms/servreg failed: -6
+[Fri Nov 13 14:52:54 2026] qcom,fastrpc 3000000.remoteproc:glink-edge.fastrpcglink-apps-dsp.-1.-1: fastrpc_pdr_cb: msm/adsp/audio_pd (audio_pdr_adsp) is up for PDR on 0
+[Fri Nov 13 14:52:54 2026] kauditd_printk_skb: 4 callbacks suppressed
+[Fri Nov 13 14:52:54 2026] audit: type=1400 audit(1780673811.517:153): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="rsyslogd" pid=1740 comm="apparmor_parser"
+[Fri Nov 13 14:52:54 2026] Bluetooth: hci0: setting up qca2066
+[Fri Nov 13 14:52:55 2026] Bluetooth: hci0: Frame reassembly failed (-84)
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-1
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-2
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-3
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: PHY [stmmac-0:1c] driver [Qualcomm QCA8081] (irq=POLL)
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: Enabling Safety Features
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: IEEE 1588-2008 Advanced Timestamp supported
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: registered PTP clock
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: FPE workqueue start
+[Fri Nov 13 14:52:56 2026] qcom-ethqos 23040000.ethernet end0: configuring for phy/2500base-x link mode
+[Fri Nov 13 14:52:56 2026] usb 3-1: new high-speed USB device number 2 using xhci-hcd
+[Fri Nov 13 14:52:57 2026] audit: type=1400 audit(1780673813.677:154): apparmor="DENIED" operation="capable" class="cap" profile="/usr/sbin/cupsd" pid=2062 comm="cupsd" capability=12  capname="net_admin"
+[Fri Nov 13 14:52:57 2026] Bluetooth: hci0: command 0xfc00 tx timeout
+[Fri Nov 13 14:52:57 2026] Bluetooth: hci0: Reading QCA version information failed (-110)
+[Fri Nov 13 14:52:57 2026] Bluetooth: hci0: Retry BT power ON:0
+[Fri Nov 13 14:52:57 2026] loop9: detected capacity change from 0 to 8
+[Fri Nov 13 14:52:57 2026] Bluetooth: Received HCI_IBS_WAKE_ACK in tx state 0
+[Fri Nov 13 14:52:57 2026] Bluetooth: hci0: QCA Product ID   :0x00000013
+[Fri Nov 13 14:52:57 2026] Bluetooth: hci0: QCA SOC Version  :0x400c1211
+[Fri Nov 13 14:52:57 2026] Bluetooth: hci0: QCA ROM Version  :0x00000201
+[Fri Nov 13 14:52:57 2026] Bluetooth: hci0: QCA Patch Version:0x000038e6
+[Fri Nov 13 14:52:57 2026] Bluetooth: hci0: QCA controller version 0x12110201
+[Fri Nov 13 14:52:57 2026] Bluetooth: hci0: QCA Downloading qca/hpbtfw21.tlv
+[Fri Nov 13 14:52:58 2026] audit: type=1400 audit(1780673814.997:155): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/snapd/27407/usr/lib/snapd/snap-confine" pid=2151 comm="apparmor_parser"
+[Fri Nov 13 14:52:58 2026] Bluetooth: hci0: QCA Downloading qca/hpnv21g.bin
+[Fri Nov 13 14:52:58 2026] Bluetooth: hci0: QCA setup on UART is completed
+[Fri Nov 13 14:52:58 2026] Bluetooth: hci0: HFP non-HCI data transport is supported
+[Fri Nov 13 14:52:59 2026] audit: type=1400 audit(1780673816.133:156): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.snap-store" pid=2154 comm="apparmor_parser"
+[Fri Nov 13 14:52:59 2026] audit: type=1400 audit(1780673816.150:157): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.firefox" pid=2155 comm="apparmor_parser"
+[Fri Nov 13 14:52:59 2026] audit: type=1400 audit(1780673816.241:158): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.snapd-desktop-integration" pid=2156 comm="apparmor_parser"
+[Fri Nov 13 14:52:59 2026] audit: type=1400 audit(1780673816.265:159): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.snap-store.packagekit-session-installer" pid=2159 comm="apparmor_parser"
+[Fri Nov 13 14:52:59 2026] audit: type=1400 audit(1780673816.266:160): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.firefox" pid=2162 comm="apparmor_parser"
+[Fri Nov 13 14:52:59 2026] audit: type=1400 audit(1780673816.267:161): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.geckodriver" pid=2163 comm="apparmor_parser"
+[Fri Nov 13 14:52:59 2026] audit: type=1400 audit(1780673816.274:162): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.firefox.hook.disconnect-plug-host-hunspell" pid=2165 comm="apparmor_parser"
+[Fri Nov 13 14:52:59 2026] qcom-ethqos 23040000.ethernet end0: Link is Up - 1Gbps/Full - flow control off
+[Fri Nov 13 14:52:59 2026] stmmac_pcs: Link Down
+[Fri Nov 13 14:52:59 2026] stmmac_pcs: ANE process completed
+[Fri Nov 13 14:52:59 2026] stmmac_pcs: Link Up
+[Fri Nov 13 14:53:02 2026] usb 3-1: device descriptor read/64, error -110
+[Fri Nov 13 14:53:57 2026] file system registered
+[Fri Nov 13 14:53:57 2026] read descriptors
+[Fri Nov 13 14:53:57 2026] bcdVersion must be 0x0100, stored in Little Endian order. Userspace driver should be fixed, accepting 0x0001 for compatibility.
+[Fri Nov 13 14:53:57 2026] bcdVersion must be 0x0100, stored in Little Endian order. Userspace driver should be fixed, accepting 0x0001 for compatibility.
+[Fri Nov 13 14:53:57 2026] read strings
+[Fri Nov 13 14:53:58 2026] kauditd_printk_skb: 14 callbacks suppressed
+[Fri Nov 13 14:53:58 2026] audit: type=1400 audit(1780673874.903:177): apparmor="STATUS" operation="profile_load" profile="unconfined" name="docker-default" pid=2848 comm="apparmor_parser"
+[Fri Nov 13 14:53:59 2026] Initializing XFRM netlink socket
+[Fri Nov 13 14:53:59 2026] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[Fri Nov 13 14:54:28 2026] msm_vidc: err : ffffffff: codec: __switch_gdsc_mode_iris3: Failed to read WRAPPER_CORE_POWER_STATUS register to 0x0
+[Fri Nov 13 14:54:28 2026] msm_vidc: err : ffffffff: codec: Failed to switch GDSC into HW control, err: -110
+[Fri Nov 13 14:54:28 2026] msm_vidc: err : ffffffff: codec: __sys_set_power_control: skipping as power control hanfoff was not done
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0093-7925621ff52ecb7b1565341042c4e5ffd4fc76ce
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=PROD
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hw-tdoradla-hyd
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Aug 25 2025 23:47:14
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0093-7925621ff52ecb7b1565341042c4e5ffd4fc76ce
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=PROD
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hw-tdoradla-hyd
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Aug 25 2025 23:47:14
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0093-7925621ff52ecb7b1565341042c4e5ffd4fc76ce
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=PROD
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hw-tdoradla-hyd
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Aug 25 2025 23:47:14
+[Fri Nov 13 14:54:28 2026] Bluetooth: RFCOMM TTY layer initialized
+[Fri Nov 13 14:54:28 2026] Bluetooth: RFCOMM socket layer initialized
+[Fri Nov 13 14:54:28 2026] Bluetooth: RFCOMM ver 1.11
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0093-7925621ff52ecb7b1565341042c4e5ffd4fc76ce
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=PROD
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hw-tdoradla-hyd
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Aug 25 2025 23:47:14
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(907): QC_IMAGE_VERSION_STRING=vfw-3.1:rel0093-7925621ff52ecb7b1565341042c4e5ffd4fc76ce
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(908): IMAGE_VARIANT_STRING=PROD
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(909): OEM_IMAGE_VERSION_STRING=hw-tdoradla-hyd
+[Fri Nov 13 14:54:28 2026] msm_vidc:     fw: <VFW_E:HostDr:unkn:--------:--> VenusHostDriver_ParseC2SysPacket(910): BUILD_TIME: Aug 25 2025 23:47:14
+[Fri Nov 13 15:06:33 2026] wlp3s0: authenticate with bc:9f:e4:1b:00:f0 (local address=10:e1:8e:93:27:e4)
+[Fri Nov 13 15:06:33 2026] wlp3s0: send auth to bc:9f:e4:1b:00:f0 (try 1/3)
+[Fri Nov 13 15:06:33 2026] wlp3s0: authenticate with bc:9f:e4:1b:00:f0 (local address=10:e1:8e:93:27:e4)
+[Fri Nov 13 15:06:33 2026] wlp3s0: send auth to bc:9f:e4:1b:00:f0 (try 1/3)
+[Fri Nov 13 15:06:33 2026] wlp3s0: authenticated
+[Fri Nov 13 15:06:33 2026] wlp3s0: associate with bc:9f:e4:1b:00:f0 (try 1/3)
+[Fri Nov 13 15:06:33 2026] wlp3s0: RX AssocResp from bc:9f:e4:1b:00:f0 (capab=0x411 status=0 aid=16)
+[Fri Nov 13 15:06:33 2026] wlp3s0: associated
+[Fri Nov 13 15:07:25 2026] audit: type=1400 audit(1794582442.747:178): apparmor="DENIED" operation="open" class="file" profile="ubuntu_pro_esm_cache_systemd_detect_virt" name="/sys/firmware/devicetree/base/" pid=11322 comm="systemd-detect-" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[Fri Nov 13 15:41:46 2026] wlp3s0: deauthenticating from bc:9f:e4:1b:00:f0 by local choice (Reason: 3=DEAUTH_LEAVING)
+[Fri Nov 13 15:42:16 2026] wlp3s0: authenticate with bc:9f:e4:1b:00:f0 (local address=10:e1:8e:93:27:e4)
+[Fri Nov 13 15:42:16 2026] wlp3s0: send auth to bc:9f:e4:1b:00:f0 (try 1/3)
+[Fri Nov 13 15:42:16 2026] wlp3s0: authenticate with bc:9f:e4:1b:00:f0 (local address=10:e1:8e:93:27:e4)
+[Fri Nov 13 15:42:16 2026] wlp3s0: send auth to bc:9f:e4:1b:00:f0 (try 1/3)
+[Fri Nov 13 15:42:16 2026] wlp3s0: authenticated
+[Fri Nov 13 15:42:16 2026] wlp3s0: associate with bc:9f:e4:1b:00:f0 (try 1/3)
+[Fri Nov 13 15:42:16 2026] wlp3s0: RX AssocResp from bc:9f:e4:1b:00:f0 (capab=0x411 status=0 aid=16)
+[Fri Nov 13 15:42:16 2026] wlp3s0: associated
+[Fri Nov 13 15:43:24 2026] wlp3s0: deauthenticating from bc:9f:e4:1b:00:f0 by local choice (Reason: 3=DEAUTH_LEAVING)

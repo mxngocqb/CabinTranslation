@@ -1,0 +1,8 @@
+2026-11-13 15:43:20 engine_pid=none engine_net_sockets=n/a engine_rss_kb=n/a default_route=[default via 172.26.216.1 dev wlp3s0 proto dhcp src 172.26.217.118 metric 600 ;] ipv4=[end0=192.168.5.1/24 wlp3s0=172.26.217.118/22 docker0=172.17.0.1/16 ] ping8888=online load=[0.68 0.65 0.49] mem_available_kb=14614136
+2026-11-13 15:43:21 OFFLINE-REQUEST: sudo nmcli radio wifi off (ssh stays on the local link 192.168.5.2 60253 192.168.5.1 22)
+2026-11-13 15:43:22 OFFLINE-CONFIRMED-START default_route=[] ipv4=[end0=192.168.5.1/24 docker0=172.17.0.1/16 ] wifi_radio=disabled ping8888=offline ping1111=offline
+2026-11-13 15:43:36 engine_pid=31148 engine_net_sockets=0 engine_rss_kb=376708 default_route=[] ipv4=[end0=192.168.5.1/24 docker0=172.17.0.1/16 ] ping8888=offline load=[0.74 0.67 0.50] mem_available_kb=14337168
+2026-11-13 15:43:51 engine_pid=31148 engine_net_sockets=0 engine_rss_kb=1065196 default_route=[] ipv4=[end0=192.168.5.1/24 docker0=172.17.0.1/16 ] ping8888=offline load=[1.03 0.74 0.52] mem_available_kb=13579828
+2026-11-13 15:44:04 OFFLINE-CHECK-END default_route=[] ipv4=[end0=192.168.5.1/24 docker0=172.17.0.1/16 ] wifi_radio=disabled ping8888=offline ping1111=offline
+2026-11-13 15:44:05 ONLINE-RESTORED: sudo nmcli radio wifi on
+2026-11-13 15:44:06 engine_pid=none engine_net_sockets=n/a engine_rss_kb=n/a default_route=[] ipv4=[end0=192.168.5.1/24 docker0=172.17.0.1/16 ] ping8888=offline load=[1.26 0.80 0.55] mem_available_kb=14531712

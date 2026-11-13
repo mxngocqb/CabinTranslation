@@ -1,0 +1,203 @@
+2026-11-13T15:43:20.854400+00:00 ventunoq sudo[30985]:  arduino : PWD=/home/arduino ; USER=root ; COMMAND=/usr/bin/dmesg -w -T
+2026-11-13T15:43:20.854801+00:00 ventunoq sudo[30990]:  arduino : PWD=/home/arduino ; USER=root ; COMMAND=/usr/bin/dmesg
+2026-11-13T15:43:20.857859+00:00 ventunoq sudo[30985]: pam_unix(sudo:session): session opened for user root(uid=0) by arduino(uid=1000)
+2026-11-13T15:43:20.858773+00:00 ventunoq sudo[30990]: pam_unix(sudo:session): session opened for user root(uid=0) by arduino(uid=1000)
+2026-11-13T15:43:20.871996+00:00 ventunoq sudo[30990]: pam_unix(sudo:session): session closed for user root
+2026-11-13T15:43:20.933347+00:00 ventunoq sudo[30994]:  arduino : PWD=/home/arduino ; USER=root ; COMMAND=/usr/bin/journalctl -n 1
+2026-11-13T15:43:20.934128+00:00 ventunoq sudo[30994]: pam_unix(sudo:session): session opened for user root(uid=0) by arduino(uid=1000)
+2026-11-13T15:43:20.957437+00:00 ventunoq sudo[30994]: pam_unix(sudo:session): session closed for user root
+2026-11-13T15:43:21.305845+00:00 ventunoq sudo[31013]:  arduino : PWD=/home/arduino ; USER=root ; COMMAND=/usr/bin/nmcli radio wifi off
+2026-11-13T15:43:21.306920+00:00 ventunoq sudo[31013]: pam_unix(sudo:session): session opened for user root(uid=0) by arduino(uid=1000)
+2026-11-13T15:43:21.385833+00:00 ventunoq kernel: wlp3s0: deauthenticating from bc:9f:e4:1b:00:f0 by local choice (Reason: 3=DEAUTH_LEAVING)
+2026-11-13T15:43:21.415126+00:00 ventunoq wpa_supplicant[1869]: wlp3s0: CTRL-EVENT-DISCONNECTED bssid=bc:9f:e4:1b:00:f0 reason=3 locally_generated=1
+2026-11-13T15:43:21.415250+00:00 ventunoq wpa_supplicant[1869]: BSSID bc:9f:e4:1b:00:f0 ignore list count incremented to 2, ignoring for 10 seconds
+2026-11-13T15:43:21.452852+00:00 ventunoq NetworkManager[1848]: <info>  [1794584601.4527] manager: rfkill: Wi-Fi hardware radio set disabled
+2026-11-13T15:43:21.452955+00:00 ventunoq avahi-daemon[1866]: Interface wlp3s0.IPv6 no longer relevant for mDNS.
+2026-11-13T15:43:21.452929+00:00 ventunoq NetworkManager[1848]: <info>  [1794584601.4529] device (wlp3s0): state change: activated -> unavailable (reason 'none', sys-iface-state: 'managed')
+2026-11-13T15:43:21.452968+00:00 ventunoq avahi-daemon[1866]: Leaving mDNS multicast group on interface wlp3s0.IPv6 with address fe80::155b:c2fa:eb65:b446.
+2026-11-13T15:43:21.453239+00:00 ventunoq NetworkManager[1848]: <info>  [1794584601.4532] dhcp4 (wlp3s0): canceled DHCP transaction
+2026-11-13T15:43:21.453055+00:00 ventunoq avahi-daemon[1866]: Interface wlp3s0.IPv4 no longer relevant for mDNS.
+2026-11-13T15:43:21.453262+00:00 ventunoq NetworkManager[1848]: <info>  [1794584601.4532] dhcp4 (wlp3s0): activation: beginning transaction (timeout in 45 seconds)
+2026-11-13T15:43:21.453063+00:00 ventunoq avahi-daemon[1866]: Leaving mDNS multicast group on interface wlp3s0.IPv4 with address 172.26.217.118.
+2026-11-13T15:43:21.453285+00:00 ventunoq NetworkManager[1848]: <info>  [1794584601.4532] dhcp4 (wlp3s0): state changed no lease
+2026-11-13T15:43:21.453126+00:00 ventunoq avahi-daemon[1866]: Withdrawing address record for fe80::155b:c2fa:eb65:b446 on wlp3s0.
+2026-11-13T15:43:21.453143+00:00 ventunoq avahi-daemon[1866]: Withdrawing address record for 172.26.217.118 on wlp3s0.
+2026-11-13T15:43:21.457538+00:00 ventunoq wpa_supplicant[1869]: rfkill: WLAN soft blocked
+2026-11-13T15:43:21.459702+00:00 ventunoq wpa_supplicant[1869]: wlp3s0: PMKSA-CACHE-REMOVED bc:9f:e4:1b:00:f0 0
+2026-11-13T15:43:21.468230+00:00 ventunoq dbus-daemon[1715]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.12' (uid=0 pid=1848 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+2026-11-13T15:43:21.480326+00:00 ventunoq systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+2026-11-13T15:43:21.480662+00:00 ventunoq systemd-resolved[1226]: wlp3s0: Bus client reset search domain list.
+2026-11-13T15:43:21.483483+00:00 ventunoq NetworkManager[1848]: <info>  [1794584601.4834] audit: op="radio-control" arg="wireless-enabled:off" pid=31017 uid=0 result="success"
+2026-11-13T15:43:21.483978+00:00 ventunoq NetworkManager[1848]: <info>  [1794584601.4839] manager: rfkill: Wi-Fi now disabled by radio killswitch
+2026-11-13T15:43:21.484900+00:00 ventunoq NetworkManager[1848]: <info>  [1794584601.4848] manager: NetworkManager state is now CONNECTED_LOCAL
+2026-11-13T15:43:21.491687+00:00 ventunoq wpa_supplicant[1869]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+2026-11-13T15:43:21.496095+00:00 ventunoq systemd-resolved[1226]: wlp3s0: Bus client set default route setting: no
+2026-11-13T15:43:21.497900+00:00 ventunoq systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+2026-11-13T15:43:21.515257+00:00 ventunoq wpa_supplicant[1869]: wlp3s0: CTRL-EVENT-DSCP-POLICY clear_all
+2026-11-13T15:43:21.515284+00:00 ventunoq wpa_supplicant[1869]: nl80211: deinit ifname=wlp3s0 disabled_11b_rates=0
+2026-11-13T15:43:21.525368+00:00 ventunoq systemd-resolved[1226]: wlp3s0: Bus client reset DNS server list.
+2026-11-13T15:43:21.531833+00:00 ventunoq systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+2026-11-13T15:43:21.538085+00:00 ventunoq sudo[31013]: pam_unix(sudo:session): session closed for user root
+2026-11-13T15:43:21.545827+00:00 ventunoq dbus-daemon[1715]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+2026-11-13T15:43:21.546443+00:00 ventunoq systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+2026-11-13T15:43:23.047619+00:00 ventunoq python3[31053]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:23.264386+00:00 ventunoq show_distribution_terms.sh[31053]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:23.266415+00:00 ventunoq show_distribution_terms.sh[31053]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:23.266415+00:00 ventunoq show_distribution_terms.sh[31053]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:23.733957+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:23.733326] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:23.733957+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:23.733957+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:23.733957+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31053)
+2026-11-13T15:43:23.733622+00:00 ventunoq python3[31053]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:43:26.495534+00:00 ventunoq systemd[1]: systemd-rfkill.service: Deactivated successfully.
+2026-11-13T15:43:26.944901+00:00 ventunoq python3[31096]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:27.165135+00:00 ventunoq show_distribution_terms.sh[31096]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:27.166913+00:00 ventunoq show_distribution_terms.sh[31096]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:27.166913+00:00 ventunoq show_distribution_terms.sh[31096]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:27.643253+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:27.643108] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:27.643253+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:27.643253+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:27.643253+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31096)
+2026-11-13T15:43:27.643811+00:00 ventunoq python3[31096]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:43:28.360092+00:00 ventunoq sudo[31137]:  arduino : PWD=/home/arduino ; USER=root ; COMMAND=/usr/bin/dmesg
+2026-11-13T15:43:28.360930+00:00 ventunoq sudo[31137]: pam_unix(sudo:session): session opened for user root(uid=0) by arduino(uid=1000)
+2026-11-13T15:43:28.374341+00:00 ventunoq sudo[31137]: pam_unix(sudo:session): session closed for user root
+2026-11-13T15:43:30.969947+00:00 ventunoq python3[31149]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:31.197743+00:00 ventunoq show_distribution_terms.sh[31149]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:31.198827+00:00 ventunoq show_distribution_terms.sh[31149]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:31.198827+00:00 ventunoq show_distribution_terms.sh[31149]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:31.570745+00:00 ventunoq systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+2026-11-13T15:43:31.704954+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:31.704503] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:31.704954+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:31.704954+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:31.704954+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31149)
+2026-11-13T15:43:31.704837+00:00 ventunoq python3[31149]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:43:33.781229+00:00 ventunoq anacron[26129]: Job `cron.weekly' started
+2026-11-13T15:43:33.803431+00:00 ventunoq anacron[31211]: Updated timestamp for job `cron.weekly' to 2026-11-13
+2026-11-13T15:43:33.807224+00:00 ventunoq anacron[26129]: Job `cron.weekly' terminated
+2026-11-13T15:43:35.012631+00:00 ventunoq python3[31221]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:35.236033+00:00 ventunoq show_distribution_terms.sh[31221]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:35.237060+00:00 ventunoq show_distribution_terms.sh[31221]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:35.237060+00:00 ventunoq show_distribution_terms.sh[31221]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:35.725061+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:35.724384] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:35.725061+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:35.725061+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:35.725061+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31221)
+2026-11-13T15:43:35.724789+00:00 ventunoq python3[31221]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:43:39.011391+00:00 ventunoq python3[31290]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:39.237173+00:00 ventunoq show_distribution_terms.sh[31290]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:39.238200+00:00 ventunoq show_distribution_terms.sh[31290]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:39.238200+00:00 ventunoq show_distribution_terms.sh[31290]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:39.733586+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:39.733076] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:39.733586+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:39.733586+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:39.733586+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31290)
+2026-11-13T15:43:39.733287+00:00 ventunoq python3[31290]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:43:42.994241+00:00 ventunoq python3[31357]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:43.216960+00:00 ventunoq show_distribution_terms.sh[31357]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:43.218007+00:00 ventunoq show_distribution_terms.sh[31357]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:43.218007+00:00 ventunoq show_distribution_terms.sh[31357]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:43.719506+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:43.718890] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:43.719506+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:43.719506+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:43.719506+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31357)
+2026-11-13T15:43:43.719313+00:00 ventunoq python3[31357]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:43:47.023297+00:00 ventunoq python3[31422]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:47.245407+00:00 ventunoq show_distribution_terms.sh[31422]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:47.246420+00:00 ventunoq show_distribution_terms.sh[31422]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:47.246420+00:00 ventunoq show_distribution_terms.sh[31422]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:47.741524+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:47.740870] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:47.741524+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:47.741524+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:47.741524+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31422)
+2026-11-13T15:43:47.741267+00:00 ventunoq python3[31422]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:43:51.053407+00:00 ventunoq python3[31478]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:51.275050+00:00 ventunoq show_distribution_terms.sh[31478]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:51.276142+00:00 ventunoq show_distribution_terms.sh[31478]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:51.276142+00:00 ventunoq show_distribution_terms.sh[31478]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:51.770594+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:51.770066] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:51.770594+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:51.770594+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:51.770594+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31478)
+2026-11-13T15:43:51.770429+00:00 ventunoq python3[31478]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:43:55.073306+00:00 ventunoq python3[31555]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:55.273111+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:5139: multidsplib_env_init: libcdsprpc.so loaded
+2026-11-13T15:43:55.273168+00:00 ventunoq cabin_edge_npu[31148]: ./src/rpcmem_android.c:209: set up allocator 0xaaab0f0b5d20 for DMA buf heap system, ION heap system, heap mask 0x2000000, flags 0x1, legacy flags 0x1
+2026-11-13T15:43:55.273179+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_config.c:336: Reading configuration file: cabin_edge_npu.debugconfig
+2026-11-13T15:43:55.273268+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_config.c:367: fastrpc_config_init: Couldn't find file cabin_edge_npu.debugconfig, errno (No such file or directory) at /home/arduino/pkg/CabinTranslation-VentunoQ-v1.0/lib_npu, /usr/lib/dsp//cdsp, /usr/lib/dsp/,
+2026-11-13T15:43:55.273274+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:5022: fastrpc_apps_user_init done  with default domain:3 and &fastrpc_trace:0xffff9ce81630
+2026-11-13T15:43:55.301154+00:00 ventunoq show_distribution_terms.sh[31555]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:55.302296+00:00 ventunoq show_distribution_terms.sh[31555]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:55.302296+00:00 ventunoq show_distribution_terms.sh[31555]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:55.804671+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:55.804435] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:55.804671+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:55.804671+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:55.807531+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31555)
+2026-11-13T15:43:55.804892+00:00 ventunoq python3[31555]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:43:55.895321+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:4592: close_dev: unloading library libcdsprpc.so
+2026-11-13T15:43:55.895343+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 0: dev -1
+2026-11-13T15:43:55.895348+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 1: dev -1
+2026-11-13T15:43:55.895352+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 2: dev -1
+2026-11-13T15:43:55.895356+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 3: dev -1
+2026-11-13T15:43:55.895359+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 4: dev -1
+2026-11-13T15:43:55.895362+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 5: dev -1
+2026-11-13T15:43:55.895364+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 6: dev -1
+2026-11-13T15:43:55.895367+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 7: dev -1
+2026-11-13T15:43:55.895370+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 8: dev -1
+2026-11-13T15:43:55.895372+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 9: dev -1
+2026-11-13T15:43:55.895375+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 10: dev -1
+2026-11-13T15:43:55.895377+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 11: dev -1
+2026-11-13T15:43:55.895379+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 12: dev -1
+2026-11-13T15:43:55.895382+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 13: dev -1
+2026-11-13T15:43:55.895384+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 14: dev -1
+2026-11-13T15:43:55.895386+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 15: dev -1
+2026-11-13T15:43:55.895388+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 16: dev -1
+2026-11-13T15:43:55.895391+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 17: dev -1
+2026-11-13T15:43:55.895394+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 18: dev -1
+2026-11-13T15:43:55.895396+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 19: dev -1
+2026-11-13T15:43:55.895398+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 20: dev -1
+2026-11-13T15:43:55.895401+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 21: dev -1
+2026-11-13T15:43:55.895403+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 22: dev -1
+2026-11-13T15:43:55.895405+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 23: dev -1
+2026-11-13T15:43:55.895407+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 24: dev -1
+2026-11-13T15:43:55.895410+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 25: dev -1
+2026-11-13T15:43:55.895412+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 26: dev -1
+2026-11-13T15:43:55.895416+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 27: dev -1
+2026-11-13T15:43:55.895418+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 28: dev -1
+2026-11-13T15:43:55.895420+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 29: dev -1
+2026-11-13T15:43:55.895424+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 30: dev -1
+2026-11-13T15:43:55.895428+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:3552: domain_deinit for domain 31: dev -1
+2026-11-13T15:43:55.898026+00:00 ventunoq cabin_edge_npu[31148]: ./src/rpcmem_android.c:357: rpcmem_deinit_internal done
+2026-11-13T15:43:55.898045+00:00 ventunoq cabin_edge_npu[31148]: ./src/fastrpc_apps_user.c:4921: fastrpc_apps_user_deinit done
+2026-11-13T15:43:59.084761+00:00 ventunoq python3[31609]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:43:59.309189+00:00 ventunoq show_distribution_terms.sh[31609]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:59.310509+00:00 ventunoq show_distribution_terms.sh[31609]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:43:59.310509+00:00 ventunoq show_distribution_terms.sh[31609]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:43:59.774054+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:43:59.773799] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:43:59.774054+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:43:59.774054+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:43:59.774857+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31609)
+2026-11-13T15:43:59.774303+00:00 ventunoq python3[31609]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:44:02.280339+00:00 ventunoq sudo[31653]:  arduino : PWD=/home/arduino ; USER=root ; COMMAND=/usr/bin/dmesg
+2026-11-13T15:44:02.281089+00:00 ventunoq sudo[31653]: pam_unix(sudo:session): session opened for user root(uid=0) by arduino(uid=1000)
+2026-11-13T15:44:02.314797+00:00 ventunoq sudo[31653]: pam_unix(sudo:session): session closed for user root
+2026-11-13T15:44:03.042799+00:00 ventunoq python3[31657]: Unable to acquire session bus: Cannot autolaunch D-Bus without X11 $DISPLAY
+2026-11-13T15:44:03.262510+00:00 ventunoq show_distribution_terms.sh[31657]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:44:03.263775+00:00 ventunoq show_distribution_terms.sh[31657]: libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-11-13T15:44:03.263775+00:00 ventunoq show_distribution_terms.sh[31657]: libEGL warning: failed to get driver name for fd -1
+2026-11-13T15:44:03.741178+00:00 ventunoq show_distribution_terms.sh[2880]: [2026-11-13 15:44:03.740698] < -warning- > frontend:Wayland: Exception processing Surface::commit() request: ./src/miral/basic_window_manager.cpp(2349): Throw in function void miral::BasicWindowManager::validate_modification_request(const miral::WindowSpecification&, const miral::WindowInfo&) const
+2026-11-13T15:44:03.741178+00:00 ventunoq show_distribution_terms.sh[2880]: Dynamic exception type: boost::wrapexcept<std::runtime_error>
+2026-11-13T15:44:03.741178+00:00 ventunoq show_distribution_terms.sh[2880]: std::exception::what: width must be positive
+2026-11-13T15:44:03.741178+00:00 ventunoq show_distribution_terms.sh[2880]: error in client communication (pid 31657)
+2026-11-13T15:44:03.740929+00:00 ventunoq python3[31657]: Error 71 (Protocol error) dispatching to Wayland display.
+2026-11-13T15:44:05.042172+00:00 ventunoq sudo[31715]:  arduino : PWD=/home/arduino ; USER=root ; COMMAND=/usr/bin/nmcli radio wifi on
+2026-11-13T15:44:05.043089+00:00 ventunoq sudo[31715]: pam_unix(sudo:session): session opened for user root(uid=0) by arduino(uid=1000)
+2026-11-13T15:44:05.163956+00:00 ventunoq NetworkManager[1848]: <info>  [1794584645.1638] manager: rfkill: Wi-Fi hardware radio set enabled
+2026-11-13T15:44:05.179041+00:00 ventunoq systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+2026-11-13T15:44:05.187981+00:00 ventunoq systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+2026-11-13T15:44:05.287568+00:00 ventunoq NetworkManager[1848]: <info>  [1794584645.2873] audit: op="radio-control" arg="wireless-enabled:on" pid=31716 uid=0 result="success"
+2026-11-13T15:44:05.289792+00:00 ventunoq NetworkManager[1848]: <info>  [1794584645.2896] manager: rfkill: Wi-Fi now enabled by radio killswitch
+2026-11-13T15:44:05.298029+00:00 ventunoq sudo[31715]: pam_unix(sudo:session): session closed for user root
+2026-11-13T15:44:05.321094+00:00 ventunoq wpa_supplicant[1869]: dbus: fill_dict_with_properties dbus_interface=fi.w1.wpa_supplicant1.Interface.P2PDevice dbus_property=P2PDeviceConfig getter failed
+2026-11-13T15:44:05.326766+00:00 ventunoq NetworkManager[1848]: <info>  [1794584645.3266] device (wlp3s0): supplicant interface state: internal-starting -> disconnected
+2026-11-13T15:44:05.326893+00:00 ventunoq NetworkManager[1848]: <info>  [1794584645.3268] device (wlp3s0): state change: unavailable -> disconnected (reason 'supplicant-available', sys-iface-state: 'managed')

@@ -1,0 +1,2 @@
+2026-11-13 15:43:20 +0000 capture started (journal: sudo -n journalctl, kernel log: sudo -n dmesg)
+2026-11-13 15:44:06 +0000 capture stopped

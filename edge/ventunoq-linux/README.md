@@ -155,7 +155,7 @@ ASR/TTS are identical across runs (CPU), so the columns differ only by the LLM b
 character-level. Wi-Fi was on during these runs. The owner does not allow disabling Wi-Fi on this remotely hosted
 (QDC) board.
 
-**Final NPU run of the packaged build:** `results/ventunoq/ventunoq_npu_20261111_235211`.
+**Final NPU run of the packaged build:** `results/ventunoq/ventunoq_npu_20261113_224456`: installed from the judge package (`install/`), measured **fully offline** (`--offline`: Wi-Fi off, ssh over the local `end0` cable), with raw board logs in `syslog/` (journal, kernel log, 15 s network/socket samples). The earlier online run is in `results/archive/`.
 - Translations are identical to the table below, because decoding is deterministic.
 - p50 is 0.54–1.21 s and p95 0.88–2.03 s. That is about 5% slower than `221351`, because a 3.4 GB package transfer shared the board's link during the run.
 - Peak RSS is 3,885 MB.

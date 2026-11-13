@@ -1,0 +1,109 @@
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+/k2-fsa/sherpa-onnx/sherpa-onnx/csrc/lexicon.cc:ConvertTokensToIds:93 Unknown token: shei2
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [compiled_model.cc:1063] Failed to get hooks from accelerator: 3
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [dispatch_delegate.cc:131] Failed to initialize Dispatch API: ERROR: [third_party/odml/litert/litert/runtime/dispatch/dispatch_delegate.cc:201]
+ERROR: [dispatch_delegate.cc:146] Failed to create a dispatch delegate kernel: No usable Dispatch runtime found
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [dispatch_delegate.cc:131] Failed to initialize Dispatch API: ERROR: [third_party/odml/litert/litert/runtime/dispatch/dispatch_delegate.cc:201]
+ERROR: [dispatch_delegate.cc:146] Failed to create a dispatch delegate kernel: No usable Dispatch runtime found
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [compiled_model.cc:1063] Failed to get hooks from accelerator: 3
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [dispatch_delegate.cc:131] Failed to initialize Dispatch API: ERROR: [third_party/odml/litert/litert/runtime/dispatch/dispatch_delegate.cc:201]
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [dispatch_delegate.cc:131] Failed to initialize Dispatch API: ERROR: [third_party/odml/litert/litert/runtime/dispatch/dispatch_delegate.cc:201]
+ERROR: [dispatch_delegate.cc:146] Failed to create a dispatch delegate kernel: No usable Dispatch runtime found
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [dispatch_delegate.cc:131] Failed to initialize Dispatch API: ERROR: [third_party/odml/litert/litert/runtime/dispatch/dispatch_delegate.cc:201]
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [dispatch_delegate.cc:131] Failed to initialize Dispatch API: ERROR: [third_party/odml/litert/litert/runtime/dispatch/dispatch_delegate.cc:201]
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [dispatch_delegate.cc:131] Failed to initialize Dispatch API: ERROR: [third_party/odml/litert/litert/runtime/dispatch/dispatch_delegate.cc:201]
+ERROR: [dispatch_delegate.cc:146] Failed to create a dispatch delegate kernel: No usable Dispatch runtime found
+ERROR: [dispatch_api.cc:145] Failed to initialize QNN backend
+ERROR: [dispatch_delegate.cc:131] Failed to initialize Dispatch API: ERROR: [third_party/odml/litert/litert/runtime/dispatch/dispatch_delegate.cc:201]
+ERROR: Node number 1 (DELEGATE) failed to prepare.
+ERROR: [litert_compiled_model.cc:164] Failed to allocate tensors
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1794584635.440162   31148 engine.cc:890] Failed to create engine: UNKNOWN: ERROR: [runtime/executor/llm_litert_npu_compiled_model_executor.cc:2887]
+└ result: Inference warmup run for Text Decoder (prefill) failed: Failed to invoke the compiled model
+=== Source Location Trace: === 
+external/litert/litert/cc/litert_macros.h:570
+runtime/core/engine_advanced_impl.cc:439
+
+engine_create failed
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001
+ <E> loadRemoteSymbols failed with err 4000
+ <E> Failed to create transport for device, error: 4000
+ <E> Failed to load skel, error: 4000
+ <E> Transport layer setup failed: 14001
+ <E> Failed to parse default platform info: 14001
+ <E> Failed to load default platform info: 14001
+ <E> Failed to parse platform config: 14001

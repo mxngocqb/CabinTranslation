@@ -220,6 +220,9 @@ def main():
     ap.add_argument("--config", default=None)
     ap.add_argument("--adsp-path", default=f"{LINUX_DEV}/lib_npu",
                     help="linux npu: where the Hexagon-side QNN skel (QAIRT 2.50 libQnnHtpV75Skel.so) is")
+    ap.add_argument("--offline", action="store_true",
+                    help="linux: switch the board's Wi-Fi off (nmcli) for the run, confirm no route/ping, switch it back on "
+                         "afterwards (a watchdog on the board re-enables it after 50 min). ssh must come over a local link.")
     ap.add_argument("--rescore", default=None, metavar="RUN_DIR",
                     help="only (re)score an existing run dir (result.jsonl + wav/ already pulled); no device run")
     a = ap.parse_args()
@@ -231,6 +234,7 @@ def main():
         tag = a.device_tag or "ventunoq"
         out = ROOT / "results" / tag / f"{tag}_{a.backend}_{stamp}"
         d.push(Path(__file__).with_name("net_socks.py"), f"{d.dev}/out/net_socks.py")
+        d.push(Path(__file__).with_name("board_syslog.sh"), f"{d.dev}/out/board_syslog.sh")
     else:
         d = AdbDevice(a.serial)
         a.config = a.config or f"{DEV}/config.json"
@@ -266,14 +270,22 @@ def main():
     d.push(stage / "manifest.jsonl", f"{DEVD}/out/manifest.jsonl")
     d.sh(f"rm -rf {DEVD}/out/wav; mkdir -p {DEVD}/out/wav")
 
-    # 2) run on device with memory polling
+    # 2) run on device with memory polling (+ raw system logs on Linux boards: journal, kernel log, 15 s samples)
+    if d.kind == "linux":
+        d.sh(f"sh {DEVD}/out/board_syslog.sh start {DEVD}/out/syslog", check=True)
+    if a.offline:
+        go_offline(d, DEVD)
+        info = d.info()   # network state at the start of the run, i.e. after going offline
+        (out / "device_info.json").write_text(json.dumps(info, ensure_ascii=False))
+        print("device (offline):", json.dumps(info, ensure_ascii=False))
     poller = MemPoller(d)
     th = threading.Thread(target=poller.run, daemon=True)
     th.start()
     t0 = time.time()
     run = "LD_LIBRARY_PATH=lib ./cabin_edge"
     if a.target == "linux" and a.backend == "npu":   # LiteRT-LM 0.18 NPU runtime + QNN (system QAIRT, ADSP path)
-        run = f"LD_LIBRARY_PATH=lib_npu:lib ADSP_LIBRARY_PATH={a.adsp_path} ./cabin_edge_npu"
+        run = ("{ [ -e lib_npu/libcdsprpc.so ] || ln -sf /lib/aarch64-linux-gnu/libcdsprpc.so.1 lib_npu/libcdsprpc.so; } && "  # as start.sh
+               f"LD_LIBRARY_PATH=lib_npu:lib ADSP_LIBRARY_PATH={a.adsp_path} ./cabin_edge_npu")
     cmd = (f"cd {DEVD} && {run} --config {a.config} --manifest out/manifest.jsonl "
            f"--out out/result.jsonl --wav-dir out/wav")
     r = d.sh(cmd)
@@ -281,14 +293,80 @@ def main():
     poller.stop.set()
     th.join(timeout=20)
     (out / "device_stderr.log").write_text(r.stderr + r.stdout)
+    if a.offline:
+        info_end = d.info()   # still offline: taken before Wi-Fi is switched back on
+        (out / "device_info_end.json").write_text(json.dumps(info_end, ensure_ascii=False))
+        back_online(d, DEVD)
+    if d.kind == "linux":
+        d.sh(f"sh {DEVD}/out/board_syslog.sh stop {DEVD}/out/syslog")
+        d.pull(f"{DEVD}/out/syslog", out)
     d.pull(f"{DEVD}/out/result.jsonl", out / "result.jsonl")
     d.pull(f"{DEVD}/out/wav", out)
     (out / "meminfo_samples.json").write_text(json.dumps(poller.samples))
-    info_end = d.info()
-    (out / "device_info_end.json").write_text(json.dumps(info_end, ensure_ascii=False))
+    if not a.offline:
+        info_end = d.info()
+        (out / "device_info_end.json").write_text(json.dumps(info_end, ensure_ascii=False))
     (out / "run_meta.json").write_text(json.dumps({"target": d.kind, "backend": a.backend, "config": a.config,
-                                                   "pairs": a.pairs, "wall_s": round(wall, 1)}))
+                                                   "pairs": a.pairs, "wall_s": round(wall, 1), "offline": a.offline}))
     score_run(a, d, out, refs, info, info_end, poller.peak, wall, stamp)
+    if (out / "syslog").is_dir():
+        syslog_section(out)
+
+
+NETSTATE = r"""echo "$(date '+%F %T') $1 default_route=[$(ip route show default | tr '\n' ';')] ipv4=[$(ip -o -4 addr | awk '$2!="lo"{print $2"="$4}' | tr '\n' ' ')] wifi_radio=$(nmcli radio wifi) ping8888=$(ping -c1 -W1 8.8.8.8 >/dev/null 2>&1 && echo online || echo offline) ping1111=$(ping -c1 -W1 1.1.1.1 >/dev/null 2>&1 && echo online || echo offline)" """
+
+
+def go_offline(d, devd):
+    """Linux board: Wi-Fi off, wait until there is no default route and both pings fail; log it in syslog/network.log."""
+    log = f"{devd}/out/syslog/network.log"
+    d.sh(f"echo \"$(date '+%F %T') OFFLINE-REQUEST: sudo nmcli radio wifi off (ssh stays on the local link $SSH_CONNECTION)\" >> {log}; "
+         f"nohup sh -c 'sleep 3000; sudo -n nmcli radio wifi on' >/dev/null 2>&1 & echo $! > {devd}/out/.wifi_watchdog; "
+         "sudo -n nmcli radio wifi off", check=True)
+    for _ in range(60):
+        r = d.sh("ip route show default | grep -q . && echo route; ping -c1 -W1 8.8.8.8 >/dev/null 2>&1 && echo ping8; "
+                 "ping -c1 -W1 1.1.1.1 >/dev/null 2>&1 && echo ping1").stdout.strip()
+        if not r:
+            break
+        time.sleep(2)
+    else:
+        raise SystemExit("board did not go offline")
+    d.sh(f"sh -c {shlex.quote(NETSTATE)} x OFFLINE-CONFIRMED-START >> {log}", check=True)
+    print(d.sh(f"tail -1 {log}").stdout.strip())
+
+
+def back_online(d, devd):
+    log = f"{devd}/out/syslog/network.log"
+    d.sh(f"sh -c {shlex.quote(NETSTATE)} x OFFLINE-CHECK-END >> {log}")
+    d.sh(f"kill $(cat {devd}/out/.wifi_watchdog) 2>/dev/null; sudo -n nmcli radio wifi on; "
+         f"echo \"$(date '+%F %T') ONLINE-RESTORED: sudo nmcli radio wifi on\" >> {log}")
+    print(d.sh(f"grep -E 'OFFLINE-CHECK-END|ONLINE-RESTORED' {log}").stdout.strip())
+
+
+def syslog_section(out: Path):
+    """Append verbatim lines of the raw board logs (syslog/) to summary.md and an index to summary.json."""
+    sd = out / "syslog"
+    net = (sd / "network.log").read_text().splitlines() if (sd / "network.log").exists() else []
+    run = [ln for ln in net if "engine_pid=none" not in ln]
+    socks = [int(m.group(1)) for ln in run for m in [re.search(r"engine_net_sockets=(\d+)", ln)] if m]
+    files = sorted(f.name for f in sd.iterdir() if f.is_file())
+    sizes = {f: (sd / f).stat().st_size for f in files}
+    pick = list(dict.fromkeys(run[:2] + run[len(run) // 2:len(run) // 2 + 1] + run[-2:]))
+    jr = [ln for ln in (sd / "journal_during_run.log").read_text(errors="replace").splitlines()] if (sd / "journal_during_run.log").exists() else []
+    md = ["", "## Raw system logs (board, unfiltered) — `syslog/`", "",
+          "Captured on the board by `edge/tools/board_syslog.sh` while the engine ran:", ""]
+    md += [f"- `{f}` ({sizes[f]:,} bytes)" for f in files]
+    md += ["", f"- 15 s samples while the engine was running: **{len(run)}**; engine non-loopback sockets: "
+           f"**max {max(socks) if socks else 'n/a'}** over {len(socks)} samples", "",
+           "Verbatim `network.log` lines (first, middle, last):", "", "```"] + pick + ["```", ""]
+    if jr:
+        md += [f"`journal_during_run.log`: {len(jr)} lines (first and last 5):", "", "```"] + jr[:5] + (["…"] + jr[-5:] if len(jr) > 10 else jr[5:]) + ["```", ""]
+    with open(out / "summary.md", "a") as f:
+        f.write("\n".join(md) + "\n")
+    sj = json.loads((out / "summary.json").read_text())
+    sj["system_logs"] = {"folder": "syslog/", "files": sizes, "samples_engine_running": len(run),
+                         "engine_net_sockets_max": max(socks) if socks else None, "network_log_excerpt": pick}
+    (out / "summary.json").write_text(json.dumps(sj, ensure_ascii=False, indent=1))
+    print("\n".join(md))
 
 
 def rescore(a, d, out: Path):
@@ -320,6 +398,8 @@ def rescore(a, d, out: Path):
                 peak[k] = max(peak.get(k, 0), v)
     stamp = out.name.split("_", 2)[-1]
     score_run(a, d, out, refs, info, info_end, peak, meta.get("wall_s", 0.0), stamp)
+    if (out / "syslog").is_dir():
+        syslog_section(out)
 
 
 def score_run(a, d, out, refs, info, info_end, peak, wall, stamp):

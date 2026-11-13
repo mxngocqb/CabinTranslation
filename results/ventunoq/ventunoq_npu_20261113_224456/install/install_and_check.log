@@ -1,0 +1,17 @@
+## 2026-11-13 15:41:17 +0000 install per README_INSTALL.md
+fb5c3ffdee100fceaa6c0621a0911e3d290cfd8c0b5a616350d7ae5ccbfaf97a  CabinTranslation-VentunoQ-v1.0.tar
+7cc90dd40d50a58f0b865ebd69e219798585c3e0d40bab63e0cb307789f5d346  qairt-2.50-libs.tar
+## sh check.sh
+SoC (expect QCS8275)                         QCS8275
+arch                                         aarch64 OK
+glibc (need >= 2.39)                         2.39
+NPU device /dev/fastrpc-cdsp                 accessible
+FastRPC libcdsprpc.so.1                      found
+QAIRT 2.50 libs (lib_npu)                    present
+GPU render node                              present
+RAM total                                    15284 MB
+free disk here                               31546 MB
+verifying SHA256SUMS ...
+file integrity                               OK
+CHECK PASSED
+check rc=0

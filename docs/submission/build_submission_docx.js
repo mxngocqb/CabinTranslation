@@ -102,6 +102,8 @@ const qcsP50 = rng(QCS, "total_ms_p50"), qcsP95 = rng(QCS, "total_ms_p95");
 const npuRSS = mb(NPU.s.device_summary.peak_rss_kb), qcsRSS = mb(QCS.s.device_summary.peak_rss_kb);
 const qcsGfx = mb((QCS.s.meminfo_peak_kb || {}).graphics || 0), gpuGfx = mb((GPU.s.meminfo_peak_kb || {}).graphics || 0);
 const qcsPunct = QCS.s.pairs["vi-en"].punct_ms_mean > 0;
+const rmeta = (run) => { try { return JSON.parse(fs.readFileSync(path.join(run.dir, "run_meta.json"), "utf8")); } catch (e) { return {}; } };
+const npuOffline = !!rmeta(NPU).offline;
 
 function qualityRows(run) {
   return PAIRS.map((p) => {
@@ -421,11 +423,34 @@ C.push(B(PAIRS.map((p) => `${LBL[p]} ${NPU.s.pairs[p].n}`).join(" · ")));
 C.push(B("Each utterance goes speech-in → speech-out on the device in batch mode (same engine and models as the UI)."));
 C.push(B("Scoring on a PC."));
 C.push(P("**Runs:**", { after: 40, keep: true }));
-C.push(B(`Device A (VENTUNO Q), NPU: \`results/ventunoq/${NPU.name}\` — **submitted build**`));
+C.push(B(`Device A (VENTUNO Q), NPU: \`results/ventunoq/${NPU.name}\` — **submitted build**${npuOffline ? ", **measured fully offline**, installed from the judge package" : ""}`));
 C.push(B(`Device A, GPU: \`${GPU.name}\`; CPU: \`${CPU.name}\``));
 C.push(B(`Device B (QCS8550, GPU): \`results/qcs8550/${QCS.name}\`${QCS.name.endsWith("_offline") ? " — **measured fully offline**" : ""}${qcsPunct ? " — earlier 2-call Vietnamese build" : ""}`));
 if (S25) C.push(B(`Device C (Galaxy S25 Ultra, GPU): \`results/s25ultra/${S25.name}\` (latency) + battery power (Table 4.5)`));
 
+if (npuOffline) {
+  const sd = path.join(NPU.dir, "syslog");
+  const nl = fs.readFileSync(path.join(sd, "network.log"), "utf8").trim().split("\n");
+  const run = nl.filter((l) => / engine_pid=\d/.test(l));
+  const socks = run.map((l) => (l.match(/engine_net_sockets=(\d+)/) || [])[1]).filter(Boolean).map(Number);
+  const mark = (k) => nl.find((l) => l.includes(k));
+  C.push(H2("VENTUNO Q benchmark measured fully offline"));
+  C.push(P(`Run folder: \`results/ventunoq/${NPU.name}\` (NPU, v1.0). The board was installed from the judge package (\`CabinTranslation-VentunoQ-v1.0.tar\` + \`qairt-2.50-libs.tar\`, SHA-256 verified, \`check.sh\` → CHECK PASSED; \`install/\`) and had **no internet during the whole ${NUTT}-utterance run**.`, { after: 40 }));
+  C.push(B("Wi-Fi (the board's only internet route) was switched off before the engine started and back on after it finished."));
+  C.push(B("The run was driven over the local Ethernet cable to the host (`end0`, 192.168.5.0/24, no default route)."));
+  C.push(B("Checked on the board: no default route, pings to 8.8.8.8 and 1.1.1.1 failing, Wi-Fi radio disabled."));
+  C.push(B(`Every ~15 s during the run: engine non-loopback sockets **max ${socks.length ? Math.max(...socks) : "n/a"}** over ${socks.length} samples, all with no default route.`));
+  C.push(P("**Raw evidence in the run folder** (`syslog/`, captured on the board by `edge/tools/board_syslog.sh`):", { after: 40, keep: true }));
+  C.push(B("`network.log` — offline markers + network state, engine sockets and memory every 15 s"));
+  C.push(B("`journal_during_run.log`, `journal_boot_full.log` — systemd journal (unfiltered)"));
+  C.push(B("`dmesg_during_run.log`, `dmesg_full.log` — kernel log"));
+  C.push(B("`network_state_end.txt` (ip addr / route / ss), `system_info.txt`"));
+  C.push(B("`device_stderr.log` — engine log; `result.jsonl` — raw per-utterance output and timings; `wav/` — spoken outputs"));
+  C.push(P("**Raw log lines** (verbatim from `syslog/network.log`):", { size: 18, after: 40, keep: true }));
+  [...new Set([mark("OFFLINE-REQUEST"), mark("OFFLINE-CONFIRMED-START"), run[0], run[Math.floor(run.length / 2)], run[run.length - 1], mark("OFFLINE-CHECK-END"), mark("ONLINE-RESTORED")].filter(Boolean))]
+    .forEach((l) => C.push(LOG(l)));
+  C.push(P("Board clock is UTC (22:44 in Vietnam = 15:44 UTC).", { size: 16, after: 80, italics: true }));
+}
 const qcsOffline = QCS.name.endsWith("_offline");
 if (qcsOffline) {
   const di = JSON.parse(fs.readFileSync(path.join(QCS.dir, "device_info.json"), "utf8"));
@@ -470,12 +495,15 @@ if (qcsOffline) {
 
 C.push(P("**Offline operation**", { after: 40, keep: true }));
 C.push(B("Confirmed by the team on all three devices: the demo videos were recorded with networking disabled (the S25 Ultra and QCS8550 apps show ✈ Offline). Inference never uses the network."));
+if (npuOffline) C.push(B("VENTUNO Q NPU benchmark (submitted build): fully offline, with raw logs (above)."));
 if (qcsOffline) C.push(B("QCS8550 benchmark: fully offline, with raw logs (above)."));
-C.push(B(`VENTUNO Q${qcsOffline ? "" : " and QCS8550"}${S25 ? " and Galaxy S25 Ultra" : ""} benchmarks: the ${NUTT}-utterance batch runs were orchestrated from a host PC over ssh / adb, so the log fields record that control link.`));
-C.push(B(`VENTUNO Q: internet ${net(NPU)}`, 1));
+const onl = [!npuOffline && "VENTUNO Q", !qcsOffline && "QCS8550", S25 && "Galaxy S25 Ultra"].filter(Boolean);
+if (npuOffline) C.push(B(`VENTUNO Q GPU/CPU comparison runs${S25 ? " and the Galaxy S25 Ultra latency/power runs" : ""}: orchestrated from a host PC over ssh / adb with the network connected, so their logs record that control link.`));
+else if (onl.length) C.push(B(`${onl.join(" and ")} benchmarks: the ${NUTT}-utterance batch runs were orchestrated from a host PC over ssh / adb, so the log fields record that control link.`));
+if (!npuOffline) C.push(B(`VENTUNO Q: internet ${net(NPU)}`, 1));
 if (!qcsOffline) C.push(B(`QCS8550: ${net(QCS)}`, 1));
 if (S25) C.push(B("Galaxy S25 Ultra: Wi-Fi on for wireless debugging; the power run was on battery", 1));
-C.push(B(`Evidence that the engine itself makes no network calls: its sockets were sampled every ~1 s during the full VENTUNO Q run — **maximum non-loopback TCP/UDP sockets of the engine process = ${sock(NPU) ?? "n/a"}**.`));
+C.push(B(`Evidence that the engine itself makes no network calls: its sockets were sampled every ~1 s during the full VENTUNO Q NPU run — **maximum non-loopback TCP/UDP sockets of the engine process = ${sock(NPU) ?? "n/a"}**.`));
 
 C.push(P("**Evidence folder:** https://github.com/mxngocqb/CabinTranslation/tree/main/results → `results/<device>/<run>/`", { after: 40, keep: true }));
 C.push(B("`summary.md`, `summary.json` — scores, latency, memory"));
@@ -484,7 +512,7 @@ C.push(B("`rows.jsonl` — per-utterance output with references"));
 C.push(B("`device_stderr.log` — engine log"));
 C.push(B("`meminfo_samples.json` — memory / GPU / socket samples"));
 C.push(B("`stage/` (16 kHz inputs), `wav/` (spoken outputs)"));
-C.push(B("Offline runs also contain `network.log` (network state logged on the device every 15 s), `shots/` (device screenshots) and `logcat/` (Android system logs)"));
+C.push(B("Offline runs also contain the raw system logs: QCS8550 — `network.log` (network state logged on the device every 15 s), `shots/` (device screenshots), `logcat/` (Android logcat + bugreport); VENTUNO Q — `syslog/` (network.log, systemd journal, kernel log) and `install/` (package install + check.sh output)"));
 C.push(B("Dashboard with audio: `dashboard/index.html`"));
 
 C.push(P("**Metric definitions**", { after: 40, keep: true }));
@@ -603,7 +631,9 @@ C.push(H2("Known limitations"));
   ["Single-call Vietnamese input trades accuracy for speed.", ["VI→EN loses ~1.8 COMET / ~7 BLEU against the 2-call punctuation pass.", "`--punct-pass` restores it."]],
   ["Vietnamese ASR on the VI–ZH sample voices: WER 12.3% vs 1.7–4.8% on the other sets.", ["ASR errors propagate to translation."]],
   ["One utterance with empty ASR output (EV-2748); occasional untranslated short sentences on CPU/GPU builds (VK-0300).", []],
-  ["Network evidence differs per device.", ["QCS8550 benchmark: fully offline (on-device `network.log` 55/55 samples offline, plus logcat).", "VENTUNO Q and Galaxy S25 Ultra batch runs: orchestrated over ssh / wireless adb, so their logs record that control link.", "Engine network sockets on VENTUNO Q = 0."]],
+  ["Network evidence differs per device.", npuOffline
+    ? ["VENTUNO Q NPU and QCS8550 benchmarks: fully offline, with raw system logs.", "The VENTUNO Q GPU/CPU runs and the Galaxy S25 Ultra latency/power runs were orchestrated over ssh / wireless adb, so their logs record that control link."]
+    : ["QCS8550 benchmark: fully offline (on-device `network.log` 55/55 samples offline, plus logcat).", "VENTUNO Q and Galaxy S25 Ultra batch runs: orchestrated over ssh / wireless adb, so their logs record that control link.", "Engine network sockets on VENTUNO Q = 0."]],
   ["The NPU requires QAIRT 2.50 runtime libraries, distributed separately from the main package.", []],
 ].forEach(([t, sub]) => { C.push(B(t)); sub.forEach((x) => C.push(B(x, 1))); });
 C.push(H2("Next development steps"));
