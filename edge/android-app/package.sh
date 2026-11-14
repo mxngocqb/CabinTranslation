@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 # Build the offline QCS8550 (Android) package: APK + models + adb install script.
-#   bash edge/android-app/package.sh [OUT_DIR=../CabinTranslation_submission/qcs8550] [VERSION=v1.0]
+#   bash edge/android-app/package.sh [OUT_DIR=../CabinTranslation_submission/qcs8550] [VERSION=v1.1]
 # -> OUT_DIR/CabinTranslation-QCS8550-<VERSION>/ and .tar + SHA256SUMS.txt
 set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd); ROOT=$(cd "$HERE/../.." && pwd)
-OUTD=${1:-$ROOT/../CabinTranslation_submission/qcs8550}; VER=${2:-v1.0}
+OUTD=${1:-$ROOT/../CabinTranslation_submission/qcs8550}; VER=${2:-v1.1}
 M=$ROOT/models; GEMMA=${GEMMA:-$HOME/edge/models/gemma-4-E2B-it-gpu.litertlm}
 P=$OUTD/CabinTranslation-QCS8550-$VER
 rm -rf "$P"; mkdir -p "$P/models"
 cp "$HERE/dist/CabinTranslation.apk" "$P/"
+cp "$ROOT/docs/INSTALL_AND_USE.md" "$P/"
 cp "$GEMMA" "$P/models/"
 # exactly the files the device config references (edge/tools/make_device_bundle.py MODEL_FILES, minus unused Supertonic-3)
 cp_rel() { mkdir -p "$P/models/$1/$(dirname "$2")"; cp -r "$M/$1/$2" "$P/models/$1/$(dirname "$2")/"; }
@@ -56,10 +57,12 @@ Team **BKMEETING** · OneVoice AI Challenge 2026 · Phase 3 prototype
 | `CabinTranslation.apk` | Android app `vn.cabin.translate`. It contains the native engine `libcabin_edge.so` and the Silero VAD. |
 | `models/` | All model files, about 2.8 GB. It holds Gemma 4 E2B `gemma-4-E2B-it-gpu.litertlm` and the sherpa-onnx ASR/TTS models. |
 | `install.sh` | One-command install over adb. |
+| `INSTALL_AND_USE.md` | Full step-by-step guide (also for installing without adb), conversation how-to, troubleshooting. |
 
 ## Requirements
 
-- An Android tablet on Qualcomm QCS8550 (Snapdragon 8 Gen 2 class, Adreno 740), Android 13 or later, with at least 8 GB RAM and 4 GB free storage.
+- An Android tablet or phone with a Qualcomm Snapdragon chip and Adreno GPU, Android 10 or later, at least 8 GB RAM and 4 GB free storage.
+  Tested: QCS8550 meeting tablet (Android 13, Adreno 740) and Samsung Galaxy S25 Ultra (SM8750, Android 17, Adreno 830).
 - A PC with `adb`. Connect over USB with USB debugging enabled. No network is needed.
 
 ## Install (offline)
@@ -73,12 +76,20 @@ Manual equivalent:
 2. `adb shell appops set vn.cabin.translate MANAGE_EXTERNAL_STORAGE allow`
 3. `adb push models/. /sdcard/CabinTranslation/models/`
 
+**Updating from v1.0:** the models are unchanged. Only run `adb install -r -g CabinTranslation.apk`.
+
 ## Use
 
 1. Turn on **airplane mode**. Nothing needs the network.
 2. Open **CabinTranslation**. It shows "Sẵn sàng · Gemma 4 E2B trên GPU" after about 25 s.
 3. Pick the partner language at the top: English / 한국어 / 中文.
-4. Tap the microphone of whoever is speaking and talk. When you stop, the translation is shown and read aloud. Tap again to stop early.
+4. Whoever speaks taps their own button (blue **Nói tiếng Việt** on the left, green **Speak …** on the right) and talks.
+   The button turns red while listening; when the speaker pauses, the turn ends by itself (or tap the red button).
+5. The button shows "Đang dịch… / Translating…". Then the sentence and its translation appear in the conversation
+   (Vietnamese bubbles left, partner right) and the translation is read aloud.
+6. Each card shows the translation for that person in large type, and "Bạn vừa nói / You said: …" so the speaker can
+   check what was heard. 🔊 on a card, or a tap on any bubble, replays a translation. **⟲ Lật** turns the partner card
+   upside down when the tablet lies between two people. Errors appear on the speaker's card, in the speaker's language.
 
 The pipeline runs fully on the device:
 - **ASR**: sherpa-onnx with Zipformer VI / X-ASR EN+ZH / Zipformer KO, on the CPU.

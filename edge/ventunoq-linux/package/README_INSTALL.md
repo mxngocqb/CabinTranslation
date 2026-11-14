@@ -17,7 +17,7 @@ speech recognition (CPU) → Gemma 4 E2B translation (**Hexagon NPU**, or GPU / 
 ## 2. Install (before disconnecting the network)
 
 ```bash
-tar -xf CabinTranslation-VentunoQ-v1.0.tar && cd CabinTranslation-VentunoQ-v1.0
+tar -xf CabinTranslation-VentunoQ-v1.1.tar && cd CabinTranslation-VentunoQ-v1.1
 # QAIRT 2.50 runtime libs for the NPU (Qualcomm, not redistributed in the main package). Either:
 tar -xf ../qairt-2.50-libs.tar -C lib_npu        # if you received qairt-2.50-libs.tar, or
 python3 fetch_qairt.py lib_npu                   # online: range-reads 6 files from Qualcomm's QAIRT 2.50 SDK zip, SHA-256 verified

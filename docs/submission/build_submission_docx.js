@@ -124,7 +124,7 @@ function latencyRows(run) {
 const C = [];
 C.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 60 }, children: [new TextRun({ text: "PROTOTYPE SUBMISSION", font: FONT, size: 36, bold: true, color: "1F3864" })] }));
 C.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 60 }, children: [new TextRun({ text: "OneVoice AI Challenge 2026 · Phase 3", font: FONT, size: 24, color: "404040" })] }));
-C.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 200 }, children: runs(`${TEAM === "[TeamName]" ? "[[" + TEAM + "]]" : TEAM} — CabinTranslation · build v1.0 · ${TODAY}`, { size: 22 }) }));
+C.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 200 }, children: runs(`${TEAM === "[TeamName]" ? "[[" + TEAM + "]]" : TEAM} — CabinTranslation · build v1.1 · ${TODAY}`, { size: 22 }) }));
 C.push(P("Every number in this document comes from the run folders named in Section 4 and can be regenerated with `node docs/submission/build_submission_docx.js`.", { italics: true, size: 18, color: "595959" }));
 
 // 1
@@ -136,10 +136,11 @@ C.push(table([2300, W - 2300], ["Field", "Team response"], [
     PS("Offline two-way voice-to-voice interpreter for workers in factories, warehouses and construction sites."),
   ]],
   ["Submitted build", [
-    PS(`**v1.0**, ${TODAY}. One native engine (\`cabin_edge\`) shipped for three Qualcomm devices:`),
-    BS("**VENTUNO Q package** `CabinTranslation-VentunoQ-v1.0` (engine build 085aba7cad5c)"),
-    BS("**QCS8550 Android bundle v1.0** `CabinTranslation-QCS8550-v1.0`: app `vn.cabin.translate` v1.0, APK sha256 21471b6e6d79…"),
+    PS(`**v1.1**, ${TODAY}. One native engine (\`cabin_edge\`) shipped for three Qualcomm devices:`),
+    BS("**VENTUNO Q package** `CabinTranslation-VentunoQ-v1.1` (engine build 085aba7cad5c)"),
+    BS("**QCS8550 Android bundle v1.1** `CabinTranslation-QCS8550-v1.1`: app `vn.cabin.translate` v1.1, APK sha256 ae3de489094f…"),
     BS("**Samsung Galaxy S25 Ultra (SM8750):** the same APK and bundle, unchanged"),
+    PS("v1.1 = the v1.0 engine and models (all measurements in Section 4) with a conversation-friendly UI: tap to talk with automatic end of turn, \"You said\" check, replay, face-to-face mode."),
     PS("Source: private GitHub repository (Section 3.1)."),
   ]],
   ["Demo language(s)", [
@@ -189,7 +190,7 @@ C.push(table([2300, W - 2300], ["Field", "Team response"], [
     PS("**Works end to end on all three devices** (VENTUNO Q, QCS8550 tablet, Galaxy S25 Ultra):"),
     BS("speech → ASR → Gemma 4 E2B translation → TTS, in all six directions"),
     BS("entirely on-device"),
-    BS("operated through a touch UI: hold-to-talk per speaker, per-stage timing on screen, replay"),
+    BS("operated through a touch UI: tap to talk per speaker with automatic end of turn, per-stage timing on screen, replay"),
     PS(""),
     PS("**Delivered in Phase 3:**"),
     BS("A single native process with no Python and no network calls (sherpa-onnx ASR/TTS, LiteRT-LM for Gemma, ViFastTts FFI)."),
@@ -250,22 +251,24 @@ C.push(H1("3. Solution package"));
 C.push(H2("3.1 Files and access"));
 C.push(table([2300, W - 2300], ["Item", "Details"], [
   ["Offline package — VENTUNO Q", [
-    BS("**CabinTranslation-VentunoQ-v1.0.tar** (3.4 GB)"),
-    BS("SHA-256 `fb5c3ffdee100fceaa6c0621a0911e3d290cfd8c0b5a616350d7ae5ccbfaf97a`", 1),
+    BS("**CabinTranslation-VentunoQ-v1.1.tar** (3.4 GB)"),
+    BS("SHA-256 `afad13723787ab13ce421305832ae9ad82f4a18e26547fcaa966f87c82b53ac2`", 1),
     BS("**qairt-2.50-libs.tar** (107 MB): Qualcomm AI Runtime 2.50 runtime libraries, shipped separately under Qualcomm's terms"),
     BS("SHA-256 `7cc90dd40d50a58f0b865ebd69e219798585c3e0d40bab63e0cb307789f5d346`", 1),
     BS("`fetch_qairt.py` re-downloads them from Qualcomm with pinned hashes", 1),
     PS(""),
-    PS("**Download:** GitHub release v1.0 — https://github.com/mxngocqb/CabinTranslation/releases/tag/v1.0"),
-    PS("Assets: `CabinTranslation-VentunoQ-v1.0.tar.part-*`, `qairt-2.50-libs.tar`, `SHA256SUMS.txt`"),
+    PS("**Download:** GitHub release v1.1 — https://github.com/mxngocqb/CabinTranslation/releases/tag/v1.1"),
+    PS("Assets: `CabinTranslation-VentunoQ-v1.1.tar.part-*`, `qairt-2.50-libs.tar`, `SHA256SUMS.txt`, `INSTALL_AND_USE.md`"),
   ]],
   ["Offline package — Android (QCS8550 tablet, Galaxy S25 Ultra)", [
-    PS("Same package for both Android devices: **CabinTranslation-QCS8550-v1.0**"),
-    BS("CabinTranslation.apk + models + install.sh"),
+    PS("Same package for both Android devices: **CabinTranslation-QCS8550-v1.1**"),
+    BS("CabinTranslation.apk (v1.1) + models + install.sh + guide"),
+    BS("SHA-256 `bfe689dfc3bb9be4a9f3c1ba52701d7f6a062667edac6984e8391345fa549218`", 1),
     BS("Installs offline over adb"),
     PS(""),
-    PS("**Download:** GitHub release v1.0 — https://github.com/mxngocqb/CabinTranslation/releases/tag/v1.0"),
-    PS("Assets: `CabinTranslation-QCS8550-v1.0.tar.part-*`, `CabinTranslation.apk`"),
+    PS("**Download:** GitHub release v1.1 — https://github.com/mxngocqb/CabinTranslation/releases/tag/v1.1"),
+    PS("Assets: `CabinTranslation-QCS8550-v1.1.tar.part-*`, `CabinTranslation-v1.1.apk` (app only, to update a v1.0 install)"),
+    PS("Step-by-step guide for anyone: `INSTALL_AND_USE.md` (release asset, also inside both packages and in `docs/`)."),
   ]],
   ["Format", [
     BS("**VENTUNO Q (Linux aarch64):** packaged native executables + models + launch scripts"),
@@ -273,7 +276,7 @@ C.push(table([2300, W - 2300], ["Item", "Details"], [
   ]],
   ["Source repository", [
     PS("Private GitHub repository shared with **saigonaihub**:"),
-    PS("https://github.com/mxngocqb/CabinTranslation (tag **v1.0**)"),
+    PS("https://github.com/mxngocqb/CabinTranslation (tag **v1.1**)"),
     PS("Layout:"),
     BS("`edge/engine` — native engine"),
     BS("`edge/ventunoq-linux`, `edge/qcs8550-android`, `edge/android-app` — per-device builds and the Android app"),
@@ -372,21 +375,21 @@ C.push(P("**A** = VENTUNO Q · **B** = QCS8550 tablet · **C** = Galaxy S25 Ultr
 C.push(table([2300, W - 2300], ["Step", "What to do"], [
   ["Prepare", [
     PS("**A:**"),
-    BS("Copy `CabinTranslation-VentunoQ-v1.0.tar` and `qairt-2.50-libs.tar` to the board (USB stick or scp). Nothing else is downloaded."),
+    BS("Copy `CabinTranslation-VentunoQ-v1.1.tar` and `qairt-2.50-libs.tar` to the board (USB stick or scp). Nothing else is downloaded."),
     PS("**B / C:**"),
     BS("A host PC with adb: USB, or wireless debugging (`adb pair` once, then `adb connect <phone-ip>:<port>`)"),
     BS("The wireless port changes after reconnects; check with `adb devices -l`", 1),
     BS("Join the release parts and unpack on the host:"),
-    BS("`cat CabinTranslation-QCS8550-v1.0.tar.part-* > CabinTranslation-QCS8550-v1.0.tar`", 1),
-    BS("`tar -xf CabinTranslation-QCS8550-v1.0.tar`", 1),
+    BS("`cat CabinTranslation-QCS8550-v1.1.tar.part-* > CabinTranslation-QCS8550-v1.1.tar`", 1),
+    BS("`tar -xf CabinTranslation-QCS8550-v1.1.tar`", 1),
   ]],
   ["Install", [
     PS("**A:**"),
-    BS("`tar -xf CabinTranslation-VentunoQ-v1.0.tar`"),
-    BS("`cd CabinTranslation-VentunoQ-v1.0`"),
+    BS("`tar -xf CabinTranslation-VentunoQ-v1.1.tar`"),
+    BS("`cd CabinTranslation-VentunoQ-v1.1`"),
     BS("`tar -xf ../qairt-2.50-libs.tar -C lib_npu`"),
     BS("`sh check.sh` → `CHECK PASSED` (verifies SoC, NPU access, libraries, SHA-256 of every file)"),
-    PS("**B / C:** inside `CabinTranslation-QCS8550-v1.0/`:"),
+    PS("**B / C:** inside `CabinTranslation-QCS8550-v1.1/`:"),
     BS("`bash install.sh <adb-serial>` (same package for the tablet and the S25 Ultra)"),
     BS("installs the APK, grants file access, pins landscape", 1),
     BS("pushes `models/` to `/sdcard/CabinTranslation/models` and starts the app", 1),

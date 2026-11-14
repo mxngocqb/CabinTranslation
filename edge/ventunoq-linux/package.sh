@@ -1,11 +1,11 @@
 #!/bin/bash
 # Build the offline VENTUNO Q package from a deployed board folder (run ON the board).
-#   bash package.sh [SRC=~/cabin] [OUT_DIR=~] [VERSION=v1.0]  [--all-backends] [--with-qairt]
+#   bash package.sh [SRC=~/cabin] [OUT_DIR=~] [VERSION=v1.1]  [--all-backends] [--with-qairt]
 #   -> OUT_DIR/CabinTranslation-VentunoQ-<VERSION>/ (+ .tar) ; qairt-2.50-libs.tar is built separately.
 # Default contents: NPU Gemma only. --all-backends also adds the CPU and GPU Gemma files (+4.9 GB).
 # QAIRT 2.50 libs (Qualcomm) are NOT put into the main package unless --with-qairt.
 set -euo pipefail
-SRC=${1:-$HOME/cabin}; OUTD=${2:-$HOME}; VER=${3:-v1.0}; ALL=0; QAIRT=0
+SRC=${1:-$HOME/cabin}; OUTD=${2:-$HOME}; VER=${3:-v1.1}; ALL=0; QAIRT=0
 for x in "$@"; do [ "$x" = --all-backends ] && ALL=1; [ "$x" = --with-qairt ] && QAIRT=1; done
 P=$OUTD/CabinTranslation-VentunoQ-$VER
 HERE=$(cd "$(dirname "$0")" && pwd)
@@ -17,6 +17,7 @@ cp "$SRC"/lib_npu/{libLiteRtLm.so,libLiteRt.so,libGemmaModelConstraintProvider.s
 QLIBS="libQnnHtp.so libQnnSystem.so libQnnHtpV75Stub.so libQnnHtpV75Skel.so libQnnHtpPrepare.so libQnnTFLiteDelegate.so"
 [ $QAIRT = 1 ] && for f in $QLIBS; do cp "$SRC/lib_npu/$f" "$P/lib_npu/"; done
 cp "$HERE"/package/{check.sh,selftest.sh,fetch_qairt.py,README_INSTALL.md} "$P"/
+[ -f "$HERE/../../docs/INSTALL_AND_USE.md" ] && cp "$HERE/../../docs/INSTALL_AND_USE.md" "$P"/   # full guide (when run from a repo checkout)
 # models referenced by the configs
 python3 - "$SRC" "$P" "$ALL" <<'PY'
 import json, os, shutil, sys

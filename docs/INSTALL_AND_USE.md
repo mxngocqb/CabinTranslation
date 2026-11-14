@@ -32,31 +32,28 @@ Team BKMEETING · OneVoice AI Challenge 2026 · Phase 3 prototype.
 
 Already installed **v1.0**? Updating is quick:
 - Android: install the new APK only (Section 3.4, "Update from v1.0"). Your models stay where they are.
-- VENTUNO Q: replace one file (Section 4.3).
+- VENTUNO Q: replace one file (Section 4.5).
 
 ---
 
 ## 2. Downloads
 
-All files are on the GitHub **Releases** page of this repository.
-
-**From release v1.1 (this release)**
+All files are on the GitHub **Releases** page of this repository, release **v1.1**. Everything needed is in this one
+release.
 
 | File | Size | What it is |
 |---|---|---|
-| `CabinTranslation-v1.1.apk` | 27 MB | The Android app with the new conversation UI |
-| `cabin-web-ui-v1.1.html` | 33 KB | The new browser UI for the VENTUNO Q board |
+| `CabinTranslation-QCS8550-v1.1.tar.part-00` + `.part-01` | 1.9 GB + 1.0 GB | **Option A (Android):** the app v1.1 + all models + `install.sh` + this guide |
+| `CabinTranslation-VentunoQ-v1.1.tar.part-00` + `.part-01` | 1.9 GB + 1.5 GB | **Option B (VENTUNO Q):** the complete board package with the v1.1 UI |
+| `qairt-2.50-libs.tar` | 106 MB | Option B: Qualcomm NPU runtime libraries (kept separate: Qualcomm license) |
+| `CabinTranslation-v1.1.apk` | 27 MB | The Android app alone, to **update** a device that already has v1.0 (Section 3.4) |
+| `cabin-web-ui-v1.1.html` | 33 KB | The browser UI alone, to **update** a VENTUNO Q board that already has v1.0 (Section 4.5) |
+| `README_INSTALL_QCS8550.md`, `README_INSTALL_VentunoQ.md` | — | Short install notes of each package (also inside the packages) |
 | `INSTALL_AND_USE.md` | — | This guide |
-| `SHA256SUMS-v1.1.txt` | — | Checksums of the files above |
+| `BKMEETING_Prototype_Submission_V3.docx` | — | Submission document |
+| `SHA256SUMS.txt` | — | Checksums of all files above and of the joined packages |
 
-**From release v1.0 (models and board package — unchanged, so they are not uploaded again)**
-
-| File | Size | Needed for |
-|---|---|---|
-| `CabinTranslation-QCS8550-v1.0.tar.part-00` + `.part-01` | 1.9 GB + 1.0 GB | Option A: contains the **models** (and the old APK) |
-| `CabinTranslation-VentunoQ-v1.0.tar.part-00` + `.part-01` | 1.9 GB + 1.5 GB | Option B: the board package |
-| `qairt-2.50-libs.tar` | 106 MB | Option B: Qualcomm NPU libraries |
-| `SHA256SUMS.txt` | — | Checksums of the v1.0 files |
+For a **new install** you only need the package of your device (plus `qairt-2.50-libs.tar` for VENTUNO Q).
 
 GitHub limits one file to 2 GB, so the big packages are split into two parts. Join them back as shown below.
 
@@ -65,28 +62,23 @@ GitHub limits one file to 2 GB, so the big packages are split into two parts. Jo
 **Windows** (Command Prompt, in the folder where you downloaded the files):
 
 ```bat
-copy /b CabinTranslation-QCS8550-v1.0.tar.part-00 + CabinTranslation-QCS8550-v1.0.tar.part-01 CabinTranslation-QCS8550-v1.0.tar
-certutil -hashfile CabinTranslation-QCS8550-v1.0.tar SHA256
-tar -xf CabinTranslation-QCS8550-v1.0.tar
+copy /b CabinTranslation-QCS8550-v1.1.tar.part-00 + CabinTranslation-QCS8550-v1.1.tar.part-01 CabinTranslation-QCS8550-v1.1.tar
+certutil -hashfile CabinTranslation-QCS8550-v1.1.tar SHA256
+tar -xf CabinTranslation-QCS8550-v1.1.tar
 ```
 
 **Linux / macOS** (Terminal):
 
 ```bash
-cat CabinTranslation-QCS8550-v1.0.tar.part-00 CabinTranslation-QCS8550-v1.0.tar.part-01 > CabinTranslation-QCS8550-v1.0.tar
-sha256sum CabinTranslation-QCS8550-v1.0.tar        # macOS: shasum -a 256 CabinTranslation-QCS8550-v1.0.tar
-tar -xf CabinTranslation-QCS8550-v1.0.tar
+cat CabinTranslation-QCS8550-v1.1.tar.part-00 CabinTranslation-QCS8550-v1.1.tar.part-01 > CabinTranslation-QCS8550-v1.1.tar
+sha256sum CabinTranslation-QCS8550-v1.1.tar        # macOS: shasum -a 256 CabinTranslation-QCS8550-v1.1.tar
+tar -xf CabinTranslation-QCS8550-v1.1.tar
 ```
 
-The checksum must match the line in `SHA256SUMS.txt`:
+The checksum must match the line for that file in `SHA256SUMS.txt` (download it from the same release page).
+It lists the joined `.tar` files as well as every part.
 
-| File | SHA-256 |
-|---|---|
-| `CabinTranslation-QCS8550-v1.0.tar` | `e47f78746f86e8ba26187931d7c33322ebc848b42833507e876605604996407d` |
-| `CabinTranslation-VentunoQ-v1.0.tar` | `fb5c3ffdee100fceaa6c0621a0911e3d290cfd8c0b5a616350d7ae5ccbfaf97a` |
-| `qairt-2.50-libs.tar` | `7cc90dd40d50a58f0b865ebd69e219798585c3e0d40bab63e0cb307789f5d346` |
-
-If it does not match, a download was incomplete. Download that part again.
+If it does not match, a download was incomplete. Check the parts against `SHA256SUMS.txt` and download the bad one again.
 
 For the VentunoQ package, use the same commands with `VentunoQ` in place of `QCS8550`.
 
@@ -106,9 +98,15 @@ For the VentunoQ package, use the same commands with `VentunoQ` in place of `QCS
 
 ### 3.2 Prepare the files
 
-1. Download and join `CabinTranslation-QCS8550-v1.0.tar` and extract it (Section 2.1).
-   You get a folder `CabinTranslation-QCS8550-v1.0/` with a `models/` folder inside.
-2. Download `CabinTranslation-v1.1.apk` from release v1.1 and put it in the same folder.
+Download and join `CabinTranslation-QCS8550-v1.1.tar` and extract it (Section 2.1). You get a folder
+`CabinTranslation-QCS8550-v1.1/` with:
+
+| Item | What it is |
+|---|---|
+| `CabinTranslation.apk` | The app, version 1.1 |
+| `models/` | All models, 2.9 GB |
+| `install.sh` | One-command install (Linux/macOS) |
+| `README_INSTALL.md`, `INSTALL_AND_USE.md` | Short notes and this guide |
 
 The `models/` folder must contain exactly these 9 items:
 
@@ -147,11 +145,11 @@ adb devices
 
 You should see one line ending in `device`. If it says `unauthorized`, unlock the device and accept the prompt.
 
-**Step 4. Install.** Run these commands from the `CabinTranslation-QCS8550-v1.0` folder
+**Step 4. Install.** Run these commands from the `CabinTranslation-QCS8550-v1.1` folder
 (on Windows, write the full path to `adb.exe` if it is not on your PATH):
 
 ```bash
-adb install -r -g CabinTranslation-v1.1.apk
+adb install -r -g CabinTranslation.apk
 adb shell appops set vn.cabin.translate MANAGE_EXTERNAL_STORAGE allow
 adb shell mkdir -p /sdcard/CabinTranslation/models
 adb push models/. /sdcard/CabinTranslation/models/
@@ -165,12 +163,10 @@ What each line does:
 4. Copies the 2.9 GB of models. This takes a few minutes over USB.
 5. Starts the app.
 
-On Linux/macOS you can instead run the bundled script, which does the same steps
-(it installs the APK inside the folder, so copy the v1.1 APK over it first):
+On Linux/macOS you can instead run the bundled script, which does the same steps:
 
 ```bash
-cp CabinTranslation-v1.1.apk CabinTranslation.apk
-bash install.sh
+bash install.sh                 # or: bash install.sh <adb-serial> when several devices are connected
 ```
 
 On a meeting tablet whose stand reports the wrong orientation, `install.sh` also locks the screen to landscape.
@@ -181,7 +177,7 @@ By hand: `adb shell settings put system accelerometer_rotation 0` and `adb shell
 
 ### 3.4 Update from v1.0
 
-Models are unchanged. Install the new app over the old one; nothing else is needed:
+Models are unchanged. Download only `CabinTranslation-v1.1.apk` and install it over the old app; nothing else is needed:
 
 ```bash
 adb install -r -g CabinTranslation-v1.1.apk
@@ -196,7 +192,7 @@ This uses only the normal file transfer and Android settings. It uses the same f
 1. Connect the device to the computer by USB and choose **File transfer** on the device.
 2. In the device's **Internal storage**, create a folder `CabinTranslation`, and inside it copy the whole `models` folder.
    The result must be `Internal storage/CabinTranslation/models/…` with the 9 items listed in Section 3.2.
-3. Copy `CabinTranslation-v1.1.apk` to the device (e.g. `Download/`), open it with the Files app and install it.
+3. Copy `CabinTranslation.apk` to the device (e.g. `Download/`), open it with the Files app and install it.
    Android may ask you to allow installing apps from this source: allow it.
 4. Open **CabinTranslation**:
    - When asked for the **microphone**, tap Allow.
@@ -222,23 +218,24 @@ The board runs the engine; you use it from a web browser (on the board itself, o
 | OS | The board's stock Ubuntu 24.04 aarch64 image |
 | User | The stock `arduino` user (it is in the `fastrpc` and `render` groups) |
 | Disk | 4 GB free |
-| Audio | A USB or onboard microphone and a speaker, or use a laptop/phone browser (Section 4.5) |
+| Audio | A USB or onboard microphone and a speaker, or use a laptop/phone browser (Section 4.4) |
 
 ### 4.2 Install
 
-Copy `CabinTranslation-VentunoQ-v1.0.tar` (joined, Section 2.1), `qairt-2.50-libs.tar` and `cabin-web-ui-v1.1.html`
-to the board's home folder, e.g. with a USB stick or `scp`:
+Copy `CabinTranslation-VentunoQ-v1.1.tar` (joined, Section 2.1) and `qairt-2.50-libs.tar` to the board's home folder,
+e.g. with a USB stick or `scp`:
 
 ```bash
-scp CabinTranslation-VentunoQ-v1.0.tar qairt-2.50-libs.tar cabin-web-ui-v1.1.html arduino@<board-ip>:~
+scp CabinTranslation-VentunoQ-v1.1.tar qairt-2.50-libs.tar arduino@<board-ip>:~
 ```
 
 Then, **on the board** (a terminal on the board, or `ssh arduino@<board-ip>`):
 
 ```bash
-tar -xf CabinTranslation-VentunoQ-v1.0.tar
-cd CabinTranslation-VentunoQ-v1.0
+tar -xf CabinTranslation-VentunoQ-v1.1.tar
+cd CabinTranslation-VentunoQ-v1.1
 tar -xf ../qairt-2.50-libs.tar -C lib_npu        # Qualcomm NPU libraries
+sh check.sh                                      # must end with "CHECK PASSED"
 ```
 
 If you do not have `qairt-2.50-libs.tar` but the board is online, `python3 fetch_qairt.py lib_npu` downloads
@@ -246,22 +243,7 @@ just the 6 needed files from Qualcomm's QAIRT 2.50 SDK and checks their SHA-256.
 
 No compiler, Python packages, root access or system changes are needed.
 
-### 4.3 Install the new v1.1 UI (one file)
-
-Still inside `CabinTranslation-VentunoQ-v1.0`:
-
-```bash
-cp ../cabin-web-ui-v1.1.html web/index.html
-grep -v ' ./web/index.html$' SHA256SUMS > SHA256SUMS.new && sha256sum ./web/index.html >> SHA256SUMS.new && mv SHA256SUMS.new SHA256SUMS
-sh check.sh
-```
-
-The second line updates the package's checksum list for the new page, so the integrity check still passes.
-`check.sh` must end with **CHECK PASSED**.
-
-If the engine is already running, a browser refresh (Ctrl+F5) is enough: the page is read from disk on each load.
-
-### 4.4 Go offline and start
+### 4.3 Go offline and start
 
 ```bash
 nmcli radio wifi off; nmcli networking off       # or unplug Ethernet / turn Wi-Fi off in the desktop menu
@@ -274,7 +256,7 @@ To check the whole pipeline without speaking: `sh selftest.sh npu` (12 bundled s
 
 To stop: `sh stop.sh`.
 
-### 4.5 Open the UI
+### 4.4 Open the UI
 
 Browsers only allow the microphone on `localhost` or on `https://`. Pick one:
 
@@ -285,6 +267,22 @@ Browsers only allow the microphone on `localhost` or on `https://`. Pick one:
 | On a phone/tablet on the same network | Start with `HTTPS=1 sh start.sh npu`, open **https://&lt;board-ip&gt;:8443/** and accept the certificate warning once (Advanced → Proceed) |
 
 When ready, the top line shows `Chạy trên thiết bị · Gemma 4 E2B (NPU) · 4 ngôn ngữ · RAM … MB`.
+
+### 4.5 Update a v1.0 board to the v1.1 UI (one file)
+
+Only if the board already has the **v1.0** package installed. Copy `cabin-web-ui-v1.1.html` to the board's home folder,
+then inside `CabinTranslation-VentunoQ-v1.0`:
+
+```bash
+cp ../cabin-web-ui-v1.1.html web/index.html
+grep -v ' ./web/index.html$' SHA256SUMS > SHA256SUMS.new && sha256sum ./web/index.html >> SHA256SUMS.new && mv SHA256SUMS.new SHA256SUMS
+sh check.sh
+```
+
+The second line updates the package's checksum list for the new page, so the integrity check still passes.
+`check.sh` must end with **CHECK PASSED**.
+
+If the engine is already running, a browser refresh (Ctrl+F5) is enough: the page is read from disk on each load.
 
 ---
 
@@ -370,7 +368,7 @@ Open **http://127.0.0.1:7860/**. See [`pc/README.md`](../pc/README.md) for the o
 
 | What you see | What to do |
 |---|---|
-| `check.sh` says **file integrity FAILED** after the UI update | Run the `grep … SHA256SUMS` line of Section 4.3 again (from inside the package folder) |
+| `check.sh` says **file integrity FAILED** | New install: a download part was incomplete, check the SHA-256 (Section 2.1). After a v1.0 UI update: run the `grep … SHA256SUMS` line of Section 4.5 again |
 | `QAIRT 2.50 libraries missing` | Do the `qairt-2.50-libs.tar` step (Section 4.2) |
 | `Cannot open /dev/fastrpc-cdsp` | Use the stock `arduino` user (member of `fastrpc`), or `sh start.sh gpu` / `cpu` |
 | The microphone does nothing | Open the UI on `127.0.0.1` (directly or through `ssh -L`) or on `https://…:8443`. A plain `http://<board-ip>` address is blocked by browsers. Allow the microphone when the browser asks |
@@ -382,6 +380,8 @@ Open **http://127.0.0.1:7860/**. See [`pc/README.md`](../pc/README.md) for the o
 ## 8. What changed in v1.1
 
 Only the user interface changed. The models, the engine and all measured quality and speed numbers are the same as v1.0.
+Both device packages were rebuilt as **v1.1** with the new app / UI and this guide inside, so release v1.1 is complete
+on its own.
 
 **Android app**
 - Each person's things are on their own side: Vietnamese bubbles on the left next to the Vietnamese card, the partner's on the right.
