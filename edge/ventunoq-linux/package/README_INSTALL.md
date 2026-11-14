@@ -42,10 +42,15 @@ The ready state shows: `✅ Sẵn sàng · models loaded on device: en, ko, vi, 
 ## 4. Use
 
 1. Pick the partner language at the top: 🇬🇧 English, 🇰🇷 한국어 or 🇨🇳 中文.
-2. The Vietnamese speaker holds **🎤 Giữ để nói** (left) and speaks. The partner holds **🎤 Hold to talk** (right).
-   Hold to talk, or tap once to start and tap again to stop.
-3. The recognized sentence and the translation appear in the log, and the translation is spoken.
-   The status line shows the per-stage time: ASR, MT (Gemma, NPU), TTS and the total. 🔊 replays a turn.
+2. Whoever speaks taps their own button once: the Vietnamese speaker **🎤 Nói** (blue, left), the partner
+   **🎤 Speak / 말하기 / 说话** (green, right). Talk; recording stops by itself after a ~1 s pause
+   (or tap the red button). Holding the button and releasing it also works.
+3. The conversation shows what was heard and the translation, and the translation is spoken.
+   **🔊 Replay** plays it again; tapping the time under a bubble shows ASR / MT (Gemma, NPU) / TTS.
+4. **⇅ Đối diện** turns the screen into two halves for a device lying between two people; **⌨️** lets you type a
+   sentence; **⏹ Tự dừng** switches the automatic stop off.
+
+Step-by-step guide for every option: `docs/INSTALL_AND_USE.md` in the repository.
 
 Other backends: `sh start.sh gpu` (Adreno 623 via Vulkan) or `sh start.sh cpu` (4 threads). These need
 `--all-backends` packages, which contain the CPU and GPU Gemma files.

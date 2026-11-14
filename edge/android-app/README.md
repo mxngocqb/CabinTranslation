@@ -68,8 +68,15 @@ python edge/tools/make_device_bundle.py --target android --serial <adb-serial> -
    `Gemma 4 E2B trên GPU · nạp 20s · RAM … MB`.
 2. Pick the partner language: English, 한국어 or 中文.
 3. Tap the button of whoever is speaking (**Nói tiếng Việt** or **Speak English/Korean/Chinese**) and talk.
-4. The recognized sentence and the translation appear in the conversation, and the translation is spoken. The footer
-   shows `ASR … ms · dịch … ms · TTS … ms · tổng … ms`.
+   The button turns red; when the speaker pauses, the VAD ends the turn (or tap the red button).
+4. The button shows "Đang dịch… / Translating…". Then the sentence and its translation appear in the conversation
+   (Vietnamese bubbles on the left, the partner's on the right), the translation is spoken, and the footer shows
+   `ASR … ms · dịch … ms · TTS … ms · tổng … ms`.
+5. Each card shows the translation for that person in large type and "Bạn vừa nói / You said: …" so the speaker
+   can check what was heard. 🔊 on a card, or a tap on any bubble, replays a translation. **⟲ Lật** turns the
+   partner card upside down for face-to-face use. Errors appear on the speaker's card in the speaker's language.
+
+Step-by-step guide for non-developers (including install without adb): [docs/INSTALL_AND_USE.md](../../docs/INSTALL_AND_USE.md).
 
 The header shows **Online / Offline**. For the offline demo, enable **airplane mode** first. The app keeps working.
 

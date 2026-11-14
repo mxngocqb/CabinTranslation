@@ -5,6 +5,10 @@ Two-way speech-to-speech interpreter for workers in factories, warehouses and co
 Recognition, translation and speech synthesis **all run on the device**, and inference makes no cloud or API calls.
 OneVoice AI Challenge 2026, Phase 3 prototype.
 
+> **Just want to run it?** Follow **[docs/INSTALL_AND_USE.md](docs/INSTALL_AND_USE.md)**: step-by-step install for the
+> Android app and the VENTUNO Q board, how to hold a conversation, and troubleshooting. Downloads are on the
+> Releases page (**v1.1**: new conversation UI; models and board package from v1.0).
+
 ```
  mic ─► ASR (sherpa-onnx, CPU) ─► text prep ─► Gemma 4 E2B translation (GPU / NPU / CPU) ─► TTS (ONNX, CPU) ─► speaker
         └──────────── one native process on the device (cabin_edge): HTTP server + touch web UI ─────────────┘
@@ -80,8 +84,9 @@ adb connect <phone-ip>:<port>                 # the port changes after reconnect
 bash edge/android-app/install.sh              # installs the APK, grants file access, pushes models (~2.8 GB) if missing
 ```
 
-**Use:** pick the partner language (EN / KO / ZH). Each speaker holds their 🎤 button and speaks.
-The translation is shown, spoken aloud, and timed per stage (ASR / MT / TTS).
+**Use:** pick the partner language (EN / KO / ZH). The speaker taps their own 🎤 button once and talks; recording
+ends by itself after a short pause. The translation is shown, spoken aloud, and timed per stage (ASR / MT / TTS).
+Full instructions: [docs/INSTALL_AND_USE.md](docs/INSTALL_AND_USE.md).
 
 ## Models (device builds)
 
