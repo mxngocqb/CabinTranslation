@@ -1,4 +1,15 @@
-# Demo scenario — "Shift handover and line fault at an electronics assembly plant" (~30 min)
+# Demo scenarios
+
+Two scripts are used:
+
+| Script | Pair | Length | Recorded in |
+|---|---|---|---|
+| [1. Shift handover and line fault at an electronics assembly plant](#script-1--shift-handover-and-line-fault-at-an-electronics-assembly-plant-30-min) | VI ↔ EN / KO / ZH | ~30 min, ≈60 turns | `GalaxyS25_SM8750.MOV`, `BKMEETING_QCS8550.MOV`, `VentunoQ.mov` (excerpts of all three pairs) |
+| [2. A casual conversation](#script-2--a-casual-conversation-vi--en-20-turns) | VI ↔ EN | 20 turns | `VentunoQ_LiveTranslation.mov` (Arduino VENTUNO Q), `BKMEETING_LiveTranslation` (QCS8550 meeting tablet) |
+
+All videos: Drive folder `BKMEETING_OneVoiceAIChallenge` (link in the submission document, Section 2).
+
+# Script 1 — Shift handover and line fault at an electronics assembly plant (~30 min)
 
 **Setting.** An electronics assembly plant in an industrial park in Bắc Ninh. Production line 3 assembles control boards.
 The interpreter runs offline on one device placed on the line-side table: Arduino VENTUNO Q (QCS8275, NPU), the QCS8550 meeting tablet, or a Samsung Galaxy S25 Ultra (SM8750) running the CabinTranslation app. The two
@@ -109,3 +120,43 @@ ASR / MT / TTS time. Each scene ends with a recap read back by the device.
 - Each turn shows the recognized source sentence, the translation, the spoken output, and the per-stage time.
 - Numbers, dates, error codes and lot numbers are carried over correctly (scenes 2–4).
 - If an utterance is misrecognized, the speaker presses again and repeats it. The 🔊 button replays the last translation.
+
+# Script 2 — A casual conversation (VI ↔ EN, 20 turns)
+
+Two friends meet again. Speaker A speaks Vietnamese, speaker B speaks English. The conversation turns out to be
+about the interpreter itself, which is running between them.
+
+**Recorded in:** `VentunoQ_LiveTranslation.mov` (Arduino VENTUNO Q, Gemma on the NPU, web UI) and
+`BKMEETING_LiveTranslation` (QCS8550 meeting tablet, CabinTranslation Android app).
+
+**How to operate.** Partner language **English**. Each speaker taps their own button for every turn (A: the Vietnamese
+button, B: the English button) and says one line. The device shows the recognized sentence and the translation and
+reads the translation aloud before the other person answers.
+
+| # | Speaker | Utterance |
+|---|---|---|
+| 1 | 🇻🇳 A | Chào bạn, lâu rồi không gặp! Dạo này bạn thế nào? |
+| 2 | 🇺🇸 B | Hey! I'm doing great. How about you? |
+| 3 | 🇻🇳 A | Mình cũng ổn, chỉ là công việc gần đây hơi bận một chút. |
+| 4 | 🇺🇸 B | Really? What have you been working on lately? |
+| 5 | 🇻🇳 A | Mình đang phát triển một ứng dụng dịch giọng nói bằng trí tuệ nhân tạo. |
+| 6 | 🇺🇸 B | That sounds interesting! Does it work without an internet connection? |
+| 7 | 🇻🇳 A | Có chứ, toàn bộ quá trình xử lý đều diễn ra trực tiếp trên thiết bị. |
+| 8 | 🇺🇸 B | Wow, that's impressive! How fast can it translate? |
+| 9 | 🇻🇳 A | Thông thường chỉ mất khoảng một giây để dịch một câu ngắn. |
+| 10 | 🇺🇸 B | That's pretty fast! Can I try it right now? |
+| 11 | 🇻🇳 A | Tất nhiên rồi! Thực ra chúng ta đang sử dụng ứng dụng đó để trò chuyện đấy. |
+| 12 | 🇺🇸 B | Wait, seriously? I didn't even notice! |
+| 13 | 🇻🇳 A | Thấy chưa, bạn có thể nói tiếng Anh còn mình nói tiếng Việt rất tự nhiên. |
+| 14 | 🇺🇸 B | That's amazing! I think this could be really useful when traveling. |
+| 15 | 🇻🇳 A | Đúng vậy, đặc biệt là khi bạn đến một quốc gia mà không biết ngôn ngữ của họ. |
+| 16 | 🇺🇸 B | Speaking of traveling, have you ever been to Japan? |
+| 17 | 🇻🇳 A | Mình chưa đến Nhật Bản, nhưng rất muốn đến Tokyo vào mùa hoa anh đào. |
+| 18 | 🇺🇸 B | You should definitely go! The food is amazing, and the people are really friendly. |
+| 19 | 🇻🇳 A | Nghe hấp dẫn đấy! Hy vọng một ngày nào đó chúng ta có thể đi cùng nhau. |
+| 20 | 🇺🇸 B | Absolutely! Let's plan a trip sometime next year. |
+
+**What it shows**
+- A natural back-and-forth in both directions, one sentence or two short ones per turn.
+- The claims in the dialogue are the product's real properties: offline, on the device, about one second per short sentence.
+- The speakers talk at a normal pace with fillers and imperfect pronunciation; a misrecognized line is simply repeated.

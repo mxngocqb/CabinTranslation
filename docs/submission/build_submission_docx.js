@@ -154,9 +154,11 @@ C.push(table([2300, W - 2300], ["Field", "Team response"], [
     BS("a Korean equipment engineer (reflow-oven alarm)"),
     BS("a Chinese supplier QA (defective connectors)"),
     PS("…then hands over the shift. Script: Appendix A and `docs/submission/demo_scenario.md`."),
+    PS("**Second script: \"A casual conversation\"** (VI↔EN, 20 turns). Two friends catch up and talk about the interpreter running between them (offline, on-device, ~1 s per sentence) and about travel. Recorded on VENTUNO Q and the QCS8550 tablet. Script: Appendix B."),
   ]],
   ["Test conditions", [
     BS("**Recordings (uncut):** Galaxy S25 Ultra **1:43** · QCS8550 tablet **1:35** · VENTUNO Q **2:08**"),
+    BS("**Live conversation recordings** (script 2, Appendix B): `VentunoQ_LiveTranslation.mov` (VENTUNO Q) and `BKMEETING_LiveTranslation` (QCS8550 tablet)"),
     BS("**Environment:** indoor office/lab, light background noise (air-conditioning, people talking nearby)"),
     BS("**Capture:** speakers about 30–50 cm from the microphone; push-to-talk"),
     BS("**Network:** all devices run **offline** (confirmed by the team)"),
@@ -211,11 +213,15 @@ C.push(table([2300, W - 2300], ["Field", "Team response"], [
 // 2
 C.push(H1("2. Demo video"));
 C.push(P("**Video link:** https://drive.google.com/drive/folders/1iWq1RX0CFh7ceKYvsQRPJ3jb_PW2tEPs?usp=sharing", { after: 40 }));
-C.push(P("Folder BKMEETING_OneVoiceAIChallenge — three uncut recordings:", { after: 40 }));
+C.push(P("Folder BKMEETING_OneVoiceAIChallenge:", { after: 40 }));
+C.push(P("**Script 1 (all three pairs, Appendix A), uncut:**", { after: 20, size: 19 }));
 C.push(B("`GalaxyS25_SM8750.MOV` — **1:43**"));
 C.push(B("`BKMEETING_QCS8550.MOV` — **1:35**"));
 C.push(B("`VentunoQ.mov` — **2:08**"));
-C.push(P("Key timestamps (times are approximate to ±2 s):", { after: 60, keep: true }));
+C.push(P("**Script 2 — a casual VI↔EN conversation (20 turns, Appendix B), live:**", { after: 20, size: 19 }));
+C.push(B("`VentunoQ_LiveTranslation.mov` — Arduino VENTUNO Q, Gemma 4 E2B on the **NPU**, web UI"));
+C.push(B("`BKMEETING_LiveTranslation` — QCS8550 meeting tablet, CabinTranslation Android app, Gemma 4 E2B on the **GPU**"));
+C.push(P("Key timestamps of the script 1 videos (times are approximate to ±2 s):", { after: 60, keep: true }));
 C.push(table([2300, W - 2300], ["Video", "Timestamps"], [
   [["GalaxyS25_SM8750.MOV (1:43)", "Samsung Galaxy S25 Ultra, app"], [
     BS("Network disconnected (airplane mode in quick settings): **0:00–0:07**"),
@@ -569,6 +575,7 @@ C.push(table([1700, W - 1700 - 1800, 1800], ["Area", "Result and method", "Evide
   ["Device operation & UX", [
     PS("**Scenario completed: yes**, on all three devices, offline."),
     BS("Uncut videos: 1:43 (S25 Ultra), 1:35 (QCS8550), 2:08 (VENTUNO Q), covering VI↔EN, VI↔KO and VI↔ZH with no crash or restart. A misrecognized utterance is simply repeated."),
+    BS("Live conversation videos (script 2, 20 turns VI↔EN) on VENTUNO Q and the QCS8550 tablet. On VENTUNO Q the board log (`out/server.log`) records each turn, e.g. turn 17 VI→EN 1.48 s: \"I haven't been to Japan yet but I want to go to Tokyo during the cherry blossom season.\""),
     BS("VENTUNO Q live UI test (2026-11-11): speech from a laptop browser over HTTPS was recognized, translated on the NPU and spoken back (e.g. a 6 s introduction in 2.9 s)."),
     BS("Android app on the QCS8550 tablet (2026-11-13): EN→VI 727 ms (ASR 171 · MT 409 · TTS 144)."),
     BS("Android app on the Galaxy S25 Ultra (2026-11-13): VI→EN 562 ms (ASR 53 · MT 279 · TTS 228)."),
@@ -650,6 +657,13 @@ const sc = fs.readFileSync(path.join(__dirname, "demo_scenario.md"), "utf8");
 const scenes = [...sc.matchAll(/^\| (\d) \| ([^|]+) \| ([^|]+) \| ([^|]+) \|$/gm)].map((m) => [m[1], m[2].trim(), m[3].trim(), m[4].trim()]);
 C.push(table([700, 1900, 1700, W - 4300], ["#", "Time", "Pair", "Scene"], scenes, { zebra: true }));
 C.push(P("Full utterance list (≈60 turns, Vietnamese / English / Korean / Chinese): `docs/submission/demo_scenario.md` in the repository and package.", { size: 18 }));
+
+C.push(H1("Appendix B — Demo script 2: a casual conversation (VI ↔ EN)"));
+C.push(P("Speaker A speaks Vietnamese, speaker B speaks English. Recorded on VENTUNO Q (`VentunoQ_LiveTranslation.mov`) and on the QCS8550 tablet (`BKMEETING_LiveTranslation`). Each speaker taps their own button per turn; the device shows the recognized sentence and the translation and reads the translation aloud.", { size: 18 }));
+const sc2 = sc.slice(sc.indexOf("# Script 2"));
+const turns2 = [...sc2.matchAll(/^\| (\d{1,2}) \| ([^|]+) \| ([^|]+) \|$/gm)].map((m) => [m[1], m[2].trim().includes("A") ? "A (VI)" : "B (EN)", m[3].trim()]);
+if (turns2.length !== 20) throw new Error("demo script 2: expected 20 turns, got " + turns2.length);
+C.push(table([700, 1300, W - 2000], ["#", "Speaker", "Utterance"], turns2, { zebra: true }));
 
 const doc = new Document({
   creator: TEAM, title: `${TEAM}_Prototype Submission_V3`,
