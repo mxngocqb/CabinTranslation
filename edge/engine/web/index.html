@@ -2,87 +2,309 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1115">
 <title>CabinTranslation</title>
 <style>
-  :root { --bg:#0f172a; --card:#1e293b; --vi:#2563eb; --xx:#059669; --txt:#e2e8f0; --mut:#94a3b8; --warn:#f59e0b; }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--txt); font-family: system-ui, sans-serif; }
-  header { display:flex; align-items:center; justify-content:space-between; padding:12px 16px; gap:12px; flex-wrap:wrap; }
-  h1 { font-size:1.25rem; margin:0; }
-  .pill { padding:4px 10px; border-radius:999px; background:var(--card); color:var(--mut); font-size:.85rem; }
-  .pill.off { color:#4ade80; } .pill.on { color:var(--warn); }
-  .langs { display:flex; gap:8px; }
-  .langs button { background:var(--card); color:var(--txt); border:2px solid transparent; border-radius:10px; padding:8px 14px; font-size:1rem; }
-  .langs button.sel { border-color:var(--xx); }
-  main { display:grid; grid-template-columns:1fr 1fr; gap:16px; padding:0 16px; }
-  .side { background:var(--card); border-radius:16px; padding:16px; display:flex; flex-direction:column; align-items:center; gap:10px; }
-  .side h2 { margin:0; font-size:1.2rem; }
-  .talk { width:100%; min-height:150px; border:none; border-radius:16px; font-size:1.4rem; font-weight:600; color:white; touch-action:none; user-select:none; }
+  /* Fully offline page: no external fonts, scripts or images. */
+  :root {
+    --bg:#f4f6f9; --surface:#ffffff; --surface2:#eef1f5; --line:#dde2ea; --txt:#111827; --mut:#64748b;
+    --vi:#2563eb; --vi-soft:#e8efff; --xx:#0f9f8f; --xx-soft:#e3f6f3; --rec:#e11d48; --warn:#b45309; --ok:#15803d;
+    --shadow:0 1px 2px rgba(15,23,42,.06), 0 4px 16px rgba(15,23,42,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#0f1115; --surface:#181b22; --surface2:#20242d; --line:#2b313c; --txt:#e8ebf0; --mut:#94a0b2;
+      --vi:#4f86ff; --vi-soft:#1b2640; --xx:#22b8a5; --xx-soft:#14302c; --rec:#f43f5e; --warn:#f59e0b; --ok:#4ade80;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
+    }
+  }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html, body { height:100%; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:16px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+         display:flex; flex-direction:column; height:100dvh; overflow:hidden; }
+  button { font:inherit; color:inherit; cursor:pointer; }
+
+  /* ---------- header ---------- */
+  header { display:flex; align-items:center; gap:10px; padding:10px 16px; background:var(--surface); border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  .brand { display:flex; flex-direction:column; min-width:0; margin-right:auto; }
+  .brand b { font-size:1.1rem; letter-spacing:.2px; }
+  .brand small { color:var(--mut); font-size:.78rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .chip { display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:999px; font-size:.8rem; background:var(--surface2); color:var(--mut); white-space:nowrap; }
+  .chip.off { color:var(--ok); } .chip.on { color:var(--warn); } .chip.bad { color:var(--rec); }
+  .tools { display:flex; gap:6px; }
+  .tool { border:1px solid var(--line); background:var(--surface); border-radius:10px; padding:6px 10px; font-size:.85rem; white-space:nowrap; }
+  .tool[aria-pressed="true"] { background:var(--surface2); border-color:var(--mut); }
+
+  /* ---------- language bar ---------- */
+  .langbar { display:flex; align-items:center; justify-content:center; gap:10px; padding:10px 16px; flex-wrap:wrap; }
+  .me { font-weight:600; color:var(--vi); }
+  .swap { color:var(--mut); font-size:1.2rem; }
+  .seg { display:flex; background:var(--surface2); border-radius:12px; padding:3px; gap:2px; }
+  .seg button { border:0; background:transparent; border-radius:9px; padding:7px 14px; font-size:.98rem; color:var(--mut); }
+  .seg button.sel { background:var(--surface); color:var(--xx); font-weight:600; box-shadow:var(--shadow); }
+
+  /* ---------- conversation ---------- */
+  #chat { flex:1; overflow-y:auto; padding:8px 16px 16px; display:flex; flex-direction:column; gap:12px; scroll-behavior:smooth; }
+  .empty { margin:auto; max-width:520px; text-align:center; color:var(--mut); padding:24px 8px; }
+  .empty .big { font-size:2.4rem; }
+  .empty p { margin:.5em 0; }
+  .empty .alt { font-size:.9rem; opacity:.85; }
+  .msg { max-width:min(78%, 640px); display:flex; flex-direction:column; gap:4px; animation:in .18s ease-out; }
+  .msg.vi { align-self:flex-start; } .msg.xx { align-self:flex-end; align-items:flex-end; }
+  @keyframes in { from { opacity:0; transform:translateY(6px); } }
+  .who { font-size:.78rem; color:var(--mut); padding:0 6px; }
+  .bubble { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:10px 14px; box-shadow:var(--shadow); }
+  .msg.vi .bubble { border-top-left-radius:6px; border-left:4px solid var(--vi); }
+  .msg.xx .bubble { border-top-right-radius:6px; border-right:4px solid var(--xx); }
+  .orig { color:var(--mut); font-size:.95rem; }
+  .trans { font-size:1.22rem; font-weight:500; margin-top:6px; padding-top:6px; border-top:1px dashed var(--line); }
+  .bubble.err { border-color:var(--rec); color:var(--rec); }
+  .meta { display:flex; align-items:center; gap:8px; font-size:.75rem; color:var(--mut); padding:0 6px; }
+  .play { border:1px solid var(--line); background:var(--surface); border-radius:999px; padding:2px 10px; font-size:.85rem; }
+  .play.playing { border-color:var(--xx); color:var(--xx); }
+  .time { border:0; background:none; padding:0; color:var(--mut); font-size:.75rem; text-decoration:underline dotted; }
+  .detail { font-size:.72rem; color:var(--mut); padding:0 6px; }
+  .dots { display:inline-flex; gap:4px; vertical-align:middle; margin-right:8px; }
+  .dots i { width:7px; height:7px; border-radius:50%; background:var(--mut); animation:blink 1.2s infinite; }
+  .dots i:nth-child(2) { animation-delay:.2s; } .dots i:nth-child(3) { animation-delay:.4s; }
+  @keyframes blink { 0%, 80%, 100% { opacity:.25; } 40% { opacity:1; } }
+
+  /* ---------- text input row ---------- */
+  #textrow { display:flex; gap:8px; padding:8px 16px; background:var(--surface); border-top:1px solid var(--line); }
+  #textrow[hidden] { display:none; }
+  #dir { border:1px solid var(--line); background:var(--surface2); border-radius:10px; padding:0 10px; white-space:nowrap; }
+  #txt { flex:1; min-width:0; border:1px solid var(--line); background:var(--bg); color:var(--txt); border-radius:10px; padding:10px 12px; font:inherit; }
+  #send { border:0; background:var(--vi); color:#fff; border-radius:10px; padding:0 16px; font-weight:600; }
+
+  /* ---------- talk buttons ---------- */
+  #dock { display:flex; gap:10px; padding:10px 16px calc(12px + env(safe-area-inset-bottom)); background:var(--surface); border-top:1px solid var(--line); align-items:stretch; }
+  .kb { width:48px; flex:none; border:1px solid var(--line); background:var(--surface2); border-radius:14px; font-size:1.2rem; }
+  .talk { position:relative; flex:1; min-height:96px; border:0; border-radius:20px; color:#fff; display:flex; align-items:center; gap:12px;
+          padding:12px 16px; text-align:left; touch-action:none; user-select:none; -webkit-user-select:none; overflow:hidden;
+          box-shadow:var(--shadow); transition:transform .08s, filter .15s, opacity .15s; }
   .talk.vi { background:var(--vi); } .talk.xx { background:var(--xx); }
-  .talk.rec { background:#dc2626 !important; animation:pulse 1s infinite; }
-  .talk:disabled { opacity:.5; }
-  @keyframes pulse { 50% { opacity:.75; } }
-  .hint { color:var(--mut); font-size:.85rem; text-align:center; }
-  #status { padding:10px 16px; color:var(--mut); font-size:.9rem; min-height:1.5em; }
-  #log { padding:0 16px 24px; display:flex; flex-direction:column; gap:10px; }
-  .turn { background:var(--card); border-radius:12px; padding:10px 14px; border-left:6px solid var(--vi); }
-  .turn.xx { border-left-color:var(--xx); }
-  .turn .src { color:var(--mut); } .turn .tr { font-size:1.25rem; margin-top:4px; }
-  .turn .t { color:var(--mut); font-size:.8rem; margin-top:4px; }
-  .turn button { background:none; border:1px solid var(--mut); color:var(--txt); border-radius:8px; padding:2px 8px; margin-left:8px; }
-  @media (max-width:640px) { main { grid-template-columns:1fr; } }
+  .talk:active { transform:scale(.985); }
+  .talk:disabled { opacity:.45; cursor:default; }
+  .talk .mic { position:relative; flex:none; width:52px; height:52px; border-radius:50%; background:rgba(255,255,255,.18); display:grid; place-items:center; font-size:1.5rem; }
+  .talk .mic::before { content:""; position:absolute; inset:0; border-radius:50%; border:3px solid rgba(255,255,255,.85);
+                       transform:scale(calc(1 + var(--lvl, 0) * .55)); opacity:0; transition:transform .08s; }
+  .talk .lbl { display:flex; flex-direction:column; min-width:0; }
+  .talk .lbl b { font-size:1.3rem; line-height:1.15; }
+  .talk .lbl small { font-size:.8rem; opacity:.9; }
+  .talk .lang { font-size:.82rem; opacity:.85; font-weight:600; }
+  .talk.rec { background:var(--rec) !important; }
+  .talk.rec .mic::before { opacity:1; }
+  .talk.busy .mic { animation:spin 1s linear infinite; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  #toast { position:fixed; left:50%; bottom:130px; transform:translateX(-50%); background:var(--txt); color:var(--bg); padding:10px 16px; border-radius:12px;
+           font-size:.92rem; max-width:calc(100% - 32px); text-align:center; opacity:0; pointer-events:none; transition:opacity .2s; z-index:9; }
+  #toast.show { opacity:.95; }
+  #banner { background:var(--rec); color:#fff; text-align:center; padding:6px 12px; font-size:.88rem; }
+  #banner[hidden] { display:none; }
+
+  /* ---------- face-to-face mode: device lies flat between the two speakers ---------- */
+  #face { display:none; flex:1; flex-direction:column; min-height:0; }
+  body.f2f header, body.f2f .langbar, body.f2f #chat, body.f2f #dock, body.f2f #textrow { display:none; }
+  body.f2f #face { display:flex; }
+  .pane { flex:1; min-height:0; display:flex; flex-direction:column; gap:10px; padding:12px 16px; }
+  .pane.top { transform:rotate(180deg); }
+  .plog { flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:10px; }
+  .plog .hello { margin:auto; color:var(--mut); text-align:center; font-size:1.05rem; padding:8px; }
+  .pm { max-width:88%; padding:10px 14px; border-radius:16px; background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow); }
+  .pm.mine { align-self:flex-end; background:var(--surface2); }
+  .pm .main { font-size:1.35rem; font-weight:500; }
+  .pm.mine .main { font-size:1.05rem; font-weight:400; }
+  .pm .sub { font-size:.82rem; color:var(--mut); margin-top:4px; }
+  .pane .talk { flex:none; min-height:88px; }
+  .mid { display:flex; align-items:center; justify-content:center; gap:10px; padding:6px 12px; background:var(--surface); border-block:1px solid var(--line); }
+
+  @media (max-width:560px) {
+    header { padding:8px 12px; } .langbar { padding:8px 12px; } #chat { padding:8px 12px 12px; }
+    #dock { padding-left:12px; padding-right:12px; gap:8px; }
+    .talk { flex-direction:column; align-items:flex-start; gap:6px; min-height:110px; padding:10px 12px; }
+    .talk .mic { width:40px; height:40px; font-size:1.2rem; }
+    .talk .lbl b { font-size:1.15rem; }
+    .msg { max-width:90%; }
+    .tool span { display:none; }
+  }
 </style>
 </head>
 <body>
+<div id="banner" hidden>Mất kết nối tới engine trên thiết bị, đang thử lại…</div>
 <header>
-  <h1>🎧 CabinTranslation <span class="pill" id="net">…</span></h1>
-  <div class="langs" id="langs">
-    <button data-l="en" class="sel">🇬🇧 English</button>
+  <div class="brand"><b>🎧 CabinTranslation</b><small id="sys">Đang kết nối engine trên thiết bị…</small></div>
+  <span class="chip" id="net">…</span>
+  <div class="tools">
+    <button class="tool" id="t-auto" aria-pressed="true" title="Tự dừng ghi âm khi người nói ngừng">⏹ <span>Tự dừng</span></button>
+    <button class="tool" id="t-f2f" aria-pressed="false" title="Đặt máy nằm giữa hai người, nửa trên quay về phía khách">⇅ <span>Đối diện</span></button>
+    <button class="tool" id="t-clear" title="Xoá hội thoại">🗑 <span>Xoá</span></button>
+  </div>
+</header>
+<div class="langbar">
+  <span class="me">🇻🇳 Tiếng Việt</span><span class="swap">⇄</span>
+  <div class="seg" id="langs">
+    <button data-l="en">🇬🇧 English</button>
     <button data-l="ko">🇰🇷 한국어</button>
     <button data-l="zh">🇨🇳 中文</button>
   </div>
-</header>
-<main>
-  <section class="side">
-    <h2>🇻🇳 Tiếng Việt</h2>
-    <button class="talk vi" id="btn-vi">🎤 Giữ để nói</button>
-    <div class="hint">Giữ nút trong lúc nói rồi thả ra, hoặc chạm 1 lần để bắt đầu và chạm lại để dừng</div>
-  </section>
-  <section class="side">
-    <h2 id="xx-title">🇬🇧 English</h2>
-    <button class="talk xx" id="btn-xx">🎤 Hold to talk</button>
-    <div class="hint" id="xx-hint">Hold while speaking, release to translate</div>
-  </section>
-</main>
-<div style="padding:0 16px"><div style="height:6px;background:var(--card);border-radius:3px;overflow:hidden"><div id="meter" style="height:100%;width:0;background:#22c55e;transition:width .08s"></div></div></div>
-<div id="status">Đang kiểm tra máy chủ trên thiết bị…</div>
-<div id="log"></div>
-<script>
-const NAMES = { vi: "🇻🇳 Tiếng Việt", en: "🇬🇧 English", ko: "🇰🇷 한국어", zh: "🇨🇳 中文" };
-const HOLD = { en: ["🎤 Hold to talk", "Hold while speaking and release, or tap to start and tap again to stop"],
-               ko: ["🎤 누르고 말하기", "누른 채 말하고 놓거나, 한 번 눌러 시작하고 다시 눌러 끝내세요"],
-               zh: ["🎤 按住说话", "按住说话后松开，或点一下开始、再点一下结束"] };
-let backend = "", partner = "en", busy = false, ctx = null, stream = null, node = null, chunks = [], inRate = 48000;
-const $ = (id) => document.getElementById(id);
-const status = (s) => { $("status").textContent = s; };
+</div>
+<main id="chat"></main>
+<div id="textrow" hidden>
+  <button id="dir"></button>
+  <input id="txt" autocomplete="off" enterkeyhint="send">
+  <button id="send">Gửi</button>
+</div>
+<div id="dock">
+  <button class="talk vi" data-side="vi"></button>
+  <button class="kb" id="kb" title="Gõ chữ thay vì nói">⌨️</button>
+  <button class="talk xx" data-side="xx"></button>
+</div>
 
-function updNet() { const on = navigator.onLine; $("net").textContent = on ? "🌐 ONLINE" : "✈️ OFFLINE";
-  $("net").className = "pill " + (on ? "on" : "off"); }
+<div id="face">
+  <section class="pane top"><div class="plog" data-view="xx"></div><button class="talk xx" data-side="xx"></button></section>
+  <div class="mid"><span class="chip" id="midlang"></span><button class="tool" id="f2f-exit">✕ Thoát chế độ đối diện</button></div>
+  <section class="pane"><div class="plog" data-view="vi"></div><button class="talk vi" data-side="vi"></button></section>
+</div>
+<div id="toast"></div>
+
+<script>
+// ---------------------------------------------------------------- texts in each speaker's own language
+const L = {
+  vi: { name:"Tiếng Việt", flag:"🇻🇳", speak:"Nói", auto:"Chạm để nói · tự dừng khi ngừng nói", manual:"Chạm để nói, chạm lại để dừng · hoặc giữ nút",
+        listen:"Đang nghe…", listenSub:"Nói xong chạm để dừng", holdSub:"Thả tay để dịch", busy:"Đang dịch…", wait:"Chờ một chút…",
+        short:"Đoạn ghi quá ngắn, hãy nói lại", quiet:"Không nghe thấy tiếng, hãy nói gần micro hơn", none:"Không nhận ra lời nói, hãy nói lại",
+        hello:"Chạm nút bên dưới để nói. Bản dịch sẽ được đọc to.", replay:"🔊 Nghe lại", type:"Nhập câu tiếng Việt cần dịch…" },
+  en: { name:"English", flag:"🇬🇧", speak:"Speak", auto:"Tap to talk · stops when you pause", manual:"Tap to start, tap again to stop · or hold",
+        listen:"Listening…", listenSub:"Tap when you finish", holdSub:"Release to translate", busy:"Translating…", wait:"One moment…",
+        short:"Too short, please say it again", quiet:"No voice heard, please speak closer", none:"Speech not recognized, please repeat",
+        hello:"Tap the button below to speak. The translation is read aloud.", replay:"🔊 Replay", type:"Type an English sentence…" },
+  ko: { name:"한국어", flag:"🇰🇷", speak:"말하기", auto:"눌러서 말하기 · 멈추면 자동 종료", manual:"눌러서 시작, 다시 눌러 종료 · 또는 길게 누르기",
+        listen:"듣는 중…", listenSub:"다 말하면 누르세요", holdSub:"손을 떼면 번역", busy:"번역 중…", wait:"잠시만요…",
+        short:"너무 짧아요. 다시 말해 주세요", quiet:"목소리가 안 들려요. 가까이에서 말해 주세요", none:"인식하지 못했어요. 다시 말해 주세요",
+        hello:"아래 버튼을 눌러 말하세요. 번역이 음성으로 나옵니다.", replay:"🔊 다시 듣기", type:"한국어 문장을 입력하세요…" },
+  zh: { name:"中文", flag:"🇨🇳", speak:"说话", auto:"点击说话 · 停顿后自动结束", manual:"点击开始，再点结束 · 或按住说话",
+        listen:"正在听…", listenSub:"说完请点击", holdSub:"松开即翻译", busy:"翻译中…", wait:"请稍等…",
+        short:"太短了，请再说一遍", quiet:"没有听到声音，请靠近麦克风", none:"没有识别出来，请再说一遍",
+        hello:"点击下方按钮说话，译文会朗读出来。", replay:"🔊 重播", type:"输入中文句子…" },
+};
+const $ = (id) => document.getElementById(id);
+const store = { get(k, d) { try { return localStorage.getItem("cabin." + k) ?? d; } catch (e) { return d; } },
+                set(k, v) { try { localStorage.setItem("cabin." + k, v); } catch (e) {} } };
+
+let partner = store.get("partner", "en"); if (!["en", "ko", "zh"].includes(partner)) partner = "en";
+let autoStop = store.get("auto", "1") === "1";
+let f2f = store.get("f2f", "0") === "1";
+let backend = "", turns = [], nextId = 1;
+let mode = "idle", side = null;          // idle | rec | busy, and which side ("vi" / "xx") is active
+const langOf = (s) => (s === "vi" ? "vi" : partner);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+const fmtS = (ms) => (ms / 1000).toFixed(ms < 10000 ? 1 : 0) + " s";
+
+let toastT = 0;
+function toast(msg) { const t = $("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("show"), 3200); }
+
+// ---------------------------------------------------------------- header / settings
+function updNet() { const on = navigator.onLine; $("net").textContent = on ? "🌐 Online" : "✈️ Offline";
+  $("net").className = "chip " + (on ? "on" : "off"); }
 addEventListener("online", updNet); addEventListener("offline", updNet); updNet();
 
-document.querySelectorAll("#langs button").forEach((b) => b.onclick = () => {
-  document.querySelectorAll("#langs button").forEach((x) => x.classList.remove("sel"));
-  b.classList.add("sel"); partner = b.dataset.l;
-  $("xx-title").textContent = NAMES[partner];
-  $("btn-xx").textContent = HOLD[partner][0]; $("xx-hint").textContent = HOLD[partner][1];
+function setPartner(l) {
+  partner = l; store.set("partner", l);
+  document.querySelectorAll("#langs button").forEach((b) => b.classList.toggle("sel", b.dataset.l === l));
+  $("midlang").textContent = `🇻🇳 Tiếng Việt ⇄ ${L[l].flag} ${L[l].name}`;
+  renderButtons(); renderLog(); renderTextRow();
+}
+document.querySelectorAll("#langs button").forEach((b) => b.onclick = () => { if (mode === "idle") setPartner(b.dataset.l); });
+$("t-auto").onclick = () => { autoStop = !autoStop; store.set("auto", autoStop ? "1" : "0"); $("t-auto").setAttribute("aria-pressed", autoStop);
+  toast(autoStop ? "Tự dừng: BẬT, ghi âm tự dừng khi người nói ngừng ~1 giây" : "Tự dừng: TẮT, chạm lại (hoặc thả tay) để dừng"); renderButtons(); };
+function setF2f(v) { f2f = v; store.set("f2f", v ? "1" : "0"); document.body.classList.toggle("f2f", v); $("t-f2f").setAttribute("aria-pressed", v); renderLog(); }
+$("t-f2f").onclick = () => setF2f(!f2f);
+$("f2f-exit").onclick = () => setF2f(false);
+$("t-clear").onclick = () => { if (!turns.length || mode !== "idle") return; if (confirm("Xoá toàn bộ hội thoại?")) { turns = []; renderLog(); } };
+
+// ---------------------------------------------------------------- rendering
+function renderButtons() {
+  document.querySelectorAll(".talk").forEach((b) => {
+    const s = b.dataset.side, T = L[langOf(s)], mine = side === s;
+    const rec = mode === "rec" && mine, busy = mode === "busy" && mine;
+    b.classList.toggle("rec", rec); b.classList.toggle("busy", busy);
+    b.disabled = (mode === "busy") || (mode === "rec" && !mine);
+    const title = rec ? T.listen : busy ? T.busy : mode === "busy" ? T.wait : T.speak;
+    const sub = rec ? (holding ? T.holdSub : T.listenSub) : busy ? "" : (autoStop ? T.auto : T.manual);
+    b.innerHTML = `<span class="mic">${busy ? "⏳" : "🎤"}</span><span class="lbl"><span class="lang">${T.flag} ${esc(T.name)}</span>`
+                + `<b>${esc(title)}</b><small>${esc(sub)}</small></span>`;
+  });
+}
+
+function bubbleHTML(t) {
+  const S = L[t.src];
+  let body;
+  if (t.pending) body = `<span class="dots"><i></i><i></i><i></i></span>${esc(t.srcText ? t.srcText : S.busy)}`;
+  else if (t.error) body = `⚠️ ${esc(t.error)}`;
+  else body = `<div class="orig">${esc(t.srcText)}</div><div class="trans">${esc(t.tgtText)}</div>`;
+  let meta = "";
+  if (!t.pending && !t.error) {
+    meta = `<div class="meta">${t.audio ? `<button class="play${t.playing ? " playing" : ""}" data-play="${t.id}">${L[t.tgt].replay}</button>` : ""}`
+         + `<button class="time" data-detail="${t.id}" title="Xem thời gian từng bước">${fmtS(t.total)}${backend ? " · " + backend : ""}</button></div>`
+         + (t.showDetail ? `<div class="detail">${esc(t.detail)}</div>` : "");
+  }
+  return `<div class="msg ${t.side}"><div class="who">${S.flag} ${esc(S.name)} → ${L[t.tgt].flag} ${esc(L[t.tgt].name)}</div>`
+       + `<div class="bubble${t.error ? " err" : ""}">${body}</div>${meta}</div>`;
+}
+
+function paneHTML(t, view) {        // face-to-face: each pane shows everything in its owner's language first
+  const mine = t.side === view, lang = langOf(view);
+  if (t.pending) return `<div class="pm${mine ? " mine" : ""}"><span class="dots"><i></i><i></i><i></i></span>${esc(L[lang].busy)}</div>`;
+  if (t.error) return mine ? `<div class="pm mine"><div class="main">⚠️ ${esc(t.error)}</div></div>` : "";
+  const main = mine ? t.srcText : t.tgtText, sub = mine ? t.tgtText : t.srcText;
+  return `<div class="pm${mine ? " mine" : ""}"><div class="main">${esc(main)}</div><div class="sub">${esc(sub)}</div></div>`;
+}
+
+function renderLog() {
+  const chat = $("chat");
+  if (!turns.length) {
+    const P = L[partner];
+    chat.innerHTML = `<div class="empty"><div class="big">🎙️</div>
+      <p><b>Chọn ngôn ngữ của khách ở trên, rồi chạm nút của người đang nói.</b></p>
+      <p>Nói một hoặc hai câu ngắn; bản dịch hiện ra ở đây và được đọc to bằng ngôn ngữ của người nghe.</p>
+      <p class="alt">${P.flag} ${esc(P.hello)}</p>
+      <p class="alt">Đặt máy nằm giữa hai người? Bật <b>⇅ Đối diện</b>. Không nói được? Bấm <b>⌨️</b> để gõ chữ.</p></div>`;
+  } else {
+    chat.innerHTML = turns.map(bubbleHTML).join("");
+    chat.scrollTop = chat.scrollHeight;
+  }
+  document.querySelectorAll(".plog").forEach((p) => {
+    const v = p.dataset.view, html = turns.map((t) => paneHTML(t, v)).join("");
+    p.innerHTML = html || `<div class="hello">${esc(L[langOf(v)].hello)}</div>`;
+    p.scrollTop = p.scrollHeight;
+  });
+}
+
+document.addEventListener("click", (e) => {
+  const p = e.target.closest("[data-play]"), d = e.target.closest("[data-detail]");
+  if (p) { const t = turns.find((x) => x.id == p.dataset.play); if (t) playTurn(t); }
+  if (d) { const t = turns.find((x) => x.id == d.dataset.detail); if (t) { t.showDetail = !t.showDetail; renderLog(); } }
 });
 
-// ---- audio capture: one always-on 16 kHz pipeline (opened on first press) with a pre-roll ring,
-// so the first syllable is never lost to AudioContext start-up, and a short post-roll on release.
+// ---------------------------------------------------------------- playback (stopped whenever someone starts talking)
+let player = null, playingTurn = null;
+function stopAudio() { if (player) { player.pause(); player = null; } if (playingTurn) { playingTurn.playing = false; playingTurn = null; renderLog(); } }
+function playTurn(t) {
+  stopAudio(); if (!t.audio) return;
+  player = new Audio("data:audio/wav;base64," + t.audio); playingTurn = t; t.playing = true; renderLog();
+  const done = () => { if (playingTurn === t) { t.playing = false; playingTurn = null; player = null; renderLog(); } };
+  player.onended = done; player.onerror = done; player.play().catch(done);
+}
+
+// ---------------------------------------------------------------- audio capture: always-on 16 kHz pipeline with pre-roll
+// (opened on first press) so the first syllable is never lost to AudioContext start-up, plus a short post-roll.
 const PRE_S = 0.5, POST_MS = 400;
-let preroll = [], prerollLen = 0, recording = false, recBtn = null, recDir = null, pressT = 0, toggleMode = false;
-// AudioWorklet runs on the audio thread, so a busy page can't drop samples (ScriptProcessor did).
+let ctx = null, stream = null, node = null, inRate = 48000;
+let chunks = [], preroll = [], prerollLen = 0, recSamples = 0, lastSpeechAt = 0;
+let holding = false, pressT = 0, recT0 = 0, finishing = false;
+let noise = 0.003, speechMs = 0, silenceMs = 0;
 const WORKLET = `class Cap extends AudioWorkletProcessor {
   constructor() { super(); this.buf = new Float32Array(1600); this.n = 0; }
   process(inputs) {
@@ -95,13 +317,33 @@ const WORKLET = `class Cap extends AudioWorkletProcessor {
   }
 }
 registerProcessor("cap", Cap);`;
+
 function onChunk(x) {
-  let pk = 0; for (let i = 0; i < x.length; i += 8) pk = Math.max(pk, Math.abs(x[i]));
-  $("meter").style.width = Math.min(100, pk * 140) + "%";
-  if (recording) { chunks.push(x); return; }
+  let s = 0; for (let i = 0; i < x.length; i++) s += x[i] * x[i];
+  const rms = Math.sqrt(s / x.length), dt = 1000 * x.length / inRate;
+  if (mode === "rec") {
+    chunks.push(x); recSamples += x.length;
+    const lvl = Math.min(1, rms * 18);
+    document.querySelectorAll(".talk.rec").forEach((b) => b.style.setProperty("--lvl", lvl.toFixed(2)));
+    if (finishing) return;
+    // simple energy endpointing relative to the room's noise floor (measured between turns)
+    const thr = Math.max(0.006, noise * 3);
+    if (rms > thr) { speechMs += dt; silenceMs = 0; lastSpeechAt = recSamples; }
+    else if (speechMs >= 200) silenceMs += dt;
+    const el = performance.now() - recT0;
+    if (autoStop && !holding) {
+      if (speechMs >= 200 && silenceMs >= 1000) finish(true);
+      else if (speechMs < 200 && el > 8000) finish(false);
+    }
+    if (el > 30000) finish(false);
+    return;
+  }
+  // noise floor between turns: falls fast, rises slowly, ignores our own loudspeaker output
+  if (!player) noise = Math.max(0.0008, Math.min(0.02, rms < noise ? noise * 0.8 + rms * 0.2 : noise * 0.995 + rms * 0.005));
   preroll.push(x); prerollLen += x.length;
   while (preroll.length > 1 && prerollLen - preroll[0].length > PRE_S * inRate) prerollLen -= preroll.shift().length;
 }
+
 async function ensureMic() {
   if (ctx) { if (ctx.state === "suspended") await ctx.resume(); return; }
   // raw capture like the native sherpa-onnx apps: no AEC/NS/AGC (they distort speech for ASR)
@@ -125,20 +367,12 @@ async function ensureMic() {
   }
 }
 
-async function startRec(btn, dir) {
-  if (busy || recording) return;
-  // mark recording synchronously so a quick tap's pointerup is seen even while the mic is still opening
-  recording = true; recBtn = btn; recDir = dir;
-  chunks = preroll.slice(); preroll = []; prerollLen = 0;     // keep the 0.5 s before the press
-  btn.classList.add("rec"); status("🔴 Đang ghi âm… thả tay (hoặc chạm lại) để dịch / Recording…");
-  try { await ensureMic(); }
-  catch (e) { recording = false; btn.classList.remove("rec"); status("Không mở được micro: " + e); }
-}
-
-function toWav16k(parts, rate) {
-  const n = parts.reduce((a, p) => a + p.length, 0), x = new Float32Array(n);
+function toWav16k(parts, rate, maxSamples) {
+  let n = parts.reduce((a, p) => a + p.length, 0);
+  const x = new Float32Array(n);
   let o = 0; for (const p of parts) { x.set(p, o); o += p.length; }
-  let y = x;
+  if (maxSamples && maxSamples < n) n = maxSamples;
+  let y = x.subarray(0, n);
   if (rate !== 16000) {          // fallback only (browser refused a 16 kHz context): linear-interp resample
     const m = Math.floor(n * 16000 / rate); y = new Float32Array(m);
     for (let i = 0; i < m; i++) { const t = i * rate / 16000, a = Math.floor(t), f = t - a; y[i] = x[a] * (1 - f) + (x[Math.min(n - 1, a + 1)] || 0) * f; }
@@ -157,61 +391,127 @@ function toWav16k(parts, rate) {
   return { blob: new Blob([buf], { type: "audio/wav" }), secs: y.length / 16000, peak: pk };
 }
 
-function play(b64) { if (!b64) return; const a = new Audio("data:audio/wav;base64," + b64); a.play().catch(() => {}); return a; }
+// keep the screen awake during a conversation
+let wake = null;
+async function keepAwake() { try { if (!wake && navigator.wakeLock) { wake = await navigator.wakeLock.request("screen"); wake.onrelease = () => { wake = null; }; } } catch (e) {} }
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && turns.length) keepAwake(); });
 
-async function stopRec(btn, src, tgt) {
-  if (!recording) return;
-  btn.classList.remove("rec");
-  status("⏺ …");
-  await new Promise((r) => setTimeout(r, POST_MS));   // post-roll: don't chop the last syllable
-  recording = false;
-  const { blob, secs, peak } = toWav16k(chunks, inRate);
-  chunks = [];
-  if (secs < 0.8) { status("⚠️ Đoạn ghi quá ngắn / Too short"); return; }
-  if (peak < 0.01) { status("⚠️ Micro không bắt được tiếng (quá nhỏ) / No speech picked up"); return; }
-  busy = true; document.querySelectorAll(".talk").forEach((b) => b.disabled = true);
-  status("⏳ Đang dịch trên thiết bị… / Translating on-device…");
+// ---------------------------------------------------------------- one turn
+async function startRec(s) {
+  if (mode !== "idle") return;
+  stopAudio(); keepAwake();
+  // mark recording synchronously so a quick tap's pointerup is seen even while the mic is still opening
+  mode = "rec"; side = s; finishing = false; recT0 = performance.now();
+  chunks = preroll.slice(); recSamples = prerollLen; preroll = []; prerollLen = 0;
+  speechMs = 0; silenceMs = 0; lastSpeechAt = 0;
+  renderButtons();
+  try { await ensureMic(); }
+  catch (e) { mode = "idle"; side = null; renderButtons(); toast("Không mở được micro (cần https hoặc localhost và cho phép micro): " + e.message); }
+}
+
+async function finish(byPause) {
+  if (mode !== "rec" || finishing) return;
+  finishing = true;
+  const s = side, src = langOf(s), tgt = s === "vi" ? partner : "vi", T = L[src];
+  if (!byPause) await new Promise((r) => setTimeout(r, POST_MS));   // post-roll: don't chop the last syllable
+  const keep = byPause && lastSpeechAt ? lastSpeechAt + Math.round(0.45 * inRate) : 0;  // drop the trailing pause
+  const parts = chunks; chunks = [];
+  mode = "busy"; finishing = false; holding = false; renderButtons();
+  const { blob, secs, peak } = toWav16k(parts, inRate, keep);
+  if (secs < 0.7) return done(T.short);
+  if (peak < 0.01) return done(T.quiet);
+  const t = { id: nextId++, side: s, src, tgt, pending: true };
+  turns.push(t); renderLog();
   const t0 = performance.now();
   try {
-    const r = await fetch(`/api/translate?src=${src}&tgt=${tgt}`, { method: "POST", body: blob });
-    const j = await r.json(); const rt = performance.now() - t0;
-    addTurn(src, tgt, j.mt_in || j.asr || "…", j.hyp || "", j, rt);
-    play(j.audio_b64);
-    status(`⏱ ASR ${Math.round(j.asr_ms||0)} ms · ${j.punct_ms ? "punct " + Math.round(j.punct_ms) + " ms · " : ""}MT ${Math.round(j.mt_ms||0)} ms (Gemma 4 E2B${backend ? ", " + backend : ""}) · TTS ${Math.round(j.tts_ms||0)} ms · Tổng ${Math.round(j.total_ms||0)} ms · audio ${secs.toFixed(1)} s`);
-  } catch (e) { status("Lỗi: " + e); }
-  busy = false; document.querySelectorAll(".talk").forEach((b) => b.disabled = false);
+    const r = await fetch(`/api/translate?src=${src}&tgt=${tgt}`, { method: "POST", headers: { "Content-Type": "audio/wav" }, body: blob });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const j = await r.json();
+    online(true);
+    t.pending = false;
+    t.srcText = (j.mt_in || j.asr || "").trim(); t.tgtText = (j.hyp || "").trim();
+    if (!t.srcText || !t.tgtText) { turns.splice(turns.indexOf(t), 1); renderLog(); return done(T.none); }
+    t.audio = j.audio_b64; t.total = j.total_ms || (performance.now() - t0);
+    t.detail = `Nhận dạng (ASR) ${Math.round(j.asr_ms || 0)} ms · ${j.punct_ms ? "dấu câu " + Math.round(j.punct_ms) + " ms · " : ""}`
+             + `Dịch (Gemma 4 E2B${backend ? ", " + backend : ""}) ${Math.round(j.mt_ms || 0)} ms · Đọc (TTS) ${Math.round(j.tts_ms || 0)} ms`
+             + ` · câu nói ${secs.toFixed(1)} s · vòng gọi ${Math.round(performance.now() - t0)} ms`;
+    renderLog(); playTurn(t);
+  } catch (e) {
+    t.pending = false; t.error = "Lỗi khi dịch trên thiết bị: " + e.message; renderLog(); online(false);
+  }
+  done();
 }
+function done(msg) { mode = "idle"; side = null; renderButtons(); if (msg) toast(msg); }
 
-function addTurn(src, tgt, said, tr, j, rt) {
-  const d = document.createElement("div"); d.className = "turn" + (src === "vi" ? "" : " xx");
-  d.innerHTML = `<div class="src">${NAMES[src]}: ${esc(said)}</div><div class="tr">➜ ${esc(tr)}</div>
-    <div class="t">${NAMES[tgt]} · ${Math.round(j.total_ms||rt)} ms <button>🔊</button></div>`;
-  d.querySelector("button").onclick = () => play(j.audio_b64);
-  $("log").prepend(d);
-}
-const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-
-// Hold to talk, or tap once to start and tap again to stop.
-function bindHold(btn, getDir) {
+// Tap to talk (auto-stops on a pause), tap again to stop, or hold and release.
+function bind(btn) {
   btn.addEventListener("pointerdown", (e) => {
     e.preventDefault();
-    if (recording && recBtn === btn && toggleMode) { toggleMode = false; const [s, t] = getDir(); stopRec(btn, s, t); return; }
-    pressT = performance.now(); toggleMode = false; startRec(btn, getDir());
+    const s = btn.dataset.side;
+    if (mode === "rec") { if (side === s) finish(false); return; }
+    if (mode !== "idle") return;
+    try { btn.setPointerCapture(e.pointerId); } catch (_) {}
+    holding = true; pressT = performance.now(); startRec(s);
   });
-  btn.addEventListener("pointerup", (e) => {
-    e.preventDefault();
-    if (!recording || recBtn !== btn) return;
-    if (performance.now() - pressT < 450) { toggleMode = true; status("🔴 Đang ghi âm… chạm lại để dừng / Tap again to stop"); return; }
-    const [s, t] = getDir(); stopRec(btn, s, t);
-  });
+  const up = (e) => {
+    if (!holding) return;
+    holding = false;
+    if (mode !== "rec" || side !== btn.dataset.side) return;
+    if (performance.now() - pressT >= 600) finish(false);   // it was a hold: release = stop
+    else renderButtons();                                    // it was a tap: keep listening
+  };
+  btn.addEventListener("pointerup", up); btn.addEventListener("pointercancel", up);
+  btn.addEventListener("contextmenu", (e) => e.preventDefault());
 }
-bindHold($("btn-vi"), () => ["vi", partner]);
-bindHold($("btn-xx"), () => [partner, "vi"]);
+document.querySelectorAll(".talk").forEach(bind);
+document.addEventListener("keydown", (e) => {      // keyboard shortcuts for the PC: Space = Vietnamese, Enter = partner
+  if (e.target.tagName === "INPUT" || e.repeat) return;
+  const s = e.code === "Space" ? "vi" : e.code === "Enter" ? "xx" : null;
+  if (!s) return; e.preventDefault();
+  if (mode === "rec" && side === s) finish(false); else if (mode === "idle") startRec(s);
+});
 
-fetch("/api/health").then((r) => r.json()).then((h) => {
-  backend = (h.mt_backend || "").toUpperCase();
-  status(`✅ Sẵn sàng · models loaded on device: ${(h.langs||[]).join(", ")} · LLM ${h.mt_backend || ""} · RAM ${Math.round((h.rss_kb||0)/1024)} MB`);
-}).catch(() => status("❌ Không kết nối được cabin_edge trên thiết bị"));
+// ---------------------------------------------------------------- typed input (when speech fails)
+let textSide = "vi";
+function renderTextRow() {
+  const src = langOf(textSide), tgt = textSide === "vi" ? partner : "vi";
+  $("dir").textContent = `${L[src].flag} → ${L[tgt].flag}`; $("txt").placeholder = L[src].type;
+}
+$("kb").onclick = () => { const r = $("textrow"); r.hidden = !r.hidden; renderTextRow(); if (!r.hidden) $("txt").focus(); };
+$("dir").onclick = () => { textSide = textSide === "vi" ? "xx" : "vi"; renderTextRow(); $("txt").focus(); };
+async function sendText() {
+  const text = $("txt").value.trim();
+  if (!text || mode !== "idle") return;
+  const s = textSide, src = langOf(s), tgt = s === "vi" ? partner : "vi";
+  stopAudio(); mode = "busy"; side = s; renderButtons();
+  const t = { id: nextId++, side: s, src, tgt, pending: true, srcText: text };
+  turns.push(t); renderLog(); $("txt").value = "";
+  try {
+    const r = await fetch("/api/text", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ src, tgt, text }) });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const j = await r.json();
+    t.pending = false; t.tgtText = (j.hyp || "").trim(); t.audio = j.audio_b64;
+    t.total = (j.mt_ms || 0) + (j.tts_ms || 0);
+    t.detail = `Gõ chữ · Dịch (Gemma 4 E2B${backend ? ", " + backend : ""}) ${Math.round(j.mt_ms || 0)} ms · Đọc (TTS) ${Math.round(j.tts_ms || 0)} ms`;
+    renderLog(); playTurn(t);
+  } catch (e) { t.pending = false; t.error = "Lỗi khi dịch trên thiết bị: " + e.message; renderLog(); }
+  done();
+}
+$("send").onclick = sendText;
+$("txt").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); sendText(); } });
+
+// ---------------------------------------------------------------- engine health
+function online(ok) { $("banner").hidden = ok; }
+function health() {
+  fetch("/api/health").then((r) => { if (!r.ok) throw 0; return r.json(); }).then((h) => {
+    backend = (h.mt_backend || "").toUpperCase(); online(true);
+    $("sys").textContent = `Chạy trên thiết bị · Gemma 4 E2B (${backend || "?"}) · ${(h.langs || []).length} ngôn ngữ · RAM ${Math.round((h.rss_kb || 0) / 1024)} MB`;
+  }).catch(() => { online(false); $("sys").textContent = "Không kết nối được engine cabin_edge"; });
+}
+health(); setInterval(() => { if (mode === "idle") health(); }, 15000);
+
+$("t-auto").setAttribute("aria-pressed", autoStop);
+setPartner(partner); setF2f(f2f);
 </script>
 </body>
 </html>

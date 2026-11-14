@@ -35,16 +35,19 @@ import kotlin.concurrent.thread
 import kotlin.math.abs
 
 /**
- * Landscape, symmetric face-to-face layout (light theme: dark UIs mirror the room on glossy meeting-tablet glass):
+ * Landscape, symmetric face-to-face layout (light theme: dark UIs mirror the room on glossy meeting-tablet glass).
+ * Everything belonging to the Vietnamese speaker is on the left, everything of the partner on the right:
  *
- *   [logo  CabinTranslation]        [ English | 한국어 | 中文 ]        [Online] [Sẵn sàng]
- *   ┌ Vietnamese card ┐ ┌──── conversation ────┐ ┌ partner card ┐
- *   │ 🇻🇳 Tiếng Việt    │ │ chat bubbles          │ │ 🇬🇧 English  ⟲ │
- *   │ last translation │ │ (VI right, partner    │ │ last transl.  │
- *   │ ▁▂▃ meter        │ │  left)                │ │ ▁▂▃ meter     │
- *   │ ( 🎤 Nói )        │ │                       │ │ ( 🎤 Speak )   │
- *   └──────────────────┘ └───────────────────────┘ └───────────────┘
+ *   [logo  CabinTranslation]        [ English | 한국어 | 中文 ]        [Offline] [Sẵn sàng]
+ *   ┌ Vietnamese card ─┐ ┌──── conversation ────┐ ┌ partner card ── 🔊 ⟲ ┐
+ *   │ 🇻🇳 Tiếng Việt  🔊 │ │ VI bubbles (left)     │ │ 🇬🇧 English          │
+ *   │ translation for  │ │     partner (right)   │ │ translation for you  │
+ *   │ you (large)      │ │ tap a bubble = replay │ │ (large)              │
+ *   │ "Bạn vừa nói: …" │ │                       │ │ "You said: …"        │
+ *   │ ( 🎤 Nói )        │ │                       │ │ ( 🎤 Speak )          │
+ *   └──────────────────┘ └───────────────────────┘ └──────────────────────┘
  *                         timing / hint line
+ * Each speaker's own texts (button, hints, errors) are in that speaker's language.
  */
 class MainActivity : Activity() {
     private val ui = Handler(Looper.getMainLooper())
@@ -55,6 +58,7 @@ class MainActivity : Activity() {
     private val cBg = Color.parseColor("#EEF2F8")
     private val cCard = Color.WHITE
     private val cLine = Color.parseColor("#E2E8F0")
+    private val cChip = Color.parseColor("#F1F5F9")
     private val cInk = Color.parseColor("#0F172A")
     private val cInk2 = Color.parseColor("#64748B")
     private val cInk3 = Color.parseColor("#A0AEC0")
@@ -68,6 +72,7 @@ class MainActivity : Activity() {
     private val cXxInk = Color.parseColor("#065F46")
     private val cRec = Color.parseColor("#EF4444")
     private val cRecDark = Color.parseColor("#DC2626")
+    private val cErr = Color.parseColor("#B91C1C")
     private val cOff1 = Color.parseColor("#CBD5E1")
     private val cOff2 = Color.parseColor("#B6C2D2")
 
@@ -78,7 +83,11 @@ class MainActivity : Activity() {
     private lateinit var partnerHead: TextView
     private lateinit var partnerLast: TextView
     private lateinit var partnerLbl: TextView
+    private lateinit var partnerSaid: TextView
     private lateinit var viLast: TextView
+    private lateinit var viSaid: TextView
+    private lateinit var replayVi: TextView
+    private lateinit var replayXx: TextView
     private lateinit var micVi: TextView
     private lateinit var micXx: TextView
     private lateinit var meterVi: View
@@ -92,33 +101,52 @@ class MainActivity : Activity() {
     private lateinit var emptyText: TextView
     private lateinit var spinner: ProgressBar
     private val segs = mutableMapOf<String, TextView>()
+    private var pendingRow: View? = null
 
-    // ---- state
+    // ---- state ("vi" = the Vietnamese speaker's side, "xx" = the partner's side)
     private var partner = "en"
     @Volatile private var listening = false
     @Volatile private var forceEnd = false
     @Volatile private var busy = false
     @Volatile private var booting = false
     @Volatile private var engineReady = false   // never probe the engine over HTTP from the UI thread
+    @Volatile private var activeSide: String? = null
     private var askedFilesAccess = false
     private var player: MediaPlayer? = null
     private var pulse: ObjectAnimator? = null
-    private var recBtn: TextView? = null
 
-    private data class Turn(val src: String, val tgt: String, val said: String, val hyp: String, val ms: Int)
+    private data class Turn(val src: String, val tgt: String, val said: String, val hyp: String, val ms: Int, val wav: File?)
     private val turnData = ArrayList<Turn>()
+    private var turnSeq = 0
     private var stStatus = "Đang khởi động"
     private var stFooter = ""
-    private var stViLast: String? = null
-    private var stXxLast: String? = null
+    private val stLast = mutableMapOf<String, String>()         // side -> last translation shown to that side
+    private val stSaid = mutableMapOf<String, Pair<String, Boolean>>()   // side -> (own text or error, isError)
+    private val lastWav = mutableMapOf<String, File>()          // side -> audio of the last translation for that side
     private var stTalkEnabled = false
 
     private val flag = mapOf("vi" to "🇻🇳", "en" to "🇬🇧", "ko" to "🇰🇷", "zh" to "🇨🇳")
     private val lname = mapOf("vi" to "Tiếng Việt", "en" to "English", "ko" to "한국어", "zh" to "中文")
     private val speakLbl = mapOf("vi" to "Nói tiếng Việt", "en" to "Speak English", "ko" to "한국어로 말하기", "zh" to "说中文")
     private val listenLbl = mapOf("vi" to "Đang nghe… chạm để dừng", "en" to "Listening… tap to stop", "ko" to "듣는 중… 눌러서 멈춤", "zh" to "正在听… 点按停止")
-    private val waitLbl = mapOf("vi" to "Lời dịch sẽ hiện ở đây", "en" to "The translation will appear here", "ko" to "번역이 여기에 표시됩니다", "zh" to "译文会显示在这里")
+    private val busyLbl = mapOf("vi" to "Đang dịch…", "en" to "Translating…", "ko" to "번역 중…", "zh" to "翻译中…")
+    private val waitOther = mapOf("vi" to "Vui lòng chờ…", "en" to "Please wait…", "ko" to "잠시만요…", "zh" to "请稍等…")
     private val forYou = mapOf("vi" to "BẢN DỊCH CHO BẠN", "en" to "TRANSLATION FOR YOU", "ko" to "번역", "zh" to "给您的译文")
+    private val saidLbl = mapOf("vi" to "Bạn vừa nói", "en" to "You said", "ko" to "방금 말한 내용", "zh" to "您刚才说")
+    private val placeholder = mapOf(
+        "vi" to "Chạm nút xanh bên dưới để nói.\nLời của khách sẽ được dịch sang tiếng Việt và hiện ở đây.",
+        "en" to "Tap the button below to speak.\nWhat the other person says appears here in English.",
+        "ko" to "아래 버튼을 눌러 말하세요.\n상대방의 말이 한국어로 여기에 표시됩니다.",
+        "zh" to "点击下方按钮说话。\n对方的话会翻译成中文显示在这里。")
+    private val noSpeech = mapOf("vi" to "Không nghe thấy tiếng — chạm nút và nói lại", "en" to "No speech heard — tap and try again",
+        "ko" to "음성이 들리지 않아요 — 다시 눌러 말해 주세요", "zh" to "没有听到声音 — 请再点一次说话")
+    private val noRecog = mapOf("vi" to "Không nhận ra lời nói — hãy nói lại rõ hơn", "en" to "Couldn't recognize that — please repeat",
+        "ko" to "인식하지 못했어요 — 다시 말해 주세요", "zh" to "没有识别出来 — 请再说一遍")
+    private val failLbl = mapOf("vi" to "Lỗi khi dịch — hãy thử lại", "en" to "Translation failed — please try again",
+        "ko" to "번역 오류 — 다시 시도해 주세요", "zh" to "翻译出错 — 请重试")
+    private val replayLbl = mapOf("vi" to "Nghe lại", "en" to "Replay", "ko" to "다시 듣기", "zh" to "重播")
+
+    private fun langOf(side: String) = if (side == "vi") "vi" else partner
 
     // ---------------------------------------------------------------- helpers
     private fun dp(v: Number) = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, v.toFloat(), resources.displayMetrics).toInt()
@@ -151,11 +179,11 @@ class MainActivity : Activity() {
 
     override fun onConfigurationChanged(newConfig: android.content.res.Configuration) {
         super.onConfigurationChanged(newConfig)
-        if (!listening) buildUi()
+        if (!listening && !busy) buildUi()
     }
 
     private fun buildUi() {
-        segs.clear()
+        segs.clear(); pendingRow = null
         val root = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL; setBackgroundColor(cBg); setPadding(dp(22), dp(14), dp(22), dp(10))
         }
@@ -190,35 +218,41 @@ class MainActivity : Activity() {
         val body = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
 
         val viCard = sideCard()
-        viCard.addView(cardHeader("${flag["vi"]}  ${lname["vi"]}", cViSoft, cViInk, null))
+        replayVi = chipButton("🔊", "vi").apply { setOnClickListener { replay("vi") } }
+        viCard.addView(cardHeader("${flag["vi"]}  ${lname["vi"]}", cViSoft, cViInk, listOf(replayVi)))
         viCard.addView(text(forYou["vi"]!!, 11.5f, cInk2, true).apply { letterSpacing = .08f; setPadding(dp(2), dp(16), 0, dp(2)) })
         viLast = lastText()
         viCard.addView(viLast, lp(MATCH, 0, 1f))
+        viSaid = saidText()
+        viCard.addView(viSaid, lp().apply { bottomMargin = dp(8) })
         meterViTrack = FrameLayout(this).apply { background = round(cLine, 3) }
         meterVi = View(this).apply { background = round(cViLight, 3) }
         meterViTrack.addView(meterVi, FrameLayout.LayoutParams(0, -1))
         viCard.addView(meterViTrack, lp(MATCH, dp(6)).apply { bottomMargin = dp(12) })
-        micVi = micButton(cViLight, cVi).apply { setOnClickListener { onTalk("vi", partner, this) } }
+        micVi = micButton(cViLight, cVi).apply { setOnClickListener { onTalk("vi") } }
         viCard.addView(micVi, lp(MATCH, dp(84)))
 
         partnerCard = sideCard()
-        val flip = text("⟲", 20f, cInk2).apply {
-            gravity = Gravity.CENTER; background = round(Color.parseColor("#F1F5F9"), 999, cLine)
-            contentDescription = "Lật ngược cho người ngồi đối diện"
+        replayXx = chipButton("🔊", "xx").apply { setOnClickListener { replay("xx") } }
+        val flip = text("⟲  Lật", 14f, cInk2, true).apply {
+            gravity = Gravity.CENTER; setPadding(dp(14), 0, dp(14), 0); background = round(cChip, 999, cLine)
+            contentDescription = "Lật ngược thẻ này cho người ngồi đối diện"
             setOnClickListener { partnerCard.animate().rotation(if (partnerCard.rotation == 0f) 180f else 0f).setDuration(350).start() }
         }
-        val ph = cardHeader("", cXxSoft, cXxInk, flip)
+        val ph = cardHeader("", cXxSoft, cXxInk, listOf(replayXx, flip))
         partnerHead = ph.getChildAt(0) as TextView
         partnerCard.addView(ph)
         partnerLbl = text("", 11.5f, cInk2, true).apply { letterSpacing = .08f; setPadding(dp(2), dp(16), 0, dp(2)) }
         partnerCard.addView(partnerLbl)
         partnerLast = lastText()
         partnerCard.addView(partnerLast, lp(MATCH, 0, 1f))
+        partnerSaid = saidText()
+        partnerCard.addView(partnerSaid, lp().apply { bottomMargin = dp(8) })
         meterXxTrack = FrameLayout(this).apply { background = round(cLine, 3) }
         meterXx = View(this).apply { background = round(cXxLight, 3) }
         meterXxTrack.addView(meterXx, FrameLayout.LayoutParams(0, -1))
         partnerCard.addView(meterXxTrack, lp(MATCH, dp(6)).apply { bottomMargin = dp(12) })
-        micXx = micButton(cXxLight, cXx).apply { setOnClickListener { onTalk(partner, "vi", this) } }
+        micXx = micButton(cXxLight, cXx).apply { setOnClickListener { onTalk("xx") } }
         partnerCard.addView(micXx, lp(MATCH, dp(84)))
 
         // conversation card
@@ -227,9 +261,10 @@ class MainActivity : Activity() {
             background = round(cCard, 24); elevation = dp(2).toFloat()
         }
         val convoHead = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
-        convoHead.addView(text("💬  Hội thoại", 15f, cInk, true), lp(0, WRAP, 1f))
+        convoHead.addView(text("💬  Hội thoại", 15f, cInk, true), lp(WRAP, WRAP))
+        convoHead.addView(text("  · chạm vào câu để nghe lại", 12.5f, cInk3), lp(0, WRAP, 1f))
         convoHead.addView(text("Xoá", 13.5f, cInk2, true).apply {
-            setPadding(dp(12), dp(5), dp(12), dp(5)); background = round(Color.parseColor("#F1F5F9"), 999, cLine)
+            setPadding(dp(12), dp(5), dp(12), dp(5)); background = round(cChip, 999, cLine)
             setOnClickListener { clearConversation() }
         })
         convo.addView(convoHead, lp(MATCH, dp(36)))
@@ -238,7 +273,7 @@ class MainActivity : Activity() {
         scroll = ScrollView(this).apply { addView(turns); isVerticalScrollBarEnabled = false }
         emptyBox = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; gravity = Gravity.CENTER }
         spinner = ProgressBar(this).apply { isIndeterminate = true }
-        emptyText = text("", 15f, cInk2).apply { gravity = Gravity.CENTER; setPadding(dp(16), dp(12), dp(16), 0) }
+        emptyText = text("", 15f, cInk2).apply { gravity = Gravity.CENTER; setPadding(dp(16), dp(12), dp(16), 0); setLineSpacing(0f, 1.2f) }
         emptyBox.addView(spinner, lp(dp(44), dp(44)))
         emptyBox.addView(emptyText, lp(WRAP, WRAP))
         convoBox.addView(scroll, FrameLayout.LayoutParams(-1, -1))
@@ -254,38 +289,70 @@ class MainActivity : Activity() {
         root.addView(footer, lp())
         setContentView(root)
 
-        selectPartner(partner)
-        stViLast?.let { viLast.text = it; viLast.setTextColor(cInk) } ?: run { viLast.text = waitLbl["vi"]; viLast.setTextColor(cInk3) }
+        selectPartner(partner, force = true)
         turnData.forEach { renderTurn(it) }
         refreshEmpty()
-        setTalkEnabled(stTalkEnabled)
+        renderMics()
     }
 
     private fun pill(s: String) = text(s, 13.5f, cInk, true).apply { setPadding(dp(14), dp(7), dp(14), dp(7)); background = round(cCard, 999, cLine) }
+
+    private fun chipButton(s: String, side: String) = text(s, 17f, cInk2, true).apply {
+        gravity = Gravity.CENTER; setPadding(dp(12), 0, dp(12), 0); background = round(cChip, 999, cLine)
+        contentDescription = "replay $side"; alpha = .35f; isEnabled = false
+    }
 
     private fun sideCard() = LinearLayout(this).apply {
         orientation = LinearLayout.VERTICAL; setPadding(dp(18), dp(16), dp(18), dp(18))
         background = round(cCard, 24); elevation = dp(2).toFloat()
     }
 
-    private fun cardHeader(label: String, soft: Int, ink: Int, extra: View?) = LinearLayout(this).apply {
+    private fun cardHeader(label: String, soft: Int, ink: Int, extras: List<View>) = LinearLayout(this).apply {
         orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL
         addView(text(label, 16f, ink, true).apply { setPadding(dp(14), dp(8), dp(14), dp(8)); background = round(soft, 999) }, lp(WRAP, WRAP))
         addView(View(this@MainActivity), lp(0, 1, 1f))
-        addView(extra ?: View(this@MainActivity), lp(dp(40), dp(40)))   // same header height on both cards
+        extras.forEachIndexed { i, v -> addView(v, lp(WRAP, dp(40)).apply { if (i > 0) marginStart = dp(8) }) }
     }
 
     private fun lastText() = text("", 30f, cInk, true).apply {
         gravity = Gravity.CENTER_VERTICAL; setPadding(dp(2), dp(4), dp(2), dp(8)); setLineSpacing(0f, 1.08f)
-        setAutoSizeTextTypeUniformWithConfiguration(16, 34, 1, TypedValue.COMPLEX_UNIT_SP)
+    }
+
+    private fun saidText() = text("", 14f, cInk2).apply {
+        setPadding(dp(12), dp(8), dp(12), dp(8)); background = round(cChip, 12); maxLines = 3; ellipsize = android.text.TextUtils.TruncateAt.END; visibility = View.GONE
     }
 
     private fun micButton(c1: Int, c2: Int) = text("", 20f, Color.WHITE, true).apply {
         gravity = Gravity.CENTER; background = grad(c1, c2, 999); tag = intArrayOf(c1, c2); elevation = dp(3).toFloat()
     }
 
-    private fun selectPartner(l: String) {
-        if (listening || busy) return
+    /** Large "translation for you" text, or a small grey how-to while there is none yet. */
+    private fun showLast(side: String) {
+        val tv = if (side == "vi") viLast else partnerLast
+        val s = stLast[side]
+        if (s == null) {
+            tv.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_NONE)
+            tv.textSize = 18f; tv.setTextColor(cInk3); tv.text = placeholder[langOf(side)]
+        } else {
+            tv.setTextColor(cInk); tv.text = s
+            tv.setAutoSizeTextTypeUniformWithConfiguration(16, 34, 1, TypedValue.COMPLEX_UNIT_SP)
+        }
+        (if (side == "vi") replayVi else replayXx).let { b -> val on = lastWav[side] != null; b.isEnabled = on; b.alpha = if (on) 1f else .35f }
+    }
+
+    /** "You said: …" under each speaker's own card, or an error in that speaker's language. */
+    private fun showSaid(side: String) {
+        val tv = if (side == "vi") viSaid else partnerSaid
+        val p = stSaid[side]
+        if (p == null) { tv.visibility = View.GONE; return }
+        tv.visibility = View.VISIBLE
+        if (p.second) { tv.text = "⚠️  ${p.first}"; tv.setTextColor(cErr); tv.background = round(Color.parseColor("#FEE2E2"), 12) }
+        else { tv.text = "🗣  ${saidLbl[langOf(side)]}: ${p.first}"; tv.setTextColor(cInk2); tv.background = round(cChip, 12) }
+    }
+
+    private fun selectPartner(l: String, force: Boolean = false) {
+        if (!force && (listening || busy)) return
+        if (l != partner) { stLast.remove("xx"); stSaid.remove("xx"); lastWav.remove("xx") }
         partner = l
         segs.forEach { (k, s) ->
             if (k == l) { s.background = round(cXx, 999); s.setTextColor(Color.WHITE) }
@@ -293,65 +360,63 @@ class MainActivity : Activity() {
         }
         partnerHead.text = "${flag[l]}  ${lname[l]}"
         partnerLbl.text = forYou[l]
-        if (!listening) {
-            micXx.text = "🎤   ${speakLbl[l]}"
-            micVi.text = "🎤   ${speakLbl["vi"]}  →  ${flag[l]}"
-        }
-        if (stXxLast == null) { partnerLast.text = waitLbl[l]; partnerLast.setTextColor(cInk3) }
-        else { partnerLast.text = stXxLast; partnerLast.setTextColor(cInk) }
+        showLast("vi"); showLast("xx"); showSaid("vi"); showSaid("xx")
+        refreshEmpty(); renderMics()
     }
 
     private fun refreshEmpty() {
         val loading = !engineReady
-        emptyBox.visibility = if (turnData.isEmpty() || loading && turnData.isEmpty()) View.VISIBLE else View.GONE
+        emptyBox.visibility = if (turnData.isEmpty() && pendingRow == null) View.VISIBLE else View.GONE
         spinner.visibility = if (loading) View.VISIBLE else View.GONE
         emptyText.text = if (loading) stFooter.ifEmpty { "Đang nạp model lên thiết bị…" }
-                         else "🎙️\nChạm nút micro của người đang nói.\nNói xong, ứng dụng tự dịch và đọc to."
+                         else "🎙️\nNgười đang nói chạm nút micro của mình.\nNói một hai câu ngắn — ngừng nói là tự dịch và đọc to.\n\n" +
+                              "${flag[partner]}  ${placeholder[partner]!!.substringBefore('\n')}"
     }
 
     private fun clearConversation() {
         if (listening || busy) return
-        turnData.clear(); turns.removeAllViews(); stViLast = null; stXxLast = null
-        viLast.text = waitLbl["vi"]; viLast.setTextColor(cInk3)
-        partnerLast.text = waitLbl[partner]; partnerLast.setTextColor(cInk3)
+        player?.stop()
+        turnData.forEach { it.wav?.delete() }
+        turnData.clear(); turns.removeAllViews(); stLast.clear(); stSaid.clear(); lastWav.clear()
+        showLast("vi"); showLast("xx"); showSaid("vi"); showSaid("xx")
         refreshEmpty()
     }
 
     private fun setStatus(s: String) = ui.post { stStatus = s; statusPill.text = s; netPill.text = netLabel() }
     private fun setHint(s: String) = ui.post { stFooter = s; footer.text = s; if (!engineReady) refreshEmpty() }
+    private fun setTalkEnabled(on: Boolean) { stTalkEnabled = on; renderMics() }
 
-    private fun setTalkEnabled(on: Boolean) = ui.post {
-        stTalkEnabled = on
-        listOf(micVi, micXx).forEach { b ->
-            if (b === recBtn && listening) return@forEach
-            b.isEnabled = on
+    /** One place that decides how both microphone buttons look: idle / listening / translating / waiting. */
+    private fun renderMics() = ui.post {
+        pulse?.cancel(); pulse = null
+        for ((b, side) in listOf(micVi to "vi", micXx to "xx")) {
+            val lang = langOf(side)
             val cs = b.tag as IntArray
-            b.background = if (on) grad(cs[0], cs[1], 999) else grad(cOff1, cOff2, 999)
+            b.alpha = 1f
+            val mine = activeSide == side
+            when {
+                listening && mine -> {
+                    b.isEnabled = true; b.background = grad(cRec, cRecDark, 999); b.text = "●   ${listenLbl[lang]}"
+                    pulse = ObjectAnimator.ofFloat(b, "alpha", 1f, .72f).apply {
+                        duration = 650; repeatMode = ValueAnimator.REVERSE; repeatCount = ValueAnimator.INFINITE; start()
+                    }
+                }
+                busy && mine -> { b.isEnabled = false; b.background = grad(cs[0], cs[1], 999); b.alpha = .8f; b.text = "⏳   ${busyLbl[lang]}" }
+                listening || busy -> { b.isEnabled = false; b.background = grad(cOff1, cOff2, 999); b.text = waitOther[lang] }
+                else -> {
+                    b.isEnabled = stTalkEnabled
+                    b.background = if (stTalkEnabled) grad(cs[0], cs[1], 999) else grad(cOff1, cOff2, 999)
+                    b.text = if (side == "vi") "🎤   ${speakLbl["vi"]}  →  ${flag[partner]}" else "🎤   ${speakLbl[partner]}"
+                }
+            }
         }
+        if (!listening) listOf(meterVi, meterXx).forEach { m -> (m.layoutParams as FrameLayout.LayoutParams).width = 0; m.requestLayout() }
     }
 
     private fun netLabel(): String {
         val cm = getSystemService(ConnectivityManager::class.java)
         val online = cm?.getNetworkCapabilities(cm.activeNetwork)?.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) == true
         return if (online) "🌐  Online" else "✈️  Offline"
-    }
-
-    private fun setRecording(btn: TextView, on: Boolean, src: String) = ui.post {
-        val cs = btn.tag as IntArray
-        pulse?.cancel(); btn.alpha = 1f
-        if (on) {
-            recBtn = btn
-            btn.background = grad(cRec, cRecDark, 999)
-            btn.text = "●   ${listenLbl[src]}"
-            pulse = ObjectAnimator.ofFloat(btn, "alpha", 1f, .72f).apply {
-                duration = 650; repeatMode = ValueAnimator.REVERSE; repeatCount = ValueAnimator.INFINITE; start()
-            }
-        } else {
-            recBtn = null
-            btn.background = grad(cs[0], cs[1], 999)
-            btn.text = if (btn === micVi) "🎤   ${speakLbl["vi"]}  →  ${flag[partner]}" else "🎤   ${speakLbl[partner]}"
-            listOf(meterVi, meterXx).forEach { m -> (m.layoutParams as FrameLayout.LayoutParams).width = 0; m.requestLayout() }
-        }
     }
 
     // ---------------------------------------------------------------- engine + VAD
@@ -406,40 +471,41 @@ class MainActivity : Activity() {
     private fun handleDemoIntent(i: android.content.Intent?) {
         val path = i?.getStringExtra("wav") ?: return
         android.util.Log.i("CabinUI", "demo intent wav=$path ready=$engineReady busy=$busy")
-        if (!engineReady || busy) return
+        if (!engineReady || busy || listening) return
         val src = i.getStringExtra("src") ?: "vi"
         val tgt = i.getStringExtra("tgt") ?: partner
         if (src != "vi") selectPartner(src) else if (tgt != "vi") selectPartner(tgt)
         i.removeExtra("wav")
+        activeSide = if (src == "vi") "vi" else "xx"
         thread {
             try {
                 val b = File(path).readBytes()
                 val n = (b.size - 44) / 2
                 val x = FloatArray(n) { k -> ((b[44 + 2 * k].toInt() and 255) or (b[45 + 2 * k].toInt() shl 8)).toShort() / 32768f }
                 translate(x, src, tgt)
-            } catch (e: Exception) { android.util.Log.e("CabinUI", "demo failed", e); setHint("Demo lỗi: ${e.message}") }
+            } catch (e: Exception) { android.util.Log.e("CabinUI", "demo failed", e); setHint("Demo lỗi: ${e.message}"); activeSide = null; renderMics() }
         }
     }
 
     override fun onDestroy() { listening = false; engine.stop(); vad?.release(); player?.release(); super.onDestroy() }
 
     // ---------------------------------------------------------------- capture (AudioRecord 16 kHz + VAD)
-    private fun onTalk(src: String, tgt: String, btn: TextView) {
+    private fun onTalk(side: String) {
         if (busy) return
-        if (listening) { forceEnd = true; return }          // second tap: finish now
+        if (listening) { if (activeSide == side) forceEnd = true; return }   // second tap: finish now
         if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(arrayOf(Manifest.permission.RECORD_AUDIO), 1); return
         }
-        player?.stop()
-        listening = true; forceEnd = false
-        setRecording(btn, true, src)
-        val other = if (btn === micVi) micXx else micVi
-        ui.post { other.isEnabled = false; other.background = grad(cOff1, cOff2, 999) }
-        setHint("Nói xong, ứng dụng sẽ tự dịch")
-        thread { captureOneUtterance(src, tgt, btn) }
+        val src = langOf(side); val tgt = if (side == "vi") partner else "vi"
+        try { player?.stop() } catch (_: Exception) {}          // never record our own loudspeaker
+        listening = true; forceEnd = false; activeSide = side
+        stSaid.remove(side); showSaid(side)
+        renderMics()
+        setHint("🎙  Đang nghe ${flag[src]} ${lname[src]} — ngừng nói là tự dịch, hoặc chạm nút đỏ để dừng")
+        thread { captureOneUtterance(src, tgt, side) }
     }
 
-    private fun captureOneUtterance(src: String, tgt: String, btn: TextView) {
+    private fun captureOneUtterance(src: String, tgt: String, side: String) {
         val sr = 16000
         val minBuf = AudioRecord.getMinBufferSize(sr, AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT)
         val rec = AudioRecord(MediaRecorder.AudioSource.VOICE_RECOGNITION, sr, AudioFormat.CHANNEL_IN_MONO,
@@ -452,7 +518,7 @@ class MainActivity : Activity() {
         var speechStarted = false
         var segment: FloatArray? = null
         val t0 = System.currentTimeMillis()
-        val (meter, track) = if (btn === micVi) meterVi to meterViTrack else meterXx to meterXxTrack
+        val (meter, track) = if (side == "vi") meterVi to meterViTrack else meterXx to meterXxTrack
         rec.startRecording()
         try {
             while (listening) {
@@ -475,69 +541,111 @@ class MainActivity : Activity() {
             }
         } finally { rec.stop(); rec.release() }
         listening = false
-        setRecording(btn, false, src)
         // prefer the raw capture (pre-roll + everything until the VAD end) so word onsets are never clipped
         val audio = if (captured.isNotEmpty()) captured.flatMap { it.asIterable() }.toFloatArray() else segment
-        if (audio == null || audio.size < sr / 3) { setHint("Không nghe thấy tiếng nói — chạm và nói lại"); setTalkEnabled(true); return }
+        if (audio == null || audio.size < sr / 3) {
+            ui.post { stSaid[side] = noSpeech[src]!! to true; showSaid(side) }
+            setHint(noSpeech["vi"]!!); activeSide = null; renderMics(); return
+        }
         translate(audio, src, tgt)
     }
 
     // ---------------------------------------------------------------- translate + speak
     private fun translate(audio: FloatArray, src: String, tgt: String) {
-        busy = true; setTalkEnabled(false)
+        val side = if (src == "vi") "vi" else "xx"
+        val other = if (side == "vi") "xx" else "vi"
+        busy = true; activeSide = side; renderMics()
         setStatus("⏳  Đang dịch")
         setHint("Đang dịch trên thiết bị…")
+        ui.post { addPending(src) }
         try {
             val r = engine.translate(floatsToWav(audio), src, tgt)
-            val said = r.optString("mt_in").ifEmpty { r.optString("asr") }
-            val hyp = r.optString("hyp")
+            val said = r.optString("mt_in").ifEmpty { r.optString("asr") }.trim()
+            val hyp = r.optString("hyp").trim()
             val total = r.optDouble("total_ms").toInt()
             val timing = "ASR %d ms · dịch %d ms · TTS %d ms · tổng %d ms".format(
                 r.optDouble("asr_ms").toInt(), r.optDouble("mt_ms").toInt(), r.optDouble("tts_ms").toInt(), total)
-            ui.post {
-                addTurn(src, tgt, said, hyp, total)
-                val shown = hyp.ifEmpty { "…" }
-                if (tgt == "vi") { stViLast = shown; viLast.text = shown; viLast.setTextColor(cInk) }
-                else { stXxLast = shown; partnerLast.text = shown; partnerLast.setTextColor(cInk) }
+            if (said.isEmpty() || hyp.isEmpty()) {
+                ui.post { removePending(); stSaid[side] = noRecog[src]!! to true; showSaid(side) }
+                setStatus("✅  Sẵn sàng"); setHint(noRecog["vi"]!!)
+                return
             }
-            r.optString("audio_b64").takeIf { it.isNotEmpty() }?.let { play(it) }
+            val wav = r.optString("audio_b64").takeIf { it.isNotEmpty() }?.let {
+                File(cacheDir, "turn_${++turnSeq}.wav").apply { writeBytes(Base64.decode(it, Base64.DEFAULT)) }
+            }
+            ui.post {
+                removePending()
+                addTurn(src, tgt, said, hyp, total, wav)
+                stLast[other] = hyp; wav?.let { lastWav[other] = it }
+                stSaid[side] = said to false
+                showLast(other); showSaid(side)
+            }
+            wav?.let { play(it) }
             setStatus("✅  Sẵn sàng"); setHint(timing)
         } catch (e: Exception) {
+            ui.post { removePending(); stSaid[side] = failLbl[src]!! to true; showSaid(side) }
             setStatus("❌  Lỗi"); setHint("Lỗi dịch: ${e.message}")
-        } finally { busy = false; setTalkEnabled(true) }
+        } finally { busy = false; activeSide = null; renderMics() }
     }
 
-    private fun play(b64: String) {
-        val f = File(cacheDir, "tts.wav").apply { writeBytes(Base64.decode(b64, Base64.DEFAULT)) }
-        ui.post {
+    private fun play(f: File) = ui.post {
+        try {
             player?.release()
             player = MediaPlayer().apply { setDataSource(f.absolutePath); prepare(); start() }
-        }
+        } catch (e: Exception) { android.util.Log.e("CabinUI", "play failed", e) }
     }
 
-    private fun addTurn(src: String, tgt: String, said: String, hyp: String, ms: Int) {
-        val t = Turn(src, tgt, said, hyp, ms); turnData.add(t); renderTurn(t)
+    private fun replay(side: String) { if (!listening) lastWav[side]?.let { play(it) } }
+
+    private fun addTurn(src: String, tgt: String, said: String, hyp: String, ms: Int, wav: File?) {
+        val t = Turn(src, tgt, said, hyp, ms, wav); turnData.add(t); renderTurn(t)
     }
 
-    private fun renderTurn(t: Turn) {
-        val (src, tgt, said, hyp, ms) = t
-        emptyBox.visibility = View.GONE
-        val mine = src == "vi"
-        val bubble = LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL; setPadding(dp(14), dp(10), dp(14), dp(10))
-            background = GradientDrawable().apply {
-                setColor(if (mine) cViSoft else cXxSoft)
-                val r = dp(18).toFloat(); val s = dp(5).toFloat()
-                cornerRadii = if (mine) floatArrayOf(r, r, s, s, r, r, r, r) else floatArrayOf(s, s, r, r, r, r, r, r)
-            }
-        }
-        bubble.addView(text("${flag[src]}  $said", 13.5f, cInk2))
-        bubble.addView(text("${flag[tgt]}  $hyp", 17f, if (mine) cViInk else cXxInk, true).apply { setPadding(0, dp(4), 0, dp(2)) })
-        bubble.addView(text("$ms ms", 11f, cInk3).apply { gravity = Gravity.END })
-        val row = LinearLayout(this).apply { gravity = if (mine) Gravity.END else Gravity.START }
+    private fun bubbleRow(fromVi: Boolean, bubble: View): LinearLayout {
+        // Vietnamese bubbles on the left (next to the Vietnamese card), the partner's on the right
+        val row = LinearLayout(this).apply { gravity = if (fromVi) Gravity.START else Gravity.END }
         val w = resources.displayMetrics.widthPixels * 0.30
         row.addView(bubble, LinearLayout.LayoutParams(w.toInt(), WRAP))
+        return row
+    }
+
+    private fun bubbleBg(fromVi: Boolean) = GradientDrawable().apply {
+        setColor(if (fromVi) cViSoft else cXxSoft)
+        val r = dp(18).toFloat(); val s = dp(5).toFloat()
+        cornerRadii = if (fromVi) floatArrayOf(s, s, r, r, r, r, r, r) else floatArrayOf(r, r, s, s, r, r, r, r)
+    }
+
+    private fun addPending(src: String) {
+        removePending()
+        val fromVi = src == "vi"
+        val bubble = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL
+            setPadding(dp(14), dp(12), dp(14), dp(12)); background = bubbleBg(fromVi)
+            addView(ProgressBar(this@MainActivity).apply { isIndeterminate = true }, lp(dp(22), dp(22)).apply { marginEnd = dp(10) })
+            addView(text("${flag[src]}  ${busyLbl[src]}", 15f, cInk2))
+        }
+        val row = bubbleRow(fromVi, bubble)
         turns.addView(row, lp().apply { topMargin = dp(5); bottomMargin = dp(5) })
+        pendingRow = row
+        refreshEmpty()
+        scroll.post { scroll.fullScroll(View.FOCUS_DOWN) }
+    }
+
+    private fun removePending() { pendingRow?.let { turns.removeView(it) }; pendingRow = null }
+
+    private fun renderTurn(t: Turn) {
+        val (src, tgt, said, hyp, ms, wav) = t
+        emptyBox.visibility = View.GONE
+        val fromVi = src == "vi"
+        val bubble = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL; setPadding(dp(14), dp(10), dp(14), dp(10)); background = bubbleBg(fromVi)
+            if (wav != null) setOnClickListener { if (!listening) play(wav) }
+        }
+        bubble.addView(text("${flag[src]}  $said", 13.5f, cInk2))
+        bubble.addView(text("${flag[tgt]}  $hyp", 17f, if (fromVi) cViInk else cXxInk, true).apply { setPadding(0, dp(4), 0, dp(2)) })
+        val foot = "%s%.1f s".format(if (wav != null) "🔊 ${replayLbl[tgt]}  ·  " else "", ms / 1000.0)
+        bubble.addView(text(foot, 11.5f, cInk3).apply { gravity = Gravity.END })
+        turns.addView(bubbleRow(fromVi, bubble), lp().apply { topMargin = dp(5); bottomMargin = dp(5) })
         scroll.post { scroll.fullScroll(View.FOCUS_DOWN) }
     }
 }
